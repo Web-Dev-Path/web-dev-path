@@ -11,6 +11,7 @@ In this repository, there are content and resources related to the practical ste
     * [Git Basis by Colt Steele](https://www.youtube.com/watch?v=USjZcfj8yxE&t=14s)
     * [Git and GitHub for Beginners - Crash Course by freeCodeCAmp](https://www.youtube.com/watch?v=RGOj5yH7evk)
     * [GitHub Tutorial 2020 - Beginner's Training Guide](https://www.youtube.com/watch?v=iv8rSLsi1xo)
+    * [GitHub Markdown](https://guides.github.com/features/mastering-markdown/)
 
 <br />
 <br />
