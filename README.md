@@ -2,9 +2,12 @@
 
 In this repository, there are content and resources related to the practical steps to land your first job as a web developer.
 
+<br />
+
 ## Courses and Certifications ##
 
-* **Git** [Git Official Basics](https://git-scm.com/book/en/v2)
+* **Git** 
+    * [Git Official Basics](https://git-scm.com/book/en/v2)
     * [Git Basis by Colt Steele](https://www.youtube.com/watch?v=USjZcfj8yxE&t=14s)
     * [Git and GitHub for Beginners - Crash Course by freeCodeCAmp](https://www.youtube.com/watch?v=RGOj5yH7evk)
     * [GitHub Tutorial 2020 - Beginner's Training Guide](https://www.youtube.com/watch?v=iv8rSLsi1xo)
