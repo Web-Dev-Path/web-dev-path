@@ -13,6 +13,9 @@ In this repository, there are content and resources related to the practical ste
     * [GitHub Tutorial 2020 - Beginner's Training Guide](https://www.youtube.com/watch?v=iv8rSLsi1xo)
     * [GitHub Markdown](https://guides.github.com/features/mastering-markdown/)
 
+* **HTML/CSS**
+    * [freeCodeCamp - Get the 300 h "Responsive Web Design Certification"](https://www.freecodecamp.org/learn/)
+
 <br />
 <br />
 
