@@ -13,6 +13,8 @@ To add content or request a change, please branch out by following these guideli
 
 ![PR example](/images-web-dev-path/pr-example.png)
 
+<br />
+
 This is a video that explains a little bit how to start collaborating with the project: 
 
 [Start Collaborating](https://www.loom.com/share/fbe2c01a963c4885815391d671f35321?fbclid=IwAR1bI2VdRntQhK37dpRI3LS_YPWDmVk-n8yLTYqKlq-v7QP6cNgkaP5Nqe0)
