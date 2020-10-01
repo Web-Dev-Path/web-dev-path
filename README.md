@@ -5,9 +5,11 @@ In this repository, you will find content and resources related to the practical
 To add content or request a change, please branch out by following these guidelines:
 
 * If you are adding a new section, start your branch saying section-course/ + the course and links you are adding, such as: section-course/html-css-freecodecamp.
-* If you are only updating our requesting an update to a section, start your branch with section/ + what you're updating, as per: section/updating-introduction.
+* If you are only updating or requesting an update to a section, start your branch with section/ + what you're updating, as per: section/updating-introduction.
 * All the images should be added under the folder images-web-dev-path.
 * The Pull Requests (PR) should follow a similar structure we can see on the picture below, wich includes a brief description of the PR:
+
+<br />
 
 ![PR example](/images-web-dev-path/pr-example.png)
 
