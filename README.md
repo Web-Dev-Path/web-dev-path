@@ -32,6 +32,7 @@ This is a video that explains a little bit how to start collaborating with the p
 
 * **HTML/CSS**
     * [freeCodeCamp - Get the 300 h "Responsive Web Design Certification"](https://www.freecodecamp.org/learn/)
+    * [Full Stack Web Development Tutorial Course](https://www.youtube.com/playlist?list=PLwoh6bBAszPrES-EOajos_E9gvRbL27wz&fbclid=IwAR36b5agLn2QJ_JYiOs3fTm54cB2FPdrInhe4QvDoJCVRq6oCoDOFGYKpPA)
 
 <br />
 <br />
