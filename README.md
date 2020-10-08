@@ -36,6 +36,7 @@ This is a video that explains a little bit how to start collaborating with the p
 
 * **WordPress**
     * [How to Make a Custom Website from Scratch using WordPress (Theme Development) by freeCodeCamp ](https://youtu.be/KibbYf9avko)
+    * [WordPress Plugin Development](https://youtu.be/mm9aQiLEa10)
 <br />
 <br />
 
