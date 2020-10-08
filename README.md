@@ -37,6 +37,20 @@ This is a video that explains a little bit how to start collaborating with the p
 <br />
 <br />
 
+## Books ##
+
+* **Command Line** 
+    * [Learn Enough Command Line to Be Dangerous - Michael Hartl](https://www.learnenough.com/command-line-tutorial/basics)
+
+* **JavaScript (JS)**
+    * [JavaScript for Impatient Programmers - Dr. Axel Raushmayer](https://exploringjs.com/impatient-js/index.html)    
+
+* **Programming**
+    * [How to Design a Program - Matthias Felleisen, Robert Bruce Findler, Matthew Flatt, Shriram Krishnamurthi](https://htdp.org/2020-5-6/Book/index.html) 
+
+<br />
+<br />
+
 ## Presentation ##
 
 * **A Junior Web Developer Resume**
