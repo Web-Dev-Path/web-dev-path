@@ -39,8 +39,8 @@ This is a video that explains a little bit how to start collaborating with the p
     * [WordPress Plugin Development](https://youtu.be/mm9aQiLEa10)
 
 * **Harvard**
-    * [CS50x - Introduction to Computer Science - by Harvard ](https://cs50.harvard.edu/x/2020/)
-    * [CS50 Beyond - design and implementations of web apps - by Harvard](https://cs50.harvard.edu/beyond/2019/)
+    * [CS50x - Introduction to Computer Science](https://cs50.harvard.edu/x/2020/)
+    * [CS50 Beyond - design and implementations of web apps](https://cs50.harvard.edu/beyond/2019/)
 
 <br />
 <br />
