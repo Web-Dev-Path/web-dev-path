@@ -37,6 +37,11 @@ This is a video that explains a little bit how to start collaborating with the p
 * **WordPress**
     * [How to Make a Custom Website from Scratch using WordPress (Theme Development) by freeCodeCamp ](https://youtu.be/KibbYf9avko)
     * [WordPress Plugin Development](https://youtu.be/mm9aQiLEa10)
+
+* **Harvard**
+    * [CS50x - Introduction to Computer Science - by Harvard ](https://cs50.harvard.edu/x/2020/)
+    * [CS50 Beyond - design and implementations of web apps - by Harvard](https://cs50.harvard.edu/beyond/2019/)
+
 <br />
 <br />
 
