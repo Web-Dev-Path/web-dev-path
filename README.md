@@ -40,6 +40,7 @@ This is a video that explains a little bit how to start collaborating with the p
     * [WordPress Plugin Development](https://youtu.be/mm9aQiLEa10)
 
 * **JavaScript**
+    * [Learn JavaScript by Codecademy] (https://www.codecademy.com/learn/introduction-to-javascript)
 
 <br />
 <br />
