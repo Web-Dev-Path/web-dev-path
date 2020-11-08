@@ -23,6 +23,7 @@ These are the videos that explain in detail how to branch out and submit PR:
 
 [Branching out from an up to date master](https://www.loom.com/share/77c3bea45d86428a86c897ac3ccaacc4)
 [Creating the PR with the first commit](https://www.loom.com/share/04e326b873db4af7a4ce86c74183d554)
+[Fixing the PR title](https://www.loom.com/share/58feae54c4d04a2e908d5fe41dc262e9)
 
 <br />
 
