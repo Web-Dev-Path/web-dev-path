@@ -38,6 +38,8 @@ This is a video that explains a little bit how to start collaborating with the p
 
 - **PHP**
 
+    - [PHP Tutorial](https://www.w3schools.com/php/DEFAULT.asp)
+
 - **WordPress**
   _ [How to Make a Custom Website from Scratch using WordPress (Theme Development) by freeCodeCamp ](https://youtu.be/KibbYf9avko)
   _ [Professional WordPress Theme & Plugin Development](https://www.udemy.com/course/photoshop-psd-to-wordpress-theme-development-from-scratch/) \* [WordPress Plugin Development](https://youtu.be/mm9aQiLEa10)
