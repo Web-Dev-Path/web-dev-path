@@ -45,7 +45,7 @@ These are the videos that explain in detail how to branch out and submit a PR:
     * [WordPress Plugin Development](https://youtu.be/mm9aQiLEa10)
 
 * **JavaScript**
-    * [Learn JavaScript by Codecademy] (https://www.codecademy.com/learn/introduction-to-javascript)
+    * [Learn JavaScript by Codecademy](https://www.codecademy.com/learn/introduction-to-javascript)
 
 <br />
 <br />
