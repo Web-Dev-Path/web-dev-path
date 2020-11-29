@@ -29,6 +29,14 @@ These are the videos that explain in detail how to branch out and submit a PR:
 
 <br />
 
+## Channels
+
+- **Slack**
+
+  - [Web Dev Path Channel](https://join.slack.com/t/webdevpath/shared_invite/zt-je2zuuja-zlQr2_YpFP_9zuyGcKeYGg)
+
+<br />
+
 ## Courses and Certifications
 
 - **Git**
