@@ -47,14 +47,16 @@ These are the videos that explain in detail how to branch out and submit a PR:
   - [GitHub Tutorial 2020 - Beginner's Training Guide](https://www.youtube.com/watch?v=iv8rSLsi1xo)
   - [GitHub Markdown](https://guides.github.com/features/mastering-markdown/)
 
-  <br />
+* **WordPress**
+    * [How to Make a Custom Website from Scratch using WordPress (Theme Development) by freeCodeCamp ](https://youtu.be/KibbYf9avko)
+    * [Professional WordPress Theme & Plugin Development](https://www.udemy.com/course/photoshop-psd-to-wordpress-theme-development-from-scratch/)
+    * [WordPress Plugin Development](https://youtu.be/mm9aQiLEa10)
 
-- **HTML/CSS**
+* **JavaScript**
+    * [Learn JavaScript by Codecademy](https://www.codecademy.com/learn/introduction-to-javascript)
 
-  - [freeCodeCamp - Get the 300 h "Responsive Web Design Certification"](https://www.freecodecamp.org/learn/)
-  - [Full Stack Web Development Tutorial Course](https://www.youtube.com/playlist?list=PLwoh6bBAszPrES-EOajos_E9gvRbL27wz&fbclid=IwAR36b5agLn2QJ_JYiOs3fTm54cB2FPdrInhe4QvDoJCVRq6oCoDOFGYKpPA)
-
-  <br />
+<br />
+<br />
 
 - **PHP**
 
