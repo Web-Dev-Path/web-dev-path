@@ -55,10 +55,7 @@ These are the videos that explain in detail how to branch out and submit a PR:
 * **JavaScript**
     * [Learn JavaScript by Codecademy](https://www.codecademy.com/learn/introduction-to-javascript)
 
-<br />
-<br />
-
-- **PHP**
+* **PHP**
 
   - [PHP Tutorial](https://www.w3schools.com/php/DEFAULT.asp)
 
