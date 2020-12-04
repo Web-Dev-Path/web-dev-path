@@ -19,6 +19,22 @@ This is a video that explains a little bit how to start collaborating with the p
 
 [Start Collaborating](https://www.loom.com/share/fbe2c01a963c4885815391d671f35321?fbclid=IwAR1bI2VdRntQhK37dpRI3LS_YPWDmVk-n8yLTYqKlq-v7QP6cNgkaP5Nqe0)
 
+These are the videos that explain in detail how to branch out and submit a PR:
+
+- [Branching out from an up to date master](https://www.loom.com/share/77c3bea45d86428a86c897ac3ccaacc4)
+- [Creating the PR with the first commit](https://www.loom.com/share/04e326b873db4af7a4ce86c74183d554)
+- [Fixing the PR title](https://www.loom.com/share/58feae54c4d04a2e908d5fe41dc262e9)
+- [Adding the description and selecting the reviewers](https://www.loom.com/share/bf775cb7503c42129ab5f7715b094c53)
+- [Merging the PR](https://www.loom.com/share/de0eaa9cdcd34d8bac491cd8955f4883)
+
+<br />
+
+## Channels
+
+- **Slack**
+
+  - [Web Dev Path Channel](https://join.slack.com/t/webdevpath/shared_invite/zt-je2zuuja-zlQr2_YpFP_9zuyGcKeYGg)
+
 <br />
 
 ## Courses and Certifications
@@ -31,16 +47,29 @@ This is a video that explains a little bit how to start collaborating with the p
   - [GitHub Tutorial 2020 - Beginner's Training Guide](https://www.youtube.com/watch?v=iv8rSLsi1xo)
   - [GitHub Markdown](https://guides.github.com/features/mastering-markdown/)
 
-- **HTML/CSS**
+* **WordPress**
+    * [How to Make a Custom Website from Scratch using WordPress (Theme Development) by freeCodeCamp ](https://youtu.be/KibbYf9avko)
+    * [Professional WordPress Theme & Plugin Development](https://www.udemy.com/course/photoshop-psd-to-wordpress-theme-development-from-scratch/)
+    * [WordPress Plugin Development](https://youtu.be/mm9aQiLEa10)
 
-  - [freeCodeCamp - Get the 300 h "Responsive Web Design Certification"](https://www.freecodecamp.org/learn/)
-  - [Full Stack Web Development Tutorial Course](https://www.youtube.com/playlist?list=PLwoh6bBAszPrES-EOajos_E9gvRbL27wz&fbclid=IwAR36b5agLn2QJ_JYiOs3fTm54cB2FPdrInhe4QvDoJCVRq6oCoDOFGYKpPA)
+* **Harvard**
+    * [CS50x - Introduction to Computer Science](https://cs50.harvard.edu/x/2020/)
+    * [CS50 Beyond - design and implementations of web apps](https://cs50.harvard.edu/beyond/2019/)
 
-- **PHP**
+* **JavaScript**
+    * [Learn JavaScript by Codecademy](https://www.codecademy.com/learn/introduction-to-javascript)
+
+* **PHP**
+
+  - [PHP Tutorial](https://www.w3schools.com/php/DEFAULT.asp)
+
+* **Python**
+
+  - [Best Python Tutorials](https://www.freecodecamp.org/news/best-python-tutorial/)
 
 - **WordPress**
-  - [How to Make a Custom Website from Scratch using WordPress (Theme Development) by freeCodeCamp ](https://youtu.be/KibbYf9avko)
-  - [Professional WordPress Theme & Plugin Development](https://www.udemy.com/course/photoshop-psd-to-wordpress-theme-development-from-scratch/) \* [WordPress Plugin Development](https://youtu.be/mm9aQiLEa10)
+  _ [How to Make a Custom Website from Scratch using WordPress (Theme Development) by freeCodeCamp ](https://youtu.be/KibbYf9avko)
+  _ [Professional WordPress Theme & Plugin Development](https://www.udemy.com/course/photoshop-psd-to-wordpress-theme-development-from-scratch/) \* [WordPress Plugin Development](https://youtu.be/mm9aQiLEa10)
   <br />
   <br />
 
