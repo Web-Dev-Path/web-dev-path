@@ -61,11 +61,13 @@ These are the videos that explain in detail how to branch out and submit a PR:
 
 * **PHP**
 
-  - [PHP Tutorial](https://www.w3schools.com/php/DEFAULT.asp)
+  * [PHP Tutorial](https://www.w3schools.com/php/DEFAULT.asp)
 
 * **Python**
 
-  - [Best Python Tutorials](https://www.freecodecamp.org/news/best-python-tutorial/)
+  * [Best Python Tutorials](https://www.freecodecamp.org/news/best-python-tutorial/)
+
+
 
 - **WordPress**
   _ [How to Make a Custom Website from Scratch using WordPress (Theme Development) by freeCodeCamp ](https://youtu.be/KibbYf9avko)
