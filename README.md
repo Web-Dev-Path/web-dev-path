@@ -52,6 +52,10 @@ These are the videos that explain in detail how to branch out and submit a PR:
     * [Professional WordPress Theme & Plugin Development](https://www.udemy.com/course/photoshop-psd-to-wordpress-theme-development-from-scratch/)
     * [WordPress Plugin Development](https://youtu.be/mm9aQiLEa10)
 
+* **Harvard**
+    * [CS50x - Introduction to Computer Science](https://cs50.harvard.edu/x/2020/)
+    * [CS50 Beyond - design and implementations of web apps](https://cs50.harvard.edu/beyond/2019/)
+
 * **JavaScript**
     * [Learn JavaScript by Codecademy](https://www.codecademy.com/learn/introduction-to-javascript)
 
