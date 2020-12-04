@@ -56,9 +56,6 @@ These are the videos that explain in detail how to branch out and submit a PR:
     * [CS50x - Introduction to Computer Science](https://cs50.harvard.edu/x/2020/)
     * [CS50 Beyond - design and implementations of web apps](https://cs50.harvard.edu/beyond/2019/)
 
-<br />
-<br />
-
 * **JavaScript**
     * [Learn JavaScript by Codecademy](https://www.codecademy.com/learn/introduction-to-javascript)
 
