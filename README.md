@@ -71,5 +71,8 @@ This is a video that explains a little bit how to start collaborating with the p
 - **Your LinkedIn**
   - [Tips to Optimize your LinkedIn Profile for Developers](https://www.samanthaming.com/blog/tips-to-optimize-your-linkedin-profile-for-developers/)
 
+- **Launching A Website**
+  - [Publishing your Website Online](https://youtu.be/NQP89ish9t8)
+
 <br />
 <br />
