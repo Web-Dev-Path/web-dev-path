@@ -67,11 +67,11 @@ These are the videos that explain in detail how to branch out and submit a PR:
 
   * [Best Python Tutorials](https://www.freecodecamp.org/news/best-python-tutorial/)
 
-
-
 - **WordPress**
-  _ [How to Make a Custom Website from Scratch using WordPress (Theme Development) by freeCodeCamp ](https://youtu.be/KibbYf9avko)
-  _ [Professional WordPress Theme & Plugin Development](https://www.udemy.com/course/photoshop-psd-to-wordpress-theme-development-from-scratch/) \* [WordPress Plugin Development](https://youtu.be/mm9aQiLEa10)
+  - [How to Make a Custom Website from Scratch using WordPress (Theme Development) by freeCodeCamp ](https://youtu.be/KibbYf9avko)
+  - [Professional WordPress Theme & Plugin Development](https://www.udemy.com/course/photoshop-psd-to-wordpress-theme-development-from-scratch/) 
+  - [WordPress Plugin Development](https://youtu.be/mm9aQiLEa10)
+  
   <br />
   <br />
 
