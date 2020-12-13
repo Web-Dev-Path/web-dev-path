@@ -47,11 +47,6 @@ These are the videos that explain in detail how to branch out and submit a PR:
   - [GitHub Tutorial 2020 - Beginner's Training Guide](https://www.youtube.com/watch?v=iv8rSLsi1xo)
   - [GitHub Markdown](https://guides.github.com/features/mastering-markdown/)
 
-* **WordPress**
-    * [How to Make a Custom Website from Scratch using WordPress (Theme Development) by freeCodeCamp ](https://youtu.be/KibbYf9avko)
-    * [Professional WordPress Theme & Plugin Development](https://www.udemy.com/course/photoshop-psd-to-wordpress-theme-development-from-scratch/)
-    * [WordPress Plugin Development](https://youtu.be/mm9aQiLEa10)
-
 * **Harvard**
     * [CS50x - Introduction to Computer Science](https://cs50.harvard.edu/x/2020/)
     * [CS50 Beyond - design and implementations of web apps](https://cs50.harvard.edu/beyond/2019/)
@@ -61,11 +56,17 @@ These are the videos that explain in detail how to branch out and submit a PR:
 
 * **PHP**
 
-  - [PHP Tutorial](https://www.w3schools.com/php/DEFAULT.asp)
+  * [PHP Tutorial](https://www.w3schools.com/php/DEFAULT.asp)
+
+* **Python**
+
+  * [Best Python Tutorials](https://www.freecodecamp.org/news/best-python-tutorial/)
 
 - **WordPress**
-  _ [How to Make a Custom Website from Scratch using WordPress (Theme Development) by freeCodeCamp ](https://youtu.be/KibbYf9avko)
-  _ [Professional WordPress Theme & Plugin Development](https://www.udemy.com/course/photoshop-psd-to-wordpress-theme-development-from-scratch/) \* [WordPress Plugin Development](https://youtu.be/mm9aQiLEa10)
+  - [How to Make a Custom Website from Scratch using WordPress (Theme Development) by freeCodeCamp ](https://youtu.be/KibbYf9avko)
+  - [Professional WordPress Theme & Plugin Development](https://www.udemy.com/course/photoshop-psd-to-wordpress-theme-development-from-scratch/) 
+  - [WordPress Plugin Development](https://youtu.be/mm9aQiLEa10)
+  
   <br />
   <br />
 
