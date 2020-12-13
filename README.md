@@ -89,8 +89,6 @@ These are the videos that explain in detail how to branch out and submit a PR:
 - **A Junior Web Developer Resume**
   - [How to write an awesome junior developer résumé in a few simple steps, by freeCodeCamp](https://www.freecodecamp.org/news/how-to-write-an-awesome-junior-developer-resume-in-a-few-simple-steps-316010db80ec/)
 
-<br />
-
 - **Your LinkedIn**
   - [Tips to Optimize your LinkedIn Profile for Developers](https://www.samanthaming.com/blog/tips-to-optimize-your-linkedin-profile-for-developers/)
   
