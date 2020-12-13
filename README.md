@@ -48,19 +48,17 @@ These are the videos that explain in detail how to branch out and submit a PR:
   - [GitHub Markdown](https://guides.github.com/features/mastering-markdown/)
 
 * **Harvard**
-    * [CS50x - Introduction to Computer Science](https://cs50.harvard.edu/x/2020/)
-    * [CS50 Beyond - design and implementations of web apps](https://cs50.harvard.edu/beyond/2019/)
+    - [CS50x - Introduction to Computer Science](https://cs50.harvard.edu/x/2020/)
+    - [CS50 Beyond - design and implementations of web apps](https://cs50.harvard.edu/beyond/2019/)
 
 * **JavaScript**
-    * [Learn JavaScript by Codecademy](https://www.codecademy.com/learn/introduction-to-javascript)
+    - [Learn JavaScript by Codecademy](https://www.codecademy.com/learn/introduction-to-javascript)
 
 * **PHP**
-
-  * [PHP Tutorial](https://www.w3schools.com/php/DEFAULT.asp)
+  - [PHP Tutorial](https://www.w3schools.com/php/DEFAULT.asp)
 
 * **Python**
-
-  * [Best Python Tutorials](https://www.freecodecamp.org/news/best-python-tutorial/)
+  - [Best Python Tutorials](https://www.freecodecamp.org/news/best-python-tutorial/)
 
 - **WordPress**
   - [How to Make a Custom Website from Scratch using WordPress (Theme Development) by freeCodeCamp ](https://youtu.be/KibbYf9avko)
