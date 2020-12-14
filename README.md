@@ -1,5 +1,5 @@
 <div>
-  <img src="images-web-dev-path/web-dev-path-logo.png" alt="Web Developer Path Logo" style="border-radius: 5px">
+  <img src="images-web-dev-path/web-dev-path-logo.png" alt="Web Developer Path Logo" style="border-radius: 5px;" />
 </div>
 
 
