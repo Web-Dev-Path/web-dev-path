@@ -84,6 +84,14 @@ These are the videos that explain in detail how to branch out and submit a PR:
 <br />
 <br />
 
+## Guides
+
+- **Launching A Website**
+  - [Publishing your Website Online](https://youtu.be/NQP89ish9t8)
+  
+<br />
+<br />
+
 ## Presentation
 
 - **A Junior Web Developer Resume**
@@ -91,9 +99,6 @@ These are the videos that explain in detail how to branch out and submit a PR:
 
 - **Your LinkedIn**
   - [Tips to Optimize your LinkedIn Profile for Developers](https://www.samanthaming.com/blog/tips-to-optimize-your-linkedin-profile-for-developers/)
-  
-- **Launching A Website**
-  - [Publishing your Website Online](https://youtu.be/NQP89ish9t8)
 
 <br />
 <br />
