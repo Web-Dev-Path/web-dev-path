@@ -1,4 +1,8 @@
-![Web Developer Path Logo](images-web-dev-path/web-dev-path-logo.png)
+<header>
+  <img src="images-web-dev-path/web-dev-path-logo.png" alt="Web Developer Path Logo" style="border-radius: 5px;">
+</header>
+
+
 
 # Web Developer Path
 
