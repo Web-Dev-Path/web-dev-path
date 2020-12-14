@@ -84,7 +84,7 @@ These are the videos that explain in detail how to branch out and submit a PR:
 <br />
 <br />
 
-## Guides
+## Publishing a Web Product
 
 - **Launching A Website**
   - [Publishing your Website Online](https://youtu.be/NQP89ish9t8)
