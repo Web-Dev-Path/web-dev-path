@@ -1,6 +1,4 @@
-<div>
-  <img src="images-web-dev-path/web-dev-path-logo.png" alt="Web Developer Path Logo" style="border-radius: 7px !important;" />
-</div>
+![Web Developer Path Logo](/images-web-dev-path/web-dev-path-logo.png)
 
 
 
