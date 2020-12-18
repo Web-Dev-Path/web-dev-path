@@ -1,3 +1,5 @@
+![Web Developer Path Logo](/images-web-dev-path/web-dev-path-logo.png)
+
 # Web Developer Path
 
 In this repository, you will find content and resources related to the practical steps to land your first job as a web developer.
