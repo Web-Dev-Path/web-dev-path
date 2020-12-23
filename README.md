@@ -56,6 +56,12 @@ These are the videos that explain in detail how to branch out and submit a PR:
 * **JavaScript**
     - [Learn JavaScript by Codecademy](https://www.codecademy.com/learn/introduction-to-javascript)
 
+  **JS Libraries and Frameworks**
+  <br />
+  - _**React**_ 
+    - [React Handbook for Beginners](https://www.freecodecamp.org/news/react-beginner-handbook/)
+    - [React Functional Components, Props, and JSX – React.js Tutorial for Beginners](https://www.freecodecamp.org/news/react-components-jsx-props-for-beginners/)
+
 * **PHP**
   - [PHP Tutorial](https://www.w3schools.com/php/DEFAULT.asp)
 
