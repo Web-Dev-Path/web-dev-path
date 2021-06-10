@@ -1,4 +1,5 @@
-import Head from 'next/head'
+import Head from "next/head";
+import Nav from "../components/Nav";
 
 export default function Home() {
   return (
@@ -7,14 +8,14 @@ export default function Home() {
         <title>Web Dev Path</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
+      <Nav />
       <main>
-        <h1 className="title">
-        &lt; Web Dev wannabe? /&gt;
-        </h1>
+        <h1 className="title">&lt; Web Dev wannabe? /&gt;</h1>
         <div className="description">
           <p>
-            Hold our hand and enjoy the road to learn how to start a new project, the magic behind Github while working in a team environment, and much more...
+            Hold our hand and enjoy the road to learn how to start a new
+            project, the magic behind Github while working in a team
+            environment, and much more...
           </p>
         </div>
         <hr className="divider" />
@@ -56,7 +57,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
+          Powered by{" "}
           <img src="/vercel.svg" alt="Vercel Logo" className="logo" />
         </a>
       </footer>
@@ -80,7 +81,7 @@ export default function Home() {
           align-items: center;
         }
 
-        .divider{
+        .divider {
           color: #000;
           background-color: #000;
           height: 1px;
@@ -128,7 +129,7 @@ export default function Home() {
           font-size: 4rem;
         }
 
-        .title{
+        .title {
           text-align: center;
         }
 
@@ -137,7 +138,6 @@ export default function Home() {
           font-size: 1.5rem;
           max-width: 700px;
           padding: 0 1rem;
-          
         }
 
         code {
@@ -216,5 +216,5 @@ export default function Home() {
         }
       `}</style>
     </div>
-  )
+  );
 }
