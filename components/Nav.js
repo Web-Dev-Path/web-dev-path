@@ -1,90 +1,58 @@
 import Link from "next/link";
+import { useState } from "react";
+import styles from "../styles/ResponsiveNavbar.module.css";
 
 export default function Nav() {
+  const [active, setActive] = useState(false);
+
+  const toggleActive = () => {
+    setActive((active) => !active);
+  };
+
   return (
-    <nav className="nav">
-      <div className="navContainer">
-        <Link href="/">
-          <img
-            className="logo"
-            src="/images/web-dev-path-logo-small.png"
-            alt="Logo"
-          />
-        </Link>
-        <div className="linksContainer">
-          <ul className="links">
-            <li>
+    <header className={styles.header}>
+      <div className={`${styles.navContainer} ${styles.row}`}>
+        <div className={styles.align}>
+          <Link href="/">
+            <img
+              className={`${styles.img} ${styles.logo}`}
+              src="/images/web-dev-path-logo-small.png"
+              alt="Logo"
+            />
+          </Link>
+          <button
+            className={styles.navToggle}
+            aria-label="open navigation"
+            onClick={toggleActive}
+          >
+            <span className={styles.hamburger} />
+          </button>
+        </div>
+        <nav className={`${active ? styles.navVisible : styles.nav}`}>
+          <ul className={styles.navList}>
+            <li className={styles.navItem}>
               <Link href="/about-us">
-                <a className="link">About Us</a>
+                <a className={styles.navLink}>About Us</a>
               </Link>
             </li>
-            <li>
-              <Link href="/active-projects">
-                <a className="link">Active Projects</a>
+            <li className={styles.navItem}>
+              <Link href="https://github.com/MarianaSouza/web-dev-path">
+                <a className={styles.navLink}>Github Repository</a>
               </Link>
             </li>
-            <li>
+            <li className={styles.navItem}>
               <Link href="/blog/index">
-                <a className="link">Blog</a>
+                <a className={styles.navLink}>Blog</a>
               </Link>
             </li>
-            <li>
-              <Link className="link" href="/contact-us">
-                <a className="link">Contact Us</a>
+            <li className={styles.navItem}>
+              <Link href="/contact-us">
+                <a className={styles.navLink}>Contact Us</a>
               </Link>
             </li>
           </ul>
-        </div>
+        </nav>
       </div>
-      <style jsx>
-        {`
-          .nav {
-            width: 100%;
-          }
-
-          .logo {
-            padding: 1rem;
-            border-radius: 100%;
-          }
-
-          .navContainer {
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-
-            max-width: 800px;
-          }
-
-          .linksContainer {
-            flex-basis: 50%;
-          }
-
-          .links {
-            list-style: none;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin: 0;
-            padding-left: 0;
-          }
-
-          .link {
-            text-decoration: none;
-            color: black;
-          }
-
-          .link:hover {
-            opacity: 70%;
-          }
-
-          @media (max-width: 768px) {
-            .links {
-              flex-direction: column;
-            }
-          }
-        `}
-      </style>
-    </nav>
+    </header>
   );
 }
