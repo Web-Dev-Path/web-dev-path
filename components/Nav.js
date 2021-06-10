@@ -5,6 +5,7 @@ import styles from "../styles/ResponsiveNavbar.module.css";
 export default function Nav() {
   const [active, setActive] = useState(false);
 
+  //This function fixes the Navlinks position if the hamburger menu is left open while resizing the window
   useEffect(() => {
     function setTrueSize() {
       if (window.innerWidth > 768) setActive(false);
