@@ -1,9 +1,18 @@
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "../styles/ResponsiveNavbar.module.css";
 
 export default function Nav() {
   const [active, setActive] = useState(false);
+
+  useEffect(() => {
+    function setTrueSize() {
+      if (window.innerWidth > 768) setActive(false);
+    }
+    window.addEventListener("resize", setTrueSize);
+
+    return () => window.removeEventListener("resize", setTrueSize);
+  });
 
   const toggleActive = () => {
     setActive((active) => !active);
