@@ -46,7 +46,7 @@ export default function Nav() {
               </Link>
             </li>
             <li className={styles.navItem}>
-              <Link href="/blog/index">
+              <Link href="/blog">
                 <a className={styles.navLink}>Blog</a>
               </Link>
             </li>
