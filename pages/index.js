@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Nav from "../components/Nav";
 
 export default function Home() {
   return (
@@ -8,7 +7,6 @@ export default function Home() {
         <title>Web Dev Path</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Nav />
       <main>
         <h1 className="title">&lt; Web Dev wannabe? /&gt;</h1>
         <div className="description">
@@ -63,24 +61,6 @@ export default function Home() {
       </footer>
 
       <style jsx>{`
-        .container {
-          min-height: 100vh;
-          padding: 0 0.5rem;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
-        main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
         .divider {
           color: #000;
           background-color: #000;
@@ -198,21 +178,6 @@ export default function Home() {
             width: 100%;
             flex-direction: column;
           }
-        }
-      `}</style>
-
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
-        }
-
-        * {
-          box-sizing: border-box;
         }
       `}</style>
     </div>
