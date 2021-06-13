@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import styles from "../styles/ResponsiveNavbar.module.css";
+import styles from "../styles/Nav.module.css";
 
 export default function Nav() {
   const [active, setActive] = useState(false);
