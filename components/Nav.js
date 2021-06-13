@@ -46,11 +46,6 @@ export default function Nav() {
               </Link>
             </li>
             <li className={styles.navItem}>
-              <Link href="https://github.com/MarianaSouza/web-dev-path">
-                <a className={styles.navLink}>Github Repository</a>
-              </Link>
-            </li>
-            <li className={styles.navItem}>
               <Link href="/blog/index">
                 <a className={styles.navLink}>Blog</a>
               </Link>
