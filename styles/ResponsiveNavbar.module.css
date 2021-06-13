@@ -29,7 +29,7 @@
   width: 3em;
   height: 3em;
   padding: 0;
-  border-radius: 50%;
+  background-color: transparent;
   color: black;
   transition: opacity 250ms ease;
   position: absolute;
@@ -73,14 +73,15 @@
   visibility: hidden;
   height: 0;
   position: absolute;
-  font-size: 1rem;
+  font-size: 1em;
 }
 
 .navVisible {
   visibility: visible;
   height: auto;
   position: relative;
-  text-align: end;
+  text-align: start;
+  padding-top: 1em;
 }
 
 .navList {
