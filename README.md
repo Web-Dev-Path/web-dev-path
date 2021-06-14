@@ -1,5 +1,15 @@
 ![Web Developer Path Logo](/images-web-dev-path/web-dev-path-logo.png)
 
+# Quickstart
+
+To run this project locally do the following steps:
+
+- [Git clone this repository](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository)
+- npm install
+- npm run dev
+
+Our website is live at [WebDevPath](https://webdevpath.co/).
+
 # Web Developer Path
 
 In this repository, you will find content and resources related to the practical steps to land your first job as a web developer.
@@ -50,29 +60,34 @@ These are the videos that explain in detail how to branch out and submit a PR:
   - [GitHub Markdown](https://guides.github.com/features/mastering-markdown/)
 
 * **Harvard**
-    - [CS50x - Introduction to Computer Science](https://cs50.harvard.edu/x/2020/)
-    - [CS50 Beyond - design and implementations of web apps](https://cs50.harvard.edu/beyond/2019/)
+
+  - [CS50x - Introduction to Computer Science](https://cs50.harvard.edu/x/2020/)
+  - [CS50 Beyond - design and implementations of web apps](https://cs50.harvard.edu/beyond/2019/)
 
 * **JavaScript**
-    - [Learn JavaScript by Codecademy](https://www.codecademy.com/learn/introduction-to-javascript)
+
+  - [Learn JavaScript by Codecademy](https://www.codecademy.com/learn/introduction-to-javascript)
 
   **JS Libraries and Frameworks**
   <br />
-  - _**React**_ 
+
+  - _**React**_
     - [React Handbook for Beginners](https://www.freecodecamp.org/news/react-beginner-handbook/)
     - [React Functional Components, Props, and JSX – React.js Tutorial for Beginners](https://www.freecodecamp.org/news/react-components-jsx-props-for-beginners/)
 
 * **PHP**
+
   - [PHP Tutorial](https://www.w3schools.com/php/DEFAULT.asp)
 
 * **Python**
   - [Best Python Tutorials](https://www.freecodecamp.org/news/best-python-tutorial/)
 
 - **WordPress**
+
   - [How to Make a Custom Website from Scratch using WordPress (Theme Development) by freeCodeCamp ](https://youtu.be/KibbYf9avko)
-  - [Professional WordPress Theme & Plugin Development](https://www.udemy.com/course/photoshop-psd-to-wordpress-theme-development-from-scratch/) 
+  - [Professional WordPress Theme & Plugin Development](https://www.udemy.com/course/photoshop-psd-to-wordpress-theme-development-from-scratch/)
   - [WordPress Plugin Development](https://youtu.be/mm9aQiLEa10)
-  
+
   <br />
   <br />
 
@@ -96,13 +111,14 @@ These are the videos that explain in detail how to branch out and submit a PR:
 
 - **Launching A Website**
   - [How to Put a Website Online: Template, Coding, Domain, Hosting, and DNS](https://youtu.be/NQP89ish9t8)
-  
+
 <br />
 <br />
 
 ## Presentation
 
 - **A Junior Web Developer Resume**
+
   - [How to write an awesome junior developer résumé in a few simple steps, by freeCodeCamp](https://www.freecodecamp.org/news/how-to-write-an-awesome-junior-developer-resume-in-a-few-simple-steps-316010db80ec/)
 
 - **Your LinkedIn**
@@ -110,4 +126,3 @@ These are the videos that explain in detail how to branch out and submit a PR:
 
 <br />
 <br />
-
