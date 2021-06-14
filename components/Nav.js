@@ -25,7 +25,7 @@ export default function Nav() {
         <div className={styles.align}>
           <Link href="/">
             <img
-              className={`${styles.img} ${styles.logo}`}
+              className={styles.logo}
               src="/images/web-dev-path-logo-small.png"
               alt="Logo"
             />
