@@ -10,8 +10,8 @@
 .container {
   padding: 1rem 0;
   margin: 1rem;
-  border-top: 1px solid #696969;
-  border-bottom: 1px solid #696969;
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
 }
 
 .columnLeft {
@@ -22,6 +22,11 @@
 
 .footerItem + .footerItem {
   margin-top: 0.5rem;
+}
+
+.footerItem:hover,
+.footerItem:focus {
+  color: #666;
 }
 
 .logo {
@@ -57,6 +62,10 @@
 
 .socialMedia__item {
   margin-left: 1rem;
+}
+
+.socialMedia img:hover {
+  opacity: 65%;
 }
 
 .copyright {
@@ -106,6 +115,10 @@
   .socialMedia {
     justify-content: flex-end;
     margin-right: 1rem;
+  }
+
+  .socialMedia img {
+    height: 2.5rem;
   }
 
   .copyright {
