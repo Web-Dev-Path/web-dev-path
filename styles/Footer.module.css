@@ -1,43 +1,118 @@
 .footer {
   width: 100%;
-  border-top: 1px solid #eaeaea;
 }
 
-.footer ul {
+.footerList {
   list-style: none;
   padding: 0;
 }
 
 .container {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  padding: 1rem 0;
   margin: 1rem;
-  border: 1px solid red;
+  border-top: 1px solid #696969;
+  border-bottom: 1px solid #696969;
 }
 
-/* code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
-} */
+.columnLeft {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footerItem + .footerItem {
+  margin-top: 0.5rem;
+}
 
 .logo {
-  height: 1em;
+  border-radius: 50%;
+  height: 5em;
+}
+
+.subscribe {
+  text-align: center;
+}
+
+.subscribe h2 {
+  margin-bottom: 0.8rem;
+  font-size: 1.8rem;
+}
+
+.subscribe p {
+  margin-top: 0.2rem;
+  font-size: 0.8rem;
+  color: #696969;
+}
+
+.subscribe .text {
+  font-size: 1rem;
+  color: #000;
+}
+
+.socialMedia {
+  margin: 1.8rem 0 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.socialMedia__item {
+  margin-left: 1rem;
+}
+
+.copyright {
+  font-size: 0.8rem;
+  color: #696969;
+  text-align: center;
 }
 
 @media (min-width: 578px) {
-  /* .footer {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  } */
-
   .container {
     max-width: 800px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .columnLeft {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .columnRight {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .subscribe {
+    text-align: left;
+  }
+
+  .subscribe h2 {
+    margin-top: 0.5rem;
+  }
+
+  .subscribe input {
+    height: 1.8rem;
+    width: 65%;
+  }
+
+  .subscribe button {
+    height: 1.8rem;
+    width: 30%;
+  }
+
+  .socialMedia {
+    justify-content: flex-end;
+    margin-right: 1rem;
+  }
+
+  .copyright {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-align: left;
   }
 }

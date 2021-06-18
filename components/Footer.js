@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className={footerStyles.footer}>
       <div className={footerStyles.container}>
-        <div className={footerStyles.column}>
+        <div className={footerStyles.columnLeft}>
           <ul className={footerStyles.footerList}>
             <li className={footerStyles.footerItem}>
               <Link href="/about-us">
@@ -23,12 +23,16 @@ export default function Footer() {
               </Link>
             </li>
           </ul>
-          <img src="/images/web-dev-path-logo-small.png" alt="Logo" />
+          <img
+            className={footerStyles.logo}
+            src="/images/web-dev-path-logo-small.png"
+            alt="Logo"
+          />
         </div>
-        <div className={footerStyles.column}>
+        <div className={footerStyles.columnRight}>
           <div className={footerStyles.subscribe}>
             <h2>Subscribe for more</h2>
-            <p>
+            <p className={footerStyles.text}>
               Get the answer to the most common questions directly to your email
             </p>
             <form>
@@ -39,15 +43,21 @@ export default function Footer() {
           </div>
           <div className={footerStyles.socialMedia}>
             <Link href="#">
-              <img src="" alt="Github" />
+              <img src="iconmonstr-github-1.svg" alt="Github" />
             </Link>
             <Link href="#">
-              <img src="" alt="Twitter" />
+              <img
+                className={footerStyles.socialMedia__item}
+                src="iconmonstr-twitter-4.svg"
+                alt="Twitter"
+              />
             </Link>
           </div>
         </div>
       </div>
-      <p>Web Dev Path 2021. All rights reserved.</p>
+      <p className={footerStyles.copyright}>
+        Web Dev Path 2021. All rights reserved.
+      </p>
     </footer>
   );
 }
