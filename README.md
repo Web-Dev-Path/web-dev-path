@@ -1,53 +1,44 @@
 ![Web Developer Path Logo](/images-web-dev-path/web-dev-path-logo.png)
 
+# Web Developer Path
+
+The **Web Dev Path** project is an attempt to offer mentoring on how to work with a version-controlled project in a team environment. 
+
+Currently, we're developing [a platform](https://webdevpath.co/) in [Next.js](https://nextjs.org/). The platform will be a place where to share ideas about web development and where Non-Profit Organizations can get some help for their websites by sharing their project and needs and getting connected to volunteer junior web developers. This is [how](https://github.com/MarianaSouza/web-dev-path/projects/1) things are going on so far.
+
+If you are a junior web developer looking for some guidance and mentoring, we invite you to join us and start coding our platform. You will learn how to code in a team environment by following [issue's](https://guides.github.com/features/issues/) instructions and submitting your code to our repository through a [PR](https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) while guided throughout the entire process.
+
+If you are an experienced and a patient-lovely developer, a true rockstar who wants to mentor juniors, it will be wonderful to have your help to review those PR's, write detailed issues and guide the developers when necessary.
+
+
+<br />
+
+# Slack
+
+Reach out on [our channel](https://join.slack.com/t/webdevpath/shared_invite/zt-je2zuuja-zlQr2_YpFP_9zuyGcKeYGg)!
+
+<br />
+
 # Quickstart
 
 To run this project locally do the following steps:
 
 - [Git clone this repository](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository)
-- npm install
-- npm run dev
-
-Our website is live at [WebDevPath](https://webdevpath.co/).
-
-# Web Developer Path
-
-In this repository, you will find content and resources related to the practical steps to land your first job as a web developer.
-
-To add content or request a change, please branch out by following these guidelines:
-
-- If you are adding a new section, start your branch saying section-course/ + the course and links you are adding, such as: section-course/html-css-freecodecamp.
-- If you are only updating or requesting an update to a section, start your branch with section/ + what you're updating, as per: section/updating-introduction.
-- All the images should be added under the folder images-web-dev-path.
-- The Pull Requests (PR) should follow a similar structure we can see on the picture below, wich includes a brief description of the PR:
+- Run `npm install`
+- Run `npm run dev`
+- [Branch out](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging) by following the structure `feature/add-your-branch-name` or `chore/add-your-branch-name` or `fix/add-your-branch-name` and submit your [PR](https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)
 
 <br />
 
-![PR example](/images-web-dev-path/pr-example.png)
+# What if I don't know what to do after cloning the repo?
+
+Just reach out on [slack](https://join.slack.com/t/webdevpath/shared_invite/zt-je2zuuja-zlQr2_YpFP_9zuyGcKeYGg)! Someone will help you out, we've got you.
 
 <br />
 
-This is a video that explains a little bit how to start collaborating with the project:
+# Resources
 
-[Start Collaborating](https://www.loom.com/share/fbe2c01a963c4885815391d671f35321?fbclid=IwAR1bI2VdRntQhK37dpRI3LS_YPWDmVk-n8yLTYqKlq-v7QP6cNgkaP5Nqe0)
-
-These are the videos that explain in detail how to branch out and submit a PR:
-
-- [Branching out from an up to date master](https://www.loom.com/share/77c3bea45d86428a86c897ac3ccaacc4)
-- [Creating the PR with the first commit](https://www.loom.com/share/04e326b873db4af7a4ce86c74183d554)
-- [Fixing the PR title](https://www.loom.com/share/58feae54c4d04a2e908d5fe41dc262e9)
-- [Adding the description and selecting the reviewers](https://www.loom.com/share/bf775cb7503c42129ab5f7715b094c53)
-- [Merging the PR](https://www.loom.com/share/de0eaa9cdcd34d8bac491cd8955f4883)
-
-<br />
-
-## Channels
-
-- **Slack**
-
-  - [Web Dev Path Channel](https://join.slack.com/t/webdevpath/shared_invite/zt-je2zuuja-zlQr2_YpFP_9zuyGcKeYGg)
-
-<br />
+Here you will find content and resources related to courses and practical steps to land your first job as a web developer.
 
 ## Courses and Certifications
 
