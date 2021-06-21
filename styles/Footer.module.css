@@ -31,7 +31,7 @@
 
 .logo {
   border-radius: 50%;
-  height: 5em;
+  height: 4.5em;
 }
 
 .subscribe {
@@ -60,7 +60,7 @@
   justify-content: center;
 }
 
-.socialMedia__item {
+.socialMedia + .socialMedia {
   margin-left: 1rem;
 }
 
@@ -114,7 +114,7 @@
 
   .socialMedia {
     justify-content: flex-end;
-    margin-right: 1rem;
+    margin: 1rem 1rem 0.5rem 0;
   }
 
   .socialMedia img {
