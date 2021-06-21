@@ -36,7 +36,7 @@ export default function Footer() {
           </div>
           <div className={footerStyles.socialMedia}>
             {linksSocial.map((link) => (
-              <Link href={link.href} key={link.href}>
+              <Link href={link.href} key={link.text}>
                 <img
                   className={footerStyles.socialMedia}
                   src={link.src}
