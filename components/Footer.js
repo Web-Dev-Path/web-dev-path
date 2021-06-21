@@ -1,5 +1,6 @@
 import Link from "next/link";
 import footerStyles from "../styles/Footer.module.css";
+import { linksNav, linksSocial } from "../utils/links";
 
 export default function Footer() {
   return (
@@ -7,21 +8,13 @@ export default function Footer() {
       <div className={footerStyles.container}>
         <div className={footerStyles.columnLeft}>
           <ul className={footerStyles.footerList}>
-            <li className={footerStyles.footerItem}>
-              <Link href="/about-us">
-                <a>About Us</a>
-              </Link>
-            </li>
-            <li className={footerStyles.footerItem}>
-              <Link href="/blog">
-                <a>Blog</a>
-              </Link>
-            </li>
-            <li className={footerStyles.footerItem}>
-              <Link href="/contact-us">
-                <a>Contact Us</a>
-              </Link>
-            </li>
+            {linksNav.map((link) => (
+              <li className={footerStyles.footerItem} key={link.href}>
+                <Link href={link.href}>
+                  <a>{link.text}</a>
+                </Link>
+              </li>
+            ))}
           </ul>
           <img
             className={footerStyles.logo}
@@ -42,16 +35,15 @@ export default function Footer() {
             <p>*Unsubscribe anytime</p>
           </div>
           <div className={footerStyles.socialMedia}>
-            <Link href="#">
-              <img src="iconmonstr-github-1.svg" alt="Github" />
-            </Link>
-            <Link href="#">
-              <img
-                className={footerStyles.socialMedia__item}
-                src="iconmonstr-twitter-4.svg"
-                alt="Twitter"
-              />
-            </Link>
+            {linksSocial.map((link) => (
+              <Link href={link.href} key={link.href}>
+                <img
+                  className={footerStyles.socialMedia}
+                  src={link.src}
+                  alt={link.text}
+                />
+              </Link>
+            ))}
           </div>
         </div>
       </div>
