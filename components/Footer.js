@@ -1,11 +1,14 @@
 import Link from "next/link";
 import footerStyles from "../styles/Footer.module.css";
+import layoutStyles from "../styles/Layout.module.css";
 import { linksNav, linksSocial } from "../utils/links";
 
 export default function Footer() {
   return (
     <footer className={footerStyles.footer}>
-      <div className={footerStyles.container}>
+      <div
+        className={`${layoutStyles.widthContainer} ${footerStyles.container}`}
+      >
         <div className={footerStyles.columnLeft}>
           <ul className={footerStyles.footerList}>
             {linksNav.map((link) => (
@@ -47,7 +50,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <p className={footerStyles.copyright}>
+      <p className={`${layoutStyles.widthContainer} ${footerStyles.copyright}`}>
         Web Dev Path 2021. All rights reserved.
       </p>
     </footer>

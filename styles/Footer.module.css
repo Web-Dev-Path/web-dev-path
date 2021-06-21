@@ -76,7 +76,6 @@
 
 @media (min-width: 578px) {
   .container {
-    max-width: 800px;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
@@ -122,10 +121,7 @@
   }
 
   .copyright {
-    max-width: 800px;
-    margin: 0 auto;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin: 1rem auto;
     text-align: left;
   }
 }
