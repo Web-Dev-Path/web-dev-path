@@ -6,7 +6,7 @@ export default function Home() {
     <div>
       <Head>
         <title>Web Dev Path</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/images/favicon.ico" />
       </Head>
       <h1 className={styles.title}>&lt; Web Dev wannabe? /&gt;</h1>
       <div className={styles.description}>
