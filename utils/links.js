@@ -5,6 +5,6 @@ export const linksNav = [
 ];
 
 export const linksSocial = [
-  { text: "Github", href: "./svg/iconmonstr-github.svg" },
-  { text: "Twitter", href: "./svg/iconmonstr-twitter.svg" },
+  { text: "Github", href: "#", src: "/images/svg/iconmonstr-github.svg" },
+  { text: "Twitter", href: "#", src: "/images/svg/iconmonstr-twitter.svg" },
 ];
