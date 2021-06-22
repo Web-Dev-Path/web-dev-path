@@ -1,3 +1,8 @@
+.widthContainer {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
 .container {
   min-height: 100vh;
   padding: 0 0.5rem;

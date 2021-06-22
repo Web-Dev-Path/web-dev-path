@@ -1,31 +1,127 @@
 .footer {
   width: 100%;
-  height: 100px;
-  border-top: 1px solid #eaeaea;
+}
+
+.footerList {
+  list-style: none;
+  padding: 0;
+}
+
+.container {
+  padding: 1rem 0;
+  margin: 1rem;
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
+}
+
+.columnLeft {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
-.footer img {
-  margin-left: 0.5rem;
+.footerItem + .footerItem {
+  margin-top: 0.5rem;
 }
 
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.footerItem:hover,
+.footerItem:focus {
+  color: #666;
 }
-
-/* code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
-} */
 
 .logo {
-  height: 1em;
+  border-radius: 50%;
+  height: 4.5em;
+}
+
+.subscribe {
+  text-align: center;
+}
+
+.subscribe h2 {
+  margin-bottom: 0.8rem;
+  font-size: 1.8rem;
+}
+
+.subscribe p {
+  margin-top: 0.2rem;
+  font-size: 0.8rem;
+  color: #696969;
+}
+
+.subscribe .text {
+  font-size: 1rem;
+  color: #000;
+}
+
+.socialMedia {
+  margin: 1.8rem 0 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.socialMedia + .socialMedia {
+  margin-left: 1rem;
+}
+
+.socialMedia img:hover {
+  opacity: 65%;
+}
+
+.copyright {
+  font-size: 0.8rem;
+  color: #696969;
+  text-align: center;
+}
+
+@media (min-width: 578px) {
+  .container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .columnLeft {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .columnRight {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .subscribe {
+    text-align: left;
+  }
+
+  .subscribe h2 {
+    margin-top: 0.5rem;
+  }
+
+  .subscribe input {
+    height: 1.8rem;
+    width: 65%;
+  }
+
+  .subscribe button {
+    height: 1.8rem;
+    width: 30%;
+  }
+
+  .socialMedia {
+    justify-content: flex-end;
+    margin: 1rem 1rem 0.5rem 0;
+  }
+
+  .socialMedia img {
+    height: 2.5rem;
+  }
+
+  .copyright {
+    margin: 1rem auto;
+    text-align: left;
+  }
 }

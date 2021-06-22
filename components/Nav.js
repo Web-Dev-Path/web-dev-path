@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import styles from "../styles/Nav.module.css";
+import layoutStyles from "../styles/Layout.module.css";
+import { linksNav } from "../utils/links";
 
 export default function Nav() {
   const [active, setActive] = useState(false);
@@ -21,7 +23,9 @@ export default function Nav() {
 
   return (
     <header className={styles.header}>
-      <div className={`${styles.navContainer} ${styles.row}`}>
+      <div
+        className={`${styles.navContainer} ${styles.row} ${layoutStyles.widthContainer}`}
+      >
         <div className={styles.align}>
           <Link href="/">
             <img
@@ -40,21 +44,13 @@ export default function Nav() {
         </div>
         <nav className={`${active ? styles.navVisible : styles.nav}`}>
           <ul className={styles.navList}>
-            <li className={styles.navItem}>
-              <Link href="/about-us">
-                <a className={styles.navLink}>About Us</a>
-              </Link>
-            </li>
-            <li className={styles.navItem}>
-              <Link href="/blog">
-                <a className={styles.navLink}>Blog</a>
-              </Link>
-            </li>
-            <li className={styles.navItem}>
-              <Link href="/contact-us">
-                <a className={styles.navLink}>Contact Us</a>
-              </Link>
-            </li>
+            {linksNav.map((link) => (
+              <li className={styles.navItem} key={link.href}>
+                <Link href={link.href}>
+                  <a className={styles.navLink}>{link.text}</a>
+                </Link>
+              </li>
+            ))}
           </ul>
         </nav>
       </div>

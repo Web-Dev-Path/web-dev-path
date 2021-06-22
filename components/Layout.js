@@ -6,7 +6,7 @@ export default function Layout({ children }) {
   return (
     <>
       <Nav />
-      <div className={styles.container}>
+      <div className={`${styles.widthContainer} ${styles.container}`}>
         <main className={styles.main}>{children}</main>
       </div>
       <Footer />
