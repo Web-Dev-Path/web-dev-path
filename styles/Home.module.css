@@ -1,8 +1,7 @@
-.divider {
-  color: #000;
-  background-color: #000;
-  height: 1px;
+hr.divider {
+  border-top: 1px solid #eaeaea;
   width: 100%;
+  margin: 4rem 0;
 }
 
 .title a {
@@ -19,10 +18,7 @@
 .title {
   margin: 0;
   line-height: 1.15;
-  font-size: 4rem;
-}
-
-.title {
+  font-size: 2.5rem;
   text-align: center;
 }
 
@@ -30,7 +26,8 @@
   line-height: 1.5;
   font-size: 1.5rem;
   text-align: center;
-  padding: 0 1rem;
+  max-width: 90%;
+  margin: 0 auto;
 }
 
 .grid {
@@ -70,6 +67,13 @@
   margin: 0;
   font-size: 1.25rem;
   line-height: 1.5;
+}
+
+
+@media (min-width: 1024px) {
+  .title {
+    font-size: 4rem;
+  }
 }
 
 @media (max-width: 600px) {

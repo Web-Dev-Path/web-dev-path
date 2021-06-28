@@ -1,13 +1,12 @@
 import Link from "next/link";
 import footerStyles from "../styles/Footer.module.css";
-import layoutStyles from "../styles/Layout.module.css";
 import { linksNav, linksSocial } from "../utils/links";
 
 export default function Footer() {
   return (
     <footer className={footerStyles.footer}>
       <div
-        className={`${layoutStyles.widthContainer} ${footerStyles.container}`}
+        className={footerStyles.container}
       >
         <div className={footerStyles.columnLeft}>
           <ul className={footerStyles.footerList}>
@@ -50,9 +49,11 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <p className={`${layoutStyles.widthContainer} ${footerStyles.copyright}`}>
-        Web Dev Path 2021. All rights reserved.
-      </p>
+      <div className={footerStyles.copyright}>
+        <p>
+          Web Dev Path 2021. All rights reserved.
+        </p>
+      </div>
     </footer>
   );
 }

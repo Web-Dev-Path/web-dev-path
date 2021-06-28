@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import styles from "../styles/Nav.module.css";
-import layoutStyles from "../styles/Layout.module.css";
 import { linksNav } from "../utils/links";
 
 export default function Nav() {
@@ -24,7 +23,7 @@ export default function Nav() {
   return (
     <header className={styles.header}>
       <div
-        className={`${styles.navContainer} ${styles.row} ${layoutStyles.widthContainer}`}
+        className={`${styles.navContainer} ${styles.row}`}
       >
         <div className={styles.align}>
           <Link href="/">

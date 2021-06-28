@@ -1,22 +1,16 @@
-.widthContainer {
-  max-width: 80%;
-  margin: 0 auto;
-}
-
 .container {
   min-height: 100vh;
   padding: 0 0.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .main {
   padding: 3rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+}
+
+@media (min-width: 1024px){
+  .container {
+    width: 80%;
+  }
 }
