@@ -1,5 +1,5 @@
 import Link from "next/link";
-import footerStyles from "../styles/Footer.module.css";
+import footerStyles from "../styles/Footer.module.scss";
 import { linksNav, linksSocial } from "../utils/links";
 
 export default function Footer() {
@@ -12,8 +12,8 @@ export default function Footer() {
           <ul className={footerStyles.footerList}>
             {linksNav.map((link) => (
               <li className={footerStyles.footerItem} key={link.href}>
-                <Link href={link.href}>
-                  <a>{link.text}</a>
+                <Link href={link.href} >
+                  <a title={link.text}>{link.text}</a>
                 </Link>
               </li>
             ))}

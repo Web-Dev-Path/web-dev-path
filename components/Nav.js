@@ -46,7 +46,7 @@ export default function Nav() {
             {linksNav.map((link) => (
               <li className={styles.navItem} key={link.href}>
                 <Link href={link.href}>
-                  <a className={styles.navLink}>{link.text}</a>
+                  <a className={styles.navLink} title={link.text}>{link.text}</a>
                 </Link>
               </li>
             ))}
