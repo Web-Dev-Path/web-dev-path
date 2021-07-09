@@ -1,6 +1,7 @@
 .navContainer {
   width: 80%;
   position: relative;
+  margin: 0 auto;
 }
 
 .header {
@@ -101,6 +102,11 @@
 .logo {
   border-radius: 50%;
   height: 5em;
+  cursor: pointer;
+}
+
+.logo:hover{
+  opacity: 0.6;
 }
 
 @media (min-width: 768px) {
