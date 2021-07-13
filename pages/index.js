@@ -18,7 +18,9 @@ export default function Home() {
       </div>
       <hr className={styles.divider} />
 
-      <h2>Would you answer "yes" to any of these questions?</h2>
+      <h2 className={styles.centerText}>
+        Would you answer "yes" to any of these questions?
+      </h2>
 
       <div className={styles.grid}>
         <div className={styles.card}>
@@ -37,12 +39,12 @@ export default function Home() {
             Are you a web dev looking for help or a code buddy for a project?
           </p>
         </div>
-
-        <h3>
-          If so, you are probably in the right place and should learn more about
-          us
-        </h3>
       </div>
+
+      <h3 className={styles.centerText}>
+        If so, you are probably in the right place and should learn more about
+        us
+      </h3>
     </div>
   );
 }

@@ -30,6 +30,10 @@ hr.divider {
   margin: 0 auto;
 }
 
+.centerText {
+  text-align: center;
+}
+
 .grid {
   display: flex;
   align-items: center;
@@ -54,8 +58,8 @@ hr.divider {
 .card:hover,
 .card:focus,
 .card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+  color: #666;
+  border-color: #666;
 }
 
 .card h3 {
@@ -68,7 +72,6 @@ hr.divider {
   font-size: 1.25rem;
   line-height: 1.5;
 }
-
 
 @media (min-width: 1024px) {
   .title {
