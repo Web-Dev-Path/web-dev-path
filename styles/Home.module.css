@@ -41,13 +41,13 @@ hr.divider {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  max-width: 50rem;
+  /* max-width: 50rem; */
   margin: 3rem auto;
 }
 
 .card {
   height: 13rem;
-  max-width: 18rem;
+  max-width: 40%;
   margin: 1.5rem;
   flex-basis: 45%;
   padding: 1.5rem;
@@ -82,6 +82,10 @@ hr.divider {
   padding: 0.5rem 1rem;
   border-radius: 7px;
   cursor: pointer;
+}
+
+.button:hover {
+  opacity: 65%;
 }
 
 @media (min-width: 1024px) {
