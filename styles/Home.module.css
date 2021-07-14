@@ -39,8 +39,8 @@ hr.divider {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-
-  margin-top: 3rem;
+  max-width: 50rem;
+  margin: 3rem auto;
 }
 
 .card {
@@ -50,8 +50,7 @@ hr.divider {
   text-align: left;
   color: inherit;
   text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
+  border: 2px solid #eaeaea;
   transition: color 0.15s ease, border-color 0.15s ease;
 }
 
@@ -60,11 +59,6 @@ hr.divider {
 .card:active {
   color: #666;
   border-color: #666;
-}
-
-.card h3 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
 }
 
 .card p {
@@ -83,5 +77,6 @@ hr.divider {
   .grid {
     width: 100%;
     flex-direction: column;
+    margin: 3rem 0 0 0;
   }
 }
