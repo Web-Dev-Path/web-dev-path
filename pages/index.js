@@ -45,6 +45,11 @@ export default function Home() {
         If so, you are probably in the right place and should learn more about
         us
       </h3>
+      <br />
+
+      <div className={styles.centerText}>
+        <button className={styles.button}>Learn More</button>
+      </div>
     </div>
   );
 }

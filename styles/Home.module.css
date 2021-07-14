@@ -76,6 +76,14 @@ hr.divider {
   font-weight: bold;
 }
 
+.button {
+  font-size: 0.9rem;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
 @media (min-width: 1024px) {
   .title {
     font-size: 4rem;
