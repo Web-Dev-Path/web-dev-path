@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -41,14 +42,17 @@ export default function Home() {
         </div>
       </div>
 
-      <h3 className={styles.centerText}>
-        If so, you are probably in the right place and should learn more about
-        us
-      </h3>
-      <br />
+      <div>
+        <h3 className={styles.centerText}>
+          If so, you are probably in the right place and should learn more about
+          us
+        </h3>
+      </div>
 
       <div className={styles.centerText}>
-        <button className={styles.button}>Learn More</button>
+        <button className={styles.button}>
+          <Link href="/about-us">Learn More</Link>
+        </button>
       </div>
     </div>
   );

@@ -33,7 +33,7 @@ hr.divider {
 .centerText {
   text-align: center;
   width: 90%;
-  margin: 0 auto;
+  margin: 1.5rem auto;
 }
 
 .grid {
@@ -41,7 +41,6 @@ hr.divider {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  /* max-width: 50rem; */
   margin: 3rem auto;
 }
 
@@ -55,17 +54,16 @@ hr.divider {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #666;
   text-decoration: none;
-  border: 2px solid #eaeaea;
+  border: 2px solid #666;
   transition: color 0.15s ease, border-color 0.15s ease;
 }
 
 .card:hover,
 .card:focus,
 .card:active {
-  color: #000;
-  border-color: #666;
+  color: #666;
+  border-color: #eaeaea;
 }
 
 .card p {
@@ -77,15 +75,20 @@ hr.divider {
 }
 
 .button {
-  font-size: 0.9rem;
-  font-weight: bold;
-  padding: 0.5rem 1rem;
-  border-radius: 7px;
-  cursor: pointer;
+  height: 2.4rem;
+  width: 25%;
+  border-radius: 5px;
+  background-color: #696969;
+  color: #fff;
+  font-size: 0.875rem;
+  border: none;
+  text-transform: uppercase;
+  transition: opacity 0.3s ease;
 }
 
 .button:hover {
   opacity: 65%;
+  cursor: pointer;
 }
 
 @media (min-width: 1024px) {
