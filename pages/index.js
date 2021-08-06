@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -18,32 +19,40 @@ export default function Home() {
       </div>
       <hr className={styles.divider} />
 
+      <h2 className={styles.centerText}>
+        Would you answer "yes" to any of these questions?
+      </h2>
+
       <div className={styles.grid}>
-        <a href="https://nextjs.org/docs" className={styles.card}>
-          <h3>Documentation &rarr;</h3>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+        <div className={styles.card}>
+          <p>Are you learning web development and need mentorship?</p>
+        </div>
+        <div className={styles.card}>
+          <p>Are you an experienced web dev who wants to become a mentor?</p>
+        </div>
+        <div className={styles.card}>
+          <p>
+            Are you a non-profit organization who needs help with a web project?
+          </p>
+        </div>
+        <div className={styles.card}>
+          <p>
+            Are you a web dev looking for help or a code buddy for a project?
+          </p>
+        </div>
+      </div>
 
-        <a href="https://nextjs.org/learn" className={styles.card}>
-          <h3>Learn &rarr;</h3>
-          <p>Learn about Next.js in an interactive course with quizzes!</p>
-        </a>
+      <div>
+        <h3 className={styles.centerText}>
+          If so, you are probably in the right place and should learn more about
+          us
+        </h3>
+      </div>
 
-        <a
-          href="https://github.com/vercel/next.js/tree/master/examples"
-          className={styles.card}
-        >
-          <h3>Examples &rarr;</h3>
-          <p>Discover and deploy boilerplate example Next.js projects.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          className={styles.card}
-        >
-          <h3>Deploy &rarr;</h3>
-          <p>Instantly deploy your Next.js site to a public URL with Vercel.</p>
-        </a>
+      <div className={styles.centerText}>
+        <button className={styles.button}>
+          <Link href="/about-us">Learn More</Link>
+        </button>
       </div>
     </div>
   );

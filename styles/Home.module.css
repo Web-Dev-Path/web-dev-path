@@ -30,45 +30,66 @@ hr.divider {
   margin: 0 auto;
 }
 
+.centerText {
+  text-align: center;
+  width: 90%;
+  margin: 1.5rem auto;
+}
+
 .grid {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-
-  margin-top: 3rem;
+  margin: 3rem auto;
 }
 
 .card {
-  margin: 1rem;
+  height: 13rem;
+  max-width: 40%;
+  margin: 1.5rem;
   flex-basis: 45%;
   padding: 1.5rem;
   text-align: left;
-  color: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
+  border: 2px solid #666;
   transition: color 0.15s ease, border-color 0.15s ease;
 }
 
 .card:hover,
 .card:focus,
 .card:active {
-  color: #0070f3;
-  border-color: #0070f3;
-}
-
-.card h3 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
+  color: #666;
+  border-color: #eaeaea;
 }
 
 .card p {
-  margin: 0;
-  font-size: 1.25rem;
+  margin: 0 1rem;
+  font-size: 1.125rem;
   line-height: 1.5;
+  text-align: center;
+  font-weight: bold;
 }
 
+.button {
+  height: 2.4rem;
+  width: 8rem;
+  border-radius: 5px;
+  background-color: #696969;
+  color: #fff;
+  font-size: 0.875rem;
+  border: none;
+  text-transform: uppercase;
+  transition: opacity 0.3s ease;
+}
+
+.button:hover {
+  opacity: 65%;
+  cursor: pointer;
+}
 
 @media (min-width: 1024px) {
   .title {
@@ -76,9 +97,17 @@ hr.divider {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 728px) {
   .grid {
     width: 100%;
     flex-direction: column;
+    margin: 3rem 0;
+  }
+
+  .card {
+    max-width: none;
+    margin: 0.5rem;
+    width: 90%;
+    min-height: 7rem;
   }
 }

@@ -28,7 +28,8 @@
     margin-top: 0.5rem;
   }
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     color: #666;
   }
 }
@@ -39,7 +40,7 @@
   cursor: pointer;
 }
 
-.logo:hover{
+.logo:hover {
   opacity: 0.6;
 }
 
@@ -77,9 +78,10 @@
     font-size: 0.7rem;
     border: 1px solid #696969;
     text-transform: uppercase;
-    @include transition(opacity .3s ease);
+    @include transition(opacity 0.3s ease);
     &:hover {
       opacity: 0.6;
+      cursor: pointer;
     }
   }
 }
@@ -129,14 +131,14 @@
   }
 
   .subscribe {
-    h2{
+    h2 {
       margin-top: 0.5rem;
     }
-    button{
+    button {
       font-size: 0.875rem;
       width: 30%;
     }
-    input{
+    input {
       width: 70%;
     }
   }
