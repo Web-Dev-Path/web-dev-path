@@ -16,6 +16,7 @@
 
 .nav {
   width: 100%;
+  overflow: hidden;
 }
 
 .navToggle {
@@ -105,7 +106,7 @@
   cursor: pointer;
 }
 
-.logo:hover{
+.logo:hover {
   opacity: 0.6;
 }
 
