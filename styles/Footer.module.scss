@@ -24,11 +24,12 @@
 }
 
 .footerItem {
-  + .footerItem {
+  +.footerItem {
     margin-top: 0.5rem;
   }
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     color: #666;
   }
 }
@@ -37,10 +38,10 @@
   border-radius: 50%;
   height: 4.5em;
   cursor: pointer;
-}
 
-.logo:hover{
-  opacity: 0.6;
+  &:hover {
+    opacity: 0.6;
+  }
 }
 
 .subscribe {
@@ -78,6 +79,7 @@
     border: 1px solid #696969;
     text-transform: uppercase;
     @include transition(opacity .3s ease);
+
     &:hover {
       opacity: 0.6;
     }
@@ -89,7 +91,7 @@
   display: flex;
   justify-content: center;
 
-  + .socialMedia {
+  +.socialMedia {
     margin-left: 1rem;
   }
 
@@ -129,14 +131,16 @@
   }
 
   .subscribe {
-    h2{
+    h2 {
       margin-top: 0.5rem;
     }
-    button{
+
+    button {
       font-size: 0.875rem;
       width: 30%;
     }
-    input{
+
+    input {
       width: 70%;
     }
   }
