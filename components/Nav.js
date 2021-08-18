@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import styles from "../styles/Nav.module.css";
+import styles from "../styles/Nav.module.scss";
 import { linksNav } from "../utils/links";
 
 export default function Nav() {
