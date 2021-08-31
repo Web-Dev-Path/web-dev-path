@@ -1,16 +1,18 @@
+@import "variables";
+
 .container {
-    min-height: 100vh;
-    padding: 0 0.5rem;
-    width: 100%;
-    margin: 0 auto;
+	min-height: 100vh;
+	padding: 0 0.5rem;
+	width: 100%;
+	margin: 0 auto;
 }
 
 .main {
-    padding: 3rem 0;
+	padding: 3rem 0;
 }
 
-@media (min-width: 1024px) {
-    .container {
-        width: 80%;
-    }
+@media (min-width: $desktop-breakpoint) {
+	.container {
+		width: 80%;
+	}
 }
