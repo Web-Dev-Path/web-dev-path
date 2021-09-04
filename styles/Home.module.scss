@@ -101,7 +101,7 @@ hr {
 	}
 }
 
-@media (max-width: 728px) {
+@media (max-width: $tablet-breakpoint) {
 	.grid {
 		width: 100%;
 		flex-direction: column;
