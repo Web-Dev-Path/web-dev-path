@@ -1,8 +1,9 @@
 @import "mixins";
+@import "variables";
 
 .footer {
 	width: 100%;
-	background-color: #eaeaea;
+	background-color: $primary-bg-color;
 }
 
 .footerList {
@@ -11,7 +12,7 @@
 }
 
 .container {
-	border-bottom: 1px solid #bebebe;
+	border-bottom: 1px solid $primary-bg-color;
 	max-width: 80%;
 	margin: 0 auto;
 	padding: 2rem 0;
@@ -30,7 +31,7 @@
 
 	&:hover,
 	&:focus {
-		color: #666;
+		color: $accent-color;
 	}
 }
 
@@ -53,12 +54,12 @@
 	p {
 		margin-top: 0.2rem;
 		font-size: 0.8rem;
-		color: #696969;
+		color: $accent-color;
 	}
 
 	.text {
 		font-size: 1rem;
-		color: #000;
+		color: $primary-content-color;
 	}
 
 	input {
@@ -66,17 +67,17 @@
 		width: 65%;
 		border-radius: 5px 0 0 5px;
 		text-indent: 5%;
-		border: 1px solid #bebebe;
+		border: 1px solid $primary-bg-color;
 	}
 
 	button {
 		height: 2.4rem;
 		width: 35%;
 		border-radius: 0 5px 5px 0;
-		background-color: #696969;
-		color: #fff;
+		background-color: $accent-color;
+		color: $white;
 		font-size: 0.7rem;
-		border: 1px solid #696969;
+		border: 1px solid $accent-color;
 		text-transform: uppercase;
 		@include transition(opacity 0.3s ease);
 
@@ -107,14 +108,14 @@
 
 .copyright {
 	font-size: 0.8rem;
-	color: #696969;
+	color: $accent-color;
 	text-align: center;
 	margin: 0 auto;
 	width: 80%;
 	padding: 0.5rem 0;
 }
 
-@media (min-width: 578px) {
+@media (min-width: $tablet-breakpoint) {
 	.container {
 		display: flex;
 		justify-content: space-between;

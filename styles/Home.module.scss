@@ -1,8 +1,9 @@
+@import "mixins";
 @import "variables";
 
 hr {
 	&.divider {
-		border-top: 1px solid #eaeaea;
+		border-top: 1px solid $primary-bg-color;
 		width: 100%;
 		margin: 4rem 0;
 	}
@@ -15,7 +16,6 @@ hr {
 	text-align: center;
 
 	a {
-		color: #0070f3;
 		text-decoration: none;
 
 		&:hover,
@@ -32,6 +32,7 @@ hr {
 	text-align: center;
 	max-width: 90%;
 	margin: 0 auto;
+  padding: 2rem 0 4rem;
 }
 
 .centerText {
@@ -59,14 +60,14 @@ hr {
 	align-items: center;
 	justify-content: center;
 	text-decoration: none;
-	border: 2px solid #666;
-	transition: color 0.15s ease, border-color 0.15s ease;
+  @include transition(color .3s ease);
+  box-shadow: inset 0px 0px 0px 1px rgb( 0 0 0 / 15%), 0px 3px 4px 2px rgb(0 0 0 / 10%);
 
 	&:hover,
 	&:focus,
 	&:active {
-		color: #666;
-		border-color: #eaeaea;
+		color: $accent-color;
+		border-color: $primary-bg-color;
 	}
 
 	p {
@@ -78,19 +79,23 @@ hr {
 	}
 }
 
+.learn_more {
+  padding: 4rem 0;
+}
+
 .button {
 	height: 2.4rem;
 	width: 8rem;
 	border-radius: 5px;
-	background-color: #696969;
-	color: #fff;
+	background-color: $accent-color;
+	color: $white;
 	font-size: 0.875rem;
 	border: none;
 	text-transform: uppercase;
 	transition: opacity 0.3s ease;
 
 	&:hover {
-		opacity: 65%;
+		opacity: 0.6;
 		cursor: pointer;
 	}
 }

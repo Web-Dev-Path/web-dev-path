@@ -1,6 +1,15 @@
 // Media Query Breakpoints
 $mobile-breakpoint: 320px;
+$lg-mobile-breakpoint: 578px;
 $tablet-breakpoint: 768px;
 $desktop-breakpoint: 1024px;
 $large-desktop-breakpoint: 1440px;
 $extra-large-breakpoint: 2560px;
+
+//Colors
+$primary-content-color: #212121;
+$primary-bg-color: #eaeaea;
+$accent-color: #666666;
+$black: #000000;
+$white: #ffffff;
+$transparent: transparent;

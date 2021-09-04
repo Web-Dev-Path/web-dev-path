@@ -42,14 +42,11 @@ export default function Home() {
         </div>
       </div>
 
-      <div>
-        <h3 className={styles.centerText}>
+      <div className = {`${styles.learn_more} ${styles.centerText}`}>
+        <h3>
           If so, you are probably in the right place and should learn more about
           us
         </h3>
-      </div>
-
-      <div className={styles.centerText}>
         <button className={styles.button}>
           <Link href="/about-us">Learn More</Link>
         </button>
