@@ -25,7 +25,7 @@
 }
 
 .footerItem {
-	+.footerItem {
+	+ .footerItem {
 		margin-top: 0.5rem;
 	}
 
@@ -93,7 +93,7 @@
 	display: flex;
 	justify-content: center;
 
-	+.socialMedia {
+	+ .socialMedia {
 		margin-left: 1rem;
 	}
 
