@@ -51,7 +51,7 @@ export default function Footer() {
       </div>
       <div className={footerStyles.copyright}>
         <p>
-          Web Dev Path 2021. All rights reserved.
+          Web Dev Path {new Date().getFullYear()}. All rights reserved.
         </p>
       </div>
     </footer>
