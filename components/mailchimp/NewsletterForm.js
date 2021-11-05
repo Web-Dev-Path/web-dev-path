@@ -68,7 +68,6 @@ const NewsletterForm = ( { status, message, onValidated }) => {
           onChange={(event) => setEmail(event?.target?.value ?? '')}
           type="email"
           placeholder="Your email"
-          className="mr-2"
           onKeyUp={(event) => handleInputKeyEvent(event)}
         />
         <button onClick={handleFormSubmit}>
