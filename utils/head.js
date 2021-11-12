@@ -1,4 +1,4 @@
-export const headInformation = {
+export const meta = {
   title: "Web Dev Path",
   keywords: "web development, mentoring, volunteering, Next.js",
   description:

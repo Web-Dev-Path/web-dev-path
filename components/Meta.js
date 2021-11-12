@@ -1,7 +1,7 @@
 import Head from "next/head";
-import { title, keywords, description } from "../utils/head";
+import { title, keywords, description } from "../utils/meta";
 
-export default function Head() {
+export default function Meta() {
   return (
     <Head>
       <meta name="viewport" content="width=device-width, initial-scale=1" />

@@ -1,12 +1,12 @@
 import Nav from "./Nav";
-import Head from "./Head";
+import Meta from "./Meta";
 import styles from "../styles/Layout.module.scss";
 import Footer from "./Footer";
 
 export default function Layout({ children }) {
   return (
     <>
-      <Head />
+      <Meta />
       <Nav />
       <div className={styles.container}>
         <main className={styles.main}>{children}</main>
