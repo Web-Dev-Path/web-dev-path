@@ -1,6 +1,7 @@
 import Link from "next/link";
 import footerStyles from "../styles/Footer.module.scss";
 import { linksNav, linksSocial } from "../utils/links";
+import NewsletterSubscribe from "./mailchimp/NewsletterSubscribe";
 
 export default function Footer() {
   return (
@@ -30,10 +31,7 @@ export default function Footer() {
             <p className={footerStyles.text}>
               Get the answer to the most common questions directly to your email
             </p>
-            <form>
-              <input type="email" placeholder="Email" />
-              <button>Subscribe</button>
-            </form>
+            < NewsletterSubscribe />
             <p>*Unsubscribe anytime</p>
           </div>
           <div className={footerStyles.socialMedia}>

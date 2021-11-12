@@ -2,7 +2,7 @@
 
 # Web Developer Path
 
-The **Web Dev Path** project is an attempt to offer mentoring on how to work with a version-controlled project in a team environment. 
+The **Web Dev Path** project is an attempt to offer mentoring on how to work with a version-controlled project in a team environment.
 
 Currently, we're developing [a platform](https://webdevpath.co/) in [Next.js](https://nextjs.org/). The platform will be a place where to share ideas about web development and where Non-Profit Organizations can get some help for their websites by sharing their project and needs and getting connected to volunteer junior web developers. This is [how](https://github.com/MarianaSouza/web-dev-path/projects/1) things are going on so far.
 
@@ -10,12 +10,11 @@ If you are a junior web developer looking for some guidance and mentoring, we in
 
 If you are an experienced and a patient-lovely developer, a true rockstar who wants to mentor juniors, it will be wonderful to have your help to review those PR's, write detailed issues and guide the developers when necessary.
 
-
 <br />
 
 # Slack
 
-Reach out on [our channel](https://join.slack.com/t/webdevpath/shared_invite/zt-je2zuuja-zlQr2_YpFP_9zuyGcKeYGg)!
+Reach out on [our channel](https://join.slack.com/t/webdevpath/shared_invite/zt-xqqgwwo5-a09BSVWC9ZrHmS6RaMBzVw)!
 
 <br />
 
@@ -32,7 +31,7 @@ To run this project locally do the following steps:
 
 # What if I don't know what to do after cloning the repo?
 
-Just reach out on [slack](https://join.slack.com/t/webdevpath/shared_invite/zt-je2zuuja-zlQr2_YpFP_9zuyGcKeYGg)! Someone will help you out, we've got you.
+Just reach out on [slack](https://join.slack.com/t/webdevpath/shared_invite/zt-xqqgwwo5-a09BSVWC9ZrHmS6RaMBzVw)! Someone will help you out, we've got you.
 
 <br />
 
