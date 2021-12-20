@@ -2,158 +2,153 @@
 @import "variables";
 
 .footer {
-	width: 100%;
-	background-color: $primary-bg-color;
+  width: 100%;
+  background-color: $primary-bg-color;
 }
 
 .footerList {
-	list-style: none;
-	padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .container {
-	border-bottom: 1px solid $primary-bg-color;
-	max-width: 80%;
-	margin: 0 auto;
-	padding: 2rem 0;
+  border-bottom: 1px solid $primary-bg-color;
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 2rem 0;
 }
 
 .columnLeft {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .footerItem {
-	+ .footerItem {
-		margin-top: 0.5rem;
-	}
+  + .footerItem {
+    margin-top: 0.5rem;
+  }
 
-	&:hover,
-	&:focus {
-		color: $accent-color;
-	}
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
 }
 
 .logo {
-	border-radius: 50%;
-	height: 4.5em;
-	cursor: pointer;	
+  border-radius: 50%;
+  height: 4.5em;
+  cursor: pointer;
 
-	&:hover {
-		opacity: 0.6;
-	}
+  &:hover {
+    opacity: 0.6;
+  }
 }
 
 .subscribe {
-	h2 {
-		margin-bottom: 0.8rem;
-		font-size: 1.8rem;
-	}
+  h2 {
+    margin-bottom: 0.8rem;
+    font-size: 1.8rem;
+  }
 
-	p {
-		margin-top: 0.2rem;
-		font-size: 0.8rem;
-		color: $accent-color;
-	}
+  p {
+    margin-top: 0.2rem;
+    font-size: 0.8rem;
+    color: $accent-color;
+  }
 
-	.text {
-		font-size: 1rem;
-		color: $primary-content-color;
-	}
+  .text {
+    font-size: 1rem;
+    color: $primary-content-color;
+  }
 
-	input {
-		height: 2.4rem;
-		width: 65%;
-		border-radius: 5px 0 0 5px;
-		text-indent: 5%;
-		border: 1px solid $primary-bg-color;
-	}
+  input {
+    height: 2.4rem;
+    width: 65%;
+    border-radius: 5px 0 0 5px;
+    text-indent: 5%;
+    border: 1px solid $primary-bg-color;
+  }
 
-	button {
-		height: 2.4rem;
-		width: 35%;
-		border-radius: 0 5px 5px 0;
-		background-color: $accent-color;
-		color: $white;
-		font-size: 0.7rem;
-		border: 1px solid $accent-color;
-		text-transform: uppercase;
-		@include transition(opacity 0.3s ease);
+  button {
+    height: 2.4rem;
+    width: 35%;
+    border-radius: 0 5px 5px 0;
+    background-color: $accent-color;
+    color: $white;
+    font-size: 0.7rem;
+    border: 1px solid $accent-color;
+    text-transform: uppercase;
+    @include transition(opacity 0.3s ease);
 
-		&:hover {
-			opacity: 0.6;
-			cursor: pointer;
-		}
-	}
+    &:hover {
+      opacity: 0.6;
+      cursor: pointer;
+    }
+  }
 }
 
 .socialMedia {
-	margin: 1.8rem 0 1rem;
-	display: flex;
-	justify-content: center;
+  margin: 1.8rem 0 1rem;
+  display: flex;
+  justify-content: center;
 
-	+ .socialMedia {
-		margin-left: 1rem;
-	}
+  img {
+    padding-left: 20px !important;
 
-	img {
-		padding: 10px;
-
-		&:hover {
-			opacity: 65%;
-		}
-	}
+    &:hover {
+      opacity: 65%;
+    }
+  }
 }
 
 .copyright {
-	font-size: 0.8rem;
-	color: $accent-color;
-	text-align: center;
-	margin: 0 auto;
-	width: 80%;
-	padding: 0.5rem 0;
+  font-size: 0.8rem;
+  color: $accent-color;
+  text-align: center;
+  margin: 0 auto;
+  width: 80%;
+  padding: 0.5rem 0;
 }
 
 @media (min-width: $tablet-breakpoint) {
-	.container {
-		display: flex;
-		justify-content: space-between;
-	}
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
 
-	.columnLeft {
-		display: flex;
-		flex-direction: column;
-	}
+  .columnLeft {
+    display: flex;
+    flex-direction: column;
+  }
 
-	.columnRight {
-		width: 55%;
-		display: flex;
-		flex-direction: column;
-	}
+  .columnRight {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+  }
 
-	.subscribe {
-		h2 {
-			margin-top: 0.5rem;
-		}
+  .subscribe {
+    h2 {
+      margin-top: 0.5rem;
+    }
 
-		button {
-			font-size: 0.875rem;
-			width: 30%;
-		}
+    button {
+      font-size: 0.875rem;
+      width: 30%;
+    }
 
-		input {
-			width: 70%;
-		}
-	}
+    input {
+      width: 70%;
+    }
+  }
 
-	.socialMedia {
-		justify-content: flex-end;
-		margin: 1rem 1rem 0.5rem 0;
-	}
+  .socialMedia {
+    justify-content: flex-end;
+    margin: 1rem 1rem 0.5rem 0;
+  }
 
-	.copyright {
-		text-align: left;
-	}
+  .copyright {
+    text-align: left;
+  }
 }
-

@@ -23,16 +23,18 @@ export default function Nav() {
 
   return (
     <header className={styles.header}>
-      <div
-        className={`${styles.navContainer} ${styles.row}`}
-      >
+      <div className={`${styles.navContainer} ${styles.row}`}>
         <div className={styles.align}>
-          <Link href="/">
-            <Image width={86} height={80}
-              className={styles.logo}
-              src="/images/web-dev-path-logo-small.png"
-              alt="Logo"
-            />
+          <Link href="/" passHref>
+            <a>
+              <Image
+                width={86}
+                height={80}
+                className={styles.logo}
+                src="/images/web-dev-path-logo-small.png"
+                alt="Logo"
+              />
+            </a>
           </Link>
           <button
             className={styles.navToggle}
@@ -47,7 +49,9 @@ export default function Nav() {
             {linksNav.map((link) => (
               <li className={styles.navItem} key={link.href}>
                 <Link href={link.href}>
-                  <a className={styles.navLink} title={link.text}>{link.text}</a>
+                  <a className={styles.navLink} title={link.text}>
+                    {link.text}
+                  </a>
                 </Link>
               </li>
             ))}
