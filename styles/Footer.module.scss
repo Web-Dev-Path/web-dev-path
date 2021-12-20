@@ -38,7 +38,7 @@
 .logo {
 	border-radius: 50%;
 	height: 4.5em;
-	cursor: pointer;
+	cursor: pointer;	
 
 	&:hover {
 		opacity: 0.6;
@@ -98,7 +98,7 @@
 	}
 
 	img {
-		height: 2rem;
+		padding: 10px;
 
 		&:hover {
 			opacity: 65%;
@@ -156,3 +156,4 @@
 		text-align: left;
 	}
 }
+

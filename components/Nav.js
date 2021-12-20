@@ -2,6 +2,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import styles from "../styles/Nav.module.scss";
 import { linksNav } from "../utils/links";
+import Image from "next/image";
 
 export default function Nav() {
   const [active, setActive] = useState(false);
@@ -27,7 +28,7 @@ export default function Nav() {
       >
         <div className={styles.align}>
           <Link href="/">
-            <img
+            <Image width={86} height={80}
               className={styles.logo}
               src="/images/web-dev-path-logo-small.png"
               alt="Logo"

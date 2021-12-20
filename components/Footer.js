@@ -2,6 +2,7 @@ import Link from "next/link";
 import footerStyles from "../styles/Footer.module.scss";
 import { linksNav, linksSocial } from "../utils/links";
 import NewsletterSubscribe from "./mailchimp/NewsletterSubscribe";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -19,7 +20,7 @@ export default function Footer() {
               </li>
             ))}
           </ul>
-          <img
+          <Image width={77} height={72}
             className={footerStyles.logo}
             src="/images/web-dev-path-logo-small.png"
             alt="Logo"
@@ -36,13 +37,14 @@ export default function Footer() {
           </div>
           <div className={footerStyles.socialMedia}>
             {linksSocial.map((link) => (
-              <Link href={link.href} key={link.text}>
-                <img
-                  className={footerStyles.socialMedia}
-                  src={link.src}
-                  alt={link.text}
-                />
-              </Link>
+              <section className={footerStyles.socialMedia}>
+                <Link href={link.href} key={link.text}>
+                  <Image width={32} height={32}
+                    src={link.src}
+                    alt={link.text}
+                  />
+                </Link>
+              </section>
             ))}
           </div>
         </div>
