@@ -20,3 +20,14 @@ a {
   box-sizing: border-box;
 }
 
+.not-found {
+  text-align: center;
+}
+
+.not-found a {
+  color: $accent-color;
+  
+  &:hover {
+    opacity: 0.6;
+  }
+}
