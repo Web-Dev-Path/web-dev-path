@@ -1,8 +1,10 @@
 .newsletterFormInfo {
-  font-size: .9rem;
+  font-size: 0.9rem;
   font-style: italic;
 
-  .newsletterFormError, .newsletterFormSuccess, .newsletterFormSending {
+  .newsletterFormError,
+  .newsletterFormSuccess,
+  .newsletterFormSending {
     padding: 1rem 0;
   }
 }

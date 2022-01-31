@@ -1,123 +1,123 @@
-@import "mixins";
-@import "variables";
+@import 'mixins';
+@import 'variables';
 
 hr {
-	&.divider {
-		border-top: 1px solid $primary-bg-color;
-		width: 100%;
-		margin: 4rem 0;
-	}
+  &.divider {
+    border-top: 1px solid $primary-bg-color;
+    width: 100%;
+    margin: 4rem 0;
+  }
 }
 
 .title {
-	margin: 0;
-	line-height: 1.15;
-	font-size: 2.5rem;
-	text-align: center;
+  margin: 0;
+  line-height: 1.15;
+  font-size: 2.5rem;
+  text-align: center;
 
-	a {
-		text-decoration: none;
+  a {
+    text-decoration: none;
 
-		&:hover,
-		&:focus,
-		&:active {
-			text-decoration: underline;
-		}
-	}
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration: underline;
+    }
+  }
 }
 
 .description {
-	line-height: 1.5;
-	font-size: 1.5rem;
-	text-align: center;
-	max-width: 90%;
-	margin: 0 auto;
-	padding: 2rem 0 4rem;
+  line-height: 1.5;
+  font-size: 1.5rem;
+  text-align: center;
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 2rem 0 4rem;
 }
 
 .centerText {
-	text-align: center;
-	width: 90%;
-	margin: 1.5rem auto;
+  text-align: center;
+  width: 90%;
+  margin: 1.5rem auto;
 }
 
 .grid {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-wrap: wrap;
-	margin: 3rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 3rem auto;
 }
 
 .card {
-	height: 13rem;
-	max-width: 40%;
-	margin: 1.5rem;
-	flex-basis: 45%;
-	padding: 1.5rem;
-	text-align: left;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	text-decoration: none;
-	@include transition(color 0.3s ease);
-	box-shadow: inset 0px 0px 0px 1px rgb(0 0 0 / 15%),
-		0px 3px 4px 2px rgb(0 0 0 / 10%);
+  height: 13rem;
+  max-width: 40%;
+  margin: 1.5rem;
+  flex-basis: 45%;
+  padding: 1.5rem;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  @include transition(color 0.3s ease);
+  box-shadow: inset 0px 0px 0px 1px rgb(0 0 0 / 15%),
+    0px 3px 4px 2px rgb(0 0 0 / 10%);
 
-	&:hover,
-	&:focus,
-	&:active {
-		color: $accent-color;
-		border-color: $primary-bg-color;
-	}
+  &:hover,
+  &:focus,
+  &:active {
+    color: $accent-color;
+    border-color: $primary-bg-color;
+  }
 
-	p {
-		margin: 0 1rem;
-		font-size: 1.125rem;
-		line-height: 1.5;
-		text-align: center;
-		font-weight: bold;
-	}
+  p {
+    margin: 0 1rem;
+    font-size: 1.125rem;
+    line-height: 1.5;
+    text-align: center;
+    font-weight: bold;
+  }
 }
 
 .learn_more {
-	padding: 4rem 0;
+  padding: 4rem 0;
 }
 
 .button {
-	height: 2.4rem;
-	width: 8rem;
-	border-radius: 5px;
-	background-color: $accent-color;
-	color: $white;
-	font-size: 0.875rem;
-	border: none;
-	text-transform: uppercase;
-	transition: opacity 0.3s ease;
+  height: 2.4rem;
+  width: 8rem;
+  border-radius: 5px;
+  background-color: $accent-color;
+  color: $white;
+  font-size: 0.875rem;
+  border: none;
+  text-transform: uppercase;
+  transition: opacity 0.3s ease;
 
-	&:hover {
-		opacity: 0.6;
-		cursor: pointer;
-	}
+  &:hover {
+    opacity: 0.6;
+    cursor: pointer;
+  }
 }
 
 @media (min-width: $desktop-breakpoint) {
-	.title {
-		font-size: 4rem;
-	}
+  .title {
+    font-size: 4rem;
+  }
 }
 
 @media (max-width: $tablet-breakpoint) {
-	.grid {
-		width: 100%;
-		flex-direction: column;
-		margin: 3rem 0;
-	}
+  .grid {
+    width: 100%;
+    flex-direction: column;
+    margin: 3rem 0;
+  }
 
-	.card {
-		max-width: none;
-		margin: 0.5rem;
-		width: 90%;
-		min-height: 7rem;
-	}
+  .card {
+    max-width: none;
+    margin: 0.5rem;
+    width: 90%;
+    min-height: 7rem;
+  }
 }

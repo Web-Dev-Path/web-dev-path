@@ -1,8 +1,8 @@
-import Link from "next/link";
-import footerStyles from "../styles/Footer.module.scss";
-import { linksNav, linksSocial } from "../utils/links";
-import NewsletterSubscribe from "./mailchimp/NewsletterSubscribe";
-import Image from "next/image";
+import Link from 'next/link';
+import footerStyles from '../styles/Footer.module.scss';
+import { linksNav, linksSocial } from '../utils/links';
+import NewsletterSubscribe from './mailchimp/NewsletterSubscribe';
+import Image from 'next/image';
 
 export default function Footer() {
   return (
@@ -10,7 +10,7 @@ export default function Footer() {
       <div className={footerStyles.container}>
         <div className={footerStyles.columnLeft}>
           <ul className={footerStyles.footerList}>
-            {linksNav.map((link) => (
+            {linksNav.map(link => (
               <li className={footerStyles.footerItem} key={link.href}>
                 <Link href={link.href}>
                   <a title={link.text}>{link.text}</a>
@@ -36,10 +36,15 @@ export default function Footer() {
             <p>*Unsubscribe anytime</p>
           </div>
           <div className={footerStyles.socialMedia}>
-            {linksSocial.map((link) => (
+            {linksSocial.map(link => (
               <Link href={link.href} key={link.text} passHref>
                 <a>
-                  <Image width={32} height={32} src={link.src} alt={link.text} />
+                  <Image
+                    width={32}
+                    height={32}
+                    src={link.src}
+                    alt={link.text}
+                  />
                 </a>
               </Link>
             ))}
