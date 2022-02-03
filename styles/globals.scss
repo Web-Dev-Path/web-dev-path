@@ -1,5 +1,5 @@
-@import "mixins";
-@import "variables";
+@import 'mixins';
+@import 'variables';
 
 html,
 body {
@@ -13,7 +13,7 @@ body {
 a {
   color: inherit;
   text-decoration: none;
-  @include transition(all .3s ease);
+  @include transition(all 0.3s ease);
 }
 
 * {
@@ -26,7 +26,7 @@ a {
 
 .not-found a {
   color: $accent-color;
-  
+
   &:hover {
     opacity: 0.6;
   }

@@ -1,8 +1,8 @@
-import Link from "next/link";
-import { useEffect, useState } from "react";
-import styles from "../styles/Nav.module.scss";
-import { linksNav } from "../utils/links";
-import Image from "next/image";
+import Link from 'next/link';
+import { useEffect, useState } from 'react';
+import styles from '../styles/Nav.module.scss';
+import { linksNav } from '../utils/links';
+import Image from 'next/image';
 
 export default function Nav() {
   const [active, setActive] = useState(false);
@@ -12,13 +12,13 @@ export default function Nav() {
     function setTrueSize() {
       if (window.innerWidth >= 768) setActive(false);
     }
-    window.addEventListener("resize", setTrueSize);
+    window.addEventListener('resize', setTrueSize);
 
-    return () => window.removeEventListener("resize", setTrueSize);
+    return () => window.removeEventListener('resize', setTrueSize);
   });
 
   const toggleActive = () => {
-    setActive((active) => !active);
+    setActive(active => !active);
   };
 
   return (
@@ -46,7 +46,7 @@ export default function Nav() {
         </div>
         <nav className={`${active ? styles.navVisible : styles.nav}`}>
           <ul className={styles.navList}>
-            {linksNav.map((link) => (
+            {linksNav.map(link => (
               <li className={styles.navItem} key={link.href}>
                 <Link href={link.href}>
                   <a className={styles.navLink} title={link.text}>

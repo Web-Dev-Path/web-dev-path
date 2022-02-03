@@ -1,7 +1,7 @@
-import Nav from "./Nav";
-import Meta from "./Meta";
-import styles from "../styles/Layout.module.scss";
-import Footer from "./Footer";
+import Nav from './Nav';
+import Meta from './Meta';
+import styles from '../styles/Layout.module.scss';
+import Footer from './Footer';
 
 export default function Layout({ children }) {
   return (

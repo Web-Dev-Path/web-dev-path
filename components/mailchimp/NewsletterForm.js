@@ -1,11 +1,10 @@
 import { useState } from 'react';
 import { decode } from 'html-entities';
-import newsletterStyles from "../../styles/Newsletter.module.scss";
+import newsletterStyles from '../../styles/Newsletter.module.scss';
 
-const NewsletterForm = ( { status, message, onValidated }) => {
-
-  const [ error, setError ] = useState(null);
-  const [ email, setEmail ] = useState(null);
+const NewsletterForm = ({ status, message, onValidated }) => {
+  const [error, setError] = useState(null);
+  const [email, setEmail] = useState(null);
 
   /**
    * Handle form submit.
@@ -13,26 +12,25 @@ const NewsletterForm = ( { status, message, onValidated }) => {
    * @return {{value}|*|boolean|null}
    */
   const handleFormSubmit = () => {
-
     setError(null);
 
-    if ( ! email ) {
-      setError( 'Please enter a valid email address' );
+    if (!email) {
+      setError('Please enter a valid email address');
       return null;
     }
 
     const isFormValidated = onValidated({ EMAIL: email });
 
     // On success return true
-    return email && email.indexOf("@") > -1 && isFormValidated;
-  }
+    return email && email.indexOf('@') > -1 && isFormValidated;
+  };
 
   /**
    * Handle Input Key Event.
    *
    * @param event
    */
-  const handleInputKeyEvent = ( event ) => {
+  const handleInputKeyEvent = event => {
     setError(null);
     // Number 13 is the "Enter" key on the keyboard
     if (event.keyCode === 13) {
@@ -41,7 +39,7 @@ const NewsletterForm = ( { status, message, onValidated }) => {
       // Trigger the button element with a click
       handleFormSubmit();
     }
-  }
+  };
 
   /**
    * Extract message from string.
@@ -49,45 +47,50 @@ const NewsletterForm = ( { status, message, onValidated }) => {
    * @param {String} message
    * @return {null|*}
    */
-  const getMessage = (message) => {
-    if ( !message ) {
+  const getMessage = message => {
+    if (!message) {
       return null;
     }
     const result = message?.split('-') ?? null;
-    if ( "0" !== result?.[0]?.trim() ) {
+    if ('0' !== result?.[0]?.trim()) {
       return decode(message);
     }
     const formattedMessage = result?.[1]?.trim() ?? null;
-    return formattedMessage ? decode( formattedMessage ) : null;
-  }
+    return formattedMessage ? decode(formattedMessage) : null;
+  };
 
   return (
     <>
       <div>
         <input
-          onChange={(event) => setEmail(event?.target?.value ?? '')}
+          onChange={event => setEmail(event?.target?.value ?? '')}
           type="email"
           placeholder="Your email"
-          onKeyUp={(event) => handleInputKeyEvent(event)}
+          onKeyUp={event => handleInputKeyEvent(event)}
         />
-        <button onClick={handleFormSubmit}>
-          Submit
-        </button>
+        <button onClick={handleFormSubmit}>Submit</button>
       </div>
-      <div className={ newsletterStyles.newsletterFormInfo }>
-        {status === "sending" && <div className={ newsletterStyles.newsletterFormSending }>Sending...</div>}
-        {status === "error" || error ? (
+      <div className={newsletterStyles.newsletterFormInfo}>
+        {status === 'sending' && (
+          <div className={newsletterStyles.newsletterFormSending}>
+            Sending...
+          </div>
+        )}
+        {status === 'error' || error ? (
           <div
-            className={ newsletterStyles.newsletterFormError }
-            dangerouslySetInnerHTML={{ __html: error || getMessage( message ) }}
+            className={newsletterStyles.newsletterFormError}
+            dangerouslySetInnerHTML={{ __html: error || getMessage(message) }}
           />
-        ) : null }
-        {status === "success" && status !== "error" && !error && (
-          <div className={ newsletterStyles.newsletterFormSuccess } dangerouslySetInnerHTML={{ __html: decode(message) }} />
+        ) : null}
+        {status === 'success' && status !== 'error' && !error && (
+          <div
+            className={newsletterStyles.newsletterFormSuccess}
+            dangerouslySetInnerHTML={{ __html: decode(message) }}
+          />
         )}
       </div>
     </>
   );
-}
+};
 
 export default NewsletterForm;
