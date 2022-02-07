@@ -11,3 +11,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - basic styling with Sass
 - pages (basic structure): homepage, blog, about-us, contact-us, 404
 - subscription functionality with MailChimp integration
+
+## Unreleased
+
+### Fixed
+
+- updated Next.js from 10.0.0 to 12.0.10
