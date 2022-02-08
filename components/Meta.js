@@ -10,6 +10,16 @@ export default function Meta() {
       <meta charSet="utf-8" />
       <title>{meta.title}</title>
       <link rel="icon" href="/favicon.ico" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossOrigin="true"
+      />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;700&family=Open+Sans:wght@700&display=swap"
+        rel="stylesheet"
+      />
     </Head>
   );
 }
