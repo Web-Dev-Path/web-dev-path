@@ -2,4 +2,35 @@
 @use './mixins' as *;
 
 .footer {
+  background-color: $alt-bg-color;
+  color: $white;
+
+  &__section {
+    padding: 1rem;
+
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      padding: 1rem 2rem;
+      max-width: 80rem;
+      margin: 0 auto;
+    }
+  }
+
+  &__nav {
+    @include tablet {
+      padding: 0 3rem;
+      order: 2;
+    }
+  }
+
+  &__navList {
+    padding: 0;
+  }
+
+  &__navItem {
+    margin: 0.5rem 0;
+  }
 }
