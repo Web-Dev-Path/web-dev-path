@@ -60,16 +60,31 @@ const NewsletterForm = ({ status, message, onValidated }) => {
   };
 
   return (
-    <>
-      <div>
+    <section className={newsletterStyles.newsletter}>
+      <h4 className={newsletterStyles.newsletter__title}>
+        Sign up for news &#62;
+      </h4>
+      <form
+        className={newsletterStyles.newsletter__form}
+        onSubmit={handleFormSubmit}
+      >
         <input
-          onChange={event => setEmail(event?.target?.value ?? '')}
+          className={newsletterStyles.newsletter__input}
+          type="text"
+          name="name"
+          placeholder="name"
+        />
+        <input
+          className={newsletterStyles.newsletter__input}
           type="email"
-          placeholder="Your email"
+          name="email"
+          placeholder="email"
           onKeyUp={event => handleInputKeyEvent(event)}
         />
-        <button onClick={handleFormSubmit}>Submit</button>
-      </div>
+        <button className={newsletterStyles.newsletter__button}>
+          subscribe
+        </button>
+      </form>
       <div className={newsletterStyles.newsletterFormInfo}>
         {status === 'sending' && (
           <div className={newsletterStyles.newsletterFormSending}>
@@ -89,7 +104,7 @@ const NewsletterForm = ({ status, message, onValidated }) => {
           />
         )}
       </div>
-    </>
+    </section>
   );
 };
 
