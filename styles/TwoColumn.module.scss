@@ -1,0 +1,64 @@
+@import 'variables';
+
+.container {
+  width: 100vw;
+  margin: 0 calc(50% - 50vw);
+}
+.inner {
+  padding: 80px 0;
+  min-height: 50vh;
+  margin: 0 auto;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1440px;
+}
+
+.title {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 72px;
+  line-height: 80px;
+  color: #292929;
+  margin: 0;
+}
+.itemLeft {
+  width: 50%;
+  text-align: left;
+}
+.itemRight {
+  width: 50%;
+  text-align: end;
+}
+
+.content {
+  font-family: 'Assistant';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 31px;
+  display: flex;
+  align-items: center;
+  margin: 62px 0 40px;
+}
+
+.img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  max-width: 409px;
+  max-height: 545px;
+}
+
+@media (max-width: $tablet-breakpoint) {
+  .inner {
+    flex-direction: column;
+    gap: 60px;
+  }
+  .itemLeft,
+  .itemRight {
+    width: 100%;
+    text-align: center;
+  }
+}
