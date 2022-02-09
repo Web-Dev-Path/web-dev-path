@@ -11,7 +11,9 @@ const NewsletterForm = ({ status, message, onValidated }) => {
    *
    * @return {{value}|*|boolean|null}
    */
-  const handleFormSubmit = () => {
+  const handleFormSubmit = event => {
+    event.preventDefault();
+
     setError(null);
 
     if (!email) {
@@ -20,6 +22,8 @@ const NewsletterForm = ({ status, message, onValidated }) => {
     }
 
     const isFormValidated = onValidated({ EMAIL: email });
+
+    event.target.reset();
 
     // On success return true
     return email && email.indexOf('@') > -1 && isFormValidated;
