@@ -61,48 +61,51 @@ const NewsletterForm = ({ status, message, onValidated }) => {
 
   return (
     <section className={newsletterStyles.newsletter}>
-      <h4 className={newsletterStyles.newsletter__title}>
-        Sign up for news &#62;
-      </h4>
-      <form
-        className={newsletterStyles.newsletter__form}
-        onSubmit={handleFormSubmit}
-      >
-        <input
-          className={newsletterStyles.newsletter__input}
-          type="text"
-          name="name"
-          placeholder="name"
-        />
-        <input
-          className={newsletterStyles.newsletter__input}
-          type="email"
-          name="email"
-          placeholder="email"
-          onKeyUp={event => handleInputKeyEvent(event)}
-        />
-        <button className={newsletterStyles.newsletter__button}>
-          subscribe
-        </button>
-      </form>
-      <div className={newsletterStyles.newsletterFormInfo}>
-        {status === 'sending' && (
-          <div className={newsletterStyles.newsletterFormSending}>
-            Sending...
-          </div>
-        )}
-        {status === 'error' || error ? (
-          <div
-            className={newsletterStyles.newsletterFormError}
-            dangerouslySetInnerHTML={{ __html: error || getMessage(message) }}
+      <div className={newsletterStyles.newsletter__container}>
+        <h4 className={newsletterStyles.newsletter__title}>
+          Sign up for news &#62;
+        </h4>
+        <form
+          className={newsletterStyles.newsletter__form}
+          onSubmit={handleFormSubmit}
+        >
+          <input
+            className={`${newsletterStyles.newsletter__input} ${newsletterStyles.newsletter__name}`}
+            type="text"
+            name="name"
+            placeholder="name"
           />
-        ) : null}
-        {status === 'success' && status !== 'error' && !error && (
-          <div
-            className={newsletterStyles.newsletterFormSuccess}
-            dangerouslySetInnerHTML={{ __html: decode(message) }}
+          <input
+            className={`${newsletterStyles.newsletter__input} ${newsletterStyles.newsletter__email}`}
+            onChange={event => setEmail(event?.target?.value ?? '')}
+            type="email"
+            name="email"
+            placeholder="email"
+            onKeyUp={event => handleInputKeyEvent(event)}
           />
-        )}
+          <button className={newsletterStyles.newsletter__button}>
+            subscribe
+          </button>
+        </form>
+        <div className={newsletterStyles.newsletterFormInfo}>
+          {status === 'sending' && (
+            <div className={newsletterStyles.newsletterFormSending}>
+              Sending...
+            </div>
+          )}
+          {status === 'error' || error ? (
+            <div
+              className={newsletterStyles.newsletterFormError}
+              dangerouslySetInnerHTML={{ __html: error || getMessage(message) }}
+            />
+          ) : null}
+          {status === 'success' && status !== 'error' && !error && (
+            <div
+              className={newsletterStyles.newsletterFormSuccess}
+              dangerouslySetInnerHTML={{ __html: decode(message) }}
+            />
+          )}
+        </div>
       </div>
     </section>
   );

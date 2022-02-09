@@ -12,13 +12,19 @@ export default function Footer() {
         <nav className={footerStyles.footer__nav} aria-label="Main">
           <ul className={footerStyles.footer__navList}>
             {linksNav.map(link => (
-              <li className={footerStyles.footer__navItem}>
+              <li className={footerStyles.footer__navItem} key={link.text}>
                 <Link href={link.href}>{link.text}</Link>
               </li>
             ))}
           </ul>
         </nav>
-        <Image src="/../public/images/svg/logo.svg" height={326} width={326} />
+        <div className={footerStyles.footer__imageWrapper}>
+          <Image
+            src="/../public/images/svg/logo.svg"
+            height={326}
+            width={326}
+          />
+        </div>
       </section>
     </footer>
   );

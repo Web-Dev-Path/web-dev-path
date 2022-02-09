@@ -13,16 +13,24 @@
       justify-content: space-between;
       align-items: center;
 
-      padding: 1rem 2rem;
-      max-width: 80rem;
+      max-width: 87rem;
       margin: 0 auto;
     }
   }
 
+  &__imageWrapper {
+    text-align: center;
+  }
+
   &__nav {
     @include tablet {
-      padding: 0 3rem;
+      margin-right: 8.5rem;
       order: 2;
+    }
+
+    @include large-desktop {
+      margin-right: 9.5rem;
+      font-size: 1.5rem;
     }
   }
 
