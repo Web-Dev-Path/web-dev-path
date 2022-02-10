@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import TwoColumn from '../components/TwoColumn';
 import styles from '../styles/Home.module.scss';
 
 export default function Home() {
@@ -12,8 +13,14 @@ export default function Home() {
           more...
         </p>
       </div>
-      <hr className={styles.divider} />
 
+      <TwoColumn
+        title="Let's grow together."
+        image="/images/home-two-column-image.jpg"
+        content="The Web Dev Path is a team of professional developers project that aims to provide a comprehensive path for people who seek to begin their web development journey. "
+      />
+
+      <hr className={styles.divider} />
       <h2 className={styles.centerText}>
         Would you answer "yes" to any of these questions?
       </h2>

@@ -11,7 +11,7 @@ export default function TwoColumn(props) {
           <h2 className={styles.title}>{title}</h2>
           <p className={styles.content}>{content}</p>
           <Button
-            text="Learn More"
+            text="Learn more"
             link="/about-us"
             className={buttonStyles.btn}
           />

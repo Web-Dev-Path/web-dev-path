@@ -3,6 +3,7 @@
 .container {
   width: 100vw;
   margin: 0 calc(50% - 50vw);
+  background-color: #8cd5e8;
 }
 .inner {
   padding: 80px 0;
@@ -22,6 +23,7 @@
   line-height: 80px;
   color: #292929;
   margin: 0;
+  max-width: 624px;
 }
 .itemLeft {
   width: 50%;
