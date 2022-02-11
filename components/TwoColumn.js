@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import ButtonLink from './ButtonLink';
 import styles from '../styles/TwoColumn.module.scss';
-import buttonStyles from '../styles/Button.module.scss';
+import buttonStyles from '../styles/ButtonLink.module.scss';
 
 export default function TwoColumn(props) {
   const { image, title, content, rowOrder } = props;
