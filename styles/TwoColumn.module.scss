@@ -1,4 +1,4 @@
-@import 'variables';
+@use 'variables';
 
 .container {
   width: 100vw;
@@ -6,24 +6,24 @@
   background-color: #8cd5e8;
 }
 .inner {
-  padding: 80px 0;
+  padding: 5rem 0;
   min-height: 50vh;
   margin: 0 auto;
   width: 90%;
   display: flex;
   justify-content: space-between;
-  max-width: 1440px;
+  max-width: variables.$large-desktop-breakpoint;
 }
 
 .title {
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: bold;
-  font-size: 72px;
-  line-height: 80px;
+  font-size: 4.5rem;
+  line-height: 5rem;
   color: #292929;
   margin: 0;
-  max-width: 624px;
+  max-width: 39rem;
 }
 .itemLeft {
   width: 50%;
@@ -35,28 +35,28 @@
 }
 
 .content {
-  font-family: 'Assistant';
   font-style: normal;
   font-weight: normal;
-  font-size: 24px;
-  line-height: 31px;
+  font-size: 1.5rem;
+  line-height: 2rem;
   display: flex;
   align-items: center;
-  margin: 62px 0 40px;
+  margin: 3.875rem 0 2.5rem;
 }
 
 .img {
   object-fit: cover;
   height: 100%;
   width: 100%;
-  max-width: 409px;
-  max-height: 545px;
+  max-width: 25.5rem;
+  max-height: 34rem;
+  border-radius: 0.25rem;
 }
 
-@media (max-width: $tablet-breakpoint) {
+@media (max-width: variables.$tablet-breakpoint) {
   .inner {
     flex-direction: column;
-    gap: 60px;
+    gap: 5rem;
   }
   .itemLeft,
   .itemRight {

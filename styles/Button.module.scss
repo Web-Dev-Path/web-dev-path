@@ -1,21 +1,21 @@
-@import 'variables';
+@use 'variables';
 
 .btn {
-  padding: 8px 32px;
+  padding: 0.5rem 2rem;
   color: #fff;
   background-color: #292929;
-  border-radius: 32px;
+  border-radius: 2rem;
   transition: 0.3s ease;
   cursor: pointer;
-  font-family: 'Assistant';
   font-style: normal;
   font-weight: bold;
-  font-size: 24px;
-  line-height: 31px;
+  font-size: 1.5rem;
+  line-height: 2rem;
   align-items: center;
   text-align: center;
-  min-width: 256px;
+  min-width: 16rem;
   display: inline-block;
+  border: none;
 }
 
 .btn:hover {
