@@ -67,7 +67,7 @@ hr {
   &:hover,
   &:focus,
   &:active {
-    color: $accent-color;
+    color: $primary-content-color;
     border-color: $primary-bg-color;
   }
 
@@ -88,7 +88,7 @@ hr {
   height: 2.4rem;
   width: 8rem;
   border-radius: 5px;
-  background-color: $accent-color;
+  background-color: $primary-content-color;
   color: $white;
   font-size: 0.875rem;
   border: none;

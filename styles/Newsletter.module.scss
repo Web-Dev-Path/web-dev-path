@@ -8,20 +8,27 @@
   .newsletterFormError,
   .newsletterFormSuccess,
   .newsletterFormSending {
-    padding: 1rem 0;
+    color: black;
+
+    @include desktop {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-left: 1rem;
+    }
   }
 }
 
 .newsletter {
   padding: 1rem;
-  background-color: $minor-bg-color;
+  background-color: $primary-accent-color;
 
   &__container {
     @include desktop {
       padding: 0 2rem;
       display: flex;
       align-items: center;
-      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: flex-end;
     }
 
     @include large-desktop {
@@ -77,7 +84,7 @@
     }
 
     &::placeholder {
-      color: $placeholder-color;
+      color: $primary-content-color;
     }
 
     &:focus {
@@ -103,7 +110,7 @@
   &__button {
     border-radius: 1rem;
     border: none;
-    background-color: $alt-bg-color;
+    background-color: $dark-bg-color;
     color: $white;
     height: 2rem;
     padding: 0 3rem;

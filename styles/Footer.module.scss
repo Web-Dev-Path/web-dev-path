@@ -2,7 +2,7 @@
 @use './mixins' as *;
 
 .footer {
-  background-color: $alt-bg-color;
+  background-color: $dark-bg-color;
   color: $white;
 
   &__section {
@@ -12,8 +12,15 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+    }
 
-      max-width: 87rem;
+    @include desktop {
+      padding: 1rem 2rem;
+    }
+
+    @include large-desktop {
+      padding: 1rem 0;
+      max-width: 79rem;
       margin: 0 auto;
     }
   }
@@ -24,12 +31,12 @@
 
   &__nav {
     @include tablet {
-      margin-right: 8.5rem;
+      margin-right: 6.5rem;
       order: 2;
     }
 
     @include large-desktop {
-      margin-right: 9.5rem;
+      margin-right: 5.5rem;
       font-size: 1.5rem;
     }
   }
