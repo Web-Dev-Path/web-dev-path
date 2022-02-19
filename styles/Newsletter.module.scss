@@ -9,11 +9,14 @@
   .newsletterFormSuccess,
   .newsletterFormSending {
     color: black;
+    margin-top: 1rem;
 
-    @include desktop {
+    @include tablet {
+      margin: 0;
+    }
+
+    @include large-desktop {
       font-size: 1.2rem;
-      font-weight: 600;
-      margin-left: 1rem;
     }
   }
 }
@@ -26,9 +29,7 @@
     @include desktop {
       padding: 0 2rem;
       display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      justify-content: flex-end;
+      justify-content: space-between;
     }
 
     @include large-desktop {
@@ -44,6 +45,7 @@
 
     @include desktop {
       min-width: 14rem;
+      margin-top: 1rem;
     }
 
     @include large-desktop {
