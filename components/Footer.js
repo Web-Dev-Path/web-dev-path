@@ -18,9 +18,11 @@ export default function Footer() {
             ))}
           </ul>
         </nav>
-        <div className={footerStyles.footer__imageWrapper}>
-          <Image src="/images/svg/logo.svg" height={326} width={326} />
-        </div>
+        <Link href="/">
+          <a className={footerStyles.footer__logo}>
+            <Image src="/images/svg/logo.svg" height={326} width={326} />
+          </a>
+        </Link>
       </section>
     </footer>
   );
