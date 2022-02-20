@@ -3,6 +3,7 @@
 
 .container {
   width: 100vw;
+  max-width: $large-desktop-breakpoint;
   margin: 0 calc(50% - 50vw);
   background-color: #8cd5e8;
 
@@ -39,6 +40,7 @@
         display: flex;
         align-items: center;
         margin: 3.875rem 0 2.5rem;
+        max-width: 39rem;
       }
     }
 
