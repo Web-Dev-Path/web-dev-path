@@ -26,15 +26,19 @@
   background-color: $primary-accent-color;
 
   &__container {
+    width: 90%;
+    h4 {
+      margin: 0;
+      align-self: center;
+    }
     @include desktop {
-      padding: 0 2rem;
+      margin: 0 auto;
       display: flex;
       justify-content: space-between;
     }
 
     @include large-desktop {
       max-width: 79rem;
-      margin: 0 auto;
       padding: 0;
     }
   }

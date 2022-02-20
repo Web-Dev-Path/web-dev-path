@@ -26,3 +26,9 @@
     @content;
   }
 }
+
+@mixin mobile {
+  @media (max-width: $lg-mobile-breakpoint) {
+    @content;
+  }
+}
