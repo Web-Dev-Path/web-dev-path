@@ -14,6 +14,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## Unreleased
 
+### Added
+
+- add TwoColumn.js component
+- add new footer and newsletter components styling
+
 ### Fixed
 
 - updated Next.js from 10.0.0 to 12.0.10

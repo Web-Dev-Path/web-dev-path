@@ -1,19 +1,35 @@
-@import 'mixins';
-@import 'variables';
+@use 'mixins' as *;
+@use 'variables' as *;
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: $copy-font, sans-serif;
   color: $primary-content-color;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font, sans-serif;
+}
+
+ul {
+  list-style: none;
 }
 
 a {
   color: inherit;
   text-decoration: none;
   @include transition(all 0.3s ease);
+
+  &:hover {
+    opacity: 0.6;
+  }
 }
 
 * {
@@ -25,7 +41,7 @@ a {
 }
 
 .not-found a {
-  color: $accent-color;
+  color: $primary-content-color;
 
   &:hover {
     opacity: 0.6;

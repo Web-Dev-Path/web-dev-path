@@ -1,3 +1,6 @@
+@use './mixins' as *;
+@use './variables' as *;
+
 .newsletterFormInfo {
   font-size: 0.9rem;
   font-style: italic;
@@ -5,6 +8,131 @@
   .newsletterFormError,
   .newsletterFormSuccess,
   .newsletterFormSending {
-    padding: 1rem 0;
+    color: black;
+    margin-top: 1rem;
+
+    @include tablet {
+      margin: 0;
+    }
+
+    @include large-desktop {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.newsletter {
+  padding: 1rem;
+  background-color: $primary-accent-color;
+
+  &__container {
+    width: 90%;
+    h4 {
+      margin: 0;
+      align-self: center;
+    }
+    @include desktop {
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @include large-desktop {
+      max-width: 79rem;
+      padding: 0;
+    }
+  }
+
+  &__title {
+    font-size: 1.45rem;
+    color: $black;
+
+    @include desktop {
+      min-width: 14rem;
+      margin-top: 1rem;
+    }
+
+    @include large-desktop {
+      font-size: 2rem;
+    }
+  }
+
+  &__form {
+    @include tablet {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    @include desktop {
+      margin-left: auto;
+    }
+  }
+
+  &__input {
+    display: block;
+    border-radius: 1rem;
+    height: 2rem;
+    margin: 1rem 0;
+    padding: 1rem 1.25rem;
+    border: none;
+    width: 100%;
+    max-width: 25rem;
+
+    @include tablet {
+      width: 10rem;
+    }
+
+    @include large-desktop {
+      font-size: 1.5rem;
+      height: 3rem;
+      border-radius: 3rem;
+    }
+
+    &::placeholder {
+      color: $primary-content-color;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__name {
+    @include tablet {
+      width: 12.25rem;
+    }
+  }
+
+  &__email {
+    @include tablet {
+      width: 18rem;
+    }
+    @include large-desktop {
+      width: 26rem;
+    }
+  }
+
+  &__button {
+    border-radius: 1rem;
+    border: none;
+    background-color: $dark-bg-color;
+    color: $white;
+    height: 2rem;
+    padding: 0 3rem;
+    font-weight: 700;
+    transition: 0.3s ease;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.6;
+    }
+
+    @include large-desktop {
+      font-size: 1.5rem;
+      width: 12.25rem;
+      height: 3rem;
+      border-radius: 3rem;
+    }
   }
 }
