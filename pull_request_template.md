@@ -2,7 +2,7 @@
 | :--------------------------------------------------------------------------------: |
 | [**issueNumber**](https://github.com/MarianaSouza/web-dev-path/issues/issueNumber) |
 
-#### Have you updated the cHANGELOG file? If not, please do it.
+#### Have you updated the CHANGELOG.md file? If not, please do it.
 
 #### What is this change?
 
