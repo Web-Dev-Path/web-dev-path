@@ -2,8 +2,6 @@
 @use './mixins' as *;
 
 .container {
-  width: 100vw;
-  margin: 0 calc(50% - 50vw);
   background-color: #8cd5e8;
 
   .inner {

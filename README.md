@@ -1,4 +1,6 @@
-![Web Developer Path Logo](/images-web-dev-path/web-dev-path-logo.png)
+![Web Developer Path header](/images-readme/header-readme.png)
+
+<br />
 
 # Web Developer Path
 
@@ -12,15 +14,18 @@ If you are an experienced and a patient-lovely developer, a true rockstar who wa
 
 <br />
 
-# Slack
+## How to get started?
 
-Reach out on [our channel](https://join.slack.com/t/webdevpath/shared_invite/zt-xqqgwwo5-a09BSVWC9ZrHmS6RaMBzVw)!
+Just reach out on [slack](https://join.slack.com/t/webdevpath/shared_invite/zt-xqqgwwo5-a09BSVWC9ZrHmS6RaMBzVw)!
+There is where we get together and learn from each other. Once on our channel, someone will help you out, we've got you.
 
 <br />
 
-# Quickstart
+## Quickstart
 
-To run this project locally do the following steps:
+After talking to us on Slack and deciding this project is your "cup of tea", you'll be added to the project as a collaborator. That's when you'll have be able to get your Pull requests reviewed and merged.
+
+This is how to get started locally:
 
 - [Git clone this repository](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository)
 - Run `npm install`
@@ -29,25 +34,20 @@ To run this project locally do the following steps:
 
 <br />
 
-# What if I don't know what to do after cloning the repo?
-
-Just reach out on [slack](https://join.slack.com/t/webdevpath/shared_invite/zt-xqqgwwo5-a09BSVWC9ZrHmS6RaMBzVw)! Someone will help you out, we've got you.
-
-<br />
-
-# Resources
+## Resources
 
 Here you will find content and resources related to courses and practical steps to land your first job as a web developer.
 
 ## Courses and Certifications
 
-- **Git**
+- **Git and GitHub**
 
   - [Git Official Basics](https://git-scm.com/book/en/v2)
   - [Git Basis by Colt Steele](https://www.youtube.com/watch?v=USjZcfj8yxE&t=14s)
   - [Git and GitHub for Beginners - Crash Course by freeCodeCAmp](https://www.youtube.com/watch?v=RGOj5yH7evk)
   - [GitHub Tutorial 2020 - Beginner's Training Guide](https://www.youtube.com/watch?v=iv8rSLsi1xo)
   - [GitHub Markdown](https://guides.github.com/features/mastering-markdown/)
+  - [How to review a PR](https://www.youtube.com/watch?v=lSnbOtw4izI&t=187s)
 
 * **Harvard**
 
@@ -64,6 +64,7 @@ Here you will find content and resources related to courses and practical steps 
   - _**React**_
     - [React Handbook for Beginners](https://www.freecodecamp.org/news/react-beginner-handbook/)
     - [React Functional Components, Props, and JSX – React.js Tutorial for Beginners](https://www.freecodecamp.org/news/react-components-jsx-props-for-beginners/)
+    - [Next.js crash course series](https://www.youtube.com/watch?v=A63UxsQsEbU)
 
 * **PHP**
 
