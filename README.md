@@ -23,7 +23,7 @@ There is where we get together and learn from each other. Once on our channel, s
 
 ## Quickstart
 
-After talking to us on Slack and deciding this project is your "cup of tea", you'll be added to the project as a collaborator. That's when you'll have be able to get your Pull requests reviewed and merged.
+After talking to us on Slack and deciding this project is your "cup of tea", you'll be added to the project as a collaborator. That's when you'll be able to get your Pull Requests reviewed and merged.
 
 This is how to get started locally:
 
