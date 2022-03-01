@@ -20,6 +20,15 @@ export default function Home() {
         content="The Web Dev Path is a team of professional developers project that aims to provide a comprehensive path for people who seek to begin their web development journey. "
       />
 
+      <TwoColumn
+        title="Nonprofit?"
+        content="Web Dev Path can help your nonprofit with web projects of various sizes. Connect with us to find out how."
+        color="#ffffff"
+        bgColor="#292929"
+        btnColor="#292929"
+        btnBg="#ffffff"
+      />
+
       <hr className={styles.divider} />
       <h2 className={styles.centerText}>
         Would you answer "yes" to any of these questions?
