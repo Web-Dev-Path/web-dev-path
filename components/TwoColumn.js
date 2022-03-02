@@ -5,8 +5,19 @@ import buttonStyles from '../styles/ButtonLink.module.scss';
 
 export default function TwoColumn(props) {
   // Add rowOrder="row-reverse" prop to the component to reverse its order on desktop
-  const { image, title, content, rowOrder, color, bgColor, btnColor, btnBg } =
-    props;
+  const {
+    image,
+    altTag,
+    title,
+    content,
+    rowOrder,
+    color,
+    bgColor,
+    btnColor,
+    btnBg,
+    link,
+    linkText = 'Learn more',
+  } = props;
 
   const styleProps = {
     btn: {
@@ -28,18 +39,18 @@ export default function TwoColumn(props) {
           </h2>
           <p className={styles.content}>{content}</p>
           <ButtonLink
-            link="/about-us"
+            link={link}
             className={buttonStyles.btn}
             styles={styleProps.btn}
           >
-            Learn more
+            {linkText}
           </ButtonLink>
         </div>
         {image && (
           <div className={styles.inner__image}>
             <Image
               src={image}
-              alt=""
+              alt={altTag}
               className={styles.img}
               layout="fill"
               objectFit="cover"

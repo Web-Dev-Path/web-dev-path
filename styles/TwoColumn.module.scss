@@ -2,7 +2,7 @@
 @use './mixins' as *;
 
 .container {
-  background-color: #8cd5e8;
+  background-color: $light-bg-color;
 
   .inner {
     padding: 5rem 0;
@@ -62,4 +62,10 @@
       flex-wrap: wrap;
     }
   }
+}
+
+//Exports
+:export {
+  white: $white;
+  primary: $primary-content-color;
 }
