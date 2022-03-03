@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import TwoColumn from '../components/TwoColumn';
 import styles from '../styles/Home.module.scss';
+import { white, primary } from '../styles/TwoColumn.module.scss';
 
 export default function Home() {
   return (
@@ -18,6 +19,17 @@ export default function Home() {
         title="Let's grow together."
         image="/images/home-two-column-image.jpg"
         content="The Web Dev Path is a team of professional developers project that aims to provide a comprehensive path for people who seek to begin their web development journey. "
+        link="/about-us"
+      />
+
+      <TwoColumn
+        title="Nonprofit?"
+        content="Web Dev Path can help your nonprofit with web projects of various sizes. Connect with us to find out how."
+        color={white}
+        bgColor={primary}
+        btnColor={primary}
+        btnBg={white}
+        link="/about-us"
       />
 
       <hr className={styles.divider} />
