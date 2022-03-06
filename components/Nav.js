@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import styles from '../styles/Nav.module.scss';
-import { linksNav } from '../utils/links';
+import { headerNavLinks } from '../utils/links';
 import Image from 'next/image';
 
 export default function Nav() {
@@ -28,10 +28,9 @@ export default function Nav() {
           <Link href="/" passHref>
             <a>
               <Image
-                width={86}
-                height={80}
-                className={styles.logo}
-                src="/images/web-dev-path-logo-small.png"
+                src="/images/svg/logo.svg"
+                height={115.54}
+                width={180}
                 alt="Logo"
               />
             </a>
@@ -46,7 +45,7 @@ export default function Nav() {
         </div>
         <nav className={`${active ? styles.navVisible : styles.nav}`}>
           <ul className={styles.navList}>
-            {linksNav.map(link => (
+            {headerNavLinks.map(link => (
               <li className={styles.navItem} key={link.href}>
                 <Link href={link.href}>
                   <a className={styles.navLink} title={link.text}>
