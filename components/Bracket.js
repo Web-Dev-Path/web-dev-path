@@ -1,4 +1,4 @@
-export default function YellowBracket(props) {
+export default function Bracket(props) {
   const { className, fill = '#FFCC4C' } = props;
 
   return (

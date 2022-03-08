@@ -1,4 +1,4 @@
-export default function BlueStick(props) {
+export default function Stick(props) {
   const { className, fill = '#19AAD1' } = props;
 
   return (

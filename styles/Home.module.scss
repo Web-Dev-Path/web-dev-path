@@ -105,6 +105,28 @@ hr {
   .title {
     font-size: 4rem;
   }
+
+  .bracket {
+    left: 0;
+    position: absolute;
+    transform: translate(20rem, -5rem);
+  }
+
+  .stick {
+    right: 0;
+    position: absolute;
+    transform: translate(-20rem, -5rem);
+  }
+}
+
+@media (max-width: $desktop-breakpoint) {
+  .bracket {
+    display: none;
+  }
+
+  .stick {
+    display: none;
+  }
 }
 
 @media (max-width: $tablet-breakpoint) {
