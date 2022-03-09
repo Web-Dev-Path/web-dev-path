@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import Bracket from '../components/Bracket';
+import Stick from '../components/Stick';
 import TwoColumn from '../components/TwoColumn';
 import styles from '../styles/Home.module.scss';
 import { white, primary } from '../styles/TwoColumn.module.scss';
@@ -21,6 +23,18 @@ export default function Home() {
         content="The Web Dev Path is a team of professional developers project that aims to provide a comprehensive path for people who seek to begin their web development journey. "
         link="/about-us"
       />
+
+      <Bracket className={styles.bracket} />
+
+      <TwoColumn
+        title="Get involved."
+        content="Web Dev Path runs on volunteers. Here are the ways you can get involved with us:"
+        rowOrder="row-reverse"
+        color={primary}
+        bgColor={white}
+      />
+
+      <Stick className={styles.stick} />
 
       <TwoColumn
         title="Nonprofit?"

@@ -38,13 +38,15 @@ export default function TwoColumn(props) {
             {title}
           </h2>
           <p className={styles.content}>{content}</p>
-          <ButtonLink
-            link={link}
-            className={buttonStyles.btn}
-            styles={styleProps.btn}
-          >
-            {linkText}
-          </ButtonLink>
+          {link && (
+            <ButtonLink
+              link={link}
+              className={buttonStyles.btn}
+              styles={styleProps.btn}
+            >
+              {linkText}
+            </ButtonLink>
+          )}
         </div>
         {image && (
           <div className={styles.inner__image}>
