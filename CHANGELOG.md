@@ -17,7 +17,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 
 - new footer and newsletter components styling
-- new nav component styling with intersection API
+- TwoColumn.js component
+- decoration components
+- nav component styling and intersection api
 
 ### Fixed
 
