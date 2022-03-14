@@ -1,151 +1,89 @@
 @use './variables' as *;
 @use './mixins' as *;
 
-// .navContainer {
-//   width: 80%;
-//   position: relative;
-//   margin: 0 auto;
-// }
-
-// .header {
-//   width: 100%;
-//   padding: 2.25rem 0;
-//   background-color: $dark-bg-color;
-// }
-
-// .align {
-//   display: flex;
-//   align-items: center;
-// }
-
-// .nav {
-//   width: 100%;
-//   overflow: hidden;
-//   visibility: hidden;
-//   height: 0;
-//   position: absolute;
-//   font-size: 1em;
-// }
-
-// .navToggle {
-//   cursor: pointer;
-//   border: 0;
-//   width: 3em;
-//   height: 3em;
-//   padding: 0;
-//   background-color: $transparent;
-//   color: $black;
-//   transition: opacity 250ms ease;
-//   position: absolute;
-//   right: 0;
-
-//   &:hover,
-//   &:focus {
-//     opacity: 0.6;
-//   }
-// }
-
-// .hamburger {
-//   width: 50%;
-//   position: relative;
-
-//   &,
-//   &::before,
-//   &::after {
-//     display: block;
-//     margin: 0 auto;
-//     height: 3px;
-//     background-color: $primary-content-color;
-//   }
-
-//   &::before,
-//   &::after {
-//     content: '';
-//     width: 100%;
-//   }
-
-//   &::before {
-//     transform: translateY(-6px);
-//   }
-
-//   &::after {
-//     transform: translateY(3px);
-//   }
-// }
-
-// .navVisible {
-//   visibility: visible;
-//   height: auto;
-//   position: relative;
-//   text-align: start;
-//   padding-top: 1em;
-// }
-
-// .navList {
-//   margin: 0;
-//   padding: 0;
-//   list-style: none;
-// }
-
-// .navItem {
-//   margin-top: 0.75em;
-// }
-
-// .navLink {
-//   text-decoration: none;
-//   color: $white;
-
-//   &:focus,
-//   &:hover {
-//     opacity: 0.6;
-//   }
-// }
-
-// @media (min-width: $tablet-breakpoint) {
-//   .navToggle {
-//     display: none;
-//   }
-
-//   .nav {
-//     visibility: visible;
-//     display: flex;
-//     align-items: center;
-//     justify-content: flex-end;
-//     height: auto;
-//     position: relative;
-//   }
-
-//   .navList {
-//     display: flex;
-//   }
-
-//   .navItem {
-//     margin: 0 0 0 1.5em;
-//   }
-
-//   .row {
-//     display: flex;
-//     justify-content: space-between;
-//   }
-// }
-
-.header {
+.nav {
   color: $white;
   background-color: $dark-bg-color;
-}
-
-.nav {
   padding: 0 3rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 6rem;
+  height: 4.5rem;
+  width: 100%;
 
   @include desktop {
     height: 12rem;
     padding: 2rem 5.5rem;
-    width: 100%;
-    z-index: 100;
+  }
+
+  &.sticky {
+    position: fixed;
+    background-color: $white;
+    color: $dark-bg-color;
+    z-index: 2;
+
+    & span {
+      background-color: $dark-bg-color;
+    }
+
+    & img {
+      filter: brightness(0) saturate(100%);
+    }
+
+    & .nav__links {
+      @include desktop {
+        background-color: $white;
+        color: $primary-content-color;
+      }
+    }
+
+    & .nav__button {
+      @include desktop {
+        background-color: $dark-bg-color;
+        color: $white;
+      }
+    }
+
+    & .nav__btn a {
+      @include desktop {
+        color: $white;
+        background-color: $dark-bg-color;
+      }
+    }
+  }
+
+  &__btn {
+    order: 2;
+  }
+
+  &__button {
+    color: $dark-bg-color;
+    background-color: $white;
+    min-width: 9rem;
+    padding: 0.5rem 2rem;
+    border-radius: 2rem;
+    transition: 0.3s ease;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    text-align: center;
+    display: inline-block;
+    border: none;
+
+    @include large-desktop {
+      font-size: 1.5rem;
+    }
+
+    &.active {
+      color: $white;
+      background-color: $dark-bg-color;
+
+      @include desktop {
+        background-color: $white;
+        color: $dark-bg-color;
+      }
+    }
   }
 
   &__logo {
@@ -157,12 +95,11 @@
   }
 
   &__links {
-    background-color: $dark-bg-color;
     display: none;
     padding: 1rem 0 2rem 0;
     margin: 0;
     position: relative;
-    top: 5rem;
+    top: 4.5rem;
 
     @include desktop {
       display: flex;
@@ -179,12 +116,15 @@
       width: 100%;
       position: absolute;
       left: 0;
+      background-color: $white;
+      color: $primary-content-color;
 
       @include desktop {
-        display: flex;
         flex-direction: row;
         position: static;
         width: auto;
+        background-color: $dark-bg-color;
+        color: $white;
       }
     }
   }
@@ -195,7 +135,7 @@
     font-weight: 400;
     display: block;
 
-    @include desktop {
+    @include large-desktop {
       font-size: 1.5rem;
     }
   }
@@ -209,6 +149,8 @@
   &__hamburger {
     display: block;
     cursor: pointer;
+    background: none;
+    border: none;
 
     @include desktop {
       display: none;
@@ -232,9 +174,5 @@
     &.active &__bar:nth-child(3) {
       transform: translateY(-6px) rotate(-45deg);
     }
-  }
-
-  &.sticky {
-    position: fixed;
   }
 }

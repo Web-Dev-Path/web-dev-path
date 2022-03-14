@@ -1,16 +1,43 @@
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { useState } from 'react';
-import styles from '../styles/Nav.module.scss';
 import Image from 'next/image';
 import ButtonLink from './ButtonLink';
-import buttonStyles from '../styles/ButtonLink.module.scss';
+import styles from '../styles/Nav.module.scss';
 
 export default function Nav() {
-  const [active, setActive] = useState(true);
+  const [active, setActive] = useState(false);
+  const navRef = useRef();
+  const headerRef = useRef();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) {
+          navRef.current.classList.add(styles.sticky);
+        } else {
+          navRef.current.classList.remove(styles.sticky);
+        }
+      },
+      {
+        threshold: 0,
+        rootMargin: '300px',
+      }
+    );
+
+    if (headerRef.current) {
+      observer.observe(headerRef.current);
+    }
+
+    return () => {
+      if (headerRef.current) {
+        observer.unobserve(headerRef.current);
+      }
+    };
+  }, []);
 
   return (
-    <header className={styles.header}>
-      <nav className={styles.nav}>
+    <header className={styles.header} ref={headerRef}>
+      <nav className={styles.nav} ref={navRef}>
         <div className={styles.nav__logo}>
           <Link href="/" passHref>
             <a>
@@ -47,26 +74,22 @@ export default function Nav() {
           </li>
           <li className={styles.nav__item}>
             <ButtonLink
-              styles={{
-                color: 'black',
-                backgroundColor: 'white',
-                minWidth: '9rem',
-              }}
-              className={buttonStyles.btn}
+              className={`${styles.nav__button} ${active ? styles.active : ''}`}
               link="https://webdevpath.slack.com/join/shared_invite/zt-xqqgwwo5-a09BSVWC9ZrHmS6RaMBzVw#/shared-invite/email"
             >
               Join us
             </ButtonLink>
           </li>
         </ul>
-        <div
+        <button
           className={`${styles.nav__hamburger} ${active ? styles.active : ''}`}
           onClick={() => setActive(active => !active)}
+          aria-label="toggle navigation"
         >
           <span className={styles.nav__hamburger__bar}></span>
           <span className={styles.nav__hamburger__bar}></span>
           <span className={styles.nav__hamburger__bar}></span>
-        </div>
+        </button>
       </nav>
     </header>
   );
