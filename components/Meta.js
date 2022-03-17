@@ -20,7 +20,7 @@ export default function Meta() {
       <meta property="og:description" content={meta.description} />
       <meta property="og:site_name" content="Web Dev Path" />
       <meta property="og:type" content="website" />
-      <meta property="og:image" content="https://user-images.githubusercontent.com/20016897/155270476-b4704956-ae27-433b-acf7-f8c47022da5d.png" />
+      <meta property="og:image" content="/favicon/og-image.png" />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="627" />
       <link rel="preconnect" href="https://fonts.googleapis.com" />
