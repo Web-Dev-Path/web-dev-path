@@ -25,3 +25,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - updated Next.js from 10.0.0 to 12.0.10
 - fixed scroll-x added by the layout container, adjust README
 - updated TwoColumn.js component with style props
+
+
+### Change
+
+- updated favicon
+
+### Added
+
+- new icon elements
+- Open Graph file

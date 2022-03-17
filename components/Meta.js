@@ -9,7 +9,21 @@ export default function Meta() {
       <meta name="description" content={meta.description} />
       <meta charSet="utf-8" />
       <title>{meta.title}</title>
-      <link rel="icon" href="/favicon.ico" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+      <link rel="manifest" href="/favicon/site.webmanifest" />
+      <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#023047" />
+      <meta name="msapplication-TileColor" content="#023047" />
+      <meta name="theme-color" content="#ffffff" />
+      <meta property="og:title" content={meta.title} />
+      <meta property="og:description" content={meta.description} />
+      <meta property="og:site_name" content="Web Dev Path" />
+      <meta property="og:type" content="website" />
+      <meta property="og:image" content="https://user-images.githubusercontent.com/20016897/155270476-b4704956-ae27-433b-acf7-f8c47022da5d.png" />
+      <meta property="og:url" content="0.0.0.0:3000" />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="627" />
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link
         rel="preconnect"
