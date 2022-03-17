@@ -22,7 +22,7 @@ export default function Meta() {
       <meta property="og:type" content="website" />
       <meta property="og:image" content="/favicon/og-image.png" />
       <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="627" />
+      <meta property="og:image:height" content="1200" />
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link
         rel="preconnect"
