@@ -19,6 +19,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - new footer and newsletter components styling
 - TwoColumn.js component
 - decoration components
+- ThreeColumn.js and Card.js
 
 ### Fixed
 

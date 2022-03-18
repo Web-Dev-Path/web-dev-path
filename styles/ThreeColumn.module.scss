@@ -1,0 +1,16 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+.container {
+  background-color: $white;
+
+  .inner__content {
+    margin: 0 auto;
+    max-width: $large-desktop-breakpoint;
+    padding-bottom: 2.5rem;
+    margin-bottom: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
