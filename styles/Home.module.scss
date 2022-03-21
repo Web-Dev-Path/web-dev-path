@@ -101,7 +101,19 @@ hr {
   }
 }
 
-@media (min-width: $desktop-breakpoint) {
+.bracket {
+  left: 0;
+  position: absolute;
+  transform: translate(10rem, -5rem);
+}
+
+.stick {
+  right: 0;
+  position: absolute;
+  transform: translate(-10rem, -5rem);
+}
+
+@media (min-width: $desktop-breakpoint-large) {
   .title {
     font-size: 4rem;
   }
@@ -119,7 +131,7 @@ hr {
   }
 }
 
-@media (max-width: $desktop-breakpoint) {
+@media (max-width: $desktop-breakpoint-small) {
   .bracket {
     display: none;
   }
