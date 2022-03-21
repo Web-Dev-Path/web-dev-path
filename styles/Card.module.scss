@@ -4,11 +4,11 @@
 .card {
   margin: 1.5rem;
   padding: 1.5rem;
-  border-radius: 1rem;
+  border-radius: 1.5rem;
   box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.15);
-  min-width: 30%;
+  min-width: 28%;
   @include desktop {
-    flex-basis: 30%;
+    flex-basis: 28%;
     margin-bottom: 0;
   }
 

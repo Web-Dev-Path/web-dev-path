@@ -21,7 +21,7 @@ export default function Home() {
 
         <TwoColumn
           title="Let's grow together."
-          image="/images/home-two-column-image.jpg"
+          image="/images/join-us.jpg"
           content="The Web Dev Path is a team of professional developers project that aims to provide a comprehensive path for people who seek to begin their web development journey."
           link="/about-us"
         />
@@ -39,9 +39,9 @@ export default function Home() {
         <ThreeColumn
           titles={['Join us', 'Volunteer', 'Become a mentor']}
           images={[
-            '/images/home-two-column-image.jpg',
-            '/images/home-two-column-image.jpg',
-            '/images/home-two-column-image.jpg',
+            '/images/join-us.jpg',
+            '/images/volunteer.jpg',
+            '/images/mentor.jpg',
           ]}
           altTags={['Join us', 'Volunteer', 'Become a mentor']}
           content={[
