@@ -119,14 +119,10 @@ hr {
   }
 
   .bracket {
-    left: 0;
-    position: absolute;
     transform: translate(20rem, -5rem);
   }
 
   .stick {
-    right: 0;
-    position: absolute;
     transform: translate(-20rem, -5rem);
   }
 }
