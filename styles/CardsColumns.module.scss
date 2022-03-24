@@ -12,5 +12,9 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+
+    @include desktop-breakpoint-minus {
+      padding-bottom: 5rem;
+    }
   }
 }

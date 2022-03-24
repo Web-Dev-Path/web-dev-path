@@ -1,9 +1,14 @@
 import Card from './Card';
-import styles from '../styles/ThreeColumn.module.scss';
+import styles from '../styles/CardsColumns.module.scss';
 
-export default function ThreeColumn(props) {
-  const { images, altTags, titles, content, links, linkText } = props;
-
+export default function CardsColumns({
+  images,
+  altTags,
+  titles,
+  content,
+  links,
+  linkText,
+}) {
   return (
     <section className={styles.container}>
       <div className={styles.inner__content}>

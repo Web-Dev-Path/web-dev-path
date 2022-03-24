@@ -2,9 +2,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from '../styles/Card.module.scss';
 
-export default function Card(props) {
-  const { image, altTag, title, content, link, linkText } = props;
-
+export default function Card({
+  image,
+  altTag,
+  title,
+  content,
+  link,
+  linkText,
+}) {
   return (
     <div className={styles.card}>
       <div className={styles.card__image}>
