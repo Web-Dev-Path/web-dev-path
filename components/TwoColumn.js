@@ -3,21 +3,21 @@ import ButtonLink from './ButtonLink';
 import styles from '../styles/TwoColumn.module.scss';
 import buttonStyles from '../styles/ButtonLink.module.scss';
 
-export default function TwoColumn(props) {
+export default function TwoColumn({
+  image,
+  altTag,
+  title,
+  content,
+  rowOrder,
+  color,
+  bgColor,
+  btnColor,
+  btnBg,
+  link,
+  customInnerClass,
+  linkText = 'Learn more',
+}) {
   // Add rowOrder="row-reverse" prop to the component to reverse its order on desktop
-  const {
-    image,
-    altTag,
-    title,
-    content,
-    rowOrder,
-    color,
-    bgColor,
-    btnColor,
-    btnBg,
-    link,
-    linkText = 'Learn more',
-  } = props;
 
   const styleProps = {
     btn: {
@@ -32,7 +32,10 @@ export default function TwoColumn(props) {
 
   return (
     <section className={styles.container} style={styleProps.container}>
-      <div className={styles.inner} style={{ flexDirection: rowOrder }}>
+      <div
+        className={`${styles.inner} ${styles[customInnerClass]}`}
+        style={{ flexDirection: rowOrder }}
+      >
         <div className={styles.inner__content}>
           <h2 className={styles.title} style={{ color: color }}>
             {title}

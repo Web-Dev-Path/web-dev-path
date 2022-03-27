@@ -101,45 +101,40 @@ hr {
   }
 }
 
-@media (min-width: $desktop-breakpoint) {
+.bracket {
+  left: 0;
+  position: absolute;
+  transform: translate(10rem, -5rem);
+}
+
+.stick {
+  right: 0;
+  position: absolute;
+  transform: translate(-10rem, -5rem);
+}
+
+@include desktop-breakpoint-plus {
   .title {
     font-size: 4rem;
   }
 
   .bracket {
-    left: 0;
-    position: absolute;
-    transform: translate(20rem, -5rem);
+    transform: translate(50%, -5rem);
+    width: 30%;
   }
 
   .stick {
-    right: 0;
-    position: absolute;
-    transform: translate(-20rem, -5rem);
+    transform: translate(-50%, -5rem);
+    width: 30%;
   }
 }
 
-@media (max-width: $desktop-breakpoint) {
+@include desktop-breakpoint-minus {
   .bracket {
     display: none;
   }
 
   .stick {
     display: none;
-  }
-}
-
-@media (max-width: $tablet-breakpoint) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-    margin: 3rem 0;
-  }
-
-  .card {
-    max-width: none;
-    margin: 0.5rem;
-    width: 90%;
-    min-height: 7rem;
   }
 }

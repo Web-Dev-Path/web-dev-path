@@ -20,9 +20,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - TwoColumn.js component
 - decoration components
 - nav component styling and intersection api
+- CardsColumns.js and Card.js
 
 ### Fixed
 
 - updated Next.js from 10.0.0 to 12.0.10
 - fixed scroll-x added by the layout container, adjust README
 - updated TwoColumn.js component with style props
+- updated favicon icon and add OG

@@ -10,15 +10,30 @@
     width: 90%;
     max-width: $large-desktop-breakpoint;
 
+    &.get-involved {
+      @include desktop-breakpoint-minus {
+        padding-bottom: 0;
+      }
+    }
+
+    &.non-profit {
+      @include desktop-breakpoint-minus {
+        .inner__content {
+          margin-bottom: 0;
+        }
+      }
+    }
+
     .inner__content {
       margin-bottom: 5rem;
+
       @include desktop {
         flex-basis: 50%;
         margin-bottom: 0;
       }
 
       .title {
-        font-family: 'Open Sans';
+        font-family: $heading-font;
         font-style: normal;
         font-weight: bold;
         font-size: 3.5rem;

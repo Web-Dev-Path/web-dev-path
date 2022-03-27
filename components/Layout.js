@@ -1,6 +1,5 @@
 import Nav from './Nav';
 import Meta from './Meta';
-import styles from '../styles/Layout.module.scss';
 import Footer from './Footer';
 
 export default function Layout({ children }) {
@@ -8,9 +7,7 @@ export default function Layout({ children }) {
     <>
       <Meta />
       <Nav />
-      <div className={styles.container}>
-        <main className={styles.main}>{children}</main>
-      </div>
+      <main>{children}</main>
       <Footer />
     </>
   );
