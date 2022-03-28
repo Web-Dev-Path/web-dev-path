@@ -3,12 +3,13 @@ import footerStyles from '../styles/Footer.module.scss';
 import { linksNav } from '../utils/links';
 import NewsletterSubscribe from './mailchimp/NewsletterSubscribe';
 import Image from 'next/image';
+import Container from './Container';
 
 export default function Footer() {
   return (
     <footer className={footerStyles.footer}>
       <NewsletterSubscribe />
-      <section className={footerStyles.footer__section}>
+      <Container className={footerStyles.footer__inner}>
         <nav className={footerStyles.footer__nav} aria-label="Main">
           <ul className={footerStyles.footer__navList}>
             {linksNav.map(link => (
@@ -25,10 +26,11 @@ export default function Footer() {
               height={326}
               width={326}
               alt="Logo"
+              priority
             />
           </a>
         </Link>
-      </section>
+      </Container>
     </footer>
   );
 }

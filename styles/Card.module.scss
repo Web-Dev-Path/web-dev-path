@@ -2,14 +2,20 @@
 @use './mixins' as *;
 
 .card {
-  margin: 1.5rem;
+  margin: 1.5rem 0;
   padding: 1.5rem;
   border-radius: 1.5rem;
   box-shadow: $box-shadow;
-  min-width: 28%;
+  min-width: 32%;
+
   @include desktop {
-    flex-basis: 28%;
-    margin-bottom: 0;
+    flex-basis: 32%;
+    margin: 1.5rem 1.5rem 0 1.5rem;
+
+    &:first-child,
+    &:last-child {
+      margin: 1.5rem 0 0 0;
+    }
   }
 
   .title {

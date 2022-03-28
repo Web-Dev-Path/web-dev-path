@@ -1,4 +1,5 @@
 import Card from './Card';
+import Container from './Container';
 import styles from '../styles/CardsColumns.module.scss';
 
 export default function CardsColumns({
@@ -10,7 +11,7 @@ export default function CardsColumns({
   linkText,
 }) {
   return (
-    <section className={styles.container}>
+    <Container>
       <div className={styles.inner__content}>
         {titles.map((title, index) => {
           return (
@@ -26,6 +27,6 @@ export default function CardsColumns({
           );
         })}
       </div>
-    </section>
+    </Container>
   );
 }

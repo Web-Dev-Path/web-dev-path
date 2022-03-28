@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import ButtonLink from './ButtonLink';
+import Container from './Container';
 import styles from '../styles/TwoColumn.module.scss';
 import buttonStyles from '../styles/ButtonLink.module.scss';
 
@@ -24,17 +25,17 @@ export default function TwoColumn({
       color: btnColor,
       backgroundColor: btnBg,
     },
-    container: {
+    wrapper: {
       color: color,
       backgroundColor: bgColor,
     },
   };
 
   return (
-    <section className={styles.container} style={styleProps.container}>
-      <div
+    <section className={styles.wrapper} style={styleProps.wrapper}>
+      <Container
         className={`${styles.inner} ${styles[customInnerClass]}`}
-        style={{ flexDirection: rowOrder }}
+        styles={{ flexDirection: rowOrder }}
       >
         <div className={styles.inner__content}>
           <h2 className={styles.title} style={{ color: color }}>
@@ -63,7 +64,7 @@ export default function TwoColumn({
             />
           </div>
         )}
-      </div>
+      </Container>
     </section>
   );
 }

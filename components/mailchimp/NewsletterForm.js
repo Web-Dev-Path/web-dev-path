@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { decode } from 'html-entities';
+import Container from '../Container';
 import newsletterStyles from '../../styles/Newsletter.module.scss';
 
 const NewsletterForm = ({ status, message, onValidated }) => {
@@ -65,7 +66,7 @@ const NewsletterForm = ({ status, message, onValidated }) => {
 
   return (
     <section className={newsletterStyles.newsletter}>
-      <div className={newsletterStyles.newsletter__container}>
+      <Container className={newsletterStyles.newsletter__inner}>
         <h4 className={newsletterStyles.newsletter__title}>
           Sign up for news &#62;
         </h4>
@@ -114,7 +115,7 @@ const NewsletterForm = ({ status, message, onValidated }) => {
             )}
           </div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 };

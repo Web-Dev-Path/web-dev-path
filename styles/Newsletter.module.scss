@@ -22,35 +22,25 @@
 }
 
 .newsletter {
-  padding: 1rem;
+  padding: 2.5rem 0;
   background-color: $primary-accent-color;
 
-  &__container {
-    width: 90%;
-    h4 {
-      margin: 0;
-      align-self: center;
-    }
+  @include desktop {
+    padding: 1rem 0;
+  }
+
+  &__inner {
     @include desktop {
-      margin: 0 auto;
       display: flex;
       justify-content: space-between;
-    }
-
-    @include large-desktop {
-      max-width: 79rem;
-      padding: 0;
+      align-items: center;
     }
   }
 
   &__title {
     font-size: 1.45rem;
     color: $black;
-
-    @include desktop {
-      min-width: 14rem;
-      margin-top: 1rem;
-    }
+    margin: 0;
 
     @include large-desktop {
       font-size: 2rem;
