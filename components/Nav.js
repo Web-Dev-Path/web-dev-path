@@ -39,57 +39,61 @@ export default function Nav() {
 
   return (
     <header className={styles.header} ref={headerRef}>
-      <Container className={styles.container} ref={containerRef}>
-        <nav className={styles.nav}>
-          <div className={styles.nav__logo}>
-            <Link href="/" passHref>
-              <a>
-                <Image
-                  src="/images/svg/logo.svg"
-                  height={115.54}
-                  width={180}
-                  alt="Logo"
-                />
-              </a>
-            </Link>
-          </div>
-          <ul className={`${styles.nav__links} ${active ? styles.active : ''}`}>
-            {linksNav.map(({ text, href }) => {
-              if (text !== 'Join us') {
-                return (
-                  <li className={styles.nav__item}>
-                    <Link href={href}>
-                      <a className={styles.nav__link} title={text}>
-                        {text}
-                      </a>
-                    </Link>
-                  </li>
-                );
-              }
-            })}
-            <li className={styles.nav__item}>
-              <ButtonLink
-                className={`${styles.nav__button} ${
-                  active ? styles.active : ''
-                }`}
-                link="https://webdevpath.slack.com/join/shared_invite/zt-xqqgwwo5-a09BSVWC9ZrHmS6RaMBzVw#/shared-invite/email"
-              >
-                Join us
-              </ButtonLink>
-            </li>
-          </ul>
-          <button
-            className={`${styles.nav__hamburger} ${
-              active ? styles.active : ''
-            }`}
-            onClick={() => setActive(active => !active)}
-            aria-label="toggle navigation"
-          >
-            <span className={styles.nav__hamburger__bar}></span>
-            <span className={styles.nav__hamburger__bar}></span>
-            <span className={styles.nav__hamburger__bar}></span>
-          </button>
-        </nav>
+      <Container>
+        <div ref={containerRef}>
+          <nav className={styles.nav}>
+            <div className={styles.nav__logo}>
+              <Link href="/" passHref>
+                <a>
+                  <Image
+                    src="/images/svg/logo.svg"
+                    height={115}
+                    width={180}
+                    alt="Logo"
+                  />
+                </a>
+              </Link>
+            </div>
+            <ul
+              className={`${styles.nav__links} ${active ? styles.active : ''}`}
+            >
+              {linksNav.map(({ text, href, id }) => {
+                if (text !== 'Join us') {
+                  return (
+                    <li className={styles.nav__item} key={id}>
+                      <Link href={href}>
+                        <a className={styles.nav__link} title={text}>
+                          {text}
+                        </a>
+                      </Link>
+                    </li>
+                  );
+                }
+              })}
+              <li className={styles.nav__item}>
+                <ButtonLink
+                  className={`${styles.nav__button} ${
+                    active ? styles.active : ''
+                  }`}
+                  link="https://webdevpath.slack.com/join/shared_invite/zt-xqqgwwo5-a09BSVWC9ZrHmS6RaMBzVw#/shared-invite/email"
+                >
+                  Join us
+                </ButtonLink>
+              </li>
+            </ul>
+            <button
+              className={`${styles.nav__hamburger} ${
+                active ? styles.active : ''
+              }`}
+              onClick={() => setActive(active => !active)}
+              aria-label="toggle navigation"
+            >
+              <span className={styles.nav__hamburger__bar}></span>
+              <span className={styles.nav__hamburger__bar}></span>
+              <span className={styles.nav__hamburger__bar}></span>
+            </button>
+          </nav>
+        </div>
       </Container>
     </header>
   );

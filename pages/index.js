@@ -10,8 +10,8 @@ export default function Home() {
   return (
     <section className={styles.container}>
       <div className={styles.inner}>
-        <h1 className={styles.title}>&lt; Web Dev wannabe? /&gt;</h1>
         <div className={styles.description}>
+          <h1 className={styles.title}>&lt; Web Dev wannabe? /&gt;</h1>
           <p>
             Hold our hand and enjoy the road to learn how to start a new
             project, the magic behind Github while working in a team
