@@ -1,0 +1,7 @@
+@use './variables' as *;
+
+.container {
+  margin: 0 auto;
+  width: 90%;
+  max-width: $large-desktop-breakpoint;
+}

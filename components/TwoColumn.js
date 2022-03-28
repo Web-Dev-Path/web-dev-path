@@ -59,6 +59,7 @@ export default function TwoColumn({
               className={styles.img}
               layout="fill"
               objectFit="cover"
+              priority
             />
           </div>
         )}

@@ -19,7 +19,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - new footer and newsletter components styling
 - TwoColumn.js component
 - decoration components
-- ThreeColumn.js and Card.js
+- nav component styling and intersection api
+- CardsColumns.js and Card.js
 
 ### Fixed
 
@@ -27,7 +28,3 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - fixed scroll-x added by the layout container, adjust README
 - updated TwoColumn.js component with style props
 - updated favicon icon and add OG
-
-
-
-

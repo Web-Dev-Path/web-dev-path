@@ -20,7 +20,12 @@ export default function Footer() {
         </nav>
         <Link href="/">
           <a className={footerStyles.footer__logo} title="Go to the Homepage">
-            <Image src="/images/svg/logo.svg" height={326} width={326} />
+            <Image
+              src="/images/svg/logo.svg"
+              height={326}
+              width={326}
+              alt="Logo"
+            />
           </a>
         </Link>
       </section>

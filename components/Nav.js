@@ -1,63 +1,100 @@
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import Image from 'next/image';
+import ButtonLink from './ButtonLink';
+import Container from './Container';
 import styles from '../styles/Nav.module.scss';
 import { linksNav } from '../utils/links';
-import Image from 'next/image';
 
 export default function Nav() {
   const [active, setActive] = useState(false);
+  const headerRef = useRef();
+  const containerRef = useRef();
 
-  //This function fixes the Navlinks position if the hamburger menu is left open while resizing the window
   useEffect(() => {
-    function setTrueSize() {
-      if (window.innerWidth >= 768) setActive(false);
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) {
+          containerRef.current.classList.add(styles.sticky);
+        } else {
+          containerRef.current.classList.remove(styles.sticky);
+        }
+      },
+      {
+        threshold: 0,
+        rootMargin: '300px',
+      }
+    );
+
+    if (headerRef.current) {
+      observer.observe(headerRef.current);
     }
-    window.addEventListener('resize', setTrueSize);
 
-    return () => window.removeEventListener('resize', setTrueSize);
-  });
-
-  const toggleActive = () => {
-    setActive(active => !active);
-  };
+    return () => {
+      if (headerRef.current) {
+        observer.unobserve(headerRef.current);
+      }
+    };
+  }, []);
 
   return (
-    <header className={styles.header}>
-      <div className={`${styles.navContainer} ${styles.row}`}>
-        <div className={styles.align}>
-          <Link href="/" passHref>
-            <a>
-              <Image
-                width={86}
-                height={80}
-                className={styles.logo}
-                src="/images/web-dev-path-logo-small.png"
-                alt="Logo"
-              />
-            </a>
-          </Link>
-          <button
-            className={styles.navToggle}
-            aria-label="open navigation"
-            onClick={toggleActive}
-          >
-            <span className={styles.hamburger} />
-          </button>
-        </div>
-        <nav className={`${active ? styles.navVisible : styles.nav}`}>
-          <ul className={styles.navList}>
-            {linksNav.map(link => (
-              <li className={styles.navItem} key={link.href}>
-                <Link href={link.href}>
-                  <a className={styles.navLink} title={link.text}>
-                    {link.text}
-                  </a>
-                </Link>
+    <header className={styles.header} ref={headerRef}>
+      <Container>
+        <div ref={containerRef}>
+          <nav className={styles.nav}>
+            <div className={styles.nav__logo}>
+              <Link href="/" passHref>
+                <a>
+                  <Image
+                    src="/images/svg/logo.svg"
+                    height={115}
+                    width={180}
+                    alt="Logo"
+                  />
+                </a>
+              </Link>
+            </div>
+            <ul
+              className={`${styles.nav__links} ${active ? styles.active : ''}`}
+            >
+              {linksNav.map(({ text, href, id }) => {
+                if (text !== 'Join us') {
+                  return (
+                    <li className={styles.nav__item} key={id}>
+                      <Link href={href}>
+                        <a className={styles.nav__link} title={text}>
+                          {text}
+                        </a>
+                      </Link>
+                    </li>
+                  );
+                }
+              })}
+              <li className={styles.nav__item}>
+                <ButtonLink
+                  className={`${styles.nav__button} ${
+                    active ? styles.active : ''
+                  }`}
+                  link="https://webdevpath.slack.com/join/shared_invite/zt-xqqgwwo5-a09BSVWC9ZrHmS6RaMBzVw#/shared-invite/email"
+                >
+                  Join us
+                </ButtonLink>
               </li>
-            ))}
-          </ul>
-        </nav>
-      </div>
+            </ul>
+            <button
+              className={`${styles.nav__hamburger} ${
+                active ? styles.active : ''
+              }`}
+              onClick={() => setActive(active => !active)}
+              aria-label="toggle navigation"
+            >
+              <span className={styles.nav__hamburger__bar}></span>
+              <span className={styles.nav__hamburger__bar}></span>
+              <span className={styles.nav__hamburger__bar}></span>
+            </button>
+          </nav>
+        </div>
+      </Container>
     </header>
   );
 }
