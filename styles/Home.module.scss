@@ -1,5 +1,5 @@
-@import 'mixins';
-@import 'variables';
+@use './variables' as *;
+@use './mixins' as *;
 
 .title {
   margin: 0;
@@ -15,7 +15,8 @@
 .description {
   font-size: 1.5rem;
   text-align: center;
-  max-width: 90%;
+  width: 90%;
+  max-width: $large-desktop-breakpoint;
   margin: 0 auto;
   padding: 5rem 0;
 }

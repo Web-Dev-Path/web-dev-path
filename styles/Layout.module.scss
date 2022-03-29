@@ -1,0 +1,6 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+.main {
+  min-height: 100vh;
+}

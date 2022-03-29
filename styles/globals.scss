@@ -36,8 +36,16 @@ a {
   box-sizing: border-box;
 }
 
-.not-found {
-  text-align: center;
+.not-found,
+.about-us,
+.contact-us,
+.blog {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  margin-top: 10%;
+  align-items: center;
 }
 
 .not-found a {
