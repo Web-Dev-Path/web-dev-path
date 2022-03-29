@@ -8,7 +8,7 @@
   .newsletterFormError,
   .newsletterFormSuccess,
   .newsletterFormSending {
-    color: black;
+    color: $primary-content-color;
     margin-top: 1rem;
 
     @include tablet {
@@ -38,17 +38,17 @@
   }
 
   &__title {
-    font-size: 1.45rem;
-    color: $black;
+    font-size: 1.75rem;
+    color: $primary-content-color;
     margin: 0;
 
     @include large-desktop {
-      font-size: 2rem;
+      font-size: 2.25rem;
     }
   }
 
   &__form {
-    @include tablet {
+    @include desktop {
       display: flex;
       align-items: center;
       gap: 1rem;
@@ -61,22 +61,19 @@
 
   &__input {
     display: block;
+    font-size: 1.2rem;
     border-radius: 1rem;
     height: 2rem;
     margin: 1rem 0;
     padding: 1rem 1.25rem;
     border: none;
     width: 100%;
-    max-width: 25rem;
-
-    @include tablet {
-      width: 10rem;
-    }
 
     @include large-desktop {
       font-size: 1.5rem;
       height: 3rem;
       border-radius: 3rem;
+      max-width: 25rem;
     }
 
     &::placeholder {
@@ -89,14 +86,14 @@
   }
 
   &__name {
-    @include tablet {
+    @include desktop {
       width: 12.25rem;
     }
   }
 
   &__email {
-    @include tablet {
-      width: 18rem;
+    @include desktop {
+      width: 16rem;
     }
     @include large-desktop {
       width: 26rem;
@@ -104,11 +101,12 @@
   }
 
   &__button {
-    border-radius: 1rem;
+    border-radius: 1.2rem;
+    font-size: 1.2rem;
     border: none;
     background-color: $dark-bg-color;
     color: $white;
-    height: 2rem;
+    height: 2.2rem;
     padding: 0 3rem;
     font-weight: 700;
     transition: 0.3s ease;

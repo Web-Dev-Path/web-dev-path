@@ -23,8 +23,8 @@ export default function Footer() {
           <a className={footerStyles.footer__logo} title="Go to the Homepage">
             <Image
               src="/images/svg/logo.svg"
-              height={326}
-              width={326}
+              height={250}
+              width={250}
               alt="Logo"
               priority
             />
