@@ -1,7 +1,7 @@
 @use './variables' as *;
 @use './mixins' as *;
 
-.container {
+.wrapper {
   background-color: $light-bg-color;
 
   .inner {

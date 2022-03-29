@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import Bracket from '../components/Bracket';
 import Stick from '../components/Stick';
 import TwoColumn from '../components/TwoColumn';
@@ -33,7 +32,6 @@ export default function Home() {
           content="Web Dev Path runs on volunteers. Here are the ways you can get involved with us:"
           rowOrder="row-reverse"
           customInnerClass="get-involved"
-          color={primary}
           bgColor={white}
         />
 

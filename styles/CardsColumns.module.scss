@@ -1,20 +1,16 @@
 @use './variables' as *;
 @use './mixins' as *;
 
-.container {
-  background-color: $white;
-  max-width: $large-desktop-breakpoint;
+.inner__content {
   margin: 0 auto;
+  padding-bottom: 12rem;
+  justify-content: center;
 
-  .inner__content {
-    margin: 0 auto;
-    padding-bottom: 12rem;
+  @include desktop-breakpoint-plus {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  }
 
-    @include desktop-breakpoint-minus {
-      padding-bottom: 5rem;
-    }
+  @include desktop-breakpoint-minus {
+    padding-bottom: 5rem;
   }
 }
