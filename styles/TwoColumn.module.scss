@@ -33,23 +33,11 @@
       }
 
       .title {
-        font-family: $heading-font;
-        font-style: normal;
         font-weight: bold;
-        font-size: 3.5rem;
         color: $primary-content-color;
         margin: 0;
-
-        @include tablet {
-          font-size: 4.5rem;
-          line-height: 5rem;
-        }
       }
       .content {
-        font-style: normal;
-        font-weight: normal;
-        font-size: 1.5rem;
-        line-height: 2rem;
         display: flex;
         align-items: center;
         margin: 3.875rem 0 2.5rem;

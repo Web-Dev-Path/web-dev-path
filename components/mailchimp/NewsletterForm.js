@@ -90,7 +90,7 @@ const NewsletterForm = ({ status, message, onValidated }) => {
               onKeyUp={event => handleInputKeyEvent(event)}
             />
             <button className={newsletterStyles.newsletter__button}>
-              subscribe
+              Subscribe
             </button>
           </form>
           <div className={newsletterStyles.newsletterFormInfo}>

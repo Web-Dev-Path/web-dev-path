@@ -29,3 +29,4 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - updated TwoColumn.js component with style props
 - updated favicon icon and add OG
 - normalized container use on components
+- normalized font sizes

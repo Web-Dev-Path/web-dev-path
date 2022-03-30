@@ -18,6 +18,36 @@ h6 {
   font-family: $heading-font, sans-serif;
 }
 
+p,
+li {
+  font-size: 1.25rem;
+  line-height: 1.938rem;
+  @include desktop {
+    font-size: 1.5rem;
+  }
+}
+
+h1 {
+  font-size: 3rem;
+  line-height: 5rem;
+  @include desktop {
+    font-size: 5.5rem;
+  }
+}
+
+h2 {
+  font-size: 3rem;
+  line-height: 5rem;
+  @include desktop {
+    font-size: 4.5rem;
+  }
+}
+
+h3 {
+  font-size: 1.5rem;
+  line-height: 1.938rem;
+}
+
 ul {
   list-style: none;
 }
@@ -36,14 +66,15 @@ a {
   box-sizing: border-box;
 }
 
-.not-found {
-  text-align: center;
-}
-
-.not-found a {
-  color: $primary-content-color;
-
-  &:hover {
-    opacity: 0.6;
-  }
+.not-found,
+.about-us,
+.contact-us,
+.blog,
+.post {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  margin-top: 10%;
+  align-items: center;
 }

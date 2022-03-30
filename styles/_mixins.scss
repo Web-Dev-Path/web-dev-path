@@ -27,6 +27,12 @@
   }
 }
 
+@mixin medium-desktop {
+  @media (min-width: $medium-desktop-breakpoint) {
+    @content;
+  }
+}
+
 @mixin large-desktop {
   @media (min-width: $large-desktop-breakpoint) {
     @content;
