@@ -30,3 +30,4 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - updated favicon icon and add OG
 - normalized container use on components
 - normalized font sizes
+- installed yarn
