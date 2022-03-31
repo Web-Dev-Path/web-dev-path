@@ -28,8 +28,8 @@ After talking to us on Slack and deciding this project is your "cup of tea", you
 This is how to get started locally:
 
 - [Git clone this repository](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository)
-- Run `npm install`
-- Run `npm run dev`
+- Run `yarn install`
+- Run `yarn run dev`
 - [Branch out](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging) by following the structure `feature/add-your-branch-name` or `chore/add-your-branch-name` or `fix/add-your-branch-name` and submit your [PR](https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)
 
 <br />
