@@ -107,22 +107,25 @@
   &__button {
     border-radius: 1.2rem;
     font-size: 1.2rem;
-    border: none;
     background-color: $dark-bg-color;
+    border: 1px solid $transparent;
     color: $white;
     height: 2.2rem;
-    padding: 0 3rem;
-    font-weight: 700;
+    font-weight: bold;
     transition: 0.3s ease;
+    width: 12rem;
+    cursor: pointer;
+    @include transition(all 0.3s ease);
 
     &:hover {
-      cursor: pointer;
-      opacity: 0.6;
+      background-color: $transparent;
+      color: $dark-bg-color;
+      border: 1px solid $dark-bg-color;
     }
 
     @include large-desktop {
       font-size: 1.5rem;
-      width: 12.25rem;
+      width: 16rem;
       height: 3rem;
       border-radius: 3rem;
     }

@@ -19,13 +19,13 @@
   }
 
   .title {
-    font-family: 'Open Sans';
-    font-style: normal;
+    font-family: $heading-font;
     font-weight: bold;
     font-size: 1.75rem;
     color: $primary-content-color;
     margin: 0;
     margin-top: 1rem;
+    line-height: unset;
 
     @include tablet {
       font-size: 2.25rem;
@@ -39,6 +39,11 @@
 
   a {
     text-decoration: underline;
+
+    &:hover {
+      opacity: 0.6;
+      text-decoration: none;
+    }
   }
 
   .card__image {

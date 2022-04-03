@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import ButtonLink from './ButtonLink';
 import Container from './Container';
 import styles from '../styles/Nav.module.scss';
 import { linksNav } from '../utils/links';
@@ -50,6 +49,7 @@ export default function Nav() {
                     height={115}
                     width={180}
                     alt="Logo"
+                    title="Go to the Homepage"
                   />
                 </a>
               </Link>
@@ -71,14 +71,16 @@ export default function Nav() {
                 }
               })}
               <li className={styles.nav__item}>
-                <ButtonLink
-                  className={`${styles.nav__button} ${
-                    active ? styles.active : ''
-                  }`}
-                  link="https://webdevpath.slack.com/join/shared_invite/zt-xqqgwwo5-a09BSVWC9ZrHmS6RaMBzVw#/shared-invite/email"
-                >
-                  Join us
-                </ButtonLink>
+                <Link href="https://webdevpath.slack.com/join/shared_invite/zt-xqqgwwo5-a09BSVWC9ZrHmS6RaMBzVw#/shared-invite/email">
+                  <a
+                    className={`${styles.nav__button} ${
+                      active ? styles.active : ''
+                    }`}
+                    title="Join us"
+                  >
+                    Join us
+                  </a>
+                </Link>
               </li>
             </ul>
             <button
