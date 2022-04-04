@@ -116,6 +116,22 @@
     line-height: 2.5;
     font-weight: 400;
     display: block;
+    @include transition(all 0.3s ease);
+
+    &:hover,
+    &.current {
+      font-weight: 600;
+    }
+
+    &:before {
+      display: block;
+      content: attr(title);
+      font-weight: bold;
+      height: 1px;
+      color: transparent;
+      overflow: hidden;
+      visibility: hidden;
+    }
 
     @include large-desktop {
       font-size: 1.5rem;
@@ -143,7 +159,7 @@
       width: 25px;
       height: 2px;
       margin: 5px auto;
-      transition: all 0.3s ease-in-out;
+      @include transition(opacity 0.3s ease);
       background-color: $white;
     }
 

@@ -4,8 +4,10 @@ import Image from 'next/image';
 import Container from './Container';
 import styles from '../styles/Nav.module.scss';
 import { linksNav } from '../utils/links';
+import { useRouter } from 'next/router';
 
 export default function Nav() {
+  const router = useRouter();
   const [active, setActive] = useState(false);
   const headerRef = useRef();
   const containerRef = useRef();
@@ -62,7 +64,12 @@ export default function Nav() {
                   return (
                     <li className={styles.nav__item} key={id}>
                       <Link href={href}>
-                        <a className={styles.nav__link} title={text}>
+                        <a
+                          className={`${styles.nav__link} ${
+                            router.pathname == href ? `${styles.current}` : ''
+                          }`}
+                          title={text}
+                        >
                           {text}
                         </a>
                       </Link>
