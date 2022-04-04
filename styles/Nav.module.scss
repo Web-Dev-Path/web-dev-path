@@ -115,20 +115,24 @@
     font-size: 1.2rem;
     line-height: 2.5;
     font-weight: 400;
-    display: block;
+    letter-spacing: 1px;
     @include transition(all 0.3s ease);
 
-    &:hover,
-    &.current {
-      font-weight: 600;
+    &:hover {
+      font-weight: bold;
+      letter-spacing: 0;
     }
 
-    &:before {
+    &.current {
+      font-weight: bold;
+    }
+
+    &:after {
       display: block;
+      letter-spacing: 1px;
       content: attr(title);
       font-weight: bold;
-      height: 1px;
-      color: transparent;
+      height: 0;
       overflow: hidden;
       visibility: hidden;
     }
@@ -140,6 +144,7 @@
 
   &__item {
     @include desktop {
+      display: inline-block;
       margin-left: 6rem;
     }
   }
