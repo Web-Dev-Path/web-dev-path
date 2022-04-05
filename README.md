@@ -17,7 +17,7 @@ If you are an experienced and a patient-lovely developer, a true rockstar who wa
 ## How to get started?
 
 Just reach out on [slack](https://join.slack.com/t/webdevpath/shared_invite/zt-xqqgwwo5-a09BSVWC9ZrHmS6RaMBzVw)!
-There is where we get together and learn from each other. Once on our channel, someone will help you out, we've got you.
+There is where we get together and learn from each other. Once on our `#general` channel, you'll see a pinned message with some guidelines.
 
 <br />
 

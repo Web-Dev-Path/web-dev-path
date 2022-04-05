@@ -1,12 +1,13 @@
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import ButtonLink from './ButtonLink';
 import Container from './Container';
 import styles from '../styles/Nav.module.scss';
 import { linksNav } from '../utils/links';
+import { useRouter } from 'next/router';
 
 export default function Nav() {
+  const router = useRouter();
   const [active, setActive] = useState(false);
   const headerRef = useRef();
   const containerRef = useRef();
@@ -50,6 +51,7 @@ export default function Nav() {
                     height={115}
                     width={180}
                     alt="Logo"
+                    title="Go to the Homepage"
                   />
                 </a>
               </Link>
@@ -62,7 +64,12 @@ export default function Nav() {
                   return (
                     <li className={styles.nav__item} key={id}>
                       <Link href={href}>
-                        <a className={styles.nav__link} title={text}>
+                        <a
+                          className={`${styles.nav__link} ${
+                            router.pathname == href ? `${styles.current}` : ''
+                          }`}
+                          title={text}
+                        >
                           {text}
                         </a>
                       </Link>
@@ -71,14 +78,16 @@ export default function Nav() {
                 }
               })}
               <li className={styles.nav__item}>
-                <ButtonLink
-                  className={`${styles.nav__button} ${
-                    active ? styles.active : ''
-                  }`}
-                  link="https://webdevpath.slack.com/join/shared_invite/zt-xqqgwwo5-a09BSVWC9ZrHmS6RaMBzVw#/shared-invite/email"
-                >
-                  Join us
-                </ButtonLink>
+                <Link href="https://webdevpath.slack.com/join/shared_invite/zt-xqqgwwo5-a09BSVWC9ZrHmS6RaMBzVw#/shared-invite/email">
+                  <a
+                    className={`${styles.nav__button} ${
+                      active ? styles.active : ''
+                    }`}
+                    title="Join us"
+                  >
+                    Join us
+                  </a>
+                </Link>
               </li>
             </ul>
             <button

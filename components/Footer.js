@@ -14,7 +14,9 @@ export default function Footer() {
           <ul className={footerStyles.footer__navList}>
             {linksNav.map(link => (
               <li className={footerStyles.footer__navItem} key={link.text}>
-                <Link href={link.href}>{link.text}</Link>
+                <Link href={link.href}>
+                  <a title={link.text}>{link.text}</a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -26,7 +28,6 @@ export default function Footer() {
               height={250}
               width={250}
               alt="Logo"
-              priority
             />
           </a>
         </Link>

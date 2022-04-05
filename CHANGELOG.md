@@ -31,3 +31,4 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - normalized container use on components
 - normalized font sizes
 - installed yarn
+- normalized buttons' and links' styling

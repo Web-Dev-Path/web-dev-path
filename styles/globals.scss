@@ -58,7 +58,8 @@ a {
   @include transition(all 0.3s ease);
 
   &:hover {
-    opacity: 0.6;
+    text-decoration: underline;
+    text-underline-offset: 2px;
   }
 }
 

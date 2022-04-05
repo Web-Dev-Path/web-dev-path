@@ -26,32 +26,48 @@
     min-width: 9rem;
     padding: 0.5rem 2rem;
     border-radius: 2rem;
-    transition: 0.3s ease;
     cursor: pointer;
     font-weight: bold;
     font-size: 1.2rem;
-    line-height: 2rem;
     text-align: center;
     display: inline-block;
-    border: none;
+    border: 1px solid $transparent;
+    @include transition(all 0.3s ease);
 
-    @include large-desktop {
+    @include desktop {
       font-size: 1.5rem;
+    }
+
+    &:hover {
+      text-decoration: none;
+      color: $white;
+      background-color: $transparent;
+      border: 1px solid $white;
     }
 
     &.active {
       color: $white;
       background-color: $dark-bg-color;
+      padding: 0.25rem 1rem;
+      min-width: 7rem;
+      font-size: 1.2rem;
 
-      @include desktop {
-        background-color: $white;
+      &:hover {
         color: $dark-bg-color;
+        background-color: $transparent;
+        border: 1px solid $dark-bg-color;
       }
     }
   }
 
   &__logo {
     width: 4.5rem;
+    @include transition(opacity 0.3s ease);
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.6;
+    }
 
     @include desktop {
       width: 11.25rem;
@@ -90,6 +106,7 @@
         width: auto;
         background-color: $dark-bg-color;
         color: $white;
+        box-shadow: none;
       }
     }
   }
@@ -98,7 +115,27 @@
     font-size: 1.2rem;
     line-height: 2.5;
     font-weight: 400;
-    display: block;
+    letter-spacing: 1px;
+    @include transition(all 0.3s ease);
+
+    &:hover {
+      font-weight: bold;
+      letter-spacing: 0;
+    }
+
+    &.current {
+      font-weight: bold;
+    }
+
+    &:after {
+      display: block;
+      letter-spacing: 1px;
+      content: attr(title);
+      font-weight: bold;
+      height: 0;
+      overflow: hidden;
+      visibility: hidden;
+    }
 
     @include large-desktop {
       font-size: 1.5rem;
@@ -107,6 +144,7 @@
 
   &__item {
     @include desktop {
+      display: inline-block;
       margin-left: 6rem;
     }
   }
@@ -126,7 +164,7 @@
       width: 25px;
       height: 2px;
       margin: 5px auto;
-      transition: all 0.3s ease-in-out;
+      @include transition(opacity 0.3s ease);
       background-color: $white;
     }
 
@@ -150,46 +188,46 @@
   position: fixed;
   top: 0;
   left: 0;
-  color: $dark-bg-color;
   z-index: 2;
   height: 4.5rem;
   box-shadow: $box-shadow;
 
-  & nav {
+  nav {
     width: 90%;
     max-width: $large-desktop-breakpoint;
   }
 
-  & span {
-    background-color: $dark-bg-color;
+  span {
+    background-color: $primary-content-color;
   }
 
-  & img {
+  .nav__logo {
+    width: 4.5rem;
     filter: brightness(0) saturate(100%);
   }
 
-  & .nav__logo {
-    width: 4.5rem;
-  }
-
-  & .nav__links {
+  .nav__links {
     @include desktop {
       background-color: $white;
       color: $primary-content-color;
     }
   }
 
-  & .nav__link {
+  .nav__link {
     font-size: 1.2rem;
   }
 
-  & .nav__button {
-    @include desktop {
-      background-color: $dark-bg-color;
-      color: $white;
-      padding: 0.25rem 1rem;
-      min-width: 7rem;
-      font-size: 1.2rem;
+  .nav__button {
+    background-color: $dark-bg-color;
+    color: $white;
+    padding: 0.25rem 1rem;
+    min-width: 7rem;
+    font-size: 1.2rem;
+
+    &:hover {
+      color: $dark-bg-color;
+      background-color: $transparent;
+      border: 1px solid $dark-bg-color;
     }
   }
 }
