@@ -29,7 +29,8 @@ This is how to get started locally:
 
 - [Git clone this repository](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository)
 - Run `yarn install`
-- Run `yarn run dev`
+- Run `yarn run dev` (for Windows)
+- Run `yarn run dev-mac` (for macOS)
 - [Branch out](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging) by following the structure `feature/add-your-branch-name` or `chore/add-your-branch-name` or `fix/add-your-branch-name` and submit your [PR](https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)
 
 <br />
