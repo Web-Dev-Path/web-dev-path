@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "yarn run open-browser && next dev -p 3010",
-    "open-browser": "start http://localhost:3010",
+    "dev": "yarn run open-browser-win && next dev -p 3010",
+    "dev-mac": "yarn run open-browser-mac && next dev -p 3010",
+    "open-browser-win": "start http://localhost:3010",
+    "open-browser-mac": "open http://localhost:3010",
     "build": "next build",
     "start": "next start"
   },

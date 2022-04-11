@@ -32,3 +32,4 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - normalized font sizes
 - installed yarn
 - normalized buttons' and links' styling
+- updated `package.json` commands for macOs
