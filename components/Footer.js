@@ -31,6 +31,9 @@ export default function Footer() {
             />
           </a>
         </Link>
+        <small>
+          Web Dev Path {new Date().getFullYear()}. All rights reserved.
+        </small>
       </Container>
     </footer>
   );
