@@ -1,0 +1,46 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+  position: relative;
+  @include desktop {
+    height: 100vh;
+  }
+
+  .accent-title {
+    color: $primary-accent-color;
+  }
+
+  &__content {
+    z-index: 10;
+    color: $white;
+    padding-top: 9%;
+
+    &__upper {
+      max-width: 41rem;
+      span {
+        color: $primary-accent-color;
+        font-style: italic;
+        font-weight: bold;
+        line-height: 3.5rem;
+        @include desktop {
+          font-size: 4.5rem;
+          line-height: 5rem;
+        }
+      }
+    }
+
+    &__bottom {
+      max-width: 41rem;
+      padding-bottom: 5rem;
+
+      @include desktop {
+        padding-bottom: 0;
+      }
+    }
+  }
+}
