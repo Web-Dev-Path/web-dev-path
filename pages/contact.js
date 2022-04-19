@@ -1,7 +1,7 @@
 export default function ContactUs() {
   return (
     <div className="contact-us">
-      <h1>Contact Us</h1>
+      <h2>Contact Us</h2>
       <p>We're building this page.</p>
       <p>Stay tuned!</p>
     </div>
