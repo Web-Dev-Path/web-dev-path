@@ -15,7 +15,7 @@ export default function Hero({
 }) {
   const [titleIndex, setTitleIndex] = useState(0);
   const handleTitleIndex = () =>
-    setTitleIndex(titleIndex === dynamicTitles.length - 1 ? 0 : titleIndex + 1);
+    setTitleIndex(titleIndex >= dynamicTitles.length - 1 ? 0 : titleIndex + 1);
 
   useEffect(() => {
     setTimeout(handleTitleIndex, 1350);
