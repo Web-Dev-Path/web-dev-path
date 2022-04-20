@@ -6,7 +6,7 @@
   color: $white;
 
   &__inner {
-    padding: 2.5rem 0;
+    padding-top: 2.5rem;
     text-align: center;
 
     @include tablet {
@@ -50,5 +50,12 @@
       margin: 0;
       max-width: max-content;
     }
+  }
+
+  &__copyright {
+    text-align: center;
+    margin: 0;
+    font-size: 1rem;
+    padding-bottom: 2.5rem;
   }
 }

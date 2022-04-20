@@ -33,7 +33,9 @@ export default function Footer() {
         </Link>
       </Container>
       <Container>
-        <p>© Web Dev Path {new Date().getFullYear()}. All rights reserved.</p>
+        <p className={footerStyles.footer__copyright}>
+          © Web Dev Path {new Date().getFullYear()}. All rights reserved.
+        </p>
       </Container>
     </footer>
   );
