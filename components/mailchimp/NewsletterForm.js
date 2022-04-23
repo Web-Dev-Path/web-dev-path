@@ -1,11 +1,48 @@
-import { useState } from 'react';
+import { createRef, useState } from 'react';
 import { decode } from 'html-entities';
 import Container from '../Container';
 import newsletterStyles from '../../styles/Newsletter.module.scss';
+import ReCAPTCHA from 'react-google-recaptcha';
+
+const SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
 
 const NewsletterForm = ({ status, message, onValidated }) => {
   const [error, setError] = useState(null);
-  const [email, setEmail] = useState(null);
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const recaptchaRef = createRef();
+
+  const onReCAPTCHAChange = async captchaCode => {
+    // If the reCAPTCHA code is null or undefined indicating that
+    // the reCAPTCHA was expired then return early
+    if (!captchaCode) {
+      return;
+    }
+    try {
+      const response = await fetch('/api/register', {
+        method: 'POST',
+        body: JSON.stringify({ email, name, captcha: captchaCode }),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+      if (response.ok) {
+        // If the response is ok than show the success console.log
+        console.log('Email registered successfully');
+      } else {
+        // Else throw an error with the message returned
+        const error = await response.json();
+        throw new Error(error.message);
+      }
+    } catch (error) {
+      console.log(error?.message || 'Something went wrong');
+    } finally {
+      // Reset the reCAPTCHA when the request has failed or succeeded
+      recaptchaRef.current.reset();
+      setEmail('');
+      setName('');
+    }
+  };
 
   /**
    * Handle form submit.
@@ -17,17 +54,24 @@ const NewsletterForm = ({ status, message, onValidated }) => {
 
     setError(null);
 
+    if (!name) {
+      setError('Please enter a name');
+      return null;
+    }
+
     if (!email) {
       setError('Please enter a valid email address');
       return null;
     }
+
+    recaptchaRef.current.execute();
 
     const isFormValidated = onValidated({ EMAIL: email });
 
     event.target.reset();
 
     // On success return true
-    return email && email.indexOf('@') > -1 && isFormValidated;
+    return name && email && email.indexOf('@') > -1 && isFormValidated;
   };
 
   /**
@@ -77,8 +121,10 @@ const NewsletterForm = ({ status, message, onValidated }) => {
           >
             <input
               className={`${newsletterStyles.newsletter__input} ${newsletterStyles.newsletter__name}`}
+              onChange={event => setName(event?.target?.value ?? '')}
               type="text"
               name="name"
+              value={name}
               placeholder="name"
             />
             <input
@@ -86,13 +132,25 @@ const NewsletterForm = ({ status, message, onValidated }) => {
               onChange={event => setEmail(event?.target?.value ?? '')}
               type="email"
               name="email"
+              value={email}
               placeholder="email"
               onKeyUp={event => handleInputKeyEvent(event)}
             />
-            <button className={newsletterStyles.newsletter__button}>
+            <button
+              className={newsletterStyles.newsletter__button}
+              type="submit"
+            >
               Subscribe
             </button>
+
+            <ReCAPTCHA
+              ref={recaptchaRef}
+              size="invisible"
+              sitekey={SITE_KEY}
+              onChange={onReCAPTCHAChange}
+            />
           </form>
+
           <div className={newsletterStyles.newsletterFormInfo}>
             {status === 'sending' && (
               <div className={newsletterStyles.newsletterFormSending}>
