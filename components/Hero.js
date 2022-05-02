@@ -27,7 +27,7 @@ export default function Hero({
     }
   }, [titleIndex]);
 
-  setTimeout(handleTitleIndex, 1750);
+  setTimeout(handleTitleIndex, 1350);
 
   return (
     <div
