@@ -3,7 +3,7 @@ export const heroOptions = {
     imgBg: '/images/home-bg.png',
     imgAlt: 'Homepage',
     title: 'Web Dev Path is about',
-    dynamicTitles: ['community', 'learning', 'growth'],
+    dynamicTitles: ['community', 'learning', 'growth', 'teamwork'],
     content:
       'We help junior tech professionals, such as developers and designers, to grow.',
   },

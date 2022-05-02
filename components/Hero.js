@@ -14,12 +14,20 @@ export default function Hero({
   titleClass,
 }) {
   const [titleIndex, setTitleIndex] = useState(0);
-  const handleTitleIndex = () =>
+  const handleTitleIndex = () => {
     setTitleIndex(titleIndex >= dynamicTitles.length - 1 ? 0 : titleIndex + 1);
+  };
 
   useEffect(() => {
-    setTimeout(handleTitleIndex, 1350);
+    const dynamicTitleEl = document.getElementById('dynamicTitle');
+    if (dynamicTitleEl.style.opacity === '1') {
+      dynamicTitleEl.style.opacity = '0';
+    } else {
+      dynamicTitleEl.style.opacity = '1';
+    }
   }, [titleIndex]);
+
+  setTimeout(handleTitleIndex, 1750);
 
   return (
     <div
@@ -39,7 +47,9 @@ export default function Hero({
         <div className={styles.header__content__upper}>
           <h1 className={titleClass ? `${styles[titleClass]}` : ''}>
             {title}
-            {dynamicTitles && <span> {dynamicTitles[titleIndex]}</span>}
+            {dynamicTitles && (
+              <span id="dynamicTitle"> {dynamicTitles[titleIndex]}</span>
+            )}
           </h1>
         </div>
         <div className={styles.header__content__bottom}>
