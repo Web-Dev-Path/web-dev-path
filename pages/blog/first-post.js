@@ -1,7 +1,7 @@
 export default function FirstPost() {
   return (
-    <div class="post">
-      <h1>First Post</h1>
+    <div className="post">
+      <h2>First Post</h2>
       <p>We're building this page.</p>
       <p>Stay tuned!</p>
     </div>

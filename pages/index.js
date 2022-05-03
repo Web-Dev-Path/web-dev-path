@@ -7,21 +7,12 @@ import { white, primary } from '../styles/TwoColumn.module.scss';
 
 export default function Home() {
   return (
-    <div className={styles.inner}>
-      <div className={styles.description}>
-        <h1 className={styles.title}>&lt; Web Dev wannabe? /&gt;</h1>
-        <p>
-          Hold our hand and enjoy the road to learn how to start a new project,
-          the magic behind Github while working in a team environment, and much
-          more...
-        </p>
-      </div>
-
+    <>
       <TwoColumn
         title="Let's grow together."
         image="/images/join-us.jpg"
         content="The Web Dev Path is a team of professional developers project that aims to provide a comprehensive path for people who seek to begin their web development journey."
-        link="/about-us"
+        link="/about"
         customBtnClass="inverted-grey"
       />
 
@@ -48,7 +39,7 @@ export default function Home() {
           'Would you like to volunteer? For roles other than mentor/mentee, please get in touch.',
           'Are you an experienced web dev who wants to become a mentor? Welcome!',
         ]}
-        links={['/about-us', '/contact-us', '/about-us']}
+        links={['/about', '/contact', '/about']}
         linkText={['Learn more', 'Contact us', 'Learn more']}
       />
 
@@ -59,10 +50,10 @@ export default function Home() {
         content="Web Dev Path can help your nonprofit with web projects of various sizes. Connect with us to find out how."
         color={white}
         bgColor={primary}
-        link="/about-us"
+        link="/about"
         customInnerClass="non-profit"
         customBtnClass="inverted-white"
       />
-    </div>
+    </>
   );
 }

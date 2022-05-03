@@ -29,17 +29,19 @@ li {
 
 h1 {
   font-size: 3rem;
-  line-height: 5rem;
+  line-height: 3.5rem;
   @include desktop {
-    font-size: 5.5rem;
+    font-size: 4.5rem;
+    line-height: 5rem;
   }
 }
 
 h2 {
   font-size: 3rem;
-  line-height: 5rem;
+  line-height: 3.5rem;
   @include desktop {
-    font-size: 4.5rem;
+    font-size: 3.5rem;
+    line-height: 5rem;
   }
 }
 
@@ -76,6 +78,6 @@ a {
   flex-direction: column;
   justify-content: center;
   justify-items: center;
-  margin-top: 10%;
+  margin: 10% auto;
   align-items: center;
 }

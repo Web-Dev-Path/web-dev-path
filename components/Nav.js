@@ -15,6 +15,7 @@ export default function Nav() {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
+        if (!containerRef.current) return;
         if (!entry.isIntersecting) {
           containerRef.current.classList.add(styles.sticky);
         } else {
