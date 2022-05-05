@@ -38,7 +38,10 @@ const NewsletterForm = ({ status, message, onValidated }) => {
       console.log(error?.message || 'Something went wrong');
     } finally {
       // Reset the reCAPTCHA when the request has failed or succeeded
-      recaptchaRef.current.reset();
+      if (recaptchaRef?.current) {
+        recaptchaRef.current.reset();
+      }
+
       setEmail('');
       setName('');
     }
