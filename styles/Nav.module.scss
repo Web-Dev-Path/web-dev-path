@@ -3,12 +3,13 @@
 
 .header {
   color: $white;
-  background-color: $dark-bg-color;
+  background-color: $transparent;
   width: 100%;
   display: flex;
   align-items: center;
   padding: 2rem 0;
   height: 4.5rem;
+  z-index: 100;
 
   @include desktop {
     height: auto;
@@ -188,7 +189,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 100;
   height: 4.5rem;
   box-shadow: $box-shadow;
 

@@ -3,7 +3,7 @@ import Link from 'next/link';
 export default function Blog() {
   return (
     <div className="blog">
-      <h1>Blog Page</h1>
+      <h2>Blog Page</h2>
       <p>We're building this page. Stay tuned!</p>
       <ul>
         <li>
