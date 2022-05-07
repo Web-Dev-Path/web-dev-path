@@ -28,6 +28,7 @@ After talking to us on Slack and deciding this project is your "cup of tea", you
 This is how to get started locally:
 
 - [Git clone this repository](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository)
+- Ask on Slack for the `.env` file credentials with MailChimp and reCaptcha keys and add it to your local copy.
 - Run `yarn install`
 - Run `yarn run dev` (for Windows)
 - Run `yarn run dev-mac` (for macOS)
