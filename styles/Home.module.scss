@@ -17,6 +17,7 @@
 .bracket {
   left: 0;
   position: absolute;
+  z-index: 2;
   transform: translate(10rem, -5rem);
 
   @include desktop-breakpoint-plus {
@@ -32,6 +33,7 @@
 .stick {
   right: 0;
   position: absolute;
+  z-index: 2;
   transform: translate(-10rem, -5rem);
 
   @include desktop-breakpoint-plus {

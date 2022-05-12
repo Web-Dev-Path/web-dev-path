@@ -1,7 +1,9 @@
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import ButtonLink from './ButtonLink';
 import Container from './Container';
 import styles from '../styles/TwoColumn.module.scss';
+import { useIntersect } from '../hooks/useIntersect';
 
 export default function TwoColumn({
   image,
@@ -25,8 +27,29 @@ export default function TwoColumn({
     },
   };
 
+  const [ref, entry] = useIntersect({ threshold: 0.15 });
+  const [firstLoad, setFirstLoad] = useState(true);
+  const [hiddenStyle, setHiddenStyle] = useState('section__hidden');
+
+  useEffect(() => {
+    if (entry.isIntersecting && firstLoad) {
+      setHiddenStyle('');
+      setFirstLoad(false);
+      console.log(
+        title,
+        entry.isIntersecting,
+        entry.intersectionRatio,
+        hiddenStyle
+      );
+    }
+  }, [entry.isIntersecting]);
+
   return (
-    <section className={styles.wrapper} style={styleProps.wrapper}>
+    <section
+      ref={ref}
+      className={`${styles.wrapper} ${styles[hiddenStyle]}`}
+      style={styleProps.wrapper}
+    >
       <Container
         className={`${styles.inner} ${styles[customInnerClass]}`}
         styles={{ flexDirection: rowOrder }}

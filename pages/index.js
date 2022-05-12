@@ -1,3 +1,4 @@
+import { useRef, useEffect, useState } from 'react';
 import Bracket from '../components/Bracket';
 import Stick from '../components/Stick';
 import TwoColumn from '../components/TwoColumn';
@@ -6,6 +7,8 @@ import styles from '../styles/Home.module.scss';
 import { white, primary } from '../styles/TwoColumn.module.scss';
 
 export default function Home() {
+  const aboutIsVisible = true; //temp
+
   return (
     <>
       <TwoColumn
@@ -15,7 +18,6 @@ export default function Home() {
         link="/about"
         customBtnClass="inverted-grey"
       />
-
       <Bracket className={styles.bracket} />
 
       <TwoColumn

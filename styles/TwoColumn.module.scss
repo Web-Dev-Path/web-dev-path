@@ -1,8 +1,14 @@
 @use './variables' as *;
 @use './mixins' as *;
 
+.section__hidden {
+  opacity: 0;
+  transform: translateY(8rem);
+}
+
 .wrapper {
   background-color: $light-bg-color;
+  transition: transform 1s, opacity 1s;
 
   .inner {
     padding: 5rem 0;
