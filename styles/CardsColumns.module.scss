@@ -1,10 +1,16 @@
 @use './variables' as *;
 @use './mixins' as *;
 
+.section__hidden {
+  opacity: 0;
+  transform: translateY(8rem);
+}
+
 .inner__content {
   margin: 0 auto;
   padding-bottom: 12rem;
   justify-content: center;
+  transition: transform 1s, opacity 1s;
 
   @include desktop-breakpoint-plus {
     display: flex;

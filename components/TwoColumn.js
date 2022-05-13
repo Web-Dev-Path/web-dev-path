@@ -35,12 +35,6 @@ export default function TwoColumn({
     if (entry.isIntersecting && firstLoad) {
       setHiddenStyle('');
       setFirstLoad(false);
-      console.log(
-        title,
-        entry.isIntersecting,
-        entry.intersectionRatio,
-        hiddenStyle
-      );
     }
   }, [entry.isIntersecting]);
 

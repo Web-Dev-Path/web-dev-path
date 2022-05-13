@@ -7,8 +7,6 @@ export const useIntersect = ({ root = null, rootMargin, threshold = 0 }) => {
   const observer = useRef(null);
 
   useEffect(() => {
-    //if (observer.current) observer.current.disconnect();
-
     observer = new window.IntersectionObserver(
       ([entry]) => {
         setEntry(entry);
@@ -16,7 +14,6 @@ export const useIntersect = ({ root = null, rootMargin, threshold = 0 }) => {
       { root, rootMargin, threshold }
     );
 
-    //const { current: currentObserver } = observer;
     if (node) {
       observer.observe(node);
     }
