@@ -24,6 +24,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - footer copyright
 - Header.js component
 - reCAPTCHA
+- useIntersect Hook, Reveal container for scrolling using intersection API
 
 ### Fixed
 

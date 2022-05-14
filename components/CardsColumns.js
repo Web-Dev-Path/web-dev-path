@@ -1,8 +1,6 @@
-import { useEffect, useState } from 'react';
 import Card from './Card';
 import Container from './Container';
 import styles from '../styles/CardsColumns.module.scss';
-import { useIntersect } from '../hooks/useIntersect';
 
 export default function CardsColumns({
   images,
@@ -12,23 +10,9 @@ export default function CardsColumns({
   links,
   linkText,
 }) {
-  const [ref, entry] = useIntersect({ threshold: 0.15 });
-  const [firstLoad, setFirstLoad] = useState(true);
-  const [hiddenStyle, setHiddenStyle] = useState('section__hidden');
-
-  useEffect(() => {
-    if (entry.isIntersecting && firstLoad) {
-      setHiddenStyle('');
-      setFirstLoad(false);
-    }
-  }, [entry.isIntersecting]);
-
   return (
     <Container>
-      <div
-        ref={ref}
-        className={`${styles.inner__content}  ${styles[hiddenStyle]}`}
-      >
+      <div className={`${styles.inner__content}`}>
         {titles.map((title, index) => {
           return (
             <Card
