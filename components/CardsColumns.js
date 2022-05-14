@@ -12,7 +12,7 @@ export default function CardsColumns({
 }) {
   return (
     <Container>
-      <div className={`${styles.inner__content}`}>
+      <div className={styles.inner__content}>
         {titles.map((title, index) => {
           return (
             <Card

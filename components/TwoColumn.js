@@ -26,7 +26,7 @@ export default function TwoColumn({
   };
 
   return (
-    <section className={`${styles.wrapper}`} style={styleProps.wrapper}>
+    <section className={styles.wrapper} style={styleProps.wrapper}>
       <Container
         className={`${styles.inner} ${styles[customInnerClass]}`}
         styles={{ flexDirection: rowOrder }}
