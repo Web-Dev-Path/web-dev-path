@@ -4,42 +4,39 @@ import { linksNav } from '../utils/links';
 import NewsletterSubscribe from './mailchimp/NewsletterSubscribe';
 import Image from 'next/image';
 import Container from './Container';
-import RevealContentContainer from './RevealContentContainer';
 
 export default function Footer() {
   return (
-    <RevealContentContainer>
-      <footer className={footerStyles.footer}>
-        <NewsletterSubscribe />
-        <Container className={footerStyles.footer__inner}>
-          <nav className={footerStyles.footer__nav} aria-label="Main">
-            <ul className={footerStyles.footer__navList}>
-              {linksNav.map(link => (
-                <li className={footerStyles.footer__navItem} key={link.text}>
-                  <Link href={link.href}>
-                    <a title={link.text}>{link.text}</a>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
-          <Link href="/">
-            <a className={footerStyles.footer__logo} title="Go to the Homepage">
-              <Image
-                src="/images/svg/logo.svg"
-                height={250}
-                width={250}
-                alt="Logo"
-              />
-            </a>
-          </Link>
-        </Container>
-        <Container>
-          <p className={footerStyles.footer__copyright}>
-            © Web Dev Path {new Date().getFullYear()}. All rights reserved.
-          </p>
-        </Container>
-      </footer>
-    </RevealContentContainer>
+    <footer className={footerStyles.footer}>
+      <NewsletterSubscribe />
+      <Container className={footerStyles.footer__inner}>
+        <nav className={footerStyles.footer__nav} aria-label="Main">
+          <ul className={footerStyles.footer__navList}>
+            {linksNav.map(link => (
+              <li className={footerStyles.footer__navItem} key={link.text}>
+                <Link href={link.href}>
+                  <a title={link.text}>{link.text}</a>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+        <Link href="/">
+          <a className={footerStyles.footer__logo} title="Go to the Homepage">
+            <Image
+              src="/images/svg/logo.svg"
+              height={250}
+              width={250}
+              alt="Logo"
+            />
+          </a>
+        </Link>
+      </Container>
+      <Container>
+        <p className={footerStyles.footer__copyright}>
+          © Web Dev Path {new Date().getFullYear()}. All rights reserved.
+        </p>
+      </Container>
+    </footer>
   );
 }
