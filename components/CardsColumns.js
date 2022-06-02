@@ -36,7 +36,7 @@ export default function CardsColumns({
           }}
         >
           {titles.map((title, index) =>
-            <SwiperSlide className={styles.swiperSlide}>
+            <SwiperSlide key={index} className={styles.swiperSlide}>
               <div className={styles.inner__content}>
                 <Card
                   title={title}
@@ -50,7 +50,7 @@ export default function CardsColumns({
               </div>
             </SwiperSlide>
           )}
-          
+
         </Swiper>
       </Container>
     </>
