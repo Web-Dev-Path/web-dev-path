@@ -37,3 +37,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - installed yarn
 - normalized buttons' and links' styling
 - updated `package.json` commands for macOs
+
+### changed
+
+- Prompt cards are now swipable. (Home page)

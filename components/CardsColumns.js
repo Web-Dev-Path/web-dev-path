@@ -1,6 +1,8 @@
 import Card from './Card';
 import Container from './Container';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import styles from '../styles/CardsColumns.module.scss';
+import 'swiper/css';
 
 export default function CardsColumns({
   images,
@@ -11,22 +13,46 @@ export default function CardsColumns({
   linkText,
 }) {
   return (
-    <Container>
-      <div className={styles.inner__content}>
-        {titles.map((title, index) => {
-          return (
-            <Card
-              title={title}
-              image={images[index]}
-              altTag={altTags[index]}
-              content={content[index]}
-              link={links[index]}
-              linkText={linkText[index]}
-              key={index}
-            />
-          );
-        })}
-      </div>
-    </Container>
+    <>
+      <Container>
+        <Swiper
+          mousewheel={true}
+          grabCursor={true}
+          navigation={true}
+          pagination={{
+            clickable: true,
+          }}
+          centerInsufficientSlides={true}
+          slidesPerView={1}
+          breakpoints={{
+            780: {
+              slidesPerView: 2,
+              spaceBetween: 50,
+            },
+            1334: {
+              slidesPerView: 3,
+              spaceBetween: 50,
+            }
+          }}
+        >
+          {titles.map((title, index) =>
+            <SwiperSlide className={styles.swiperSlide}>
+              <div className={styles.inner__content}>
+                <Card
+                  title={title}
+                  image={images[index]}
+                  altTag={altTags[index]}
+                  content={content[index]}
+                  link={links[index]}
+                  linkText={linkText[index]}
+                  key={index}
+                />
+              </div>
+            </SwiperSlide>
+          )}
+          
+        </Swiper>
+      </Container>
+    </>
   );
 }
