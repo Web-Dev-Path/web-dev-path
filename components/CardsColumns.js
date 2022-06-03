@@ -1,7 +1,8 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper';
+import { Pagination, Navigation } from 'swiper';
 import 'swiper/css';
 import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 import Card from './Card';
 import Container from './Container';
@@ -17,15 +18,15 @@ export default function CardsColumns({
 }) {
   return (
       <Container>
-        <Swiper
+        <Swiper className={styles.swiper}
           mousewheel={true}
           grabCursor={true}
-          navigation={true}
-          pagination={true} modules={[Pagination]}
+          modules={[Pagination]}
+          pagination
           centerInsufficientSlides={true}
-          slidesPerView={1}
+          slidesPerView={1.09}
           breakpoints={{
-            780: {
+            769: {
               slidesPerView: 2,
               spaceBetween: 50,
             },
