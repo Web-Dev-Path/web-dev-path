@@ -1,8 +1,8 @@
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
 import Card from './Card';
 import Container from './Container';
-import { Swiper, SwiperSlide } from 'swiper/react';
 import styles from '../styles/CardsColumns.module.scss';
-import 'swiper/css';
 
 export default function CardsColumns({
   images,
@@ -13,7 +13,6 @@ export default function CardsColumns({
   linkText,
 }) {
   return (
-    <>
       <Container>
         <Swiper
           mousewheel={true}
@@ -53,6 +52,5 @@ export default function CardsColumns({
 
         </Swiper>
       </Container>
-    </>
   );
 }

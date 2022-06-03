@@ -25,6 +25,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Header.js component
 - reCAPTCHA
 - useIntersect Hook, Reveal container for scrolling using intersection API
+- A new swipable feature on CardColumns.js
 
 ### Fixed
 
@@ -38,6 +39,4 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - normalized buttons' and links' styling
 - updated `package.json` commands for macOs
 
-### changed
 
-- Prompt cards are now swipable. (Home page)
