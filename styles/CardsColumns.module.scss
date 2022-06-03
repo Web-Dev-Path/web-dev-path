@@ -3,7 +3,7 @@
 
 .inner__content {
   margin: 0 auto;
-  padding-bottom: 12rem;
+  padding-bottom: 4rem;
   justify-content: center;
 
   @include desktop-breakpoint-plus {
@@ -11,6 +11,10 @@
   }
 
   @include desktop-breakpoint-minus {
-    padding-bottom: 5rem;
+    padding-bottom: 1rem;
   }
+}
+
+.swiper{
+  margin-bottom: 6rem;
 }

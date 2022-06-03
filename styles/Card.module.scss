@@ -7,9 +7,10 @@
   border-radius: 1.5rem;
   box-shadow: $box-shadow;
   min-width: 32%;
+  height: 37rem;
 
   @include desktop {
-    flex-basis: 32%;
+
     margin: 1.5rem 1.5rem 0 1.5rem;
 
     &:first-child,
