@@ -1,5 +1,8 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
+import "swiper/css/pagination";
+import { Pagination } from 'swiper';
+
 import Card from './Card';
 import Container from './Container';
 import styles from '../styles/CardsColumns.module.scss';
@@ -18,9 +21,7 @@ export default function CardsColumns({
           mousewheel={true}
           grabCursor={true}
           navigation={true}
-          pagination={{
-            clickable: true,
-          }}
+          pagination={true} modules={[Pagination]}
           centerInsufficientSlides={true}
           slidesPerView={1}
           breakpoints={{
