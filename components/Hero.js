@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
 import Nav from './Nav';
 import Container from './Container';
@@ -18,16 +18,7 @@ export default function Hero({
     setTitleIndex(titleIndex >= dynamicTitles.length - 1 ? 0 : titleIndex + 1);
   };
 
-  useEffect(() => {
-    const dynamicTitleEl = document.getElementById('dynamicTitle');
-    if (dynamicTitleEl.style.opacity === '1') {
-      dynamicTitleEl.style.opacity = '0';
-    } else {
-      dynamicTitleEl.style.opacity = '1';
-    }
-  }, [titleIndex]);
-
-  setTimeout(handleTitleIndex, 1350);
+  setTimeout(handleTitleIndex, 1550);
 
   return (
     <div
@@ -47,9 +38,7 @@ export default function Hero({
         <div className={styles.header__content__upper}>
           <h1 className={titleClass ? `${styles[titleClass]}` : ''}>
             {title}
-            {dynamicTitles && (
-              <span id="dynamicTitle"> {dynamicTitles[titleIndex]}</span>
-            )}
+            {dynamicTitles && <span> {dynamicTitles[titleIndex]}</span>}
           </h1>
         </div>
         <div className={styles.header__content__bottom}>

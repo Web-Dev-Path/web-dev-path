@@ -27,8 +27,6 @@
         font-style: italic;
         font-weight: bold;
         line-height: 3.5rem;
-        opacity: 0;
-        @include transition(opacity 1.55s ease-in-out);
         @include desktop {
           font-size: 4.5rem;
           line-height: 5rem;

@@ -9,12 +9,15 @@
   @include desktop-breakpoint-plus {
     display: flex;
   }
+}
 
-  @include desktop-breakpoint-minus {
-    padding-bottom: 1rem;
+.swiper {
+  margin-bottom: 5rem;
+
+  :global(.swiper-pagination-bullet-active) {
+    background-color: $dark-bg-color;
   }
+
 }
 
-.swiper{
-  margin-bottom: 6rem;
-}
+
