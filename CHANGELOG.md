@@ -12,7 +12,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - pages (basic structure): homepage, blog, about-us, contact-us, 404
 - subscription functionality with MailChimp integration
 
-## Unreleased
+## 1.1.0
 
 ### Added
 
@@ -39,3 +39,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - normalized buttons' and links' styling
 - updated `package.json` commands for macOs
 - swipeable CardsColumns.js on mobile
+
+## Unreleased
+
+### Added
+
+### Fixed
