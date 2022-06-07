@@ -32,9 +32,11 @@ export default function TwoColumn({
         styles={{ flexDirection: rowOrder }}
       >
         <div className={styles.inner__content}>
-          <h2 className={styles.title} style={{ color: color }}>
-            {title}
-          </h2>
+          {title && (
+            <h2 className={styles.title} style={{ color: color }}>
+              {title}
+            </h2>
+          )}
           <p className={styles.content}>{content}</p>
           {link && (
             <ButtonLink link={link} customClassName={customBtnClass}>

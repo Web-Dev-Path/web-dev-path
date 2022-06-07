@@ -24,6 +24,18 @@
       }
     }
 
+    &.about-title {
+      .inner__content {
+        .content {
+          margin-top: 0;
+        }
+        flex-basis: 70%;
+      }
+      .inner__image {
+        flex-basis: 30%;
+      }
+    }
+
     .inner__content {
       margin-bottom: 5rem;
 

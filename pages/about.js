@@ -1,9 +1,12 @@
+import RevealContentContainer from '../components/RevealContentContainer';
+import Title from '../components/Title';
+
 export default function AboutUs() {
   return (
     <div className="about-us">
-      <h2>About Us</h2>
-      <p>We're building this page.</p>
-      <p>Stay tuned!</p>
+      <RevealContentContainer>
+        <Title />
+      </RevealContentContainer>
     </div>
   );
 }
