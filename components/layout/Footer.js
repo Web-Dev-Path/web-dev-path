@@ -21,7 +21,7 @@ export default function Footer() {
             ))}
           </ul>
         </nav>
-        <Link href="/pages">
+        <Link href="/">
           <a className={footerStyles.footer__logo} title="Go to the Homepage">
             <Image
               src="/images/svg/logo.svg"
