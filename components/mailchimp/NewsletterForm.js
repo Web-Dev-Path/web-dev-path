@@ -1,6 +1,6 @@
 import { createRef, useState } from 'react';
 import { decode } from 'html-entities';
-import Container from '../Container';
+import Container from '../containers/Container';
 import newsletterStyles from '../../styles/Newsletter.module.scss';
 import ReCAPTCHA from 'react-google-recaptcha';
 

@@ -1,9 +1,9 @@
 import Link from 'next/link';
-import footerStyles from '../styles/Footer.module.scss';
-import { linksNav } from '../utils/links';
-import NewsletterSubscribe from './mailchimp/NewsletterSubscribe';
+import footerStyles from '../../styles/Footer.module.scss';
+import { linksNav } from '../../utils/links';
+import NewsletterSubscribe from '../mailchimp/NewsletterSubscribe';
 import Image from 'next/image';
-import Container from './Container';
+import Container from '../containers/Container';
 
 export default function Footer() {
   return (
@@ -21,7 +21,7 @@ export default function Footer() {
             ))}
           </ul>
         </nav>
-        <Link href="/">
+        <Link href="/pages">
           <a className={footerStyles.footer__logo} title="Go to the Homepage">
             <Image
               src="/images/svg/logo.svg"
