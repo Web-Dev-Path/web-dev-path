@@ -39,3 +39,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - normalized buttons' and links' styling
 - updated `package.json` commands for macOs
 - swipeable CardsColumns.js on mobile
+
+## Unreleased
+
+## Added
+
+- About page content (first section)
+
+### Fixed
+
+- component file structure

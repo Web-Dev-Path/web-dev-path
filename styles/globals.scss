@@ -70,7 +70,6 @@ a {
 }
 
 .not-found,
-.about-us,
 .contact-us,
 .blog,
 .post {
@@ -80,4 +79,9 @@ a {
   justify-items: center;
   margin: 10% auto;
   align-items: center;
+}
+
+.about-us {
+  margin: 5% auto;
+  max-width: $large-desktop-breakpoint;
 }

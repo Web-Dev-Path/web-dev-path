@@ -51,7 +51,6 @@ export default function TwoColumn({
               alt={altTag}
               className={styles.img}
               layout="fill"
-              objectFit="cover"
               priority
             />
           </div>

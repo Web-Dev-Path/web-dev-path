@@ -24,15 +24,24 @@
       }
     }
 
-    &.about-title {
+    &.about-content {
+      align-items: center;
+      padding: 0px;
+      width: 100%;
+
       .inner__content {
         .content {
           margin-top: 0;
+          max-width: fit-content;
         }
         flex-basis: 70%;
       }
       .inner__image {
         flex-basis: 30%;
+        max-height: 25rem;
+        .img {
+          object-fit: none;
+        }
       }
     }
 
@@ -68,6 +77,7 @@
 
       .img {
         border-radius: 0.25rem;
+        object-fit: cover;
       }
     }
 
