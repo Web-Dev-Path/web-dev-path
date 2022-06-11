@@ -12,7 +12,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - pages (basic structure): homepage, blog, about-us, contact-us, 404
 - subscription functionality with MailChimp integration
 
-## Unreleased
+## 1.1.0
 
 ### Added
 
@@ -42,7 +42,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## Unreleased
 
-## Added
+### Added
 
 - About page content (first section)
 
