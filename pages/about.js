@@ -20,7 +20,7 @@ export default function AboutUs() {
                 experience with version control in a team dynamic was making
                 their integration in a professional environment harder. Most of
                 those new graduates used a version control feature, such as
-                <u>GitHub</u> or <u>Bitbucket</u>, as a repository for their
+                &nbsp;<u>GitHub</u> or <u>Bitbucket</u>, as a repository for their
                 personal projects where they were the only participants. So, all
                 that “branch out and PR review” enriching process was completely
                 unknown to them. That happened to be a problem either for being
@@ -30,7 +30,7 @@ export default function AboutUs() {
               </div>
             }
             rowOrder="row-reverse"
-            image="/images/svg/open-square-bracket.svg"
+            image="/images/svg/square-brackets.svg"
             color={primary}
             bgColor={white}
             customInnerClass="about-content"
