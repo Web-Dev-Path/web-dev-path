@@ -1,10 +1,10 @@
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import Container from './containers/Container';
+import { useRouter } from 'next/router';
+import Container from '@/components/containers/Container';
 import styles from '@/styles/Nav.module.scss';
 import { linksNav } from '@/utils/links';
-import { useRouter } from 'next/router';
 
 export default function Nav() {
   const router = useRouter();
