@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import Image from 'next/image';
-import Nav from '../Nav';
-import Container from '../containers/Container';
-import styles from '../../styles/Hero.module.scss';
+import Nav from '@/components/Nav';
+import Container from '@/components/containers/Container';
+import styles from '@/styles/Hero.module.scss';
 
 export default function Hero({
   title,

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import btnStyles from '../../styles/ButtonLink.module.scss';
+import btnStyles from '@/styles/ButtonLink.module.scss';
 
 export default function ButtonLink({
   customClassName,

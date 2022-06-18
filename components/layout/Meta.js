@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { meta } from '../../utils/meta';
+import { meta } from '@/utils/meta';
 
 export default function Meta() {
   return (

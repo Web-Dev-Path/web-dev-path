@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import ButtonLink from '../buttons/ButtonLink';
-import Container from './Container';
-import styles from '../../styles/TwoColumn.module.scss';
+import ButtonLink from '@/components/buttons/ButtonLink';
+import Container from '@/components/containers/Container';
+import styles from '@/styles/TwoColumn.module.scss';
 
 export default function TwoColumn({
   image,

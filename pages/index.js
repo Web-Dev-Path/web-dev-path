@@ -1,10 +1,10 @@
-import Bracket from '../components/decorations/Bracket';
-import Stick from '../components/decorations/Stick';
-import TwoColumn from '../components/containers/TwoColumn';
-import CardsColumns from '../components/containers/CardsColumns';
-import styles from '../styles/Home.module.scss';
-import { white, primary } from '../styles/TwoColumn.module.scss';
-import RevealContentContainer from '../components/containers/RevealContentContainer';
+import Bracket from '@/components/decorations/Bracket';
+import Stick from '@/components/decorations/Stick';
+import TwoColumn from '@/components/containers/TwoColumn';
+import CardsColumns from '@/components/containers/CardsColumns';
+import styles from '@/styles/Home.module.scss';
+import { white, primary } from '@/styles/TwoColumn.module.scss';
+import RevealContentContainer from '@/components/containers/RevealContentContainer';
 
 export default function Home() {
   return (

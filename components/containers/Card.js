@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import styles from '../../styles/Card.module.scss';
+import styles from '@/styles/Card.module.scss';
 
 export default function Card({
   image,

@@ -4,7 +4,7 @@ export const useIntersect = ({ root = null, rootMargin, threshold = 0 }) => {
   const [entry, setEntry] = useState({});
   const [node, setNode] = useState(null);
 
-  const observer = useRef(null);
+  let observer = useRef(null);
 
   useEffect(() => {
     observer = new window.IntersectionObserver(

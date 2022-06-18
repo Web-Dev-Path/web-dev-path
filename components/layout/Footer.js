@@ -1,9 +1,9 @@
 import Link from 'next/link';
-import footerStyles from '../../styles/Footer.module.scss';
-import { linksNav } from '../../utils/links';
-import NewsletterSubscribe from '../mailchimp/NewsletterSubscribe';
+import footerStyles from '@/styles/Footer.module.scss';
+import { linksNav } from '@/utils/links';
+import NewsletterSubscribe from '@/components/mailchimp/NewsletterSubscribe';
 import Image from 'next/image';
-import Container from '../containers/Container';
+import Container from '@/components/containers/Container';
 
 export default function Footer() {
   return (
