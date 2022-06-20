@@ -69,6 +69,11 @@
         margin: 3.875rem 0 2.5rem;
         max-width: 39rem;
       }
+
+      a {
+        text-decoration: underline;
+        text-underline-offset: 1px;
+      }
     }
 
     .inner__image {

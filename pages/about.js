@@ -6,10 +6,10 @@ import Container from '@/components/containers/Container';
 
 export default function AboutUs() {
   return (
-    <div className="about-us">
+    <div className='about-us'>
       <RevealContentContainer>
         <Container>
-          <Title title="About Web Dev Path" />
+          <Title title='About Web Dev Path' />
           <TwoColumn
             content={
               <div>
@@ -19,21 +19,23 @@ export default function AboutUs() {
                 junior developers, it was evident the lack of practical
                 experience with version control in a team dynamic was making
                 their integration in a professional environment harder. Most of
-                those new graduates used a version control feature, such as
-                &nbsp;<u>GitHub</u> or <u>Bitbucket</u>, as a repository for their
-                personal projects where they were the only participants. So, all
-                that “branch out and PR review” enriching process was completely
-                unknown to them. That happened to be a problem either for being
+                those new graduates used a version control feature, such as&nbsp;
+                <a target="_blank" href='http://www.github.com' rel="noopener noreferrer">GitHub</a> or&nbsp;
+                <a target="_blank" href='http://www.bitbucket.com' rel="noopener noreferrer">Bitbucket</a>,
+                as a repository for their personal projects where they were the
+                only participants. So, all that “branch out and PR review” enriching
+                process was completely unknown to them.
+                That happened to be a problem either for being
                 considered for “junior” positions and after being hired because,
                 in most cases, their team lead was a very, very busy senior
                 developer…
               </div>
             }
-            rowOrder="row-reverse"
-            image="/images/svg/square-brackets.svg"
+            rowOrder='row-reverse'
+            image='/images/svg/square-brackets.svg'
             color={primary}
             bgColor={white}
-            customInnerClass="about-content"
+            customInnerClass='about-content'
           />
           <TwoColumn
             content={
@@ -48,17 +50,17 @@ export default function AboutUs() {
                 cut it.
               </div>
             }
-            image="/images/svg/open-angle-bracket.svg"
+            image='/images/svg/open-angle-bracket.svg'
             color={primary}
             bgColor={white}
-            customInnerClass="about-content"
+            customInnerClass='about-content'
           />
         </Container>
       </RevealContentContainer>
 
       <RevealContentContainer>
         <Container>
-          <Title title="Our goals" />
+          <Title title='Our goals' />
         </Container>
       </RevealContentContainer>
     </div>
