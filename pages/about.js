@@ -6,10 +6,10 @@ import Container from '@/components/containers/Container';
 
 export default function AboutUs() {
   return (
-    <div className="about-us">
+    <div className='about-us'>
       <RevealContentContainer>
         <Container>
-          <Title title="About Web Dev Path" />
+          <Title title='About Web Dev Path' />
           <TwoColumn
             content={
               <div>
@@ -22,17 +22,17 @@ export default function AboutUs() {
                 those new graduates used a version control feature, such
                 as&nbsp;
                 <a
-                  target="_blank"
-                  href="http://www.github.com"
-                  rel="noopener noreferrer"
+                  target='_blank'
+                  href='http://www.github.com'
+                  rel='noopener noreferrer'
                 >
                   GitHub
                 </a>{' '}
                 or&nbsp;
                 <a
-                  target="_blank"
-                  href="http://www.bitbucket.com"
-                  rel="noopener noreferrer"
+                  target='_blank'
+                  href='http://www.bitbucket.com'
+                  rel='noopener noreferrer'
                 >
                   Bitbucket
                 </a>
@@ -44,11 +44,11 @@ export default function AboutUs() {
                 team lead was a very, very busy senior developer…
               </div>
             }
-            rowOrder="row-reverse"
-            image="/images/svg/square-brackets.svg"
+            rowOrder='row-reverse'
+            image='/images/svg/square-brackets.svg'
             color={primary}
             bgColor={white}
-            customInnerClass="about-content"
+            customInnerClass='about-content'
           />
           <TwoColumn
             content={
@@ -63,10 +63,10 @@ export default function AboutUs() {
                 cut it.
               </div>
             }
-            image="/images/svg/open-angle-bracket.svg"
+            image='/images/svg/open-angle-bracket.svg'
             color={primary}
             bgColor={white}
-            customInnerClass="about-content"
+            customInnerClass='about-content'
           />
         </Container>
       </RevealContentContainer>

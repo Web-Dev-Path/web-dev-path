@@ -10,7 +10,7 @@ export default function Footer() {
     <footer className={footerStyles.footer}>
       <NewsletterSubscribe />
       <Container className={footerStyles.footer__inner}>
-        <nav className={footerStyles.footer__nav} aria-label="Main">
+        <nav className={footerStyles.footer__nav} aria-label='Main'>
           <ul className={footerStyles.footer__navList}>
             {linksNav.map(link => (
               <li className={footerStyles.footer__navItem} key={link.text}>
@@ -21,13 +21,13 @@ export default function Footer() {
             ))}
           </ul>
         </nav>
-        <Link href="/">
-          <a className={footerStyles.footer__logo} title="Go to the Homepage">
+        <Link href='/'>
+          <a className={footerStyles.footer__logo} title='Go to the Homepage'>
             <Image
-              src="/images/svg/logo.svg"
+              src='/images/svg/logo.svg'
               height={250}
               width={250}
-              alt="Logo"
+              alt='Logo'
             />
           </a>
         </Link>

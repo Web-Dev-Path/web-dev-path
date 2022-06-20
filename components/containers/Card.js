@@ -17,8 +17,8 @@ export default function Card({
           src={image}
           alt={altTag}
           className={styles.img}
-          layout="fill"
-          objectFit="cover"
+          layout='fill'
+          objectFit='cover'
         />
       </div>
       <h2 className={styles.title}>{title}</h2>
