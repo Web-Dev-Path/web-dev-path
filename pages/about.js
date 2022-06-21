@@ -20,16 +20,29 @@ export default function AboutUs() {
                 junior developers, it was evident the lack of practical
                 experience with version control in a team dynamic was making
                 their integration in a professional environment harder. Most of
-                those new graduates used a version control feature, such as&nbsp;
-                <a target="_blank" href='http://www.github.com' rel="noopener noreferrer">GitHub</a> or&nbsp;
-                <a target="_blank" href='http://www.bitbucket.com' rel="noopener noreferrer">Bitbucket</a>,
-                as a repository for their personal projects where they were the
-                only participants. So, all that “branch out and PR review” enriching
-                process was completely unknown to them.
-                That happened to be a problem either for being
-                considered for “junior” positions and after being hired because,
-                in most cases, their team lead was a very, very busy senior
-                developer…
+                those new graduates used a version control feature, such
+                as&nbsp;
+                <a
+                  target='_blank'
+                  href='http://www.github.com'
+                  rel='noopener noreferrer'
+                >
+                  GitHub
+                </a>{' '}
+                or&nbsp;
+                <a
+                  target='_blank'
+                  href='http://www.bitbucket.com'
+                  rel='noopener noreferrer'
+                >
+                  Bitbucket
+                </a>
+                , as a repository for their personal projects where they were
+                the only participants. So, all that “branch out and PR review”
+                enriching process was completely unknown to them. That happened
+                to be a problem either for being considered for “junior”
+                positions and after being hired because, in most cases, their
+                team lead was a very, very busy senior developer…
               </div>
             }
             rowOrder='row-reverse'
@@ -59,11 +72,11 @@ export default function AboutUs() {
         </Container>
       </RevealContentContainer>
 
-      <RevealContentContainer>
+      {/* <RevealContentContainer>
         <Container>
-          <Title title='Our goals' />
+          <Title title="Our goals" />
         </Container>
-      </RevealContentContainer>
+      </RevealContentContainer> */}
     </div>
   );
 }

@@ -50,7 +50,7 @@ export default function TwoColumn({
               src={image}
               alt={altTag}
               className={styles.img}
-              layout="fill"
+              layout='fill'
               priority
             />
           </div>

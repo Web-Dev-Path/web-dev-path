@@ -29,9 +29,9 @@ export default function Hero({
         src={imgBg}
         alt={imgAlt}
         className={styles.imageBg}
-        layout="fill"
-        objectFit="cover"
-        objectPosition="center"
+        layout='fill'
+        objectFit='cover'
+        objectPosition='center'
         priority
       />
       <Container className={styles.header__content}>

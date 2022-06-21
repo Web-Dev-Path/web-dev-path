@@ -74,7 +74,12 @@
 
       a {
         text-decoration: underline;
-        text-underline-offset: 1px;
+        text-underline-offset: 2px;
+
+        &:hover {
+          opacity: 0.6;
+          text-decoration: none;
+        }
       }
     }
 
