@@ -4,6 +4,7 @@ import TwoColumn from '@/components/containers/TwoColumn';
 import { white, primary } from '@/styles/TwoColumn.module.scss';
 import Container from '@/components/containers/Container';
 
+
 export default function AboutUs() {
   return (
     <div className='about-us'>

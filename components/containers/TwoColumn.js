@@ -37,7 +37,7 @@ export default function TwoColumn({
               {title}
             </h2>
           )}
-          <p className={styles.content}>{content}</p>
+          <div className={styles.content}>{content}</div>
           {link && (
             <ButtonLink link={link} customClassName={customBtnClass}>
               {linkText}
