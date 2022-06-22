@@ -1,7 +1,7 @@
 import { createRef, useState } from 'react';
 import { decode } from 'html-entities';
-import Container from '../Container';
-import newsletterStyles from '../../styles/Newsletter.module.scss';
+import Container from '@/components/containers/Container';
+import newsletterStyles from '@/styles/Newsletter.module.scss';
 import ReCAPTCHA from 'react-google-recaptcha';
 
 const SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;

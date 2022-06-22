@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import ButtonLink from './ButtonLink';
-import Container from './Container';
-import styles from '../styles/TwoColumn.module.scss';
+import ButtonLink from '@/components/buttons/ButtonLink';
+import Container from '@/components/containers/Container';
+import styles from '@/styles/TwoColumn.module.scss';
 
 export default function TwoColumn({
   image,
@@ -32,10 +32,12 @@ export default function TwoColumn({
         styles={{ flexDirection: rowOrder }}
       >
         <div className={styles.inner__content}>
-          <h2 className={styles.title} style={{ color: color }}>
-            {title}
-          </h2>
-          <p className={styles.content}>{content}</p>
+          {title && (
+            <h2 className={styles.title} style={{ color: color }}>
+              {title}
+            </h2>
+          )}
+          <div className={styles.content}>{content}</div>
           {link && (
             <ButtonLink link={link} customClassName={customBtnClass}>
               {linkText}
@@ -48,8 +50,7 @@ export default function TwoColumn({
               src={image}
               alt={altTag}
               className={styles.img}
-              layout="fill"
-              objectFit="cover"
+              layout='fill'
               priority
             />
           </div>

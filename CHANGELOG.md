@@ -44,4 +44,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
+- About page content (first section)
+
 ### Fixed
+
+- component file structure
+
+### Changed 
+
+- components folder structure
+- relative to absolute imports with aliases

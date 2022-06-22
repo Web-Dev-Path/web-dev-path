@@ -1,9 +1,9 @@
 import { useRouter } from 'next/router';
-import { heroOptions } from '../utils/hero-options';
-import Hero from './Hero';
-import Meta from './Meta';
-import Footer from './Footer';
-import styles from '../styles/Layout.module.scss';
+import { heroOptions } from '@/utils/hero-options';
+import Hero from '@/components/layout/Hero';
+import Meta from '@/components/layout/Meta';
+import Footer from '@/components/layout/Footer';
+import styles from '@/styles/Layout.module.scss';
 
 export default function Layout({ children }) {
   const router = useRouter();

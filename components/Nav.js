@@ -1,10 +1,10 @@
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import Container from './Container';
-import styles from '../styles/Nav.module.scss';
-import { linksNav } from '../utils/links';
 import { useRouter } from 'next/router';
+import Container from '@/components/containers/Container';
+import styles from '@/styles/Nav.module.scss';
+import { linksNav } from '@/utils/links';
 
 export default function Nav() {
   const router = useRouter();
@@ -45,14 +45,14 @@ export default function Nav() {
         <div ref={containerRef}>
           <nav className={styles.nav}>
             <div className={styles.nav__logo}>
-              <Link href="/" passHref>
+              <Link href='/' passHref>
                 <a>
                   <Image
-                    src="/images/svg/logo.svg"
+                    src='/images/svg/logo.svg'
                     height={115}
                     width={180}
-                    alt="Logo"
-                    title="Go to the Homepage"
+                    alt='Logo'
+                    title='Go to the Homepage'
                   />
                 </a>
               </Link>
@@ -79,12 +79,12 @@ export default function Nav() {
                 }
               })}
               <li className={styles.nav__item}>
-                <Link href="https://webdevpath.slack.com/join/shared_invite/zt-xqqgwwo5-a09BSVWC9ZrHmS6RaMBzVw#/shared-invite/email">
+                <Link href='https://webdevpath.slack.com/join/shared_invite/zt-xqqgwwo5-a09BSVWC9ZrHmS6RaMBzVw#/shared-invite/email'>
                   <a
                     className={`${styles.nav__button} ${
                       active ? styles.active : ''
                     }`}
-                    title="Join us"
+                    title='Join us'
                   >
                     Join us
                   </a>
@@ -96,7 +96,7 @@ export default function Nav() {
                 active ? styles.active : ''
               }`}
               onClick={() => setActive(active => !active)}
-              aria-label="toggle navigation"
+              aria-label='toggle navigation'
             >
               <span className={styles.nav__hamburger__bar}></span>
               <span className={styles.nav__hamburger__bar}></span>

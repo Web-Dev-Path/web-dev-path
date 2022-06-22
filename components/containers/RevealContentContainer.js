@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { useIntersect } from '../hooks/useIntersect';
-import styles from '../styles/RevealContainer.module.scss';
+import { useIntersect } from '@/hooks/useIntersect';
+import styles from '@/styles/RevealContainer.module.scss';
 
 const RevealContentContainer = ({ children }) => {
   const [ref, entry] = useIntersect({ threshold: 0.15 });

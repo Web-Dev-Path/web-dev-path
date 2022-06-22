@@ -3,9 +3,9 @@ import { Pagination, Navigation } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import Card from './Card';
-import Container from './Container';
-import styles from '../styles/CardsColumns.module.scss';
+import Card from '@/components/containers/Card';
+import Container from '@/components/containers/Container';
+import styles from '@/styles/CardsColumns.module.scss';
 
 export default function CardsColumns({
   images,

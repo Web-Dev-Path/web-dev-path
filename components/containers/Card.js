@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import styles from '../styles/Card.module.scss';
+import styles from '@/styles/Card.module.scss';
 
 export default function Card({
   image,
@@ -17,8 +17,8 @@ export default function Card({
           src={image}
           alt={altTag}
           className={styles.img}
-          layout="fill"
-          objectFit="cover"
+          layout='fill'
+          objectFit='cover'
         />
       </div>
       <h2 className={styles.title}>{title}</h2>

@@ -1,10 +1,10 @@
-import Bracket from '../components/Bracket';
-import Stick from '../components/Stick';
-import TwoColumn from '../components/TwoColumn';
-import CardsColumns from '../components/CardsColumns';
-import styles from '../styles/Home.module.scss';
-import { white, primary } from '../styles/TwoColumn.module.scss';
-import RevealContentContainer from '../components/RevealContentContainer';
+import Bracket from '@/components/decorations/Bracket';
+import Stick from '@/components/decorations/Stick';
+import TwoColumn from '@/components/containers/TwoColumn';
+import CardsColumns from '@/components/containers/CardsColumns';
+import styles from '@/styles/Home.module.scss';
+import { white, primary } from '@/styles/TwoColumn.module.scss';
+import RevealContentContainer from '@/components/containers/RevealContentContainer';
 
 export default function Home() {
   return (
@@ -12,20 +12,20 @@ export default function Home() {
       <RevealContentContainer>
         <TwoColumn
           title="Let's grow together."
-          image="/images/join-us.jpg"
-          content="The Web Dev Path is a team of professional developers project that aims to provide a comprehensive path for people who seek to begin their web development journey."
-          link="/about"
-          customBtnClass="inverted-grey"
+          image='/images/join-us.jpg'
+          content='The Web Dev Path is a team of professional developers project that aims to provide a comprehensive path for people who seek to begin their web development journey.'
+          link='/about'
+          customBtnClass='inverted-grey'
         />
       </RevealContentContainer>
 
       <RevealContentContainer>
         <Bracket className={styles.bracket} />
         <TwoColumn
-          title="Get involved."
-          content="Web Dev Path runs on volunteers. Here are the ways you can get involved with us:"
-          rowOrder="row-reverse"
-          customInnerClass="get-involved"
+          title='Get involved.'
+          content='Web Dev Path runs on volunteers. Here are the ways you can get involved with us:'
+          rowOrder='row-reverse'
+          customInnerClass='get-involved'
           bgColor={white}
         />
       </RevealContentContainer>
@@ -53,13 +53,13 @@ export default function Home() {
         <Stick className={styles.stick} />
 
         <TwoColumn
-          title="Nonprofit?"
-          content="Web Dev Path can help your nonprofit with web projects of various sizes. Connect with us to find out how."
+          title='Nonprofit?'
+          content='Web Dev Path can help your nonprofit with web projects of various sizes. Connect with us to find out how.'
           color={white}
           bgColor={primary}
-          link="/about"
-          customInnerClass="non-profit"
-          customBtnClass="inverted-white"
+          link='/about'
+          customInnerClass='non-profit'
+          customBtnClass='inverted-white'
         />
       </RevealContentContainer>
     </>
