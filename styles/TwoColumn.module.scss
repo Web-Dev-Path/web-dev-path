@@ -70,15 +70,14 @@
         max-width: 39rem;
         font-size: 1.5rem;
         line-height: 1.938rem;
-      }
-
-      a {
-        text-decoration: underline;
-        text-underline-offset: 2px;
-
-        &:hover {
-          opacity: 0.6;
-          text-decoration: none;
+        a {
+          text-decoration: underline;
+          text-underline-offset: 2px;
+  
+          &:hover {
+            opacity: 0.6;
+            text-decoration: none;
+          }
         }
       }
     }

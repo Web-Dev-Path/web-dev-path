@@ -13,11 +13,10 @@
   min-width: 16rem;
   display: inline-block;
   border: 1px solid $primary-content-color;
-  text-decoration: none !important;
   @include transition(all 0.3s ease);
 
   &:hover {
-    opacity: 1 !important;
+    text-decoration: none;
   }
 
   &.inverted-grey {
