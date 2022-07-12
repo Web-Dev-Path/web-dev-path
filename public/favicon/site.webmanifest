@@ -1,7 +1,7 @@
 {
     "name": "Web Dev Path",
     "short_name": "Web Dev Path",
-    "start_url": "https://webdevpath.co/",
+    "start_url": "/",
     "icons": [
       {
         "src": "/favicon/android-chrome-192x192.png",
