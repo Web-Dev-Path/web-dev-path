@@ -44,6 +44,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
+- Made the site a Progressive Web App (PWA)
 - About page content (first section)
 
 ### Fixed
