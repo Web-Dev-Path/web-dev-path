@@ -17,7 +17,14 @@
     }
   }
 
+  &____navSocialsDiv {
+    display: flex;
+    // flex-direction: column;
+    
+  }
+
   &__nav {
+
     @include tablet {
       min-width: 6.5rem;
       order: 2;
@@ -25,6 +32,7 @@
 
     @include large-desktop {
       font-size: 1.5rem;
+      order: 2;
     }
   }
 
@@ -36,7 +44,6 @@
       flex-direction: row;
     }
   }
-
 
   &__navItem {
     margin: 0.5rem 0;
@@ -62,16 +69,13 @@
     }
   }
 
-  &____navSocialsDiv {
-    display: flex;
-    flex-direction: column;
-    
-  }
+  //social
 
   &__socialIcons {
-    
+  
+
     @include tablet {
-     
+   
     }
 
     @include large-desktop {
@@ -91,11 +95,13 @@
   }
 
   &__socialItem {
+    cursor: pointer;
     width: 47px;
 
     @include tablet {
       padding-left: 28px;
       max-width: 68px;
+      max-width: 100%;
     }
 
     @include large-desktop {

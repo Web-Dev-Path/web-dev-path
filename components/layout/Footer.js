@@ -23,38 +23,41 @@ export default function Footer() {
           </a>
         </Link>
 
-      <div className={footerStyles.footer__navSocialsDiv}>
-    {/* nav & socials */}
-      
-        <nav className={footerStyles.footer__nav} aria-label='Main'>
-          <ul className={footerStyles.footer__navList}>
-            {linksNav.map(link => (
-              <li className={footerStyles.footer__navItem} key={link.text}>
-                <Link href={link.href}>
-                  <a title={link.text}>{link.text}</a>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
+        <div className={footerStyles.footer__navSocialsDiv}>
+          {/* nav & socials */}
 
-        <div className={footerStyles.footer__socialIcons}>
-          <ul className={footerStyles.footer__socialList}>
-            {linksSocial.map(link => (
-              <li className={footerStyles.footer__socialItem} key={link.id}>
-                <Image 
-                  src={link.src}
-                  height={82}
-                  width={68}
-                />
-              </li>
-            ))}
-          </ul>
-        </div>
-        </div>
+          <nav className={footerStyles.footer__nav} aria-label='Main'>
+            <ul className={footerStyles.footer__navList}>
+              {linksNav.map(link => (
+                <li className={footerStyles.footer__navItem} key={link.text}>
+                  <Link href={link.href}>
+                    <a title={link.text}>{link.text}</a>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
 
+          <div className={footerStyles.footer__socialIcons}>
+            <ul className={footerStyles.footer__socialList}>
+              {linksSocial.map(link => (
+                <li className={footerStyles.footer__socialItem} key={link.id}>
+                  <Link href={link.href}>
+                    <a title={link.text} target="_blank">
+                      <Image
+                        href={link.href}
+                        src={link.src}
+                        height={82}
+                        width={68}
+                      />
+                    </a>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
       </Container>
-
 
       <Container>
         <p className={footerStyles.footer__copyright}>
