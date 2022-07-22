@@ -30,10 +30,20 @@
 
   &__navList {
     padding: 0;
+
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+    }
   }
+
 
   &__navItem {
     margin: 0.5rem 0;
+    
+    @include tablet {
+      padding-left: 60px;
+    }
   }
 
   &__logo {
@@ -52,10 +62,57 @@
     }
   }
 
+  &____navSocialsDiv {
+    display: flex;
+    flex-direction: column;
+    
+  }
+
+  &__socialIcons {
+    
+    @include tablet {
+     
+    }
+
+    @include large-desktop {
+      
+    }
+  }
+
+  &__socialList {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+
+    @include tablet {
+      justify-content: end;
+    }
+  }
+
+  &__socialItem {
+    width: 47px;
+
+    @include tablet {
+      padding-left: 28px;
+      max-width: 68px;
+    }
+
+    @include large-desktop {
+      max-width: 100%;
+      padding-left: 28px;
+      width: 68px;
+    }
+  }
+
   &__copyright {
     text-align: center;
     margin: 0;
     font-size: 1rem;
     padding-bottom: 2.5rem;
+
+    @include tablet {
+      text-align: end;
+    }
   }
 }

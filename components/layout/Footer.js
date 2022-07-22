@@ -23,6 +23,9 @@ export default function Footer() {
           </a>
         </Link>
 
+      <div className={footerStyles.footer__navSocialsDiv}>
+    {/* nav & socials */}
+      
         <nav className={footerStyles.footer__nav} aria-label='Main'>
           <ul className={footerStyles.footer__navList}>
             {linksNav.map(link => (
@@ -35,21 +38,24 @@ export default function Footer() {
           </ul>
         </nav>
 
-        <div>
-          <ul>
+        <div className={footerStyles.footer__socialIcons}>
+          <ul className={footerStyles.footer__socialList}>
             {linksSocial.map(link => (
-              <li key={link.id}>
+              <li className={footerStyles.footer__socialItem} key={link.id}>
                 <Image 
                   src={link.src}
-                  height={47}
-                  width={47}
+                  height={82}
+                  width={68}
                 />
               </li>
             ))}
           </ul>
         </div>
+        </div>
 
       </Container>
+
+
       <Container>
         <p className={footerStyles.footer__copyright}>
           © Web Dev Path {new Date().getFullYear()}. All rights reserved.
