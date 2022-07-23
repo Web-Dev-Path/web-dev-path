@@ -72,7 +72,6 @@
   //social
 
   &__socialIcons {
-  
 
     @include tablet {
    
@@ -88,6 +87,10 @@
     justify-content: center;
     margin: 0;
     padding: 0;
+
+    li:first-child {
+      display: none;
+    }
 
     @include tablet {
       justify-content: end;
