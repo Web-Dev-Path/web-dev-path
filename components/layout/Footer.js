@@ -10,7 +10,6 @@ export default function Footer() {
   return (
     <footer className={footerStyles.footer}>
       <NewsletterSubscribe />
-
       <Container className={footerStyles.footer__inner}>
         <Link href='/'>
           <a className={footerStyles.footer__logo} title='Go to the Homepage'>
@@ -22,10 +21,7 @@ export default function Footer() {
             />
           </a>
         </Link>
-
         <div className={footerStyles.footer__navSocialsDiv}>
-          {/* nav & socials */}
-
           <nav className={footerStyles.footer__nav} aria-label='Main'>
             <ul className={footerStyles.footer__navList}>
               {linksNav.map(link => (
@@ -37,13 +33,12 @@ export default function Footer() {
               ))}
             </ul>
           </nav>
-
           <div className={footerStyles.footer__socialIcons}>
             <ul className={footerStyles.footer__socialList}>
               {linksSocial.map(link => (
                 <li className={footerStyles.footer__socialItem} key={link.id}>
                   <Link href={link.href}>
-                    <a title={link.text} target="_blank">
+                    <a title={link.text} target='_blank'>
                       <Image
                         href={link.href}
                         src={link.src}
@@ -58,7 +53,6 @@ export default function Footer() {
           </div>
         </div>
       </Container>
-
       <Container>
         <p className={footerStyles.footer__copyright}>
           © Web Dev Path {new Date().getFullYear()}. All rights reserved.
