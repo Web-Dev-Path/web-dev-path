@@ -96,7 +96,6 @@
 
   &__socialItem {
     cursor: pointer;
-    width: 47px;
 
     @include tablet {
       padding-left: 28px;
@@ -107,7 +106,6 @@
     @include large-desktop {
       max-width: 100%;
       padding-left: 28px;
-      width: 68px;
     }
   }
 

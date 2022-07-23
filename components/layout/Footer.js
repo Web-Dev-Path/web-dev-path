@@ -47,8 +47,8 @@ export default function Footer() {
                       <Image
                         href={link.href}
                         src={link.src}
-                        height={82}
-                        width={68}
+                        height={65}
+                        width={47}
                       />
                     </a>
                   </Link>
