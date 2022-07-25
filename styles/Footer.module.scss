@@ -17,10 +17,9 @@
     }
   }
 
-  &____navSocialsDiv {
+  &__navSocialsDiv {
     display: flex;
-    // flex-direction: column;
-    
+    flex-direction: column;
   }
 
   &__nav {
@@ -86,6 +85,7 @@
     display: flex;
     justify-content: center;
     margin: 0;
+    margin-bottom: revert;
     padding: 0;
 
     li:first-child {
