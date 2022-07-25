@@ -69,7 +69,7 @@
   &__socialList {
     display: flex;
     justify-content: center;
-    margin: 0 0 revert;
+    margin: revert;
     padding: 0;
 
     li:first-child {
@@ -86,7 +86,6 @@
 
     @include tablet {
       padding-left: 28px;
-      max-width: 68px;
       max-width: 100%;
     }
   }
