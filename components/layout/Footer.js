@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import footerStyles from '@/styles/Footer.module.scss';
-import { linksNav } from '@/utils/links';
-import { linksSocial } from '@/utils/links';
+import { linksNav, linksSocial } from '@/utils/links';
 import NewsletterSubscribe from '@/components/mailchimp/NewsletterSubscribe';
 import Image from 'next/image';
 import Container from '@/components/containers/Container';
