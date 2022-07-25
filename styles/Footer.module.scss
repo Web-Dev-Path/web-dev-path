@@ -72,10 +72,6 @@
     margin: revert;
     padding: 0;
 
-    li:first-child {
-      display: none;
-    }
-
     @include tablet {
       justify-content: end;
     }

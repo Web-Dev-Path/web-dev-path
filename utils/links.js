@@ -15,17 +15,20 @@ export const linksSocial = [
     text: 'LinkedIn',
     href: '#',
     src: '/images/svg/LinkedIn.svg',
+    isVisible: false,
   },
   {
     id: 2,
     text: 'YouTube',
     href: 'https://www.youtube.com/channel/UCCLwmU7r4IUWZOtH3bCEN6g',
     src: '/images/svg/YouTube.svg',
+    isVisible: true,
   },
   {
     id: 3,
     text: 'GitHub',
     href: 'https://github.com/Web-Dev-Path',
     src: '/images/svg/GitHub.svg',
+    isVisible: true,
   },
 ];
