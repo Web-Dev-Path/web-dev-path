@@ -31,7 +31,6 @@
 
     @include large-desktop {
       font-size: 1.5rem;
-      order: 2;
     }
   }
 
@@ -40,7 +39,6 @@
 
     @include tablet {
       display: flex;
-      flex-direction: row;
     }
   }
 
@@ -68,24 +66,10 @@
     }
   }
 
-  //social
-
-  &__socialIcons {
-
-    @include tablet {
-      
-    }
-
-    @include large-desktop {
-     
-    }
-  }
-
   &__socialList {
     display: flex;
     justify-content: center;
-    margin: 0;
-    margin-bottom: revert;
+    margin: 0 0 revert;
     padding: 0;
 
     li:first-child {
@@ -104,11 +88,6 @@
       padding-left: 28px;
       max-width: 68px;
       max-width: 100%;
-    }
-
-    @include large-desktop {
-      max-width: 100%;
-      padding-left: 28px;
     }
   }
 

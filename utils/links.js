@@ -24,7 +24,7 @@ export const linksSocial = [
   },
   {
     id: 3,
-    text: 'Github',
+    text: 'GitHub',
     href: 'https://github.com/Web-Dev-Path',
     src: '/images/svg/GitHub.svg',
   },

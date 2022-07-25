@@ -36,7 +36,7 @@ export default function Footer() {
           <div className={footerStyles.footer__socialIcons}>
             <ul className={footerStyles.footer__socialList}>
               {linksSocial.map(link => (
-                <li className={footerStyles.footer__socialItem} key={link.id}>
+                <li className={footerStyles.footer__socialItem} key={link.text}>
                   <Link href={link.href}>
                     <a title={link.text} target='_blank'>
                       <Image
