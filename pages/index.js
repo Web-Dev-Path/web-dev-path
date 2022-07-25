@@ -12,7 +12,8 @@ export default function Home() {
       <RevealContentContainer>
         <TwoColumn
           title="Let's grow together."
-          image='/images/join-us.jpg'
+          image='/images/join-us.webp'
+          altTag='Join us'
           content='The Web Dev Path is a team of professional developers project that aims to provide a comprehensive path for people who seek to begin their web development journey.'
           link='/about'
           customBtnClass='inverted-grey'
@@ -34,9 +35,9 @@ export default function Home() {
         <CardsColumns
           titles={['Join us', 'Volunteer', 'Become a mentor']}
           images={[
-            '/images/join-us.jpg',
-            '/images/volunteer.jpg',
-            '/images/mentor.jpg',
+            '/images/join-us.webp',
+            '/images/volunteer.webp',
+            '/images/mentor.webp',
           ]}
           altTags={['Join us', 'Volunteer', 'Become a mentor']}
           content={[

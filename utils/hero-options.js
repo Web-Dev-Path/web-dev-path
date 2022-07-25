@@ -1,6 +1,6 @@
 export const heroOptions = {
   '/': {
-    imgBg: '/images/home-bg.png',
+    imgBg: '/images/home-bg.webp',
     imgAlt: 'Homepage',
     title: 'Web Dev Path is about',
     dynamicTitles: ['community', 'learning', 'growth', 'teamwork'],
@@ -8,7 +8,7 @@ export const heroOptions = {
       'We help junior tech professionals, such as developers and designers, to grow.',
   },
   '/about': {
-    imgBg: '/images/about-us-bg.png',
+    imgBg: '/images/about-us-bg.webp',
     imgAlt: 'About Us',
     title: 'About Us',
     titleClass: 'accent-title',
@@ -16,7 +16,7 @@ export const heroOptions = {
       'While the demand for web developers only increases, becoming one can be quite a journey!',
   },
   '/contact': {
-    imgBg: '/images/about-us-bg.png',
+    imgBg: '/images/about-us-bg.webp',
     imgAlt: 'Contact Us',
     title: 'Contact Us',
     titleClass: 'accent-title',
@@ -24,7 +24,7 @@ export const heroOptions = {
       'We help junior tech professionals, such as developers and designers, to grow.',
   },
   '/blog': {
-    imgBg: '/images/about-us-bg.png',
+    imgBg: '/images/about-us-bg.webp',
     imgAlt: 'Blog',
     title: 'Our Blog',
     titleClass: 'accent-title',
@@ -32,7 +32,7 @@ export const heroOptions = {
       'We help junior tech professionals, such as developers and designers, to grow.',
   },
   '/404': {
-    imgBg: '/images/about-us-bg.png',
+    imgBg: '/images/about-us-bg.webp',
     imgAlt: 'Not Found',
     title: 'Not Found',
     titleClass: 'accent-title',

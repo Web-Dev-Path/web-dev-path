@@ -53,6 +53,7 @@ export default function Meta() {
         href='https://fonts.googleapis.com/css2?family=Assistant:wght@400;700&family=Open+Sans:wght@700&display=swap'
         rel='stylesheet'
       />
+      <link rel='canonical' href='https://www.webdevpath.co' />
     </Head>
   );
 }
