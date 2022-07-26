@@ -80,6 +80,10 @@
   &__socialItem {
     cursor: pointer;
 
+    &:hover {
+      opacity: 0.6;
+    }
+
     @include tablet {
       padding-left: 28px;
       max-width: 100%;
