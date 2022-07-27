@@ -79,6 +79,7 @@
 
   &__socialItem {
     cursor: pointer;
+    @include transition(all 0.3s ease);
 
     &:hover {
       opacity: 0.6;
