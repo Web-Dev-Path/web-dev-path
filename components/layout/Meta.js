@@ -43,6 +43,7 @@ export default function Meta() {
       <meta property='og:url' content='/' />
       <meta property='og:image:width' content='1200' />
       <meta property='og:image:height' content='1200' />
+      <meta name='robots' content='index, follow' />
       <link rel='preconnect' href='https://fonts.googleapis.com' />
       <link
         rel='preconnect'
@@ -53,6 +54,7 @@ export default function Meta() {
         href='https://fonts.googleapis.com/css2?family=Assistant:wght@400;700&family=Open+Sans:wght@700&display=swap'
         rel='stylesheet'
       />
+      <link rel='canonical' href='https://www.webdevpath.co' />
     </Head>
   );
 }

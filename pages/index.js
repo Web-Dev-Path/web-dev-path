@@ -12,7 +12,8 @@ export default function Home() {
       <RevealContentContainer>
         <TwoColumn
           title="Let's grow together."
-          image='/images/join-us.jpg'
+          image='/images/join-us.webp'
+          altTag='Join the project'
           content='The Web Dev Path is a team of professional developers project that aims to provide a comprehensive path for people who seek to begin their web development journey.'
           link='/about'
           customBtnClass='inverted-grey'
@@ -32,13 +33,21 @@ export default function Home() {
 
       <RevealContentContainer>
         <CardsColumns
-          titles={['Join us', 'Volunteer', 'Become a mentor']}
-          images={[
-            '/images/join-us.jpg',
-            '/images/volunteer.jpg',
-            '/images/mentor.jpg',
+          titles={[
+            'Join the project',
+            'Volunteer to learn together',
+            'Become a project mentor',
           ]}
-          altTags={['Join us', 'Volunteer', 'Become a mentor']}
+          images={[
+            '/images/join-us.webp',
+            '/images/volunteer.webp',
+            '/images/mentor.webp',
+          ]}
+          altTags={[
+            'Join the project',
+            'Volunteer to learn together',
+            'Become a project mentor',
+          ]}
           content={[
             'Are you learning web development and need mentorship? Are you a web dev looking for help or a code buddy for a project? ',
             'Would you like to volunteer? For roles other than mentor/mentee, please get in touch.',

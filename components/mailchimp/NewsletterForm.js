@@ -1,4 +1,5 @@
 import { createRef, useState } from 'react';
+import Image from 'next/image';
 import { decode } from 'html-entities';
 import Container from '@/components/containers/Container';
 import newsletterStyles from '@/styles/Newsletter.module.scss';
@@ -114,9 +115,18 @@ const NewsletterForm = ({ status, message, onValidated }) => {
   return (
     <section className={newsletterStyles.newsletter}>
       <Container className={newsletterStyles.newsletter__inner}>
-        <h4 className={newsletterStyles.newsletter__title}>
-          Sign up for news &#62;
-        </h4>
+        <h2 className={newsletterStyles.newsletter__title}>
+          Sign up for news
+          <span className={newsletterStyles.newsletter__right_chevron}>
+            <Image
+              src='/images/svg/right-chevron.svg'
+              height={18}
+              width={18}
+              alt='Right Chevron SVG'
+              className={newsletterStyles.newsletter__right_chevron_image}
+            />
+          </span>
+        </h2>
         <div>
           <form
             className={newsletterStyles.newsletter__form}
@@ -125,30 +135,30 @@ const NewsletterForm = ({ status, message, onValidated }) => {
             <input
               className={`${newsletterStyles.newsletter__input} ${newsletterStyles.newsletter__name}`}
               onChange={event => setName(event?.target?.value ?? '')}
-              type="text"
-              name="name"
+              type='text'
+              name='name'
               value={name}
-              placeholder="name"
+              placeholder='name'
             />
             <input
               className={`${newsletterStyles.newsletter__input} ${newsletterStyles.newsletter__email}`}
               onChange={event => setEmail(event?.target?.value ?? '')}
-              type="email"
-              name="email"
+              type='email'
+              name='email'
               value={email}
-              placeholder="email"
+              placeholder='email'
               onKeyUp={event => handleInputKeyEvent(event)}
             />
             <button
               className={newsletterStyles.newsletter__button}
-              type="submit"
+              type='submit'
             >
               Subscribe
             </button>
 
             <ReCAPTCHA
               ref={recaptchaRef}
-              size="invisible"
+              size='invisible'
               sitekey={SITE_KEY}
               onChange={onReCAPTCHAChange}
             />

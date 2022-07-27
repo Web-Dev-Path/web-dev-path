@@ -61,25 +61,23 @@ export default function Nav() {
               className={`${styles.nav__links} ${active ? styles.active : ''}`}
             >
               {linksNav.map(({ text, href, id }) => {
-                if (text !== 'Join us') {
-                  return (
-                    <li className={styles.nav__item} key={id}>
-                      <Link href={href}>
-                        <a
-                          className={`${styles.nav__link} ${
-                            router.pathname == href ? `${styles.current}` : ''
-                          }`}
-                          title={text}
-                        >
-                          {text}
-                        </a>
-                      </Link>
-                    </li>
-                  );
-                }
+                return (
+                  <li className={styles.nav__item} key={id}>
+                    <Link href={href}>
+                      <a
+                        className={`${styles.nav__link} ${
+                          router.pathname == href ? `${styles.current}` : ''
+                        }`}
+                        title={text}
+                      >
+                        {text}
+                      </a>
+                    </Link>
+                  </li>
+                );
               })}
               <li className={styles.nav__item}>
-                <Link href='https://webdevpath.slack.com/join/shared_invite/zt-xqqgwwo5-a09BSVWC9ZrHmS6RaMBzVw#/shared-invite/email'>
+                <Link href='mailto:hello@webdevpath.co?subject=Project collaborator application'>
                   <a
                     className={`${styles.nav__button} ${
                       active ? styles.active : ''
