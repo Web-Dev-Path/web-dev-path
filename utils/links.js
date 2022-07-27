@@ -15,6 +15,7 @@ export const linksSocial = [
     text: 'LinkedIn',
     href: '#',
     src: '/images/svg/LinkedIn.svg',
+    alt: 'Find us on LinkedIn',
     isVisible: false,
   },
   {
@@ -22,6 +23,7 @@ export const linksSocial = [
     text: 'YouTube',
     href: 'https://www.youtube.com/channel/UCCLwmU7r4IUWZOtH3bCEN6g',
     src: '/images/svg/YouTube.svg',
+    alt: 'Find us on YouTube',
     isVisible: true,
   },
   {
@@ -29,6 +31,7 @@ export const linksSocial = [
     text: 'GitHub',
     href: 'https://github.com/Web-Dev-Path',
     src: '/images/svg/GitHub.svg',
+    alt: 'Find us on GitHub',
     isVisible: true,
   },
 ];

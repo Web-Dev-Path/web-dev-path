@@ -40,13 +40,32 @@
     color: $primary-content-color;
     margin: 0;
     white-space: nowrap;
+    display:flex;
+    gap: 0.5rem;
 
     @include medium-desktop {
       font-size: 1.75rem;
+      gap: 1rem;
     }
 
     @include large-desktop {
       font-size: 2.25rem;
+      gap: 1.5rem;
+    }
+  }
+
+  &__right_chevron{
+    position: relative;
+    top: 0.1rem;
+
+    @include large-desktop {
+      top: unset;
+
+      img {
+        width: 1.5rem !important;
+        height: 1.5rem !important;
+      }
+
     }
   }
 
@@ -55,9 +74,6 @@
       display: flex;
       align-items: center;
       gap: 1rem;
-    }
-
-    @include desktop {
       margin-left: auto;
     }
   }
@@ -69,7 +85,7 @@
     height: 2rem;
     margin: 1rem 0;
     padding: 1rem 1.25rem;
-    border: none;
+    border: 1px solid $dark-bg-color;
     width: 100%;
 
     @include large-desktop {
