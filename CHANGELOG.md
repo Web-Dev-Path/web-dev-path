@@ -46,7 +46,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Made the site a Progressive Web App (PWA)
 - About page content (first section)
-- robots.txt and canonical link
 
 ### Fixed
 
