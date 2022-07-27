@@ -54,4 +54,4 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - components folder structure
 - relative to absolute imports with aliases
 - updated to React 18 and Next.js latest
-- Footer styling update + social media icons
+- footer styling update + social media icons
