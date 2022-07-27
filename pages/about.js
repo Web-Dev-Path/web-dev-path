@@ -1,9 +1,8 @@
 import RevealContentContainer from '@/components/containers/RevealContentContainer';
-import Title from '@/components/Title';
+import Title from '@/components/snippets/Title';
 import TwoColumn from '@/components/containers/TwoColumn';
 import { white, primary } from '@/styles/TwoColumn.module.scss';
 import Container from '@/components/containers/Container';
-
 
 export default function AboutUs() {
   return (
