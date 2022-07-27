@@ -52,10 +52,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - component file structure
 - ButtonLink.js styles
-
-### Changed
-
 - components folder structure
 - relative to absolute imports with aliases
 - updated to React 18 and Next.js latest
-- changed image formats to .webp
+- footer styling update + social media icons
+- improved LightHouse scores by optmizing images, creating a robots.txt file and adding proper alt tags
