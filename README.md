@@ -16,13 +16,13 @@ If you are an experienced and a patient-lovely developer, a true rockstar who wa
 
 ## How to get started?
 
-Please start watching carefully [our guideline tutorials](https://github.com/Web-Dev-Path/web-dev-path/wiki/Getting-Started), then, reach out on [Slack](https://join.slack.com/t/webdevpath/shared_invite/zt-xqqgwwo5-a09BSVWC9ZrHmS6RaMBzVw). There, is where we get together and learn from each other. Once on our `#general` channel, you'll see a pinned message with some guidelines.
+Please start watching carefully [our guideline tutorials](https://github.com/Web-Dev-Path/web-dev-path/wiki/Getting-Started). Then, if you think this is the right project for you, reach out by [email](mailto:hello@webdevpath.co) explaining why do you want to become a project collaborator. Once in the project, you'll have access to our Slack channel where we get together and make things happen!
 
 <br />
 
 ## Quickstart
 
-After talking to us on Slack and deciding this project is your "cup of tea", you'll be added to the project as a collaborator. That's when you'll be able to get your Pull Requests reviewed and merged.
+After talking to us by email, you'll be added to the project as a collaborator. That's when you'll be able to get your Pull Requests reviewed and merged.
 
 This is how to get started locally:
 
