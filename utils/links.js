@@ -12,14 +12,23 @@ export const linksNav = [
 export const linksSocial = [
   {
     id: 1,
-    text: 'Github',
+    text: 'LinkedIn',
     href: '#',
-    src: '/images/svg/iconmonstr-github.svg',
+    src: '/images/svg/LinkedIn.svg',
+    isVisible: false,
   },
   {
     id: 2,
-    text: 'Twitter',
-    href: '#',
-    src: '/images/svg/iconmonstr-twitter.svg',
+    text: 'YouTube',
+    href: 'https://www.youtube.com/channel/UCCLwmU7r4IUWZOtH3bCEN6g',
+    src: '/images/svg/YouTube.svg',
+    isVisible: true,
+  },
+  {
+    id: 3,
+    text: 'GitHub',
+    href: 'https://github.com/Web-Dev-Path',
+    src: '/images/svg/GitHub.svg',
+    isVisible: true,
   },
 ];
