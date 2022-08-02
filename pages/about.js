@@ -1,12 +1,40 @@
 import RevealContentContainer from '@/components/containers/RevealContentContainer';
 import Title from '@/components/snippets/Title';
 import TwoColumn from '@/components/containers/TwoColumn';
-import { white, primary } from '@/styles/TwoColumn.module.scss';
+import { white, primary, primaryAccent } from '@/styles/TwoColumn.module.scss';
 import Container from '@/components/containers/Container';
 
 export default function AboutUs() {
   return (
     <div className='about-us'>
+      <RevealContentContainer>
+        {/* ================================OUR BACKGROUND SECTION============== */}
+        <Container>
+          <Title title='Our background' />
+          <TwoColumn
+            content={
+              <div>
+                The Web Dev Path project was idealized in 2020 in consequence of
+                many conversations with aspirant web developers as well as by
+                considering some personal experiences.
+                <br />
+                <br />
+                When talking to other junior developers, it was evident the lack
+                of practical experience with version control in a team dynamic
+                was making their integration in a professional environment
+                harder.
+              </div>
+            }
+            rowOrder='row'
+            image='/images/svg/square-brackets.svg'
+            color={primary}
+            bgColor={primaryAccent}
+            customInnerClass='about-content'
+          />
+        </Container>
+        {/* ================================OUR BACKGROUND SECTION============== */}
+      </RevealContentContainer>
+
       <RevealContentContainer>
         <Container>
           <Title title='About Web Dev Path' />
