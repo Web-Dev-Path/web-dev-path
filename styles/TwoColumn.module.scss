@@ -2,7 +2,8 @@
 @use './mixins' as *;
 
 .wrapper {
-  background-color: $light-bg-color;
+  // background-color: $light-bg-color;
+  // background-color: $primary-accent-color;
 
   .inner {
     padding: 5rem 0;
@@ -23,6 +24,21 @@
         }
       }
     }
+
+    //added============================
+    &.our-background {
+      .inner__image {
+        flex-basis: 30rem;
+        // height: 24rem;
+        .img {
+          max-width: 24rem;
+          object-fit: contain;
+          transform: scale(0.65);
+        }
+      }
+    }
+
+    //added============================
 
     &.about-content {
       align-items: center;
@@ -110,5 +126,6 @@
   white: $white;
   primary: $primary-content-color;
   primaryAccent: $primary-accent-color;
+  lightBgColor: $light-bg-color;
   //kl added export primaryAccent
 }

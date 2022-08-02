@@ -9,9 +9,10 @@ export default function AboutUs() {
     <div className='about-us'>
       <RevealContentContainer>
         {/* ================================OUR BACKGROUND SECTION============== */}
-        <Container>
-          <Title title='Our background' />
+        {/* <Container> */}
+          {/* <Title title='Our background' /> */}
           <TwoColumn
+          title="Our background"
             content={
               <div>
                 The Web Dev Path project was idealized in 2020 in consequence of
@@ -29,9 +30,9 @@ export default function AboutUs() {
             image='/images/svg/square-brackets.svg'
             color={primary}
             bgColor={primaryAccent}
-            customInnerClass='about-content'
+            customInnerClass='our-background'
           />
-        </Container>
+        {/* </Container> */}
         {/* ================================OUR BACKGROUND SECTION============== */}
       </RevealContentContainer>
 
