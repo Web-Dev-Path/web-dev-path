@@ -25,40 +25,11 @@
       }
     }
 
-    //bracket img needs to be made smaller for mobile
-
-    //added============================
-    &.our-background {
-      padding-bottom: 0;
-      .inner__content {
-        // @include desktop-breakpoint-minus {
-        //   margin-bottom: 0;
-        // }
-        .content {
-          max-width: fit-content;
-        }
-        flex-basis: calc(100% - 34rem);
-      }
-
-      .inner__image {
-        flex-basis: 30rem;
-        // height: 24rem;
-        .img {
-          max-width: 24rem;
-          object-fit: contain;
-          transform: scale(0.65);
-        }
-      }
-      
-    }
-
-    //added============================
-
     &.about-content {
-      align-items: center;
-      padding: 0px;
-      width: 100%;
-      align-items: flex-start;
+      // align-items: center;
+      // padding: 0px;
+      // width: 100%;
+      // align-items: flex-start;
 
       .inner__content {
         @include desktop-breakpoint-minus {
@@ -67,11 +38,12 @@
         .content {
           max-width: fit-content;
         }
-        flex-basis: calc(100% - 24rem);
+        flex-basis: calc(100% - 34rem); 
       }
       .inner__image {
         flex-basis: 24rem;
         height: 24rem;
+        transform: translateY(15%);
         .img {
           max-width: 24rem;
           object-fit: contain;
@@ -126,6 +98,35 @@
         object-fit: cover;
       }
     }
+
+     //added============================
+     &.our-background {
+      padding-bottom: 0;
+      .inner__content {
+        @include desktop-breakpoint-minus {
+          margin-bottom: 0;
+        }
+        .content {
+          max-width: fit-content;
+        }
+        flex-basis: calc(100% - 34rem);
+      }
+
+      .inner__image {
+        flex-basis: 30rem;
+        // height: 24rem;
+
+        
+        .img {
+          max-width: 50rem;
+          object-fit: contain;
+          transform: scale(0.5) translateY(-17%);
+        }
+      }
+      
+    }
+
+    //added============================
 
     @include desktop {
       display: flex;

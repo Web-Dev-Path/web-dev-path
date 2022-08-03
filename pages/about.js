@@ -2,13 +2,13 @@ import RevealContentContainer from '@/components/containers/RevealContentContain
 // import Title from '@/components/snippets/Title';
 import TwoColumn from '@/components/containers/TwoColumn';
 import { white, primary, primaryAccent } from '@/styles/TwoColumn.module.scss';
-import Container from '@/components/containers/Container';
+// import Container from '@/components/containers/Container';
 
 export default function AboutUs() {
   return (
     <div className='about-us'>
       <RevealContentContainer>
-        {/* ================================OUR BACKGROUND SECTION============== */}
+        {/* ================================FIRST ABOUT SECTION============== */}
         {/* <Container> */}
         {/* <Title title='Our background' /> */}
         <TwoColumn
@@ -32,11 +32,10 @@ export default function AboutUs() {
           customInnerClass='our-background'
         />
         {/* </Container> */}
-        {/* ================================OUR BACKGROUND SECTION============== */}
       </RevealContentContainer>
 
       <RevealContentContainer>
-        <Container>
+        {/* <Container> */}
           {/* <Title title='Peer reviews' /> */}
           <TwoColumn
             title='Peer reviews'
@@ -96,8 +95,10 @@ export default function AboutUs() {
             bgColor={white}
             customInnerClass='about-content'
           />
-        </Container>
+        {/* </Container> */}
       </RevealContentContainer>
+
+       {/* ================================FIRST ABOUT SECTION============== */}
 
       {/* <RevealContentContainer>
         <Container>
