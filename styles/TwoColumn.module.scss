@@ -27,11 +27,13 @@
 
     &.about-content {
       // align-items: center;
-      // padding: 0px;
+      // padding: 0;
       // width: 100%;
       // align-items: flex-start;
+      padding-bottom: 0;
 
       .inner__content {
+        
         @include desktop-breakpoint-minus {
           margin-bottom: 0;
         }
@@ -116,7 +118,6 @@
         flex-basis: 30rem;
         // height: 24rem;
 
-        
         .img {
           max-width: 50rem;
           object-fit: contain;
@@ -142,5 +143,4 @@
   primary: $primary-content-color;
   primaryAccent: $primary-accent-color;
   lightBgColor: $light-bg-color;
-  //kl added export primaryAccent
 }
