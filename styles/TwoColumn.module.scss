@@ -51,6 +51,9 @@
           object-fit: contain;
           transform: scale(0.5);
         }
+        // @include tablet {
+        //   transform: scale(0.5) translateY(-17%);
+        // }
       }
     }
 
@@ -121,7 +124,12 @@
         .img {
           max-width: 50rem;
           object-fit: contain;
-          transform: scale(0.5) translateY(-17%);
+          transform: scale(0.3);
+
+          @include tablet {
+            transform: scale(0.5) translateY(-17%);
+            height: 24rem;
+          }
         }
       }
       
