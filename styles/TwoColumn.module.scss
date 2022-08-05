@@ -45,15 +45,15 @@
       .inner__image {
         flex-basis: 24rem;
         height: 24rem;
-        transform: translateY(15%);
+        transform: translateY(-15%);
         .img {
           max-width: 24rem;
           object-fit: contain;
           transform: scale(0.5);
         }
-        // @include tablet {
-        //   transform: scale(0.5) translateY(-17%);
-        // }
+        @include tablet {
+          transform: translateY(15%);
+        }
       }
     }
 
