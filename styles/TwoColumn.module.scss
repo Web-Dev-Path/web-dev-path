@@ -107,6 +107,13 @@
      //added============================
      &.our-background {
       padding-bottom: 0;
+
+      @include tablet {
+        .title {
+          font-size: 56px;
+        }
+      }
+
       .inner__content {
         @include desktop-breakpoint-minus {
           margin-bottom: 0;
