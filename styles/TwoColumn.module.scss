@@ -58,11 +58,11 @@
     }
 
     .inner__content {
-      margin-bottom: 5rem;
+      // margin-bottom: 5rem;
 
       @include desktop {
         flex-basis: 50%;
-        margin-bottom: 0;
+        // margin-bottom: 0;
       }
 
       .title {
