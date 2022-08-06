@@ -2,8 +2,6 @@
 @use './mixins' as *;
 
 .wrapper {
-  // background-color: $light-bg-color;
-  // background-color: $primary-accent-color;
 
   .inner {
     padding: 5rem 0;
@@ -26,10 +24,6 @@
     }
 
     &.about-content {
-      // align-items: center;
-      // padding: 0;
-      // width: 100%;
-      // align-items: flex-start;
       padding-bottom: 0;
 
       .inner__content {
@@ -58,11 +52,9 @@
     }
 
     .inner__content {
-      // margin-bottom: 5rem;
 
       @include desktop {
         flex-basis: 50%;
-        // margin-bottom: 0;
       }
 
       .title {
