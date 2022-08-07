@@ -88,12 +88,6 @@ export default function AboutUs() {
           customInnerClass='about-content'
         />
       </RevealContentContainer>
-
-      {/* <RevealContentContainer>
-        <Container>
-          <Title title="Our goals" />
-        </Container>
-      </RevealContentContainer> */}
     </div>
   );
 }

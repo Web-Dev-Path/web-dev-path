@@ -2,59 +2,17 @@
 @use './mixins' as *;
 
 .wrapper {
-
   .inner {
     padding: 5rem 0;
     margin: 0 auto;
     width: 90%;
     max-width: $large-desktop-breakpoint;
 
-    &.get-involved {
-      @include desktop-breakpoint-minus {
-        padding-bottom: 0;
-      }
-    }
-
-    &.non-profit {
-      @include desktop-breakpoint-minus {
-        .inner__content {
-          margin-bottom: 0;
-        }
-      }
-    }
-
-    &.about-content {
-      padding-bottom: 0;
-
-      .inner__content {
-        
-        @include desktop-breakpoint-minus {
-          margin-bottom: 0;
-        }
-        .content {
-          max-width: fit-content;
-        }
-        flex-basis: calc(100% - 34rem); 
-      }
-      .inner__image {
-        flex-basis: 24rem;
-        height: 24rem;
-        transform: translateY(-15%);
-        .img {
-          max-width: 24rem;
-          object-fit: contain;
-          transform: scale(0.5);
-        }
-        @include tablet {
-          transform: translateY(15%);
-        }
-      }
-    }
-
     .inner__content {
-
+      margin-bottom: 5rem;
       @include desktop {
         flex-basis: 50%;
+        margin-bottom: 0;
       }
 
       .title {
@@ -72,7 +30,7 @@
         a {
           text-decoration: underline;
           text-underline-offset: 2px;
-  
+
           &:hover {
             opacity: 0.6;
             text-decoration: none;
@@ -96,45 +54,45 @@
       }
     }
 
-     &.our-background {
-      padding-bottom: 0;
-
-      @include tablet {
-        .title {
-          font-size: 56px;
-        }
+    // Homepage
+    &.get-involved {
+      @include desktop-breakpoint-minus {
+        padding-bottom: 0;
       }
+    }
 
-      .inner__content {
-        @include desktop-breakpoint-minus {
+    &.non-profit {
+      @include desktop-breakpoint-minus {
+        .inner__content {
           margin-bottom: 0;
         }
-        .content {
-          max-width: fit-content;
-        }
-        flex-basis: calc(100% - 34rem);
       }
+    }
 
+    //About us
+    &.our-background {
       .inner__image {
-        flex-basis: 30rem;
-        // height: 24rem;
+        height: 18rem;
 
         .img {
-          max-width: 50rem;
           object-fit: contain;
-          transform: scale(0.3);
-
-          @include tablet {
-            transform: scale(0.5) translateY(-17%);
-            height: 24rem;
-          }
         }
       }
-      
+    }
+
+    &.about-content {
+      .inner__image {
+        height: 15rem;
+        .img {
+          max-width: 14rem;
+          object-fit: contain;
+        }
+      }
     }
 
     @include desktop {
       display: flex;
+      align-items: center;
       justify-content: space-between;
       flex-wrap: wrap;
     }
