@@ -72,7 +72,11 @@
     //About us
     &.our-background {
       .inner__image {
-        height: 18rem;
+        height: 14rem;
+
+        @include desktop {
+          height: 18rem;
+        }
 
         .img {
           object-fit: contain;
@@ -82,7 +86,12 @@
 
     &.about-content {
       .inner__image {
-        height: 15rem;
+        height: 10rem;
+
+        @include desktop {
+          height: 15rem;
+        }
+
         .img {
           max-width: 14rem;
           object-fit: contain;
