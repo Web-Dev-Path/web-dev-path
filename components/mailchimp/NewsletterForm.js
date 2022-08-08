@@ -114,7 +114,7 @@ const NewsletterForm = ({ status, message, onValidated }) => {
 
   return (
     <section className={newsletterStyles.newsletter}>
-      <Container className={newsletterStyles.newsletter__inner}>
+      <Container customClass={newsletterStyles.newsletter__inner}>
         <h2 className={newsletterStyles.newsletter__title}>
           Sign up for news
           <span className={newsletterStyles.newsletter__right_chevron}>

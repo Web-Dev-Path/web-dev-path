@@ -9,7 +9,7 @@ export default function Footer() {
   return (
     <footer className={footerStyles.footer}>
       <NewsletterSubscribe />
-      <Container className={footerStyles.footer__inner}>
+      <Container customClass={footerStyles.footer__inner}>
         <Link href='/'>
           <a className={footerStyles.footer__logo} title='Go to the Homepage'>
             <Image
