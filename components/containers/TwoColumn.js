@@ -28,7 +28,11 @@ export default function TwoColumn({
   return (
     <section className={styles.wrapper} style={styleProps.wrapper}>
       <Container
-        className={`${styles.inner} ${styles[customInnerClass]}`}
+        customClass={
+          customInnerClass
+            ? `${styles.inner} ${styles[customInnerClass]}`
+            : styles.inner
+        }
         styles={{ flexDirection: rowOrder }}
       >
         <div className={styles.inner__content}>

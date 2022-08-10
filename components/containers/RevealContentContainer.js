@@ -15,7 +15,14 @@ const RevealContentContainer = ({ children }) => {
   }, [entry.isIntersecting]);
 
   return (
-    <div ref={ref} className={`${styles.wrapper} ${styles[hiddenStyle]}`}>
+    <div
+      ref={ref}
+      className={
+        hiddenStyle
+          ? `${styles.wrapper} ${styles[hiddenStyle]}`
+          : styles.wrapper
+      }
+    >
       {children}
     </div>
   );

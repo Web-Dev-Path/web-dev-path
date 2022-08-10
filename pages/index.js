@@ -3,7 +3,7 @@ import Stick from '@/components/decorations/Stick';
 import TwoColumn from '@/components/containers/TwoColumn';
 import CardsColumns from '@/components/containers/CardsColumns';
 import styles from '@/styles/Home.module.scss';
-import { white, primary } from '@/styles/TwoColumn.module.scss';
+import { white, primary, lightBgColor } from '@/styles/TwoColumn.module.scss';
 import RevealContentContainer from '@/components/containers/RevealContentContainer';
 
 export default function Home() {
@@ -17,6 +17,7 @@ export default function Home() {
           content='The Web Dev Path is a team of professional developers project that aims to provide a comprehensive path for people who seek to begin their web development journey.'
           link='/about'
           customBtnClass='inverted-grey'
+          bgColor={lightBgColor}
         />
       </RevealContentContainer>
 

@@ -34,7 +34,7 @@ export default function Hero({
         objectPosition='center'
         priority
       />
-      <Container className={styles.header__content}>
+      <Container customClass={styles.header__content}>
         <div className={styles.header__content__upper}>
           <h1 className={titleClass ? `${styles[titleClass]}` : ''}>
             {title}

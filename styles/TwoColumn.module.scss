@@ -2,57 +2,14 @@
 @use './mixins' as *;
 
 .wrapper {
-  background-color: $light-bg-color;
-
   .inner {
     padding: 5rem 0;
     margin: 0 auto;
     width: 90%;
     max-width: $large-desktop-breakpoint;
 
-    &.get-involved {
-      @include desktop-breakpoint-minus {
-        padding-bottom: 0;
-      }
-    }
-
-    &.non-profit {
-      @include desktop-breakpoint-minus {
-        .inner__content {
-          margin-bottom: 0;
-        }
-      }
-    }
-
-    &.about-content {
-      align-items: center;
-      padding: 0px;
-      width: 100%;
-      align-items: flex-start;
-
-      .inner__content {
-        @include desktop-breakpoint-minus {
-          margin-bottom: 0;
-        }
-        .content {
-          max-width: fit-content;
-        }
-        flex-basis: calc(100% - 24rem);
-      }
-      .inner__image {
-        flex-basis: 24rem;
-        height: 24rem;
-        .img {
-          max-width: 24rem;
-          object-fit: contain;
-          transform: scale(0.5);
-        }
-      }
-    }
-
     .inner__content {
       margin-bottom: 5rem;
-
       @include desktop {
         flex-basis: 50%;
         margin-bottom: 0;
@@ -73,7 +30,7 @@
         a {
           text-decoration: underline;
           text-underline-offset: 2px;
-  
+
           &:hover {
             opacity: 0.6;
             text-decoration: none;
@@ -97,8 +54,54 @@
       }
     }
 
+    // Homepage
+    &.get-involved {
+      @include desktop-breakpoint-minus {
+        padding-bottom: 0;
+      }
+    }
+
+    &.non-profit {
+      @include desktop-breakpoint-minus {
+        .inner__content {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    //About us
+    &.our-background {
+      .inner__image {
+        height: 14rem;
+
+        @include desktop {
+          height: 18rem;
+        }
+
+        .img {
+          object-fit: contain;
+        }
+      }
+    }
+
+    &.about-content {
+      .inner__image {
+        height: 10rem;
+
+        @include desktop {
+          height: 15rem;
+        }
+
+        .img {
+          max-width: 14rem;
+          object-fit: contain;
+        }
+      }
+    }
+
     @include desktop {
       display: flex;
+      align-items: center;
       justify-content: space-between;
       flex-wrap: wrap;
     }
@@ -109,4 +112,6 @@
 :export {
   white: $white;
   primary: $primary-content-color;
+  primaryAccent: $primary-accent-color;
+  lightBgColor: $light-bg-color;
 }
