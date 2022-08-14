@@ -1,6 +1,9 @@
 import RevealContentContainer from '@/components/containers/RevealContentContainer';
 import TwoColumn from '@/components/containers/TwoColumn';
 import { white, primary, primaryAccent } from '@/styles/TwoColumn.module.scss';
+import CardsColumns from '@/components/containers/CardsColumns';
+import { Container } from '@/components/containers/Container';
+import Title from '@/components/snippets/Title';
 
 export default function AboutUs() {
   return (
@@ -86,6 +89,28 @@ export default function AboutUs() {
           color={primary}
           bgColor={white}
           customInnerClass='about-content'
+        />
+      </RevealContentContainer>
+      <RevealContentContainer>
+        <Title 
+          title='Our goals'
+        />
+        <CardsColumns
+          titles={['1', '2']}
+          images={[
+            '/images/join-us.webp',
+            '/images/volunteer.webp',
+          ]}
+          altTags={[
+            'Join the project',
+            'Volunteer to learn together',
+          ]}
+          content={[
+            'To provide a safe space for juniors to learn how to communicate in a simulated professional environment.',
+            'To offer more detailed tasks (Issues) and help the developer assimilate the logical mindset required in a structured project, under guidance following the industry’s best practices throughout the entire process.',
+          ]}
+          links={['/about', '/contact']}
+          linkText={['Learn more', 'Contact us']}
         />
       </RevealContentContainer>
     </div>
