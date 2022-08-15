@@ -126,7 +126,7 @@ export default function AboutUs() {
           image='/images/svg/semi-colon.svg'
           color={primary}
           bgColor={white}
-          customInnerClass='about-content'
+          customInnerClass='our-purpose'
         />
       </RevealContentContainer>
     </div>
