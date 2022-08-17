@@ -3,6 +3,7 @@ import TwoColumn from '@/components/containers/TwoColumn';
 import { white, primary, primaryAccent } from '@/styles/TwoColumn.module.scss';
 import CardsColumns from '@/components/containers/CardsColumns';
 import Title from '@/components/snippets/Title';
+import Container from '@/components/containers/Container';
 
 export default function AboutUs() {
   return (
@@ -91,7 +92,9 @@ export default function AboutUs() {
         />
       </RevealContentContainer>
       <RevealContentContainer>
-        <Title title='Our goals' />
+        <Container>
+          <Title title='Our goals' />
+        </Container>
         <CardsColumns
           titles={['1', '2']}
           images={['/images/join-us.webp', '/images/volunteer.webp']}
