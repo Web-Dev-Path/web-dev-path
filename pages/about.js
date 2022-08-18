@@ -101,8 +101,6 @@ export default function AboutUs() {
             'To provide a safe space for juniors to learn how to communicate in a simulated professional environment.',
             'To offer more detailed tasks (Issues) and help the developer assimilate the logical mindset required in a structured project, under guidance following the industry’s best practices throughout the entire process.',
           ]}
-          links={['/about', '/contact']}
-          linkText={['Learn more', 'Contact us']}
           bgColor={primaryAccent}
           customInnerClass='our-goals'
         />

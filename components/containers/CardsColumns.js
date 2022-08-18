@@ -41,11 +41,11 @@ export default function CardsColumns({
             <div className={styles.inner__content}>
               <Card
                 title={title}
-                image={images?images[index]:undefined}
-                altTag={altTags?altTags[index]:undefined}
+                image={images ? images[index] : undefined}
+                altTag={altTags ? altTags[index] : undefined}
                 content={content[index]}
-                link={links[index]}
-                linkText={linkText[index]}
+                link={links ? links[index] : undefined}
+                linkText={linkText ? linkText[index] : undefined}
                 key={index}
               />
             </div>

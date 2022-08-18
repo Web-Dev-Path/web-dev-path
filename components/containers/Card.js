@@ -27,7 +27,7 @@ export default function Card({
       <h2 className={styles.title}>{title}</h2>
       <div className={styles.content}>
         <p>
-          {content} <Link href={link}>{linkText}</Link>
+          {content} {link && <Link href={link}>{linkText}</Link>}
         </p>
       </div>
     </div>
