@@ -97,8 +97,6 @@ export default function AboutUs() {
         </Container>
         <CardsColumns
           titles={['1', '2']}
-          images={['/images/join-us.webp', '/images/volunteer.webp']}
-          altTags={['Join the project', 'Volunteer to learn together']}
           content={[
             'To provide a safe space for juniors to learn how to communicate in a simulated professional environment.',
             'To offer more detailed tasks (Issues) and help the developer assimilate the logical mindset required in a structured project, under guidance following the industry’s best practices throughout the entire process.',
