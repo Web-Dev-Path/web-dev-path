@@ -9,9 +9,12 @@ export default function Card({
   content,
   link,
   linkText,
+  customClass,
 }) {
   return (
-    <div className={styles.card}>
+    <div
+      className={customClass ? `${styles.card} ${customClass}` : styles.card}
+    >
       {image && (
         <div className={styles.card__image}>
           <Image

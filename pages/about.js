@@ -102,7 +102,7 @@ export default function AboutUs() {
             'To offer more detailed tasks (Issues) and help the developer assimilate the logical mindset required in a structured project, under guidance following the industry’s best practices throughout the entire process.',
           ]}
           bgColor={primaryAccent}
-          customInnerClass='our-goals'
+          customClass='our-goals'
         />
       </RevealContentContainer>
       <RevealContentContainer>
