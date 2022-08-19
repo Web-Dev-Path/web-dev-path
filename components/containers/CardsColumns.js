@@ -31,8 +31,8 @@ export default function CardsColumns({
             spaceBetween: 20,
           },
           1334: {
-            slidesPerView: 3,
-            spaceBetween: 20,
+            slidesPerView: titles.length <= 3 ? titles.length : 3,
+            spaceBetween: titles.length < 3 ? 75 : 20,
           },
         }}
       >
@@ -50,11 +50,7 @@ export default function CardsColumns({
                   key={index}
                 />
               ) : (
-                <Card
-                  title={title}
-                  content={content[index]}
-                  key={index}
-                />
+                <Card title={title} content={content[index]} key={index} />
               )}
             </div>
           </SwiperSlide>
