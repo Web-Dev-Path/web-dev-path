@@ -13,7 +13,9 @@ export default function Card({
 }) {
   return (
     <div
-      className={customClass ? `${styles.card} ${customClass}` : styles.card}
+      className={
+        customClass ? `${styles.card} ${styles[customClass]}` : styles.card
+      }
     >
       {image && (
         <div className={styles.card__image}>

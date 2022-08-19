@@ -2,19 +2,18 @@
 @use './mixins' as *;
 
 .card {
-  margin: 1rem 1rem 0 .5rem;
+  margin: 1rem 1rem 0 0.5rem;
   padding: 1.5rem;
   border-radius: 1.5rem;
   box-shadow: $box-shadow;
   min-width: 32%;
   height: 37rem;
-  background-color: $primary-accent-color;
 
   @include desktop {
     margin: 1.5rem 1.5rem 0 1.5rem;
     &:first-child,
     &:last-child {
-      margin: 1.5rem .5rem 0 .5rem;
+      margin: 1.5rem 0.5rem 0 0.5rem;
     }
   }
 
@@ -53,6 +52,31 @@
 
     .img {
       border-radius: 0.25rem;
+    }
+  }
+
+  //About Us
+  &.our-goals {
+    background-color: $primary-accent-color;
+    max-height: 30rem;
+
+    .title {
+      font-size: 3.5rem;
+      text-align: center;
+    }
+
+    @include desktop {
+      max-height: 37rem;
+      .title {
+        font-size: 5rem;
+      }
+
+      .content {
+        p {
+          font-size: 1.8rem;
+          line-height: 2.2rem;
+        }
+      }
     }
   }
 }

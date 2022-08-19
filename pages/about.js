@@ -99,9 +99,8 @@ export default function AboutUs() {
           titles={['1', '2']}
           content={[
             'To provide a safe space for juniors to learn how to communicate in a simulated professional environment.',
-            'To offer more detailed tasks (Issues) and help the developer assimilate the logical mindset required in a structured project, under guidance following the industry’s best practices throughout the entire process.',
+            'To offer more detailed tasks (GitHub issues) and help the developer assimilate the logical mindset required in a structured project, under guidance following the industry’s best practices throughout the entire process.',
           ]}
-          bgColor={primaryAccent}
           customClass='our-goals'
         />
       </RevealContentContainer>
@@ -110,7 +109,7 @@ export default function AboutUs() {
           title='Our purpose'
           content={
             <div>
-              To do so, we’re coding this platform in Next.js. In the short
+              To do so, we're coding this platform in Next.js. In the short
               term, we intend to have a blog where the participants can post
               anything related to the web development world.
               <br />
