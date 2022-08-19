@@ -39,15 +39,25 @@ export default function CardsColumns({
         {titles.map((title, index) => (
           <SwiperSlide key={index} className={styles.swiperSlide}>
             <div className={styles.inner__content}>
-              <Card
-                title={title}
-                image={images?images[index]:undefined}
-                altTag={altTags?altTags[index]:undefined}
-                content={content[index]}
-                link={links[index]}
-                linkText={linkText[index]}
-                key={index}
-              />
+              {images ? (
+                <Card
+                  title={title}
+                  image={images[index]}
+                  altTag={altTags[index]}
+                  content={content[index]}
+                  link={links[index]}
+                  linkText={linkText[index]}
+                  key={index}
+                />
+              ) : (
+                <Card
+                  title={title}
+                  content={content[index]}
+                  link={links[index]}
+                  linkText={linkText[index]}
+                  key={index}
+                />
+              )}
             </div>
           </SwiperSlide>
         ))}
