@@ -8,6 +8,10 @@
   box-shadow: $box-shadow;
   min-width: 32%;
   height: 37rem;
+  
+  @include tablet {
+    height: 40rem;
+  }
 
   @include desktop {
     margin: 1.5rem 1.5rem 0 1.5rem;

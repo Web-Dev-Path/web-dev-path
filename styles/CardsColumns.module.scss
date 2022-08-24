@@ -13,11 +13,14 @@
 
 .swiper {
   margin-bottom: 5rem;
+  padding: 0 1rem;
 
   :global(.swiper-pagination-bullet-active) {
     background-color: $dark-bg-color;
   }
 
 }
+
+
 
 
