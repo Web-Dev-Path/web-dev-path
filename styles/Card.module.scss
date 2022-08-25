@@ -8,12 +8,17 @@
   box-shadow: $box-shadow;
   min-width: 32%;
   height: 37rem;
-  
+
+  @include small-mobile {
+    height: 42rem;
+  }
+
   @include tablet {
-    height: 40rem;
+    height: 42rem;
   }
 
   @include desktop {
+    height: 37rem;
     margin: 1.5rem 1.5rem 0 1.5rem;
     &:first-child,
     &:last-child {
@@ -62,7 +67,7 @@
   //About Us
   &.our-goals {
     background-color: $primary-accent-color;
-    max-height: 30rem;
+    max-height: 35rem;
 
     .title {
       font-size: 3.5rem;
