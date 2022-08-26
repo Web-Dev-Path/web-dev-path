@@ -20,8 +20,8 @@ export const heroOptions = {
     imgAlt: 'Contact Us',
     title: 'Contact Us',
     titleClass: 'accent-title',
-    content:
-      'We help junior tech professionals, such as developers and designers, to grow.',
+    content: `We'd like to hear from you!
+      Send us your questions and we'll get back to you as soon as possible.`,
   },
   '/blog': {
     imgBg: '/images/about-us-bg.webp',
