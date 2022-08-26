@@ -58,3 +58,4 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - improved LightHouse scores by optmizing images, creating a robots.txt file and adding proper alt tags
 - updated 'about us' first section (our background, peer reviews, version control)
 - updated 'about us' section (our goals, our purpose)
+- updated mobile nav to automatically close when page route change is completed
