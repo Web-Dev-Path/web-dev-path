@@ -40,7 +40,7 @@ export default function Nav() {
   }, []);
 
   useEffect(() => {
-    const handleRouteChange = (url, _) => {
+    const handleRouteChange = () => {
       setActive(false)
     }
 
