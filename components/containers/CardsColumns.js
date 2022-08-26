@@ -14,6 +14,7 @@ export default function CardsColumns({
   content,
   links,
   linkText,
+  customClass,
 }) {
   return (
     <Container>
@@ -31,23 +32,33 @@ export default function CardsColumns({
             spaceBetween: 20,
           },
           1334: {
-            slidesPerView: 3,
-            spaceBetween: 20,
+            slidesPerView: titles.length,
+            spaceBetween: titles.length < 3 ? 75 : 20,
           },
         }}
       >
         {titles.map((title, index) => (
           <SwiperSlide key={index} className={styles.swiperSlide}>
             <div className={styles.inner__content}>
-              <Card
-                title={title}
-                image={images[index]}
-                altTag={altTags[index]}
-                content={content[index]}
-                link={links[index]}
-                linkText={linkText[index]}
-                key={index}
-              />
+              {images && links && linkText ? (
+                <Card
+                  key={index}
+                  title={title}
+                  image={images[index]}
+                  altTag={altTags[index]}
+                  content={content[index]}
+                  link={links[index]}
+                  linkText={linkText[index]}
+                  customClass={customClass}
+                />
+              ) : (
+                <Card
+                  key={index}
+                  title={title}
+                  content={content[index]}
+                  customClass={customClass}
+                />
+              )}
             </div>
           </SwiperSlide>
         ))}

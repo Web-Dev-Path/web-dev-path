@@ -99,6 +99,20 @@
       }
     }
 
+    &.our-purpose {
+      .inner__image {
+        height: 10rem;
+
+        @include desktop {
+          height: 22rem;
+        }
+
+        .img {
+          object-fit: contain;
+        }
+      }
+    }
+
     @include desktop {
       display: flex;
       align-items: center;

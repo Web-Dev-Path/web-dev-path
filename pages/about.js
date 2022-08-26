@@ -1,6 +1,9 @@
 import RevealContentContainer from '@/components/containers/RevealContentContainer';
 import TwoColumn from '@/components/containers/TwoColumn';
 import { white, primary, primaryAccent } from '@/styles/TwoColumn.module.scss';
+import CardsColumns from '@/components/containers/CardsColumns';
+import Title from '@/components/snippets/Title';
+import Container from '@/components/containers/Container';
 
 export default function AboutUs() {
   return (
@@ -86,6 +89,42 @@ export default function AboutUs() {
           color={primary}
           bgColor={white}
           customInnerClass='about-content'
+        />
+      </RevealContentContainer>
+      <RevealContentContainer>
+        <Container>
+          <Title title='Our goals' />
+        </Container>
+        <CardsColumns
+          titles={['1', '2']}
+          content={[
+            'To provide a safe space for juniors to learn how to communicate in a simulated professional environment.',
+            'To offer more detailed tasks (GitHub issues) and help the developer assimilate the logical mindset required in a structured project, under guidance following the industry’s best practices throughout the entire process.',
+          ]}
+          customClass='our-goals'
+        />
+      </RevealContentContainer>
+      <RevealContentContainer>
+        <TwoColumn
+          title='Our purpose'
+          content={
+            <div>
+              To do so, we're coding this platform in Next.js. In the short
+              term, we intend to have a blog where the participants can post
+              anything related to the web development world.
+              <br />
+              <br />
+              The ultimate purpose though is to make this platform a portal
+              where Non-Profit Organizations can find support for their web
+              products. That way, new graduates can gain some experience while
+              helping a good cause.
+            </div>
+          }
+          rowOrder='row-reverse'
+          image='/images/svg/semi-colon.svg'
+          color={primary}
+          bgColor={white}
+          customInnerClass='our-purpose'
         />
       </RevealContentContainer>
     </div>

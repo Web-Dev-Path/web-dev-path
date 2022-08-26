@@ -50,3 +50,9 @@
     @content;
   }
 }
+
+@mixin small-mobile {
+  @media (max-width: $sm-mobile-breakpoint) {
+    @content;
+  }
+}

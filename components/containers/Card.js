@@ -9,22 +9,30 @@ export default function Card({
   content,
   link,
   linkText,
+  customClass,
 }) {
   return (
-    <div className={styles.card}>
-      <div className={styles.card__image}>
-        <Image
-          src={image}
-          alt={altTag}
-          className={styles.img}
-          layout='fill'
-          objectFit='cover'
-        />
-      </div>
+    <div
+      className={
+        customClass ? `${styles.card} ${styles[customClass]}` : styles.card
+      }
+    >
+      {image && (
+        <div className={styles.card__image}>
+          <Image
+            src={image}
+            alt={altTag}
+            className={styles.img}
+            layout='fill'
+            objectFit='cover'
+          />
+        </div>
+      )}
+
       <h2 className={styles.title}>{title}</h2>
       <div className={styles.content}>
         <p>
-          {content} <Link href={link}>{linkText}</Link>
+          {content} {link && <Link href={link}>{linkText}</Link>}
         </p>
       </div>
     </div>
