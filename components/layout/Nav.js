@@ -39,6 +39,19 @@ export default function Nav() {
     };
   }, []);
 
+  useEffect(() => {
+    const handleRouteChange = (url, _) => {
+      setActive(false)
+    }
+
+    router.events.on('routeChangeStart', handleRouteChange)
+
+    return () => {
+      router.events.off('routeChangeStart', handleRouteChange)
+    }
+  }, []);
+
+
   return (
     <header className={styles.header} ref={headerRef}>
       <Container>
