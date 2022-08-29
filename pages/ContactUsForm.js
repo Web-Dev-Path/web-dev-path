@@ -1,5 +1,6 @@
 import { useForm } from 'react-hook-form';
-// import contactUsFormStyles from '@/styles/Contact.module.scss';
+import Container from '@/components/containers/Container';
+import contactUsFormStyles from '@/styles/Contact.module.scss';
 // import ButtonLink from '@/components/buttons/ButtonLink';
 
 export default function ContactUsForm() {
@@ -7,38 +8,61 @@ export default function ContactUsForm() {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm();
+  } = useForm({
+    defaultValues: {
+      Name: '',
+      Email: '',
+      Subject: '',
+      Message: '',
+    },
+  });
   const onSubmit = data => console.log(data);
   console.log(errors);
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <input
-        type='text'
-        placeholder='name'
-        {...register('Name', { required: true, maxLength: 80 })}
-      />
-      <input
-        type='email'
-        placeholder='email'
-        {...register('Email', { required: true, pattern: /^\S+@\S+$/i })}
-      />
-      <input
-        type='text'
-        placeholder='Subject'
-        {...register('Subject', { required: true })}
-      />
-      <textarea {...register('Write your message here', { required: true })} placeholder='Write your message here' />
-      <input
-        type='checkbox'
-        placeholder='Subscribe to our DevNews!'
-        {...register('Subscribe', {})}
-      />
+    <section className={contactUsFormStyles.contact}>
+        <Container>
+      <form onSubmit={handleSubmit(onSubmit)} className={contactUsFormStyles.contact__form}>
+        <input
+          type='text'
+          placeholder='name'
+          {...register('Name', { required: 'This is required', maxLength: 80 })}
+          className={`${contactUsFormStyles.contact__input} ${contactUsFormStyles.contact__name}`}
+        />
+        <p>{errors.Name?.message}</p>
+        <input
+          type='email'
+          placeholder='email'
+          {...register('Email', {
+            required: 'This is required',
+            pattern: /^\S+@\S+$/i,
+          })}
+          className={`${contactUsFormStyles.contact__input} ${contactUsFormStyles.contact__email}`}
+        />
+        <p>{errors.Email?.message}</p>
+        <input
+          type='text'
+          placeholder='subject'
+          {...register('Subject', { required: 'This is required' })}
+          className={`${contactUsFormStyles.contact__input} ${contactUsFormStyles.contact__subject}`}
+        />
+        <p>{errors.Subject?.message}</p>
+        <textarea
+          {...register('Message', { required: 'This is required' })}
+          placeholder='Write your message here'
+          className={`${contactUsFormStyles.contact__input} ${contactUsFormStyles.contact__message}`}
+        />
+        <p>{errors.Message?.message}</p>
+        <input
+          type='checkbox'
+          placeholder='Subscribe to our DevNews!'
+          {...register('Subscribe', {})}
+        />
         Subscribe to our DevNews!
-    
-
-      <input type='submit' />
-    </form>
+        <input type='submit' />
+      </form>
+      </Container>
+    </section>
   );
 }
 
