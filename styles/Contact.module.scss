@@ -21,10 +21,13 @@
         border: 1px solid $dark-bg-color;
         max-width: 100%;
         width: 24rem;
+
+        @include small-mobile {
+            width: 100%;
+        }
     
         @include large-desktop {
           font-size: 1.5rem;
-        //   margin: -10px auto;
           height: 3rem;
           border-radius: 3rem;
           max-width: 25rem;
@@ -42,13 +45,9 @@
       &__message {
         font-family: inherit;
         height: 13rem;
-        border-radius: 1.5rem;
+        border-radius: 1rem;
 
         @include desktop {
-            border-radius: 1.5rem;
-        }
-
-        @include large-desktop {
             border-radius: 1.5rem;
         }
       }
