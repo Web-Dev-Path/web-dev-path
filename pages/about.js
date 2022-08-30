@@ -132,10 +132,10 @@ export default function AboutUs() {
           title='Wanna learn more?'
           content={''}
           rowOrder='row'
-          image='/images/svg/semi-colon.svg'
+          image='/images/svg/close-curly-bracket.svg'
           color={primary}
           bgColor={lightBgColor}
-          customInnerClass='our-purpose'
+          customInnerClass='wanna-learn-more'
         />
         <TwoColumn
           title={<div>Junior <br/> Developers</div>}
@@ -147,7 +147,7 @@ export default function AboutUs() {
             'PR while guided throughout the entire process.\n'
         }
           rowOrder='row'
-          linkText='Our Wiki'
+          linkText='Our wiki'
           link='https://github.com/Web-Dev-Path/web-dev-path/wiki'
           customBtnClass='inverted-grey'
           color={primary}
@@ -155,16 +155,16 @@ export default function AboutUs() {
           customInnerClass='two-text-columns'
           secondTextColumn=
             <TwoColumn
-              title='Experienced Developers'
+              title={<div>Experienced <br/> Developers</div>}
               content={'If you are an experienced and patient-loving developer, ' +
                 'a true rockstar who wants to mentor juniors, ' +
                 'it will be wonderful to have your help to review those PR\'s, ' +
                 'write detailed issues and guide the developers when necessary.\n'
             }
               rowOrder='row'
-              linkText='Our Wiki'
-              link='https://github.com/Web-Dev-Path/web-dev-path/wiki'
-          customBtnClass='inverted-grey'
+              linkText='Contact us'
+              link='/contact'
+              customBtnClass='inverted-grey'
               color={primary}
               bgColor={lightBgColor}
               customInnerClass='second-text-column'

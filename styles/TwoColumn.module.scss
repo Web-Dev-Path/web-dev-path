@@ -3,6 +3,7 @@
 
 .wrapper {
   align-self: stretch;
+
   .inner {
     padding: 5rem 0;
     margin: 0 auto;
@@ -21,6 +22,7 @@
         color: $primary-content-color;
         margin: 0;
       }
+
       .content {
         display: flex;
         align-items: center;
@@ -28,6 +30,7 @@
         max-width: 39rem;
         font-size: 1.5rem;
         line-height: 1.938rem;
+
         a {
           text-decoration: underline;
           text-underline-offset: 2px;
@@ -114,47 +117,81 @@
       }
     }
 
-    &.two-text-columns {
-      justify-content: center;
-      gap: 170px;
-
-
-      .inner{
-        padding: 0px;
-        margin: 0px;
-
+    &.wanna-learn-more {
+      .content {
+        margin: 0;
       }
 
       .inner__content{
+        flex-basis: 70%;
+      }
+
+      .inner__image {
+        height: 10rem;
+        flex-basis: 30%;
+
+        @include desktop {
+          height: 20rem;
+        }
+
+        .img {
+          object-fit: contain;
+        }
+      }
+    }
+
+    &.two-text-columns {
+      justify-content: center;
+      gap: 5rem;
+
+      .inner {
+        padding: 0px;
+        margin: 0px;
+      }
+
+      .inner__content {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        justify-content: stretch;
       }
 
-      h2{
+      h2 {
         font-size: 2rem;
         line-height: 2.5rem;
       }
 
-      .inner__content{
-        width: 400px;
-        flex-basis: unset;
+      .inner{
+        margin: 0px;
+        padding: 0px;
       }
 
-      a{
+      .inner__content {
+        flex-basis: unset;
+
+        @include desktop {
+          width: 400px;
+        }
+      }
+
+      a {
         margin-top: auto;
+        color: $light-bg-color;
+      }
+
+      a:hover {
+        color: $primary-content-color;
       }
     }
 
     &.second-text-column {
       height: 100%;
-      .inner{
+      width: 100%;
 
+      .inner {
         height: 100%;
       }
 
-      .inner__content{
+      .inner__content {
         height: 100%;
       }
     }
