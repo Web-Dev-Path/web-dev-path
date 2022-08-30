@@ -2,6 +2,7 @@
 @use './mixins' as *;
 
 .wrapper {
+  align-self: stretch;
   .inner {
     padding: 5rem 0;
     margin: 0 auto;
@@ -110,6 +111,51 @@
         .img {
           object-fit: contain;
         }
+      }
+    }
+
+    &.two-text-columns {
+      justify-content: center;
+      gap: 170px;
+
+
+      .inner{
+        padding: 0px;
+        margin: 0px;
+
+      }
+
+      .inner__content{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: stretch;
+      }
+
+      h2{
+        font-size: 2rem;
+        line-height: 2.5rem;
+      }
+
+      .inner__content{
+        width: 400px;
+        flex-basis: unset;
+      }
+
+      a{
+        margin-top: auto;
+      }
+    }
+
+    &.second-text-column {
+      height: 100%;
+      .inner{
+
+        height: 100%;
+      }
+
+      .inner__content{
+        height: 100%;
       }
     }
 

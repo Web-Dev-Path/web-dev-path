@@ -15,6 +15,7 @@ export default function TwoColumn({
   customInnerClass,
   customBtnClass,
   linkText = 'Learn more',
+  secondTextColumn
 }) {
   // Add rowOrder="row-reverse" prop to the component to reverse its order on desktop
 
@@ -48,7 +49,8 @@ export default function TwoColumn({
             </ButtonLink>
           )}
         </div>
-        {image && (
+        {secondTextColumn && secondTextColumn}
+        {!secondTextColumn && image && (
           <div className={styles.inner__image}>
             <Image
               src={image}
