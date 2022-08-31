@@ -59,7 +59,7 @@ export default function ContactUsForm() {
           {...register('Subscribe', {})}
         />
         Subscribe to our DevNews!
-        <input type='submit' />
+        <button className={contactUsFormStyles.contact__button} type='submit' href='/'>Submit</button>
       </form>
       </Container>
     </section>
