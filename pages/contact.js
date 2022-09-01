@@ -1,9 +1,11 @@
 import ContactUsForm from "./ContactUsForm"
+import Container from "@/components/containers/Container";
+import contactUsFormStyles from "@/styles/Contact.module.scss"
 
 export default function ContactUs() {
   return (
-    <div className='contact-us'>
-      <ContactUsForm />
-    </div>
+  <section className={contactUsFormStyles.contact}>
+    <ContactUsForm />
+  </section>
   );
 }

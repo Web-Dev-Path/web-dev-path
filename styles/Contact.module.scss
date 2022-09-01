@@ -2,7 +2,7 @@
 @use './variables' as *;
 
 .contact {
-  // background-color: $light-bg-color;
+  background-color: $light-bg-color;
 
   &__form {
     @include desktop {

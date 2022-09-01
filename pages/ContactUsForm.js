@@ -20,7 +20,6 @@ export default function ContactUsForm() {
   console.log(errors);
 
   return (
-    <section className={contactUsFormStyles.contact}>
       <Container>
         <form
           onSubmit={handleSubmit(onSubmit)}
@@ -78,7 +77,6 @@ export default function ContactUsForm() {
           </button>
         </form>
       </Container>
-    </section>
   );
 }
 
