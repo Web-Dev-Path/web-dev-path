@@ -3,8 +3,10 @@ import contactUsFormStyles from "@/styles/Contact.module.scss"
 
 export default function ContactUs() {
   return (
-  <section className={contactUsFormStyles.contact}>
+  <div className={contactUsFormStyles.contact}>
+    <img src='/images/svg/yellow-bracket.svg' />
     <ContactUsForm />
-  </section>
+    <img src='/images/svg/yellow-colon.svg' />
+  </div>
   );
 }

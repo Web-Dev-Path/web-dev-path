@@ -3,6 +3,13 @@
 
 .contact {
   background-color: $light-bg-color;
+  display: flex;
+
+  @include mobile {
+    img {
+      display: none;
+    }
+  }
 
   &__form {
     padding: 2rem 0;
