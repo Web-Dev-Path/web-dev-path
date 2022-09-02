@@ -3,7 +3,7 @@
 
 .contact {
   background-color: $light-bg-color;
-  display: flex;
+  position: relative;
 
   @include mobile {
     img {
@@ -19,6 +19,11 @@
       flex-direction: column;
       max-width: 100%;
       width: 26rem;
+
+      position: absolute;
+      bottom: 70px;
+      right: 234px;
+      z-index: 11;
     }
   }
 
@@ -104,3 +109,14 @@
     }
   }
 }
+
+// .formAndDecorations {
+//   display: flex;
+
+//   @include desktop {
+//     position: absolute;
+//     bottom: 90px;
+//   right: 0;
+//   border: 1px solid magenta;
+//   }
+// }
