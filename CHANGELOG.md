@@ -46,6 +46,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Made the site a Progressive Web App (PWA)
 - About page content (first section)
+- .prettierignore file
+- husky, lint-staged to auto format with prettier on git commit
+- lint and format script to run prettier check and write on all files respectively
+
 
 ### Fixed
 
@@ -59,3 +63,4 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - updated 'about us' first section (our background, peer reviews, version control)
 - updated 'about us' section (our goals, our purpose)
 - updated mobile nav to automatically close when page route change is completed
+- prettierrc "end of line" to auto
