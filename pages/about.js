@@ -136,18 +136,13 @@ export default function AboutUs() {
         <TwoColumn
           title='Wanna learn more?'
           content={''}
-          rowOrder='row'
           image='/images/svg/close-curly-bracket.svg'
           color={primary}
           bgColor={lightBgColor}
           customInnerClass='wanna-learn-more'
         />
         <TwoColumn
-          title={
-            <div>
-              Junior <br /> Developers
-            </div>
-          }
+          title={<div>Junior Developers</div>}
           content={
             'If you are a junior web developer looking for some guidance and mentoring, ' +
             'we invite you to join us and start coding our platform. ' +
@@ -155,8 +150,8 @@ export default function AboutUs() {
             'instructions and submitting your code to our repository through a ' +
             'PR while guided throughout the entire process.\n'
           }
-          rowOrder='row'
           linkText='Our wiki'
+          openNewTab
           link='https://github.com/Web-Dev-Path/web-dev-path/wiki'
           customBtnClass='inverted-grey'
           color={primary}
@@ -164,18 +159,13 @@ export default function AboutUs() {
           customInnerClass='two-text-columns'
           secondTextColumn={
             <TwoColumn
-              title={
-                <div>
-                  Experienced <br /> Developers
-                </div>
-              }
+              title={<div>Experienced Developers</div>}
               content={
                 'If you are an experienced and patient-loving developer, ' +
                 'a true rockstar who wants to mentor juniors, ' +
                 "it will be wonderful to have your help to review those PR's, " +
                 'write detailed issues and guide the developers when necessary.\n'
               }
-              rowOrder='row'
               linkText='Contact us'
               link='/contact'
               customBtnClass='inverted-grey'

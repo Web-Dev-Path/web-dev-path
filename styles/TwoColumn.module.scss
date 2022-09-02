@@ -122,7 +122,7 @@
         margin: 0;
       }
 
-      .inner__content{
+      .inner__content {
         flex-basis: 70%;
       }
 
@@ -141,8 +141,7 @@
     }
 
     &.two-text-columns {
-      justify-content: center;
-      gap: 170px;
+      justify-content: space-evenly;
 
       .inner {
         padding: 0px;
@@ -160,7 +159,7 @@
         line-height: 2.5rem;
       }
 
-      .inner{
+      .inner {
         margin: 0px;
         padding: 0px;
       }
@@ -169,7 +168,7 @@
         flex-basis: unset;
 
         @include desktop {
-          width: 400px;
+          width: 25rem;
         }
       }
 

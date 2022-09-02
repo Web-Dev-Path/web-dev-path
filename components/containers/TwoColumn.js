@@ -15,7 +15,8 @@ export default function TwoColumn({
   customInnerClass,
   customBtnClass,
   linkText = 'Learn more',
-  secondTextColumn
+  secondTextColumn,
+  openNewTab,
 }) {
   // Add rowOrder="row-reverse" prop to the component to reverse its order on desktop
 
@@ -44,7 +45,11 @@ export default function TwoColumn({
           )}
           <div className={styles.content}>{content}</div>
           {link && (
-            <ButtonLink link={link} customClassName={customBtnClass}>
+            <ButtonLink
+              link={link}
+              customClassName={customBtnClass}
+              openNewTab={openNewTab}
+            >
               {linkText}
             </ButtonLink>
           )}
@@ -57,7 +62,6 @@ export default function TwoColumn({
               alt={altTag}
               className={styles.img}
               layout='fill'
-              priority
             />
           </div>
         )}
