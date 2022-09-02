@@ -3,7 +3,34 @@
 
 .contact {
   background-color: $light-bg-color;
+  height: 36rem;
   position: relative;
+
+  &__formAndDecorations {
+    display: flex;
+    flex-direction: row;
+    @include desktop {
+      position: absolute;
+      bottom: 210px;
+      right: 93px;
+      z-index: 11;
+    }
+  }
+
+  &__yellowBracket {
+    @include desktop {
+      position: absolute;
+      // top: 10px;
+      top: 40%;
+      right: 650px;
+      // margin-right: 145px;
+    }
+  }
+
+  &__yellowColon {
+    // position: absolute;
+    top: 70%;
+  }
 
   @include mobile {
     img {
@@ -19,11 +46,12 @@
       flex-direction: column;
       max-width: 100%;
       width: 26rem;
+      margin-right: 106px;
 
-      position: absolute;
-      bottom: 70px;
-      right: 234px;
-      z-index: 11;
+      // position: absolute;
+      // bottom: 70px;
+      // right: 234px;
+      // z-index: 11;
     }
   }
 
@@ -109,14 +137,3 @@
     }
   }
 }
-
-// .formAndDecorations {
-//   display: flex;
-
-//   @include desktop {
-//     position: absolute;
-//     bottom: 90px;
-//   right: 0;
-//   border: 1px solid magenta;
-//   }
-// }
