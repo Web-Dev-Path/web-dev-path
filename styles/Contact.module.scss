@@ -9,27 +9,45 @@
   &__formAndDecorations {
     display: flex;
     flex-direction: row;
-    @include desktop {
+    @include tablet {
       position: absolute;
-      bottom: 210px;
-      right: 93px;
+      bottom: 48%;
+      right: 4%;
       z-index: 11;
+    }
+
+    @include desktop {
+      bottom: 42%;
+      right: 8%;
     }
   }
 
   &__yellowBracket {
-    @include desktop {
+
+    @include tablet {
       position: absolute;
-      // top: 10px;
-      top: 40%;
-      right: 650px;
-      // margin-right: 145px;
+      top: 28%;
+      right: 120%;
+      width: 8rem;
+    }
+
+    @include desktop {
+      top: 30%;
+      right: 130%;
     }
   }
 
   &__yellowColon {
-    // position: absolute;
-    top: 70%;
+
+    @include tablet {
+      position: absolute;
+      top: -10%;
+      right: -5%;
+    }
+
+    @include desktop {
+      right: -15%;
+    }
   }
 
   @include mobile {
@@ -46,7 +64,7 @@
       flex-direction: column;
       max-width: 100%;
       width: 26rem;
-      margin-right: 106px;
+      // margin-right: 106px;
 
       // position: absolute;
       // bottom: 70px;
