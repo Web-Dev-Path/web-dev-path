@@ -89,8 +89,17 @@
     }
 
     &.about-content {
+      .content{
+        max-width: 49rem;
+      }
+
+      .inner__content{
+        flex-basis: 65%;
+      }
+
       .inner__image {
         height: 10rem;
+        flex-basis: 25%;
 
         @include desktop {
           height: 15rem;
@@ -104,8 +113,13 @@
     }
 
     &.our-purpose {
+      .inner__content{
+        flex-basis: 65%;
+      }
+
       .inner__image {
         height: 10rem;
+        flex-basis: 25%;
 
         @include desktop {
           height: 22rem;

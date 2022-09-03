@@ -176,6 +176,22 @@ export default function AboutUs() {
           }
         />
       </RevealContentContainer>
+      <RevealContentContainer>
+        <TwoColumn
+          title='How to get started?'
+          content={
+            <div>
+              Just reach out on Slack and introduce yourself in our #general channel! There is where we get together. Once on our channel, someone will help you out.
+              We've got you!
+            </div>
+          }
+          rowOrder='row-reverse'
+          image='/images/svg/slash.svg'
+          color={primary}
+          bgColor={white}
+          customInnerClass='about-content'
+        />
+      </RevealContentContainer>
     </div>
   );
 }
