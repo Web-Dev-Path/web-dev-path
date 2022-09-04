@@ -3,7 +3,7 @@
 
 .contact {
   background-color: $light-bg-color;
-  height: 36rem;
+  height: 42rem;
   position: relative;
 
   &__formAndDecorations {
@@ -23,6 +23,10 @@
   }
 
   &__yellowBracket {
+    // display: flex;
+    // flex-direction: row-reverse;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
 
     @include tablet {
       position: absolute;
@@ -54,6 +58,9 @@
     img {
       display: none;
     }
+    &__yellowBracket {
+      display: none;
+    }
   }
 
   &__form {
@@ -68,7 +75,7 @@
   }
 
   &__errorMessage {
-    color: $primary-accent-color;
+    color: white;
     margin: 0.1rem 0 1rem;
     font-size: 1.2rem;
     height: 1.5rem;
