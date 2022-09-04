@@ -8,6 +8,7 @@ export default function ContactUsForm() {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm({
     defaultValues: {
@@ -20,6 +21,7 @@ export default function ContactUsForm() {
 
   function onSubmit(data) {
     console.log(data);
+    reset();
   }
 
   console.info('these are errors;', errors);
