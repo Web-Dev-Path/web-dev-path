@@ -9,6 +9,7 @@
   &__formAndDecorations {
     display: flex;
     flex-direction: row;
+
     @include tablet {
       position: absolute;
       bottom: 48%;
@@ -17,14 +18,12 @@
     }
 
     @include desktop {
-      bottom: 42%;
+      bottom: 52%;
       right: 8%;
     }
   }
 
   &__yellowBracket {
-    // display: flex;
-    // flex-direction: row-reverse;
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
 
