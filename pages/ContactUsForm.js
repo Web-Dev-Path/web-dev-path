@@ -17,7 +17,11 @@ export default function ContactUsForm() {
       Message: '',
     },
   });
-  const onSubmit = data => console.log(data);
+  
+  function onSubmit(data) {
+    console.log(data);
+  }
+
   console.log(errors);
 
   return (
@@ -31,35 +35,35 @@ export default function ContactUsForm() {
             type='text'
             placeholder='name'
             {...register('Name', {
-              required: 'This is required',
+              required: true,
               maxLength: 80,
             })}
             className={`${contactUsFormStyles.contact__input} ${contactUsFormStyles.contact__name}`}
           />
-          <p>{errors.Name?.message}</p>
+          <p className={contactUsFormStyles.contact__errorMessage}>{errors.Name?.type === 'required' && "Name is required"}</p>
           <input
             type='email'
             placeholder='email'
             {...register('Email', {
-              required: 'This is required',
+              required: true,
               pattern: /^\S+@\S+$/i,
             })}
             className={`${contactUsFormStyles.contact__input} ${contactUsFormStyles.contact__email}`}
           />
-          <p>{errors.Email?.message}</p>
+          <p className={contactUsFormStyles.contact__errorMessage}>{errors.Email?.type === 'required' && "Email is required"}</p>
           <input
             type='text'
             placeholder='subject'
-            {...register('Subject', { required: 'This is required' })}
+            {...register('Subject', { required: true })}
             className={`${contactUsFormStyles.contact__input} ${contactUsFormStyles.contact__subject}`}
           />
-          <p>{errors.Subject?.message}</p>
+          <p className={contactUsFormStyles.contact__errorMessage}>{errors.Subject?.type === 'required' && "Subject is required"}</p>
           <textarea
-            {...register('Message', { required: 'This is required' })}
+            {...register('Message', { required: true })}
             placeholder='Write your message here'
             className={`${contactUsFormStyles.contact__input} ${contactUsFormStyles.contact__message}`}
           />
-          <p>{errors.Message?.message}</p>
+          <p className={contactUsFormStyles.contact__errorMessage}>{errors.Message?.type === 'required' && "Message is required"}</p>
           <div className={contactUsFormStyles.contact__subscribe}>
             <input
               className={contactUsFormStyles.contact__subscribeInput}
