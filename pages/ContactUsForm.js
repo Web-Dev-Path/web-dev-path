@@ -1,6 +1,7 @@
 import { useForm } from 'react-hook-form';
 import Container from '@/components/containers/Container';
 import contactUsFormStyles from '@/styles/Contact.module.scss';
+import RevealContentContainer from '@/components/containers/RevealContentContainer';
 // import ButtonLink from '@/components/buttons/ButtonLink';
 
 export default function ContactUsForm() {
@@ -20,6 +21,7 @@ export default function ContactUsForm() {
   console.log(errors);
 
   return (
+    <RevealContentContainer>
       <Container>
         <form
           onSubmit={handleSubmit(onSubmit)}
@@ -77,6 +79,7 @@ export default function ContactUsForm() {
           </button>
         </form>
       </Container>
+    </RevealContentContainer>
   );
 }
 
