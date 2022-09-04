@@ -17,12 +17,12 @@ export default function ContactUsForm() {
       Message: '',
     },
   });
-  
+
   function onSubmit(data) {
     console.log(data);
   }
 
-  console.log(errors);
+  console.info('these are errors;', errors);
 
   return (
     <RevealContentContainer>
@@ -36,11 +36,22 @@ export default function ContactUsForm() {
             placeholder='name'
             {...register('Name', {
               required: true,
+              minLength: 2,
               maxLength: 80,
+              //no white space pattern
+              pattern: /[^\s-]/i,
             })}
             className={`${contactUsFormStyles.contact__input} ${contactUsFormStyles.contact__name}`}
           />
-          <p className={contactUsFormStyles.contact__errorMessage}>{errors.Name?.type === 'required' && "Name is required"}</p>
+          <p className={contactUsFormStyles.contact__errorMessage}>
+            {errors.Name?.type === 'required'
+              ? 'Name is required'
+              : errors.Name?.type === 'pattern'
+              ? 'No whitespace'
+              : errors.Name?.type === 'minLength'
+              ? 'Must be more than 1 character'
+              : undefined}
+          </p>
           <input
             type='email'
             placeholder='email'
@@ -50,20 +61,46 @@ export default function ContactUsForm() {
             })}
             className={`${contactUsFormStyles.contact__input} ${contactUsFormStyles.contact__email}`}
           />
-          <p className={contactUsFormStyles.contact__errorMessage}>{errors.Email?.type === 'required' && "Email is required"}</p>
+          <p className={contactUsFormStyles.contact__errorMessage}>
+            {errors.Email?.type === 'required' && 'Email is required'}
+          </p>
           <input
             type='text'
             placeholder='subject'
-            {...register('Subject', { required: true })}
+            {...register('Subject', {
+              required: true,
+              minLength: 2,
+              pattern: /[^\s-]/i,
+            })}
             className={`${contactUsFormStyles.contact__input} ${contactUsFormStyles.contact__subject}`}
           />
-          <p className={contactUsFormStyles.contact__errorMessage}>{errors.Subject?.type === 'required' && "Subject is required"}</p>
+          <p className={contactUsFormStyles.contact__errorMessage}>
+            {errors.Subject?.type === 'required'
+              ? 'Subject is required'
+              : errors.Subject?.type === 'pattern'
+              ? 'No whitespace'
+              : errors.Subject?.type === 'minLength'
+              ? 'Must be more than 1 character'
+              : undefined}
+          </p>
           <textarea
-            {...register('Message', { required: true })}
+            {...register('Message', {
+              required: true,
+              minLength: 2,
+              pattern: /[^\s-]/i,
+            })}
             placeholder='Write your message here'
             className={`${contactUsFormStyles.contact__input} ${contactUsFormStyles.contact__message}`}
           />
-          <p className={contactUsFormStyles.contact__errorMessage}>{errors.Message?.type === 'required' && "Message is required"}</p>
+          <p className={contactUsFormStyles.contact__errorMessage}>
+            {errors.Message?.type === 'required'
+              ? 'Message is required'
+              : errors.Message?.type === 'pattern'
+              ? 'No whitespace'
+              : errors.Message?.type === 'minLength'
+              ? 'Must be more than 1 character'
+              : undefined}
+          </p>
           <div className={contactUsFormStyles.contact__subscribe}>
             <input
               className={contactUsFormStyles.contact__subscribeInput}
