@@ -9,6 +9,7 @@
   &__formAndDecorations {
     display: flex;
     flex-direction: row;
+    justify-content: center;
 
     @include tablet {
       position: absolute;
@@ -27,6 +28,10 @@
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
 
+    @include mobile {
+      display: none;
+    }
+
     @include tablet {
       position: absolute;
       top: 28%;
@@ -35,7 +40,7 @@
     }
 
     @include desktop {
-      top: 30%;
+      top: 25%;
       right: 130%;
     }
   }
@@ -55,9 +60,6 @@
 
   @include mobile {
     img {
-      display: none;
-    }
-    &__yellowBracket {
       display: none;
     }
   }
