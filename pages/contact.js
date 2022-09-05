@@ -8,10 +8,10 @@ export default function ContactUs() {
       <div className={contactUsFormStyles.contact__formAndDecorations}>
         <Bracket className={contactUsFormStyles.contact__yellowBracket} />
         <ContactUsForm 
-          customClassName={contactUsFormStyles.contact__button}
-          type='submit'
-          link='/'
-          linkText='Submit'
+          // customClassName={contactUsFormStyles.contact__button}
+          // type='submit'
+          // link='/'
+          // linkText='Submit'
         />
         <img
           src='/images/svg/yellow-colon.svg'
