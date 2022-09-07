@@ -1,4 +1,4 @@
-import ContactUsForm from './ContactUsForm';
+import ContactUsForm from '../components/ContactUsForm';
 import contactUsFormStyles from '@/styles/Contact.module.scss';
 import Bracket from '@/components/decorations/Bracket';
 
