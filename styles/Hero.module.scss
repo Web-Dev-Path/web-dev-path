@@ -6,7 +6,7 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  
+
   @include desktop {
     height: 100vh;
   }
@@ -40,6 +40,7 @@
 
       @include desktop {
         padding-bottom: 0;
+        max-width: 25rem;
       }
     }
   }
