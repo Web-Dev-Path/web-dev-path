@@ -181,7 +181,16 @@ export default function AboutUs() {
           title='How to get started?'
           content={
             <div>
-              Just reach out on Slack and introduce yourself in our #general channel! There is where we get together. Once on our channel, someone will help you out.
+              After taking a look at our project&nbsp;
+              <a  target='_blank'
+                  href='https://github.com/Web-Dev-Path/web-dev-path#readme'
+                  rel='noopener noreferrer' >README</a> and&nbsp;
+              <a  target='_blank'
+                  href='https://github.com/Web-Dev-Path/web-dev-path/wiki'
+                  rel='noopener noreferrer' >wiki</a>,
+              just send us an email sharing with us about your journey in tech and
+              why you’re interested in joining us.
+              <br/>
               We've got you!
             </div>
           }
@@ -190,6 +199,9 @@ export default function AboutUs() {
           color={primary}
           bgColor={white}
           customInnerClass='about-content'
+          link="mailto:hello@webdevpath.co"
+          linkText="Ping Us"
+          customBtnClass='inverted-grey'
         />
       </RevealContentContainer>
     </div>
