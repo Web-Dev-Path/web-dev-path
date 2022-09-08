@@ -43,6 +43,11 @@
       top: 25%;
       right: 120%;
     }
+
+    @include desktop-breakpoint-plus {
+      top: 25%;
+      right: 140%;
+    }
   }
 
   &__yellowColon {
