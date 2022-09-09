@@ -142,7 +142,7 @@ export default function AboutUs() {
           customInnerClass='wanna-learn-more'
         />
         <TwoColumn
-          title={<div>Junior Developers</div>}
+          title="Junior Developers"
           content={
             'If you are a junior web developer looking for some guidance and mentoring, ' +
             'we invite you to join us and start coding our platform. ' +
@@ -159,7 +159,7 @@ export default function AboutUs() {
           customInnerClass='two-text-columns'
           secondTextColumn={
             <TwoColumn
-              title={<div>Experienced Developers</div>}
+              title="Experienced Developers"
               content={
                 'If you are an experienced and patient-loving developer, ' +
                 'a true rockstar who wants to mentor juniors, ' +
