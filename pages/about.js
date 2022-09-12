@@ -198,7 +198,7 @@ export default function AboutUs() {
           image='/images/svg/slash.svg'
           color={primary}
           bgColor={white}
-          customInnerClass='about-content'
+          customInnerClass='get-started'
           link="mailto:hello@webdevpath.co"
           linkText="Ping Us"
           customBtnClass='inverted-grey'
