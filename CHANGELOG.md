@@ -46,6 +46,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Made the site a Progressive Web App (PWA)
 - About page content (first section)
+- About page "Wanna Learn More" and "How to get started?" section
+- An optional second column to TwoColumn instead of the image
 
 ### Fixed
 
@@ -59,3 +61,4 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - updated 'about us' first section (our background, peer reviews, version control)
 - updated 'about us' section (our goals, our purpose)
 - updated mobile nav to automatically close when page route change is completed
+- adjust flex-basis of a few sections in the about page to better match the design file

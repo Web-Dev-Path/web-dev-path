@@ -1,6 +1,11 @@
 import RevealContentContainer from '@/components/containers/RevealContentContainer';
 import TwoColumn from '@/components/containers/TwoColumn';
-import { white, primary, primaryAccent } from '@/styles/TwoColumn.module.scss';
+import {
+  white,
+  primary,
+  primaryAccent,
+  lightBgColor,
+} from '@/styles/TwoColumn.module.scss';
 import CardsColumns from '@/components/containers/CardsColumns';
 import Title from '@/components/snippets/Title';
 import Container from '@/components/containers/Container';
@@ -125,6 +130,78 @@ export default function AboutUs() {
           color={primary}
           bgColor={white}
           customInnerClass='our-purpose'
+        />
+      </RevealContentContainer>
+      <RevealContentContainer>
+        <TwoColumn
+          title='Wanna learn more?'
+          content={''}
+          image='/images/svg/close-curly-bracket.svg'
+          color={primary}
+          bgColor={lightBgColor}
+          customInnerClass='wanna-learn-more'
+        />
+        <TwoColumn
+          title="Junior Developers"
+          content={
+            'If you are a junior web developer looking for some guidance and mentoring, ' +
+            'we invite you to join us and start coding our platform. ' +
+            "You will learn how to code in a team environment by following issue's " +
+            'instructions and submitting your code to our repository through a ' +
+            'PR while guided throughout the entire process.\n'
+          }
+          linkText='Our wiki'
+          openNewTab
+          link='https://github.com/Web-Dev-Path/web-dev-path/wiki'
+          customBtnClass='inverted-grey'
+          color={primary}
+          bgColor={lightBgColor}
+          customInnerClass='two-text-columns'
+          secondTextColumn={
+            <TwoColumn
+              title="Experienced Developers"
+              content={
+                'If you are an experienced and patient-loving developer, ' +
+                'a true rockstar who wants to mentor juniors, ' +
+                "it will be wonderful to have your help to review those PR's, " +
+                'write detailed issues and guide the developers when necessary.\n'
+              }
+              linkText='Contact us'
+              link='/contact'
+              customBtnClass='inverted-grey'
+              color={primary}
+              bgColor={lightBgColor}
+              customInnerClass='second-text-column'
+            />
+          }
+        />
+      </RevealContentContainer>
+      <RevealContentContainer>
+        <TwoColumn
+          title='How to get started?'
+          content={
+            <div>
+              After taking a look at our project&nbsp;
+              <a  target='_blank'
+                  href='https://github.com/Web-Dev-Path/web-dev-path#readme'
+                  rel='noopener noreferrer' >README</a> and&nbsp;
+              <a  target='_blank'
+                  href='https://github.com/Web-Dev-Path/web-dev-path/wiki'
+                  rel='noopener noreferrer' >wiki</a>,
+              just send us an email sharing with us about your journey in tech and
+              why you’re interested in joining us.
+              <br/>
+              We've got you!
+            </div>
+          }
+          rowOrder='row-reverse'
+          image='/images/svg/slash.svg'
+          color={primary}
+          bgColor={white}
+          customInnerClass='get-started'
+          link="mailto:hello@webdevpath.co"
+          linkText="Ping Us"
+          customBtnClass='inverted-grey'
         />
       </RevealContentContainer>
     </div>
