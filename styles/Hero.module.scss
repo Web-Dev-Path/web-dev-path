@@ -7,7 +7,7 @@
   align-items: center;
   position: relative;
   @include desktop {
-    height: 100vh;
+    min-height: 100vh;
   }
 
   .accent-title {
