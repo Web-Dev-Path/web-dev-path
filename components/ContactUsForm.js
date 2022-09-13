@@ -2,10 +2,9 @@ import { useForm } from 'react-hook-form';
 import Container from '@/components/containers/Container';
 import contactUsFormStyles from '@/styles/Contact.module.scss';
 import RevealContentContainer from '@/components/containers/RevealContentContainer';
-// import ButtonLink from '@/components/buttons/ButtonLink';
+import SubmitButton from '@/components/buttons/SubmitButton';
 
 export default function ContactUsForm(props) {
-  // const { customClassName, link, linkText, type } = props;
   const {
     register,
     handleSubmit,
@@ -113,10 +112,7 @@ export default function ContactUsForm(props) {
             />
             Subscribe to our DevNews!
           </div>
-          {/* <ButtonLink link={link} customClassName={customClassName} type={type}>
-            {linkText}
-          </ButtonLink> */}
-          <button href='/' type='submit' className={contactUsFormStyles.contact__button}>Submit</button>
+          <SubmitButton>Submit</SubmitButton>
         </form>
       </Container>
     </RevealContentContainer>
