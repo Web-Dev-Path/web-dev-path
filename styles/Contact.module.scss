@@ -7,11 +7,10 @@
   position: relative;
 
   &__formAndDecorations {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-
     @include tablet {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       position: absolute;
       bottom: 48%;
       right: 4%;
@@ -62,25 +61,27 @@
     }
   }
 
-  @include mobile {
+  @include desktop-breakpoint-minus {
     img {
       display: none;
     }
   }
 
   &__form {
-    padding: 2rem 0;
+    padding: 2.5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     @include desktop {
-      display: flex;
-      flex-direction: column;
       max-width: 100%;
       width: 26rem;
+      padding: 2rem 0;
     }
   }
 
   &__errorMessage {
-    color: white;
+    color: $white;
     margin: 0.1rem 0 1rem;
     font-size: 1.2rem;
     height: 1.5rem;
@@ -95,14 +96,6 @@
     border: 1px solid $dark-bg-color;
     max-width: 100%;
     width: 24rem;
-
-    @include small-mobile {
-      width: 100%;
-    }
-
-    @include mobile {
-      max-width: 100%;
-    }
 
     @include large-desktop {
       font-size: 1.5rem;
@@ -133,12 +126,19 @@
   &__subscribe {
     display: flex;
     margin-bottom: 1.25rem;
-    font-size: 1.5rem;
     opacity: 0.6;
+
+    @include desktop {
+      font-size: 1.5rem;
+    }
   }
 
   &__subscribeInput {
     width: 1.5rem;
     margin-right: 10px;
+  }
+
+  @include desktop {
+    height: 42rem;
   }
 }

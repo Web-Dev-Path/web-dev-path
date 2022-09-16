@@ -112,7 +112,7 @@ export default function ContactUsForm(props) {
             />
             Subscribe to our DevNews!
           </div>
-          <SubmitButton>Submit</SubmitButton>
+          <SubmitButton label='Submit' />
         </form>
       </Container>
     </RevealContentContainer>

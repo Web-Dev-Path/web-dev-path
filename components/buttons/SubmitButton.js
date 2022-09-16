@@ -1,7 +1,16 @@
-import btnStyles from "@/styles/SubmitButton.module.scss"
+import btnStyles from '@/styles/SubmitButton.module.scss';
 
-export default function SubmitButton(props) {
-    return (
-        <button className={btnStyles.btn} type="submit">{props.children}</button>
-    )
+export default function SubmitButton({ customClassName, label }) {
+  return (
+    <button
+      className={
+        customClassName
+          ? `${btnStyles.btn} ${btnStyles[customClassName]}`
+          : btnStyles.btn
+      }
+      type='submit'
+    >
+      {label}
+    </button>
+  );
 }
