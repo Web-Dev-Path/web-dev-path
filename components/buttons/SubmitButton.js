@@ -1,6 +1,6 @@
 import btnStyles from '@/styles/SubmitButton.module.scss';
 
-export default function SubmitButton({ customClassName, label }) {
+export default function SubmitButton({ customClassName, label, disabled }) {
   return (
     <button
       className={
@@ -9,6 +9,7 @@ export default function SubmitButton({ customClassName, label }) {
           : btnStyles.btn
       }
       type='submit'
+      disabled={disabled}
     >
       {label}
     </button>

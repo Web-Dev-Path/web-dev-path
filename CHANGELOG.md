@@ -49,6 +49,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Contact us form and decoration components
 - About page "Wanna Learn More" and "How to get started?" section
 - An optional second column to TwoColumn instead of the image
+- Internal API route for contact form submission (send the message to an email using sendgrid API)
+- Connect contact form submission button to the API 
+  (and signs the user up to our newsletter when the subscribe button is checked)
+
 
 ### Fixed
 
@@ -63,3 +67,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - updated 'about us' section (our goals, our purpose)
 - updated mobile nav to automatically close when page route change is completed
 - adjust flex-basis of a few sections in the about page to better match the design file
+
+### Updated
+
+- .env-template to include SENDGRID_API_KEY

@@ -1,14 +1,20 @@
 import { useForm } from 'react-hook-form';
+import {useState} from 'react';
 import Container from '@/components/containers/Container';
 import contactUsFormStyles from '@/styles/Contact.module.scss';
 import RevealContentContainer from '@/components/containers/RevealContentContainer';
 import SubmitButton from '@/components/buttons/SubmitButton';
 
+
 export default function ContactUsForm(props) {
+  const [isSubmitSuccess, setIsSubmitSuccess] = useState(false)
+  const [apiError, setApiError] = useState(null)
+
   const {
     register,
     handleSubmit,
     reset,
+    isSubmitted,
     formState: { errors },
   } = useForm({
     defaultValues: {
@@ -19,8 +25,29 @@ export default function ContactUsForm(props) {
     },
   });
 
-  function onSubmit(data) {
-    console.log(data);
+  async function onSubmit(data) {
+    setIsSubmitSuccess(false)
+    setApiError(null)
+    const res = await fetch('/api/contact', {
+      method:'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        name: data.Name,
+        email:data.Email,
+        subject: data.Subject,
+        message: data.Message,
+        subscribe: data.Subscribe
+      })
+    })
+
+    if(res.ok){
+      setIsSubmitSuccess(true)
+    }else{
+      const jsonRes = await res.json()
+      setApiError(`Status Code: ${res.status} - ${jsonRes.message}`)
+    }
     reset();
   }
 
@@ -112,7 +139,19 @@ export default function ContactUsForm(props) {
             />
             Subscribe to our DevNews!
           </div>
-          <SubmitButton label='Submit' />
+          <SubmitButton label='Submit' disabled={isSubmitted||isSubmitSuccess}/>
+          {isSubmitSuccess &&(
+            <p className={contactUsFormStyles.contact__successMessage}>
+              Your message was sent successfully. We will be in touch with you as soon as possible.
+            </p>
+          )}
+          {apiError &&(
+            <p className={contactUsFormStyles.contact__successMessage}>
+              Error Submitting Message.<br/>
+              {apiError}. <br/>
+              Please contact support at hello@webdevpath.co
+            </p>
+          )}
         </form>
       </Container>
     </RevealContentContainer>

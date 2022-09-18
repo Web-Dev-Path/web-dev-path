@@ -141,4 +141,8 @@
   @include desktop {
     height: 42rem;
   }
+
+  &__successMessage {
+    color: $primary-content-color
+  }
 }
