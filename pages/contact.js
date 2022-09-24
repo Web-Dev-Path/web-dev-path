@@ -1,4 +1,4 @@
-import ContactUsForm from '../components/ContactUsForm';
+import ContactUsForm, { ContactUsFormSubscribe } from '../components/ContactUsForm';
 import contactUsFormStyles from '@/styles/Contact.module.scss';
 import Bracket from '@/components/decorations/Bracket';
 
@@ -7,7 +7,7 @@ export default function ContactUs() {
     <div className={contactUsFormStyles.contact}>
       <div className={contactUsFormStyles.contact__formAndDecorations}>
         <Bracket className={contactUsFormStyles.contact__yellowBracket} />
-        <ContactUsForm />
+        <ContactUsFormSubscribe />
         <img
           src='/images/svg/yellow-colon.svg'
           className={contactUsFormStyles.contact__yellowColon}

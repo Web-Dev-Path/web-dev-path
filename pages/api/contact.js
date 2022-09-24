@@ -13,12 +13,13 @@ export default async (req, res) => {
   try{
     const {name, email:emailAddress, subject, message, subscribe } = req.body
 
+    // TODO: change the emails to 'hello@webdevpath.co' before PR
     // receiverEmail: The email will be sent here
-    const receiverEmail = 'hello@webdevpath.co'
+    const receiverEmail = process.env.SENDGRID_DEV_EMAIL
     // sendgridEmail: This is the email verfied by sendgrid
     // the email will appear to be sent from this email
     // If a non verified email is used, we get a 403 error
-    const sendgridEmail = 'hello@webdevpath.co'
+    const sendgridEmail = process.env.SENDGRID_DEV_EMAIL
 
     const emailContent = `
     <b>Name:</b> ${name} <br/>
