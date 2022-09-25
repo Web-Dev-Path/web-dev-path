@@ -1,6 +1,7 @@
 import { useForm } from 'react-hook-form';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import MailchimpSubscribe from 'react-mailchimp-subscribe';
+import ReCAPTCHA from 'react-google-recaptcha';
 import Container from '@/components/containers/Container';
 import contactUsFormStyles from '@/styles/Contact.module.scss';
 import RevealContentContainer from '@/components/containers/RevealContentContainer';
@@ -13,7 +14,7 @@ export const ContactUsFormSubscribe = () => {
       render={({ subscribe, status, message }) => {
         return (
           <ContactUsForm
-            subscribe={formData=>subscribe(formData)}
+            subscribe={formData => subscribe(formData)}
             subStatus={status}
             subMessage={message}
           />
@@ -25,15 +26,19 @@ export const ContactUsFormSubscribe = () => {
 
 };
 
-function ContactUsForm({subscribe, subStatus, subMessage}) {
+function ContactUsForm({ subscribe, subStatus, subMessage }) {
   const [isSubmitSuccess, setIsSubmitSuccess] = useState(false);
   const [apiError, setApiError] = useState(null);
+
+  const contactReCaptchaRef = useRef()
+
 
   const {
     register,
     handleSubmit,
     reset,
     isSubmitted,
+    isSubmitting,
     formState: { errors }
   } = useForm({
     defaultValues: {
@@ -48,6 +53,8 @@ function ContactUsForm({subscribe, subStatus, subMessage}) {
     setIsSubmitSuccess(false);
     setApiError(null);
 
+    const gReCaptchaToken = await contactReCaptchaRef.current.executeAsync()
+
     const res = await fetch('/api/contact', {
       method: 'POST',
       headers: {
@@ -58,7 +65,8 @@ function ContactUsForm({subscribe, subStatus, subMessage}) {
         email: data.Email,
         subject: data.Subject,
         message: data.Message,
-        subscribe: data.Subscribe
+        subscribe: data.Subscribe,
+        gReCaptchaToken
       })
     });
 
@@ -70,10 +78,12 @@ function ContactUsForm({subscribe, subStatus, subMessage}) {
     }
 
     // subscribe to the newsletter if checked
-    // TODO: might need to move this up a little
-
-    if(data.Subscribe){
-      subscribe({EMAIL: data.Email})
+    // TODO: 1. might need to move this up a little
+    // TODO: 2. edit styling with all the new messages
+    // TODO: 3. try to reset form after submission, isSubmitted doesn't seem to work
+    // TODO: 4. remove temporary styling for disabled button
+    if (data.Subscribe) {
+      subscribe({ EMAIL: data.Email });
     }
 
     reset();
@@ -81,10 +91,10 @@ function ContactUsForm({subscribe, subStatus, subMessage}) {
 
   console.info('these are errors;', errors);
 
+
   return (
     <RevealContentContainer>
       <Container>
-
         <form
           onSubmit={handleSubmit(onSubmit)}
           className={contactUsFormStyles.contact__form}
@@ -168,7 +178,10 @@ function ContactUsForm({subscribe, subStatus, subMessage}) {
             />
             Subscribe to our DevNews!
           </div>
-          <SubmitButton label='Submit' disabled={isSubmitted || isSubmitSuccess} />
+          <SubmitButton label='Submit' disabled={isSubmitted && !isSubmitSuccess} />
+          {isSubmitted?"isSubmitted":"!isSubmitted"}
+          <br/>
+          {isSubmitSuccess?"isSubmitSuccess":"!isSubmitSuccess"}
           {isSubmitSuccess && (
             <p className={contactUsFormStyles.contact__successMessage}>
               Your message was sent successfully. We will be in touch with you as soon as possible.
@@ -192,6 +205,11 @@ function ContactUsForm({subscribe, subStatus, subMessage}) {
               {subMessage}. <br />
             </p>
           )}
+          <ReCAPTCHA
+            ref={contactReCaptchaRef}
+            size='invisible'
+            sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+          />
         </form>
 
       </Container>
