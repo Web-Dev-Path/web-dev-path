@@ -3,7 +3,6 @@
 
 .contact {
   background-color: $light-bg-color;
-  height: 42rem;
   position: relative;
 
   &__formAndDecorations {
@@ -144,5 +143,11 @@
 
   &__successMessage {
     color: $primary-content-color
+  }
+
+  &__response_message{
+    width: 26rem;
+    margin: auto;
+    border: 1px orange solid;
   }
 }

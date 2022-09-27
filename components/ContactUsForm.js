@@ -32,14 +32,11 @@ function ContactUsForm({ subscribe, subStatus, subMessage }) {
 
   const contactReCaptchaRef = useRef()
 
-
   const {
     register,
     handleSubmit,
     reset,
-    isSubmitted,
-    isSubmitting,
-    formState: { errors }
+    formState: { errors, isSubmitting }
   } = useForm({
     defaultValues: {
       Name: '',
@@ -53,6 +50,7 @@ function ContactUsForm({ subscribe, subStatus, subMessage }) {
     setIsSubmitSuccess(false);
     setApiError(null);
 
+    contactReCaptchaRef.current.reset()
     const gReCaptchaToken = await contactReCaptchaRef.current.executeAsync()
 
     const res = await fetch('/api/contact', {
@@ -80,7 +78,7 @@ function ContactUsForm({ subscribe, subStatus, subMessage }) {
     // subscribe to the newsletter if checked
     // TODO: 1. might need to move this up a little
     // TODO: 2. edit styling with all the new messages
-    // TODO: 3. try to reset form after submission, isSubmitted doesn't seem to work
+    // TODO: 3. [x] try to reset form after submission, isSubmitted doesn't seem to work
     // TODO: 4. remove temporary styling for disabled button
     if (data.Subscribe) {
       subscribe({ EMAIL: data.Email });
@@ -178,10 +176,15 @@ function ContactUsForm({ subscribe, subStatus, subMessage }) {
             />
             Subscribe to our DevNews!
           </div>
-          <SubmitButton label='Submit' disabled={isSubmitted && !isSubmitSuccess} />
-          {isSubmitted?"isSubmitted":"!isSubmitted"}
-          <br/>
-          {isSubmitSuccess?"isSubmitSuccess":"!isSubmitSuccess"}
+          <SubmitButton label='Submit' disabled={isSubmitting} />
+
+          <ReCAPTCHA
+            ref={contactReCaptchaRef}
+            size='invisible'
+            sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+          />
+        </form>
+        <div className={contactUsFormStyles.contact__response_message}>
           {isSubmitSuccess && (
             <p className={contactUsFormStyles.contact__successMessage}>
               Your message was sent successfully. We will be in touch with you as soon as possible.
@@ -205,14 +208,18 @@ function ContactUsForm({ subscribe, subStatus, subMessage }) {
               {subMessage}. <br />
             </p>
           )}
-          <ReCAPTCHA
-            ref={contactReCaptchaRef}
-            size='invisible'
-            sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
-          />
-        </form>
+          <p style={{display:"none"}}>
+            temporary message to test styling
+            Your message was sent successfully. We will be in touch with you as soon as possible.
 
+            Newsletter Subscription Status:
+            error.
+
+            0 - This email address looks fake or invalid. Please enter a real email address..
+          </p>
+        </div>
       </Container>
+
     </RevealContentContainer>
   );
 }
