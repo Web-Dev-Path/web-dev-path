@@ -17,16 +17,16 @@ export default function ContactUs() {
             setMsg={setMessage}
             setSubStatus={setSubStatus}
             setSubMsg={setSubMsg} />
-          <div className={contactUsFormStyles.contact__response_message}>
-            {message?.map(m => <>{m}<br /></>)}
-            {subStatus && `Subscription Status: ${subStatus}`}<br />
-            {subMsg}
-          </div>
         </div>
         <img
           src='/images/svg/yellow-colon.svg'
           className={contactUsFormStyles.contact__yellowColon}
         />
+        <div className={contactUsFormStyles.contact__response_message}>
+          {message?.map(m => <>{m}<br /></>)}
+          {subStatus && <><b>Subscription Status: </b> {subStatus}<br /></>}
+          {subMsg}
+        </div>
       </div>
 
     </div>

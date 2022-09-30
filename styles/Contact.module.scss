@@ -146,6 +146,9 @@
   }
 
   &__response_message{
+    position: absolute;
+    right: 8%;
+    bottom: -15%;
     width: 26rem;
     margin: auto;
   }
