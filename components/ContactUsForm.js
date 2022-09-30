@@ -7,16 +7,17 @@ import contactUsFormStyles from '@/styles/Contact.module.scss';
 import RevealContentContainer from '@/components/containers/RevealContentContainer';
 import SubmitButton from '@/components/buttons/SubmitButton';
 
-export const ContactUsFormSubscribe = () => {
+export const ContactUsFormSubscribe = ({setMsg, setSubStatus, setSubMsg}) => {
   return (
     <MailchimpSubscribe
       url={process.env.NEXT_PUBLIC_MAILCHIMP_URL}
       render={({ subscribe, status, message }) => {
+        setSubStatus(status)
+        setSubMsg(message)
         return (
           <ContactUsForm
             subscribe={formData => subscribe(formData)}
-            subStatus={status}
-            subMessage={message}
+            setResponseMessage={setMsg}
           />
         );
       }
@@ -26,10 +27,7 @@ export const ContactUsFormSubscribe = () => {
 
 };
 
-function ContactUsForm({ subscribe, subStatus, subMessage }) {
-  const [isSubmitSuccess, setIsSubmitSuccess] = useState(false);
-  const [apiError, setApiError] = useState(null);
-
+function ContactUsForm({ subscribe, setResponseMessage }) {
   const contactReCaptchaRef = useRef()
 
   const {
@@ -47,8 +45,7 @@ function ContactUsForm({ subscribe, subStatus, subMessage }) {
   });
 
   async function onSubmit(data) {
-    setIsSubmitSuccess(false);
-    setApiError(null);
+    setResponseMessage(['Submitting...'])
 
     contactReCaptchaRef.current.reset()
     const gReCaptchaToken = await contactReCaptchaRef.current.executeAsync()
@@ -69,26 +66,22 @@ function ContactUsForm({ subscribe, subStatus, subMessage }) {
     });
 
     if (res.ok) {
-      setIsSubmitSuccess(true);
+      setResponseMessage(['Your message was sent successfully. We will be in touch with you as soon as possible.'])
     } else {
       const jsonRes = await res.json();
-      setApiError(`Status Code: ${res.status} - ${jsonRes.message}`);
+       setResponseMessage([
+        "Error Submitting Message",
+        `Status Code: ${res.status} - ${jsonRes.message}`,
+        "Please contact support at hello@webdevpath.co"])
     }
 
-    // subscribe to the newsletter if checked
-    // TODO: 1. might need to move this up a little
-    // TODO: 2. edit styling with all the new messages
-    // TODO: 3. [x] try to reset form after submission, isSubmitted doesn't seem to work
-    // TODO: 4. remove temporary styling for disabled button
     if (data.Subscribe) {
       subscribe({ EMAIL: data.Email });
     }
-
     reset();
   }
 
   console.info('these are errors;', errors);
-
 
   return (
     <RevealContentContainer>
@@ -184,42 +177,7 @@ function ContactUsForm({ subscribe, subStatus, subMessage }) {
             sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
           />
         </form>
-        <div className={contactUsFormStyles.contact__response_message}>
-          {isSubmitSuccess && (
-            <p className={contactUsFormStyles.contact__successMessage}>
-              Your message was sent successfully. We will be in touch with you as soon as possible.
-            </p>
-          )}
-          {apiError && (
-            <p className={contactUsFormStyles.contact__successMessage}>
-              Error Submitting Message.<br />
-              {apiError}. <br />
-              Please contact support at hello@webdevpath.co
-            </p>
-          )}
-          {subStatus && (
-            <p className={contactUsFormStyles.contact__successMessage}>
-              Newsletter Subscription Status: <br />
-              {subStatus}. <br />
-            </p>
-          )}
-          {subMessage && (
-            <p className={contactUsFormStyles.contact__successMessage}>
-              {subMessage}. <br />
-            </p>
-          )}
-          <p style={{display:"none"}}>
-            temporary message to test styling
-            Your message was sent successfully. We will be in touch with you as soon as possible.
-
-            Newsletter Subscription Status:
-            error.
-
-            0 - This email address looks fake or invalid. Please enter a real email address..
-          </p>
-        </div>
       </Container>
-
     </RevealContentContainer>
   );
 }
