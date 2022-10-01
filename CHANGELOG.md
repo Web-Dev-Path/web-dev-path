@@ -48,6 +48,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - About page content (first section)
 - About page "Wanna Learn More" and "How to get started?" section
 - An optional second column to TwoColumn instead of the image
+- .prettierignore file
+- husky, lint-staged to auto format with prettier on git commit
+- lint and format script to run prettier check and write on all files respectively
+
 
 ### Fixed
 
@@ -62,3 +66,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - updated 'about us' section (our goals, our purpose)
 - updated mobile nav to automatically close when page route change is completed
 - adjust flex-basis of a few sections in the about page to better match the design file
+- prettierrc "end of line" to auto
+
+
+

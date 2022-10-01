@@ -23,7 +23,6 @@
   }
 
   &__nav {
-
     @include tablet {
       min-width: 6.5rem;
       order: 2;
@@ -44,7 +43,7 @@
 
   &__navItem {
     margin: 0.5rem 0;
-    
+
     @include tablet {
       padding-left: 50px;
     }
