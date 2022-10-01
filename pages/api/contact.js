@@ -10,25 +10,34 @@ export default async (req, res) => {
   }
 
   try {
-    const { name, email: emailAddress, subject, message, subscribe, gReCaptchaToken } = req.body;
+    const {
+      name,
+      email: emailAddress,
+      subject,
+      message,
+      subscribe,
+      gReCaptchaToken,
+    } = req.body;
 
     // verify recaptcha token
-    const reCaptchaValidation = await (await fetch('https://www.google.com/recaptcha/api/siteverify', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded'
-      },
-      body: `secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${req.body.gReCaptchaToken}`
-    })).json();
+    const reCaptchaValidation = await (
+      await fetch('https://www.google.com/recaptcha/api/siteverify', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: `secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${req.body.gReCaptchaToken}`,
+      })
+    ).json();
 
     if (reCaptchaValidation.success) {
-// TODO: change the emails to 'hello@webdevpath.co' before PR
+      // TODO: change the emails to 'hello@webdevpath.co' before PR
       // receiverEmail: The email will be sent here
-      const receiverEmail = process.env.SENDGRID_DEV_EMAIL;
+      const receiverEmail = 'hello@webdevpath.co';
       // sendgridEmail: This is the email verfied by sendgrid
       // the email will appear to be sent from this email
       // If a non verified email is used, we get a 403 error
-      const sendgridEmail = process.env.SENDGRID_DEV_EMAIL;
+      const sendgridEmail = 'hello@webdevpath.co';
 
       const emailContent = `
         <b>Name:</b> ${name} <br/>
@@ -42,33 +51,32 @@ export default async (req, res) => {
         to: receiverEmail,
         from: {
           email: sendgridEmail,
-          name: 'Web Dev Path'
+          name: 'Web Dev Path',
         },
         replyTo: {
           email: emailAddress,
-          name
+          name,
         },
         subject: `New message from ${name} via webdevpath.co 'Contact Us' Form`,
         content: [
           {
-            'type': 'text/html',
-            'value': emailContent
-          }
-        ]
+            type: 'text/html',
+            value: emailContent,
+          },
+        ],
       };
       await sendgrid.send(email);
       res.status(200).json({ status: 'OK' });
-    }else{
+    } else {
       return res.status(422).json({
-        status:'error',
-        message: 'Invalid ReCaptcha'
-      })
+        status: 'error',
+        message: 'Invalid ReCaptcha',
+      });
     }
   } catch (e) {
     return res.status(500).json({
       status: 'error',
-      message: `Error: ${e.message}`
+      message: `Error: ${e.message}`,
     });
   }
-
-}
+};
