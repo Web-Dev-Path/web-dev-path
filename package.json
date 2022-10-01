@@ -8,7 +8,15 @@
     "open-browser-win": "start http://localhost:3010",
     "open-browser-mac": "open http://localhost:3010",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "prettier --check .",
+    "format": "prettier --write .",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx,scss}": [
+      "prettier --write"
+    ]
   },
   "dependencies": {
     "@sendgrid/mail": "^7.7.0",
@@ -22,5 +30,11 @@
     "react-mailchimp-subscribe": "^2.1.3",
     "sass": "^1.35.1",
     "swiper": "^8.2.2"
+  },
+  "devDependencies": {
+    "husky": "^8.0.0",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "prettylint": "^1.0.0"
   }
 }
