@@ -6,9 +6,12 @@ import {
   primaryAccent,
   lightBgColor,
 } from '@/styles/TwoColumn.module.scss';
+import rowStyles from '@/styles/Row.module.scss';
 import CardsColumns from '@/components/containers/CardsColumns';
 import Title from '@/components/snippets/Title';
 import Container from '@/components/containers/Container';
+import Row from '@/components/containers/Row';
+import Member from '@/components/containers/Member';
 
 export default function AboutUs() {
   return (
@@ -142,7 +145,7 @@ export default function AboutUs() {
           customInnerClass='wanna-learn-more'
         />
         <TwoColumn
-          title="Junior Developers"
+          title='Junior Developers'
           content={
             'If you are a junior web developer looking for some guidance and mentoring, ' +
             'we invite you to join us and start coding our platform. ' +
@@ -159,7 +162,7 @@ export default function AboutUs() {
           customInnerClass='two-text-columns'
           secondTextColumn={
             <TwoColumn
-              title="Experienced Developers"
+              title='Experienced Developers'
               content={
                 'If you are an experienced and patient-loving developer, ' +
                 'a true rockstar who wants to mentor juniors, ' +
@@ -182,15 +185,24 @@ export default function AboutUs() {
           content={
             <div>
               After taking a look at our project&nbsp;
-              <a  target='_blank'
-                  href='https://github.com/Web-Dev-Path/web-dev-path#readme'
-                  rel='noopener noreferrer' >README</a> and&nbsp;
-              <a  target='_blank'
-                  href='https://github.com/Web-Dev-Path/web-dev-path/wiki'
-                  rel='noopener noreferrer' >wiki</a>,
-              just send us an email sharing with us about your journey in tech and
-              why you’re interested in joining us.
-              <br/>
+              <a
+                target='_blank'
+                href='https://github.com/Web-Dev-Path/web-dev-path#readme'
+                rel='noopener noreferrer'
+              >
+                README
+              </a>{' '}
+              and&nbsp;
+              <a
+                target='_blank'
+                href='https://github.com/Web-Dev-Path/web-dev-path/wiki'
+                rel='noopener noreferrer'
+              >
+                wiki
+              </a>
+              , just send us an email sharing with us about your journey in tech
+              and why you’re interested in joining us.
+              <br />
               We've got you!
             </div>
           }
@@ -199,10 +211,46 @@ export default function AboutUs() {
           color={primary}
           bgColor={white}
           customInnerClass='get-started'
-          link="mailto:hello@webdevpath.co"
-          linkText="Ping Us"
+          link='mailto:hello@webdevpath.co'
+          linkText='Ping Us'
           customBtnClass='inverted-grey'
         />
+      </RevealContentContainer>
+      <RevealContentContainer>
+        <section className={rowStyles.primaryBg}>
+          <Container>
+            <Title title='Who we are' />
+
+            <Row>
+              <Member
+                image='/images/ellipse.png'
+                name='Mariana Caldas'
+                title='Project Team Lead'
+                position='Web Developer (Front-End)'
+                customClass='row-card'
+                linkedIn='mariana-caldas'
+                portfolio='marianacaldas.com'
+                about='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+              />
+
+              <Member image='/images/ellipse.png' customClass='row-card' />
+
+              <Member image='/images/ellipse.png' customClass='row-card' />
+
+              <Member image='/images/ellipse.png' customClass='row-card' />
+
+              <Member image='/images/ellipse.png' customClass='row-card' />
+
+              <Member image='/images/ellipse.png' customClass='row-card' />
+
+              <Member image='/images/ellipse.png' customClass='row-card' />
+
+              <Member image='/images/ellipse.png' customClass='row-card' />
+
+              <Member image='/images/ellipse.png' customClass='row-card' />
+            </Row>
+          </Container>
+        </section>
       </RevealContentContainer>
     </div>
   );
