@@ -3,7 +3,6 @@ import styles from '@/styles/Member.module.scss';
 
 export default function Member({
   image,
-  altTag,
   name,
   title,
   position,
@@ -20,12 +19,7 @@ export default function Member({
     >
       {image && (
         <div className={styles.card__image}>
-          <Image
-            src={image}
-            alt={altTag}
-            className={styles.img}
-            layout='fill'
-          />
+          <Image src={image} alt={name} className={styles.img} layout='fill' />
         </div>
       )}
 
