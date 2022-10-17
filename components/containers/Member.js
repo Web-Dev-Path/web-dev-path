@@ -42,7 +42,13 @@ export default function Member({
               height='25px'
               width='25px'
             />
-            <Link href={`https://linkedin.com/in/${linkedIn}`}>{linkedIn}</Link>
+            <Link
+              href={`https://linkedin.com/in/${linkedIn}`}
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              {linkedIn}
+            </Link>
           </div>
         )}
         {portfolio && (
@@ -53,7 +59,13 @@ export default function Member({
               height='25px'
               width='25px'
             />
-            <Link href={`https://${portfolio}`}>{portfolio}</Link>
+            <Link
+              href={`https://${portfolio}`}
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              {portfolio}
+            </Link>
           </div>
         )}
 
