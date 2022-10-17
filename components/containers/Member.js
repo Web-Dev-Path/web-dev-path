@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import styles from '@/styles/Member.module.scss';
 
 export default function Member({
@@ -42,13 +41,13 @@ export default function Member({
               height='25px'
               width='25px'
             />
-            <Link
+            <a
               href={`https://linkedin.com/in/${linkedIn}`}
               target='_blank'
               rel='noopener noreferrer'
             >
               {linkedIn}
-            </Link>
+            </a>
           </div>
         )}
         {portfolio && (
@@ -59,13 +58,13 @@ export default function Member({
               height='25px'
               width='25px'
             />
-            <Link
+            <a
               href={`https://${portfolio}`}
               target='_blank'
               rel='noopener noreferrer'
             >
               {portfolio}
-            </Link>
+            </a>
           </div>
         )}
 
