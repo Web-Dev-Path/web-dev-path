@@ -12,6 +12,7 @@ import Title from '@/components/snippets/Title';
 import Container from '@/components/containers/Container';
 import Row from '@/components/containers/Row';
 import Member from '@/components/containers/Member';
+import { whoWeAre } from './data/about';
 
 export default function AboutUs() {
   return (
@@ -222,32 +223,20 @@ export default function AboutUs() {
             <Title title='Who we are' />
 
             <Row>
-              <Member
-                image='/images/ellipse.png'
-                name='Mariana Caldas'
-                title='Project Team Lead'
-                position='Web Developer (Front-End)'
-                customClass='row-card'
-                linkedIn='mariana-caldas'
-                portfolio='marianacaldas.com'
-                about='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-              />
-
-              <Member image='/images/ellipse.png' customClass='row-card' />
-
-              <Member image='/images/ellipse.png' customClass='row-card' />
-
-              <Member image='/images/ellipse.png' customClass='row-card' />
-
-              <Member image='/images/ellipse.png' customClass='row-card' />
-
-              <Member image='/images/ellipse.png' customClass='row-card' />
-
-              <Member image='/images/ellipse.png' customClass='row-card' />
-
-              <Member image='/images/ellipse.png' customClass='row-card' />
-
-              <Member image='/images/ellipse.png' customClass='row-card' />
+              {whoWeAre.map(_ => {
+                return (
+                  <Member
+                    key={_?.name}
+                    image={_?.image}
+                    name={_?.name}
+                    title={_?.title}
+                    position={_?.position}
+                    linkedIn={_?.linkedIn}
+                    portfolio={_?.portfolio}
+                    about={_?.about}
+                  />
+                );
+              })}
             </Row>
           </Container>
         </section>

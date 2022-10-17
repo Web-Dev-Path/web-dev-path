@@ -42,7 +42,7 @@ export default function Member({
               height='25px'
               width='25px'
             />
-            <Link href={`https://linkedin.com/${linkedIn}`}>{linkedIn}</Link>
+            <Link href={`https://linkedin.com/in/${linkedIn}`}>{linkedIn}</Link>
           </div>
         )}
         {portfolio && (
