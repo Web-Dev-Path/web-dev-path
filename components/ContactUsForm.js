@@ -1,5 +1,5 @@
 import { useForm } from 'react-hook-form';
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
 import MailchimpSubscribe from 'react-mailchimp-subscribe';
 import ReCAPTCHA from 'react-google-recaptcha';
 import Container from '@/components/containers/Container';
@@ -7,53 +7,59 @@ import contactUsFormStyles from '@/styles/Contact.module.scss';
 import RevealContentContainer from '@/components/containers/RevealContentContainer';
 import SubmitButton from '@/components/buttons/SubmitButton';
 
-export const ContactUsFormSubscribe = ({setMsg, setSubStatus, setSubMsg}) => {
+export const ContactUsFormSubscribe = ({ setMsg }) => {
   return (
     <MailchimpSubscribe
       url={process.env.NEXT_PUBLIC_MAILCHIMP_URL}
       render={({ subscribe, status, message }) => {
-        setSubStatus(status)
-        setSubMsg(message)
+        console.info(`MailChimp (contact form): ${status} - ${message}`);
         return (
-          <ContactUsForm
-            subscribe={formData => subscribe(formData)}
-            setResponseMessage={setMsg}
-          />
+          <>
+            <ContactUsForm
+              subscribe={formData => subscribe(formData)}
+              setResponseMessage={setMsg}
+            />
+            {status === 'error' && (
+              <div
+                className={contactUsFormStyles.contact__respseonErrorMessage}
+              >
+                {`Newsletter subscription error: ${message}`}
+              </div>
+            )}
+          </>
         );
-      }
-      }
+      }}
     />
   );
-
 };
 
 function ContactUsForm({ subscribe, setResponseMessage }) {
-  const contactReCaptchaRef = useRef()
+  const contactReCaptchaRef = useRef();
 
   const {
     register,
     handleSubmit,
     reset,
-    formState: { errors, isSubmitting }
+    formState: { errors, isSubmitting },
   } = useForm({
     defaultValues: {
       Name: '',
       Email: '',
       Subject: '',
-      Message: ''
-    }
+      Message: '',
+    },
   });
 
   async function onSubmit(data) {
-    setResponseMessage(['Submitting...'])
+    setResponseMessage(['Submitting...']);
 
-    contactReCaptchaRef.current.reset()
-    const gReCaptchaToken = await contactReCaptchaRef.current.executeAsync()
+    contactReCaptchaRef.current.reset();
+    const gReCaptchaToken = await contactReCaptchaRef.current.executeAsync();
 
     const res = await fetch('/api/contact', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify({
         name: data.Name,
@@ -61,18 +67,21 @@ function ContactUsForm({ subscribe, setResponseMessage }) {
         subject: data.Subject,
         message: data.Message,
         subscribe: data.Subscribe,
-        gReCaptchaToken
-      })
+        gReCaptchaToken,
+      }),
     });
 
     if (res.ok) {
-      setResponseMessage(['Your message was sent successfully. We will be in touch with you as soon as possible.'])
+      setResponseMessage([
+        'Your message was sent successfully. We will be in touch with you as soon as possible.',
+      ]);
     } else {
       const jsonRes = await res.json();
-       setResponseMessage([
-        "Error Submitting Message",
+      setResponseMessage([
+        'Error Submitting Message',
         `Status Code: ${res.status} - ${jsonRes.message}`,
-        "Please contact support at hello@webdevpath.co"])
+        'Please contact support at hello@webdevpath.co',
+      ]);
     }
 
     if (data.Subscribe) {
@@ -81,7 +90,7 @@ function ContactUsForm({ subscribe, setResponseMessage }) {
     reset();
   }
 
-  console.info('these are errors;', errors);
+  console.info('Contact Form: these are errors;', errors);
 
   return (
     <RevealContentContainer>
@@ -98,7 +107,7 @@ function ContactUsForm({ subscribe, setResponseMessage }) {
               minLength: 2,
               maxLength: 80,
               //no white space pattern
-              pattern: /[^\s-]/i
+              pattern: /[^\s-]/i,
             })}
             className={`${contactUsFormStyles.contact__input} ${contactUsFormStyles.contact__name}`}
           />
@@ -106,17 +115,17 @@ function ContactUsForm({ subscribe, setResponseMessage }) {
             {errors.Name?.type === 'required'
               ? 'Name is required'
               : errors.Name?.type === 'pattern'
-                ? 'No whitespace'
-                : errors.Name?.type === 'minLength'
-                  ? 'Must be more than 1 character'
-                  : undefined}
+              ? 'No whitespace'
+              : errors.Name?.type === 'minLength'
+              ? 'Must be more than 1 character'
+              : undefined}
           </p>
           <input
             type='email'
             placeholder='email'
             {...register('Email', {
               required: true,
-              pattern: /^\S+@\S+$/i
+              pattern: /^\S+@\S+$/i,
             })}
             className={`${contactUsFormStyles.contact__input} ${contactUsFormStyles.contact__email}`}
           />
@@ -129,7 +138,7 @@ function ContactUsForm({ subscribe, setResponseMessage }) {
             {...register('Subject', {
               required: true,
               minLength: 2,
-              pattern: /[^\s-]/i
+              pattern: /[^\s-]/i,
             })}
             className={`${contactUsFormStyles.contact__input} ${contactUsFormStyles.contact__subject}`}
           />
@@ -137,16 +146,16 @@ function ContactUsForm({ subscribe, setResponseMessage }) {
             {errors.Subject?.type === 'required'
               ? 'Subject is required'
               : errors.Subject?.type === 'pattern'
-                ? 'No whitespace'
-                : errors.Subject?.type === 'minLength'
-                  ? 'Must be more than 1 character'
-                  : undefined}
+              ? 'No whitespace'
+              : errors.Subject?.type === 'minLength'
+              ? 'Must be more than 1 character'
+              : undefined}
           </p>
           <textarea
             {...register('Message', {
               required: true,
               minLength: 2,
-              pattern: /[^\s-]/i
+              pattern: /[^\s-]/i,
             })}
             placeholder='Write your message here'
             className={`${contactUsFormStyles.contact__input} ${contactUsFormStyles.contact__message}`}
@@ -155,10 +164,10 @@ function ContactUsForm({ subscribe, setResponseMessage }) {
             {errors.Message?.type === 'required'
               ? 'Message is required'
               : errors.Message?.type === 'pattern'
-                ? 'No whitespace'
-                : errors.Message?.type === 'minLength'
-                  ? 'Must be more than 1 character'
-                  : undefined}
+              ? 'No whitespace'
+              : errors.Message?.type === 'minLength'
+              ? 'Must be more than 1 character'
+              : undefined}
           </p>
           <div className={contactUsFormStyles.contact__subscribe}>
             <input
