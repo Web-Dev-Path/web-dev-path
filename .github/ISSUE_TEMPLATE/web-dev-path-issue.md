@@ -23,4 +23,5 @@ Please keep in mind that once you assign this task to yourself, you'll need to c
 - Test the section and components in many screen sizes, you can use the Inspect tool for that.
 - Please test if the new changes added to the components do not affect the other instances.
 - Test the feature in many browsers, such as Chrome, Firefox, Edge, and Safari (MAC).
+- If there are any build problems when submitting your PR, run yarn build locally to solve the issues and commit the changes.
 - Update the CHANGELOG.md file.
