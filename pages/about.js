@@ -12,7 +12,7 @@ import Title from '@/components/snippets/Title';
 import Container from '@/components/containers/Container';
 import Row from '@/components/containers/Row';
 import Member from '@/components/containers/Member';
-import { whoWeAre } from './data/about';
+import { whoWeAre } from '../utils/data/about';
 
 export default function AboutUs() {
   return (
@@ -223,20 +223,22 @@ export default function AboutUs() {
             <Title title='Who we are' />
 
             <Row>
-              {whoWeAre.map(_ => {
-                return (
-                  <Member
-                    key={_?.name}
-                    image={_?.image}
-                    name={_?.name}
-                    title={_?.title}
-                    position={_?.position}
-                    linkedIn={_?.linkedIn}
-                    portfolio={_?.portfolio}
-                    about={_?.about}
-                  />
-                );
-              })}
+              <div className={rowStyles.align__left}>
+                {whoWeAre.map(_ => {
+                  return (
+                    <Member
+                      key={_?.name}
+                      image={_?.image}
+                      name={_?.name}
+                      title={_?.title}
+                      position={_?.position}
+                      linkedIn={_?.linkedIn}
+                      portfolio={_?.portfolio}
+                      about={_?.about}
+                    />
+                  );
+                })}
+              </div>
             </Row>
           </Container>
         </section>

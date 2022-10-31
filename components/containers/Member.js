@@ -12,11 +12,7 @@ export default function Member({
   customClass,
 }) {
   return (
-    <div
-      className={
-        customClass ? `${styles.card} ${styles[customClass]}` : styles.card
-      }
-    >
+    <div className={styles.card}>
       {image && (
         <div className={styles.card__image}>
           <Image src={image} alt={name} className={styles.img} layout='fill' />

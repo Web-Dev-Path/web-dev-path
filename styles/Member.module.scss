@@ -5,9 +5,8 @@
   margin: 1rem 1rem 0 0.5rem;
   padding: 1rem;
   border-radius: 1.5rem;
-  box-shadow: $box-shadow;
   min-height: 35rem;
-  background-color: $white;
+  background-color: transparent;
   display: flex;
   justify-content: left;
   flex-direction: column;
@@ -23,9 +22,9 @@
   }
 
   @include desktop {
-    min-width: 25%;
-    max-width: 25%;
-    margin: 1.5rem 1.5rem 0 1.5rem;
+    min-width: 20%;
+    max-width: 20%;
+    margin: 1.5rem;
   }
 
   .name {
@@ -104,7 +103,7 @@
     margin: 0.5rem auto;
 
     img {
-      border-radius: 0.25rem;
+      border-radius: 50%;
     }
   }
 }

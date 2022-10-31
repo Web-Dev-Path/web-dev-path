@@ -67,6 +67,6 @@ export const whoWeAre = [
     linkedIn: 'vincentm5',
     portfolio: 'vmcodes.com',
     about:
-      'Vincent is a professional in the IT industry and also a web developer that enjoys contributing to open-source projects in his spare time. Whether creating aesthetic web pages, coding server-side applications or configuring an environment to host software, he enjoys it all.',
+      'Vincent is a professional in the IT industry and also a web developer that enjoys contributing to open-source projects in his spare time.',
   },
 ];

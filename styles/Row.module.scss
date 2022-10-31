@@ -11,6 +11,16 @@
   background-color: $white;
 }
 
+.align__left {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+
+  @include desktop-breakpoint-minus {
+    justify-content: space-between;
+  }
+}
+
 .wrapper {
   justify-content: center;
   flex-wrap: wrap;
