@@ -67,6 +67,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - updated mobile nav to automatically close when page route change is completed
 - adjust flex-basis of a few sections in the about page to better match the design file
 - prettierrc "end of line" to auto
+- fixed next.js warning - no stylesheets in head component 
+  (added _document.js and moved google fonts into _document.js
 
 
 
