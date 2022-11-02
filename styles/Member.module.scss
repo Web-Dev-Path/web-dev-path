@@ -10,18 +10,14 @@
   display: flex;
   justify-content: left;
   flex-direction: column;
-
-  @include small-mobile {
-    height: 40rem;
-    width: 100%;
-  }
+  width: 100%;
 
   @include tablet {
     height: 30rem;
     width: 40%;
   }
 
-  @include desktop {
+  @include medium-desktop {
     min-width: 20%;
     max-width: 20%;
     margin: 1.5rem;
