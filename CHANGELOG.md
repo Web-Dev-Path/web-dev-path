@@ -51,7 +51,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - .prettierignore file
 - husky, lint-staged to auto format with prettier on git commit
 - lint and format script to run prettier check and write on all files respectively
-
+- who we are components
 
 ### Fixed
 
@@ -67,6 +67,3 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - updated mobile nav to automatically close when page route change is completed
 - adjust flex-basis of a few sections in the about page to better match the design file
 - prettierrc "end of line" to auto
-
-
-
