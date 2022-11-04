@@ -9,6 +9,7 @@ import {
 import rowStyles from '@/styles/Row.module.scss';
 import CardsColumns from '@/components/containers/CardsColumns';
 import Title from '@/components/snippets/Title';
+import Wrapper from '@/components/containers/Wrapper';
 import Container from '@/components/containers/Container';
 import Row from '@/components/containers/Row';
 import Member from '@/components/containers/Member';
@@ -218,30 +219,27 @@ export default function AboutUs() {
         />
       </RevealContentContainer>
       <RevealContentContainer>
-        <section className={rowStyles.primaryBg}>
+        <Wrapper customClass='primary__accent'>
           <Container>
             <Title title='Who we are' />
-
-            <Row>
-              <div className={rowStyles.align__left}>
-                {whoWeAre.map(_ => {
-                  return (
-                    <Member
-                      key={_?.name}
-                      image={_?.image}
-                      name={_?.name}
-                      title={_?.title}
-                      position={_?.position}
-                      linkedIn={_?.linkedIn}
-                      portfolio={_?.portfolio}
-                      about={_?.about}
-                    />
-                  );
-                })}
-              </div>
+            <Row customClass='align__left'>
+              {whoWeAre.map(_ => {
+                return (
+                  <Member
+                    key={_?.name}
+                    image={_?.image}
+                    name={_?.name}
+                    title={_?.title}
+                    position={_?.position}
+                    linkedIn={_?.linkedIn}
+                    portfolio={_?.portfolio}
+                    about={_?.about}
+                  />
+                );
+              })}
             </Row>
           </Container>
-        </section>
+        </Wrapper>
       </RevealContentContainer>
     </div>
   );

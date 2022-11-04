@@ -1,16 +1,13 @@
 @use './variables' as *;
 @use './mixins' as *;
 
-.primaryBg {
-  background-color: $primary-accent-color;
-  min-width: 100%;
-  padding: 1rem 0;
-}
-
-.align__left {
+.row {
   display: flex;
   flex-wrap: wrap;
-  justify-content: left;
+
+  &.align__left {
+    justify-content: left;
+  }
 
   @include desktop-breakpoint-minus {
     justify-content: space-between;
