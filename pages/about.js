@@ -12,7 +12,7 @@ import Title from '@/components/snippets/Title';
 import Container from '@/components/containers/Container';
 import Row from '@/components/containers/Row';
 import Member from '@/components/containers/Member';
-import { whoWeAre } from '../utils/data/about';
+import { whoWeAre } from '../utils/about';
 
 export default function AboutUs() {
   return (

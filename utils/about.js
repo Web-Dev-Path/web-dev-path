@@ -1,25 +1,5 @@
 export const whoWeAre = [
   {
-    image: '/images/mariana.webp',
-    name: 'Mariana',
-    title: 'Project Founder and Team Lead',
-    position: 'Front-End Developer',
-    linkedIn: 'mariana-caldas-souza',
-    portfolio: 'www.marianacaldas.com',
-    about:
-      'Mariana is a Front-End developer who strongly believes in the power of sharing knowledge.',
-  },
-  {
-    image: '/images/jana.webp',
-    name: 'Jana Behfarshad',
-    title: 'Project Founder',
-    position: 'Web Developer',
-    linkedIn: 'jana-behfarshad',
-    portfolio: '',
-    about:
-      "A web dev mum who dreams of teaching her children and others coding. The tech industry is revolving hastily towards creating, inspiring, and contributing to the world. Let's all be a part of it!",
-  },
-  {
     image: '/images/kim.webp',
     name: 'Kimberly Cashwell',
     title: '',
@@ -41,7 +21,7 @@ export const whoWeAre = [
   },
   {
     image: '/images/cheryl.webp',
-    name: 'Cheryl',
+    name: 'Cheryl M.',
     title: '',
     position: 'Full-Stack Developer',
     linkedIn: 'cheryl-h-murphy',
@@ -61,12 +41,32 @@ export const whoWeAre = [
   },
   {
     image: '/images/vincent.webp',
-    name: 'Vincent',
+    name: 'Vincent Medina',
     title: '',
     position: 'Web Developer',
     linkedIn: 'vincentm5',
     portfolio: 'vmcodes.com',
     about:
       'Vincent is a professional in the IT industry and also a web developer that enjoys contributing to open-source projects in his spare time.',
+  },
+  {
+    image: '/images/jana.webp',
+    name: 'Jana Behfarshad',
+    title: 'Project Founder',
+    position: 'Web Developer',
+    linkedIn: 'jana-behfarshad',
+    portfolio: '',
+    about:
+      "A web dev mum who dreams of teaching her children and others coding. The tech industry is revolving hastily towards creating, inspiring, and contributing to the world. Let's all be a part of it!",
+  },
+  {
+    image: '/images/mariana.webp',
+    name: 'Mariana Caldas',
+    title: 'Project Founder, Team Lead',
+    position: 'Front-End Developer | Scrum Master',
+    linkedIn: 'mariana-caldas-souza',
+    portfolio: 'www.marianacaldas.com',
+    about:
+      'Mariana is a Front-End developer who strongly believes in the power of sharing knowledge.',
   },
 ];
