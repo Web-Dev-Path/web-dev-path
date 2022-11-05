@@ -77,7 +77,7 @@ export default function AboutUs() {
           image='/images/svg/open-angle-bracket.svg'
           color={primary}
           bgColor={white}
-          customInnerClass='about-content'
+          customInnerClass='our-process'
         />
         <TwoColumn
           title='Version control'
@@ -98,7 +98,7 @@ export default function AboutUs() {
           image='/images/svg/close-angle-bracket.svg'
           color={primary}
           bgColor={white}
-          customInnerClass='about-content'
+          customInnerClass='our-process'
         />
       </RevealContentContainer>
       <RevealContentContainer>
@@ -214,7 +214,7 @@ export default function AboutUs() {
           bgColor={white}
           customInnerClass='get-started'
           link='mailto:hello@webdevpath.co'
-          linkText='Ping Us'
+          linkText='Ping us'
           customBtnClass='inverted-grey'
         />
       </RevealContentContainer>
@@ -240,6 +240,19 @@ export default function AboutUs() {
             </Row>
           </Container>
         </Wrapper>
+      </RevealContentContainer>
+      <RevealContentContainer>
+        <TwoColumn
+          title='Still got questions?'
+          content='Feel free to contact us.'
+          image='/images/svg/hashtag.svg'
+          color={primary}
+          bgColor={white}
+          customInnerClass='questions'
+          link='/contact'
+          linkText='Contact us'
+          customBtnClass='inverted-grey'
+        />
       </RevealContentContainer>
     </div>
   );
