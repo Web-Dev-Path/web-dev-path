@@ -53,6 +53,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - husky, lint-staged to auto format with prettier on git commit
 - lint and format script to run prettier check and write on all files respectively
 - contact form functionalities (email form using sendgrid, subscription if selected, google recaptcha)
+- who we are components
 
 
 ### Fixed
@@ -70,9 +71,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - adjust flex-basis of a few sections in the about page to better match the design file
 
 
+
 ### Updated
 
 - prettierrc "end of line" to auto
 - .env-template to include SENDGRID_API_KEY
-
 
