@@ -1,0 +1,10 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+.wrapper {
+  padding: 1rem 0;
+
+  &.primary__accent {
+    background-color: $primary-accent-color;
+  }
+}
