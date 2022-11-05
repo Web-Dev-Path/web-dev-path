@@ -59,6 +59,7 @@
     }
 
     // Homepage
+
     &.get-involved {
       @include desktop-breakpoint-minus {
         padding-bottom: 0;
@@ -73,7 +74,9 @@
       }
     }
 
-    //About us
+    // end Homepage
+
+    //About page
 
     &.our-process,
     &.get-started,
@@ -216,6 +219,8 @@
         padding-bottom: 5rem;
       }
     }
+
+    // end About page
 
     @include desktop {
       display: flex;
