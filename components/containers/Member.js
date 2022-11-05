@@ -26,7 +26,7 @@ export default function Member({
         {linkedIn && (
           <div className={`${styles.links}`}>
             <Image
-              src='/images/svg/LinkedIn2.svg'
+              src='/images/svg/linkedin-portfolio.svg'
               alt='LinkedIn'
               height='25px'
               width='25px'

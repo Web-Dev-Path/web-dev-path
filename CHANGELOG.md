@@ -51,7 +51,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - .prettierignore file
 - husky, lint-staged to auto format with prettier on git commit
 - lint and format script to run prettier check and write on all files respectively
-- who we are components
+- who we are section to about page
+- still got questions section to about page
 
 ### Fixed
 
