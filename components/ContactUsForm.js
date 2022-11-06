@@ -90,8 +90,6 @@ function ContactUsForm({ subscribe, setResponseMessage }) {
     reset();
   }
 
-  console.info('Contact Form: these are errors;', errors);
-
   return (
     <RevealContentContainer>
       <Container>
