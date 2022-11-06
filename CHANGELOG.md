@@ -53,7 +53,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - husky, lint-staged to auto format with prettier on git commit
 - lint and format script to run prettier check and write on all files respectively
 - contact form functionalities (email form using sendgrid, subscription if selected, google recaptcha)
-- who we are components
+- who we are section to about page
+- still got questions section to about page
+
 
 
 ### Fixed

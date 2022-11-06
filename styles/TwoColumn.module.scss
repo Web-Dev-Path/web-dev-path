@@ -59,6 +59,7 @@
     }
 
     // Homepage
+
     &.get-involved {
       @include desktop-breakpoint-minus {
         padding-bottom: 0;
@@ -73,60 +74,59 @@
       }
     }
 
-    //About us
-    &.our-background {
+    // end Homepage
+
+    //About page
+
+    &.our-process,
+    &.get-started,
+    &.our-purpose,
+    &.our-background,
+    &.questions {
       .inner__image {
-        height: 14rem;
-
-        @include desktop {
-          height: 18rem;
-        }
-
+        height: 10rem;
         .img {
           object-fit: contain;
         }
       }
     }
 
-    &.about-content, &.get-started {
-      .content{
-        max-width: 49rem;
-      }
-
-      .inner__content{
-        flex-basis: 65%;
-      }
-
+    &.our-background {
       .inner__image {
-        height: 10rem;
-        flex-basis: 25%;
-
         @include desktop {
           height: 15rem;
         }
+      }
+    }
 
-        .img {
-          max-width: 14rem;
-          object-fit: contain;
+    &.our-process {
+      .inner__image {
+        @include desktop {
+          height: 12rem;
         }
       }
     }
 
     &.our-purpose {
-      .inner__content{
-        flex-basis: 65%;
-      }
-
       .inner__image {
-        height: 10rem;
-        flex-basis: 25%;
-
         @include desktop {
-          height: 22rem;
+          height: 18rem;
         }
+      }
+    }
 
-        .img {
-          object-fit: contain;
+    &.get-started {
+      .inner__image {
+        @include desktop {
+          height: 20rem;
+        }
+      }
+    }
+
+    &.questions {
+      .inner__image {
+        @include desktop {
+          height: 13rem;
         }
       }
     }
@@ -136,16 +136,11 @@
         margin: 0;
       }
 
-      .inner__content {
-        flex-basis: 70%;
-      }
-
       .inner__image {
         height: 10rem;
-        flex-basis: 30%;
 
         @include desktop {
-          height: 20rem;
+          height: 15rem;
         }
 
         .img {
@@ -209,9 +204,10 @@
       }
     }
 
-    &.get-started {
+    &.get-started,
+    &.questions {
       padding-bottom: 0px;
-      .inner__image{
+      .inner__image {
         display: none;
 
         @include desktop {
@@ -222,10 +218,9 @@
       @include desktop {
         padding-bottom: 5rem;
       }
-
-
-
     }
+
+    // end About page
 
     @include desktop {
       display: flex;
@@ -235,8 +230,6 @@
     }
   }
 }
-
-
 
 //Exports
 :export {
