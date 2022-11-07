@@ -78,4 +78,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - prettierrc "end of line" to auto
 - .env-template to include SENDGRID_API_KEY
+- fixed next.js warning - no stylesheets in head component 
+  (added _document.js and moved google fonts into _document.js)
+
 
