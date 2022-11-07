@@ -1,9 +1,10 @@
 import { createRef, useState } from 'react';
 import Image from 'next/image';
 import { decode } from 'html-entities';
+import ReCAPTCHA from 'react-google-recaptcha';
 import Container from '@/components/containers/Container';
 import newsletterStyles from '@/styles/Newsletter.module.scss';
-import ReCAPTCHA from 'react-google-recaptcha';
+import SubmitButton from '@/components/buttons/SubmitButton';
 
 const SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
 
@@ -149,12 +150,10 @@ const NewsletterForm = ({ status, message, onValidated }) => {
               placeholder='email'
               onKeyUp={event => handleInputKeyEvent(event)}
             />
-            <button
-              className={newsletterStyles.newsletter__button}
-              type='submit'
-            >
-              Subscribe
-            </button>
+            <SubmitButton
+              label='Subscribe'
+              customClassName='newsletter__button'
+            />
 
             <ReCAPTCHA
               ref={recaptchaRef}

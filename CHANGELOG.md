@@ -46,13 +46,17 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Made the site a Progressive Web App (PWA)
 - About page content (first section)
+- Contact us form and decoration components
 - About page "Wanna Learn More" and "How to get started?" section
 - An optional second column to TwoColumn instead of the image
 - .prettierignore file
 - husky, lint-staged to auto format with prettier on git commit
 - lint and format script to run prettier check and write on all files respectively
+- contact form functionalities (email form using sendgrid, subscription if selected, google recaptcha)
 - who we are section to about page
 - still got questions section to about page
+
+
 
 ### Fixed
 
@@ -67,7 +71,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - updated 'about us' section (our goals, our purpose)
 - updated mobile nav to automatically close when page route change is completed
 - adjust flex-basis of a few sections in the about page to better match the design file
+
+
+
+### Updated
+
 - prettierrc "end of line" to auto
+- .env-template to include SENDGRID_API_KEY
 - fixed next.js warning - no stylesheets in head component 
   (added _document.js and moved google fonts into _document.js)
+
 

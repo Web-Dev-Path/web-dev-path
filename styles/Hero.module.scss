@@ -5,10 +5,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  z-index: 10;
   position: relative;
   @include desktop {
-    height: 100vh;
+    min-height: 100vh;
   }
 
   .accent-title {
@@ -35,7 +34,7 @@
     }
 
     &__bottom {
-      max-width: 41rem;
+      max-width: 19rem;
       padding-bottom: 5rem;
 
       @include desktop {

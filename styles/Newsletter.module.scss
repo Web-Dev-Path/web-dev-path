@@ -2,16 +2,20 @@
 @use './variables' as *;
 
 .newsletterFormInfo {
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-style: italic;
+  color: $primary-content-color;
+
+  .newsletterFormError {
+    color: $error;
+  }
 
   .newsletterFormError,
   .newsletterFormSuccess,
   .newsletterFormSending {
-    color: $primary-content-color;
     margin-top: 1rem;
 
-    @include large-desktop {
+    @include desktop {
       font-size: 1.2rem;
       margin: 0;
     }
