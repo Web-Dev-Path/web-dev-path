@@ -88,4 +88,12 @@
       }
     }
   }
+
+  // Contact us cards
+
+  &.cards {
+    position: absolute;
+    background-color: red;
+    z-index: 12;
+  }
 }
