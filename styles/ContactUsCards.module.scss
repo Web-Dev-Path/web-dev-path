@@ -1,7 +1,7 @@
 @use './mixins' as *;
 @use './variables' as *;
 
-.contactCardStyles {
+.contactCards {
   background-color: $white;
-  // position: relative;
+  height: 42rem;
 }
