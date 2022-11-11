@@ -9,9 +9,9 @@ export default function ContactUsCards() {
         <CardsColumns
           titles={['FAQ', 'Blog', 'Repository']}
           images={[
-            'images/svg/FAQ-icon.jpg',
-            'images/svg/blog-icon.svg',
-            'images/svg/resository-icon.svg',
+            '/images/svg/faq-icon.svg',
+            '/images/svg/blog-icon.svg',
+            '/images/svg/repository-icon.svg',
           ]}
           altTags={['FAQ', 'Blog', 'Repository']}
           content={[
@@ -19,7 +19,8 @@ export default function ContactUsCards() {
             'You can share your projects and ideas to all our community.',
             'You can see most used codes, guidelines and more.',
           ]}
-          // links={['/about', '/blog', 'https://github.com/Web-Dev-Path']}
+          links={['/about', '/blog', '/blog']}
+          linkText={['Our FAQ', 'Our Blog', 'Our Repository']}
           customClass='cards'
         />
       </RevealContentContainer>
