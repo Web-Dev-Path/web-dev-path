@@ -19,7 +19,11 @@ export default function ContactUsCards() {
             'You can share your projects and ideas to all our community.',
             'You can see most used codes, guidelines and more.',
           ]}
-          links={['/about', '/blog', '/blog']}
+          links={[
+            'https://github.com/Web-Dev-Path/web-dev-path/wiki/FAQ',
+            '/blog',
+            'https://github.com/Web-Dev-Path/web-dev-path',
+          ]}
           linkText={['Our FAQ', 'Our Blog', 'Our Repository']}
           customClass='cards'
         />
