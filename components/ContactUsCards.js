@@ -25,7 +25,7 @@ export default function ContactUsCards() {
             'https://github.com/Web-Dev-Path/web-dev-path',
           ]}
           linkText={['Our FAQ', 'Our Blog', 'Our Repository']}
-          customClass='cards'
+          customClass='contact-cards'
         />
       </RevealContentContainer>
     </div>
