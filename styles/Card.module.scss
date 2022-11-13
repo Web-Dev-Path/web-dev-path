@@ -97,42 +97,38 @@
       height: 25rem;
       // position: absolute;
       top: -150%;
-      z-index: 11;
-    }
-  }
-
-  // @include tablet {
-  //   height: 42rem;
-  // }
-
-  .card__image {
-    max-width: 100%;
-    // position: relative;
-    height: 5rem;
-    margin: 3rem 0;
-
-    .img {
-      margin: 0;
-      // position: absolute;
-      left: -60% !important;
-      object-fit: contain !important;
+      z-index: 12;
     }
 
-    @include desktop {
+    .card__image {
+      max-width: 100%;
+      position: relative;
+      height: 5rem;
+      margin: 3rem 0;
+
       .img {
-        left: -75% !important;
+        margin: 0;
+        position: absolute;
+        left: -60% !important;
+        object-fit: contain !important;
       }
-    }
 
-    @include small-mobile {
-      .img {
-        left: -45% !important;
+      @include desktop {
+        .img {
+          left: -75% !important;
+        }
       }
-    }
 
-    @include tablet {
-      .img {
-        left: -65% !important;
+      @include small-mobile {
+        .img {
+          left: -45% !important;
+        }
+      }
+
+      @include tablet {
+        .img {
+          left: -65% !important;
+        }
       }
     }
   }
