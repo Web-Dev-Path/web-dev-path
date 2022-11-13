@@ -55,7 +55,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - contact form functionalities (email form using sendgrid, subscription if selected, google recaptcha)
 - who we are section to about page
 - still got questions section to about page
-
+- Contact us cards section to contact page
 
 
 ### Fixed
