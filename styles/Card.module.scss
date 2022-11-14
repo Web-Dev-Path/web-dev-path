@@ -92,6 +92,7 @@
   // Contact us cards
   &.contact-cards {
     height: 27rem;
+    background-color: $white;
 
     @include desktop {
       height: 25rem;

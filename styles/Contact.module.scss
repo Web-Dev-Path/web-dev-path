@@ -5,6 +5,10 @@
   background-color: $light-bg-color;
   height: 42rem;
   position: relative;
+  margin-bottom: -10rem;
+  @include mobile {
+    margin-bottom: 3rem;
+  }
 
   &__formAndDecorations {
     @include tablet {
