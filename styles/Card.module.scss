@@ -96,40 +96,20 @@
 
     @include desktop {
       height: 25rem;
-      // position: absolute;
-      top: -150%;
-      z-index: 12;
     }
 
     .card__image {
-      max-width: 100%;
+      width: auto;
       position: relative;
       height: 5rem;
-      margin: 3rem 0;
+      margin-right: 75%;
+      margin-top: 3rem;
+      margin-bottom: 3rem;
 
       .img {
         margin: 0;
         position: absolute;
-        left: -60% !important;
         object-fit: contain !important;
-      }
-
-      @include desktop {
-        .img {
-          left: -75% !important;
-        }
-      }
-
-      @include small-mobile {
-        .img {
-          left: -45% !important;
-        }
-      }
-
-      @include tablet {
-        .img {
-          left: -65% !important;
-        }
       }
     }
   }
