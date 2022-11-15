@@ -106,10 +106,17 @@ export default function AboutUs() {
           <Title title='Our goals' />
         </Container>
         <CardsColumns
-          titles={['1', '2']}
-          content={[
-            'To provide a safe space for juniors to learn how to communicate in a simulated professional environment.',
-            'To offer more detailed tasks (GitHub issues) and help the developer assimilate the logical mindset required in a structured project, under guidance following the industry’s best practices throughout the entire process.',
+          cards={[
+            {
+              title: '1',
+              content:
+                'To provide a safe space for juniors to learn how to communicate in a simulated professional environment.',
+            },
+            {
+              title: '2',
+              content:
+                'To offer more detailed tasks (GitHub issues) and help the developer assimilate the logical mindset required in a structured project, under guidance following the industry’s best practices throughout the entire process.',
+            },
           ]}
           customClass='our-goals'
         />

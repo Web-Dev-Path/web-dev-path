@@ -7,15 +7,7 @@ import Card from '@/components/containers/Card';
 import Container from '@/components/containers/Container';
 import styles from '@/styles/CardsColumns.module.scss';
 
-export default function CardsColumns({
-  images,
-  altTags,
-  titles,
-  content,
-  links,
-  linkText,
-  customClass,
-}) {
+export default function CardsColumns({ cards, customClass }) {
   return (
     <Container>
       <Swiper
@@ -32,33 +24,15 @@ export default function CardsColumns({
             spaceBetween: 20,
           },
           1334: {
-            slidesPerView: titles.length,
-            spaceBetween: titles.length < 3 ? 75 : 20,
+            slidesPerView: cards.length,
+            spaceBetween: cards.length < 3 ? 75 : 20,
           },
         }}
       >
-        {titles.map((title, index) => (
+        {cards.map((card, index) => (
           <SwiperSlide key={index} className={styles.swiperSlide}>
             <div className={styles.inner__content}>
-              {images && links && linkText ? (
-                <Card
-                  key={index}
-                  title={title}
-                  image={images[index]}
-                  altTag={altTags[index]}
-                  content={content[index]}
-                  link={links[index]}
-                  linkText={linkText[index]}
-                  customClass={customClass}
-                />
-              ) : (
-                <Card
-                  key={index}
-                  title={title}
-                  content={content[index]}
-                  customClass={customClass}
-                />
-              )}
+              <Card key={index} card={card} customClass={customClass} />
             </div>
           </SwiperSlide>
         ))}
