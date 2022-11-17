@@ -71,7 +71,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - updated 'about us' section (our goals, our purpose)
 - updated mobile nav to automatically close when page route change is completed
 - adjust flex-basis of a few sections in the about page to better match the design file
-
+- removed unused import and comments from development stage
 
 
 ### Updated
@@ -80,5 +80,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - .env-template to include SENDGRID_API_KEY
 - fixed next.js warning - no stylesheets in head component 
   (added _document.js and moved google fonts into _document.js)
+- refactor CardColumns to accept an array of card objects as props
 
 

@@ -26,12 +26,11 @@ export default async (req, res) => {
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
         },
-        body: `secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${req.body.gReCaptchaToken}`,
+        body: `secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${gReCaptchaToken}`,
       })
     ).json();
 
     if (reCaptchaValidation.success) {
-      // TODO: change the emails to 'hello@webdevpath.co' before PR
       // receiverEmail: The email will be sent here
       const receiverEmail = 'hello@webdevpath.co';
       // sendgridEmail: This is the email verfied by sendgrid
