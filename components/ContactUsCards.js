@@ -43,9 +43,9 @@ export default function ContactUsCards() {
           ]}
           altTags={['FAQ', 'Blog', 'Repository']}
           content={[
-            'You can find the main questions about the project.',
-            'You can share your projects and ideas to all our community.',
-            'You can see most used codes, guidelines and more.',
+            'Find the main questions about the project.',
+            'Share your projects and ideas with our community.',
+            'Check out our codebase and guidelines.',
           ]}
           links={[
             'https://github.com/Web-Dev-Path/web-dev-path/wiki/FAQ',

@@ -6,6 +6,13 @@ export default function Card({
   card: { image, altTag, title, content, link, linkText },
   customClass,
 }) {
+  const LinkComponent = link?.startsWith('http') ? (
+    <a href={link} target='_blank' rel='noopener noreferrer'>
+      {linkText}
+    </a>
+  ) : (
+    <Link href={link}>{linkText}</Link>
+  );
   return (
     <div
       className={
@@ -27,7 +34,7 @@ export default function Card({
       <h2 className={styles.title}>{title}</h2>
       <div className={styles.content}>
         <p>
-          {content} {link && <Link href={link}>{linkText}</Link>}
+          {content} {link && LinkComponent}
         </p>
       </div>
     </div>
