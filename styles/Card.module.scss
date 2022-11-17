@@ -88,4 +88,29 @@
       }
     }
   }
+
+  // Contact us cards
+  &.contact-cards {
+    height: 27rem;
+    background-color: $white;
+
+    @include desktop {
+      height: 25rem;
+    }
+
+    .card__image {
+      width: auto;
+      position: relative;
+      height: 5rem;
+      margin-right: 75%;
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+
+      .img {
+        margin: 0;
+        position: absolute;
+        object-fit: contain !important;
+      }
+    }
+  }
 }

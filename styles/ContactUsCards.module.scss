@@ -1,0 +1,6 @@
+@use './mixins' as *;
+@use './variables' as *;
+
+.contactCards {
+  background-color: $white;
+}
