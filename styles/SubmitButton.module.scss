@@ -40,8 +40,10 @@
       border: 1px solid $dark-bg-color;
     }
 
-    @include desktop {
+    @include large-desktop {
       min-width: 12rem;
+      border-radius: 3rem;
+      padding: 0.7rem 0;
     }
   }
 }
