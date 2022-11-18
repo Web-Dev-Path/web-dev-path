@@ -3,12 +3,7 @@ import Link from 'next/link';
 import styles from '@/styles/Card.module.scss';
 
 export default function Card({
-  image,
-  altTag,
-  title,
-  content,
-  link,
-  linkText,
+  card: { image, altTag, title, content, link, linkText },
   customClass,
 }) {
   const LinkComponent = link?.startsWith('http') ? (

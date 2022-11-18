@@ -34,28 +34,35 @@ export default function Home() {
 
       <RevealContentContainer>
         <CardsColumns
-          titles={[
-            'Join the project',
-            'Volunteer to learn together',
-            'Become a project mentor',
+          cards={[
+            {
+              title: 'Join the project',
+              image: '/images/join-us.webp',
+              altTag: 'Join the project',
+              content:
+                'Are you learning web development and need mentorship? Are you a web dev looking for help or a code buddy for a project?',
+              link: "/about'",
+              linkText: 'Learn more',
+            },
+            {
+              title: 'Volunteer to learn together',
+              image: '/images/volunteer.webp',
+              altTag: 'Volunteer to learn together',
+              content:
+                'Would you like to volunteer? For roles other than mentor/mentee, please get in touch.',
+              link: '/contact',
+              linkText: 'Contact us',
+            },
+            {
+              title: 'Become a project mentor',
+              image: '/images/mentor.webp',
+              altTag: 'Become a project mentor',
+              content:
+                'Are you an experienced web dev who wants to become a mentor? Welcome!',
+              link: '/about',
+              linkText: 'Learn more',
+            },
           ]}
-          images={[
-            '/images/join-us.webp',
-            '/images/volunteer.webp',
-            '/images/mentor.webp',
-          ]}
-          altTags={[
-            'Join the project',
-            'Volunteer to learn together',
-            'Become a project mentor',
-          ]}
-          content={[
-            'Are you learning web development and need mentorship? Are you a web dev looking for help or a code buddy for a project? ',
-            'Would you like to volunteer? For roles other than mentor/mentee, please get in touch.',
-            'Are you an experienced web dev who wants to become a mentor? Welcome!',
-          ]}
-          links={['/about', '/contact', '/about']}
-          linkText={['Learn more', 'Contact us', 'Learn more']}
         />
       </RevealContentContainer>
 
