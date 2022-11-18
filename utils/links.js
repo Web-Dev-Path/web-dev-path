@@ -8,10 +8,10 @@ export const linksSocial = [
   {
     id: 1,
     text: 'LinkedIn',
-    href: '#',
+    href: 'https://www.linkedin.com/company/web-dev-path/',
     src: '/images/svg/linkedin.svg',
     alt: 'Find us on LinkedIn',
-    isVisible: false,
+    isVisible: true,
   },
   {
     id: 2,

@@ -56,7 +56,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - who we are section to about page
 - still got questions section to about page
 - Contact us cards section to contact page
-
+- Linkedin link to footer
 
 ### Fixed
 
@@ -72,14 +72,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - updated mobile nav to automatically close when page route change is completed
 - adjust flex-basis of a few sections in the about page to better match the design file
 - removed unused import and comments from development stage
-
-
-### Updated
-
 - prettierrc "end of line" to auto
 - .env-template to include SENDGRID_API_KEY
-- fixed next.js warning - no stylesheets in head component 
-  (added _document.js and moved google fonts into _document.js)
-- refactor CardColumns to accept an array of card objects as props
-
-
+- next.js warning - no stylesheets in head component
+- CardColumns refactoring to accept an array of card objects as props
+- styles on newsletter button and contact page
