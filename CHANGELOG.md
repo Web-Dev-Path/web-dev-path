@@ -40,7 +40,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - updated `package.json` commands for macOs
 - swipeable CardsColumns.js on mobile
 
-## Unreleased
+## 1.2.0
 
 ### Added
 
@@ -77,3 +77,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - next.js warning - no stylesheets in head component
 - CardColumns refactoring to accept an array of card objects as props
 - styles on newsletter button and contact page
+
+## Unreleased
+
+### Added
+
+### Fixed
