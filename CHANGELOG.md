@@ -57,6 +57,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - still got questions section to about page
 - Contact us cards section to contact page
 - Linkedin link to footer
+- Next.js 13
 
 ### Fixed
 
