@@ -11,7 +11,9 @@ export default function Card({
       {linkText}
     </a>
   ) : (
-    <Link href={link}>{linkText}</Link>
+    <Link href={link} legacyBehavior>
+      {linkText}
+    </Link>
   );
   return (
     <div
