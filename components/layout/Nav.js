@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import { useRouter } from 'next/router';
 import Container from '@/components/containers/Container';
 import styles from '@/styles/Nav.module.scss';
@@ -57,17 +56,15 @@ export default function Nav() {
         <div ref={containerRef}>
           <nav className={styles.nav}>
             <div className={styles.nav__logo}>
-              <Link href='/' passHref>
-                <a>
-                  <Image
-                    src='/images/svg/logo.svg'
-                    height={115}
-                    width={180}
-                    alt='Logo'
-                    title='Go to the Homepage'
-                  />
-                </a>
-              </Link>
+              <a href='/' passhref='true'>
+                <Image
+                  src='/images/svg/logo.svg'
+                  height={115}
+                  width={180}
+                  alt='Logo'
+                  title='Go to the Homepage'
+                />
+              </a>
             </div>
             <ul
               className={`${styles.nav__links} ${active ? styles.active : ''}`}
@@ -75,30 +72,28 @@ export default function Nav() {
               {linksNav.map(({ text, href, id }) => {
                 return (
                   <li className={styles.nav__item} key={id}>
-                    <Link href={href}>
-                      <a
-                        className={`${styles.nav__link} ${
-                          router.pathname == href ? `${styles.current}` : ''
-                        }`}
-                        title={text}
-                      >
-                        {text}
-                      </a>
-                    </Link>
+                    <a
+                      href={href}
+                      className={`${styles.nav__link} ${
+                        router.pathname == href ? `${styles.current}` : ''
+                      }`}
+                      title={text}
+                    >
+                      {text}
+                    </a>
                   </li>
                 );
               })}
               <li className={styles.nav__item}>
-                <Link href='mailto:hello@webdevpath.co?subject=Project collaborator application'>
-                  <a
-                    className={`${styles.nav__button} ${
-                      active ? styles.active : ''
-                    }`}
-                    title='Join us'
-                  >
-                    Join us
-                  </a>
-                </Link>
+                <a
+                  href='mailto:hello@webdevpath.co?subject=Project collaborator application'
+                  className={`${styles.nav__button} ${
+                    active ? styles.active : ''
+                  }`}
+                  title='Join us'
+                >
+                  Join us
+                </a>
               </li>
             </ul>
             <button

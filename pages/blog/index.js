@@ -7,9 +7,7 @@ export default function Blog() {
       <p>We're building this page. Stay tuned!</p>
       <ul>
         <li>
-          <Link href='/blog/first-post'>
-            <a>First Post</a>
-          </Link>
+          <Link href='/blog/first-post'>First Post</Link>
         </li>
       </ul>
     </div>

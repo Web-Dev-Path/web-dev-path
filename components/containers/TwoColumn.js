@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import ButtonLink from '@/components/buttons/ButtonLink';
 import Container from '@/components/containers/Container';
 import styles from '@/styles/TwoColumn.module.scss';

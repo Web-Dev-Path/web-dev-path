@@ -41,7 +41,7 @@ export default function Home() {
               altTag: 'Join the project',
               content:
                 'Are you learning web development and need mentorship? Are you a web dev looking for help or a code buddy for a project?',
-              link: "/about'",
+              link: '/about',
               linkText: 'Learn more',
             },
             {
