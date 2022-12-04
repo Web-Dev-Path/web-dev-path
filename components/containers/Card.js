@@ -1,4 +1,4 @@
-import Image from 'next/legacy/image';
+import Image from 'next/image';
 import Link from 'next/link';
 import styles from '@/styles/Card.module.scss';
 
@@ -21,13 +21,7 @@ export default function Card({
     >
       {image && (
         <div className={styles.card__image}>
-          <Image
-            src={image}
-            alt={altTag}
-            className={styles.img}
-            layout='fill'
-            objectFit='cover'
-          />
+          <Image src={image} alt={altTag} className={styles.img} fill />
         </div>
       )}
 

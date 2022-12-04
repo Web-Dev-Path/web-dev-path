@@ -84,3 +84,5 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 
 ### Fixed
+- replaced next/legacy/image with next/image
+- removed unused function in api/register.js

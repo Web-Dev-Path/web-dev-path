@@ -1,4 +1,4 @@
-import Image from 'next/legacy/image';
+import Image from 'next/image';
 import ButtonLink from '@/components/buttons/ButtonLink';
 import Container from '@/components/containers/Container';
 import styles from '@/styles/TwoColumn.module.scss';
@@ -57,12 +57,7 @@ export default function TwoColumn({
         {secondTextColumn && secondTextColumn}
         {!secondTextColumn && image && (
           <div className={styles.inner__image}>
-            <Image
-              src={image}
-              alt={altTag}
-              className={styles.img}
-              layout='fill'
-            />
+            <Image src={image} alt={altTag} className={styles.img} fill />
           </div>
         )}
       </Container>

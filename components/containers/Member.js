@@ -1,4 +1,4 @@
-import Image from 'next/legacy/image';
+import Image from 'next/image';
 import styles from '@/styles/Member.module.scss';
 
 export default function Member({
@@ -15,7 +15,7 @@ export default function Member({
     <div className={styles.card}>
       {image && (
         <div className={styles.card__image}>
-          <Image src={image} alt={name} className={styles.img} layout='fill' />
+          <Image src={image} alt={name} className={styles.img} fill />
         </div>
       )}
 
@@ -28,8 +28,8 @@ export default function Member({
             <Image
               src='/images/svg/linkedin-portfolio.svg'
               alt='LinkedIn'
-              height='25px'
-              width='25px'
+              height={25}
+              width={25}
             />
             <a
               href={`https://linkedin.com/in/${linkedIn}`}
@@ -45,8 +45,8 @@ export default function Member({
             <Image
               src='/images/svg/globe.svg'
               alt='Web Site'
-              height='25px'
-              width='25px'
+              height={25}
+              width={25}
             />
             <a
               href={`https://${portfolio}`}
