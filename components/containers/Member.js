@@ -9,13 +9,12 @@ export default function Member({
   about,
   linkedIn,
   portfolio,
-  customClass,
 }) {
   return (
     <div className={styles.card}>
       {image && (
         <div className={styles.card__image}>
-          <Image src={image} alt={name} className={styles.img} fill />
+          <Image src={image} alt={name} fill />
         </div>
       )}
 

@@ -12,7 +12,7 @@ import Wrapper from '@/components/containers/Wrapper';
 import Container from '@/components/containers/Container';
 import Row from '@/components/containers/Row';
 import Member from '@/components/containers/Member';
-import { whoWeAre } from '../utils/about';
+import { whoWeAre } from '@/utils/about';
 
 export default function AboutUs() {
   return (
@@ -34,6 +34,7 @@ export default function AboutUs() {
           }
           rowOrder='row'
           image='/images/svg/square-brackets.svg'
+          altTag='Square Brackets'
           color={primary}
           bgColor={primaryAccent}
           customInnerClass='our-background'
@@ -74,6 +75,7 @@ export default function AboutUs() {
           }
           rowOrder='row-reverse'
           image='/images/svg/open-angle-bracket.svg'
+          altTag='Open angle bracket'
           color={primary}
           bgColor={white}
           customInnerClass='our-process'
@@ -95,6 +97,7 @@ export default function AboutUs() {
             </div>
           }
           image='/images/svg/close-angle-bracket.svg'
+          altTag='close-angle-bracket'
           color={primary}
           bgColor={white}
           customInnerClass='our-process'
@@ -138,6 +141,7 @@ export default function AboutUs() {
           }
           rowOrder='row-reverse'
           image='/images/svg/semi-colon.svg'
+          altTag='Semi-colon'
           color={primary}
           bgColor={white}
           customInnerClass='our-purpose'
@@ -148,6 +152,7 @@ export default function AboutUs() {
           title='Wanna learn more?'
           content={''}
           image='/images/svg/close-curly-bracket.svg'
+          altTag='Close curly bracket'
           color={primary}
           bgColor={lightBgColor}
           customInnerClass='wanna-learn-more'
@@ -216,6 +221,7 @@ export default function AboutUs() {
           }
           rowOrder='row-reverse'
           image='/images/svg/slash.svg'
+          altTag='Slash'
           color={primary}
           bgColor={white}
           customInnerClass='get-started'
@@ -252,6 +258,7 @@ export default function AboutUs() {
           title='Still got questions?'
           content='Feel free to contact us.'
           image='/images/svg/hashtag.svg'
+          altTag='Hashtag'
           color={primary}
           bgColor={white}
           customInnerClass='questions'
