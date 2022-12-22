@@ -14,6 +14,11 @@
     color: $primary-accent-color;
   }
 
+  .imageBg {
+    object-fit: cover;
+    object-position: center;
+  }
+
   &__content {
     z-index: 10;
     color: $white;
@@ -42,9 +47,4 @@
       }
     }
   }
-}
-
-.imageBg {
-  object-fit: cover;
-  object-position: center;
 }
