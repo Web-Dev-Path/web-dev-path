@@ -152,12 +152,16 @@
     position: absolute;
     right: 8%;
     bottom: -5%;
-    width: 26rem;
     margin: auto;
 
     @include mobile {
       position: unset;
       margin-top: 1rem;
+      padding: 0 2rem;
+    }
+
+    @include small-mobile {
+      max-width: fit-content;
     }
   }
 
