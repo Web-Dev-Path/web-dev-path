@@ -1,0 +1,9 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+.viewAll {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
