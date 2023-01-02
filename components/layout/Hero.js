@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Image from 'next/legacy/image';
+import Image from 'next/image';
 import Nav from '@/components/layout/Nav';
 import Container from '@/components/containers/Container';
 import styles from '@/styles/Hero.module.scss';
@@ -29,9 +29,7 @@ export default function Hero({
         src={imgBg}
         alt={imgAlt}
         className={styles.imageBg}
-        layout='fill'
-        objectFit='cover'
-        objectPosition='center'
+        fill
         priority
       />
       <Container customClass={styles.header__content}>
