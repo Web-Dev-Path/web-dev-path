@@ -1,10 +1,10 @@
-import BlogPostsContainer from '@/components/containers/BlogPostsContainer';
+import BlogPostsContainer from '@/components/blog/BlogPostsContainer';
 
 export default function BlogCategory({ posts }) {
   // TODO: Temporary, to show more posts
   posts = posts.concat(posts).concat(posts);
 
-  return <BlogPostsContainer posts={posts} />;
+  return <BlogPostsContainer posts={posts} swipe={false} />;
 }
 
 export async function getStaticProps() {

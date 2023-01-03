@@ -1,11 +1,18 @@
-import BlogPostsContainer from '@/components/containers/BlogPostsContainer';
-import Link from 'next/link';
+import BlogPostsContainer from '@/components/blog/BlogPostsContainer';
+import Container from '@/components/containers/Container';
+import SearchBar from '@/components/blog/SearchBar';
+import styles from '@/styles/Blog.module.scss';
+import Title from '@/components/snippets/Title';
 
 export default function Blog({ posts }) {
   return (
-    <>
-      <BlogPostsContainer posts={posts} heading='Latest Posts' />
-    </>
+    <Container>
+      <div className={styles.blogSearch}>
+        <Title customClass='blogTitle' title='Latest Posts' />
+        <SearchBar />
+      </div>
+      <BlogPostsContainer posts={posts} />
+    </Container>
   );
 }
 

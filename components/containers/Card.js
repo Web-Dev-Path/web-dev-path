@@ -31,7 +31,9 @@ export default function Card({
         </div>
       )}
 
-      <h2 className={styles.title}>{title}</h2>
+      <h2 className={styles.title} title={title}>
+        {title}
+      </h2>
       <div className={styles.content}>
         <p>
           {content} {link && LinkComponent}

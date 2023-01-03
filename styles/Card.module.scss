@@ -113,16 +113,15 @@
       }
     }
   }
-}
 
-.blog {
-  .card__image {
-    width: 100%;
-    height: 12rem;
-    position: relative;
+  &.blog {
+    .card__image {
+      height: 12rem;
+    }
 
-    .img {
-      border-radius: 0.25rem;
+    .title {
+      height: 6.5rem;
+      overflow: hidden;
     }
   }
 }

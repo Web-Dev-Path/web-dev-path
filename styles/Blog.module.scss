@@ -1,9 +1,41 @@
 @use './variables' as *;
 @use './mixins' as *;
 
+.blogContainer {
+  display: flex;
+  flex-direction: column;
+}
+
 .viewAll {
   display: flex;
   justify-content: flex-end;
   font-size: 1.5rem;
   font-weight: bold;
+  margin: -6rem 6.5rem 4rem 0;
+}
+
+.blogSearch {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include mobile {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+}
+
+.postContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.postContainer > div {
+  flex-basis: 20%;
+}
+
+.postContainer > div:last-child:nth-child(2n + 1) {
+  margin: 1.5rem auto 0 16%;
 }
