@@ -50,3 +50,10 @@
 .postContainer > div:last-child:nth-child(3n + 1) {
   margin: 1.5rem auto 0 16%;
 }
+
+.tag {
+  background-color: $light-bg-color;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-weight: bold;
+}

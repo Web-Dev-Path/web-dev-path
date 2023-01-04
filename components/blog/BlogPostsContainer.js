@@ -4,6 +4,7 @@ import Title from '@/components/snippets/Title';
 import Link from 'next/link';
 import styles from '@/styles/Blog.module.scss';
 import RevealContentContainer from '@/components/containers/RevealContentContainer';
+import { tagToHeading } from '@/utils/blogCategories';
 
 function* splitPosts(arr, n) {
   for (let i = 0; i < arr.length; i += n) {
@@ -23,7 +24,11 @@ const BlogPostsContainer = ({ posts, heading, tag, swipe = true }) => {
   return (
     <RevealContentContainer>
       <div className={styles.blogContainer}>
-        {heading ? <Title customClass='blogTitle' title={heading} /> : null}
+        {heading ? (
+          <Title customClass='blogTitle' title={heading} />
+        ) : tag ? (
+          <Title customClass='blogTitle' title={tagToHeading[tag]} />
+        ) : null}
         {
           // put in rows of 3 if more than 3 posts (for swipable cards)
           swipe ? (
