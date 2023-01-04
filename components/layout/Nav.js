@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
-import Image from 'next/legacy/image';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 import Container from '@/components/containers/Container';
 import styles from '@/styles/Nav.module.scss';
 import { linksNav } from '@/utils/links';
@@ -55,17 +55,14 @@ export default function Nav() {
       <Container>
         <div ref={containerRef}>
           <nav className={styles.nav}>
-            <div className={styles.nav__logo}>
-              <a href='/' passhref='true'>
-                <Image
-                  src='/images/svg/logo.svg'
-                  height={115}
-                  width={180}
-                  alt='Logo'
-                  title='Go to the Homepage'
-                />
-              </a>
-            </div>
+            <Link href='/'>
+              <img
+                className={styles.nav__logo}
+                src='/images/svg/logo.svg'
+                alt='Logo'
+                title='Go to the Homepage'
+              />
+            </Link>
             <ul
               className={`${styles.nav__links} ${active ? styles.active : ''}`}
             >

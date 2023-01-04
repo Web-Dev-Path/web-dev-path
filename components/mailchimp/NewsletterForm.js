@@ -1,5 +1,5 @@
 import { createRef, useState } from 'react';
-import Image from 'next/legacy/image';
+import Image from 'next/image';
 import { decode } from 'html-entities';
 import ReCAPTCHA from 'react-google-recaptcha';
 import Container from '@/components/containers/Container';
@@ -124,7 +124,6 @@ const NewsletterForm = ({ status, message, onValidated }) => {
               height={18}
               width={18}
               alt='Right Chevron SVG'
-              className={newsletterStyles.newsletter__right_chevron_image}
             />
           </span>
         </h2>

@@ -1,10 +1,3 @@
-const sleep = () =>
-  new Promise(resolve => {
-    setTimeout(() => {
-      resolve();
-    }, 350);
-  });
-
 export default async function handler(req, res) {
   const SECRET_KEY = process.env.RECAPTCHA_SECRET_KEY;
 
@@ -35,9 +28,6 @@ export default async function handler(req, res) {
       const captchaValidation = await response.json();
 
       if (captchaValidation.success) {
-        // Replace this with the API that will save the data received
-        // to your backend
-        await sleep();
         // Return 200 if everything is successful
         return res.status(200).send('OK');
       }
