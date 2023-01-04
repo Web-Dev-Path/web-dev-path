@@ -11,7 +11,7 @@ function* splitPosts(arr, n) {
   }
 }
 
-const BlogPostsContainer = ({ posts, heading, swipe = true }) => {
+const BlogPostsContainer = ({ posts, heading, tag, swipe = true }) => {
   // process posts props (e.g. insert default image)
   posts.map(post => {
     if (!post.image) {
@@ -31,7 +31,10 @@ const BlogPostsContainer = ({ posts, heading, swipe = true }) => {
               {[...splitPosts(posts, 3)].map((p, index) => (
                 <CardsColumns key={index} cards={p} customClass='blog' />
               ))}
-              <Link className={styles.viewAll} href='/blog/category/all'>
+              <Link
+                className={styles.viewAll}
+                href={tag ? `/blog/category/${tag}` : '/blog/category/all'}
+              >
                 view all
               </Link>
             </>

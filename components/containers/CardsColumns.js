@@ -16,7 +16,7 @@ export default function CardsColumns({ cards, customClass }) {
         grabCursor={true}
         modules={[Pagination]}
         pagination
-        centerInsufficientSlides={true}
+        centerInsufficientSlides={false}
         slidesPerView={1}
         breakpoints={{
           768: {

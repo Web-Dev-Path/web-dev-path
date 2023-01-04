@@ -4,7 +4,9 @@ export default function BlogCategory({ posts }) {
   // TODO: Temporary, to show more posts
   posts = posts.concat(posts).concat(posts);
 
-  return <BlogPostsContainer posts={posts} swipe={false} />;
+  return (
+    <BlogPostsContainer posts={posts} swipe={false} heading='Latest Posts' />
+  );
 }
 
 export async function getStaticProps() {

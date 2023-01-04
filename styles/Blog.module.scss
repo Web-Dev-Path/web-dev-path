@@ -33,9 +33,20 @@
 }
 
 .postContainer > div {
-  flex-basis: 20%;
+  justify-content: space-between;
+
+  @include mobile {
+    flex-basis: 100%;
+  }
+
+  @include tablet {
+    flex-basis: 45%;
+  }
+  @include desktop {
+    flex-basis: 22%;
+  }
 }
 
-.postContainer > div:last-child:nth-child(2n + 1) {
+.postContainer > div:last-child:nth-child(3n + 1) {
   margin: 1.5rem auto 0 16%;
 }
