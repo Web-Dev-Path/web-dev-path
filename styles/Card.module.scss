@@ -127,8 +127,14 @@
     }
 
     .title {
-      height: 6.5rem;
+      font-size: 1.3rem;
+      margin-bottom: 0.7rem;
+      max-height: 6rem;
       overflow: hidden;
+    }
+
+    &.swiper-wrapper {
+      justify-content: flex-start;
     }
   }
 

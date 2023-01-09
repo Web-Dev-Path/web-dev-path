@@ -5,7 +5,12 @@ export default function BlogCategory({ posts }) {
   posts = posts.concat(posts).concat(posts);
 
   return (
-    <BlogPostsContainer posts={posts} swipe={false} heading='Latest Posts' />
+    <BlogPostsContainer
+      posts={posts}
+      swipe={true}
+      heading='All Posts'
+      viewall={false}
+    />
   );
 }
 
@@ -21,6 +26,7 @@ export async function getStaticProps() {
         content: post.description,
         link: post.url,
         linkText: 'Read more',
+        tagList: post.tag_list,
       })),
     },
   };

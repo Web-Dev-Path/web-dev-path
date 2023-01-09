@@ -12,7 +12,13 @@ function* splitPosts(arr, n) {
   }
 }
 
-const BlogPostsContainer = ({ posts, heading, tag, swipe = true }) => {
+const BlogPostsContainer = ({
+  posts,
+  heading,
+  tag,
+  swipe = true,
+  viewall = true,
+}) => {
   // process posts props (e.g. insert default image)
   posts.map(post => {
     if (!post.image) {
@@ -36,12 +42,6 @@ const BlogPostsContainer = ({ posts, heading, tag, swipe = true }) => {
               {[...splitPosts(posts, 3)].map((p, index) => (
                 <CardsColumns key={index} cards={p} customClass='blog' />
               ))}
-              <Link
-                className={styles.viewAll}
-                href={tag ? `/blog/category/${tag}` : '/blog/category/all'}
-              >
-                view all
-              </Link>
             </>
           ) : (
             <div className={styles.postContainer}>
@@ -51,6 +51,14 @@ const BlogPostsContainer = ({ posts, heading, tag, swipe = true }) => {
             </div>
           )
         }
+        {viewall ? (
+          <Link
+            className={styles.viewAll}
+            href={tag ? `/blog/category/${tag}` : '/blog/category/all'}
+          >
+            view all
+          </Link>
+        ) : null}
       </div>
     </RevealContentContainer>
   );
