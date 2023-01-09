@@ -10,6 +10,7 @@ export default function BlogCategory({ posts }) {
       posts={posts}
       swipe={false}
       heading={tagToHeading[tag]}
+      viewall={false}
     />
   );
 }

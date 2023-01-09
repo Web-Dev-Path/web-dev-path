@@ -1,9 +1,6 @@
 import BlogPostsContainer from '@/components/blog/BlogPostsContainer';
 
 export default function BlogCategory({ posts }) {
-  // TODO: Temporary, to show more posts
-  posts = posts.concat(posts).concat(posts);
-
   return (
     <BlogPostsContainer
       posts={posts}

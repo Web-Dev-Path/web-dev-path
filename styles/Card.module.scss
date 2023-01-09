@@ -120,6 +120,7 @@
 
     @include desktop {
       min-width: 25%;
+      max-width: 18.75rem;
     }
 
     .card__image {
@@ -133,8 +134,8 @@
       overflow: hidden;
     }
 
-    &.swiper-wrapper {
-      justify-content: flex-start;
+    .swiper-wrapper {
+      justify-content: flex-end;
     }
   }
 
