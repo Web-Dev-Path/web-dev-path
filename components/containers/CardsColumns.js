@@ -30,10 +30,16 @@ export default function CardsColumns({ cards, customClass }) {
               slidesPerView: 2,
               spaceBetween: 20,
             },
-            1334: {
-              slidesPerView: 3,
-              spaceBetween: 20,
-            },
+            1334:
+              customClass === 'blog'
+                ? {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                  }
+                : {
+                    slidesPerView: cards.length,
+                    spaceBetween: cards.length < 3 ? 75 : 20,
+                  },
           }}
         >
           {cards.map((card, index) => (

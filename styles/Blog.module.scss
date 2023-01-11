@@ -7,11 +7,15 @@
 }
 
 .viewAll {
-  display: flex;
-  justify-content: flex-end;
   font-size: 1.5rem;
   font-weight: bold;
   margin: -6rem 6.5rem 4rem 0;
+  text-align: right;
+
+  @include mobile {
+    text-align: center;
+    margin: -5rem auto 4rem auto;
+  }
 }
 
 .blogSearch {
@@ -30,25 +34,44 @@
   flex-wrap: wrap;
   justify-content: center;
   margin-bottom: 3rem;
+
+  @include mobile {
+    justify-content: center;
+  }
+
+  @include tablet {
+    justify-content: space-between;
+  }
+
+  @include desktop {
+    justify-content: flex-start;
+    margin-left: 4rem;
+  }
 }
 
 .postContainer > div {
-  justify-content: space-between;
-
   @include mobile {
     flex-basis: 100%;
   }
 
   @include tablet {
-    flex-basis: 45%;
+    flex-basis: 43%;
   }
+
   @include desktop {
     flex-basis: 22%;
   }
 }
 
-.postContainer > div:last-child:nth-child(3n + 1) {
-  margin: 1.5rem auto 0 16%;
+.postContainer::after {
+  @include tablet {
+    content: '';
+    flex: auto;
+  }
+
+  @include desktop {
+    content: unset;
+  }
 }
 
 .tag {

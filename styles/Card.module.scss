@@ -116,13 +116,6 @@
   }
 
   &.blog {
-    margin: 1.5rem 1.5rem 0 1.5rem;
-
-    @include desktop {
-      min-width: 25%;
-      max-width: 18.75rem;
-    }
-
     .card__image {
       height: 12rem;
     }
@@ -130,12 +123,8 @@
     .title {
       font-size: 1.3rem;
       margin-bottom: 0.7rem;
-      max-height: 6rem;
+      max-height: 7rem;
       overflow: hidden;
-    }
-
-    .swiper-wrapper {
-      justify-content: flex-end;
     }
   }
 

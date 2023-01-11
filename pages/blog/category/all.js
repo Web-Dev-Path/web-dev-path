@@ -4,7 +4,7 @@ export default function BlogCategory({ posts }) {
   return (
     <BlogPostsContainer
       posts={posts}
-      swipe={true}
+      swipe={false}
       heading='All Posts'
       viewall={false}
     />
