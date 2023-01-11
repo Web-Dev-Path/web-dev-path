@@ -12,7 +12,7 @@ export default function Blog({ posts }) {
   );
 
   return (
-    <Container>
+    <>
       <div className={styles.blogSearch}>
         <Title customClass='blogTitle' title='Latest Posts' />
         {/*
@@ -22,7 +22,7 @@ export default function Blog({ posts }) {
       <BlogPostsContainer posts={latestPosts} />
       <BlogPostsContainer posts={nextJsPosts} tag='nextjs' />
       <BlogPostsContainer posts={typescriptPosts} tag='typescript' />
-    </Container>
+    </>
   );
 }
 

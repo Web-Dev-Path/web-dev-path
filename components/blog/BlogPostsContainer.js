@@ -5,6 +5,7 @@ import Link from 'next/link';
 import styles from '@/styles/Blog.module.scss';
 import RevealContentContainer from '@/components/containers/RevealContentContainer';
 import { tagToHeading } from '@/utils/blogCategories';
+import Container from '@/components/containers/Container';
 
 function* splitPosts(arr, n) {
   for (let i = 0; i < arr.length; i += n) {
@@ -44,11 +45,13 @@ const BlogPostsContainer = ({
               ))}
             </>
           ) : (
-            <div className={styles.postContainer}>
-              {posts.map((p, index) => (
-                <Card customClass='blog' key={index} card={p} />
-              ))}
-            </div>
+            <Container>
+              <div className={styles.postContainer}>
+                {posts.map((p, index) => (
+                  <Card customClass='blog' key={index} card={p} />
+                ))}
+              </div>
+            </Container>
           )
         }
         {viewall ? (

@@ -4,22 +4,5 @@
 .title {
   &.blogTitle {
     align-self: flex-start;
-
-    @include mobile {
-      margin-left: 5rem;
-      font-size: 2.5rem;
-    }
-
-    @include tablet {
-      margin-left: 5.5rem;
-    }
-
-    @include desktop {
-      margin-left: 6.5rem;
-    }
-
-    @include medium-desktop {
-      margin-left: 7.5rem;
-    }
   }
 }

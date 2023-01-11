@@ -45,7 +45,6 @@
 
   @include desktop {
     justify-content: flex-start;
-    margin-left: 4rem;
   }
 }
 
@@ -59,7 +58,8 @@
   }
 
   @include desktop {
-    flex-basis: 22%;
+    flex-basis: 32%;
+    max-width: 200px;
   }
 }
 
