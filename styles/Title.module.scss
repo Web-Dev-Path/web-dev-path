@@ -4,5 +4,8 @@
 .title {
   &.blogTitle {
     align-self: flex-start;
+    margin: 0 auto;
+    width: 90%;
+    max-width: $large-desktop-breakpoint;
   }
 }

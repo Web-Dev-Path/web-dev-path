@@ -54,7 +54,7 @@ const BlogPostsContainer = ({
             </Container>
           )
         }
-        {viewall ? (
+        {viewall && posts.length >= 3 ? (
           <Link
             className={styles.viewAll}
             href={tag ? `/blog/category/${tag}` : '/blog/category/all'}
