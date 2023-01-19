@@ -114,4 +114,24 @@
       }
     }
   }
+
+  &.blog {
+    margin: 1rem 0.5rem 0 0.5rem;
+    .card__image {
+      height: 12rem;
+    }
+
+    .title {
+      font-size: 1.3rem;
+      margin-bottom: 0.7rem;
+      max-height: 7rem;
+      overflow: hidden;
+    }
+  }
+
+  .tagListContainer {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: -1rem;
+  }
 }

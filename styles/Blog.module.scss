@@ -1,0 +1,82 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+.blogContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.viewAll {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: -6rem 6.5rem 4rem 0;
+  text-align: right;
+
+  @include mobile {
+    text-align: center;
+    margin: -5rem auto 4rem auto;
+  }
+}
+
+.blogSearch {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include mobile {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+}
+
+.postContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 3rem;
+
+  @include mobile {
+    justify-content: center;
+  }
+
+  @include tablet {
+    justify-content: space-between;
+  }
+
+  @include desktop {
+    justify-content: flex-start;
+  }
+}
+
+.postContainer > div {
+  @include mobile {
+    flex-basis: 100%;
+  }
+
+  @include tablet {
+    flex-basis: 43%;
+  }
+
+  @include desktop {
+    flex-basis: 32%;
+    max-width: 200px;
+  }
+}
+
+.postContainer::after {
+  @include tablet {
+    content: '';
+    flex: auto;
+  }
+
+  @include desktop {
+    content: unset;
+  }
+}
+
+.tag {
+  background-color: $light-bg-color;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-weight: bold;
+}
