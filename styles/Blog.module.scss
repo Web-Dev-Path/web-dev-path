@@ -10,12 +10,14 @@
 .viewAll {
   font-size: 1.5rem;
   font-weight: bold;
-  margin: -6rem 6.5rem 4rem 0;
-  text-align: right;
+  position: relative;
+  top: -3rem;
+  display: block;
+  text-align: center;
 
-  @include mobile {
-    text-align: center;
-    margin: -5rem auto 4rem auto;
+  @include desktop {
+    float: right;
+    top: -5rem;
   }
 }
 
