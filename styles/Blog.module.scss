@@ -4,6 +4,7 @@
 .blogContainer {
   display: flex;
   flex-direction: column;
+  margin: 3rem 0;
 }
 
 .viewAll {
@@ -20,8 +21,13 @@
 
 .blogSearch {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  padding-top: 2.5rem;
+  margin-bottom: -2.5rem;
+  //TO-DO: Add the style below back when implementing search functionality
+  // margin: 0 auto;
+  // width: 90%;
+  // max-width: $large-desktop-breakpoint;
 
   @include mobile {
     flex-direction: column-reverse;
