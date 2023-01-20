@@ -11,21 +11,9 @@
   box-shadow: 2px 4px 8px 3px rgba(0, 0, 0, 0.08);
   font-size: 1.2rem;
 
-  @include tablet {
-    margin-right: 4rem;
-  }
-
-  @include desktop {
-    margin-right: 4.5rem;
-  }
-
-  @include medium-desktop {
-    margin-right: 6rem;
-  }
-
   @include mobile {
     width: 80%;
-    margin: 3rem auto 0 auto;
+    margin: 3rem auto;
   }
 
   input[type='search'] {

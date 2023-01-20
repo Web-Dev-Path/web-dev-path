@@ -82,6 +82,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## Unreleased
 
 ### Added
+
 - Blog page which pulls content from dev.to
 
 ### Fixed
@@ -89,4 +90,4 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - replaced next/legacy/image with next/image
 - removed unused function in api/register.js
 - adjusted contact form message on mobile
-
+- blog container and title styling

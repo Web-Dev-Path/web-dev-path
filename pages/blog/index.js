@@ -15,9 +15,7 @@ export default function Blog({ posts }) {
     <>
       <div className={styles.blogSearch}>
         <Title customClass='blogTitle' title='Latest Posts' />
-        {/*
-          <SearchBar />
-        */}
+        {/* <SearchBar /> */}
       </div>
       <BlogPostsContainer posts={latestPosts} />
       <BlogPostsContainer posts={nextJsPosts} tag='nextjs' />

@@ -4,24 +4,32 @@
 .blogContainer {
   display: flex;
   flex-direction: column;
+  margin: 3rem 0;
 }
 
 .viewAll {
   font-size: 1.5rem;
   font-weight: bold;
-  margin: -6rem 6.5rem 4rem 0;
-  text-align: right;
+  position: relative;
+  top: -3rem;
+  display: block;
+  text-align: center;
 
-  @include mobile {
-    text-align: center;
-    margin: -5rem auto 4rem auto;
+  @include desktop {
+    float: right;
+    top: -5rem;
   }
 }
 
 .blogSearch {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  padding-top: 2.5rem;
+  margin-bottom: -2.5rem;
+  //TO-DO: Add the style below back when implementing search functionality
+  // margin: 0 auto;
+  // width: 90%;
+  // max-width: $large-desktop-breakpoint;
 
   @include mobile {
     flex-direction: column-reverse;
