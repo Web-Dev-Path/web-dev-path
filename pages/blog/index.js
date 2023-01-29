@@ -1,27 +1,52 @@
+import { useEffect, useState } from 'react';
 import BlogPostsContainer from '@/components/blog/BlogPostsContainer';
-import Container from '@/components/containers/Container';
 import SearchBar from '@/components/blog/SearchBar';
-import styles from '@/styles/Blog.module.scss';
 import Title from '@/components/snippets/Title';
+import styles from '@/styles/Blog.module.scss';
 import { blogRevalidate } from '@/utils/config';
 import { tagToHeading } from '@/utils/blogCategories';
 
 export default function Blog({ posts }) {
-  const latestPosts = posts.slice(0, 3);
+  const [searchResults, setSearchResults] = useState(null);
+  const [searchTerm, setSearchTerm] = useState('temp');
   const getPostsByTag = tag => {
     return posts.filter(post => post.tagList.includes(tag));
   };
 
+  useEffect(() => {
+    console.log('search result', searchResults);
+  }, [searchResults]);
+
   return (
     <>
       <div className={styles.blogSearch}>
-        <Title customClass='blogTitle' title='Latest Posts' />
-        <SearchBar />
+        <Title
+          customClass='blogTitle'
+          title={searchResults ? '' : 'Latest Posts'}
+        />
+        <SearchBar
+          posts={posts}
+          setSearchTerm={setSearchTerm}
+          setSearchResults={setSearchResults}
+        />
       </div>
-      <BlogPostsContainer posts={latestPosts} />
-      {Object.keys(tagToHeading).map(tag => (
-        <BlogPostsContainer key={tag} posts={getPostsByTag(tag)} tag={tag} />
-      ))}
+      {searchResults ? (
+        <BlogPostsContainer
+          posts={searchResults}
+          heading={`${searchResults.length} search Results for '${searchTerm}'`}
+        />
+      ) : (
+        <>
+          <BlogPostsContainer posts={posts.slice(0, 3)} />
+          {Object.keys(tagToHeading).map(tag => (
+            <BlogPostsContainer
+              key={tag}
+              posts={getPostsByTag(tag)}
+              tag={tag}
+            />
+          ))}
+        </>
+      )}
     </>
   );
 }
