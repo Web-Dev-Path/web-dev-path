@@ -1,4 +1,5 @@
 import BlogPostsContainer from '@/components/blog/BlogPostsContainer';
+import { blogRevalidate } from '@/utils/config';
 
 export default function BlogCategory({ posts }) {
   return (
@@ -26,5 +27,6 @@ export async function getStaticProps() {
         tagList: post.tag_list,
       })),
     },
+    revalidate: blogRevalidate,
   };
 }

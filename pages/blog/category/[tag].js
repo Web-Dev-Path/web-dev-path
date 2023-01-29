@@ -1,6 +1,7 @@
 import BlogPostsContainer from '@/components/blog/BlogPostsContainer';
 import { paths, tagToHeading } from '@/utils/blogCategories';
 import { useRouter } from 'next/router';
+import { blogRevalidate } from '@/utils/config';
 
 export default function BlogCategory({ posts }) {
   const router = useRouter();
@@ -33,6 +34,7 @@ export async function getStaticProps({ params }) {
           tagList: post.tag_list,
         })),
     },
+    revalidate: blogRevalidate,
   };
 }
 

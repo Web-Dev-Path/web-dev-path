@@ -3,23 +3,25 @@ import Container from '@/components/containers/Container';
 import SearchBar from '@/components/blog/SearchBar';
 import styles from '@/styles/Blog.module.scss';
 import Title from '@/components/snippets/Title';
+import { blogRevalidate } from '@/utils/config';
+import { tagToHeading } from '@/utils/blogCategories';
 
 export default function Blog({ posts }) {
   const latestPosts = posts.slice(0, 3);
-  const nextJsPosts = posts.filter(post => post.tagList.includes('nextjs'));
-  const typescriptPosts = posts.filter(post =>
-    post.tagList.includes('typescript')
-  );
+  const getPostsByTag = tag => {
+    return posts.filter(post => post.tagList.includes(tag));
+  };
 
   return (
     <>
       <div className={styles.blogSearch}>
         <Title customClass='blogTitle' title='Latest Posts' />
-        {/* <SearchBar /> */}
+        <SearchBar />
       </div>
       <BlogPostsContainer posts={latestPosts} />
-      <BlogPostsContainer posts={nextJsPosts} tag='nextjs' />
-      <BlogPostsContainer posts={typescriptPosts} tag='typescript' />
+      {Object.keys(tagToHeading).map(tag => (
+        <BlogPostsContainer key={tag} posts={getPostsByTag(tag)} tag={tag} />
+      ))}
     </>
   );
 }
@@ -40,5 +42,6 @@ export async function getStaticProps() {
         tagList: post.tag_list,
       })),
     },
+    revalidate: blogRevalidate,
   };
 }
