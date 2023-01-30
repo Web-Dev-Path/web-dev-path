@@ -9,6 +9,7 @@ const SearchBar = ({ items, setSearchTerm, setSearchResults }) => {
     const results = items.filter(
       post =>
         post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        post.content.toLowerCase().includes(searchTerm.toLowerCase()) ||
         post.tagList.some(tag =>
           tag.toLowerCase().includes(searchTerm.toLowerCase())
         )
