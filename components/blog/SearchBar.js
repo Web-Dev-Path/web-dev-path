@@ -1,22 +1,32 @@
 import styles from '@/styles/SearchBar.module.scss';
+import { useRef } from 'react';
 
-const SearchBar = ({ posts, setSearchTerm, setSearchResults }) => {
-  const handleChange = e => {
-    if (!e.target.value) return setSearchResults(null);
-    const results = posts.filter(post =>
-      post.title.toLowerCase().includes(e.target.value.toLowerCase())
+const SearchBar = ({ items, setSearchTerm, setSearchResults }) => {
+  const searchInput = useRef(null);
+  const search = () => {
+    const searchTerm = searchInput.current.value;
+    if (!searchTerm) return setSearchResults(null);
+    const results = items.filter(
+      post =>
+        post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        post.tagList.some(tag =>
+          tag.toLowerCase().includes(searchTerm.toLowerCase())
+        )
     );
     setSearchResults(results);
-    setSearchTerm(e.target.value);
+    setSearchTerm(searchTerm);
   };
   return (
     <div className={styles.searchBar}>
       <input
+        ref={searchInput}
         type='search'
         placeholder='keyword or topic'
-        onChange={handleChange}
+        onChange={search}
       />
-      <button type='submit'>Search</button>
+      <button type='submit' onClick={search}>
+        Search
+      </button>
     </div>
   );
 };

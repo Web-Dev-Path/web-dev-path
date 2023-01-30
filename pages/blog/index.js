@@ -25,7 +25,7 @@ export default function Blog({ posts }) {
           title={searchResults ? '' : 'Latest Posts'}
         />
         <SearchBar
-          posts={posts}
+          items={posts}
           setSearchTerm={setSearchTerm}
           setSearchResults={setSearchResults}
         />
