@@ -1,21 +1,10 @@
 import styles from '@/styles/SearchBar.module.scss';
 import { useRef } from 'react';
 
-const SearchBar = ({ items, setSearchTerm, setSearchResults }) => {
+const SearchBar = ({ setSearchTerm }) => {
   const searchInput = useRef(null);
   const search = () => {
-    const searchTerm = searchInput.current.value;
-    if (!searchTerm) return setSearchResults(null);
-    const results = items.filter(
-      post =>
-        post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        post.content.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        post.tagList.some(tag =>
-          tag.toLowerCase().includes(searchTerm.toLowerCase())
-        )
-    );
-    setSearchResults(results);
-    setSearchTerm(searchTerm);
+    setSearchTerm(searchInput.current.value);
   };
   return (
     <div className={styles.searchBar}>

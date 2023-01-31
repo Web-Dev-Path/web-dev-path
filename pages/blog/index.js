@@ -5,17 +5,18 @@ import Title from '@/components/snippets/Title';
 import styles from '@/styles/Blog.module.scss';
 import { blogRevalidate } from '@/utils/config';
 import { tagToHeading } from '@/utils/blogCategories';
+import { blogSearch } from '@/utils/search';
 
 export default function Blog({ posts }) {
   const [searchResults, setSearchResults] = useState(null);
-  const [searchTerm, setSearchTerm] = useState('temp');
+  const [searchTerm, setSearchTerm] = useState('');
   const getPostsByTag = tag => {
     return posts.filter(post => post.tagList.includes(tag));
   };
 
   useEffect(() => {
-    console.log('search result', searchResults);
-  }, [searchResults]);
+    setSearchResults(blogSearch(posts, searchTerm));
+  }, [searchTerm]);
 
   return (
     <>
