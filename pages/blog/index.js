@@ -19,9 +19,9 @@ export default function Blog({ posts }) {
     filteredData.posts = filteredPosts;
     filteredData.heading = `${
       filteredPosts.length === 0 ? 'no' : filteredPosts.length
-    } search 
-      ${filteredPosts.length > 1 ? 'results' : 'result'} for 
-      '${searchTerm}'`;
+    } search ${
+      filteredPosts.length > 1 ? 'results' : 'result'
+    } for '${searchTerm}'`;
     filteredData.viewall = false;
   }
 
