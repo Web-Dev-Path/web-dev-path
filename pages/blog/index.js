@@ -17,7 +17,12 @@ export default function Blog({ posts }) {
   if (searchTerm) {
     const filteredPosts = blogSearch(posts, searchTerm);
     filteredData.posts = filteredPosts;
-    filteredData.heading = `${filteredPosts.length} search Results for '${searchTerm}'`;
+    filteredData.heading = `${
+      filteredPosts.length === 0 ? 'no' : filteredPosts.length
+    } search 
+      ${filteredPosts.length > 1 ? 'results' : 'result'} for 
+      '${searchTerm}'`;
+    filteredData.viewall = false;
   }
 
   return (
