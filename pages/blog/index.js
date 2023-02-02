@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import BlogPostsContainer from '@/components/blog/BlogPostsContainer';
 import SearchBar from '@/components/blog/SearchBar';
 import Title from '@/components/snippets/Title';
@@ -8,46 +8,33 @@ import { tagToHeading } from '@/utils/blogCategories';
 import { blogSearch } from '@/utils/search';
 
 export default function Blog({ posts }) {
-  const [searchResults, setSearchResults] = useState(null);
   const [searchTerm, setSearchTerm] = useState('');
-  const getPostsByTag = tag => {
-    return posts.filter(post => post.tagList.includes(tag));
+
+  const filteredData = {
+    posts: posts.slice(0, 3),
   };
 
-  useEffect(() => {
-    setSearchResults(blogSearch(posts, searchTerm));
-  }, [searchTerm]);
+  if (searchTerm) {
+    const filteredPosts = blogSearch(posts, searchTerm);
+    filteredData.posts = filteredPosts;
+    filteredData.heading = `${filteredPosts.length} search Results for '${searchTerm}'`;
+  }
 
   return (
     <>
       <div className={styles.blogSearch}>
-        <Title
-          customClass='blogTitle'
-          title={searchResults ? '' : 'Latest Posts'}
-        />
-        <SearchBar
-          items={posts}
-          setSearchTerm={setSearchTerm}
-          setSearchResults={setSearchResults}
-        />
+        <Title customClass='blogTitle' title={!searchTerm && 'Latest Posts'} />
+        <SearchBar setSearchTerm={setSearchTerm} />
       </div>
-      {searchResults ? (
-        <BlogPostsContainer
-          posts={searchResults}
-          heading={`${searchResults.length} search Results for '${searchTerm}'`}
-        />
-      ) : (
-        <>
-          <BlogPostsContainer posts={posts.slice(0, 3)} />
-          {Object.keys(tagToHeading).map(tag => (
-            <BlogPostsContainer
-              key={tag}
-              posts={getPostsByTag(tag)}
-              tag={tag}
-            />
-          ))}
-        </>
-      )}
+      <BlogPostsContainer {...filteredData} />
+      {!searchTerm &&
+        Object.keys(tagToHeading).map(tag => (
+          <BlogPostsContainer
+            key={tag}
+            posts={posts.filter(post => post.tagList.includes(tag))}
+            tag={tag}
+          />
+        ))}
     </>
   );
 }
