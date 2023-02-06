@@ -1,10 +1,22 @@
 import styles from '@/styles/SearchBar.module.scss';
+import { useRef } from 'react';
 
-const SearchBar = () => {
+const SearchBar = ({ setSearchTerm }) => {
+  const searchInput = useRef(null);
+  const search = () => {
+    setSearchTerm(searchInput.current.value);
+  };
   return (
     <div className={styles.searchBar}>
-      <input type='search' placeholder='keyword or topic' />
-      <button type='submit'>Search</button>
+      <input
+        ref={searchInput}
+        type='search'
+        placeholder='keyword or topic'
+        onChange={search}
+      />
+      <button type='submit' onClick={search}>
+        Search
+      </button>
     </div>
   );
 };
