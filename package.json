@@ -37,5 +37,8 @@
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
     "prettylint": "^1.0.0"
+  },
+  "resolutions": {
+    "styled-components": "^5"
   }
 }
