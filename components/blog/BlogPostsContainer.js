@@ -32,9 +32,9 @@ const BlogPostsContainer = ({
     <RevealContentContainer>
       <div className={styles.blogContainer}>
         {heading ? (
-          <Title customClass='blogTitle' title={heading} />
+          <Title blogTitle title={heading} />
         ) : tag ? (
-          <Title customClass='blogTitle' title={tagToHeading[tag]} />
+          <Title blogTitle title={tagToHeading[tag]} />
         ) : null}
         {
           // put in rows of 3 if more than 3 posts (for swipable cards)

@@ -28,7 +28,7 @@ export default function Blog({ posts }) {
   return (
     <>
       <div className={styles.blogSearch}>
-        <Title customClass='blogTitle' title={!searchTerm && 'Latest Posts'} />
+        <Title blogTitle title={!searchTerm && 'Latest Posts'} />
         <SearchBar setSearchTerm={setSearchTerm} />
       </div>
       <BlogPostsContainer {...filteredData} />

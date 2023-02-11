@@ -1,30 +1,20 @@
-// import styles from '@/styles/Title.module.scss';
 import styled from 'styled-components';
 
 export const TitleStyle = styled.h2`
-  color: red;
+  ${props =>
+    props.blogTitle &&
+    `
+    align-self: flex-start;
+    margin: 0 auto 1rem;
+    width: 90%;
+    max-width: $large-desktop-breakpoint;
+    min-height: 5rem;
+    color: black;
+  `};
 `;
 
-const Title = ({ title }) => {
-  return (
-    <div>
-      <TitleStyle>{title}</TitleStyle>
-    </div>
-  );
+const Title = ({ title, blogTitle }) => {
+  return <TitleStyle blogTitle={blogTitle}>{title}</TitleStyle>;
 };
 
 export default Title;
-
-// const Title = ({ title, customClass }) => {
-//   return (
-//     <h2
-//       className={
-//         customClass ? `${styles.title} ${styles[customClass]}` : styles.title
-//       }
-//     >
-//       {title}
-//     </h2>
-//   );
-// };
-
-// export default Title;
