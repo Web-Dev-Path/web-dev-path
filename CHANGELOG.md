@@ -85,6 +85,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Blog page which pulls content from dev.to
 - Search functionality for blog posts
+- Styled components to Title component
 
 ### Fixed
 
