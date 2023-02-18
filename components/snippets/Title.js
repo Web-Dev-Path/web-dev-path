@@ -5,12 +5,11 @@ export const TitleStyle = styled.h2`
     props.blogTitle &&
     `
     align-self: flex-start;
-    margin: 0 auto 1rem;
+    margin: ${props.adjustedTitle ? '0 auto 1rem 15rem' : '0 auto 1rem'};
     width: 90%;
-    max-width: $large-desktop-breakpoint;
+    max-width: 1440px;
     min-height: 5rem;
-    color: black;
-  `};
+    `};
 `;
 
 const Title = ({ title, blogTitle }) => {
