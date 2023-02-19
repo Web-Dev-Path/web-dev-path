@@ -23,15 +23,14 @@
 
 .blogSearch {
   display: flex;
-  align-items: center;
   padding-top: 2.5rem;
-  margin: 0 auto;
-  width: 90%;
-  max-width: $large-desktop-breakpoint;
+  justify-content: space-between;
+  flex-direction: column-reverse;
+  align-items: flex-start;
 
-  @include mobile {
-    flex-direction: column-reverse;
-    align-items: flex-start;
+  @include desktop {
+    align-items: center;
+    flex-direction: row;
   }
 }
 

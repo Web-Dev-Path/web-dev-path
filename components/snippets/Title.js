@@ -1,19 +1,12 @@
 import styled from 'styled-components';
 
-export const TitleStyle = styled.h2`
-  ${props =>
-    props.blogTitle &&
-    `
-    align-self: flex-start;
-    margin: ${props.adjustedTitle ? '0 auto 1rem 15rem' : '0 auto 1rem'};
-    width: 90%;
-    max-width: 1440px;
-    min-height: 5rem;
-    `};
+export const StyledTitle = styled.h2`
+  align-self: flex-start;
+  margin: '0 auto 1rem';
 `;
 
-const Title = ({ title, blogTitle }) => {
-  return <TitleStyle blogTitle={blogTitle}>{title}</TitleStyle>;
+const Title = ({ title }) => {
+  return <StyledTitle>{title}</StyledTitle>;
 };
 
 export default Title;
