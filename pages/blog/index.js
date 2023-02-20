@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import BlogPostsContainer from '@/components/blog/BlogPostsContainer';
+import Container from '@/components/containers/Container';
 import SearchBar from '@/components/blog/SearchBar';
 import Title from '@/components/snippets/Title';
 import styles from '@/styles/Blog.module.scss';
@@ -27,10 +28,13 @@ export default function Blog({ posts }) {
 
   return (
     <>
-      <div className={styles.blogSearch}>
-        <Title customClass='blogTitle' title={!searchTerm && 'Latest Posts'} />
-        <SearchBar setSearchTerm={setSearchTerm} />
-      </div>
+      <Container>
+        <div className={styles.blogSearch}>
+          <Title blogTitle title={!searchTerm && 'Latest Posts'} />
+          <SearchBar setSearchTerm={setSearchTerm} />
+        </div>
+      </Container>
+
       <BlogPostsContainer {...filteredData} />
       {!searchTerm &&
         Object.keys(tagToHeading).map(tag => (
