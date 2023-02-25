@@ -31,7 +31,7 @@ export default function Card({
       </h2>
       {tagList && tagList.length > 0 ? (
         <div className={styles.tagListContainer}>
-          {tagList.map((tag, i) => (
+          {tagList.slice(0, 8).map((tag, i) => (
             <Tag key={i} text={tag} />
           ))}
         </div>
