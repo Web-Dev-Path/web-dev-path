@@ -93,3 +93,4 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - removed unused function in api/register.js
 - adjusted contact form message on mobile
 - blog container and title styling
+- blog card container tags overflowing
