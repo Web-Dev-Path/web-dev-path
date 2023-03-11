@@ -1,7 +1,12 @@
 import styles from '@/styles/Blog.module.scss';
+import Link from 'next/link';
 
 const Tag = ({ text }) => {
-  return <div className={styles.tag}>{text}</div>;
+  return (
+    <Link className={styles.tag} href={`/blog/category/${text}`}>
+      {text}
+    </Link>
+  );
 };
 
 export default Tag;

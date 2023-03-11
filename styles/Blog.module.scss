@@ -7,17 +7,28 @@
   margin: 3rem 0;
 }
 
-.viewAll {
+.bottomLink {
   font-size: 1.5rem;
   font-weight: bold;
   position: relative;
-  top: -3rem;
   display: block;
   text-align: center;
+}
 
+.viewAll {
+  top: -3rem;
   @include desktop {
     float: right;
     top: -5rem;
+  }
+}
+
+.backLink {
+  top: -2rem;
+
+  @include desktop {
+    float: left;
+    top: -1rem;
   }
 }
 
@@ -84,4 +95,5 @@
   padding: 0.5rem 1rem;
   border-radius: 2rem;
   font-weight: bold;
+  text-decoration: none !important;
 }
