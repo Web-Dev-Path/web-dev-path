@@ -51,31 +51,18 @@
   justify-content: center;
   margin-bottom: 3rem;
 
-  @include mobile {
-    justify-content: center;
-  }
-
   @include tablet {
-    justify-content: space-between;
-  }
-
-  @include desktop {
     justify-content: flex-start;
   }
 }
 
 .postContainer > div {
-  @include mobile {
-    flex-basis: 100%;
-  }
-
-  @include tablet {
-    flex-basis: 43%;
-  }
-
   @include desktop {
+    flex-basis: 48%;
+  }
+
+  @include large-desktop {
     flex-basis: 32%;
-    max-width: 200px;
   }
 }
 
@@ -88,12 +75,4 @@
   @include desktop {
     content: unset;
   }
-}
-
-.tag {
-  background-color: $light-bg-color;
-  padding: 0.5rem 1rem;
-  border-radius: 2rem;
-  font-weight: bold;
-  text-decoration: none !important;
 }

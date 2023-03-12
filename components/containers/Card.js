@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from '@/styles/Card.module.scss';
-import Tag from '@/components/blog/Tag';
+import { Tag, TagContainer } from '@/components/blog/Tag';
 
 export default function Card({
   card: { image, altTag, title, content, link, linkText, tagList },
@@ -30,11 +30,11 @@ export default function Card({
         {title}
       </h2>
       {tagList && tagList.length > 0 ? (
-        <div className={styles.tagListContainer}>
+        <TagContainer>
           {tagList.slice(0, 8).map((tag, i) => (
             <Tag key={i} text={tag} />
           ))}
-        </div>
+        </TagContainer>
       ) : null}
       <div className={styles.content}>
         <p>
