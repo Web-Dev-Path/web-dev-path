@@ -7,17 +7,28 @@
   margin: 3rem 0;
 }
 
-.viewAll {
+.bottomLink {
   font-size: 1.5rem;
   font-weight: bold;
   position: relative;
-  top: -3rem;
   display: block;
   text-align: center;
+}
 
+.viewAll {
+  top: -3rem;
   @include desktop {
     float: right;
     top: -5rem;
+  }
+}
+
+.backLink {
+  top: -2rem;
+
+  @include desktop {
+    float: left;
+    top: -1rem;
   }
 }
 
@@ -40,31 +51,18 @@
   justify-content: center;
   margin-bottom: 3rem;
 
-  @include mobile {
-    justify-content: center;
-  }
-
   @include tablet {
-    justify-content: space-between;
-  }
-
-  @include desktop {
     justify-content: flex-start;
   }
 }
 
 .postContainer > div {
-  @include mobile {
-    flex-basis: 100%;
-  }
-
-  @include tablet {
-    flex-basis: 43%;
-  }
-
   @include desktop {
+    flex-basis: 48%;
+  }
+
+  @include large-desktop {
     flex-basis: 32%;
-    max-width: 200px;
   }
 }
 
@@ -77,11 +75,4 @@
   @include desktop {
     content: unset;
   }
-}
-
-.tag {
-  background-color: $light-bg-color;
-  padding: 0.5rem 1rem;
-  border-radius: 2rem;
-  font-weight: bold;
 }

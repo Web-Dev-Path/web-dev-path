@@ -6,13 +6,17 @@ import { blogRevalidate } from '@/utils/config';
 export default function BlogCategory({ posts }) {
   const router = useRouter();
   const { tag } = router.query;
+
   return (
-    <BlogPostsContainer
-      posts={posts}
-      swipe={false}
-      heading={tagToHeading[tag]}
-      viewall={false}
-    />
+    <>
+      <BlogPostsContainer
+        posts={posts}
+        swipe={false}
+        heading={tagToHeading[tag] || `#${tag}`}
+        viewall={false}
+        back={true}
+      />
+    </>
   );
 }
 
@@ -41,6 +45,6 @@ export async function getStaticProps({ params }) {
 export async function getStaticPaths() {
   return {
     paths,
-    fallback: false,
+    fallback: 'blocking',
   };
 }

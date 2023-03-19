@@ -19,6 +19,7 @@ const BlogPostsContainer = ({
   tag,
   swipe = true,
   viewall = true,
+  back = false,
 }) => {
   // process posts props (e.g. insert default image)
   posts.map(post => {
@@ -51,7 +52,7 @@ const BlogPostsContainer = ({
           ) : (
             <Container>
               <div className={styles.postContainer}>
-                {posts.map((p, index) => (
+                {posts?.map((p, index) => (
                   <Card customClass='blog' key={index} card={p} />
                 ))}
               </div>
@@ -61,10 +62,20 @@ const BlogPostsContainer = ({
         {viewall && posts.length >= 3 ? (
           <Container>
             <Link
-              className={styles.viewAll}
+              className={`${styles.bottomLink} ${styles.viewAll}`}
               href={tag ? `/blog/category/${tag}` : '/blog/category/all'}
             >
               view all
+            </Link>
+          </Container>
+        ) : null}
+        {back ? (
+          <Container>
+            <Link
+              className={`${styles.bottomLink} ${styles.backLink}}`}
+              href={`/blog`}
+            >
+              &#60; Back
             </Link>
           </Container>
         ) : null}
