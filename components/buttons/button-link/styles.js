@@ -38,7 +38,7 @@ const ButtonLink = styled.a`
   min-width: 16rem;
   display: inline-block;
   border: 1px solid ${$primaryContentColor};
-  ${transition('all 2s ease')};
+  ${transition('all 0.3s ease')};
 
   &:hover {
     text-decoration: none;

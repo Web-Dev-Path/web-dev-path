@@ -13,7 +13,6 @@ import {
 } from './_variables';
 
 export const transition = $args => css`
-  cursor: crosshair;
   -webkit-transition: ${$args};
   -moz-transition: ${$args};
   -ms-transition: ${$args};
