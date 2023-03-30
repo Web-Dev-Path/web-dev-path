@@ -7,7 +7,7 @@ import {
   $transparent,
 } from '@/styles/_variables';
 
-import { transition } from '@/styles/_mixins';
+import * as m from '@/styles/_mixins';
 
 const invertedGrey = css`
   &:hover {
@@ -38,7 +38,7 @@ const ButtonLink = styled.a`
   min-width: 16rem;
   display: inline-block;
   border: 1px solid ${$primaryContentColor};
-  ${transition('all 0.3s ease')};
+  ${m.transition('all 0.3s ease')};
 
   &:hover {
     text-decoration: none;
