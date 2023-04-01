@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import ButtonLink from '@/components/buttons/button-link/ButtonLink';
+import ButtonLink from '@/components/buttons/ButtonLink/ButtonLink';
 import Container from '@/components/containers/Container';
 import styles from '@/styles/TwoColumn.module.scss';
 
