@@ -1,4 +1,4 @@
-import BlogPostsContainer from '@/components/blog/BlogPostsContainer';
+import BlogPostsContainer from '@/components/blog/BlogPostsContainer/BlogPostsContainer';
 import { blogRevalidate } from '@/utils/config';
 
 export default function BlogCategory({ posts }) {

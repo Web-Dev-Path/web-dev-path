@@ -1,4 +1,4 @@
-import BlogPostsContainer from '@/components/blog/BlogPostsContainer';
+import BlogPostsContainer from '@/components/blog/BlogPostsContainer/BlogPostsContainer';
 import { paths, tagToHeading } from '@/utils/blogCategories';
 import { useRouter } from 'next/router';
 import { blogRevalidate } from '@/utils/config';

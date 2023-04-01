@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-
+import * as m from '@/styles/_mixins';
 import {
   $white,
   $primaryContentColor,
@@ -7,8 +7,6 @@ import {
   $transparent,
   $darkBgColor,
 } from '@/styles/_variables';
-
-import * as m from '@/styles/_mixins';
 
 const SubmitButton = styled.button`
   padding: 0.3rem 0;
