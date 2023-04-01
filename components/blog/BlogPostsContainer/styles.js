@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import Link from 'next/link';
 import * as m from '@/styles/_mixins';
 import {
   $white,
@@ -7,6 +8,36 @@ import {
   $transparent,
   $darkBgColor,
 } from '@/styles/_variables';
+
+const BottomLink = styled(Link)`
+  font-size: 1.5rem;
+  font-weight: bold;
+  position: relative;
+  display: block;
+  text-align: center;
+`;
+
+const ViewAllBottomLink = styled(BottomLink)`
+  top: -3rem;
+
+  //media query mixins
+  ${m.desktop(css`
+    float: right;
+    top: -5rem;
+  `)}
+`;
+
+const BackBottomLink = styled(BottomLink)`
+  top: -2rem;
+
+  //media query mixins
+  ${m.desktop(css`
+    float: left;
+    top: -1rem;
+  `)}
+`;
+
+export default { BottomLink, ViewAllBottomLink, BackBottomLink };
 
 // .blogContainer {
 //     display: flex;

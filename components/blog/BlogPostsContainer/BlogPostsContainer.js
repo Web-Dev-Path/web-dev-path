@@ -4,6 +4,7 @@ import Title from '@/components/snippets/Title';
 import Link from 'next/link';
 import styles from '@/styles/Blog.module.scss';
 import RevealContentContainer from '@/components/containers/RevealContentContainer';
+import S from './styles';
 import { tagToHeading } from '@/utils/blogCategories';
 import Container from '@/components/containers/Container';
 
@@ -59,24 +60,26 @@ const BlogPostsContainer = ({
             </Container>
           )
         }
+
         {viewall && posts.length >= 3 ? (
           <Container>
-            <Link
-              className={`${styles.bottomLink} ${styles.viewAll}`}
+            <S.ViewAllBottomLink
+              // className={`${styles.bottomLink} ${styles.viewAll}`}
               href={tag ? `/blog/category/${tag}` : '/blog/category/all'}
             >
               view all
-            </Link>
+            </S.ViewAllBottomLink>
           </Container>
         ) : null}
+
         {back ? (
           <Container>
-            <Link
+            <S.BackBottomLink
               className={`${styles.bottomLink} ${styles.backLink}}`}
               href={`/blog`}
             >
               &#60; Back
-            </Link>
+            </S.BackBottomLink>
           </Container>
         ) : null}
       </div>
