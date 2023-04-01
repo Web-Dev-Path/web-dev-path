@@ -13,7 +13,6 @@ export default function ButtonLink({
     <S.ButtonLink
       href={link}
       style={styles}
-      // className={customClassName}
       $colorScheme={customClassName}
       target={openNewTab ? '_blank' : undefined}
       rel='noopener noreferrer'

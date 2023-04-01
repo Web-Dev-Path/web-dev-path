@@ -4,7 +4,7 @@ import { decode } from 'html-entities';
 import ReCAPTCHA from 'react-google-recaptcha';
 import Container from '@/components/containers/Container';
 import newsletterStyles from '@/styles/Newsletter.module.scss';
-import SubmitButton from '@/components/buttons/SubmitButton';
+import SubmitButton from '@/components/buttons/SubmitButton/SubmitButton';
 
 const SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
 
