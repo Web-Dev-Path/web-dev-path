@@ -1,30 +1,11 @@
 import styled, { css } from 'styled-components';
-// import variables from '@/styles/_variables';
+import * as m from '@/styles/_mixins';
 import {
   $white,
   $primaryContentColor,
   $black,
   $transparent,
 } from '@/styles/_variables';
-
-import * as m from '@/styles/_mixins';
-
-const invertedGrey = css`
-  &:hover {
-    color: ${$primaryContentColor};
-    background-color: ${$transparent};
-  }
-`;
-
-const invertedWhite = css`
-  border: 1px solid ${$white};
-  color: ${$primaryContentColor};
-  background-color: ${$white};
-  &:hover {
-    color: ${$white};
-    background-color: ${$transparent};
-  }
-`;
 
 const ButtonLink = styled.a`
   padding: 0.5rem 2rem;
@@ -45,6 +26,24 @@ const ButtonLink = styled.a`
   }
   ${props => (props.$colorScheme === 'inverted-grey' ? invertedGrey : '')}
   ${props => (props.$colorScheme === 'inverted-white' ? invertedWhite : '')}
+`;
+
+//Color Scheme Variations
+const invertedGrey = css`
+  &:hover {
+    color: ${$primaryContentColor};
+    background-color: ${$transparent};
+  }
+`;
+
+const invertedWhite = css`
+  border: 1px solid ${$white};
+  color: ${$primaryContentColor};
+  background-color: ${$white};
+  &:hover {
+    color: ${$white};
+    background-color: ${$transparent};
+  }
 `;
 
 export default { ButtonLink };

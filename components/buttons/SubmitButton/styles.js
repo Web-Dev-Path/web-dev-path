@@ -1,10 +1,11 @@
 import styled, { css } from 'styled-components';
-// import variables from '@/styles/_variables';
+
 import {
   $white,
   $primaryContentColor,
   $black,
   $transparent,
+  $darkBgColor,
 } from '@/styles/_variables';
 
 import * as m from '@/styles/_mixins';
@@ -27,22 +28,27 @@ const SubmitButton = styled.button`
     color: ${$primaryContentColor};
     background-color: ${$transparent};
   }
+
+  ${props =>
+    props.$variationType === 'newsletter__button' ? NewsLetterButton : ''}
 `;
+
+const NewsLetterButton = css`
+  border-radius: 1.2rem;
+  font-size: 1.2rem;
+  background-color: #{$darkBgColor};
+  padding: 0.3rem 0;
+
+  &:hover {
+    background-color: ${$transparent};
+    color: ${$darkBgColor};
+    border: 1px solid #{$darkBgColor};
+  }
+`;
+
+// newsletter__button
 /*
-.btn {
-    padding: 0.3rem 0;
-    min-width: 12rem;
-    font-size: 1.2rem;
-    color: $white;
-    background-color: $primary-content-color;
-    border-radius: 2rem;
-    cursor: pointer;
-    font-weight: bold;
-    text-align: center;
-    display: block;
-    border: 1px solid $primary-content-color;
-    @include transition(all 0.3s ease);
-  
+.btn {  
     @include desktop {
       margin-left: auto;
       font-size: 1.5rem;
@@ -50,22 +56,9 @@ const SubmitButton = styled.button`
       padding: 0.5rem 2rem;
     }
   
-    &:hover {
-      color: $primary-content-color;
-      background-color: $transparent;
-    }
   
     &.newsletter__button {
-      border-radius: 1.2rem;
-      font-size: 1.2rem;
-      background-color: $dark-bg-color;
-      padding: 0.3rem 0;
-  
-      &:hover {
-        background-color: $transparent;
-        color: $dark-bg-color;
-        border: 1px solid $dark-bg-color;
-      }
+
   
       @include large-desktop {
         min-width: 12rem;

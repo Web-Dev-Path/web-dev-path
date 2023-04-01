@@ -18,11 +18,7 @@ export default function SubmitButton({ customClassName, label, disabled }) {
 
   return (
     <S.SubmitButton
-      // className={
-      //   customClassName
-      //     ? `${btnStyles.btn} ${btnStyles[customClassName]}`
-      //     : btnStyles.btn
-      // } NEED TO CHECK IF CUSTOM NAME IS PASSED
+      $variationType={customClassName}
       type='submit'
       disabled={disabled}
     >
