@@ -24,6 +24,8 @@ const ButtonLink = styled.a`
   &:hover {
     text-decoration: none;
   }
+
+  //check props for button variations
   ${props => (props.$colorScheme === 'inverted-grey' ? invertedGrey : '')}
   ${props => (props.$colorScheme === 'inverted-white' ? invertedWhite : '')}
 `;

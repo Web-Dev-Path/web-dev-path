@@ -29,6 +29,14 @@ const SubmitButton = styled.button`
     background-color: ${$transparent};
   }
 
+  //media query mixins
+  ${m.desktop(css`
+    margin-left: auto;
+    font-size: 1.5rem;
+    min-width: 16rem;
+    padding: 0.5rem 2rem;
+  `)}
+
   ${props =>
     props.$variationType === 'newsletter__button' ? NewsLetterButton : ''}
 `;
@@ -36,7 +44,7 @@ const SubmitButton = styled.button`
 const NewsLetterButton = css`
   border-radius: 1.2rem;
   font-size: 1.2rem;
-  background-color: #{$darkBgColor};
+  background-color: ${$darkBgColor};
   padding: 0.3rem 0;
 
   &:hover {
@@ -44,6 +52,13 @@ const NewsLetterButton = css`
     color: ${$darkBgColor};
     border: 1px solid #{$darkBgColor};
   }
+
+  //media query mixins
+  ${m.largeDesktop(css`
+    min-width: 12rem;
+    border-radius: 3rem;
+    padding: 0.7rem 0;
+  `)}
 `;
 
 // newsletter__button
@@ -58,8 +73,6 @@ const NewsLetterButton = css`
   
   
     &.newsletter__button {
-
-  
       @include large-desktop {
         min-width: 12rem;
         border-radius: 3rem;
