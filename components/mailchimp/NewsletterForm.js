@@ -149,10 +149,7 @@ const NewsletterForm = ({ status, message, onValidated }) => {
               placeholder='email'
               onKeyUp={event => handleInputKeyEvent(event)}
             />
-            <SubmitButton
-              label='Subscribe'
-              customClassName='newsletter__button'
-            />
+            <SubmitButton label='Subscribe' $buttonType='newsletter__button' />
 
             <ReCAPTCHA
               ref={recaptchaRef}

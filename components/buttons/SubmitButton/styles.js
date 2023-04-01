@@ -37,8 +37,9 @@ const SubmitButton = styled.button`
     padding: 0.5rem 2rem;
   `)}
 
+  //check props for button variations
   ${props =>
-    props.$variationType === 'newsletter__button' ? NewsLetterButton : ''}
+    props.$buttonType === 'newsletter__button' ? NewsLetterButton : ''}
 `;
 
 const NewsLetterButton = css`
@@ -60,26 +61,5 @@ const NewsLetterButton = css`
     padding: 0.7rem 0;
   `)}
 `;
-
-// newsletter__button
-/*
-.btn {  
-    @include desktop {
-      margin-left: auto;
-      font-size: 1.5rem;
-      min-width: 16rem;
-      padding: 0.5rem 2rem;
-    }
-  
-  
-    &.newsletter__button {
-      @include large-desktop {
-        min-width: 12rem;
-        border-radius: 3rem;
-        padding: 0.7rem 0;
-      }
-    }
-  }
-  */
 
 export default { SubmitButton };
