@@ -45,7 +45,7 @@ export default function CardsColumns({ cards, customClass }) {
           {cards.map((card, index) => (
             <SwiperSlide key={index} className={styles.swiperSlide}>
               <div className={styles.inner__content}>
-                <Card key={index} card={card} customClass={customClass} />
+                <Card key={index} card={card} $cardType={customClass} />
               </div>
             </SwiperSlide>
           ))}

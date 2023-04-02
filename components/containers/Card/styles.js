@@ -5,8 +5,6 @@ import {
   $white,
   $primaryContentColor,
   $primaryAccentColor,
-  $transparent,
-  $darkBgColor,
   $headingFont,
   $boxShadow,
 } from '@/styles/_variables';
@@ -49,9 +47,9 @@ const Card = styled.div`
   `)}
 
   //check props for button variations
-  ${props => (props.$buttonType === 'our-goals' ? AboutUs : '')}
-  ${props => (props.$buttonType === 'contact-cards' ? ContactUsCards : '')}
-  ${props => (props.$buttonType === 'blog' ? Blog : '')}
+  ${props => (props.$cardType === 'our-goals' ? AboutUs : '')}
+  ${props => (props.$cardType === 'contact-cards' ? ContactUsCards : '')}
+  ${props => (props.$cardType === 'blog' ? Blog : '')}
 `;
 
 const Title = styled.h2`
@@ -67,8 +65,8 @@ const Title = styled.h2`
   `)}
 
   //check props for button variations
-  ${props => (props.$buttonType === 'our-goals' ? AboutUsTitle : '')}
-  ${props => (props.$buttonType === 'blog' ? BlogTitle : '')}
+  ${props => (props.$cardType === 'our-goals' ? AboutUsTitle : '')}
+  ${props => (props.$cardType === 'blog' ? BlogTitle : '')}
 `;
 
 const ContentWrapper = styled.div`
@@ -76,19 +74,18 @@ const ContentWrapper = styled.div`
   align-items: center;
 
   //check props for button variations
-  ${props => (props.$buttonType === 'our-goals' ? AboutUsContentWrapper : '')}
+  ${props => (props.$cardType === 'our-goals' ? AboutUsContentWrapper : '')}
 `;
 
 const ImageWrapper = styled.div`
-  width: auto;
+  width: 100%;
+  height: 18rem;
   position: relative;
-  height: 5rem;
-  margin-right: 75%;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
 
   //check props for button variations
-  ${props => (props.$buttonType === 'blog' ? BlogImageWrapper : '')}
+  ${props => (props.$cardType === 'blog' ? BlogImageWrapper : '')}
+  ${props =>
+    props.$cardType === 'contact-cards' ? ContactUsCardImageWrapper : ''}
 `;
 
 const CardImage = styled(Image)`
@@ -96,7 +93,7 @@ const CardImage = styled(Image)`
   object-fit: cover;
 
   //check props for button variations
-  ${props => (props.$buttonType === 'contact-cards' ? ContactUsCardImage : '')}
+  ${props => (props.$cardType === 'contact-cards' ? ContactUsCardImage : '')}
 `;
 
 const TagContainer = styled.div`
@@ -145,6 +142,15 @@ const ContactUsCards = css`
   `)}
 `;
 
+const ContactUsCardImageWrapper = css`
+  width: auto;
+  position: relative;
+  height: 5rem;
+  margin-right: 75%;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+`;
+
 const ContactUsCardImage = css`
   margin: 0;
   position: absolute;
@@ -165,6 +171,10 @@ const BlogTitle = css`
   margin-bottom: 0.7rem;
   max-height: 7rem;
   overflow: hidden;
+
+  ${m.tablet(css`
+    font-size: 1.3rem;
+  `)}
 `;
 
 const BlogImageWrapper = css`

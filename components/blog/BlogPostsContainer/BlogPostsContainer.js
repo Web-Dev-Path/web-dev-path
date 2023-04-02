@@ -54,7 +54,7 @@ const BlogPostsContainer = ({
             <Container>
               <S.PostContainer>
                 {posts?.map((p, index) => (
-                  <Card customClass='blog' key={index} card={p} />
+                  <Card $cardType='blog' key={index} card={p} />
                 ))}
               </S.PostContainer>
             </Container>
