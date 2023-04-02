@@ -1,13 +1,12 @@
 import styled, { css } from 'styled-components';
 import Link from 'next/link';
 import * as m from '@/styles/_mixins';
-import {
-  $white,
-  $primaryContentColor,
-  $black,
-  $transparent,
-  $darkBgColor,
-} from '@/styles/_variables';
+
+const BlogContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin: 3rem 0;
+`;
 
 const PostContainer = styled.div`
   display: flex;
@@ -73,7 +72,13 @@ const BackBottomLink = styled(BottomLink)`
   `)}
 `;
 
-export default { BottomLink, ViewAllBottomLink, BackBottomLink, PostContainer };
+export default {
+  BottomLink,
+  ViewAllBottomLink,
+  BackBottomLink,
+  PostContainer,
+  BlogContainer,
+};
 
 // .blogContainer {
 //     display: flex;
@@ -91,37 +96,5 @@ export default { BottomLink, ViewAllBottomLink, BackBottomLink, PostContainer };
 //     @include desktop {
 //       align-items: center;
 //       flex-direction: row;
-//     }
-//   }
-
-//   .postContainer {
-//     display: flex;
-//     flex-wrap: wrap;
-//     justify-content: center;
-//     margin-bottom: 3rem;
-
-//     @include tablet {
-//       justify-content: flex-start;
-//     }
-//   }
-
-//   .postContainer > div {
-//     @include desktop {
-//       flex-basis: 48%;
-//     }
-
-//     @include large-desktop {
-//       flex-basis: 32%;
-//     }
-//   }
-
-//   .postContainer::after {
-//     @include tablet {
-//       content: '';
-//       flex: auto;
-//     }
-
-//     @include desktop {
-//       content: unset;
 //     }
 //   }

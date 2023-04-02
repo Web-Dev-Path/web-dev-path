@@ -2,7 +2,7 @@ import CardsColumns from '@/components/containers/CardsColumns';
 import Card from '@/components/containers/Card';
 import Title from '@/components/snippets/Title';
 import Link from 'next/link';
-import styles from '@/styles/Blog.module.scss';
+// import styles from '@/styles/Blog.module.scss';
 import RevealContentContainer from '@/components/containers/RevealContentContainer';
 import S from './styles';
 import { tagToHeading } from '@/utils/blogCategories';
@@ -32,7 +32,7 @@ const BlogPostsContainer = ({
 
   return (
     <RevealContentContainer>
-      <div className={styles.blogContainer}>
+      <S.BlogContainer>
         {heading ? (
           <Container>
             <Title title={heading} />
@@ -76,7 +76,7 @@ const BlogPostsContainer = ({
             <S.BackBottomLink href={`/blog`}>&#60; Back</S.BackBottomLink>
           </Container>
         ) : null}
-      </div>
+      </S.BlogContainer>
     </RevealContentContainer>
   );
 };
