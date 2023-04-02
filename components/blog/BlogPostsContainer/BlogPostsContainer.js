@@ -1,5 +1,5 @@
 import CardsColumns from '@/components/containers/CardsColumns';
-import Card from '@/components/containers/Card';
+import Card from '@/components/containers/Card/Card';
 import Title from '@/components/snippets/Title';
 import Link from 'next/link';
 // import styles from '@/styles/Blog.module.scss';

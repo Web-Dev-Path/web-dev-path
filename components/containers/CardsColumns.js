@@ -3,7 +3,7 @@ import { Pagination } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import Card from '@/components/containers/Card';
+import Card from '@/components/containers/Card/Card';
 import Container from '@/components/containers/Container';
 import styles from '@/styles/CardsColumns.module.scss';
 
