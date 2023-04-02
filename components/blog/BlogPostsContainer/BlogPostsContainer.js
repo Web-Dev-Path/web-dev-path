@@ -52,11 +52,11 @@ const BlogPostsContainer = ({
             </>
           ) : (
             <Container>
-              <div className={styles.postContainer}>
+              <S.PostContainer>
                 {posts?.map((p, index) => (
                   <Card customClass='blog' key={index} card={p} />
                 ))}
-              </div>
+              </S.PostContainer>
             </Container>
           )
         }
@@ -64,7 +64,6 @@ const BlogPostsContainer = ({
         {viewall && posts.length >= 3 ? (
           <Container>
             <S.ViewAllBottomLink
-              // className={`${styles.bottomLink} ${styles.viewAll}`}
               href={tag ? `/blog/category/${tag}` : '/blog/category/all'}
             >
               view all
@@ -74,12 +73,7 @@ const BlogPostsContainer = ({
 
         {back ? (
           <Container>
-            <S.BackBottomLink
-              className={`${styles.bottomLink} ${styles.backLink}}`}
-              href={`/blog`}
-            >
-              &#60; Back
-            </S.BackBottomLink>
+            <S.BackBottomLink href={`/blog`}>&#60; Back</S.BackBottomLink>
           </Container>
         ) : null}
       </div>
