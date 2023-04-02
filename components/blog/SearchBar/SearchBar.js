@@ -1,4 +1,5 @@
-import styles from '@/styles/SearchBar.module.scss';
+// import styles from '@/styles/SearchBar.module.scss';
+import S from './styles';
 import { useRef } from 'react';
 
 const SearchBar = ({ setSearchTerm }) => {
@@ -7,17 +8,17 @@ const SearchBar = ({ setSearchTerm }) => {
     setSearchTerm(searchInput.current.value);
   };
   return (
-    <div className={styles.searchBar}>
-      <input
+    <S.SearchBar>
+      <S.SearchInput
         ref={searchInput}
         type='search'
         placeholder='keyword or topic'
         onChange={search}
       />
-      <button type='submit' onClick={search}>
+      <S.SubmitButton type='submit' onClick={search}>
         Search
-      </button>
-    </div>
+      </S.SubmitButton>
+    </S.SearchBar>
   );
 };
 
