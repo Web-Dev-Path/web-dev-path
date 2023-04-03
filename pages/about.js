@@ -8,7 +8,7 @@ import {
 } from '@/styles/TwoColumn.module.scss';
 import CardsColumns from '@/components/containers/CardsColumns';
 import Title from '@/components/snippets/Title';
-import Wrapper from '@/components/containers/Wrapper';
+import Wrapper from '@/components/containers/Wrapper/Wrapper';
 import Container from '@/components/containers/Container/Container';
 import Row from '@/components/containers/Row';
 import Member from '@/components/containers/Member';
