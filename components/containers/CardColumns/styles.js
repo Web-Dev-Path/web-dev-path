@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import { Swiper } from 'swiper/react';
 import * as m from '@/styles/_mixins';
-import { $darkBgColor, $white } from '@/styles/_variables';
+import { $darkBgColor } from '@/styles/_variables';
 
 const InnerContent = styled.div`
   margin: 0 auto;
@@ -17,9 +17,9 @@ const InnerContent = styled.div`
 const CardColumnSwiper = styled(Swiper)`
   margin-bottom: 5rem;
 
-  &:global(.swiper-pagination-bullet-active) {
-    background-color: ${$white};
+  & .swiper-pagination-bullet-active {
+    background-color: ${$darkBgColor};
   }
 `;
 
-export default { CardColumnSwiper, InnerContent };
+export { CardColumnSwiper as Swiper, InnerContent };

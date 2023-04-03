@@ -1,17 +1,17 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import Card from '@/components/containers/Card/Card';
 import Container from '@/components/containers/Container/Container';
-import S from './styles';
+import * as S from './styles';
 
 export default function CardsColumns({ cards, customClass }) {
   return (
     <Container>
       <div>
-        <S.CardColumnSwiper
+        <S.Swiper
           mousewheel={true}
           grabCursor={true}
           modules={[Pagination]}
@@ -42,7 +42,7 @@ export default function CardsColumns({ cards, customClass }) {
               </S.InnerContent>
             </SwiperSlide>
           ))}
-        </S.CardColumnSwiper>
+        </S.Swiper>
       </div>
     </Container>
   );
