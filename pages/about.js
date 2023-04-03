@@ -6,7 +6,7 @@ import {
   primaryAccent,
   lightBgColor,
 } from '@/styles/TwoColumn.module.scss';
-import CardsColumns from '@/components/containers/CardsColumns';
+import CardsColumns from '@/components/containers/CardColumns/CardsColumns';
 import Title from '@/components/snippets/Title';
 import Wrapper from '@/components/containers/Wrapper/Wrapper';
 import Container from '@/components/containers/Container/Container';

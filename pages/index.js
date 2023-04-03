@@ -1,7 +1,7 @@
 import Bracket from '@/components/decorations/Bracket';
 import Stick from '@/components/decorations/Stick';
 import TwoColumn from '@/components/containers/TwoColumn';
-import CardsColumns from '@/components/containers/CardsColumns';
+import CardsColumns from '@/components/containers/CardColumns/CardsColumns';
 import styles from '@/styles/Home.module.scss';
 import { white, primary, lightBgColor } from '@/styles/TwoColumn.module.scss';
 import RevealContentContainer from '@/components/containers/RevealContentContainer/RevealContentContainer';

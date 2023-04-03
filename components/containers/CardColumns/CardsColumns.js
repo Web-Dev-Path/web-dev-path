@@ -5,20 +5,13 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import Card from '@/components/containers/Card/Card';
 import Container from '@/components/containers/Container/Container';
-import styles from '@/styles/CardsColumns.module.scss';
+import S from './styles';
 
 export default function CardsColumns({ cards, customClass }) {
   return (
     <Container>
-      <div
-        className={
-          customClass
-            ? `${styles.cardColumns} ${styles[customClass]}`
-            : styles.cardColumns
-        }
-      >
-        <Swiper
-          className={styles.swiper}
+      <div>
+        <S.CardColumnSwiper
           mousewheel={true}
           grabCursor={true}
           modules={[Pagination]}
@@ -43,13 +36,13 @@ export default function CardsColumns({ cards, customClass }) {
           }}
         >
           {cards.map((card, index) => (
-            <SwiperSlide key={index} className={styles.swiperSlide}>
-              <div className={styles.inner__content}>
+            <SwiperSlide key={index}>
+              <S.InnerContent>
                 <Card key={index} card={card} $cardType={customClass} />
-              </div>
+              </S.InnerContent>
             </SwiperSlide>
           ))}
-        </Swiper>
+        </S.CardColumnSwiper>
       </div>
     </Container>
   );

@@ -1,22 +1,22 @@
-@use './variables' as *;
-@use './mixins' as *;
+// @use './variables' as *;
+// @use './mixins' as *;
 
-.cardColumns {
-  .inner__content {
-    margin: 0 auto;
-    padding-bottom: 4rem;
-    justify-content: center;
+// .cardColumns {
+//   .inner__content {
+//     margin: 0 auto;
+//     padding-bottom: 4rem;
+//     justify-content: center;
 
-    @include desktop-breakpoint-plus {
-      display: flex;
-    }
-  }
+//     @include desktop-breakpoint-plus {
+//       display: flex;
+//     }
+//   }
 
-  .swiper {
-    margin-bottom: 5rem;
+//   .swiper {
+//     margin-bottom: 5rem;
 
-    :global(.swiper-pagination-bullet-active) {
-      background-color: $dark-bg-color;
-    }
-  }
-}
+//     :global(.swiper-pagination-bullet-active) {
+//       background-color: $dark-bg-color;
+//     }
+//   }
+// }

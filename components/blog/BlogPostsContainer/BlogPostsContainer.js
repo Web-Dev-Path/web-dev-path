@@ -1,4 +1,4 @@
-import CardsColumns from '@/components/containers/CardsColumns';
+import CardsColumns from '@/components/containers/CardColumns/CardsColumns';
 import Card from '@/components/containers/Card/Card';
 import Title from '@/components/snippets/Title';
 import Link from 'next/link';
