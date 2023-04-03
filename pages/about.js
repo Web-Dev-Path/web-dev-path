@@ -9,7 +9,7 @@ import {
 import CardsColumns from '@/components/containers/CardsColumns';
 import Title from '@/components/snippets/Title';
 import Wrapper from '@/components/containers/Wrapper';
-import Container from '@/components/containers/Container';
+import Container from '@/components/containers/Container/Container';
 import Row from '@/components/containers/Row';
 import Member from '@/components/containers/Member';
 import { whoWeAre } from '@/utils/about';

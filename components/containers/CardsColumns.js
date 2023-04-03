@@ -4,7 +4,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import Card from '@/components/containers/Card/Card';
-import Container from '@/components/containers/Container';
+import Container from '@/components/containers/Container/Container';
 import styles from '@/styles/CardsColumns.module.scss';
 
 export default function CardsColumns({ cards, customClass }) {

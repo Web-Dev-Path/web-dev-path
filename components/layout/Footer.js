@@ -2,7 +2,7 @@ import Image from 'next/image';
 import footerStyles from '@/styles/Footer.module.scss';
 import { linksNav, linksSocial } from '@/utils/links';
 import NewsletterSubscribe from '@/components/mailchimp/NewsletterSubscribe';
-import Container from '@/components/containers/Container';
+import Container from '@/components/containers/Container/Container';
 
 export default function Footer() {
   return (

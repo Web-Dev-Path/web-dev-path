@@ -6,7 +6,7 @@ import Link from 'next/link';
 import RevealContentContainer from '@/components/containers/RevealContentContainer';
 import S from './styles';
 import { tagToHeading } from '@/utils/blogCategories';
-import Container from '@/components/containers/Container';
+import Container from '@/components/containers/Container/Container';
 
 function* splitPosts(arr, n) {
   for (let i = 0; i < arr.length; i += n) {

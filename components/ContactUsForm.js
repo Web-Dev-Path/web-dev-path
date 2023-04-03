@@ -2,7 +2,7 @@ import { useForm } from 'react-hook-form';
 import { useRef } from 'react';
 import MailchimpSubscribe from 'react-mailchimp-subscribe';
 import ReCAPTCHA from 'react-google-recaptcha';
-import Container from '@/components/containers/Container';
+import Container from '@/components/containers/Container/Container';
 import contactUsFormStyles from '@/styles/Contact.module.scss';
 import RevealContentContainer from '@/components/containers/RevealContentContainer';
 import SubmitButton from '@/components/buttons/SubmitButton/SubmitButton';

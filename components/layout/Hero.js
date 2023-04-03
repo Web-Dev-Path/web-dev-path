@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Nav from '@/components/layout/Nav';
-import Container from '@/components/containers/Container';
+import Container from '@/components/containers/Container/Container';
 import styles from '@/styles/Hero.module.scss';
 
 export default function Hero({

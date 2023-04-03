@@ -2,7 +2,7 @@ import { createRef, useState } from 'react';
 import Image from 'next/image';
 import { decode } from 'html-entities';
 import ReCAPTCHA from 'react-google-recaptcha';
-import Container from '@/components/containers/Container';
+import Container from '@/components/containers/Container/Container';
 import newsletterStyles from '@/styles/Newsletter.module.scss';
 import SubmitButton from '@/components/buttons/SubmitButton/SubmitButton';
 
