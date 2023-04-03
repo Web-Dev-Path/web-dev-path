@@ -4,7 +4,7 @@ import TwoColumn from '@/components/containers/TwoColumn';
 import CardsColumns from '@/components/containers/CardsColumns';
 import styles from '@/styles/Home.module.scss';
 import { white, primary, lightBgColor } from '@/styles/TwoColumn.module.scss';
-import RevealContentContainer from '@/components/containers/RevealContentContainer';
+import RevealContentContainer from '@/components/containers/RevealContentContainer/RevealContentContainer';
 
 export default function Home() {
   return (

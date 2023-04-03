@@ -3,7 +3,7 @@ import Card from '@/components/containers/Card/Card';
 import Title from '@/components/snippets/Title';
 import Link from 'next/link';
 // import styles from '@/styles/Blog.module.scss';
-import RevealContentContainer from '@/components/containers/RevealContentContainer';
+import RevealContentContainer from '@/components/containers/RevealContentContainer/RevealContentContainer';
 import S from './styles';
 import { tagToHeading } from '@/utils/blogCategories';
 import Container from '@/components/containers/Container/Container';

@@ -1,6 +1,6 @@
 import contactCardStyles from '@/styles/ContactUsCards.module.scss';
 import CardsColumns from './containers/CardsColumns';
-import RevealContentContainer from './containers/RevealContentContainer';
+import RevealContentContainer from './containers/RevealContentContainer/RevealContentContainer';
 
 const cards = [
   {

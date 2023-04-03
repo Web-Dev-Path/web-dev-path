@@ -1,30 +1,24 @@
 import { useEffect, useState } from 'react';
 import { useIntersect } from '@/hooks/useIntersect';
-import styles from '@/styles/RevealContainer.module.scss';
+// import styles from '@/styles/RevealContainer.module.scss';
+import S from './styles';
 
 const RevealContentContainer = ({ children }) => {
   const [ref, entry] = useIntersect({ threshold: 0.15 });
   const [firstLoad, setFirstLoad] = useState(true);
-  const [hiddenStyle, setHiddenStyle] = useState('section__hidden');
+  const [hiddenStyle, setHiddenStyle] = useState(true);
 
   useEffect(() => {
     if (entry.isIntersecting && firstLoad) {
-      setHiddenStyle('');
+      setHiddenStyle(false);
       setFirstLoad(false);
     }
   }, [entry.isIntersecting]);
 
   return (
-    <div
-      ref={ref}
-      className={
-        hiddenStyle
-          ? `${styles.wrapper} ${styles[hiddenStyle]}`
-          : styles.wrapper
-      }
-    >
+    <S.Wrapper ref={ref} $hiddenStyle={hiddenStyle}>
       {children}
-    </div>
+    </S.Wrapper>
   );
 };
 
