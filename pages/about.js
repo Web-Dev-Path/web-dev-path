@@ -11,7 +11,7 @@ import Title from '@/components/snippets/Title';
 import Wrapper from '@/components/containers/Wrapper/Wrapper';
 import Container from '@/components/containers/Container/Container';
 import Row from '@/components/containers/Row/Row';
-import Member from '@/components/containers/Member';
+import Member from '@/components/containers/Member/Member';
 import { whoWeAre } from '@/utils/about';
 
 export default function AboutUs() {
