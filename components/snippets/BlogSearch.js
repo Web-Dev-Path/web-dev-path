@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import * as m from '@/styles/_mixins';
 
-const BlogSearch = styled.div`
+export const BlogSearch = styled.div`
   display: flex;
   padding-top: 2.5rem;
   justify-content: space-between;
@@ -14,5 +14,3 @@ const BlogSearch = styled.div`
     flex-direction: row;
   `)}
 `;
-
-export default { BlogSearch };
