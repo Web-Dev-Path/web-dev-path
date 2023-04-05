@@ -2,6 +2,7 @@ import Image from 'next/image';
 import ButtonLink from '@/components/buttons/ButtonLink/ButtonLink';
 import Container from '@/components/containers/Container/Container';
 import styles from '@/styles/TwoColumn.module.scss';
+import S from './styles';
 
 export default function TwoColumn({
   image,
@@ -20,15 +21,12 @@ export default function TwoColumn({
 }) {
   // Add rowOrder="row-reverse" prop to the component to reverse its order on desktop
 
-  const styleProps = {
-    wrapper: {
-      color: color,
-      backgroundColor: bgColor,
-    },
-  };
-
   return (
-    <section className={styles.wrapper} style={styleProps.wrapper}>
+    <S.TwoColumnWrapper
+      className={styles.wrapper}
+      $color={color}
+      $bgColor={bgColor}
+    >
       <Container
         customClass={
           customInnerClass
@@ -37,13 +35,9 @@ export default function TwoColumn({
         }
         styles={{ flexDirection: rowOrder }}
       >
-        <div className={styles.inner__content}>
-          {title && (
-            <h2 className={styles.title} style={{ color: color }}>
-              {title}
-            </h2>
-          )}
-          <div className={styles.content}>{content}</div>
+        <S.InnerContent>
+          {title && <S.Title $color={color}>{title}</S.Title>}
+          <S.Content>{content}</S.Content>
           {link && (
             <ButtonLink
               link={link}
@@ -53,14 +47,14 @@ export default function TwoColumn({
               {linkText}
             </ButtonLink>
           )}
-        </div>
+        </S.InnerContent>
         {secondTextColumn && secondTextColumn}
         {!secondTextColumn && image && (
-          <div className={styles.inner__image}>
-            <Image src={image} alt={altTag} className={styles.img} fill />
-          </div>
+          <S.InnerImageWrapper>
+            <S.InnerImage src={image} alt={altTag} fill />
+          </S.InnerImageWrapper>
         )}
       </Container>
-    </section>
+    </S.TwoColumnWrapper>
   );
 }

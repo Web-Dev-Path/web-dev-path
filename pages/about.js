@@ -1,5 +1,5 @@
 import RevealContentContainer from '@/components/containers/RevealContentContainer/RevealContentContainer';
-import TwoColumn from '@/components/containers/TwoColumn';
+import TwoColumn from '@/components/containers/TwoColumn/TwoColumn';
 import {
   white,
   primary,

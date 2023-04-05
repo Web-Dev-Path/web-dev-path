@@ -16,9 +16,9 @@ const RevealContentContainer = ({ children }) => {
   }, [entry.isIntersecting]);
 
   return (
-    <S.Wrapper ref={ref} $hiddenStyle={hiddenStyle}>
+    <S.RevealContainerWrapper ref={ref} $hiddenStyle={hiddenStyle}>
       {children}
-    </S.Wrapper>
+    </S.RevealContainerWrapper>
   );
 };
 
