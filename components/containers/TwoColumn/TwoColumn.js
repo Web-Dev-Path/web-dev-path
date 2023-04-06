@@ -18,6 +18,7 @@ export default function TwoColumn({
   linkText = 'Learn more',
   secondTextColumn,
   openNewTab,
+  $contentType,
 }) {
   // Add rowOrder="row-reverse" prop to the component to reverse its order on desktop
 
@@ -27,17 +28,18 @@ export default function TwoColumn({
       $color={color}
       $bgColor={bgColor}
     >
-      <Container
+      <S.InnerContainer
         customClass={
           customInnerClass
             ? `${styles.inner} ${styles[customInnerClass]}`
             : styles.inner
         }
+        $contentType={$contentType}
         styles={{ flexDirection: rowOrder }}
       >
-        <S.InnerContent>
+        <S.InnerContent $contentType={$contentType}>
           {title && <S.Title $color={color}>{title}</S.Title>}
-          <S.Content>{content}</S.Content>
+          <S.Content $contentType={$contentType}>{content}</S.Content>
           {link && (
             <ButtonLink
               link={link}
@@ -50,11 +52,16 @@ export default function TwoColumn({
         </S.InnerContent>
         {secondTextColumn && secondTextColumn}
         {!secondTextColumn && image && (
-          <S.InnerImageWrapper>
-            <S.InnerImage src={image} alt={altTag} fill />
+          <S.InnerImageWrapper $contentType={$contentType}>
+            <S.InnerImage
+              $contentType={$contentType}
+              src={image}
+              alt={altTag}
+              fill
+            />
           </S.InnerImageWrapper>
         )}
-      </Container>
+      </S.InnerContainer>
     </S.TwoColumnWrapper>
   );
 }

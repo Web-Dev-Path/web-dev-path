@@ -27,6 +27,7 @@ export default function Home() {
           title='Get involved.'
           content='Web Dev Path runs on volunteers. Here are the ways you can get involved with us:'
           rowOrder='row-reverse'
+          $contentType='get-involved'
           customInnerClass='get-involved'
           bgColor={white}
         />
@@ -75,6 +76,7 @@ export default function Home() {
           color={white}
           bgColor={primary}
           link='/about'
+          $contentType='non-profit'
           customInnerClass='non-profit'
           customBtnClass='inverted-white'
         />

@@ -37,6 +37,7 @@ export default function AboutUs() {
           altTag='Square Brackets'
           color={primary}
           bgColor={primaryAccent}
+          $contentType='our-background'
           customInnerClass='our-background'
         />
       </RevealContentContainer>
@@ -78,6 +79,7 @@ export default function AboutUs() {
           altTag='Open angle bracket'
           color={primary}
           bgColor={white}
+          $contentType='our-process'
           customInnerClass='our-process'
         />
         <TwoColumn
@@ -100,6 +102,7 @@ export default function AboutUs() {
           altTag='close-angle-bracket'
           color={primary}
           bgColor={white}
+          $contentType='our-process'
           customInnerClass='our-process'
         />
       </RevealContentContainer>
@@ -144,6 +147,7 @@ export default function AboutUs() {
           altTag='Semi-colon'
           color={primary}
           bgColor={white}
+          $contentType='our-purpose'
           customInnerClass='our-purpose'
         />
       </RevealContentContainer>
@@ -155,6 +159,7 @@ export default function AboutUs() {
           altTag='Close curly bracket'
           color={primary}
           bgColor={lightBgColor}
+          $contentType='wanna-learn-more'
           customInnerClass='wanna-learn-more'
         />
         <TwoColumn
@@ -172,6 +177,7 @@ export default function AboutUs() {
           customBtnClass='inverted-grey'
           color={primary}
           bgColor={lightBgColor}
+          $contentType='two-text-columns'
           customInnerClass='two-text-columns'
           secondTextColumn={
             <TwoColumn
@@ -187,6 +193,7 @@ export default function AboutUs() {
               customBtnClass='inverted-grey'
               color={primary}
               bgColor={lightBgColor}
+              $contentType='second-text-column'
               customInnerClass='second-text-column'
             />
           }
@@ -224,6 +231,7 @@ export default function AboutUs() {
           altTag='Slash'
           color={primary}
           bgColor={white}
+          $contentType='get-started'
           customInnerClass='get-started'
           link='mailto:hello@webdevpath.co'
           linkText='Ping us'
@@ -261,6 +269,7 @@ export default function AboutUs() {
           altTag='Hashtag'
           color={primary}
           bgColor={white}
+          $contentType='questions'
           customInnerClass='questions'
           link='/contact'
           linkText='Contact us'
