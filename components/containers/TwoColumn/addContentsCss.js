@@ -45,7 +45,7 @@ const QuestionsInnerContainer = css`
 `;
 
 const TwoTextColumnsInnerContainer = css`
-  justify-content: space-evenly;
+  justify-content: space-evenly !important;
 
   h2 {
     font-size: 2rem;
@@ -74,7 +74,7 @@ const TwoTextColumnsInnerContent = css`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  flex-basis: unset;
+  flex-basis: unset !important;
 
   //media query mixins
   ${m.desktop(css`
@@ -83,6 +83,7 @@ const TwoTextColumnsInnerContent = css`
 `;
 
 const SecondTextColumnInnerContent = css`
+  ${TwoTextColumnsInnerContent}
   height: 100%;
 `;
 

@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import ButtonLink from '@/components/buttons/ButtonLink/ButtonLink';
 import Container from '@/components/containers/Container/Container';
-import styles from '@/styles/TwoColumn.module.scss';
 import S from './styles';
 
 export default function TwoColumn({
@@ -23,17 +22,8 @@ export default function TwoColumn({
   // Add rowOrder="row-reverse" prop to the component to reverse its order on desktop
 
   return (
-    <S.TwoColumnWrapper
-      className={styles.wrapper}
-      $color={color}
-      $bgColor={bgColor}
-    >
+    <S.TwoColumnWrapper $color={color} $bgColor={bgColor}>
       <S.InnerContainer
-        customClass={
-          customInnerClass
-            ? `${styles.inner} ${styles[customInnerClass]}`
-            : styles.inner
-        }
         $contentType={$contentType}
         styles={{ flexDirection: rowOrder }}
       >
