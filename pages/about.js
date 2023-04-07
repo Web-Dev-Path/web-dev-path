@@ -1,11 +1,11 @@
 import RevealContentContainer from '@/components/containers/RevealContentContainer/RevealContentContainer';
 import TwoColumn from '@/components/containers/TwoColumn/TwoColumn';
 import {
-  white,
-  primary,
-  primaryAccent,
-  lightBgColor,
-} from '@/styles/TwoColumn.module.scss';
+  $white,
+  $primaryContentColor,
+  $primaryAccentColor,
+  $lightBgColor,
+} from '@/styles/_variables';
 import CardsColumns from '@/components/containers/CardColumns/CardsColumns';
 import Title from '@/components/snippets/Title';
 import Wrapper from '@/components/containers/Wrapper/Wrapper';
@@ -35,8 +35,8 @@ export default function AboutUs() {
           rowOrder='row'
           image='/images/svg/square-brackets.svg'
           altTag='Square Brackets'
-          color={primary}
-          bgColor={primaryAccent}
+          color={$primaryContentColor}
+          bgColor={$primaryAccentColor}
           $contentType='our-background'
           customInnerClass='our-background'
         />
@@ -77,8 +77,8 @@ export default function AboutUs() {
           rowOrder='row-reverse'
           image='/images/svg/open-angle-bracket.svg'
           altTag='Open angle bracket'
-          color={primary}
-          bgColor={white}
+          color={$primaryContentColor}
+          bgColor={$white}
           $contentType='our-process'
           customInnerClass='our-process'
         />
@@ -100,8 +100,8 @@ export default function AboutUs() {
           }
           image='/images/svg/close-angle-bracket.svg'
           altTag='close-angle-bracket'
-          color={primary}
-          bgColor={white}
+          color={$primaryContentColor}
+          bgColor={$white}
           $contentType='our-process'
           customInnerClass='our-process'
         />
@@ -145,8 +145,8 @@ export default function AboutUs() {
           rowOrder='row-reverse'
           image='/images/svg/semi-colon.svg'
           altTag='Semi-colon'
-          color={primary}
-          bgColor={white}
+          color={$primaryContentColor}
+          bgColor={$white}
           $contentType='our-purpose'
           customInnerClass='our-purpose'
         />
@@ -157,8 +157,8 @@ export default function AboutUs() {
           content={''}
           image='/images/svg/close-curly-bracket.svg'
           altTag='Close curly bracket'
-          color={primary}
-          bgColor={lightBgColor}
+          color={$primaryContentColor}
+          bgColor={$lightBgColor}
           $contentType='wanna-learn-more'
           customInnerClass='wanna-learn-more'
         />
@@ -175,8 +175,8 @@ export default function AboutUs() {
           openNewTab
           link='https://github.com/Web-Dev-Path/web-dev-path/wiki'
           customBtnClass='inverted-grey'
-          color={primary}
-          bgColor={lightBgColor}
+          color={$primaryContentColor}
+          bgColor={$lightBgColor}
           $contentType='two-text-columns'
           customInnerClass='two-text-columns'
           secondTextColumn={
@@ -191,8 +191,8 @@ export default function AboutUs() {
               linkText='Contact us'
               link='/contact'
               customBtnClass='inverted-grey'
-              color={primary}
-              bgColor={lightBgColor}
+              color={$primaryContentColor}
+              bgColor={$lightBgColor}
               $contentType='second-text-column'
               customInnerClass='second-text-column'
             />
@@ -229,8 +229,8 @@ export default function AboutUs() {
           rowOrder='row-reverse'
           image='/images/svg/slash.svg'
           altTag='Slash'
-          color={primary}
-          bgColor={white}
+          color={$primaryContentColor}
+          bgColor={$white}
           $contentType='get-started'
           customInnerClass='get-started'
           link='mailto:hello@webdevpath.co'
@@ -267,8 +267,8 @@ export default function AboutUs() {
           content='Feel free to contact us.'
           image='/images/svg/hashtag.svg'
           altTag='Hashtag'
-          color={primary}
-          bgColor={white}
+          color={$primaryContentColor}
+          bgColor={$white}
           $contentType='questions'
           customInnerClass='questions'
           link='/contact'

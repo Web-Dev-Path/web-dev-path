@@ -3,7 +3,11 @@ import Stick from '@/components/decorations/Stick';
 import TwoColumn from '@/components/containers/TwoColumn/TwoColumn';
 import CardsColumns from '@/components/containers/CardColumns/CardsColumns';
 import styles from '@/styles/Home.module.scss';
-import { white, primary, lightBgColor } from '@/styles/TwoColumn.module.scss';
+import {
+  $white,
+  $primaryContentColor,
+  $lightBgColor,
+} from '@/styles/_variables';
 import RevealContentContainer from '@/components/containers/RevealContentContainer/RevealContentContainer';
 
 export default function Home() {
@@ -17,7 +21,7 @@ export default function Home() {
           content='The Web Dev Path is a team of professional developers project that aims to provide a comprehensive path for people who seek to begin their web development journey.'
           link='/about'
           customBtnClass='inverted-grey'
-          bgColor={lightBgColor}
+          bgColor={$lightBgColor}
         />
       </RevealContentContainer>
 
@@ -29,7 +33,7 @@ export default function Home() {
           rowOrder='row-reverse'
           $contentType='get-involved'
           customInnerClass='get-involved'
-          bgColor={white}
+          bgColor={$white}
         />
       </RevealContentContainer>
 
@@ -73,8 +77,8 @@ export default function Home() {
         <TwoColumn
           title='Nonprofit?'
           content='Web Dev Path can help your nonprofit with web projects of various sizes. Connect with us to find out how.'
-          color={white}
-          bgColor={primary}
+          color={$white}
+          bgColor={$primaryContentColor}
           link='/about'
           $contentType='non-profit'
           customInnerClass='non-profit'
