@@ -2,7 +2,7 @@ import { useRouter } from 'next/router';
 import { heroOptions } from '@/utils/hero-options';
 import Hero from '@/components/layout/Hero/Hero';
 import Meta from '@/components/layout/Meta';
-import Footer from '@/components/layout/Footer';
+import Footer from '@/components/layout/Footer/Footer';
 import S from './styles';
 
 export default function Layout({ children }) {

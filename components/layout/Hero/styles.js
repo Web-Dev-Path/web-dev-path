@@ -6,8 +6,6 @@ import {
   $white,
   $primaryContentColor,
   $primaryAccentColor,
-  $headingFont,
-  $boxShadow,
 } from '@/styles/_variables';
 
 const Header = styled.div`
