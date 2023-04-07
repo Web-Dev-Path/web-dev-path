@@ -124,11 +124,3 @@ export default {
   InnerImageWrapper,
   InnerImage,
 };
-
-// //Exports
-// :export {
-//   white: $white;
-//   primary: $primary-content-color;
-//   primaryAccent: $primary-accent-color;
-//   lightBgColor: $light-bg-color;
-// }

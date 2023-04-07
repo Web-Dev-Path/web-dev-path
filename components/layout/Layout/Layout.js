@@ -3,7 +3,8 @@ import { heroOptions } from '@/utils/hero-options';
 import Hero from '@/components/layout/Hero';
 import Meta from '@/components/layout/Meta';
 import Footer from '@/components/layout/Footer';
-import styles from '@/styles/Layout.module.scss';
+// import styles from '@/styles/Layout.module.scss';
+import S from './styles';
 
 export default function Layout({ children }) {
   const router = useRouter();
@@ -15,11 +16,11 @@ export default function Layout({ children }) {
   return (
     <>
       <Meta />
-      <main className={styles.main}>
+      <S.Main>
         <Hero {...heroOptions[heroKey]} />
         {children}
         <Footer />
-      </main>
+      </S.Main>
     </>
   );
 }
