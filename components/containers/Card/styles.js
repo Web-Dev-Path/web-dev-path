@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
-import * as m from '@/styles/_mixins';
 import Image from 'next/image';
+import BlogPostsContainer from '@/components/blog/BlogPostsContainer/BlogPostsContainer';
+import * as m from '@/styles/_mixins';
 import {
   $white,
   $primaryContentColor,
@@ -8,7 +9,6 @@ import {
   $headingFont,
   $boxShadow,
 } from '@/styles/_variables';
-import BlogPostsContainer from '@/components/blog/BlogPostsContainer/BlogPostsContainer';
 
 const Card = styled.div`
   margin: 1rem 1rem 0 0.5rem;
