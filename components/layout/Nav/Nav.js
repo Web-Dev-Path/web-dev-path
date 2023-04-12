@@ -8,6 +8,7 @@ import { linksNav } from '@/utils/links';
 export default function Nav() {
   const router = useRouter();
   const [active, setActive] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);
   const headerRef = useRef();
   const containerRef = useRef();
 
@@ -17,8 +18,10 @@ export default function Nav() {
         if (!containerRef.current) return;
         if (!entry.isIntersecting) {
           containerRef.current.classList.add(styles.sticky);
+          setIsSticky(true);
         } else {
           containerRef.current.classList.remove(styles.sticky);
+          setIsSticky(false);
         }
       },
       {

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Image from 'next/image';
-import Nav from '@/components/layout/Nav';
+import Nav from '@/components/layout/Nav/Nav';
 import Container from '@/components/containers/Container/Container';
 import S from './styles';
 
