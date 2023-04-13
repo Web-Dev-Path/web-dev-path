@@ -2,7 +2,6 @@ import { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import Container from '@/components/containers/Container/Container';
-// import styles from '@/styles/Nav.module.scss';
 import { linksNav } from '@/utils/links';
 import S from './styles';
 

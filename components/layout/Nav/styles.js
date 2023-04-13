@@ -140,7 +140,7 @@ const Logo = styled.img`
 `;
 
 const LogoSticky = css`
-  width: 4.5rem;
+  width: 4.5rem !important;
   filter: brightness(0) saturate(100%);
 `;
 
@@ -230,7 +230,7 @@ const Link = styled.a`
 `;
 
 const LinkSticky = css`
-  font-size: 1.2rem;
+  font-size: 1.2rem !important;
 `;
 
 const Item = styled.li`
