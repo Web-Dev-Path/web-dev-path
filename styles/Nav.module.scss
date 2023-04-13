@@ -1,234 +1,234 @@
-@use './variables' as *;
-@use './mixins' as *;
+// @use './variables' as *;
+// @use './mixins' as *;
 
-.header {
-  color: $white;
-  background-color: $transparent;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  padding: 2rem 0;
-  height: 4.5rem;
-  z-index: 100;
+// .header {
+//   color: $white;
+//   background-color: $transparent;
+//   width: 100%;
+//   display: flex;
+//   align-items: center;
+//   padding: 2rem 0;
+//   height: 4.5rem;
+//   z-index: 100;
 
-  @include desktop {
-    height: auto;
-  }
-}
+//   @include desktop {
+//     height: auto;
+//   }
+// }
 
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+// .nav {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
 
-  &__button {
-    color: $dark-bg-color;
-    background-color: $white;
-    min-width: 9rem;
-    padding: 0.5rem 2rem;
-    border-radius: 2rem;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 1.2rem;
-    text-align: center;
-    display: inline-block;
-    border: 1px solid $transparent;
-    @include transition(all 0.3s ease);
+//   &__button {
+//     color: $dark-bg-color;
+//     background-color: $white;
+//     min-width: 9rem;
+//     padding: 0.5rem 2rem;
+//     border-radius: 2rem;
+//     cursor: pointer;
+//     font-weight: bold;
+//     font-size: 1.2rem;
+//     text-align: center;
+//     display: inline-block;
+//     border: 1px solid $transparent;
+//     @include transition(all 0.3s ease);
 
-    @include desktop {
-      font-size: 1.5rem;
-    }
+//     @include desktop {
+//       font-size: 1.5rem;
+//     }
 
-    &:hover {
-      text-decoration: none;
-      color: $white;
-      background-color: $transparent;
-      border: 1px solid $white;
-    }
+//     &:hover {
+//       text-decoration: none;
+//       color: $white;
+//       background-color: $transparent;
+//       border: 1px solid $white;
+//     }
 
-    &.active {
-      color: $white;
-      background-color: $dark-bg-color;
-      padding: 0.25rem 1rem;
-      min-width: 7rem;
-      font-size: 1.2rem;
+//     &.active {
+//       color: $white;
+//       background-color: $dark-bg-color;
+//       padding: 0.25rem 1rem;
+//       min-width: 7rem;
+//       font-size: 1.2rem;
 
-      &:hover {
-        color: $dark-bg-color;
-        background-color: $transparent;
-        border: 1px solid $dark-bg-color;
-      }
-    }
-  }
+//       &:hover {
+//         color: $dark-bg-color;
+//         background-color: $transparent;
+//         border: 1px solid $dark-bg-color;
+//       }
+//     }
+//   }
 
-  &__logo {
-    width: 4.5rem;
-    @include transition(opacity 0.3s ease);
-    cursor: pointer;
+//   &__logo {
+//     width: 4.5rem;
+//     @include transition(opacity 0.3s ease);
+//     cursor: pointer;
 
-    &:hover {
-      opacity: 0.6;
-    }
+//     &:hover {
+//       opacity: 0.6;
+//     }
 
-    @include desktop {
-      width: 11.25rem;
-    }
-  }
+//     @include desktop {
+//       width: 11.25rem;
+//     }
+//   }
 
-  &__links {
-    display: none;
-    padding: 1rem 0 2rem 0;
-    margin: 0;
-    position: relative;
-    top: 4.5rem;
+//   &__links {
+//     display: none;
+//     padding: 1rem 0 2rem 0;
+//     margin: 0;
+//     position: relative;
+//     top: 4.5rem;
 
-    @include desktop {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      position: static;
-      padding: 0;
-    }
+//     @include desktop {
+//       display: flex;
+//       flex-direction: row;
+//       align-items: center;
+//       position: static;
+//       padding: 0;
+//     }
 
-    &.active {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-      position: absolute;
-      left: 0;
-      background-color: $white;
-      color: $primary-content-color;
-      box-shadow: $box-shadow-bottom;
+//     &.active {
+//       display: flex;
+//       flex-direction: column;
+//       align-items: center;
+//       width: 100%;
+//       position: absolute;
+//       left: 0;
+//       background-color: $white;
+//       color: $primary-content-color;
+//       box-shadow: $box-shadow-bottom;
 
-      @include desktop {
-        flex-direction: row;
-        position: static;
-        width: auto;
-        background-color: $dark-bg-color;
-        color: $white;
-        box-shadow: none;
-      }
-    }
-  }
+//       @include desktop {
+//         flex-direction: row;
+//         position: static;
+//         width: auto;
+//         background-color: $dark-bg-color;
+//         color: $white;
+//         box-shadow: none;
+//       }
+//     }
+//   }
 
-  &__link {
-    font-size: 1.2rem;
-    line-height: 2.5;
-    font-weight: 400;
-    letter-spacing: 1px;
-    @include transition(all 0.3s ease);
+//   &__link {
+//     font-size: 1.2rem;
+//     line-height: 2.5;
+//     font-weight: 400;
+//     letter-spacing: 1px;
+//     @include transition(all 0.3s ease);
 
-    &:hover {
-      font-weight: bold;
-      letter-spacing: 0;
-    }
+//     &:hover {
+//       font-weight: bold;
+//       letter-spacing: 0;
+//     }
 
-    &.current {
-      font-weight: bold;
-    }
+//     &.current {
+//       font-weight: bold;
+//     }
 
-    &:after {
-      display: block;
-      letter-spacing: 1px;
-      content: attr(title);
-      font-weight: bold;
-      height: 0;
-      overflow: hidden;
-      visibility: hidden;
-    }
+//     &:after {
+//       display: block;
+//       letter-spacing: 1px;
+//       content: attr(title);
+//       font-weight: bold;
+//       height: 0;
+//       overflow: hidden;
+//       visibility: hidden;
+//     }
 
-    @include large-desktop {
-      font-size: 1.5rem;
-    }
-  }
+//     @include large-desktop {
+//       font-size: 1.5rem;
+//     }
+//   }
 
-  &__item {
-    @include desktop {
-      display: inline-block;
-      margin-left: 6rem;
-    }
-  }
+//   &__item {
+//     @include desktop {
+//       display: inline-block;
+//       margin-left: 6rem;
+//     }
+//   }
 
-  &__hamburger {
-    display: block;
-    cursor: pointer;
-    background: none;
-    border: none;
+//   &__hamburger {
+//     display: block;
+//     cursor: pointer;
+//     background: none;
+//     border: none;
 
-    @include desktop {
-      display: none;
-    }
+//     @include desktop {
+//       display: none;
+//     }
 
-    &__bar {
-      display: block;
-      width: 25px;
-      height: 2px;
-      margin: 5px auto;
-      @include transition(opacity 0.3s ease);
-      background-color: $white;
-    }
+//     &__bar {
+//       display: block;
+//       width: 25px;
+//       height: 2px;
+//       margin: 5px auto;
+//       @include transition(opacity 0.3s ease);
+//       background-color: $white;
+//     }
 
-    &.active &__bar:nth-child(2) {
-      opacity: 0;
-    }
-    &.active &__bar:nth-child(1) {
-      transform: translateY(8px) rotate(45deg);
-    }
-    &.active &__bar:nth-child(3) {
-      transform: translateY(-6px) rotate(-45deg);
-    }
-  }
-}
+//     &.active &__bar:nth-child(2) {
+//       opacity: 0;
+//     }
+//     &.active &__bar:nth-child(1) {
+//       transform: translateY(8px) rotate(45deg);
+//     }
+//     &.active &__bar:nth-child(3) {
+//       transform: translateY(-6px) rotate(-45deg);
+//     }
+//   }
+// }
 
-.sticky {
-  background-color: $white;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 100;
-  height: 4.5rem;
-  box-shadow: $box-shadow;
+// .sticky {
+//   background-color: $white;
+//   width: 100%;
+//   display: flex;
+//   justify-content: center;
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   z-index: 100;
+//   height: 4.5rem;
+//   box-shadow: $box-shadow;
 
-  nav {
-    width: 90%;
-    max-width: $large-desktop-breakpoint;
-  }
+//   nav {
+//     width: 90%;
+//     max-width: $large-desktop-breakpoint;
+//   }
 
-  span {
-    background-color: $primary-content-color;
-  }
+//   span {
+//     background-color: $primary-content-color;
+//   }
 
-  .nav__logo {
-    width: 4.5rem;
-    filter: brightness(0) saturate(100%);
-  }
+//   .nav__logo {
+//     width: 4.5rem;
+//     filter: brightness(0) saturate(100%);
+//   }
 
-  .nav__links {
-    @include desktop {
-      background-color: $white;
-      color: $primary-content-color;
-    }
-  }
+//   .nav__links {
+//     @include desktop {
+//       background-color: $white;
+//       color: $primary-content-color;
+//     }
+//   }
 
-  .nav__link {
-    font-size: 1.2rem;
-  }
+//   .nav__link {
+//     font-size: 1.2rem;
+//   }
 
-  .nav__button {
-    background-color: $dark-bg-color;
-    color: $white;
-    padding: 0.25rem 1rem;
-    min-width: 7rem;
-    font-size: 1.2rem;
+//   .nav__button {
+//     background-color: $dark-bg-color;
+//     color: $white;
+//     padding: 0.25rem 1rem;
+//     min-width: 7rem;
+//     font-size: 1.2rem;
 
-    &:hover {
-      color: $dark-bg-color;
-      background-color: $transparent;
-      border: 1px solid $dark-bg-color;
-    }
-  }
-}
+//     &:hover {
+//       color: $dark-bg-color;
+//       background-color: $transparent;
+//       border: 1px solid $dark-bg-color;
+//     }
+//   }
+// }

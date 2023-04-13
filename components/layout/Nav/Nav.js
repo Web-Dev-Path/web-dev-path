@@ -2,8 +2,9 @@ import { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import Container from '@/components/containers/Container/Container';
-import styles from '@/styles/Nav.module.scss';
+// import styles from '@/styles/Nav.module.scss';
 import { linksNav } from '@/utils/links';
+import S from './styles';
 
 export default function Nav() {
   const router = useRouter();
@@ -17,10 +18,8 @@ export default function Nav() {
       ([entry]) => {
         if (!containerRef.current) return;
         if (!entry.isIntersecting) {
-          containerRef.current.classList.add(styles.sticky);
           setIsSticky(true);
         } else {
-          containerRef.current.classList.remove(styles.sticky);
           setIsSticky(false);
         }
       },
@@ -54,62 +53,59 @@ export default function Nav() {
   }, []);
 
   return (
-    <header className={styles.header} ref={headerRef}>
+    <S.Header ref={headerRef}>
       <Container>
-        <div ref={containerRef}>
-          <nav className={styles.nav}>
+        <S.NavWrapper ref={containerRef} $isSticky={isSticky}>
+          <S.Nav $isSticky={isSticky}>
             <Link href='/'>
-              <img
-                className={styles.nav__logo}
+              <S.Logo
+                $isSticky={isSticky}
                 src='/images/svg/logo.svg'
                 alt='Logo'
                 title='Go to the Homepage'
               />
             </Link>
-            <ul
-              className={`${styles.nav__links} ${active ? styles.active : ''}`}
+            <S.Links
+              className={`${active ? 'active' : ''}`}
+              $isSticky={isSticky}
             >
               {linksNav.map(({ text, href, id }) => {
                 return (
-                  <li className={styles.nav__item} key={id}>
-                    <a
+                  <S.Item key={id}>
+                    <S.Link
                       href={href}
-                      className={`${styles.nav__link} ${
-                        router.pathname == href ? `${styles.current}` : ''
-                      }`}
+                      $isSticky={isSticky}
+                      className={`${router.pathname == href ? `current` : ''}`}
                       title={text}
                     >
                       {text}
-                    </a>
-                  </li>
+                    </S.Link>
+                  </S.Item>
                 );
               })}
-              <li className={styles.nav__item}>
-                <a
+              <S.Item>
+                <S.Button
+                  $isSticky={isSticky}
                   href='mailto:hello@webdevpath.co?subject=Project collaborator application'
-                  className={`${styles.nav__button} ${
-                    active ? styles.active : ''
-                  }`}
+                  className={`${active ? `active` : ''}`}
                   title='Join us'
                 >
                   Join us
-                </a>
-              </li>
-            </ul>
-            <button
-              className={`${styles.nav__hamburger} ${
-                active ? styles.active : ''
-              }`}
+                </S.Button>
+              </S.Item>
+            </S.Links>
+            <S.Hamburger
+              className={`${active ? `active` : ''}`}
               onClick={() => setActive(active => !active)}
               aria-label='toggle navigation'
             >
-              <span className={styles.nav__hamburger__bar}></span>
-              <span className={styles.nav__hamburger__bar}></span>
-              <span className={styles.nav__hamburger__bar}></span>
-            </button>
-          </nav>
-        </div>
+              <S.HamburgerBar $isSticky={isSticky}></S.HamburgerBar>
+              <S.HamburgerBar $isSticky={isSticky}></S.HamburgerBar>
+              <S.HamburgerBar $isSticky={isSticky}></S.HamburgerBar>
+            </S.Hamburger>
+          </S.Nav>
+        </S.NavWrapper>
       </Container>
-    </header>
+    </S.Header>
   );
 }

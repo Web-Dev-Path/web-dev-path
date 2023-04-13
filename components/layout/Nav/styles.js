@@ -54,18 +54,6 @@ const Nav = styled.nav`
   justify-content: space-between;
   align-items: center;
 
-  &:hover {
-    text-decoration: none;
-    color: ${$white};
-    background-color: ${$transparent};
-    border: 1px solid ${$white};
-  }
-
-  //media query mixins
-  ${m.desktop(css`
-    font-size: 1.5rem;
-  `)}
-
   //check props for sticky behavior
   ${props => (props.$isSticky ? NavSticky : '')}
 `;
@@ -88,6 +76,18 @@ const Button = styled.a`
   display: inline-block;
   border: 1px solid ${$transparent};
   ${m.transition('all 0.3s ease')};
+
+  &:hover {
+    text-decoration: none;
+    color: ${$white};
+    background-color: ${$transparent};
+    border: 1px solid ${$white};
+  }
+
+  //media query mixins
+  ${m.desktop(css`
+    font-size: 1.5rem;
+  `)}
 
   &.active {
     color: ${$white};
@@ -252,13 +252,13 @@ const Hamburger = styled.button`
     display: none;
   `)}
 
-  &.active &__bar:nth-child(2) {
+  &.active span:nth-child(2) {
     opacity: 0;
   }
-  &.active &__bar:nth-child(1) {
+  &.active span:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
   }
-  &.active &__bar:nth-child(3) {
+  &.active span:nth-child(3) {
     transform: translateY(-6px) rotate(-45deg);
   }
 `;
@@ -278,3 +278,16 @@ const HamburgerBar = styled.span`
 const HamburgerBarSticky = css`
   background-color: ${$primaryContentColor};
 `;
+
+export default {
+  Header,
+  NavWrapper,
+  Nav,
+  Logo,
+  Links,
+  Item,
+  Link,
+  Button,
+  Hamburger,
+  HamburgerBar,
+};
