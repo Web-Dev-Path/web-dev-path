@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ContactUsFormSubscribe } from '@/components/ContactUsForm';
+import { ContactUsFormSubscribe } from '@/components/ContactUsForm/ContactUsForm';
 import ContactUsCards from '@/components/ContactUsCards';
 import contactUsFormStyles from '@/styles/Contact.module.scss';
 import Bracket from '@/components/decorations/Bracket';
