@@ -1,151 +1,151 @@
-@use './mixins' as *;
-@use './variables' as *;
+// @use './mixins' as *;
+// @use './variables' as *;
 
-.newsletterFormInfo {
-  font-size: 1rem;
-  font-style: italic;
-  color: $primary-content-color;
+// .newsletterFormInfo {
+//   font-size: 1rem;
+//   font-style: italic;
+//   color: $primary-content-color;
 
-  .newsletterFormError {
-    color: $error;
-  }
+//   .newsletterFormError {
+//     color: $error;
+//   }
 
-  .newsletterFormError,
-  .newsletterFormSuccess,
-  .newsletterFormSending {
-    margin-top: 1rem;
+//   .newsletterFormError,
+//   .newsletterFormSuccess,
+//   .newsletterFormSending {
+//     margin-top: 1rem;
 
-    @include desktop {
-      font-size: 1.2rem;
-      margin: 0;
-    }
-  }
-}
+//     @include desktop {
+//       font-size: 1.2rem;
+//       margin: 0;
+//     }
+//   }
+// }
 
-.newsletter {
-  padding: 2.5rem 0;
-  background-color: $primary-accent-color;
+// .newsletter {
+//   padding: 2.5rem 0;
+//   background-color: $primary-accent-color;
 
-  @include desktop {
-    padding: 1rem 0;
-  }
+//   @include desktop {
+//     padding: 1rem 0;
+//   }
 
-  &__inner {
-    @include desktop {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 2rem;
-    }
-  }
+//   &__inner {
+//     @include desktop {
+//       display: flex;
+//       justify-content: space-between;
+//       align-items: center;
+//       gap: 2rem;
+//     }
+//   }
 
-  &__title {
-    font-size: 1.5rem;
-    color: $primary-content-color;
-    margin: 0;
-    white-space: nowrap;
-    display: flex;
-    gap: 0.5rem;
+//   &__title {
+//     font-size: 1.5rem;
+//     color: $primary-content-color;
+//     margin: 0;
+//     white-space: nowrap;
+//     display: flex;
+//     gap: 0.5rem;
 
-    @include medium-desktop {
-      font-size: 1.75rem;
-      gap: 1rem;
-    }
+//     @include medium-desktop {
+//       font-size: 1.75rem;
+//       gap: 1rem;
+//     }
 
-    @include large-desktop {
-      font-size: 2.25rem;
-      gap: 1.5rem;
-    }
-  }
+//     @include large-desktop {
+//       font-size: 2.25rem;
+//       gap: 1.5rem;
+//     }
+//   }
 
-  &__right_chevron {
-    position: relative;
-    top: 0.1rem;
+//   &__right_chevron {
+//     position: relative;
+//     top: 0.1rem;
 
-    @include large-desktop {
-      top: unset;
+//     @include large-desktop {
+//       top: unset;
 
-      img {
-        width: 1.5rem !important;
-        height: 1.5rem !important;
-      }
-    }
-  }
+//       img {
+//         width: 1.5rem !important;
+//         height: 1.5rem !important;
+//       }
+//     }
+//   }
 
-  &__form {
-    @include desktop {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      margin-left: auto;
-    }
-  }
+//   &__form {
+//     @include desktop {
+//       display: flex;
+//       align-items: center;
+//       gap: 1rem;
+//       margin-left: auto;
+//     }
+//   }
 
-  &__input {
-    display: block;
-    font-size: 1.2rem;
-    border-radius: 1rem;
-    height: 2rem;
-    margin: 1rem 0;
-    padding: 1rem 1.25rem;
-    border: 1px solid $dark-bg-color;
-    width: 100%;
+//   &__input {
+//     display: block;
+//     font-size: 1.2rem;
+//     border-radius: 1rem;
+//     height: 2rem;
+//     margin: 1rem 0;
+//     padding: 1rem 1.25rem;
+//     border: 1px solid $dark-bg-color;
+//     width: 100%;
 
-    @include large-desktop {
-      font-size: 1.5rem;
-      height: 3rem;
-      border-radius: 3rem;
-      max-width: 25rem;
-    }
+//     @include large-desktop {
+//       font-size: 1.5rem;
+//       height: 3rem;
+//       border-radius: 3rem;
+//       max-width: 25rem;
+//     }
 
-    &::placeholder {
-      color: $primary-content-color;
-    }
+//     &::placeholder {
+//       color: $primary-content-color;
+//     }
 
-    &:focus {
-      outline: none;
-    }
-  }
+//     &:focus {
+//       outline: none;
+//     }
+//   }
 
-  &__name {
-    @include desktop {
-      width: 12.25rem;
-    }
-  }
+//   &__name {
+//     @include desktop {
+//       width: 12.25rem;
+//     }
+//   }
 
-  &__email {
-    @include desktop {
-      width: 16rem;
-    }
-    @include large-desktop {
-      width: 26rem;
-    }
-  }
+//   &__email {
+//     @include desktop {
+//       width: 16rem;
+//     }
+//     @include large-desktop {
+//       width: 26rem;
+//     }
+//   }
 
-  &__button {
-    border-radius: 1.2rem;
-    font-size: 1.2rem;
-    background-color: $dark-bg-color;
-    border: 1px solid $transparent;
-    color: $white;
-    height: 2.2rem;
-    font-weight: bold;
-    transition: 0.3s ease;
-    width: 12rem;
-    cursor: pointer;
-    @include transition(all 0.3s ease);
+//   &__button {
+//     border-radius: 1.2rem;
+//     font-size: 1.2rem;
+//     background-color: $dark-bg-color;
+//     border: 1px solid $transparent;
+//     color: $white;
+//     height: 2.2rem;
+//     font-weight: bold;
+//     transition: 0.3s ease;
+//     width: 12rem;
+//     cursor: pointer;
+//     @include transition(all 0.3s ease);
 
-    &:hover {
-      background-color: $transparent;
-      color: $dark-bg-color;
-      border: 1px solid $dark-bg-color;
-    }
+//     &:hover {
+//       background-color: $transparent;
+//       color: $dark-bg-color;
+//       border: 1px solid $dark-bg-color;
+//     }
 
-    @include large-desktop {
-      font-size: 1.5rem;
-      width: 16rem;
-      height: 3rem;
-      border-radius: 3rem;
-    }
-  }
-}
+//     @include large-desktop {
+//       font-size: 1.5rem;
+//       width: 16rem;
+//       height: 3rem;
+//       border-radius: 3rem;
+//     }
+//   }
+// }

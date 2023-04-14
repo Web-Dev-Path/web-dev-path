@@ -3,7 +3,6 @@ import Image from 'next/image';
 import { decode } from 'html-entities';
 import ReCAPTCHA from 'react-google-recaptcha';
 import Container from '@/components/containers/Container/Container';
-import newsletterStyles from '@/styles/Newsletter.module.scss';
 import SubmitButton from '@/components/buttons/SubmitButton/SubmitButton';
 import S from './styles';
 
@@ -115,34 +114,29 @@ const NewsletterForm = ({ status, message, onValidated }) => {
   };
 
   return (
-    <section className={newsletterStyles.newsletter}>
-      <Container customClass={newsletterStyles.newsletter__inner}>
-        <h2 className={newsletterStyles.newsletter__title}>
+    <S.Section>
+      <S.InnerContainer>
+        <S.Title>
           Sign up for news
-          <span className={newsletterStyles.newsletter__right_chevron}>
+          <S.RightChevron>
             <Image
               src='/images/svg/right-chevron.svg'
               height={18}
               width={18}
               alt='Right Chevron SVG'
             />
-          </span>
-        </h2>
+          </S.RightChevron>
+        </S.Title>
         <div>
-          <form
-            className={newsletterStyles.newsletter__form}
-            onSubmit={handleFormSubmit}
-          >
-            <input
-              className={`${newsletterStyles.newsletter__input} ${newsletterStyles.newsletter__name}`}
+          <S.Form onSubmit={handleFormSubmit}>
+            <S.InputName
               onChange={event => setName(event?.target?.value ?? '')}
               type='text'
               name='name'
               value={name}
               placeholder='name'
             />
-            <input
-              className={`${newsletterStyles.newsletter__input} ${newsletterStyles.newsletter__email}`}
+            <S.InputEmail
               onChange={event => setEmail(event?.target?.value ?? '')}
               type='email'
               name='email'
@@ -158,32 +152,26 @@ const NewsletterForm = ({ status, message, onValidated }) => {
               sitekey={SITE_KEY}
               onChange={onReCAPTCHAChange}
             />
-          </form>
+          </S.Form>
 
-          <div className={newsletterStyles.newsletterFormInfo}>
-            {status === 'sending' && (
-              <div className={newsletterStyles.newsletterFormSending}>
-                Sending...
-              </div>
-            )}
+          <S.FormInfo>
+            {status === 'sending' && <S.FormSending>Sending...</S.FormSending>}
             {status === 'error' || error ? (
-              <div
-                className={newsletterStyles.newsletterFormError}
+              <S.FormError
                 dangerouslySetInnerHTML={{
                   __html: error || getMessage(message),
                 }}
               />
             ) : null}
             {status === 'success' && status !== 'error' && !error && (
-              <div
-                className={newsletterStyles.newsletterFormSuccess}
+              <S.FormSuccess
                 dangerouslySetInnerHTML={{ __html: decode(message) }}
               />
             )}
-          </div>
+          </S.FormInfo>
         </div>
-      </Container>
-    </section>
+      </S.InnerContainer>
+    </S.Section>
   );
 };
 
