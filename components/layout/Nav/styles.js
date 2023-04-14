@@ -87,6 +87,7 @@ const Button = styled.a`
   //media query mixins
   ${m.desktop(css`
     font-size: 1.5rem;
+    ${props => (props.$isSticky ? 'font-size: 1.2rem;' : '')}
   `)}
 
   &.active {
