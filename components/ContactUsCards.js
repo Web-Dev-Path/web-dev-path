@@ -1,6 +1,7 @@
-import contactCardStyles from '@/styles/ContactUsCards.module.scss';
 import CardsColumns from './containers/CardColumns/CardsColumns';
 import RevealContentContainer from './containers/RevealContentContainer/RevealContentContainer';
+import styled from 'styled-components';
+import { $white } from '@/styles/_variables';
 
 const cards = [
   {
@@ -29,12 +30,16 @@ const cards = [
   },
 ];
 
+const ContactCardsContainer = styled.div`
+  background-color: ${$white};
+`;
+
 export default function ContactUsCards() {
   return (
-    <div className={contactCardStyles.contactCards}>
+    <ContactCardsContainer>
       <RevealContentContainer>
         <CardsColumns cards={cards} customClass='contact-cards' />
       </RevealContentContainer>
-    </div>
+    </ContactCardsContainer>
   );
 }
