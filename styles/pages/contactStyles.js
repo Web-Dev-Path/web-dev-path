@@ -46,8 +46,8 @@ const FormAndDecorations = styled.div`
 `;
 
 const YellowBracket = styled(Bracket)`
-  //       -webkit-transform: scaleX(-1);
-  //       transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
 
   //media query mixins
   ${m.mobile(css`
@@ -74,14 +74,13 @@ const YellowBracket = styled(Bracket)`
 
 const YellowColon = styled.img`
   //media query mixins
-  ${m.desktop(css`
-    right: -15%;
-  `)}
-
   ${m.tablet(css`
     position: absolute;
     top: -10%;
     right: -5%;
+  `)}
+  ${m.desktop(css`
+    right: -15%;
   `)}
 `;
 
@@ -102,3 +101,11 @@ const ResponseMessage = styled.div`
     max-width: fit-content;
   `)}
 `;
+
+export default {
+  ContactUsContainer,
+  FormAndDecorations,
+  YellowBracket,
+  YellowColon,
+  ResponseMessage,
+};
