@@ -79,6 +79,7 @@ const YellowColon = styled.img`
     top: -10%;
     right: -5%;
   `)}
+
   ${m.desktop(css`
     right: -15%;
   `)}
