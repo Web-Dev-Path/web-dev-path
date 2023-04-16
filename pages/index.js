@@ -1,8 +1,6 @@
-import Bracket from '@/components/decorations/Bracket';
-import Stick from '@/components/decorations/Stick';
 import TwoColumn from '@/components/containers/TwoColumn/TwoColumn';
 import CardsColumns from '@/components/containers/CardColumns/CardsColumns';
-import styles from '@/styles/Home.module.scss';
+import S from '@/styles/pages/homeStyles';
 import {
   $white,
   $primaryContentColor,
@@ -26,7 +24,7 @@ export default function Home() {
       </RevealContentContainer>
 
       <RevealContentContainer>
-        <Bracket className={styles.bracket} />
+        <S.Bracket />
         <TwoColumn
           title='Get involved.'
           content='Web Dev Path runs on volunteers. Here are the ways you can get involved with us:'
@@ -72,7 +70,7 @@ export default function Home() {
       </RevealContentContainer>
 
       <RevealContentContainer>
-        <Stick className={styles.stick} />
+        <S.Stick />
 
         <TwoColumn
           title='Nonprofit?'
