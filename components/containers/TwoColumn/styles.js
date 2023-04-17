@@ -82,7 +82,7 @@ const InnerImage = styled(Image)`
   object-fit: cover;
 `;
 
-export const Base = {
+const BaseStyles = {
   TwoColumnWrapper,
   InnerContainer,
   InnerContent,
@@ -98,7 +98,7 @@ const AboutUsInnerImage = styled(InnerImage)`
 `;
 
 const AboutUs = {
-  ...Base,
+  ...BaseStyles,
   InnerImage: AboutUsInnerImage,
 };
 
@@ -112,7 +112,7 @@ const OurProcessInnerImageWrapper = styled(InnerImageWrapper)`
   `)}
 `;
 
-export const OurProcess = {
+const OurProcess = {
   ...AboutUs,
   InnerImageWrapper: OurProcessInnerImageWrapper,
 };
@@ -138,7 +138,7 @@ const GetStartedInnerImageWrapper = styled(InnerImageWrapper)`
   `)}
 `;
 
-export const GetStarted = {
+const GetStarted = {
   ...AboutUs,
   InnerContainer: GetStartedInnerContainer,
   InnerImageWrapper: GetStartedInnerImageWrapper,
@@ -154,7 +154,7 @@ const OurPurposeInnerImageWrapper = styled(InnerImageWrapper)`
   `)}
 `;
 
-export const OurPurpose = {
+const OurPurpose = {
   ...AboutUs,
   InnerImageWrapper: OurPurposeInnerImageWrapper,
 };
@@ -169,7 +169,7 @@ const OurBackgroundInnerImageWrapper = styled(InnerImageWrapper)`
   `)}
 `;
 
-export const OurBackground = {
+const OurBackground = {
   ...AboutUs,
   InnerImageWrapper: OurBackgroundInnerImageWrapper,
 };
@@ -182,8 +182,8 @@ const GetInvolvedInnerContainer = styled(InnerContainer)`
   `)}
 `;
 
-export const GetInvolved = {
-  ...Base,
+const GetInvolved = {
+  ...BaseStyles,
   InnerContainer: GetInvolvedInnerContainer,
 };
 
@@ -195,8 +195,8 @@ const NonProfitInnerContent = styled(InnerContent)`
   `)}
 `;
 
-export const NonProfit = {
-  ...Base,
+const NonProfit = {
+  ...BaseStyles,
   InnerContent: NonProfitInnerContent,
 };
 
@@ -218,8 +218,8 @@ const WannaLearnMoreInnerImage = styled(InnerImage)`
   object-fit: contain;
 `;
 
-export const WannaLearnMore = {
-  ...Base,
+const WannaLearnMore = {
+  ...BaseStyles,
   Content: WannaLearnMoreContent,
   InnerImageWrapper: WannaLearnMoreInnerImageWrapper,
   InnerImage: WannaLearnMoreInnerImage,
@@ -246,7 +246,7 @@ const QuestionsInnerImageWrapper = styled(InnerImageWrapper)`
   `)}
 `;
 
-export const QuestionsMore = {
+const QuestionsMore = {
   ...AboutUs,
   InnerContainer: QuestionsInnerContainer,
   InnerImageWrapper: QuestionsInnerImageWrapper,
@@ -283,8 +283,8 @@ const TwoTextColumnsInnerContent = styled(InnerContent)`
   `)}
 `;
 
-export const TwoTextColumns = {
-  ...Base,
+const TwoTextColumns = {
+  ...BaseStyles,
   InnerContainer: TwoTextColumnsInnerContainer,
   InnerContent: TwoTextColumnsInnerContent,
 };
@@ -301,8 +301,22 @@ const SecondTextColumnInnerContainer = styled(InnerContainer)`
   margin: 0px;
 `;
 
-export const SecondTextColumn = {
-  ...Base,
+const SecondTextColumn = {
+  ...BaseStyles,
   InnerContainer: SecondTextColumnInnerContainer,
   InnerContent: SecondTextColumnInnerContent,
+};
+
+export default {
+  'our-process': OurProcess,
+  'get-started': GetStarted,
+  'our-purpose': OurPurpose,
+  'our-background': OurBackground,
+  'get-involved': GetInvolved,
+  'non-profit': NonProfit,
+  'wanna-learn-more': WannaLearnMore,
+  questions: QuestionsMore,
+  'two-text-columns': TwoTextColumns,
+  'second-text-column': SecondTextColumn,
+  base: BaseStyles,
 };

@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import ButtonLink from '@/components/buttons/ButtonLink/ButtonLink';
 import Container from '@/components/containers/Container/Container';
-import * as TwoColumnStyles from './styles';
+import TwoColumnStyles from './styles';
 
 export default function TwoColumn({
   image,
@@ -20,31 +20,10 @@ export default function TwoColumn({
   $contentType,
 }) {
   //Set Styles base don content type
-  let S;
-  switch ($contentType) {
-    case 'our-process':
-      S = TwoColumnStyles.OurProcess;
-    case 'get-started':
-      S = TwoColumnStyles.GetStarted;
-    case 'our-purpose':
-      S = TwoColumnStyles.OurPurpose;
-    case 'our-background':
-      S = TwoColumnStyles.OurBackground;
-    case 'get-involved':
-      S = TwoColumnStyles.GetInvolved;
-    case 'non-profit':
-      S = TwoColumnStyles.NonProfit;
-    case 'wanna-learn-more':
-      S = TwoColumnStyles.WannaLearnMore;
-    case 'questions':
-      S = TwoColumnStyles.QuestionsMore;
-    case 'two-text-columns':
-      S = TwoColumnStyles.TwoTextColumns;
-    case 'second-text-column':
-      S = TwoColumnStyles.SecondTextColumn;
-    default:
-      S = TwoColumnStyles.Base;
-  }
+  const S = TwoColumnStyles.$contentType
+    ? TwoColumnStyles.$contentType
+    : TwoColumnStyles.base;
+
   // Add rowOrder="row-reverse" prop to the component to reverse its order on desktop
   return (
     <S.TwoColumnWrapper $color={color} $bgColor={bgColor}>
