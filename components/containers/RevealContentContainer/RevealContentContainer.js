@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { useIntersect } from '@/hooks/useIntersect';
-// import styles from '@/styles/RevealContainer.module.scss';
 import S from './styles';
 
 const RevealContentContainer = ({ children }) => {

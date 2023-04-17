@@ -14,6 +14,7 @@ export default function TwoColumn({
   link,
   customInnerClass,
   customBtnClass,
+  $btnColorScheme,
   linkText = 'Learn more',
   secondTextColumn,
   openNewTab,
@@ -23,8 +24,6 @@ export default function TwoColumn({
   const S = TwoColumnStyles[$contentType]
     ? TwoColumnStyles[$contentType]
     : TwoColumnStyles.base;
-
-  console.log();
 
   // Add rowOrder="row-reverse" prop to the component to reverse its order on desktop
   return (
@@ -39,7 +38,7 @@ export default function TwoColumn({
           {link && (
             <ButtonLink
               link={link}
-              customClassName={customBtnClass}
+              $colorScheme={$btnColorScheme}
               openNewTab={openNewTab}
             >
               {linkText}

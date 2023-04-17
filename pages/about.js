@@ -38,7 +38,6 @@ export default function AboutUs() {
           color={$primaryContentColor}
           bgColor={$primaryAccentColor}
           $contentType='our-background'
-          customInnerClass='our-background'
         />
       </RevealContentContainer>
 
@@ -80,7 +79,6 @@ export default function AboutUs() {
           color={$primaryContentColor}
           bgColor={$white}
           $contentType='our-process'
-          customInnerClass='our-process'
         />
         <TwoColumn
           title='Version control'
@@ -103,7 +101,6 @@ export default function AboutUs() {
           color={$primaryContentColor}
           bgColor={$white}
           $contentType='our-process'
-          customInnerClass='our-process'
         />
       </RevealContentContainer>
       <RevealContentContainer>
@@ -148,7 +145,6 @@ export default function AboutUs() {
           color={$primaryContentColor}
           bgColor={$white}
           $contentType='our-purpose'
-          customInnerClass='our-purpose'
         />
       </RevealContentContainer>
       <RevealContentContainer>
@@ -160,7 +156,6 @@ export default function AboutUs() {
           color={$primaryContentColor}
           bgColor={$lightBgColor}
           $contentType='wanna-learn-more'
-          customInnerClass='wanna-learn-more'
         />
         <TwoColumn
           title='Junior Developers'
@@ -174,11 +169,10 @@ export default function AboutUs() {
           linkText='Our wiki'
           openNewTab
           link='https://github.com/Web-Dev-Path/web-dev-path/wiki'
-          customBtnClass='inverted-grey'
+          $btnColorScheme='inverted-grey'
           color={$primaryContentColor}
           bgColor={$lightBgColor}
           $contentType='two-text-columns'
-          customInnerClass='two-text-columns'
           secondTextColumn={
             <TwoColumn
               title='Experienced Developers'
@@ -190,11 +184,10 @@ export default function AboutUs() {
               }
               linkText='Contact us'
               link='/contact'
-              customBtnClass='inverted-grey'
+              $btnColorScheme='inverted-grey'
               color={$primaryContentColor}
               bgColor={$lightBgColor}
               $contentType='second-text-column'
-              customInnerClass='second-text-column'
             />
           }
         />
@@ -232,10 +225,9 @@ export default function AboutUs() {
           color={$primaryContentColor}
           bgColor={$white}
           $contentType='get-started'
-          customInnerClass='get-started'
           link='mailto:hello@webdevpath.co'
           linkText='Ping us'
-          customBtnClass='inverted-grey'
+          $btnColorScheme='inverted-grey'
         />
       </RevealContentContainer>
       <RevealContentContainer>
@@ -270,10 +262,9 @@ export default function AboutUs() {
           color={$primaryContentColor}
           bgColor={$white}
           $contentType='questions'
-          customInnerClass='questions'
           link='/contact'
           linkText='Contact us'
-          customBtnClass='inverted-grey'
+          $btnColorScheme='inverted-grey'
         />
       </RevealContentContainer>
     </div>

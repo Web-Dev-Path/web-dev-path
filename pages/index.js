@@ -18,7 +18,7 @@ export default function Home() {
           altTag='Join the project'
           content='The Web Dev Path is a team of professional developers project that aims to provide a comprehensive path for people who seek to begin their web development journey.'
           link='/about'
-          customBtnClass='inverted-grey'
+          $btnColorScheme='inverted-grey'
           bgColor={$lightBgColor}
         />
       </RevealContentContainer>
@@ -30,7 +30,6 @@ export default function Home() {
           content='Web Dev Path runs on volunteers. Here are the ways you can get involved with us:'
           rowOrder='row-reverse'
           $contentType='get-involved'
-          customInnerClass='get-involved'
           bgColor={$white}
         />
       </RevealContentContainer>
@@ -79,8 +78,7 @@ export default function Home() {
           bgColor={$primaryContentColor}
           link='/about'
           $contentType='non-profit'
-          customInnerClass='non-profit'
-          customBtnClass='inverted-white'
+          $btnColorScheme='inverted-white'
         />
       </RevealContentContainer>
     </>

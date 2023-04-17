@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import Link from 'next/link';
-// import styles from '@/styles/Card.module.scss';
 import S from './styles';
 import { Tag } from '@/components/blog/Tag/Tag';
 
