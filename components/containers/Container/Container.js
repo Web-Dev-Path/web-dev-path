@@ -1,4 +1,3 @@
-import containerStyles from '@/styles/Container.module.scss';
 import S from './styles';
 
 export default function Container({

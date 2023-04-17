@@ -19,10 +19,12 @@ export default function TwoColumn({
   openNewTab,
   $contentType,
 }) {
-  //Set Styles base don content type
-  const S = TwoColumnStyles.$contentType
-    ? TwoColumnStyles.$contentType
+  //Set Styles based on content type
+  const S = TwoColumnStyles[$contentType]
+    ? TwoColumnStyles[$contentType]
     : TwoColumnStyles.base;
+
+  console.log();
 
   // Add rowOrder="row-reverse" prop to the component to reverse its order on desktop
   return (
