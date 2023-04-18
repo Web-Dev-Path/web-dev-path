@@ -43,6 +43,7 @@ const Card = styled.div`
     &:first-child,
     &:last-child {
       margin: 1.5rem 0.5rem 0 0.5rem;
+      ${props => (props.$cardType === 'blog' ? Blog : '')}
     }
   `)}
 
@@ -62,6 +63,7 @@ const Title = styled.h2`
 
   ${m.tablet(css`
     font-size: 2.25rem;
+    ${props => (props.$cardType === 'our-goals' ? AboutUsTitle : '')}
   `)}
 
   //check props for button variations
@@ -112,6 +114,10 @@ const TagContainer = styled.div`
 const AboutUs = css`
   background-color: ${$primaryAccentColor};
   max-height: 35rem;
+
+  ${m.desktop(css`
+    max-height: 37rem;
+  `)}
 `;
 
 const AboutUsTitle = css`

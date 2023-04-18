@@ -15,7 +15,7 @@ const Row = styled.div`
 `;
 
 const AlignLeft = css`
-  justify-content: left;
+  justify-content: left !important;
 `;
 
 export default { Row };

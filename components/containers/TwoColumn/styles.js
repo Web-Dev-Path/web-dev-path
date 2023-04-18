@@ -108,7 +108,7 @@ const OurProcessInnerImageWrapper = styled(InnerImageWrapper)`
 
   //media query mixins
   ${m.desktop(css`
-  height: height: 12rem;
+    height: 12rem;
   `)}
 `;
 
