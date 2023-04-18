@@ -2,11 +2,7 @@ import styled, { css } from 'styled-components';
 import Container from '@/components/containers/Container/Container';
 import Image from 'next/image';
 import * as m from '@/styles/_mixins';
-import {
-  $white,
-  $primaryContentColor,
-  $primaryAccentColor,
-} from '@/styles/_variables';
+import { $white, $primaryAccentColor } from '@/styles/_variables';
 
 const Header = styled.div`
   display: flex;

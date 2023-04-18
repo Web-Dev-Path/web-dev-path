@@ -5,14 +5,12 @@ import S from './styles';
 export default function ButtonLink({
   link,
   children,
-  styles,
   $colorScheme,
   openNewTab,
 }) {
   return (
     <S.ButtonLink
       href={link}
-      style={styles}
       $colorScheme={$colorScheme}
       target={openNewTab ? '_blank' : undefined}
       rel='noopener noreferrer'

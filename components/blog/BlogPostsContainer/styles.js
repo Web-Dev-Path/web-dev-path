@@ -79,22 +79,3 @@ export default {
   PostContainer,
   BlogContainer,
 };
-
-// .blogContainer {
-//     display: flex;
-//     flex-direction: column;
-//     margin: 3rem 0;
-//   }
-
-//   .blogSearch {
-//     display: flex;
-//     padding-top: 2.5rem;
-//     justify-content: space-between;
-//     flex-direction: column-reverse;
-//     align-items: flex-start;
-
-//     @include desktop {
-//       align-items: center;
-//       flex-direction: row;
-//     }
-//   }

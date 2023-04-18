@@ -1,4 +1,3 @@
-// import styles from '@/styles/SearchBar.module.scss';
 import S from './styles';
 import { useRef } from 'react';
 

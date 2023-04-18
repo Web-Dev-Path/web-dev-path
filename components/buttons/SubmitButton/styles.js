@@ -3,7 +3,6 @@ import * as m from '@/styles/_mixins';
 import {
   $white,
   $primaryContentColor,
-  $black,
   $transparent,
   $darkBgColor,
 } from '@/styles/_variables';

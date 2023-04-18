@@ -1,12 +1,6 @@
 import styled, { css } from 'styled-components';
 import * as m from '@/styles/_mixins';
-import {
-  $white,
-  $primaryContentColor,
-  $black,
-  $transparent,
-  $darkBgColor,
-} from '@/styles/_variables';
+import { $transparent } from '@/styles/_variables';
 
 const SearchBar = styled.div`
   display: flex;
@@ -37,7 +31,7 @@ const SubmitButton = styled.button`
   text-indent: -999px;
   overflow: hidden;
   width: 1.5rem;
-  border: 1px solid transparent;
+  border: 1px solid ${$transparent};
   background: url('/images/svg/search.svg');
   background-size: cover;
   background-repeat: no-repeat;

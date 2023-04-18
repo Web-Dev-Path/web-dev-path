@@ -8,8 +8,6 @@ import {
   $transparent,
   $darkBgColor,
   $primaryContentColor,
-  $primaryAccentColor,
-  $headingFont,
   $boxShadow,
   $boxShadowBottom,
   $lgDesktopBreakpoint,

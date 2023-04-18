@@ -2,13 +2,7 @@ import styled, { css } from 'styled-components';
 import Image from 'next/image';
 import Container from '@/components/containers/Container/Container';
 import * as m from '@/styles/_mixins';
-import {
-  $white,
-  $primaryContentColor,
-  $primaryAccentColor,
-  $darkBgColor,
-  $boxShadow,
-} from '@/styles/_variables';
+import { $white, $darkBgColor } from '@/styles/_variables';
 
 const Footer = styled.footer`
   background-color: ${$darkBgColor};
