@@ -1,17 +1,17 @@
-import RevealContentContainer from '@/components/containers/RevealContentContainer/RevealContentContainer';
-import TwoColumn from '@/components/containers/TwoColumn/TwoColumn';
+import RevealContentContainer from '@/components/containers/RevealContentContainer';
+import TwoColumn from '@/components/containers/TwoColumn';
 import {
   $white,
   $primaryContentColor,
   $primaryAccentColor,
   $lightBgColor,
 } from '@/styles/_variables';
-import CardsColumns from '@/components/containers/CardColumns/CardsColumns';
+import CardsColumns from '@/components/containers/CardColumns';
 import Title from '@/components/snippets/Title';
-import Wrapper from '@/components/containers/Wrapper/Wrapper';
-import Container from '@/components/containers/Container/Container';
-import Row from '@/components/containers/Row/Row';
-import Member from '@/components/containers/Member/Member';
+import Wrapper from '@/components/containers/Wrapper';
+import Container from '@/components/containers/Container';
+import Row from '@/components/containers/Row';
+import Member from '@/components/containers/Member';
 import { whoWeAre } from '@/utils/about';
 
 export default function AboutUs() {

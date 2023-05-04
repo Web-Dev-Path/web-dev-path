@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 import * as m from '@/styles/_mixins';
-import Container from '../Container/Container';
+import Container from '../Container';
 import Image from 'next/image';
 import {
   $lgDesktopBreakpoint,

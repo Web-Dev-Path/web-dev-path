@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 import Image from 'next/image';
-import BlogPostsContainer from '@/components/blog/BlogPostsContainer/BlogPostsContainer';
+import BlogPostsContainer from '@/components/blog/BlogPostsContainer';
 import * as m from '@/styles/_mixins';
 import {
   $white,

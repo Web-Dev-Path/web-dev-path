@@ -1,11 +1,11 @@
-import CardsColumns from '@/components/containers/CardColumns/CardsColumns';
-import Card from '@/components/containers/Card/Card';
+import CardsColumns from '@/components/containers/CardColumns';
+import Card from '@/components/containers/Card';
 import Title from '@/components/snippets/Title';
 import Link from 'next/link';
-import RevealContentContainer from '@/components/containers/RevealContentContainer/RevealContentContainer';
+import RevealContentContainer from '@/components/containers/RevealContentContainer';
 import S from './styles';
 import { tagToHeading } from '@/utils/blogCategories';
-import Container from '@/components/containers/Container/Container';
+import Container from '@/components/containers/Container';
 
 function* splitPosts(arr, n) {
   for (let i = 0; i < arr.length; i += n) {

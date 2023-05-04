@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import Container from '@/components/containers/Container/Container';
+import Container from '@/components/containers/Container';
 import Image from 'next/image';
 import * as m from '@/styles/_mixins';
 import { $white, $primaryAccentColor } from '@/styles/_variables';

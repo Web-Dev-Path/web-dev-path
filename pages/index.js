@@ -1,12 +1,12 @@
-import TwoColumn from '@/components/containers/TwoColumn/TwoColumn';
-import CardsColumns from '@/components/containers/CardColumns/CardsColumns';
+import TwoColumn from '@/components/containers/TwoColumn';
+import CardsColumns from '@/components/containers/CardColumns';
 import S from '@/styles/pages/homeStyles';
 import {
   $white,
   $primaryContentColor,
   $lightBgColor,
 } from '@/styles/_variables';
-import RevealContentContainer from '@/components/containers/RevealContentContainer/RevealContentContainer';
+import RevealContentContainer from '@/components/containers/RevealContentContainer';
 
 export default function Home() {
   return (

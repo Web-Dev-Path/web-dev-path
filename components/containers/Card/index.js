@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import S from './styles';
-import { Tag } from '@/components/blog/Tag/Tag';
+import { Tag } from '@/components/blog/Tag';
 
 export default function Card({
   card: { image, altTag, title, content, link, linkText, tagList },

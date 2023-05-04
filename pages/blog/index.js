@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import BlogPostsContainer from '@/components/blog/BlogPostsContainer/BlogPostsContainer';
-import Container from '@/components/containers/Container/Container';
-import SearchBar from '@/components/blog/SearchBar/SearchBar';
+import BlogPostsContainer from '@/components/blog/BlogPostsContainer';
+import Container from '@/components/containers/Container';
+import SearchBar from '@/components/blog/SearchBar';
 import Title from '@/components/snippets/Title';
 // import styles from '@/styles/Blog.module.scss';
 import { BlogSearch } from '@/components/snippets/BlogSearch';

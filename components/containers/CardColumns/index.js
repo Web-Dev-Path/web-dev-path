@@ -3,8 +3,8 @@ import { Pagination } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import Card from '@/components/containers/Card/Card';
-import Container from '@/components/containers/Container/Container';
+import Card from '@/components/containers/Card';
+import Container from '@/components/containers/Container';
 import * as S from './styles';
 
 export default function CardsColumns({ cards, customClass }) {

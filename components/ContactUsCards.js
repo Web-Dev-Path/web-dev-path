@@ -1,5 +1,5 @@
-import CardsColumns from './containers/CardColumns/CardsColumns';
-import RevealContentContainer from './containers/RevealContentContainer/RevealContentContainer';
+import CardsColumns from './containers/CardColumns';
+import RevealContentContainer from './containers/RevealContentContainer';
 import styled from 'styled-components';
 import { $white } from '@/styles/_variables';
 

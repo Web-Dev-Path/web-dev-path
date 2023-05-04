@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { linksNav, linksSocial } from '@/utils/links';
 import NewsletterSubscribe from '@/components/mailchimp/NewsletterSubscribe';
-import Container from '@/components/containers/Container/Container';
+import Container from '@/components/containers/Container';
 import S from './styles';
 
 export default function Footer() {
