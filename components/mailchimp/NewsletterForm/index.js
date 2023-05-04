@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { decode } from 'html-entities';
 import ReCAPTCHA from 'react-google-recaptcha';
 import Container from '@/components/containers/Container';
-import SubmitButton from '@/components/buttons/SubmitButton';
+import { NewsLetterSubmitButton } from '@/components/buttons/SubmitButton';
 import S from './styles';
 
 const SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
@@ -144,7 +144,7 @@ const NewsletterForm = ({ status, message, onValidated }) => {
               placeholder='email'
               onKeyUp={event => handleInputKeyEvent(event)}
             />
-            <SubmitButton label='Subscribe' $buttonType='newsletter__button' />
+            <NewsLetterSubmitButton label='Subscribe' />
 
             <ReCAPTCHA
               ref={recaptchaRef}

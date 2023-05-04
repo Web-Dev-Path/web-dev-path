@@ -32,26 +32,10 @@ const SubmitButton = styled.button`
     font-size: 1.5rem;
     min-width: 16rem;
     padding: 0.5rem 2rem;
-    //check props for button variations
-    ${props =>
-      props.$buttonType === 'newsletter__button' ? NewsLetterButton : ''}
   `)}
-
-  //media query mixins
-  ${m.largeDesktop(css`
-    //check props for button variations
-    ${props =>
-      props.$buttonType === 'newsletter__button'
-        ? NewsLetterButtonLgDesktop
-        : ''}
-  `)}
-
-  //check props for button variations
-  ${props =>
-    props.$buttonType === 'newsletter__button' ? NewsLetterButton : ''}
 `;
 
-const NewsLetterButton = css`
+const NewsLetterSubmitButton = styled(SubmitButton)`
   border-radius: 1.2rem;
   font-size: 1.2rem;
   background-color: ${$darkBgColor};
@@ -62,12 +46,18 @@ const NewsLetterButton = css`
     color: ${$darkBgColor};
     border: 1px solid #{$darkBgColor};
   }
+
+  ${m.desktop(css`
+    border-radius: 1.2rem;
+    font-size: 1.2rem;
+    padding: 0.3rem 0;
+  `)}
+
+  ${m.largeDesktop(css`
+    min-width: 12rem;
+    border-radius: 3rem;
+    padding: 0.7rem 0;
+  `)}
 `;
 
-const NewsLetterButtonLgDesktop = css`
-  min-width: 12rem;
-  border-radius: 3rem;
-  padding: 0.7rem 0;
-`;
-
-export default { SubmitButton };
+export default { SubmitButton, NewsLetterSubmitButton };

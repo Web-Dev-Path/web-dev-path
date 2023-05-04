@@ -1,9 +1,17 @@
 import S from './styles';
 
-export default function SubmitButton({ $buttonType, label, disabled }) {
+export function SubmitButton({ label, disabled }) {
   return (
-    <S.SubmitButton $buttonType={$buttonType} type='submit' disabled={disabled}>
+    <S.SubmitButton type='submit' disabled={disabled}>
       {label}
     </S.SubmitButton>
+  );
+}
+
+export function NewsLetterSubmitButton({ label, disabled }) {
+  return (
+    <S.NewsLetterSubmitButton type='submit' disabled={disabled}>
+      {label}
+    </S.NewsLetterSubmitButton>
   );
 }

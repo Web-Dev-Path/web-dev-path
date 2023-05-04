@@ -4,7 +4,7 @@ import MailchimpSubscribe from 'react-mailchimp-subscribe';
 import ReCAPTCHA from 'react-google-recaptcha';
 import Container from '@/components/containers/Container';
 import RevealContentContainer from '@/components/containers/RevealContentContainer';
-import SubmitButton from '@/components/buttons/SubmitButton';
+import { SubmitButton } from '@/components/buttons/SubmitButton';
 import S from './styles';
 
 export const ContactUsFormSubscribe = ({ setMsg }) => {
