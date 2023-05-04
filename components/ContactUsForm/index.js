@@ -102,7 +102,6 @@ function ContactUsForm({ subscribe, setResponseMessage }) {
               //no white space pattern
               pattern: /[^\s-]/i,
             })}
-            $inputType='name'
           />
           <S.ErrorMsg>
             {errors.Name?.type === 'required'
@@ -120,7 +119,6 @@ function ContactUsForm({ subscribe, setResponseMessage }) {
               required: true,
               pattern: /^\S+@\S+$/i,
             })}
-            $inputType='email'
           />
           <S.ErrorMsg>
             {errors.Email?.type === 'required' && 'Email is required'}
@@ -133,7 +131,6 @@ function ContactUsForm({ subscribe, setResponseMessage }) {
               minLength: 2,
               pattern: /[^\s-]/i,
             })}
-            $inputType='email'
           />
           <S.ErrorMsg>
             {errors.Subject?.type === 'required'
@@ -151,7 +148,6 @@ function ContactUsForm({ subscribe, setResponseMessage }) {
               pattern: /[^\s-]/i,
             })}
             placeholder='Write your message here'
-            $inputType='message'
           />
           <S.ErrorMsg>
             {errors.Message?.type === 'required'

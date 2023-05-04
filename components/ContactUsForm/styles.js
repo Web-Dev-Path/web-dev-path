@@ -59,20 +59,18 @@ const Input = styled.input`
     border-radius: 3rem;
     max-width: 25rem;
   `)}
-
-  //check props for button variations
-  ${props => (props.$inputType === 'message' ? InputMessage : '')}
 `;
 
 const TextArea = styled.textarea`
   display: block;
   font-size: 1.2rem;
   border-radius: 1rem;
-  height: 2rem;
+  height: 13rem;
   padding: 1.2rem 1.25rem;
   border: 1px solid ${$darkBgColor};
   max-width: 100%;
   width: 24rem;
+  font-family: inherit;
 
   &::placeholder {
     color: ${$primaryContentColor};
@@ -85,21 +83,10 @@ const TextArea = styled.textarea`
   //media query mixins
   ${m.largeDesktop(css`
     font-size: 1.5rem;
-    height: 3rem;
     border-radius: 3rem;
     max-width: 25rem;
   `)}
 
-  //check props for button variations
-${props => (props.$inputType === 'message' ? InputMessage : '')}
-`;
-
-const InputMessage = css`
-  font-family: inherit;
-  height: 13rem !important;
-  border-radius: 1rem;
-
-  //media query mixins
   ${m.desktop(css`
     border-radius: 1.5rem;
   `)}
