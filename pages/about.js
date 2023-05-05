@@ -6,7 +6,7 @@ import {
   $primaryAccentColor,
   $lightBgColor,
 } from '@/styles/_variables';
-import CardsColumns from '@/components/containers/CardColumns';
+import { OurGoalsCardsColumns } from '@/components/containers/CardColumns/OurGoalsCardsColumns';
 import Title from '@/components/snippets/Title';
 import Wrapper from '@/components/containers/Wrapper';
 import Container from '@/components/containers/Container';
@@ -107,7 +107,7 @@ export default function AboutUs() {
         <Container>
           <Title title='Our goals' />
         </Container>
-        <CardsColumns
+        <OurGoalsCardsColumns
           cards={[
             {
               title: '1',
@@ -120,7 +120,6 @@ export default function AboutUs() {
                 'To offer more detailed tasks (GitHub issues) and help the developer assimilate the logical mindset required in a structured project, under guidance following the industry’s best practices throughout the entire process.',
             },
           ]}
-          customClass='our-goals'
         />
       </RevealContentContainer>
       <RevealContentContainer>

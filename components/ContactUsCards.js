@@ -1,4 +1,4 @@
-import CardsColumns from './containers/CardColumns';
+import { ContactCardsColumns } from './containers/CardColumns/ContactCardsColumns';
 import RevealContentContainer from './containers/RevealContentContainer';
 import styled from 'styled-components';
 import { $white } from '@/styles/_variables';
@@ -38,7 +38,7 @@ export default function ContactUsCards() {
   return (
     <ContactCardsContainer>
       <RevealContentContainer>
-        <CardsColumns cards={cards} customClass='contact-cards' />
+        <ContactCardsColumns cards={cards} />
       </RevealContentContainer>
     </ContactCardsContainer>
   );

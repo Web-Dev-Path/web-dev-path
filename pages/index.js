@@ -1,5 +1,5 @@
 import TwoColumn from '@/components/containers/TwoColumn';
-import CardsColumns from '@/components/containers/CardColumns';
+import { CardsColumns } from '@/components/containers/CardColumns';
 import S from '@/styles/pages/homeStyles';
 import {
   $white,

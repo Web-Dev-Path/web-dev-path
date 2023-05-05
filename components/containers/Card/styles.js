@@ -43,14 +43,8 @@ const Card = styled.div`
     &:first-child,
     &:last-child {
       margin: 1.5rem 0.5rem 0 0.5rem;
-      ${props => (props.$cardType === 'blog' ? Blog : '')}
     }
-  `)}
-
-  //check props for button variations
-  ${props => (props.$cardType === 'our-goals' ? AboutUs : '')}
-  ${props => (props.$cardType === 'contact-cards' ? ContactUsCards : '')}
-  ${props => (props.$cardType === 'blog' ? Blog : '')}
+  `)} //check props for button variations
 `;
 
 const Title = styled.h2`
@@ -63,12 +57,7 @@ const Title = styled.h2`
 
   ${m.tablet(css`
     font-size: 2.25rem;
-    ${props => (props.$cardType === 'our-goals' ? AboutUsTitle : '')}
-  `)}
-
-  //check props for button variations
-  ${props => (props.$cardType === 'our-goals' ? AboutUsTitle : '')}
-  ${props => (props.$cardType === 'blog' ? BlogTitle : '')}
+  `)}//check props for button variations
 `;
 
 const ContentWrapper = styled.div`
@@ -76,7 +65,6 @@ const ContentWrapper = styled.div`
   align-items: center;
 
   //check props for button variations
-  ${props => (props.$cardType === 'our-goals' ? AboutUsContentWrapper : '')}
 `;
 
 const ImageWrapper = styled.div`
@@ -85,9 +73,6 @@ const ImageWrapper = styled.div`
   position: relative;
 
   //check props for button variations
-  ${props => (props.$cardType === 'blog' ? BlogImageWrapper : '')}
-  ${props =>
-    props.$cardType === 'contact-cards' ? ContactUsCardImageWrapper : ''}
 `;
 
 const CardImage = styled(Image)`
@@ -95,7 +80,6 @@ const CardImage = styled(Image)`
   object-fit: cover;
 
   //check props for button variations
-  ${props => (props.$cardType === 'contact-cards' ? ContactUsCardImage : '')}
 `;
 
 const TagContainer = styled.div`
@@ -111,7 +95,7 @@ const TagContainer = styled.div`
 `;
 
 //About Us Varients Varients
-const AboutUs = css`
+const AboutUs = styled(Card)`
   background-color: ${$primaryAccentColor};
   max-height: 35rem;
 
@@ -120,7 +104,7 @@ const AboutUs = css`
   `)}
 `;
 
-const AboutUsTitle = css`
+const AboutUsTitle = styled(Title)`
   font-size: 3.5rem;
   text-align: center;
 
@@ -129,7 +113,7 @@ const AboutUsTitle = css`
   `)}
 `;
 
-const AboutUsContentWrapper = css`
+const AboutUsContentWrapper = styled(ContentWrapper)`
   ${m.desktop(css`
     & p {
       font-size: 1.8rem;
@@ -139,7 +123,7 @@ const AboutUsContentWrapper = css`
 `;
 
 //Contact Us Cards Varients
-const ContactUsCards = css`
+const ContactUsCardsCss = css`
   height: 27rem;
   background-color: ${$white};
 
@@ -148,7 +132,16 @@ const ContactUsCards = css`
   `)}
 `;
 
-const ContactUsCardImageWrapper = css`
+const ContactUsCard = styled(Card)`
+  height: 27rem;
+  background-color: ${$white};
+
+  ${m.desktop(css`
+    height: 25rem;
+  `)}
+`;
+
+const ContactUsCardImageWrapperCss = css`
   width: auto;
   position: relative;
   height: 5rem;
@@ -157,14 +150,29 @@ const ContactUsCardImageWrapper = css`
   margin-bottom: 3rem;
 `;
 
-const ContactUsCardImage = css`
+const ContactUsCardImageWrapper = styled(ImageWrapper)`
+  width: auto;
+  position: relative;
+  height: 5rem;
+  margin-right: 75%;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+`;
+
+const ContactUsCardImageCss = css`
+  margin: 0;
+  position: absolute;
+  object-fit: contain !important;
+`;
+
+const ContactUsCardImage = styled(Image)`
   margin: 0;
   position: absolute;
   object-fit: contain !important;
 `;
 
 //Blog Varients
-const Blog = css`
+const BlogCss = css`
   margin: 1rem 0.5rem 0 0.5rem;
 
   ${m.tablet(css`
@@ -172,7 +180,15 @@ const Blog = css`
   `)}
 `;
 
-const BlogTitle = css`
+const Blog = styled(Card)`
+  margin: 1rem 0.5rem 0 0.5rem;
+
+  ${m.tablet(css`
+    height: 40rem;
+  `)}
+`;
+
+const BlogTitleCss = css`
   font-size: 1.3rem;
   margin-bottom: 0.7rem;
   max-height: 7rem;
@@ -183,15 +199,60 @@ const BlogTitle = css`
   `)}
 `;
 
-const BlogImageWrapper = css`
+const BlogTitle = styled(Title)`
+  font-size: 1.3rem;
+  margin-bottom: 0.7rem;
+  max-height: 7rem;
+  overflow: hidden;
+
+  ${m.tablet(css`
+    font-size: 1.3rem;
+  `)}
+`;
+
+const BlogImageWrapperCss = css`
   height: 12rem;
 `;
 
-export default {
-  Card,
-  ImageWrapper,
-  CardImage,
-  Title,
-  ContentWrapper,
-  TagContainer,
+const BlogImageWrapper = styled(ImageWrapper)`
+  height: 12rem;
+`;
+
+// export default {
+//   Card,
+//   ImageWrapper,
+//   CardImage,
+//   Title,
+//   ContentWrapper,
+//   TagContainer,
+// };
+
+export const CardStyles = {
+  Card: Card,
+  ImageWrapper: ImageWrapper,
+  CardImage: CardImage,
+  Title: Title,
+  ContentWrapper: ContentWrapper,
+  TagContainer: TagContainer,
+};
+
+export const AboutUsCardStyles = {
+  ...CardStyles,
+  Card: AboutUs,
+  Title: AboutUsTitle,
+  ContentWrapper: AboutUsContentWrapper,
+};
+
+export const ContactUsCardStyles = {
+  ...CardStyles,
+  Card: ContactUsCard,
+  ImageWrapper: ContactUsCardImageWrapper,
+  CardImage: ContactUsCardImage,
+};
+
+export const BlogCardStyles = {
+  ...CardStyles,
+  Card: Blog,
+  ImageWrapper: BlogImageWrapper,
+  Title: BlogTitle,
 };

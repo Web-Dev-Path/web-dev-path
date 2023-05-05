@@ -1,5 +1,6 @@
-import CardsColumns from '@/components/containers/CardColumns';
+import { BlogCardsColumns } from '@/components/containers/CardColumns/BlogCardsColumns';
 import Card from '@/components/containers/Card';
+import { BlogCard } from '@/components/containers/Card/BlogCard';
 import Title from '@/components/snippets/Title';
 import Link from 'next/link';
 import RevealContentContainer from '@/components/containers/RevealContentContainer';
@@ -46,14 +47,14 @@ const BlogPostsContainer = ({
           swipe ? (
             <>
               {[...splitPosts(posts, 3)].map((p, index) => (
-                <CardsColumns key={index} cards={p} customClass='blog' />
+                <BlogCardsColumns key={index} cards={p} />
               ))}
             </>
           ) : (
             <Container>
               <S.PostContainer>
                 {posts?.map((p, index) => (
-                  <Card $cardType='blog' key={index} card={p} />
+                  <BlogCard $cardType='blog' key={index} card={p} />
                 ))}
               </S.PostContainer>
             </Container>
