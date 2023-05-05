@@ -87,6 +87,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Search functionality for blog posts
 - Styled components to Title component
 - Links to blog tags to show all posts with the same tag
+- Added XML Sitemap using getServerSideProps
 
 ### Fixed
 

@@ -13,7 +13,11 @@ export default function ButtonLink({
   return (
     <a
       href={link}
-      className={customClassName?`${btnStyles.btn} ${btnStyles[customClassName]}`:btnStyles.btn}
+      className={
+        customClassName
+          ? `${btnStyles.btn} ${btnStyles[customClassName]}`
+          : btnStyles.btn
+      }
       style={styles}
       target={openNewTab ? '_blank' : undefined}
       rel='noopener noreferrer'
