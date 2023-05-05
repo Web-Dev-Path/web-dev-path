@@ -15,7 +15,7 @@ export function CardInterface({
   ) : (
     <Link href={link}>{linkText}</Link>
   );
-  const S = styledComponents ? styledComponents : CardStyles;
+  const S = styledComponents;
   return (
     <S.Card $cardType={$cardType}>
       {image && (

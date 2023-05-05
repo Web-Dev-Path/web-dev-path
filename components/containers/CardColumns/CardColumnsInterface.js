@@ -3,12 +3,11 @@ import { Pagination } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import { Card as BaseCard } from '@/components/containers/Card';
 import Container from '@/components/containers/Container';
 import * as S from './styles';
 
 export function CardsColumnsInterface({ cards, customClass, cardComponent }) {
-  const Card = cardComponent ? cardComponent : BaseCard;
+  const Card = cardComponent;
   return (
     <Container>
       <div>
