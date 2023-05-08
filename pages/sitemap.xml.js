@@ -5,23 +5,18 @@ function generateSiteMap(posts) {
    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
       <loc>https://www.webdevpath.co</loc>
-      <lastmod>2023-05-04</lastmod>
     </url>
     <url>
       <loc>https://www.webdevpath.co/about</loc>
-      <lastmod>2023-05-04</lastmod>
     </url>
     <url>
       <loc>https://www.webdevpath.co/blog</loc>
-      <lastmod>2023-05-04</lastmod>
     </url>
     <url>
       <loc>https://www.webdevpath.co/contact</loc>
-      <lastmod>2023-05-04</lastmod>
     </url>       
     <url>
       <loc>https://www.webdevpath.co/contact</loc>
-      <lastmod>2023-05-04</lastmod>
     </url>   
      ${posts
        .map(({ tag_list }) => {
