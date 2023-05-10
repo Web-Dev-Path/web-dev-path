@@ -9,13 +9,12 @@ const Row = styled.div`
   ${m.desktopBreakpointMinus(css`
     justify-content: space-between;
   `)}
-
-  //check props to inject alignment css
-  ${props => (props.$alignment === 'align__left' ? AlignLeft : '')}
 `;
 
-const AlignLeft = css`
-  justify-content: left !important;
+const RowAlignLeft = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
 `;
 
-export default { Row };
+export default { Row, RowAlignLeft };
