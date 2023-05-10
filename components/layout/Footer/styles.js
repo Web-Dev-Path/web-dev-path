@@ -23,9 +23,6 @@ const Inner = styled(Container)`
 `;
 
 const Logo = styled.a`
-  display: block;
-  max-width: 12.5rem;
-  margin: 0 auto;
   cursor: pointer;
 
   &:hover {
