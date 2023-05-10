@@ -44,7 +44,7 @@ const Card = styled.div`
     &:last-child {
       margin: 1.5rem 0.5rem 0 0.5rem;
     }
-  `)} //check props for button variations
+  `)}
 `;
 
 const Title = styled.h2`
@@ -57,29 +57,23 @@ const Title = styled.h2`
 
   ${m.tablet(css`
     font-size: 2.25rem;
-  `)}//check props for button variations
+  `)}
 `;
 
 const ContentWrapper = styled.div`
   display: flex;
   align-items: center;
-
-  //check props for button variations
 `;
 
 const ImageWrapper = styled.div`
   width: 100%;
   height: 18rem;
   position: relative;
-
-  //check props for button variations
 `;
 
 const CardImage = styled(Image)`
   border-radius: 0.25rem;
   object-fit: cover;
-
-  //check props for button variations
 `;
 
 const TagContainer = styled.div`
@@ -123,14 +117,6 @@ const AboutUsContentWrapper = styled(ContentWrapper)`
 `;
 
 //Contact Us Cards Varients
-const ContactUsCardsCss = css`
-  height: 27rem;
-  background-color: ${$white};
-
-  ${m.desktop(css`
-    height: 25rem;
-  `)}
-`;
 
 const ContactUsCard = styled(Card)`
   height: 27rem;
@@ -139,15 +125,6 @@ const ContactUsCard = styled(Card)`
   ${m.desktop(css`
     height: 25rem;
   `)}
-`;
-
-const ContactUsCardImageWrapperCss = css`
-  width: auto;
-  position: relative;
-  height: 5rem;
-  margin-right: 75%;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
 `;
 
 const ContactUsCardImageWrapper = styled(ImageWrapper)`
@@ -159,25 +136,10 @@ const ContactUsCardImageWrapper = styled(ImageWrapper)`
   margin-bottom: 3rem;
 `;
 
-const ContactUsCardImageCss = css`
-  margin: 0;
-  position: absolute;
-  object-fit: contain !important;
-`;
-
 const ContactUsCardImage = styled(Image)`
   margin: 0;
   position: absolute;
   object-fit: contain !important;
-`;
-
-//Blog Varients
-const BlogCss = css`
-  margin: 1rem 0.5rem 0 0.5rem;
-
-  ${m.tablet(css`
-    height: 40rem;
-  `)}
 `;
 
 const Blog = styled(Card)`
@@ -185,17 +147,6 @@ const Blog = styled(Card)`
 
   ${m.tablet(css`
     height: 40rem;
-  `)}
-`;
-
-const BlogTitleCss = css`
-  font-size: 1.3rem;
-  margin-bottom: 0.7rem;
-  max-height: 7rem;
-  overflow: hidden;
-
-  ${m.tablet(css`
-    font-size: 1.3rem;
   `)}
 `;
 
@@ -208,10 +159,6 @@ const BlogTitle = styled(Title)`
   ${m.tablet(css`
     font-size: 1.3rem;
   `)}
-`;
-
-const BlogImageWrapperCss = css`
-  height: 12rem;
 `;
 
 const BlogImageWrapper = styled(ImageWrapper)`

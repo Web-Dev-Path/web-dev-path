@@ -1,6 +1,3 @@
-// @use './variables' as *;
-// @use './mixins' as *;
-
 import styled, { css } from 'styled-components';
 import * as m from '@/styles/_mixins';
 import {

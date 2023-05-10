@@ -1,4 +1,3 @@
-// import wrapperStyles from '@/styles/Wrapper.module.scss';
 import S from './styles';
 
 export default function Wrapper({ customClass, children }) {
