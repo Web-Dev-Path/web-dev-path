@@ -218,15 +218,6 @@ const BlogImageWrapper = styled(ImageWrapper)`
   height: 12rem;
 `;
 
-// export default {
-//   Card,
-//   ImageWrapper,
-//   CardImage,
-//   Title,
-//   ContentWrapper,
-//   TagContainer,
-// };
-
 export const CardStyles = {
   Card: Card,
   ImageWrapper: ImageWrapper,

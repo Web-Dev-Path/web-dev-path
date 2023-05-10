@@ -42,5 +42,3 @@ export function CardInterface({
     </S.Card>
   );
 }
-
-// export const ContactCard = cloneElement(Card, { $cardType: 'contact-cards' });
