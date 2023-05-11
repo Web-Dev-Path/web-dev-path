@@ -95,3 +95,4 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - adjusted contact form message on mobile
 - blog container and title styling
 - blog card container tags overflowing
+- update next-pwa to 5.6.0
