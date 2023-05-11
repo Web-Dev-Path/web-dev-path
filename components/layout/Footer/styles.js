@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components';
-import Image from 'next/image';
 import Container from '@/components/containers/Container';
 import * as m from '@/styles/_mixins';
 import { $white, $darkBgColor } from '@/styles/_variables';

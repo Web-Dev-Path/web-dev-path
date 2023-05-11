@@ -1,5 +1,4 @@
 import { BlogCardsColumns } from '@/components/containers/CardColumns/BlogCardsColumns';
-import Card from '@/components/containers/Card';
 import { BlogCard } from '@/components/containers/Card/BlogCard';
 import Title from '@/components/snippets/Title';
 import Link from 'next/link';

@@ -12,7 +12,6 @@ export default function TwoColumn({
   color,
   bgColor,
   link,
-  customInnerClass,
   customBtnClass,
   $btnColorScheme,
   linkText = 'Learn more',

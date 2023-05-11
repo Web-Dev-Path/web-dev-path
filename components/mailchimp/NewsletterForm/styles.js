@@ -4,7 +4,6 @@ import * as m from '@/styles/_mixins';
 import {
   $white,
   $error,
-  $transparent,
   $darkBgColor,
   $primaryAccentColor,
   $primaryContentColor,
