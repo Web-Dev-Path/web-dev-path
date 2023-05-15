@@ -1,7 +1,6 @@
-import styled, { css } from 'styled-components';
+import { css } from 'styled-components';
 import {
   $smMobileBreakpoint,
-  $mobileBreakpoint,
   $lgMobileBreakpoint,
   $tabletBreakpoint,
   $desktopBreakpointMinus,
@@ -9,7 +8,6 @@ import {
   $desktopBreakpointPlus,
   $mediumDesktopBreakpoint,
   $lgDesktopBreakpoint,
-  $xlBreakpoint,
 } from './_variables';
 
 export const transition = $args => css`

@@ -1,7 +1,6 @@
 import { BlogCardsColumns } from '@/components/containers/CardColumns/BlogCardsColumns';
 import { BlogCard } from '@/components/containers/Card/BlogCard';
 import Title from '@/components/snippets/Title';
-import Link from 'next/link';
 import RevealContentContainer from '@/components/containers/RevealContentContainer';
 import S from './styles';
 import { tagToHeading } from '@/utils/blogCategories';

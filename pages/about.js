@@ -10,7 +10,7 @@ import { OurGoalsCardsColumns } from '@/components/containers/CardColumns/OurGoa
 import Title from '@/components/snippets/Title';
 import Wrapper from '@/components/containers/Wrapper';
 import Container from '@/components/containers/Container';
-import { Row, RowAlignLeft } from '@/components/containers/Row';
+import { RowAlignLeft } from '@/components/containers/Row';
 import Member from '@/components/containers/Member';
 import { whoWeAre } from '@/utils/about';
 

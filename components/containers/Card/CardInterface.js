@@ -1,12 +1,9 @@
-import Image from 'next/image';
-import { cloneElement } from 'react';
-import Link from 'next/link';
 import { Tag } from '@/components/blog/Tag';
+import Link from 'next/link';
 
 export function CardInterface({
   card: { image, altTag, title, content, link, linkText, tagList },
   styledComponents,
-  $cardType,
 }) {
   const LinkComponent = link?.startsWith('http') ? (
     <a href={link} target='_blank' rel='noopener noreferrer'>
@@ -17,16 +14,14 @@ export function CardInterface({
   );
   const S = styledComponents;
   return (
-    <S.Card $cardType={$cardType}>
+    <S.Card>
       {image && (
-        <S.ImageWrapper $cardType={$cardType}>
-          <S.CardImage src={image} alt={altTag} $cardType={$cardType} fill />
+        <S.ImageWrapper>
+          <S.CardImage src={image} alt={altTag} fill />
         </S.ImageWrapper>
       )}
 
-      <S.Title $cardType={$cardType} title={title}>
-        {title}
-      </S.Title>
+      <S.Title title={title}>{title}</S.Title>
       {tagList && tagList.length > 0 ? (
         <S.TagContainer>
           {tagList.slice(0, 8).map((tag, i) => (
@@ -34,7 +29,7 @@ export function CardInterface({
           ))}
         </S.TagContainer>
       ) : null}
-      <S.ContentWrapper $cardType={$cardType}>
+      <S.ContentWrapper>
         <p>
           {content} {link && LinkComponent}
         </p>

@@ -2,7 +2,6 @@ import styled, { css } from 'styled-components';
 import Container from '@/components/containers/Container';
 import * as m from '@/styles/_mixins';
 import {
-  $white,
   $error,
   $darkBgColor,
   $primaryAccentColor,
