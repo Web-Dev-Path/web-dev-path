@@ -220,13 +220,6 @@ const Link = styled.a`
   ${m.largeDesktop(css`
     font-size: 1.5rem;
   `)}
-
-  //check props for sticky behavior
-  ${props => (props.$isSticky ? LinkSticky : '')}
-`;
-
-const LinkSticky = css`
-  font-size: 1.2rem !important;
 `;
 
 const Item = styled.li`

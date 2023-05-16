@@ -73,7 +73,6 @@ export default function Nav() {
                   <S.Item key={id}>
                     <S.Link
                       href={href}
-                      $isSticky={isSticky}
                       className={`${router.pathname == href ? `current` : ''}`}
                       title={text}
                     >
