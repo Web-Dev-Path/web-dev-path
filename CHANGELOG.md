@@ -58,6 +58,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Contact us cards section to contact page
 - Linkedin link to footer
 - Next.js 13
+- Converting components into styled-components
 
 ### Fixed
 
@@ -78,6 +79,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - next.js warning - no stylesheets in head component
 - CardColumns refactoring to accept an array of card objects as props
 - styles on newsletter button and contact page
+- error where html loaded before styles by updating \_document.js
 
 ## Unreleased
 
