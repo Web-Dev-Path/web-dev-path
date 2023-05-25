@@ -67,7 +67,7 @@ const YellowBracket = styled(Bracket)`
   `)}
 
   ${m.desktopBreakpointPlus(css`
-    top: 25%;
+    top: 45%;
     right: 140%;
   `)}
 `;

@@ -2,7 +2,6 @@ import { createRef, useState } from 'react';
 import Image from 'next/image';
 import { decode } from 'html-entities';
 import ReCAPTCHA from 'react-google-recaptcha';
-import Container from '@/components/containers/Container';
 import { NewsLetterSubmitButton } from '@/components/buttons/SubmitButton';
 import S from './styles';
 
