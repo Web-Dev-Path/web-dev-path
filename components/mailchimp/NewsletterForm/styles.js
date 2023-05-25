@@ -151,7 +151,6 @@ export default {
   InputEmail,
   InputName,
   Input,
-  Form,
   FormError,
   FormInfo,
   FormSending,
