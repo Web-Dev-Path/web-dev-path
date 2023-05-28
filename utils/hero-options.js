@@ -11,7 +11,7 @@ export const heroOptions = {
     imgBg: '/images/about-us-bg.webp',
     imgAlt: 'About Us',
     title: 'About Us',
-    titleClass: 'accent-title',
+    hasAccent: true,
     content:
       'While the demand for web developers only increases, becoming one can be quite a journey!',
   },
@@ -19,7 +19,7 @@ export const heroOptions = {
     imgBg: '/images/about-us-bg.webp',
     imgAlt: 'Contact Us',
     title: 'Contact Us',
-    titleClass: 'accent-title',
+    hasAccent: true,
     content: `We'd like to hear from you!
       Send us your questions and we'll get back to you as soon as possible.`,
   },
@@ -27,7 +27,7 @@ export const heroOptions = {
     imgBg: '/images/about-us-bg.webp',
     imgAlt: 'Blog',
     title: 'Our Blog',
-    titleClass: 'accent-title',
+    hasAccent: true,
     content:
       'We help junior tech professionals, such as developers and designers, to grow.',
   },
@@ -35,7 +35,7 @@ export const heroOptions = {
     imgBg: '/images/about-us-bg.webp',
     imgAlt: 'Not Found',
     title: 'Not Found',
-    titleClass: 'accent-title',
+    hasAccent: true,
     content:
       'We help junior tech professionals, such as developers and designers, to grow.',
   },

@@ -37,7 +37,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - normalized font sizes
 - installed yarn
 - normalized buttons' and links' styling
-- updated `package.json` commands for macOs
+- updated `package.json` commands for macOS
 - swipeable CardsColumns.js on mobile
 
 ## 1.2.0
@@ -67,7 +67,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - relative to absolute imports with aliases
 - updated to React 18 and Next.js latest
 - footer styling update + social media icons
-- improved LightHouse scores by optmizing images, creating a robots.txt file and adding proper alt tags
+- improved LightHouse scores by optimizing images, creating a robots.txt file and adding proper alt tags
 - updated 'about us' first section (our background, peer reviews, version control)
 - updated 'about us' section (our goals, our purpose)
 - updated mobile nav to automatically close when page route change is completed
@@ -78,6 +78,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - next.js warning - no stylesheets in head component
 - CardColumns refactoring to accept an array of card objects as props
 - styles on newsletter button and contact page
+- error where html loaded before styles by updating \_document.js
 
 ## Unreleased
 
@@ -88,6 +89,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Styled components to Title component
 - Links to blog tags to show all posts with the same tag
 - Added XML Sitemap using getServerSideProps
+- Converting components into styled-components
 
 ### Fixed
 
@@ -96,3 +98,4 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - adjusted contact form message on mobile
 - blog container and title styling
 - blog card container tags overflowing
+- fix invalid next.config file

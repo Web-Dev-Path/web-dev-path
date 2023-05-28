@@ -3,7 +3,8 @@ import BlogPostsContainer from '@/components/blog/BlogPostsContainer';
 import Container from '@/components/containers/Container';
 import SearchBar from '@/components/blog/SearchBar';
 import Title from '@/components/snippets/Title';
-import styles from '@/styles/Blog.module.scss';
+// import styles from '@/styles/Blog.module.scss';
+import { BlogSearch } from '@/components/snippets/BlogSearch';
 import { blogRevalidate } from '@/utils/config';
 import { tagToHeading } from '@/utils/blogCategories';
 import { blogSearch } from '@/utils/search';
@@ -29,10 +30,10 @@ export default function Blog({ posts }) {
   return (
     <>
       <Container>
-        <div className={styles.blogSearch}>
+        <BlogSearch>
           <Title blogTitle title={!searchTerm && 'Latest Posts'} />
           <SearchBar setSearchTerm={setSearchTerm} />
-        </div>
+        </BlogSearch>
       </Container>
 
       <BlogPostsContainer {...filteredData} />
