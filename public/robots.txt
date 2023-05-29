@@ -1,2 +1,3 @@
 User-agent: *
-Disallow: /404
+Disallow: /
+Sitemap: https://www.webdevpath.co/sitemap.xml
