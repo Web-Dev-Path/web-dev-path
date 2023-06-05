@@ -80,7 +80,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - styles on newsletter button and contact page
 - error where html loaded before styles by updating \_document.js
 
-## Unreleased
+## 1.3.0
 
 ### Added
 
@@ -99,3 +99,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - blog container and title styling
 - blog card container tags overflowing
 - fix invalid next.config file
+
+## Unreleased
+
+### Added
+
+- 
+
+### Fixed
+
+- 
