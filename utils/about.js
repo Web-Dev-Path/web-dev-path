@@ -57,7 +57,7 @@ export const whoWeAre = [
     linkedIn: 'bernardo-coutinho',
     portfolio: '',
     about:
-      'Bernardo is a full-stack Android and Web developer who is always searching and excited to learn something new to improve his projects.',
+      'Bernardo is a full-stack Android and web developer who is always eager to learn and explore new technologies, constantly seeking ways to enhance his projects.',
   },
   {
     image: '/images/jana.webp',

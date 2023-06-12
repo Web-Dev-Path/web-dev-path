@@ -14,7 +14,7 @@ export default function Member({
     <S.Card>
       {image && (
         <S.ImageWrapper>
-          <Image src={image} alt={name} fill />
+          <Image style={{ objectFit: 'cover' }} src={image} alt={name} fill />
         </S.ImageWrapper>
       )}
 
