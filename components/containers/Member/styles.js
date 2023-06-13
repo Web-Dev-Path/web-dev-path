@@ -96,6 +96,10 @@ const ImageWrapper = styled.div`
   }
 `;
 
+const Image = styled.img`
+  objectfit: 'cover';
+`;
+
 export default {
   Card,
   Name,
@@ -105,4 +109,5 @@ export default {
   Paragraph,
   LinkWrapper,
   ImageWrapper,
+  Image,
 };

@@ -14,7 +14,7 @@ export default function Member({
     <S.Card>
       {image && (
         <S.ImageWrapper>
-          <Image style={{ objectFit: 'cover' }} src={image} alt={name} fill />
+          <Image src={image} alt={name} fill />
         </S.ImageWrapper>
       )}
 
@@ -24,7 +24,7 @@ export default function Member({
       <S.Content>
         {linkedIn && (
           <S.LinkWrapper>
-            <Image
+            <S.Image
               src='/images/svg/linkedin-portfolio.svg'
               alt='LinkedIn'
               height={25}
