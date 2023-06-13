@@ -50,6 +50,16 @@ export const whoWeAre = [
       'Vincent is a professional in the IT industry and also a web developer that enjoys contributing to open-source projects in his spare time.',
   },
   {
+    image: '/images/bernardo.webp',
+    name: 'Bernardo Coutinho',
+    title: '',
+    position: 'Full Stack Developer',
+    linkedIn: 'bernardo-coutinho',
+    portfolio: '',
+    about:
+      'Bernardo is a full-stack Android and web developer who is always eager to learn and explore new technologies, constantly seeking ways to enhance his projects.',
+  },
+  {
     image: '/images/jana.webp',
     name: 'Jana Behfarshad',
     title: 'Project Founder',

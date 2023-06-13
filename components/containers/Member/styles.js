@@ -93,6 +93,7 @@ const ImageWrapper = styled.div`
 
   img {
     border-radius: 50%;
+    objectfit: 'cover';
   }
 `;
 
