@@ -24,7 +24,7 @@ export default function Member({
       <S.Content>
         {linkedIn && (
           <S.LinkWrapper>
-            <S.Image
+            <Image
               src='/images/svg/linkedin-portfolio.svg'
               alt='LinkedIn'
               height={25}

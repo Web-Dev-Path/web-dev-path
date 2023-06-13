@@ -93,11 +93,8 @@ const ImageWrapper = styled.div`
 
   img {
     border-radius: 50%;
+    objectfit: 'cover';
   }
-`;
-
-const Image = styled.img`
-  objectfit: 'cover';
 `;
 
 export default {
@@ -109,5 +106,4 @@ export default {
   Paragraph,
   LinkWrapper,
   ImageWrapper,
-  Image,
 };
