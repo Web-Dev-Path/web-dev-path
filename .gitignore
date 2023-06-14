@@ -12,3 +12,6 @@ yarn-error.log
 **/public/worker-*.js.map
 **/public/workbox-*.js
 **/public/workbox-*.js.map
+
+# typescript
+*.tsbuildinfo
