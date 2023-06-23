@@ -108,5 +108,4 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - 
 
 ### Fixed
-
-- 
+- Remove `babel-plugin-styled-components` to use nextjs built in compiler
