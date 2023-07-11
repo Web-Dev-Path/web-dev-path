@@ -3,7 +3,6 @@ import '@/styles/globals.scss';
 import withGA from 'next-ga';
 import Router from 'next/router';
 
-require('dotenv').config();
 const GA_KEY = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 
 function MyApp({ Component, pageProps }) {
