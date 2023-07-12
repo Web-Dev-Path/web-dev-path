@@ -4,6 +4,10 @@ node_modules
 .env
 .DS_Store
 yarn-error.log
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
 
 # PWA files
 **/public/sw.js
