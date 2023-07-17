@@ -117,3 +117,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Fixed
 
 - Lower the file names of GitHub.svg, LikedIn.svg, and YouTube.svg.
+
+
+### Added
+
+- Added Embeded Youtube videos
