@@ -1,8 +1,6 @@
 import Layout from '@/components/layout/Layout';
 import '@/styles/globals.scss';
 
-const GA_KEY = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
-
 function MyApp({ Component, pageProps }) {
   return (
     <Layout>
