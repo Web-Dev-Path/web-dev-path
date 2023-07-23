@@ -105,19 +105,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 
 - Added Bernardo to 'about us'
+- Added Google Analytics 4 Integration
+- Added Embeded Youtube videos
 
 ### Fixed
 
 - Remove `babel-plugin-styled-components` to use nextjs built in compiler
-
-### Added
-
-- Added Google Analytics 4 Integration
-### Fixed
-
 - Lower the file names of GitHub.svg, LikedIn.svg, and YouTube.svg.
-
-
-### Added
-
-- Added Embeded Youtube videos
+- Fixed Google Analytics 4 Integration
+- Fixed CHANGELOG.md inconsistency
