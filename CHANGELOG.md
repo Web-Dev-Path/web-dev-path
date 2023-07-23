@@ -111,3 +111,5 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Remove `babel-plugin-styled-components` to use nextjs built in compiler
 - Lower the file names of GitHub.svg, LikedIn.svg, and YouTube.svg.
+- Fixed Google Analytics 4 Integration
+- Fixed CHANGELOG.md inconsistency
