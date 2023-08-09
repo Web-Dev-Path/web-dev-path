@@ -16,7 +16,7 @@ export default function Home() {
           title="Let's grow together."
           image='/images/join-us.webp'
           altTag='Join the project'
-          content='The Web Dev Path is a team of professional developers project that aims to provide a comprehensive path for people who seek to begin their web development journey.'
+          content='Web Dev Path is an open-source initiative that provides hands-on experience in a simulated professional environment to people who seek to begin or move forward in their web development journey.'
           link='/about'
           $btnColorScheme='inverted-grey'
           bgColor={$lightBgColor}

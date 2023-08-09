@@ -127,15 +127,15 @@ export default function AboutUs() {
           title='Our purpose'
           content={
             <div>
+              The ultimate purpose is to make this platform a portal where
+              Non-Profit Organizations can find support for their web products.
+              That way, new graduates can gain experience while helping a good
+              cause.
+              <br />
+              <br />
               To do so, we're coding this platform in Next.js. In the short
               term, we intend to have a blog where the participants can post
               anything related to the web development world.
-              <br />
-              <br />
-              The ultimate purpose though is to make this platform a portal
-              where Non-Profit Organizations can find support for their web
-              products. That way, new graduates can gain some experience while
-              helping a good cause.
             </div>
           }
           rowOrder='row-reverse'
