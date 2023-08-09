@@ -107,6 +107,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Added Bernardo to 'about us'
 - Added Embeded Youtube videos
 - Added Google Analytics 4 Integration
+- Updated contents in home,about, and contact.
 
 ### Fixed
 
