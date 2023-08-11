@@ -60,6 +60,17 @@ export const whoWeAre = [
       'Bernardo is a full-stack Android and web developer who is always eager to learn and explore new technologies, constantly seeking ways to enhance his projects.',
   },
   {
+    image: '/images/satoshi.webp',
+    name: 'Satoshi Shirosaka',
+    title: '',
+    position: 'Full Stack Developer',
+    linkedIn: 'satoshi-89bb58a8',
+    portfolio: 'www.satoshis-developer.xyz',
+    about:
+      'Satoshi is a full-stack developer, who is looking for opportunities to learn something new. He enjoys collaborating with other developers.',
+  },
+
+  {
     image: '/images/jana.webp',
     name: 'Jana Behfarshad',
     title: 'Project Founder',
