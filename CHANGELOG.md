@@ -108,6 +108,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Added Embeded Youtube videos
 - Added Google Analytics 4 Integration
 - Updated contents in home,about, and contact.
+- Added Satoshi to 'about us'
 
 ### Fixed
 
