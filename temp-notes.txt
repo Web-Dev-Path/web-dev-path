@@ -1,0 +1,62 @@
+* temporary file. Later will remove it and update /CHANGELOG.md
+working on branch bug/MailChimp-not-saving-name
+
+************************************ IMPORTANT *************************************************
+RETURN the variable settings for /pages/api/contact.js
+original:
+const receiverEmail = 'hello@webdevpath.co';
+const sendgridEmail = 'hello@webdevpath.co';
+
+
+
+# Newsletter subscribe:
+Contact page works fine with the solution BELOW (sending email + recording email + name on mailchimp )  
+/components/ContactUsForm/index.js - line 85
+if (data.Subscribe) {
+    subscribe({ 
+        EMAIL: data.Email,
+        MERGE1: data.Name
+    });
+}
+
+# Signup for news is not sending name to MC because <NewsletterSubscribe.js> is not receiving Name, only Email.
+It is being fixed bu:
+/components/mailchimp/NewsletterForm/index.js - line 73
+const isFormValidated = onValidated({ 
+    EMAIL: email,
+    MERGE1: name
+});
+
+
+understand and practicing react-mailchimp-subscribe library better to suggest a solution with a unique component to handle the MailChimp API.
+
+
+
+
+- SETUP/INTEGRATION
+In order to get SendGrid working:
+1- Create the sendgrid account
+2- Generate API Key
+3- Set .env accordingly
+4- In SendGrid, it needs to execute the Single Sender Verification
+https://docs.sendgrid.com/ui/sending-email/sender-verification
+5- For test purposes, it is needed to change the code (pages/api/contact.js) to be adeherent with the sendgrid account (which is different from WebDevPath prod environment)
+That means, ```sendgridEmail``` needs to be the same emails as the sendgrid account recently created for this test.
+* ^ this code has to be returned for its original one before sending the Pull Request (PR).
+
+
+In order to get MailCHimp working:
+1- Create account (only one Audience)
+2- Get the API Key
+* https://www.youtube.com/watch?v=JLKzr83xZGo&t=1966s (around 35min)
+* https://dev.to/gedalyakrycer/create-an-email-list-with-react-mailchimp-965
+^ how to get the url + u + id data
+
+- Go to Audience / Signup Forms / Form builder
+- Copy het url from "Signup form url"
+- Open that addres in a new browser's tab
+- Right click in the page and "View page source"
+- Find "<form action=" and assembly the address to be used in the project's .env by putting together the url + value of "u" + value of "id", like
+https://url.us8.list-manage.com/subscribe/post?u=7testdCodedc628d3fb2ea57&id=bmyIDde28e
+* a good help can be found at https://dev.to/gedalyakrycer/create-an-email-list-with-react-mailchimp-965
+

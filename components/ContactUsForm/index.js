@@ -83,7 +83,10 @@ function ContactUsForm({ subscribe, setResponseMessage }) {
     }
 
     if (data.Subscribe) {
-      subscribe({ EMAIL: data.Email });
+      subscribe({
+        EMAIL: data.Email,
+        MERGE1: data.Name,
+      });
     }
     reset();
   }

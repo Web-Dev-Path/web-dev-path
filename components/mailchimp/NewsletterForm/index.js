@@ -70,7 +70,10 @@ const NewsletterForm = ({ status, message, onValidated }) => {
 
     recaptchaRef.current.execute();
 
-    const isFormValidated = onValidated({ EMAIL: email });
+    const isFormValidated = onValidated({
+      EMAIL: email,
+      MERGE1: name,
+    });
 
     event.target.reset();
 
