@@ -4,6 +4,7 @@ import sendgrid from '@sendgrid/mail';
 sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
 
 export default async (email, name, subject, message, subscribe) => {
+  // console.log("sending email::: ", email, " - ", name, " - ", subject, " - ", message, " - ", subscribe);
   try {
     // receiverEmail: The email will be sent here
     //   const receiverEmail = 'hello@webdevpath.co';

@@ -8,22 +8,20 @@ import S from './styles';
 const SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
 
 const NewsletterForm = ({ status, message, onValidated }) => {
-  /////////////////// temp stuff
-  const t = new Date();
-  const tday = t.getDate() > 9 ? t.getDate() : '0' + t.getDate();
-  const thour = t.getHours() > 9 ? t.getHours() : '0' + t.getHours();
-  const tmonth =
-    t.getMonth() + 1 > 9 ? t.getMonth() + 1 : '0' + (t.getMonth() + 1);
-  const tminute = t.getMinutes() > 9 ? t.getMinutes() : '0' + t.getMinutes();
-  const tname = tday + '' + tmonth + '' + thour + '' + tminute;
-  const temail = `tony.kieling+${tname}@gmail.com`;
-  const [name, setName] = useState(tname);
-  const [email, setEmail] = useState(temail);
-  const [num, setNum] = useState(0);
+  // /////////////////// temp stuff
+  // const t = new Date();
+  // const tday = t.getDate() > 9 ? t.getDate() : '0' + t.getDate();
+  // const thour = t.getHours() > 9 ? t.getHours() : '0' + t.getHours();
+  // const tmonth = t.getMonth() + 1 > 9 ? t.getMonth() + 1 : '0' + (t.getMonth() + 1);
+  // const tminute = t.getMinutes() > 9 ? t.getMinutes() : '0' + t.getMinutes();
+  // const tname = tday + '' + tmonth + '' + thour + '' + tminute;
+  // const temail = `tony.kieling+${tname}@gmail.com`;
+  // const [name, setName] = useState(tname);
+  // const [email, setEmail] = useState(temail);
 
   const [error, setError] = useState(null);
-  // const [name, setName] = useState('');
-  // const [email, setEmail] = useState('');
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
   const recaptchaRef = createRef();
   const [reCaptchaFail, setReCaptchaFail] = useState(false);
 
@@ -43,13 +41,11 @@ const NewsletterForm = ({ status, message, onValidated }) => {
     try {
       const response = await fetch('/api/validateReCaptcha', {
         method: 'POST',
-        // body: JSON.stringify({ email, name, gReCaptchaToken: num < 2 ? "reCaptchaToken" : reCaptchaToken }),
         body: JSON.stringify({ email, name, gReCaptchaToken: reCaptchaToken }),
         headers: {
           'Content-Type': 'application/json',
         },
       });
-      // console.log("response--- ", response)
 
       return response.ok ? true : false;
     } catch (error) {
@@ -65,7 +61,6 @@ const NewsletterForm = ({ status, message, onValidated }) => {
    */
   const handleFormSubmit = async event => {
     event.preventDefault();
-    setNum(num + 1);
 
     setReCaptchaFail(false);
     setError(null);

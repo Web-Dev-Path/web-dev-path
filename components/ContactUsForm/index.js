@@ -12,7 +12,7 @@ export const ContactUsFormSubscribe = ({ setMsg }) => {
     <MailchimpSubscribe
       url={process.env.NEXT_PUBLIC_MAILCHIMP_URL}
       render={({ subscribe, status, message }) => {
-        console.info(`MailChimp (contact form): ${status} - ${message}`);
+        // console.info(`MailChimp (contact form): ${status} - ${message}`);
         return (
           <>
             <ContactUsForm
@@ -34,6 +34,17 @@ export const ContactUsFormSubscribe = ({ setMsg }) => {
 function ContactUsForm({ subscribe, setResponseMessage }) {
   const contactReCaptchaRef = useRef();
 
+  // /////////////////// temp stuff
+  // const t = new Date();
+  // const tday = t.getDate() > 9 ? t.getDate() : '0' + t.getDate();
+  // const thour = t.getHours() > 9 ? t.getHours() : '0' + t.getHours();
+  // const tmonth = t.getMonth() + 1 > 9 ? t.getMonth() + 1 : '0' + (t.getMonth() + 1);
+  // const tminute = t.getMinutes() > 9 ? t.getMinutes() : '0' + t.getMinutes();
+  // const tname = tday + '' + tmonth + '' + thour + '' + tminute;
+  // const temail = `tony.kieling+${tname}@gmail.com`;
+  // const tsubject = "sub - " + tname;
+  // const tmessage = "message: " + tname;
+
   const {
     register,
     handleSubmit,
@@ -45,6 +56,10 @@ function ContactUsForm({ subscribe, setResponseMessage }) {
       Email: '',
       Subject: '',
       Message: '',
+      // Name: tname,
+      // Email: temail,
+      // Subject: tsubject,
+      // Message: tmessage,
     },
   });
 
@@ -54,7 +69,7 @@ function ContactUsForm({ subscribe, setResponseMessage }) {
     contactReCaptchaRef.current.reset();
     const gReCaptchaToken = await contactReCaptchaRef.current.executeAsync();
 
-    const res = await fetch('/api/contact', {
+    const res = await fetch('/api/validateReCaptcha', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

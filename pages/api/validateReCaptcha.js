@@ -2,7 +2,8 @@ import sendEmail from './sendEmail.js';
 
 export default async function handler(req, res) {
   const { method } = req;
-  console.log('req.body: ', req.body);
+  // console.log('req.body: ', req.body);
+  // if(1) return res.json("All good");
 
   if (method === 'POST') {
     const SECRET_KEY = process.env.RECAPTCHA_SECRET_KEY;
