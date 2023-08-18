@@ -8,53 +8,43 @@ import S from './styles';
 const SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
 
 const NewsletterForm = ({ status, message, onValidated }) => {
-  /////////////////// temp stuff
-  const t = new Date();
-  const tday = t.getDate() > 9 ? t.getDate() : '0' + t.getDate();
-  const thour = t.getHours() > 9 ? t.getHours() : '0' + t.getHours();
-  const tmonth =
-    t.getMonth() + 1 > 9 ? t.getMonth() + 1 : '0' + (t.getMonth() + 1);
-  const tminute = t.getMinutes() > 9 ? t.getMinutes() : '0' + t.getMinutes();
-  const tname = tday + '' + tmonth + '' + thour + '' + tminute;
-  const temail = `tony.kieling+${tname}@gmail.com`;
-  const [name, setName] = useState(tname);
-  const [email, setEmail] = useState(temail);
-  const [num, setNum] = useState(0);
-
   const [error, setError] = useState(null);
-  // const [name, setName] = useState('');
-  // const [email, setEmail] = useState('');
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
   const recaptchaRef = createRef();
-  const [reCaptchaFail, setReCaptchaFail] = useState(false);
 
-  const onReCAPTCHAChange = () => {
-    console.log('new recaptcha!!!!!!!!!!!!!');
-    recaptchaRef.current.reset();
-  };
-
-  const validateReCaptcha = async reCaptchaToken => {
+  const onReCAPTCHAChange = async captchaCode => {
     // If the reCAPTCHA code is null or undefined indicating that
     // the reCAPTCHA was expired then return early
-    if (!reCaptchaToken) {
-      setReCaptchaFail(true);
+    if (!captchaCode) {
       return;
     }
-
     try {
-      const response = await fetch('/api/validateReCaptcha', {
+      const response = await fetch('/api/register', {
         method: 'POST',
-        // body: JSON.stringify({ email, name, gReCaptchaToken: num < 2 ? "reCaptchaToken" : reCaptchaToken }),
-        body: JSON.stringify({ email, name, gReCaptchaToken: reCaptchaToken }),
+        body: JSON.stringify({ email, name, captcha: captchaCode }),
         headers: {
           'Content-Type': 'application/json',
         },
       });
-      // console.log("response--- ", response)
-
-      return response.ok ? true : false;
+      if (response.ok) {
+        // If the response is ok than show the success console.log
+        console.log('Email registered successfully');
+      } else {
+        // Else throw an error with the message returned
+        const error = await response.json();
+        throw new Error(error.message);
+      }
     } catch (error) {
       console.log(error?.message || 'Something went wrong');
-      return false;
+    } finally {
+      // Reset the reCAPTCHA when the request has failed or succeeded
+      if (recaptchaRef?.current) {
+        recaptchaRef.current.reset();
+      }
+
+      setEmail('');
+      setName('');
     }
   };
 
@@ -63,11 +53,9 @@ const NewsletterForm = ({ status, message, onValidated }) => {
    *
    * @return {{value}|*|boolean|null}
    */
-  const handleFormSubmit = async event => {
+  const handleFormSubmit = event => {
     event.preventDefault();
-    setNum(num + 1);
 
-    setReCaptchaFail(false);
     setError(null);
 
     if (!name) {
@@ -80,29 +68,17 @@ const NewsletterForm = ({ status, message, onValidated }) => {
       return null;
     }
 
-    // const validateRecaptcha = await recaptchaRef.current.execute();
-    const token = await recaptchaRef.current.executeAsync();
-    // console.log("----------going to check recaptcha", token)
-    const confirmValidateRecaptcha = await validateReCaptcha(token);
-    // console.log("confirmValidateRecaptcha::: ", confirmValidateRecaptcha);
+    recaptchaRef.current.execute();
 
-    if (!confirmValidateRecaptcha) {
-      setReCaptchaFail(true);
-    } else {
-      // const isFormValidated  -- onValidate return nothing, so no need it
-      onValidated({
-        EMAIL: email,
-        MERGE1: name,
-      });
+    const isFormValidated = onValidated({
+      EMAIL: email,
+      MERGE1: name,
+    });
 
-      // console.log("isFormValidated::: ", isFormValidated)
-      event.target.reset();
-      setEmail('');
-      setName('');
-      setReCaptchaFail(false);
-    }
+    event.target.reset();
 
-    // recaptchaRef.current.reset();
+    // On success return true
+    return name && email && email.indexOf('@') > -1 && isFormValidated;
   };
 
   /**
@@ -181,13 +157,6 @@ const NewsletterForm = ({ status, message, onValidated }) => {
           </S.Form>
 
           <S.FormInfo>
-            {/* just in case when reCaptcha issue happens */}
-            {reCaptchaFail && (
-              <S.FormSending>
-                Please, refresh your screen and try again.
-              </S.FormSending>
-            )}
-
             {status === 'sending' && <S.FormSending>Sending...</S.FormSending>}
             {status === 'error' || error ? (
               <S.FormError

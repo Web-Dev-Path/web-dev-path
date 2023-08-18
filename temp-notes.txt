@@ -6,6 +6,7 @@ RETURN the variable settings for /pages/api/contact.js
 original:
 const receiverEmail = 'hello@webdevpath.co';
 const sendgridEmail = 'hello@webdevpath.co';
+******************* /api/sendEmail.js is the new file
 
 
 
@@ -60,3 +61,18 @@ In order to get MailCHimp working:
 https://url.us8.list-manage.com/subscribe/post?u=7testdCodedc628d3fb2ea57&id=bmyIDde28e
 * a good help can be found at https://dev.to/gedalyakrycer/create-an-email-list-with-react-mailchimp-965
 
+
+
+
+Two tasks:
+**1. refactor /api/contact.js and /api/register.js**
+&emsp;**I-** Both APIs are checking reCaptcha (code repetition) and one of them is sending email.
+&emsp;**G-** Having a function to check reCaptcha and one to send email - it avoids repetition.
+&emsp;**N-** Changing these 2 API files and also changing the components that call them in order to have a naming normalization (they need to use the same variable names to call the APIs)
+
+**2. refactor \<MailchimSubscribe>, \<NewsletterForm> and \<ContactUsForm> in order to have the same component structure.**
+&emsp;**I-** Right now there is code repetition and the components are implementing MailchimpSubscribe in different ways.
+&emsp;**G-** Having one \<MailchimSubscribe> that receives a child, making the component utilize the same variable names and data structure - the child will be a component that implements its own form and abstracts and uses \<MailChimpSubscribe>.
+&emsp;**N-** Changing file structure to have a dir for each component + form code to be adherent to the change.
+
+\* **I- Issue, G- Goal, N- Need**

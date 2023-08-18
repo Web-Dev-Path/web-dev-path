@@ -14,6 +14,12 @@ const NewsletterSubscribe = () => {
             status={status}
             message={message}
             onValidated={formData => subscribe(formData)}
+            // onValidated={formData => {
+            //   console.log("status + message: ", status, message);
+            //   const t = subscribe(formData);
+            //   console.log("ttttttttttttt: ", t);
+            //   console.log("status + message: ", status, message);
+            // }}
           />
         );
       }}
