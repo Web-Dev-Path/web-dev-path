@@ -13,6 +13,7 @@ const Mailchimp = ({ child }) => {
         childToBeRendered = {
           ...childToBeRendered,
           props: {
+            ...child.props,
             subscribe,
             status,
             message,

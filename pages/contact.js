@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ContactUsFormSubscribe } from '@/components/ContactUsForm';
+import ContactUsFormSubscribe from '@/components/ContactUs';
 import ContactUsCards from '@/components/ContactUsCards';
 import S from '@/styles/pages/contactStyles';
 

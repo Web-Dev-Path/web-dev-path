@@ -8,7 +8,6 @@ import S from './styles';
 const SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
 
 const NewsletterForm = ({ status, message, subscribe }) => {
-  console.log('props on NLF::: ', status, message, subscribe);
   /////////////////// temp stuff
   const t = new Date();
   const tday = t.getDate() > 9 ? t.getDate() : '0' + t.getDate();
@@ -181,7 +180,7 @@ const NewsletterForm = ({ status, message, subscribe }) => {
             {/* just in case when reCaptcha issue happens */}
             {reCaptchaFail && (
               <S.FormSending>
-                Please, refresh your screen and try again.
+                Please, refresh your screen and try it again.
               </S.FormSending>
             )}
 

@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { linksNav, linksSocial } from '@/utils/links';
-import NewsletterSubscribe from '@/components/Newsletter/NewsletterSubscribe';
+import NewsletterSubscribe from '@/components/NewsletterSubscribe';
 import Container from '@/components/containers/Container';
 import S from './styles';
 
