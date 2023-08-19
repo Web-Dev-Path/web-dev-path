@@ -79,7 +79,6 @@ export const whoWeAre = [
     about:
       'Lucas is a Full-Stack developer who loves to learn new technologies and help others. He also love the power of data, how it can be used to solve real problems, and is always learning about AI/ML.',
   },
-
   {
     image: '/images/jana.webp',
     name: 'Jana Behfarshad',
