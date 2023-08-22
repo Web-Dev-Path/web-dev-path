@@ -1,19 +1,10 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { decode } from 'html-entities';
-// import ReCAPTCHA from 'react-google-recaptcha';
 import { NewsLetterSubmitButton } from '@/components/buttons/SubmitButton';
 import S from './styles';
 
-// const SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
-
 const NewsletterForm = ({ status, message, subscribe, getReCaptchaToken }) => {
-  console.log(
-    'getReCaptchaToken---------- ',
-    getReCaptchaToken,
-    message,
-    status
-  );
   /////////////////// temp stuff
   const t = new Date();
   const tday = t.getDate() > 9 ? t.getDate() : '0' + t.getDate();
@@ -32,20 +23,13 @@ const NewsletterForm = ({ status, message, subscribe, getReCaptchaToken }) => {
   // const recaptchaRef = createRef();
   const [reCaptchaFail, setReCaptchaFail] = useState(false);
 
-  // const onReCAPTCHAChange = () => {
-  //   console.log('new recaptcha!!!!!!!!!!!!!');
-  //   recaptchaRef.current.reset();
-  // };
-
   const validateReCaptcha = async () => {
     // If the reCAPTCHA code is null or undefined indicating that
     // the reCAPTCHA was expired then return early
     const gReCaptchaToken = await getReCaptchaToken();
-    console.log('----------going to check recaptcha', gReCaptchaToken);
-    if (!gReCaptchaToken) {
-      setReCaptchaFail(true);
-      return false;
-    }
+    // console.log('----------going to check recaptcha', gReCaptchaToken);
+    if (!gReCaptchaToken) return false;
+    // setReCaptchaFail(true);
 
     try {
       const response = await fetch('/api/validateReCaptcha', {
@@ -99,14 +83,11 @@ const NewsletterForm = ({ status, message, subscribe, getReCaptchaToken }) => {
         MERGE1: name,
       });
 
-      // console.log("isFormValidated::: ", isFormValidated)
       event.target.reset();
       setEmail('');
       setName('');
       setReCaptchaFail(false);
     }
-
-    // recaptchaRef.current.reset();
   };
 
   /**
@@ -175,13 +156,6 @@ const NewsletterForm = ({ status, message, subscribe, getReCaptchaToken }) => {
               onKeyUp={event => handleInputKeyEvent(event)}
             />
             <NewsLetterSubmitButton label='Subscribe' />
-
-            {/* <ReCAPTCHA
-              ref={recaptchaRef}
-              size='invisible'
-              sitekey={SITE_KEY}
-              onChange={onReCAPTCHAChange}
-            /> */}
           </S.Form>
 
           <S.FormInfo>

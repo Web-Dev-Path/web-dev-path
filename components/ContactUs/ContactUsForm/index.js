@@ -1,13 +1,14 @@
 import { useForm } from 'react-hook-form';
-import { useRef } from 'react';
-import ReCAPTCHA from 'react-google-recaptcha';
+// import { useRef } from 'react';
+// import ReCAPTCHA from 'react-google-recaptcha';
 import Container from '@/components/containers/Container';
 import RevealContentContainer from '@/components/containers/RevealContentContainer';
 import { SubmitButton } from '@/components/buttons/SubmitButton';
 import S from './styles';
 
-function ContactUsForm({ subscribe, setResponseMessage }) {
-  const contactReCaptchaRef = useRef();
+function ContactUsForm({ subscribe, setResponseMessage, getReCaptchaToken }) {
+  // console.log("-subscribe: ", subscribe, "\n-setResponseMessage: ", setResponseMessage, "\n-getReCaptchaToken: ", getReCaptchaToken)
+  // const contactReCaptchaRef = useRef();
 
   /////////////////// temp stuff
   const t = new Date();
@@ -42,8 +43,13 @@ function ContactUsForm({ subscribe, setResponseMessage }) {
   async function onSubmit(data) {
     setResponseMessage(['Submitting...']);
 
-    contactReCaptchaRef.current.reset();
-    const gReCaptchaToken = await contactReCaptchaRef.current.executeAsync();
+    // contactReCaptchaRef.current.reset();
+    const gReCaptchaToken = await getReCaptchaToken();
+
+    if (!gReCaptchaToken) {
+      setResponseMessage(['Please, refresh your screen and try it again.']);
+      return;
+    }
 
     const res = await fetch('/api/validateReCaptcha', {
       method: 'POST',
@@ -162,11 +168,11 @@ function ContactUsForm({ subscribe, setResponseMessage }) {
           </S.SubscribeWrapper>
           <SubmitButton label='Submit' disabled={isSubmitting} />
 
-          <ReCAPTCHA
+          {/* <ReCAPTCHA
             ref={contactReCaptchaRef}
             size='invisible'
             sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
-          />
+          /> */}
         </S.Form>
       </Container>
     </RevealContentContainer>

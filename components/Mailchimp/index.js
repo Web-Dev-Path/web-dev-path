@@ -1,16 +1,16 @@
 import MailchimpSubscribe from 'react-mailchimp-subscribe';
-import { cloneElement, createRef } from 'react';
+import { cloneElement, useRef } from 'react';
 import GoogleReCAPTCHA from 'react-google-recaptcha';
 
 const RECAPTCHA_SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
 const MAILCHIMP_URL = process.env.NEXT_PUBLIC_MAILCHIMP_URL;
 
 const Mailchimp = ({ child }) => {
-  const reCAPTCHARef = createRef();
+  const reCAPTCHARef = useRef(null);
   let childToBeRendered = cloneElement(child);
 
   const getReCaptchaToken = async () => {
-    console.log('getting tokennnnnnnnnnnn');
+    // console.log('getting tokennnnnnnnnnnn');
     await reCAPTCHARef.current.reset();
     const token = await reCAPTCHARef.current.executeAsync();
     console.log('new token::: ', token);
@@ -33,21 +33,13 @@ const Mailchimp = ({ child }) => {
         };
 
         return (
-          <>
-            <GoogleReCAPTCHA
-              ref={reCAPTCHARef}
-              size='invisible'
-              sitekey={RECAPTCHA_SITE_KEY}
-              // onChange={() => {
-              //   console.log('UPDATE!!!!!!!!!!!!!!!!');
-              // }}
-              // onExpired={() => {
-              //   console.log('ONEXPIERD!!!!');
-              // }}
-            >
-              {childToBeRendered}
-            </GoogleReCAPTCHA>
-          </>
+          <GoogleReCAPTCHA
+            ref={reCAPTCHARef}
+            size='invisible'
+            sitekey={RECAPTCHA_SITE_KEY}
+          >
+            {childToBeRendered}
+          </GoogleReCAPTCHA>
         );
       }}
     />
