@@ -2,8 +2,6 @@ import sendEmail from './sendEmail.js';
 
 export default async function handler(req, res) {
   const { method } = req;
-  // console.log('req.body: ', req.body);
-  // if(1) return res.json("All good");
 
   if (method === 'POST') {
     const SECRET_KEY = process.env.RECAPTCHA_SECRET_KEY;
@@ -12,6 +10,7 @@ export default async function handler(req, res) {
     // data used to send email, as well
     const { name, email, subject, message, subscribe, gReCaptchaToken } =
       req.body;
+
     // If email or captcha are missing return an error
     if (!email || !name || !gReCaptchaToken) {
       return res.status(422).json({
@@ -31,7 +30,6 @@ export default async function handler(req, res) {
         }
       );
       const captchaValidation = await response.json();
-
       if (captchaValidation.success) {
         // in case this call is coming from ContactUsForm, it will send an email too
         if (subject || message) {
@@ -43,7 +41,7 @@ export default async function handler(req, res) {
             message,
             subscribe
           );
-          // console.log("sendEmailOK--- ", sendEmailOK)
+
           if (sendEmailOK.status !== 'okay') {
             return res.status(400).json({ message: sendEmailOK.message });
           }

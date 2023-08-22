@@ -4,16 +4,13 @@ import sendgrid from '@sendgrid/mail';
 sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
 
 export default async (email, name, subject, message, subscribe) => {
-  // console.log("sending email::: ", email, " - ", name, " - ", subject, " - ", message, " - ", subscribe);
   try {
     // receiverEmail: The email will be sent here
-    //   const receiverEmail = 'hello@webdevpath.co';
-    const receiverEmail = 'tony.kieling+wdp@gmail.com';
+    const receiverEmail = 'hello@webdevpath.co';
     // sendgridEmail: This is the email verfied by sendgrid
     // the email will appear to be sent from this email
     // If a non verified email is used, we get a 403 error
-    //   const sendgridEmail = 'hello@webdevpath.co';
-    const sendgridEmail = 'tony.kieling+sendgrid@gmail.com';
+    const sendgridEmail = 'hello@webdevpath.co';
 
     const emailContent = `
         <b>Name:</b> ${name} <br/>

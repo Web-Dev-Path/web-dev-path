@@ -1,35 +1,27 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { decode } from 'html-entities';
 import { NewsLetterSubmitButton } from '@/components/buttons/SubmitButton';
 import S from './styles';
 
 const NewsletterForm = ({ status, message, subscribe, getReCaptchaToken }) => {
-  /////////////////// temp stuff
-  const t = new Date();
-  const tday = t.getDate() > 9 ? t.getDate() : '0' + t.getDate();
-  const thour = t.getHours() > 9 ? t.getHours() : '0' + t.getHours();
-  const tmonth =
-    t.getMonth() + 1 > 9 ? t.getMonth() + 1 : '0' + (t.getMonth() + 1);
-  const tminute = t.getMinutes() > 9 ? t.getMinutes() : '0' + t.getMinutes();
-  const tname = tday + '' + tmonth + '' + thour + '' + tminute;
-  const temail = `tony.kieling+${tname}@gmail.com`;
-  const [name, setName] = useState(tname);
-  const [email, setEmail] = useState(temail);
-
   const [error, setError] = useState(null);
-  // const [name, setName] = useState('');
-  // const [email, setEmail] = useState('');
-  // const recaptchaRef = createRef();
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
   const [reCaptchaFail, setReCaptchaFail] = useState(false);
+
+  useEffect(() => {
+    if (status === 'success') {
+      setName('');
+      setEmail('');
+    }
+  }, [status]);
 
   const validateReCaptcha = async () => {
     // If the reCAPTCHA code is null or undefined indicating that
     // the reCAPTCHA was expired then return early
     const gReCaptchaToken = await getReCaptchaToken();
-    // console.log('----------going to check recaptcha', gReCaptchaToken);
     if (!gReCaptchaToken) return false;
-    // setReCaptchaFail(true);
 
     try {
       const response = await fetch('/api/validateReCaptcha', {
@@ -68,24 +60,16 @@ const NewsletterForm = ({ status, message, subscribe, getReCaptchaToken }) => {
       return null;
     }
 
-    // const validateRecaptcha = await recaptchaRef.current.execute();
-    // const token = await recaptchaRef.current.executeAsync();
-    // console.log('----------going to check recaptcha', token);
     const confirmValidateRecaptcha = await validateReCaptcha();
-    console.log('confirmValidateRecaptcha::: ', confirmValidateRecaptcha);
-
     if (!confirmValidateRecaptcha) {
       setReCaptchaFail(true);
     } else {
-      // const isFormValidated  -- onValidate return nothing, so no need it
       subscribe({
         EMAIL: email,
         MERGE1: name,
       });
 
       event.target.reset();
-      setEmail('');
-      setName('');
       setReCaptchaFail(false);
     }
   };

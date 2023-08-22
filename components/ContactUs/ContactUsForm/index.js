@@ -1,27 +1,10 @@
 import { useForm } from 'react-hook-form';
-// import { useRef } from 'react';
-// import ReCAPTCHA from 'react-google-recaptcha';
 import Container from '@/components/containers/Container';
 import RevealContentContainer from '@/components/containers/RevealContentContainer';
 import { SubmitButton } from '@/components/buttons/SubmitButton';
 import S from './styles';
 
 function ContactUsForm({ subscribe, setResponseMessage, getReCaptchaToken }) {
-  // console.log("-subscribe: ", subscribe, "\n-setResponseMessage: ", setResponseMessage, "\n-getReCaptchaToken: ", getReCaptchaToken)
-  // const contactReCaptchaRef = useRef();
-
-  /////////////////// temp stuff
-  const t = new Date();
-  const tday = t.getDate() > 9 ? t.getDate() : '0' + t.getDate();
-  const thour = t.getHours() > 9 ? t.getHours() : '0' + t.getHours();
-  const tmonth =
-    t.getMonth() + 1 > 9 ? t.getMonth() + 1 : '0' + (t.getMonth() + 1);
-  const tminute = t.getMinutes() > 9 ? t.getMinutes() : '0' + t.getMinutes();
-  const tname = tday + '' + tmonth + '' + thour + '' + tminute;
-  const temail = `tony.kieling+${tname}@gmail.com`;
-  const tsubject = 'sub - ' + tname;
-  const tmessage = 'message: ' + tname;
-
   const {
     register,
     handleSubmit,
@@ -29,21 +12,16 @@ function ContactUsForm({ subscribe, setResponseMessage, getReCaptchaToken }) {
     formState: { errors, isSubmitting },
   } = useForm({
     defaultValues: {
-      // Name: '',
-      // Email: '',
-      // Subject: '',
-      // Message: '',
-      Name: tname,
-      Email: temail,
-      Subject: tsubject,
-      Message: tmessage,
+      Name: '',
+      Email: '',
+      Subject: '',
+      Message: '',
     },
   });
 
   async function onSubmit(data) {
     setResponseMessage(['Submitting...']);
 
-    // contactReCaptchaRef.current.reset();
     const gReCaptchaToken = await getReCaptchaToken();
 
     if (!gReCaptchaToken) {
@@ -167,12 +145,6 @@ function ContactUsForm({ subscribe, setResponseMessage, getReCaptchaToken }) {
             Subscribe to our DevNews!
           </S.SubscribeWrapper>
           <SubmitButton label='Submit' disabled={isSubmitting} />
-
-          {/* <ReCAPTCHA
-            ref={contactReCaptchaRef}
-            size='invisible'
-            sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
-          /> */}
         </S.Form>
       </Container>
     </RevealContentContainer>
