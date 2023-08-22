@@ -1,13 +1,19 @@
-import { createRef, useState } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
 import { decode } from 'html-entities';
-import ReCAPTCHA from 'react-google-recaptcha';
+// import ReCAPTCHA from 'react-google-recaptcha';
 import { NewsLetterSubmitButton } from '@/components/buttons/SubmitButton';
 import S from './styles';
 
-const SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
+// const SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
 
-const NewsletterForm = ({ status, message, subscribe }) => {
+const NewsletterForm = ({ status, message, subscribe, getReCaptchaToken }) => {
+  console.log(
+    'getReCaptchaToken---------- ',
+    getReCaptchaToken,
+    message,
+    status
+  );
   /////////////////// temp stuff
   const t = new Date();
   const tday = t.getDate() > 9 ? t.getDate() : '0' + t.getDate();
@@ -23,26 +29,28 @@ const NewsletterForm = ({ status, message, subscribe }) => {
   const [error, setError] = useState(null);
   // const [name, setName] = useState('');
   // const [email, setEmail] = useState('');
-  const recaptchaRef = createRef();
+  // const recaptchaRef = createRef();
   const [reCaptchaFail, setReCaptchaFail] = useState(false);
 
-  const onReCAPTCHAChange = () => {
-    console.log('new recaptcha!!!!!!!!!!!!!');
-    recaptchaRef.current.reset();
-  };
+  // const onReCAPTCHAChange = () => {
+  //   console.log('new recaptcha!!!!!!!!!!!!!');
+  //   recaptchaRef.current.reset();
+  // };
 
-  const validateReCaptcha = async reCaptchaToken => {
+  const validateReCaptcha = async () => {
     // If the reCAPTCHA code is null or undefined indicating that
     // the reCAPTCHA was expired then return early
-    if (!reCaptchaToken) {
+    const gReCaptchaToken = await getReCaptchaToken();
+    console.log('----------going to check recaptcha', gReCaptchaToken);
+    if (!gReCaptchaToken) {
       setReCaptchaFail(true);
-      return;
+      return false;
     }
 
     try {
       const response = await fetch('/api/validateReCaptcha', {
         method: 'POST',
-        body: JSON.stringify({ email, name, gReCaptchaToken: reCaptchaToken }),
+        body: JSON.stringify({ email, name, gReCaptchaToken }),
         headers: {
           'Content-Type': 'application/json',
         },
@@ -77,9 +85,9 @@ const NewsletterForm = ({ status, message, subscribe }) => {
     }
 
     // const validateRecaptcha = await recaptchaRef.current.execute();
-    const token = await recaptchaRef.current.executeAsync();
-    console.log('----------going to check recaptcha', token);
-    const confirmValidateRecaptcha = await validateReCaptcha(token);
+    // const token = await recaptchaRef.current.executeAsync();
+    // console.log('----------going to check recaptcha', token);
+    const confirmValidateRecaptcha = await validateReCaptcha();
     console.log('confirmValidateRecaptcha::: ', confirmValidateRecaptcha);
 
     if (!confirmValidateRecaptcha) {
@@ -168,12 +176,12 @@ const NewsletterForm = ({ status, message, subscribe }) => {
             />
             <NewsLetterSubmitButton label='Subscribe' />
 
-            <ReCAPTCHA
+            {/* <ReCAPTCHA
               ref={recaptchaRef}
               size='invisible'
               sitekey={SITE_KEY}
               onChange={onReCAPTCHAChange}
-            />
+            /> */}
           </S.Form>
 
           <S.FormInfo>
