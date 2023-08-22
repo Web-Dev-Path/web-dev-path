@@ -69,7 +69,16 @@ export const whoWeAre = [
     about:
       'Satoshi is a full-stack developer, who is looking for opportunities to learn something new. He enjoys collaborating with other developers.',
   },
-
+  {
+    image: '/images/lucas.webp',
+    name: 'Lucas Silva',
+    title: '',
+    position: 'Full-Stack Developer',
+    linkedIn: 'lucas-assuncao-silva',
+    portfolio: '',
+    about:
+      'Lucas is a Full-Stack developer who loves learning about new technologies and helping others. He also loves the power of data, how it can be used to solve real problems, and is always learning about AI/ML.',
+  },
   {
     image: '/images/jana.webp',
     name: 'Jana Behfarshad',
