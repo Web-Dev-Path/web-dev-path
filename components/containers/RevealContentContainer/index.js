@@ -3,7 +3,7 @@ import { useIntersect } from '@/hooks/useIntersect';
 import S from './styles';
 
 const RevealContentContainer = ({ children }) => {
-  const [ref, entry] = useIntersect({ threshold: 0.1 });
+  const [ref, entry] = useIntersect({ threshold: 0.08 });
   const [firstLoad, setFirstLoad] = useState(true);
   const [hiddenStyle, setHiddenStyle] = useState(true);
 
