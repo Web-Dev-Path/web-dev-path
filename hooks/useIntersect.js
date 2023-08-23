@@ -27,7 +27,7 @@ export const useIntersect = ({ root = null, rootMargin }) => {
         observer.unobserve(node);
       }
     };
-  }, [node, root, rootMargin]);
+  }, [node, root, rootMargin, threshold]);
 
   return [setNode, entry];
 };
