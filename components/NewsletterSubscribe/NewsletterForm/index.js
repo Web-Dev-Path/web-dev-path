@@ -143,7 +143,6 @@ const NewsletterForm = ({ status, message, subscribe, getReCaptchaToken }) => {
           </S.Form>
 
           <S.FormInfo>
-            {/* just in case when reCaptcha issue happens */}
             {reCaptchaFail && (
               <S.FormSending>
                 Please, refresh your screen and try it again.
