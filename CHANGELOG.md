@@ -118,3 +118,4 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Fixed Google Analytics 4 Integration
 - Fixed CHANGELOG.md inconsistency
 - Contact and Subscribe forms are saving Name on Mailchimp
+- Fixed Who We Are section on mobile.
