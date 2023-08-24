@@ -117,3 +117,4 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Lower the file names of GitHub.svg, LikedIn.svg, and YouTube.svg.
 - Fixed Google Analytics 4 Integration
 - Fixed CHANGELOG.md inconsistency
+- Fixed Who We Are section on mobile.
