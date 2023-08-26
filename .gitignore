@@ -2,6 +2,7 @@
 .idea
 node_modules
 .env
+.env.development
 .DS_Store
 yarn-error.log
 .yarn/*
