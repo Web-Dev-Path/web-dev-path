@@ -110,6 +110,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Updated contents in home,about, and contact.
 - Added Satoshi to 'about us'
 - Added Lucas to 'about us'
+- Added .env.development to .gitignore
 
 ### Fixed
 
