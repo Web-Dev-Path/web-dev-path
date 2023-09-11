@@ -41,10 +41,9 @@ const BlogPostsContainer = ({
           </Container>
         ) : null}
         {
-          // put in rows of 3 if more than 3 posts (for swipable cards)
           swipe ? (
             <>
-              {[...splitPosts(posts, 3)].map((p, index) => (
+              {[...splitPosts(posts, posts.length)].map((p, index) => (
                 <BlogCardsColumns key={index} cards={p} />
               ))}
             </>
