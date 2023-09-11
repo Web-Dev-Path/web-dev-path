@@ -8,8 +8,8 @@
 
 #### Were there any complications while making this change?
 
-### How to replicate the issue?
+#### How to replicate the issue?
 
-### If necessary, please describe how to test the new feature or fix.
+#### If necessary, please describe how to test the new feature or fix.
 
 #### When should this be merged?
