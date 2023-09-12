@@ -80,6 +80,16 @@ export const whoWeAre = [
       'Lucas is a Full-Stack developer who loves learning about new technologies and helping others. He also loves the power of data, how it can be used to solve real problems, and is always learning about AI/ML.',
   },
   {
+    image: '/images/tony.webp',
+    name: 'Tony Kieling',
+    title: '',
+    position: 'Full-stack Developer',
+    linkedIn: 'tony-kieling',
+    portfolio: 'tkwebdev.ca',
+    about:
+      'Tony is a Software Engineer with a knack for Javascript ecosystems, particularly React and Node.js. His motivation lies in building solutions that make a difference.',
+  },
+  {
     image: '/images/jana.webp',
     name: 'Jana Behfarshad',
     title: 'Project Founder',
