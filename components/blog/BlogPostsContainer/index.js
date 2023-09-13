@@ -6,12 +6,6 @@ import S from './styles';
 import { tagToHeading } from '@/utils/blogCategories';
 import Container from '@/components/containers/Container';
 
-function* splitPosts(arr, n) {
-  for (let i = 0; i < arr.length; i += n) {
-    yield arr.slice(i, i + n);
-  }
-}
-
 const BlogPostsContainer = ({
   posts,
   heading,
@@ -43,7 +37,7 @@ const BlogPostsContainer = ({
         {
           swipe ? (
             <>
-              {[...splitPosts(posts, posts.length)].map((p, index) => (
+              {[posts.slice(0,6)].map((p, index) => (
                 <BlogCardsColumns key={index} cards={p} />
               ))}
             </>
