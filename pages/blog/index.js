@@ -13,7 +13,7 @@ export default function Blog({ posts }) {
   const [searchTerm, setSearchTerm] = useState('');
 
   const filteredData = {
-    posts: posts.slice(0, 3),
+    posts: posts.slice(0, 6),
   };
 
   if (searchTerm) {

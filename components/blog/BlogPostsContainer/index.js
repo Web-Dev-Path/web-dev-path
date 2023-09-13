@@ -70,7 +70,7 @@ const BlogPostsContainer = ({
 
         {back ? (
           <Container>
-            <S.BackBottomLink href={`/blog`}>&#60; Back</S.BackBottomLink>
+            <S.BackBottomLink href={`/blog`}>&#60; back</S.BackBottomLink>
           </Container>
         ) : null}
       </S.BlogContainer>
