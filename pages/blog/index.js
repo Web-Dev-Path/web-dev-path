@@ -11,15 +11,18 @@ import { blogSearch } from '@/utils/search';
 export default function Blog({ posts }) {
   const [searchTerm, setSearchTerm] = useState('');
 
+  let filteredPosts = posts;
+  let heading;
+
   if (searchTerm) {
-    const filteredPosts = blogSearch(posts, searchTerm);
-    filteredData.posts = filteredPosts;
-    filteredData.heading = `${
+    filteredPosts = blogSearch(posts, searchTerm);
+
+    heading = `${
       filteredPosts.length === 0 ? 'no' : filteredPosts.length
     } search ${
       filteredPosts.length > 1 ? 'results' : 'result'
     } for '${searchTerm}'`;
-    filteredData.viewall = false;
+    filteredPosts.viewall = false;
   }
 
   return (
@@ -31,7 +34,7 @@ export default function Blog({ posts }) {
         </BlogSearch>
       </Container>
 
-      <BlogPostsContainer posts={posts} />
+      <BlogPostsContainer posts={filteredPosts} heading={heading}/>
       {!searchTerm &&
         Object.keys(tagToHeading).map(tag => (
           <BlogPostsContainer
