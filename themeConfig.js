@@ -14,6 +14,9 @@ export const lightTheme = {
   fontStyle: {
     italic: 'italic',
   },
+  hero: {
+    headerSpanColor: '#ffcc4c',
+  },
   // fontSize: {
   //   tiny: '1rem',
   //   small: '1.5rem',

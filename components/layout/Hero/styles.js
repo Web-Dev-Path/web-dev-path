@@ -17,14 +17,14 @@ const Header = styled.div`
 `;
 const HeaderContent = styled(Container)`
   z-index: 10;
-  color: ${$white};
+  color: ${({ theme }) => theme.color};
   padding-top: 9%;
 `;
 
 const HeaderContentUpper = styled.div`
   max-width: 41rem;
   span {
-    color: ${$primaryAccentColor};
+    color: ${({ theme}) => theme.hero.headerSpanColor};
     font-style: italic;
     font-weight: bold;
     line-height: 3.5rem;
@@ -52,7 +52,7 @@ const ImageBg = styled(Image)`
   object-position: center;
 `;
 const Title = styled.h1`
-  ${props => (props.$hasAccent ? `color: ${$primaryAccentColor}` : '')}
+  ${props => (props.$hasAccent ? `color: ${({ theme}) => theme.hero.headerSpanColor}` : '')}
 `;
 
 export default {
