@@ -5,7 +5,7 @@ import * as m from '@/styles/_mixins';
 import { $white, $primaryAccentColor } from '@/styles/_variables';
 
 const Header = styled.div`
-  display: flex;
+  display: ${({ theme }) => theme.display};
   flex-direction: column;
   align-items: center;
   position: relative;

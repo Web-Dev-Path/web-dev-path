@@ -1,11 +1,12 @@
 import styled, { css } from 'styled-components';
 import Container from '@/components/containers/Container';
 import * as m from '@/styles/_mixins';
-import { $white, $darkBgColor } from '@/styles/_variables';
+// import { $white, $darkBgColor } from '@/styles/_variables';
 
 const Footer = styled.footer`
-  background-color: ${$darkBgColor};
-  color: ${$white};
+  
+  background-color: ${({ theme }) => theme.background};
+  color: ${({ theme }) => theme.color};
 `;
 
 const Inner = styled(Container)`
@@ -14,7 +15,7 @@ const Inner = styled(Container)`
 
   //media query mixins
   ${m.tablet(css`
-    display: flex;
+    display: ${({ theme }) => theme.display};
     justify-content: space-between;
     align-items: center;
     text-align: left;
@@ -25,7 +26,7 @@ const Logo = styled.a`
   cursor: pointer;
 
   &:hover {
-    opacity: 0.6;
+    opacity: ${({ theme }) => theme.opacity};
   }
 
   //media query mixins
@@ -36,7 +37,7 @@ const Logo = styled.a`
 `;
 
 const NavSocialsContainer = styled.div`
-  display: flex;
+  display: ${({ theme }) => theme.display};
   flex-direction: column;
 `;
 
@@ -57,7 +58,7 @@ const NavList = styled.ul`
 
   //media query mixins
   ${m.tablet(css`
-    display: flex;
+    display: ${({ theme }) => theme.display};
   `)}
 `;
 
@@ -73,7 +74,7 @@ const NavItem = styled.li`
 const SocialIconsContainer = styled.div``;
 
 const SocialList = styled.ul`
-  display: flex;
+  display: ${({ theme }) => theme.display};
   justify-content: center;
   margin: revert;
   padding: 0;
@@ -86,10 +87,10 @@ const SocialList = styled.ul`
 
 const SocialItem = styled.li`
   cursor: pointer;
-  ${m.transition('all 0.3s ease')};
+  ${m.transition(( { theme }) => theme.transition.all)};  
 
   &:hover {
-    opacity: 0.6;
+    opacity: ${({ theme }) => theme.opacity};
   }
 
   //media query mixins

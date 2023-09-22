@@ -1,11 +1,18 @@
 import Layout from '@/components/layout/Layout';
 import '@/styles/globals.scss';
+import { ThemeProvider } from 'styled-components';
+import { lightTheme, GlobalStyles } from 'themeConfig';
 
 function MyApp({ Component, pageProps }) {
+
+
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <ThemeProvider theme={lightTheme}>
+      <GlobalStyles />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </ThemeProvider>
   );
 }
 
