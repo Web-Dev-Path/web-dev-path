@@ -26,7 +26,7 @@ const Logo = styled.a`
   cursor: pointer;
 
   &:hover {
-    opacity: ${({ theme }) => theme.opacity};
+    opacity: 0.6;
   }
 
   //media query mixins
@@ -87,10 +87,10 @@ const SocialList = styled.ul`
 
 const SocialItem = styled.li`
   cursor: pointer;
-  ${m.transition(( { theme }) => theme.transition.all)};  
+  ${m.transition('all 0.3s ease')};  
 
   &:hover {
-    opacity: ${({ theme }) => theme.opacity};
+    opacity: 0.6;
   }
 
   //media query mixins

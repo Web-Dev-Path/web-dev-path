@@ -1,82 +1,86 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const lightTheme = {
-  body: '#FFF',
+  body: {
+    color: '#292929',
+    fontFamily: 'Assistant, sans-serif',
+    margin: '0',
+    padding: '0',
+  },
+  headers: {
+    fontFamily: 'Open Sans',
+    h1: {
+      fontSize: '3rem',
+      lineHeight: '3.5rem',
+      fontSizeDesktop: '4.5rem',
+      lineHeightDesktop: '5rem',
+    },
+    h2: {
+      fontSize: '3rem',
+      lineHeight: '3.5rem',
+      fontSizeDesktop: '3.5rem',
+      lineHeightDesktop: '5rem',
+    },
+    h3: {
+      fontSize: '1.5rem',
+      lineHeight: '1.938rem',
+    },
+  },
+  lists: {},
   text: '#363537',
   background: '#023047',
   color: '#FFF',
   display: 'flex',
-  opacity: '0.6',
-  transition: {
-    opacity: 'opacity 0.3s ease',
-    all: 'all 0.3s ease',
-  },
   fontStyle: {
     italic: 'italic',
   },
   hero: {
     headerSpanColor: '#ffcc4c',
   },
-  // fontSize: {
-  //   tiny: '1rem',
-  //   small: '1.5rem',
-  // },
-  // textAlign: {
-  //   center: 'center',
-  //   left: 'left',
-  //   end: 'end',
-  // },
-  // cursor: 'pointer',
-
-  // justifyContent: {
-  //   spaceBetween: 'space-between',
-  //   center: 'center',
-  //   end: 'end',
-  // },
-  // alignItems: {
-  //   center: 'center',
-  // },
-
-  // maxWidth: {
-  //   maxContent: 'max-content',
-  //   maxWidthFull: '100%',
-  // },
-  // minWidth: {
-  //   medium: '6.5rem',
-  // },
-  // flexDirection: {
-  //   column: 'column',
-  // },
-
-  // order: {
-  //   two: '2',
-  // },
-  // margin: '0',
-  // margin: {
-  //   zero: '0',
-  //   revert: 'revert',
-  // },
-  // padding: {
-    //   zero: '0',
-    // },
-    // paddingTop: {
-    //   medium: '2.5rem',
-    // },
-    // paddingLeft: {
-    //   medium: '28px',
-    //   big: '50px',
-    // },
-    // paddingBottom: {
-    //   medium: '2.5rem',
-    // },
-
 };
-export const GlobalStyles = createGlobalStyle`
-  // body {
-  //   background-color: ${props => props.theme.body};
-  //   color: ${props => props.theme.text};
-  //   font-family: Tahoma, Helvetica, Arial, Roboto, sans-serif;
-  //   transition: all 0.50s linear;
-  // }
 
+// The darkTheme is a theme that we will have on the future
+// for now it's empty
+export const darkTheme = {};
+
+export const GlobalStyles = createGlobalStyle`
+  html,
+  body {
+    font-family: ${props => props.theme.body.fontFamily};
+    color: ${props => props.theme.body.color};
+    margin: ${props => props.theme.body.margin};    
+    padding: ${props => props.theme.body.padding};
+   }
+
+   h1, 
+   h2, 
+   h3, 
+   h4, 
+   h5, 
+   h6 {
+    font-family: ${props => props.theme.headers.fontFamily}; 
+   }
+
+   h1 {
+    font-size: ${props => props.theme.headers.h1.fontSize};
+    line-height: ${props => props.theme.headers.h1.lineHeight};
+    @media (min-width: 1024px) {
+      font-size: ${props => props.theme.headers.h1.fontSizeDesktop};
+      line-height: ${props => props.theme.headers.h1.lineHeightDesktop};
+    }
+   }
+
+   h2 {
+    font-size: ${props => props.theme.headers.h2.fontSize};
+    line-height: ${props => props.theme.headers.h2.lineHeight};
+    @media (min-width: 1024px) {
+      font-size: ${props => props.theme.headers.h2.fontSizeDesktop};
+      line-height: ${props => props.theme.headers.h2.lineHeightDesktop};
+    }
+   }
+
+   h3 {
+    font-size: ${props => props.theme.headers.h3.fontSize};
+    line-height: ${props => props.theme.headers.h3.lineHeight};
+   }
 `;

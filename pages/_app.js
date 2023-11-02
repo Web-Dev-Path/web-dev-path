@@ -1,10 +1,16 @@
 import Layout from '@/components/layout/Layout';
 import '@/styles/globals.scss';
+import { useState } from 'react';
 import { ThemeProvider } from 'styled-components';
-import { lightTheme, GlobalStyles } from 'themeConfig';
+import { lightTheme, darkTheme, GlobalStyles } from 'themeConfig';
 
 function MyApp({ Component, pageProps }) {
-
+  
+  // Only uncomment when the darkTheme is set
+  // const [theme, setTheme] = useState('light');
+  // const toggleTheme = () => {
+  //   theme == 'light' ? setTheme('dark') : setTheme(light);
+  // };
 
   return (
     <ThemeProvider theme={lightTheme}>

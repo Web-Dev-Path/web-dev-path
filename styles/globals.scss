@@ -1,22 +1,22 @@
 @use 'mixins' as *;
 @use 'variables' as *;
 
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: $copy-font, sans-serif;
-  color: $primary-content-color;
-}
+// html,
+// body {
+//   padding: 0;
+//   margin: 0;
+//   font-family: $copy-font, sans-serif;
+//   color: $primary-content-color;
+// }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: $heading-font, sans-serif;
-}
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+//   font-family: $heading-font, sans-serif;
+// }
 
 p,
 li {
@@ -27,28 +27,28 @@ li {
   }
 }
 
-h1 {
-  font-size: 3rem;
-  line-height: 3.5rem;
-  @include desktop {
-    font-size: 4.5rem;
-    line-height: 5rem;
-  }
-}
+// h1 {
+//   font-size: 3rem;
+//   line-height: 3.5rem;
+//   @include desktop {
+//     font-size: 4.5rem;
+//     line-height: 5rem;
+//   }
+// }
 
-h2 {
-  font-size: 3rem;
-  line-height: 3.5rem;
-  @include desktop {
-    font-size: 3.5rem;
-    line-height: 5rem;
-  }
-}
+// h2 {
+//   font-size: 3rem;
+//   line-height: 3.5rem;
+//   @include desktop {
+//     font-size: 3.5rem;
+//     line-height: 5rem;
+//   }
+// }
 
-h3 {
-  font-size: 1.5rem;
-  line-height: 1.938rem;
-}
+// h3 {
+//   font-size: 1.5rem;
+//   line-height: 1.938rem;
+// }
 
 ul {
   list-style: none;
