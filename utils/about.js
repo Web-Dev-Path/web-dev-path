@@ -90,6 +90,16 @@ export const whoWeAre = [
       'Tony is a Software Engineer with a knack for Javascript ecosystems, particularly React and Node.js. His motivation lies in building solutions that make a difference.',
   },
   {
+    image: '/images/igor.webp',
+    name: 'Igor Navega',
+    title: '',
+    position: 'Business Analyst',
+    linkedIn: 'igorjuliassenavega',
+    portfolio: '',
+    about:
+      'Digital Marketing Analyst with a decade of expertise transitioned to Data Analyst. Proud to contribute as a Business Analyst, continually learning and growing.',
+  },
+  {
     image: '/images/jana.webp',
     name: 'Jana Behfarshad',
     title: 'Project Founder',
