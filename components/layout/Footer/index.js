@@ -60,6 +60,7 @@ export default function Footer() {
             src='images/svg/logo-netlify-small-fullcolor-darkmode.svg'
             width={50}
             height={50}
+            alt='Netlify Logo'
           />
         </S.Netlify>
       </S.BottomText>
