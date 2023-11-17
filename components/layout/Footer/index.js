@@ -50,11 +50,20 @@ export default function Footer() {
           </div>
         </S.NavSocialsContainer>
       </S.Inner>
-      <Container>
+      <S.BottomText>
         <S.Copyright>
           © Web Dev Path {new Date().getFullYear()}. All rights reserved.
         </S.Copyright>
-      </Container>
+        <S.Netlify>
+          This site is powered by
+          <Image
+            src='images/svg/logo-netlify-small-fullcolor-darkmode.svg'
+            width={50}
+            height={50}
+            alt='Netlify Logo'
+          />
+        </S.Netlify>
+      </S.BottomText>
     </S.Footer>
   );
 }
