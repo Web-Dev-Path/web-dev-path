@@ -41,5 +41,6 @@
   },
   "resolutions": {
     "styled-components": "^5"
-  }
+  },
+  "license": "GPL-3.0"
 }
