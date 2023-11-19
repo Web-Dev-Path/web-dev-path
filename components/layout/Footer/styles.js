@@ -70,8 +70,6 @@ const NavItem = styled.li`
   `)}
 `;
 
-const SocialIconsContainer = styled.div``;
-
 const SocialList = styled.ul`
   display: flex;
   justify-content: center;
@@ -99,16 +97,31 @@ const SocialItem = styled.li`
   `)}
 `;
 
+const BottomText = styled(Container)`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  ${m.tablet(css`
+    align-items: flex-end;
+  `)}
+`;
+
 const Copyright = styled.p`
   text-align: center;
   margin: 0;
   font-size: 1rem;
-  padding-bottom: 2.5rem;
+  padding-bottom: 1rem;
 
   //media query mixins
   ${m.tablet(css`
     text-align: end;
   `)}
+`;
+
+const Netlify = styled(Copyright)`
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 `;
 
 export default {
@@ -121,5 +134,7 @@ export default {
   NavItem,
   SocialList,
   SocialItem,
+  BottomText,
   Copyright,
+  Netlify,
 };
