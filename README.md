@@ -35,3 +35,7 @@ This is how to get started locally:
 - [Branch out](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging) by following the structure `feature/add-your-branch-name` or `chore/add-your-branch-name` or `fix/add-your-branch-name` and submit your [PR](https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)
 
 <br />
+
+## License
+
+This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details.

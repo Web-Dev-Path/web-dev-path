@@ -114,6 +114,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Added .env.development to .gitignore
 - Added Tony to 'about us'
 - Added Igor to 'about us'
+- Added GPL v3 license
+- Added netlify icon and text to the footer
 
 ### Fixed
 
