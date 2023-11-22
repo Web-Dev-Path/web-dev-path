@@ -39,3 +39,12 @@ This is how to get started locally:
 ## License
 
 This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details.
+
+## Code of Conduct
+
+We are committed to making participation in this project a harassment-free experience for everyone. We have adopted the [Contributor Covenant Code of Conduct](CODE_OF_CONDUCT.md). Please read the full text so you can understand what actions will and will not be tolerated.
+
+### Reporting Issues
+
+If you experience or witness unacceptable behavior, or have any other concerns, please report it [by contacting us](mailto:hello@webdevpath.co).
+
