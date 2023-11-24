@@ -31,10 +31,38 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
+          <meta charset='utf-8' />
+          <meta name='description' content='Level up your tech career.' />
+          <meta name='keywords' content='Web Dev Path' />
+          <meta property='og:title' content='Web Dev Path' />
+          <meta
+            property='og:description'
+            content='Level up your tech career.'
+          />
+          <meta property='og:type' content='website' />
+          <meta property='og:url' content='https://www.webdevpath.co' />
+          <meta
+            property='og:image'
+            content='https://www.webdevpath.co/images/logo.png'
+          />
+          <meta name='twitter:card' content='summary_large_image' />
+          <meta name='twitter:title' content='Web Dev Path' />
+          <meta
+            name='twitter:description'
+            content='Level up your tech career.'
+          />
+          <meta
+            name='twitter:image'
+            content='https://www.webdevpath.co/images/logo.png'
+          />
+          <meta name='twitter:image:alt' content='Web Dev Path' />
+          <meta name='twitter:site' content='@WebDevPath' />
+          <meta name='robots' content='index, follow' />
           <link
             rel='stylesheet'
             href='https://fonts.googleapis.com/css2?family=Assistant:wght@400;700&family=Open+Sans:wght@700&display=swap'
           />
+          <link rel='canonical' href='https://www.webdevpath.co' />
         </Head>
         <body>
           <Main />
