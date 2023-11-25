@@ -62,7 +62,6 @@ class MyDocument extends Document {
             rel='stylesheet'
             href='https://fonts.googleapis.com/css2?family=Assistant:wght@400;700&family=Open+Sans:wght@700&display=swap'
           />
-          <link rel='canonical' href='https://www.webdevpath.co' />
         </Head>
         <body>
           <Main />
