@@ -1,8 +1,11 @@
 import Head from 'next/head';
-import { meta } from '@/utils/meta';
+import pageMeta from '@/utils/meta';
+import { usePathname } from 'next/navigation';
 import Script from 'next/script';
 
 export default function Meta() {
+  const currentPath = usePathname();
+  const meta = currentPath in pageMeta ? pageMeta[currentPath] : pageMeta['/'];
   return (
     <>
       <Head>
@@ -46,7 +49,7 @@ export default function Meta() {
         <meta property='og:image:width' content='1200' />
         <meta property='og:image:height' content='1200' />
         <meta name='robots' content='index, follow' />
-        <link rel='canonical' href='https://www.webdevpath.co' />
+        <link rel='canonical' href={meta.canonical} />
       </Head>
       {/* Google Analytics */}
       <Script
