@@ -118,6 +118,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Added netlify icon and text to the footer
 - Updated robots.txt and added SEO tags
 - Added Code of Conduct
+- Implemented dynamic meta tags for each page
 
 ### Fixed
 
