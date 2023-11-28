@@ -31,7 +31,7 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <meta charset='utf-8' />
+          <meta charSet='utf-8' />
           <meta name='description' content='Level up your tech career.' />
           <meta name='keywords' content='Web Dev Path' />
           <meta property='og:title' content='Web Dev Path' />
