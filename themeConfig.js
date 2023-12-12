@@ -26,7 +26,15 @@ export const lightTheme = {
       lineHeight: '1.938rem',
     },
   },
-  lists: {},
+  lists: {
+    ul: {
+      listStyle: 'none'
+    }
+  },
+  a: { // change the name
+    color: 'inherit',
+    textDecoration: 'none'
+  },
   text: '#363537',
   background: '#023047',
   color: '#FFF',
@@ -51,7 +59,7 @@ export const GlobalStyles = createGlobalStyle`
     margin: ${props => props.theme.body.margin};    
     padding: ${props => props.theme.body.padding};
    }
-
+/* 
    h1, 
    h2, 
    h3, 
@@ -59,6 +67,16 @@ export const GlobalStyles = createGlobalStyle`
    h5, 
    h6 {
     font-family: ${props => props.theme.headers.fontFamily}; 
+   }
+
+   p,
+   li {
+    font-size: 1.25rem;
+    line-height: 1.938rem;
+
+    @media (min-width: 1024) {
+      font-size: 1.5rem;
+   }
    }
 
    h1 {
@@ -83,4 +101,14 @@ export const GlobalStyles = createGlobalStyle`
     font-size: ${props => props.theme.headers.h3.fontSize};
     line-height: ${props => props.theme.headers.h3.lineHeight};
    }
+
+   ul {
+    list-style: ${props => props.theme.lists.ul.listStyle};
+   }
+
+   a {
+    color: ${props => props.theme.a.color};
+    text-decoration: ${props => props.theme.a.textDecoration};
+   } */
+
 `;
