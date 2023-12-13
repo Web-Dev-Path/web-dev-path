@@ -5,20 +5,20 @@ import * as m from '@/styles/_mixins';
 import { $white, $primaryAccentColor } from '@/styles/_variables';
 
 const Header = styled.div`
-  display: ${({ theme }) => theme.display};
-  flex-direction: column;
-  align-items: center;
-  position: relative;
+  display: ${({ theme }) => theme.hero.display};
+  flex-direction: ${({ theme }) => theme.hero.flexDirection};
+  align-items: ${({ theme }) => theme.hero.alignItems};
+  position: ${({ theme }) => theme.hero.position};
 
   //media query mixins
   ${m.desktop(css`
-    min-height: 100vh;
+    min-height: ${({ theme }) => theme.hero.minHeight};
   `)}
 `;
 const HeaderContent = styled(Container)`
-  z-index: 10;
-  color: ${({ theme }) => theme.color};
-  padding-top: 9%;
+  z-index: ${({ theme }) => theme.hero.zIndex};
+  color: ${({ theme }) => theme.hero.color};
+  padding-top: ${({ theme }) => theme.hero.paddingTop};
 `;
 
 const HeaderContentUpper = styled.div`

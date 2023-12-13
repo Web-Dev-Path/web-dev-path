@@ -37,12 +37,28 @@ export const lightTheme = {
   },
   text: '#363537',
   background: '#023047',
-  color: '#FFF',
-  display: 'flex',
   fontStyle: {
     italic: 'italic',
   },
   hero: {
+    header: {
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      position: 'relative',
+      minHeight: '100vh',
+    },
+    headerContent: {
+
+
+    
+
+    zIndex: '10',
+    color: '#FFF',
+    paddingTop: '9%',
+
+
+
     headerSpanColor: '#ffcc4c',
   },
 };
