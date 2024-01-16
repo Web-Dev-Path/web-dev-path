@@ -5,26 +5,26 @@ import * as m from '@/styles/_mixins';
 import { $white, $primaryAccentColor } from '@/styles/_variables';
 
 const Header = styled.div`
-  display: ${({ theme }) => theme.hero.display};
-  flex-direction: ${({ theme }) => theme.hero.flexDirection};
-  align-items: ${({ theme }) => theme.hero.alignItems};
-  position: ${({ theme }) => theme.hero.position};
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
 
   //media query mixins
   ${m.desktop(css`
-    min-height: ${({ theme }) => theme.hero.minHeight};
+    min-height: 100vh;
   `)}
 `;
 const HeaderContent = styled(Container)`
-  z-index: ${({ theme }) => theme.hero.zIndex};
-  color: ${({ theme }) => theme.hero.color};
-  padding-top: ${({ theme }) => theme.hero.paddingTop};
+  z-index: 10;
+  color: ${({ theme }) => theme.colors.white};
+  padding-top: 9%;
 `;
 
 const HeaderContentUpper = styled.div`
   max-width: 41rem;
   span {
-    color: ${({ theme}) => theme.hero.headerSpanColor};
+    color: ${({ theme }) => theme.colors.primaryAccent};
     font-style: italic;
     font-weight: bold;
     line-height: 3.5rem;

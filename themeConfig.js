@@ -1,30 +1,40 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const lightTheme = {
+  breakpoints: {
+    smMobile: '350px',
+    mobile: '578px',
+    lgMobile: '767px',
+    tablet: '768px',
+    desktopMinus: '1023px',
+    desktop: '1024px',
+    desktopPlus: '1025px',
+    mediumDesktop: '1250px',
+    lgDesktop: '1440px',
+    xlDesktop: '2560px',
+  },
+  colors: {
+    primaryContent: '#292929',
+    primaryBg: '#eaeaea',
+    darkBg: '#023047',
+    lightBg: '#8cd5e8',
+    primaryAccent: '#ffcc4c',
+    secondaryAccent: '#19aad1',
+    error: '#be1313',
+    black: '#000000',
+    white: '#ffffff',
+    transparent: 'transparent',
+    boxShadow: '0px 8px 24px rgba(0, 0, 0, 0.15)',
+    boxShadowBottom: '0 10px 20px -5px rgba(0, 0, 0, 0.15)',
+  },
+  fonts: {
+    copy: 'Assistant',
+    heading: 'Open Sans',
+    sansSerif: 'sans-serif',
+  },
   body: {
-    color: '#292929',
-    fontFamily: 'Assistant, sans-serif',
     margin: '0',
     padding: '0',
-  },
-  headers: {
-    fontFamily: 'Open Sans',
-    h1: {
-      fontSize: '3rem',
-      lineHeight: '3.5rem',
-      fontSizeDesktop: '4.5rem',
-      lineHeightDesktop: '5rem',
-    },
-    h2: {
-      fontSize: '3rem',
-      lineHeight: '3.5rem',
-      fontSizeDesktop: '3.5rem',
-      lineHeightDesktop: '5rem',
-    },
-    h3: {
-      fontSize: '1.5rem',
-      lineHeight: '1.938rem',
-    },
   },
   lists: {
     ul: {
@@ -40,28 +50,7 @@ export const lightTheme = {
   fontStyle: {
     italic: 'italic',
   },
-  hero: {
-    header: {
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      position: 'relative',
-      minHeight: '100vh',
-    },
-    headerContent: {
-
-
-    
-
-    zIndex: '10',
-    color: '#FFF',
-    paddingTop: '9%',
-
-
-
-    headerSpanColor: '#ffcc4c',
-  },
-};
+}
 
 // The darkTheme is a theme that we will have on the future
 // for now it's empty
@@ -70,61 +59,34 @@ export const darkTheme = {};
 export const GlobalStyles = createGlobalStyle`
   html,
   body {
-    font-family: ${props => props.theme.body.fontFamily};
-    color: ${props => props.theme.body.color};
-    margin: ${props => props.theme.body.margin};    
-    padding: ${props => props.theme.body.padding};
+    font-family: ${({ theme }) => theme.fonts.copy};
+    color: ${({ theme }) => theme.colors.primaryContent};
    }
-/* 
-   h1, 
-   h2, 
-   h3, 
-   h4, 
-   h5, 
-   h6 {
-    font-family: ${props => props.theme.headers.fontFamily}; 
+   
+ 
+   h1, h2, h3, h4, h5, h6 {
+    font-family: ${({ theme }) => `${theme.fonts.heading}, ${theme.fonts.sansSerif}`}; 
    }
+   
 
-   p,
-   li {
-    font-size: 1.25rem;
-    line-height: 1.938rem;
-
-    @media (min-width: 1024) {
+   p, li {
+    @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
       font-size: 1.5rem;
-   }
+    }
    }
 
    h1 {
-    font-size: ${props => props.theme.headers.h1.fontSize};
-    line-height: ${props => props.theme.headers.h1.lineHeight};
-    @media (min-width: 1024px) {
-      font-size: ${props => props.theme.headers.h1.fontSizeDesktop};
-      line-height: ${props => props.theme.headers.h1.lineHeightDesktop};
+    @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
+      font-size: 4.5rem;
+      line-height: 5rem;
     }
-   }
+  }
 
-   h2 {
-    font-size: ${props => props.theme.headers.h2.fontSize};
-    line-height: ${props => props.theme.headers.h2.lineHeight};
-    @media (min-width: 1024px) {
-      font-size: ${props => props.theme.headers.h2.fontSizeDesktop};
-      line-height: ${props => props.theme.headers.h2.lineHeightDesktop};
+  h2 {
+    @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
+      font-size: 3.5rem;
+      line-height: 5rem;
     }
-   }
+  }
 
-   h3 {
-    font-size: ${props => props.theme.headers.h3.fontSize};
-    line-height: ${props => props.theme.headers.h3.lineHeight};
-   }
-
-   ul {
-    list-style: ${props => props.theme.lists.ul.listStyle};
-   }
-
-   a {
-    color: ${props => props.theme.a.color};
-    text-decoration: ${props => props.theme.a.textDecoration};
-   } */
-
-`;
+   `;
