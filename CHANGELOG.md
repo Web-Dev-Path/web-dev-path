@@ -130,3 +130,4 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Fixed Who We Are section on mobile.
 - Allow `BlogPostsContainer` display a dynamic number of cards per row with swipe functionality
 - Fixed search funcitionality on blog page
+- Fixed dev.to images not showing due to them changing image host
