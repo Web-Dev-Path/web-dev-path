@@ -22,6 +22,10 @@ module.exports = withPWA({
         protocol: 'https',
         hostname: 'res.cloudinary.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'media.dev.to',
+      },
     ],
   },
 });
