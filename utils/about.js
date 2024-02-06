@@ -100,6 +100,16 @@ export const whoWeAre = [
       'Digital Marketing Analyst with a decade of expertise transitioned to Data Analyst. Proud to contribute as a Business Analyst, continually learning and growing.',
   },
   {
+    image: '/images/kaz.webp',
+    name: 'Kaz Smino',
+    title: '',
+    position: 'Full Stack Developer',
+    linkedIn: 'kaz-smino',
+    portfolio: '',
+    about:
+      "Kaz is a dedicated Full Stack Developer with a keen interest in Test-Driven Development (TDD) and automated testing. He thrives on learning and expanding his skill set, particularly in areas that enhance code quality and efficiency. He values teamwork and enjoys the synergy of working alongside other passionate developers."
+  },
+  {
     image: '/images/jana.webp',
     name: 'Jana Behfarshad',
     title: 'Project Founder',
