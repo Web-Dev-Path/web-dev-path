@@ -10,10 +10,11 @@ const Header = styled.div`
   align-items: center;
   position: relative;
 
-  //media query mixins
-  ${m.desktop(css`
-    min-height: 100vh;
-  `)}
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.desktop}) {
+      min-height: 100vh;
+    }
+  `}
 `;
 const HeaderContent = styled(Container)`
   z-index: 10;
@@ -30,10 +31,12 @@ const HeaderContentUpper = styled.div`
     line-height: 3.5rem;
 
     //media query mixins
-    ${m.desktop(css`
-      font-size: 4.5rem;
-      line-height: 5rem;
-    `)}
+    ${props => css`
+      @media (min-width: ${props.theme.breakpoints.desktop}) {
+        font-size: 4.5rem;
+        line-height: 5rem;
+      }
+    `}
   }
 `;
 
@@ -42,9 +45,11 @@ const HeaderContentBottom = styled.div`
   padding-bottom: 5rem;
 
   //media query mixins
-  ${m.desktop(css`
-    padding-bottom: 0;
-  `)}
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.desktop}) {
+      padding-bottom: 0;
+    }
+  `}
 `;
 
 const ImageBg = styled(Image)`

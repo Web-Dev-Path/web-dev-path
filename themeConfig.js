@@ -59,7 +59,7 @@ export const darkTheme = {};
 export const GlobalStyles = createGlobalStyle`
   html,
   body {
-    font-family: ${({ theme }) => theme.fonts.copy};
+    font-family: ${({ theme }) =>`${theme.fonts.copy}, ${theme.fonts.sansSerif}`}; ;
     color: ${({ theme }) => theme.colors.primaryContent};
    }
    
