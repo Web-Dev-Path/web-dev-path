@@ -1,18 +1,9 @@
 import styled, { css } from 'styled-components';
 import * as m from '@/styles/_mixins';
-import {
-  $white,
-  $transparent,
-  $darkBgColor,
-  $primaryContentColor,
-  $boxShadow,
-  $boxShadowBottom,
-  $lgDesktopBreakpoint,
-} from '@/styles/_variables';
 
 const Header = styled.header`
-  color: ${$white};
-  background-color: ${$transparent};
+  color: ${({ theme }) => theme.colors.white};
+  background-color: ${({ theme }) => theme.colors.transparent};
   width: 100%;
   display: flex;
   align-items: center;
@@ -20,10 +11,11 @@ const Header = styled.header`
   height: 4.5rem;
   z-index: 100;
 
-  //media query mixins
-  ${m.desktop(css`
-    height: auto;
-  `)}
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.desktop}) {
+      height: auto;
+    }
+  `}
 `;
 
 const NavWrapper = styled.div`
@@ -32,7 +24,7 @@ const NavWrapper = styled.div`
 `;
 
 const NavWrapperSticky = css`
-  background-color: ${$white};
+  background-color: ${({ theme }) => theme.colors.white};
   width: 100%;
   display: flex;
   justify-content: center;
@@ -41,7 +33,7 @@ const NavWrapperSticky = css`
   left: 0;
   z-index: 100;
   height: 4.5rem;
-  box-shadow: ${$boxShadow};
+  box-shadow: ${({ theme }) => theme.colors.$boxShadow};
 `;
 
 const Nav = styled.nav`
@@ -55,12 +47,12 @@ const Nav = styled.nav`
 
 const NavSticky = css`
   width: 90%;
-  max-width: ${$lgDesktopBreakpoint};
+  max-width: ${({ theme }) => theme.breakpoints.lgDesktop};
 `;
 
 const Button = styled.a`
-  color: ${$darkBgColor};
-  background-color: ${$white};
+  color: ${({ theme }) => theme.colors.darkBg};
+  background-color: ${({ theme }) => theme.colors.white};
   min-width: 9rem;
   padding: 0.5rem 2rem;
   border-radius: 2rem;
@@ -69,33 +61,35 @@ const Button = styled.a`
   font-size: 1.2rem;
   text-align: center;
   display: inline-block;
-  border: 1px solid ${$transparent};
-  ${m.transition('all 0.3s ease')};
+  border: 1px solid ${({ theme }) => theme.colors.transparent};
+  transition: all 0.3s ease; // is it the same as m.transition?
+  /* ${m.transition('all 0.3s ease')}; */
 
   &:hover {
     text-decoration: none;
-    color: ${$white};
-    background-color: ${$transparent};
-    border: 1px solid ${$white};
+    color: ${({ theme }) => theme.colors.white};
+    background-color: ${({ theme }) => theme.colors.transparent};
+    border: 1px solid ${({ theme }) => theme.colors.white};
   }
 
-  //media query mixins
-  ${m.desktop(css`
-    font-size: 1.5rem;
-    ${props => (props.$isSticky ? 'font-size: 1.2rem;' : '')}
-  `)}
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.desktop}) {
+      font-size: 1.5rem;
+      ${props => (props.$isSticky ? 'font-size: 1.2rem;' : '')}
+    }
+  `}
 
   &.active {
-    color: ${$white};
-    background-color: ${$darkBgColor};
+    color: ${({ theme }) => theme.colors.white};
+    background-color: ${({ theme }) => theme.colors.darkBg};
     padding: 0.25rem 1rem;
     min-width: 7rem;
     font-size: 1.2rem;
 
     &:hover {
-      color: ${$darkBgColor};
-      background-color: ${$transparent};
-      border: 1px solid ${$darkBgColor};
+      color: ${({ theme }) => theme.colors.darkBg};
+      background-color: ${({ theme }) => theme.colors.transparent};
+      border: 1px solid ${({ theme }) => theme.colors.darkBg};
     }
   }
 
@@ -104,32 +98,34 @@ const Button = styled.a`
 `;
 
 const ButtonSticky = css`
-  background-color: ${$darkBgColor};
-  color: ${$white};
+  background-color: ${({ theme }) => theme.colors.darkBg};
+  color: ${({ theme }) => theme.colors.white};
   padding: 0.25rem 1rem;
   min-width: 7rem;
   font-size: 1.2rem;
 
   &:hover {
-    color: ${$darkBgColor};
-    background-color: ${$transparent};
-    border: 1px solid ${$darkBgColor};
+    color: ${({ theme }) => theme.colors.darkBg};
+    background-color: ${({ theme }) => theme.colors.transparent};
+    border: 1px solid ${({ theme }) => theme.colors.darkBg};
   }
 `;
 
 const Logo = styled.img`
   width: 4.5rem;
-  ${m.transition('opacity 0.3s ease')};
+  // How can I change it to use the variables from themeConfig?
+  ${m.transition('opacity 0.3s ease')}
   cursor: pointer;
 
   &:hover {
     opacity: 0.6;
   }
 
-  //media query mixins
-  ${m.desktop(css`
-    width: 11.25rem;
-  `)}
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.desktop}) {
+      width: 11.25rem;
+    }
+  `}
 
   //check props for sticky behavior
   ${props => (props.$isSticky ? LogoSticky : '')}
@@ -147,14 +143,15 @@ const Links = styled.ul`
   position: relative;
   top: 4.5rem;
 
-  //media query mixins
-  ${m.desktop(css`
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    position: static;
-    padding: 0;
-  `)}
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.desktop}) {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      position: static;
+      padding: 0;
+    }
+  `}
 
   &.active {
     display: flex;
@@ -163,17 +160,17 @@ const Links = styled.ul`
     width: 100%;
     position: absolute;
     left: 0;
-    background-color: ${$white};
-    color: ${$primaryContentColor};
-    box-shadow: ${$boxShadowBottom};
+    background-color: ${({ theme }) => theme.colors.white};
+    color: ${({ theme }) => theme.colors.primaryContent};
+    box-shadow: ${({ theme }) => theme.colors.boxShadowBottom};
 
     //media query mixins
     ${m.desktop(css`
       flex-direction: row;
       position: static;
       width: auto;
-      background-color: ${$darkBgColor};
-      color: ${$white};
+      background-color: ${({ theme }) => theme.colors.darkBg};
+      color: ${({ theme }) => theme.colors.white};
       box-shadow: none;
     `)}
   }
@@ -183,11 +180,12 @@ const Links = styled.ul`
 `;
 
 const LinksSticky = css`
-  //media query mixins
-  ${m.desktop(css`
-    background-color: ${$white};
-    color: ${$primaryContentColor};
-  `)}
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.desktop}) {
+      background-color: ${({ theme }) => theme.colors.white};
+      color: ${({ theme }) => theme.colors.primaryContent};
+    }
+  `}
 `;
 
 const Link = styled.a`
@@ -217,17 +215,21 @@ const Link = styled.a`
   }
 
   //media query mixins
-  ${m.largeDesktop(css`
-    font-size: 1.5rem;
-  `)}
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.lgDesktop}) {
+      font-size: 1.5rem;
+    }
+  `}
 `;
 
 const Item = styled.li`
   //media query mixins
-  ${m.desktop(css`
-    display: inline-block;
-    margin-left: 6rem;
-  `)}
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.desktop}) {
+      display: inline-block;
+      margin-left: 6rem;
+    }
+  `}
 `;
 
 const Hamburger = styled.button`
@@ -236,10 +238,11 @@ const Hamburger = styled.button`
   background: none;
   border: none;
 
-  //media query mixins
-  ${m.desktop(css`
-    display: none;
-  `)}
+  ${props => css`
+      @media (min-width: ${props.theme.breakpoints.desktop}) {
+        display: none;
+      }
+    `}
 
   &.active span:nth-child(2) {
     opacity: 0;
@@ -258,14 +261,14 @@ const HamburgerBar = styled.span`
   height: 2px;
   margin: 5px auto;
   ${m.transition('opacity 0.3s ease')};
-  background-color: ${$white};
+  background-color: ${({ theme }) => theme.colors.white};
 
   //check props for sticky behavior
   ${props => (props.$isSticky ? HamburgerBarSticky : '')}
 `;
 
 const HamburgerBarSticky = css`
-  background-color: ${$primaryContentColor};
+  background-color: ${({ theme }) => theme.colors.primaryContent};
 `;
 
 export default {

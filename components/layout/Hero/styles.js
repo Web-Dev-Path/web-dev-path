@@ -1,8 +1,6 @@
 import styled, { css } from 'styled-components';
 import Container from '@/components/containers/Container';
 import Image from 'next/image';
-import * as m from '@/styles/_mixins';
-import { $white, $primaryAccentColor } from '@/styles/_variables';
 
 const Header = styled.div`
   display: flex;
@@ -30,7 +28,7 @@ const HeaderContentUpper = styled.div`
     font-weight: bold;
     line-height: 3.5rem;
 
-    //media query mixins
+
     ${props => css`
       @media (min-width: ${props.theme.breakpoints.desktop}) {
         font-size: 4.5rem;
@@ -44,7 +42,7 @@ const HeaderContentBottom = styled.div`
   max-width: 19rem;
   padding-bottom: 5rem;
 
-  //media query mixins
+  
   ${props => css`
     @media (min-width: ${props.theme.breakpoints.desktop}) {
       padding-bottom: 0;
