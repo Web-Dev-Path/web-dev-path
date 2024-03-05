@@ -1,56 +1,54 @@
 import styled, { css } from 'styled-components';
-import * as m from '@/styles/_mixins';
-import {
-  $transparent,
-  $headingFont,
-  $primaryContentColor,
-} from '@/styles/_variables';
 
 const Card = styled.div`
   margin: 1rem 1rem 0 0.5rem;
   padding: 1rem;
   border-radius: 1.5rem;
   min-height: 35rem;
-  background-color: ${$transparent};
+  background-color: ${({ theme }) => theme.colors.transparent};
   display: flex;
   justify-content: left;
   flex-direction: column;
   width: 100%;
 
-  //media query mixins
-  ${m.tablet(css`
-    height: 30rem;
-    width: 40%;
-  `)}
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.tablet}) {
+      height: 30rem;
+      width: 40%;
+    }
+  `}
 
-  ${m.mediumDesktop(css`
-    min-width: 20%;
-    max-width: 20%;
-    margin: 1.5rem;
-  `)}
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.mediumDesktop}) {
+      min-width: 20%;
+      max-width: 20%;
+      margin: 1.5rem;
+    }
+  `}
 `;
 
 const Name = styled.h2`
   font-style: italic;
-  font-family: ${$headingFont};
+  font-family: ${({ theme }) => theme.fonts.heading};
   font-size: 1.5rem !important;
-  color: ${$primaryContentColor};
+  color: ${({ theme }) => theme.colors.primaryContent};
   margin-bottom: 0px;
   line-height: unset;
 `;
 
 const H3 = styled.h3`
-  font-family: ${$headingFont};
+  font-family: ${({ theme }) => theme.fonts.heading};
   font-size: 1rem !important;
-  color: ${$primaryContentColor};
+  color:${({ theme }) => theme.colors.primaryContent};
   text-align: left;
   line-height: normal;
   margin: 0px !important;
 
-  //media query mixins
-  ${m.tablet(css`
-    font-size: 2rem;
-  `)}
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.tablet}) {
+      font-size: 2rem;
+    }
+  `}
 `;
 const Title = styled(H3)``;
 const Position = styled(H3)``;

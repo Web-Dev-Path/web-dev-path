@@ -9,7 +9,7 @@ const Wrapper = styled.div`
 `;
 
 const PrimaryAccent = css`
-  background-color: ${$primaryAccentColor};
+  background-color: ${({ theme }) => theme.colors.primaryAccent};
 `;
 
 export default { Wrapper };

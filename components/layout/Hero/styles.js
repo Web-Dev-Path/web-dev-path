@@ -55,7 +55,7 @@ const ImageBg = styled(Image)`
   object-position: center;
 `;
 const Title = styled.h1`
-  ${props => (props.$hasAccent ? `color: ${({ theme}) => theme.hero.headerSpanColor}` : '')}
+  color: ${props => props.$hasAccent ? ({ theme }) => theme.colors.primaryAccent : 'inherit'};
 `;
 
 export default {
