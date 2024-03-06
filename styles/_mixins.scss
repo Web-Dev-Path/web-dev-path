@@ -1,0 +1,58 @@
+//Mixins
+@use './variables' as *;
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+@mixin tablet {
+  @media (min-width: $tablet-breakpoint) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop-breakpoint) {
+    @content;
+  }
+}
+
+@mixin desktop-breakpoint-plus {
+  @media (min-width: $desktop-breakpoint-plus) {
+    @content;
+  }
+}
+
+@mixin medium-desktop {
+  @media (min-width: $medium-desktop-breakpoint) {
+    @content;
+  }
+}
+
+@mixin large-desktop {
+  @media (min-width: $large-desktop-breakpoint) {
+    @content;
+  }
+}
+
+@mixin desktop-breakpoint-minus {
+  @media (max-width: $desktop-breakpoint-minus) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $lg-mobile-breakpoint) {
+    @content;
+  }
+}
+
+@mixin small-mobile {
+  @media (max-width: $sm-mobile-breakpoint) {
+    @content;
+  }
+}
