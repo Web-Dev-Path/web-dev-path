@@ -80,6 +80,36 @@ export const whoWeAre = [
       'Lucas is a Full-Stack developer who loves learning about new technologies and helping others. He also loves the power of data, how it can be used to solve real problems, and is always learning about AI/ML.',
   },
   {
+    image: '/images/tony.webp',
+    name: 'Tony Kieling',
+    title: '',
+    position: 'Full-stack Developer',
+    linkedIn: 'tony-kieling',
+    portfolio: 'tkwebdev.ca',
+    about:
+      'Tony is a Software Engineer with a knack for Javascript ecosystems, particularly React and Node.js. His motivation lies in building solutions that make a difference.',
+  },
+  {
+    image: '/images/igor.webp',
+    name: 'Igor Navega',
+    title: '',
+    position: 'Business Analyst',
+    linkedIn: 'igorjuliassenavega',
+    portfolio: '',
+    about:
+      'Digital Marketing Analyst with a decade of expertise transitioned to Data Analyst. Proud to contribute as a Business Analyst, continually learning and growing.',
+  },
+  {
+    image: '/images/kaz.webp',
+    name: 'Kaz Smino',
+    title: '',
+    position: 'Full Stack Developer',
+    linkedIn: 'kaz-smino',
+    portfolio: '',
+    about:
+      "Kaz is a dedicated Full Stack Developer with a keen interest in Test-Driven Development (TDD) and automated testing. He thrives on learning and expanding his skill set, particularly in areas that enhance code quality and efficiency. He values teamwork and enjoys the synergy of working alongside other passionate developers."
+  },
+  {
     image: '/images/jana.webp',
     name: 'Jana Behfarshad',
     title: 'Project Founder',

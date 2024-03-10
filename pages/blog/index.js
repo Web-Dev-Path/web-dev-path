@@ -3,7 +3,6 @@ import BlogPostsContainer from '@/components/blog/BlogPostsContainer';
 import Container from '@/components/containers/Container';
 import SearchBar from '@/components/blog/SearchBar';
 import Title from '@/components/snippets/Title';
-// import styles from '@/styles/Blog.module.scss';
 import { BlogSearch } from '@/components/snippets/BlogSearch';
 import { blogRevalidate } from '@/utils/config';
 import { tagToHeading } from '@/utils/blogCategories';
@@ -12,19 +11,18 @@ import { blogSearch } from '@/utils/search';
 export default function Blog({ posts }) {
   const [searchTerm, setSearchTerm] = useState('');
 
-  const filteredData = {
-    posts: posts.slice(0, 3),
-  };
+  let filteredPosts = posts;
+  let heading;
 
   if (searchTerm) {
-    const filteredPosts = blogSearch(posts, searchTerm);
-    filteredData.posts = filteredPosts;
-    filteredData.heading = `${
+    filteredPosts = blogSearch(posts, searchTerm);
+
+    heading = `${
       filteredPosts.length === 0 ? 'no' : filteredPosts.length
     } search ${
       filteredPosts.length > 1 ? 'results' : 'result'
     } for '${searchTerm}'`;
-    filteredData.viewall = false;
+    filteredPosts.viewall = false;
   }
 
   return (
@@ -36,7 +34,7 @@ export default function Blog({ posts }) {
         </BlogSearch>
       </Container>
 
-      <BlogPostsContainer {...filteredData} />
+      <BlogPostsContainer posts={filteredPosts} heading={heading}/>
       {!searchTerm &&
         Object.keys(tagToHeading).map(tag => (
           <BlogPostsContainer

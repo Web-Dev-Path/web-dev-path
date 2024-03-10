@@ -110,6 +110,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Updated contents in home,about, and contact.
 - Added Satoshi to 'about us'
 - Added Lucas to 'about us'
+- Added Success Stories Section to the blog page.
+- Added .env.development to .gitignore
+- Added Tony to 'about us'
+- Added Igor to 'about us'
+- Added GPL v3 license
+- Added netlify icon and text to the footer
+- Updated robots.txt and added SEO tags
+- Added Code of Conduct
+- Implemented dynamic meta tags for each page
+- Added Kaz to 'about us'
 - Added theming to the project
 
 ### Fixed
@@ -118,3 +128,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Lower the file names of GitHub.svg, LikedIn.svg, and YouTube.svg.
 - Fixed Google Analytics 4 Integration
 - Fixed CHANGELOG.md inconsistency
+- Contact and Subscribe forms are saving Name on Mailchimp
+- Fixed Who We Are section on mobile.
+- Allow `BlogPostsContainer` display a dynamic number of cards per row with swipe functionality
+- Fixed search funcitionality on blog page
+- Fixed dev.to images not showing due to them changing image host

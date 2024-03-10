@@ -1,50 +1,41 @@
-import { createRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { decode } from 'html-entities';
-import ReCAPTCHA from 'react-google-recaptcha';
 import { NewsLetterSubmitButton } from '@/components/buttons/SubmitButton';
 import S from './styles';
 
-const SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
-
-const NewsletterForm = ({ status, message, onValidated }) => {
+const NewsletterForm = ({ status, message, subscribe, getReCaptchaToken }) => {
   const [error, setError] = useState(null);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const recaptchaRef = createRef();
+  const [reCaptchaFail, setReCaptchaFail] = useState(false);
 
-  const onReCAPTCHAChange = async captchaCode => {
+  useEffect(() => {
+    if (status === 'success') {
+      setName('');
+      setEmail('');
+    }
+  }, [status]);
+
+  const validateReCaptcha = async () => {
     // If the reCAPTCHA code is null or undefined indicating that
     // the reCAPTCHA was expired then return early
-    if (!captchaCode) {
-      return;
-    }
+    const gReCaptchaToken = await getReCaptchaToken();
+    if (!gReCaptchaToken) return false;
+
     try {
-      const response = await fetch('/api/register', {
+      const response = await fetch('/api/validateReCaptcha', {
         method: 'POST',
-        body: JSON.stringify({ email, name, captcha: captchaCode }),
+        body: JSON.stringify({ email, name, gReCaptchaToken }),
         headers: {
           'Content-Type': 'application/json',
         },
       });
-      if (response.ok) {
-        // If the response is ok than show the success console.log
-        console.log('Email registered successfully');
-      } else {
-        // Else throw an error with the message returned
-        const error = await response.json();
-        throw new Error(error.message);
-      }
+
+      return response.ok ? true : false;
     } catch (error) {
       console.log(error?.message || 'Something went wrong');
-    } finally {
-      // Reset the reCAPTCHA when the request has failed or succeeded
-      if (recaptchaRef?.current) {
-        recaptchaRef.current.reset();
-      }
-
-      setEmail('');
-      setName('');
+      return false;
     }
   };
 
@@ -53,9 +44,10 @@ const NewsletterForm = ({ status, message, onValidated }) => {
    *
    * @return {{value}|*|boolean|null}
    */
-  const handleFormSubmit = event => {
+  const handleFormSubmit = async event => {
     event.preventDefault();
 
+    setReCaptchaFail(false);
     setError(null);
 
     if (!name) {
@@ -68,14 +60,18 @@ const NewsletterForm = ({ status, message, onValidated }) => {
       return null;
     }
 
-    recaptchaRef.current.execute();
+    const confirmValidateRecaptcha = await validateReCaptcha();
+    if (!confirmValidateRecaptcha) {
+      setReCaptchaFail(true);
+    } else {
+      subscribe({
+        EMAIL: email,
+        MERGE1: name,
+      });
 
-    const isFormValidated = onValidated({ EMAIL: email });
-
-    event.target.reset();
-
-    // On success return true
-    return name && email && email.indexOf('@') > -1 && isFormValidated;
+      event.target.reset();
+      setReCaptchaFail(false);
+    }
   };
 
   /**
@@ -144,16 +140,15 @@ const NewsletterForm = ({ status, message, onValidated }) => {
               onKeyUp={event => handleInputKeyEvent(event)}
             />
             <NewsLetterSubmitButton label='Subscribe' />
-
-            <ReCAPTCHA
-              ref={recaptchaRef}
-              size='invisible'
-              sitekey={SITE_KEY}
-              onChange={onReCAPTCHAChange}
-            />
           </S.Form>
 
           <S.FormInfo>
+            {reCaptchaFail && (
+              <S.FormSending>
+                Please, refresh your screen and try it again.
+              </S.FormSending>
+            )}
+
             {status === 'sending' && <S.FormSending>Sending...</S.FormSending>}
             {status === 'error' || error ? (
               <S.FormError

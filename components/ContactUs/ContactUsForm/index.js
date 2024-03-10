@@ -1,39 +1,10 @@
 import { useForm } from 'react-hook-form';
-import { useRef } from 'react';
-import MailchimpSubscribe from 'react-mailchimp-subscribe';
-import ReCAPTCHA from 'react-google-recaptcha';
 import Container from '@/components/containers/Container';
 import RevealContentContainer from '@/components/containers/RevealContentContainer';
 import { SubmitButton } from '@/components/buttons/SubmitButton';
 import S from './styles';
 
-export const ContactUsFormSubscribe = ({ setMsg }) => {
-  return (
-    <MailchimpSubscribe
-      url={process.env.NEXT_PUBLIC_MAILCHIMP_URL}
-      render={({ subscribe, status, message }) => {
-        console.info(`MailChimp (contact form): ${status} - ${message}`);
-        return (
-          <>
-            <ContactUsForm
-              subscribe={formData => subscribe(formData)}
-              setResponseMessage={setMsg}
-            />
-            {status === 'error' && (
-              <S.ResponseOnErrorMsg>
-                {`Newsletter subscription error: ${message}`}
-              </S.ResponseOnErrorMsg>
-            )}
-          </>
-        );
-      }}
-    />
-  );
-};
-
-function ContactUsForm({ subscribe, setResponseMessage }) {
-  const contactReCaptchaRef = useRef();
-
+function ContactUsForm({ subscribe, setResponseMessage, getReCaptchaToken }) {
   const {
     register,
     handleSubmit,
@@ -51,10 +22,14 @@ function ContactUsForm({ subscribe, setResponseMessage }) {
   async function onSubmit(data) {
     setResponseMessage(['Submitting...']);
 
-    contactReCaptchaRef.current.reset();
-    const gReCaptchaToken = await contactReCaptchaRef.current.executeAsync();
+    const gReCaptchaToken = await getReCaptchaToken();
 
-    const res = await fetch('/api/contact', {
+    if (!gReCaptchaToken) {
+      setResponseMessage(['Please, refresh your screen and try it again.']);
+      return;
+    }
+
+    const res = await fetch('/api/validateReCaptcha', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -83,7 +58,10 @@ function ContactUsForm({ subscribe, setResponseMessage }) {
     }
 
     if (data.Subscribe) {
-      subscribe({ EMAIL: data.Email });
+      subscribe({
+        EMAIL: data.Email,
+        MERGE1: data.Name,
+      });
     }
     reset();
   }
@@ -167,14 +145,10 @@ function ContactUsForm({ subscribe, setResponseMessage }) {
             Subscribe to our DevNews!
           </S.SubscribeWrapper>
           <SubmitButton label='Submit' disabled={isSubmitting} />
-
-          <ReCAPTCHA
-            ref={contactReCaptchaRef}
-            size='invisible'
-            sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
-          />
         </S.Form>
       </Container>
     </RevealContentContainer>
   );
 }
+
+export default ContactUsForm;
