@@ -70,7 +70,7 @@ const NavItem = styled.li`
 
   ${props => css`
     @media (min-width: ${props.theme.breakpoints.tablet}) {
-      padding-left: 50px;
+      padding-left: 3.125rem;
     }
   `}
 `;
@@ -90,7 +90,7 @@ const SocialList = styled.ul`
 
 const SocialItem = styled.li`
   cursor: pointer;
-  transition: all 0.3s ease; // is it the same as the transition mixin?  
+  transition: all 0.3s ease;  
 
   &:hover {
     opacity: 0.6;
@@ -98,7 +98,7 @@ const SocialItem = styled.li`
 
   ${props => css`
     @media (min-width: ${props.theme.breakpoints.tablet}) {
-      padding-left: 28px;
+      padding-left: 1.75rem;
       max-width: 100%;
     }
   `}
@@ -108,9 +108,11 @@ const BottomText = styled(Container)`
   display: flex;
   flex-direction: column;
   align-items: center;
-  ${m.tablet(css`
-    align-items: flex-end;
-  `)}
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.tablet}) {
+      align-items: flex-end;
+    }
+  `}
 `;
 
 const Copyright = styled.p`

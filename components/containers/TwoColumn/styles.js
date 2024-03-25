@@ -106,7 +106,7 @@ const OurProcessInnerImageWrapper = styled(InnerImageWrapper)`
 
   ${props => css`
     @media (min-width: ${props.theme.breakpoints.desktop}) {
-      eight: 12rem;
+      height: 12rem;
     }
   `}
 `;
