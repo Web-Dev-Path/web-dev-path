@@ -1,6 +1,5 @@
 import styled, { css } from 'styled-components';
 import Link from 'next/link';
-import * as m from '@/styles/_mixins';
 
 const BlogContainer = styled.div`
   display: flex;
@@ -14,33 +13,40 @@ const PostContainer = styled.div`
   justify-content: center;
   margin-bottom: 3rem;
 
-  //media query mixins
-  ${m.tablet(css`
-    justify-content: flex-start;
-  `)}
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.tablet}) {
+      justify-content: flex-start;
+    }
+  `}
 
   & > div {
-    //media query mixins
-    ${m.desktop(css`
-      flex-basis: 48%;
-    `)}
+    ${props => css`
+      @media (min-width: ${props.theme.breakpoints.desktop}) {
+        flex-basis: 48%;
+      }
+    `}
 
     //media query mixins
-    ${m.largeDesktop(css`
-      flex-basis: 32%;
-    `)}
+    ${props => css`
+      @media (min-width: ${props.theme.breakpoints.lgDesktop}) {
+        miflex-basis: 32%;
+      }
+    `}
   }
 
   &::after {
-    //media query mixins
-    ${m.tablet(css`
-      content: '';
-      flex: auto;
-    `)}
+    ${props => css`
+      @media (min-width: ${props.theme.breakpoints.tablet}) {
+        content: '';
+        flex: auto;
+      }
+    `}
 
-    ${m.desktop(css`
-      content: unset;
-    `)}
+    ${props => css`
+      @media (min-width: ${props.theme.breakpoints.desktop}) {
+        content: unset;
+      }
+    `}
   }
 `;
 
@@ -55,21 +61,23 @@ const BottomLink = styled(Link)`
 const ViewAllBottomLink = styled(BottomLink)`
   top: -3rem;
 
-  //media query mixins
-  ${m.desktop(css`
-    float: right;
-    top: -5rem;
-  `)}
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.desktop}) {
+      float: right;
+      top: -5rem;
+    }
+  `}
 `;
 
 const BackBottomLink = styled(BottomLink)`
   top: -2rem;
 
-  //media query mixins
-  ${m.desktop(css`
-    float: left;
-    top: -1rem;
-  `)}
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.desktop}) {
+      float: left;
+      top: -1rem;
+    }
+  `}
 `;
 
 export default {

@@ -1,6 +1,4 @@
 import styled, { css } from 'styled-components';
-import * as m from '@/styles/_mixins';
-import { $transparent } from '@/styles/_variables';
 
 const SearchBar = styled.div`
   display: flex;
@@ -13,11 +11,12 @@ const SearchBar = styled.div`
   width: 100%;
   margin-top: 3rem;
 
-  //media query mixins
-  ${m.desktop(css`
-    width: 24rem;
-    margin: unset;
-  `)}
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.desktop}) {
+      width: 24rem;
+      margin: unset;
+    }
+  `}
 `;
 
 const SearchInput = styled.input`
@@ -31,7 +30,7 @@ const SubmitButton = styled.button`
   text-indent: -999px;
   overflow: hidden;
   width: 1.5rem;
-  border: 1px solid ${$transparent};
+  border: 1px solid ${({ theme }) => theme.colors.transparent};
   background: url('/images/svg/search.svg');
   background-size: cover;
   background-repeat: no-repeat;

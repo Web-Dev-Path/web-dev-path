@@ -5,10 +5,11 @@ const Row = styled.div`
   display: flex;
   flex-wrap: wrap;
 
-  //media query mixins
-  ${m.desktopBreakpointMinus(css`
-    justify-content: space-between;
-  `)}
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.desktopMinus}) {
+      justify-content: space-between;
+    }
+  `}
 `;
 
 const RowAlignLeft = styled.div`

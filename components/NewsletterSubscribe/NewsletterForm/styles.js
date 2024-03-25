@@ -1,76 +1,76 @@
 import styled, { css } from 'styled-components';
 import Container from '@/components/containers/Container';
-import * as m from '@/styles/_mixins';
-import {
-  $error,
-  $darkBgColor,
-  $primaryAccentColor,
-  $primaryContentColor,
-} from '@/styles/_variables';
+
 
 const Section = styled.section`
   padding: 2.5rem 0;
-  background-color: ${$primaryAccentColor};
+  background-color: ${({ theme }) => theme.colors.primaryAccent};
 
-  //media query mixins
-  ${m.desktop(css`
-    padding: 1rem 0;
-  `)}
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.desktop}) {
+      padding: 1rem 0;
+    }
+  `}
 `;
 
 const InnerContainer = styled(Container)`
-  //media query mixins
-  ${m.desktop(css`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2rem;
-  `)}
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.desktop}) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
+    }
+  `}
 `;
 
 const Title = styled.h2`
   font-size: 1.5rem;
-  color: ${$primaryContentColor};
+  color: ${({ theme }) => theme.colors.primaryContent};
   margin: 0;
   white-space: nowrap;
   display: flex;
   gap: 0.5rem;
 
-  //media query mixins
-  ${m.mediumDesktop(css`
-    font-size: 1.75rem;
-    gap: 1rem;
-  `)}
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.mediumDesktop}) {
+      font-size: 1.75rem;
+      gap: 1rem;
+    }
+  `}
 
-  ${m.largeDesktop(css`
-    font-size: 2.25rem;
-    gap: 1.5rem;
-  `)}
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.desktop}) {
+      height: auto;
+    }
+  `}
 `;
 
 const RightChevron = styled.span`
   position: relative;
   top: 0.1rem;
 
-  //media query mixins
-  ${m.largeDesktop(css`
-    top: unset;
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.lgDesktop}) {
+      top: unset;
 
-    img {
-      width: 1.5rem !important;
-      height: 1.5rem !important;
+      img {
+        width: 1.5rem !important;
+        height: 1.5rem !important;
+      }
     }
-  `)}
+  `}
 `;
 
 const Form = styled.form`
-  //media query mixins
-  ${m.desktop(css`
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-left: auto;
-  `)}
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.desktop}) {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-left: auto;
+    }
+  `}
 `;
 
 const Input = styled.input`
@@ -80,64 +80,70 @@ const Input = styled.input`
   height: 2rem;
   margin: 1rem 0;
   padding: 1rem 1.25rem;
-  border: 1px solid ${$darkBgColor};
+  border: 1px solid ${({ theme }) => theme.colors.darkBg};
   width: 100%;
 
   &::placeholder {
-    color: ${$primaryContentColor};
+    color: ${({ theme }) => theme.colors.primaryContent};
   }
 
   &:focus {
     outline: none;
   }
 
-  //media query mixins
-  ${m.largeDesktop(css`
-    font-size: 1.5rem;
-    height: 3rem;
-    border-radius: 3rem;
-    max-width: 25rem;
-  `)}
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.lgDesktop}) {
+      font-size: 1.5rem;
+      height: 3rem;
+      border-radius: 3rem;
+      max-width: 25rem;
+    }
+  `}
 `;
 
 const InputName = styled(Input)`
-  //media query mixins
-  ${m.desktop(css`
-    width: 12.25rem;
-  `)}
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.desktop}) {
+      width: 12.25rem;
+    }
+  `}
 `;
 
 const InputEmail = styled(Input)`
-  //media query mixins
-  ${m.desktop(css`
-    width: 16rem;
-  `)}
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.desktop}) {
+      width: 16rem;
+    }
+  `}
 
-  ${m.largeDesktop(css`
-    width: 26rem;
-  `)}
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.lgDesktop}) {
+      width: 26rem;
+    }
+  `}
 `;
 
 const FormInfo = styled.div`
   font-size: 1rem;
   font-style: italic;
-  color: ${$primaryContentColor};
+  color: ${({ theme }) => theme.colors.primaryContent};
 `;
 
 const FormResponse = styled.div`
   margin-top: 1rem;
 
-  //media query mixins
-  ${m.desktop(css`
-    font-size: 1.2rem;
-    margin: 0;
-  `)}
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.desktop}) {
+      font-size: 1.2rem;
+      margin: 0;
+    }
+  `}
 `;
 
 const FormSending = styled(FormResponse)``;
 
 const FormError = styled(FormResponse)`
-  color: ${$error};
+  color: ${({ theme }) => theme.colors.error};
 `;
 
 const FormSuccess = styled(FormResponse)``;

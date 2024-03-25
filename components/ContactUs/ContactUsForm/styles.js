@@ -1,10 +1,4 @@
 import styled, { css } from 'styled-components';
-import * as m from '@/styles/_mixins';
-import {
-  $error,
-  $darkBgColor,
-  $primaryContentColor,
-} from '@/styles/_variables';
 
 const ResponseOnErrorMsg = styled.div`
   position: absolute;
@@ -12,12 +6,13 @@ const ResponseOnErrorMsg = styled.div`
   bottom: -15%;
   width: 26rem;
   margin: auto;
-  color: ${$error};
+  color: ${({ theme }) => theme.colors.error};
 
-  //media query mixins
-  ${m.mobile(css`
-    position: unset;
-  `)}
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.mobile}) {
+      position: unset;
+    }
+  `}
 `;
 
 const Form = styled.form`
@@ -27,11 +22,13 @@ const Form = styled.form`
   align-items: center;
 
   //media query mixins
-  ${m.desktop(css`
-    max-width: 100%;
-    width: 26rem;
-    padding: 2rem 0;
-  `)}
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.desktop}) {
+      max-width: 100%;
+      width: 26rem;
+      padding: 2rem 0;
+    }
+  `}
 `;
 
 const Input = styled.input`
@@ -40,25 +37,26 @@ const Input = styled.input`
   border-radius: 1rem;
   height: 2rem;
   padding: 1.2rem 1.25rem;
-  border: 1px solid ${$darkBgColor};
+  border: 1px solid ${({ theme }) => theme.colors.darkBg};
   max-width: 100%;
   width: 24rem;
 
   &::placeholder {
-    color: ${$primaryContentColor};
+    color: ${({ theme }) => theme.colors.primaryContent};
   }
 
   &:focus {
     outline: none;
   }
 
-  //media query mixins
-  ${m.largeDesktop(css`
-    font-size: 1.5rem;
-    height: 3rem;
-    border-radius: 3rem;
-    max-width: 25rem;
-  `)}
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.lgDesktop}) {
+      font-size: 1.5rem;
+      height: 3rem;
+      border-radius: 3rem;
+      max-width: 25rem;
+    }
+  `}
 `;
 
 const TextArea = styled.textarea`
@@ -67,33 +65,36 @@ const TextArea = styled.textarea`
   border-radius: 1rem;
   height: 13rem;
   padding: 1.2rem 1.25rem;
-  border: 1px solid ${$darkBgColor};
+  border: 1px solid ${({ theme }) => theme.colors.darkBg};
   max-width: 100%;
   width: 24rem;
   font-family: inherit;
 
   &::placeholder {
-    color: ${$primaryContentColor};
+    color: ${({ theme }) => theme.colors.primaryContent};
   }
 
   &:focus {
     outline: none;
   }
 
-  //media query mixins
-  ${m.largeDesktop(css`
-    font-size: 1.5rem;
-    border-radius: 3rem;
-    max-width: 25rem;
-  `)}
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.lgDesktop}) {
+      font-size: 1.5rem;
+      border-radius: 3rem;
+      max-width: 25rem;
+    }
+  `}
 
-  ${m.desktop(css`
-    border-radius: 1.5rem;
-  `)}
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.desktop}) {
+      border-radius: 1.5rem;
+    }
+  `}
 `;
 
 const ErrorMsg = styled.p`
-  color: ${$error};
+  color: ${({ theme }) => theme.colors.error};
   margin: 0.1rem 0 1rem;
   font-size: 1rem;
   height: 1.5rem;
@@ -106,10 +107,11 @@ const SubscribeWrapper = styled.div`
   margin-bottom: 1.25rem;
   opacity: 0.6;
 
-  //media query mixins
-  ${m.desktop(css`
-    font-size: 1.5rem;
-  `)}
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.desktop}) {
+      font-size: 1.5rem;
+    }
+  `}
 `;
 
 const SubscribeInput = styled.input`
