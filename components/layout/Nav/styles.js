@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components';
-import * as m from '@/styles/_mixins';
 
 const Header = styled.header`
   color: ${({ theme }) => theme.colors.white};
@@ -62,8 +61,7 @@ const Button = styled.a`
   text-align: center;
   display: inline-block;
   border: 1px solid ${({ theme }) => theme.colors.transparent};
-  transition: all 0.3s ease; // is it the same as m.transition?
-  /* ${m.transition('all 0.3s ease')}; */
+  transition: all 0.3s ease;  
 
   &:hover {
     text-decoration: none;
@@ -113,8 +111,7 @@ const ButtonSticky = css`
 
 const Logo = styled.img`
   width: 4.5rem;
-  // How can I change it to use the variables from themeConfig?
-  ${m.transition('opacity 0.3s ease')}
+  transition: all 0.3s ease;
   cursor: pointer;
 
   &:hover {
@@ -164,15 +161,16 @@ const Links = styled.ul`
     color: ${({ theme }) => theme.colors.primaryContent};
     box-shadow: ${({ theme }) => theme.colors.boxShadowBottom};
 
-    //media query mixins
-    ${m.desktop(css`
+    ${props => css`
+    @media (min-width: ${props.theme.breakpoints.desktop}) {
       flex-direction: row;
       position: static;
       width: auto;
       background-color: ${({ theme }) => theme.colors.darkBg};
       color: ${({ theme }) => theme.colors.white};
       box-shadow: none;
-    `)}
+    }
+  `}
   }
 
   //check props for sticky behavior
@@ -193,7 +191,7 @@ const Link = styled.a`
   line-height: 2.5;
   font-weight: 400;
   letter-spacing: 1px;
-  @include transition(all 0.3s ease);
+  transition: all 0.3s ease;
 
   &:hover {
     font-weight: bold;
@@ -214,7 +212,6 @@ const Link = styled.a`
     visibility: hidden;
   }
 
-  //media query mixins
   ${props => css`
     @media (min-width: ${props.theme.breakpoints.lgDesktop}) {
       font-size: 1.5rem;
@@ -223,7 +220,6 @@ const Link = styled.a`
 `;
 
 const Item = styled.li`
-  //media query mixins
   ${props => css`
     @media (min-width: ${props.theme.breakpoints.desktop}) {
       display: inline-block;
@@ -260,7 +256,7 @@ const HamburgerBar = styled.span`
   width: 25px;
   height: 2px;
   margin: 5px auto;
-  ${m.transition('opacity 0.3s ease')};
+  transition: all 0.3s ease;
   background-color: ${({ theme }) => theme.colors.white};
 
   //check props for sticky behavior

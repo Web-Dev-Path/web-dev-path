@@ -1,14 +1,12 @@
 import TwoColumn from '@/components/containers/TwoColumn';
 import { CardsColumns } from '@/components/containers/CardColumns';
 import S from '@/styles/pages/homeStyles';
-import {
-  $white,
-  $primaryContentColor,
-  $lightBgColor,
-} from '@/styles/_variables';
 import RevealContentContainer from '@/components/containers/RevealContentContainer';
+import { useTheme } from 'styled-components';
 
 export default function Home() {
+
+  const theme = useTheme();
   return (
     <>
       <RevealContentContainer>
@@ -19,7 +17,7 @@ export default function Home() {
           content='Web Dev Path is an open-source initiative that provides hands-on experience in a simulated professional environment to people who seek to begin or move forward in their web development journey.'
           link='/about'
           $btnColorScheme='inverted-grey'
-          bgColor={$lightBgColor}
+          bgColor={theme.colors.lightBg}
         />
       </RevealContentContainer>
 
@@ -30,7 +28,7 @@ export default function Home() {
           content='Web Dev Path runs on volunteers. Here are the ways you can get involved with us:'
           rowOrder='row-reverse'
           $contentType='get-involved'
-          bgColor={$white}
+          bgColor={theme.colors.white}
         />
       </RevealContentContainer>
 
@@ -74,8 +72,8 @@ export default function Home() {
         <TwoColumn
           title='Nonprofit?'
           content='Web Dev Path can help your nonprofit with web projects of various sizes. Connect with us to find out how.'
-          color={$white}
-          bgColor={$primaryContentColor}
+          color={theme.colors.white}
+          bgColor={theme.colors.primaryContent}
           link='/about'
           $contentType='non-profit'
           $btnColorScheme='inverted-white'

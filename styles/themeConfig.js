@@ -1,5 +1,14 @@
 import { createGlobalStyle } from 'styled-components';
 
+const transition = ($args) => ({
+  WebkitTransition: $args, 
+  MozTransition: $args, 
+  msTransition: $args, 
+  OTransition: $args, 
+  transition: $args,
+});
+
+
 export const lightTheme = {
   breakpoints: {
     smMobile: '350px',

@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components';
-import * as m from '@/styles/_mixins';
 
 const SubmitButton = styled.button`
   padding: 0.3rem 0;
@@ -13,14 +12,13 @@ const SubmitButton = styled.button`
   text-align: center;
   display: block;
   border: 1px solid ${({ theme }) => theme.colors.primaryContent};
-  ${m.transition('all 0.3s ease')}; //how to change it?
+  transition: all 0.3s ease;
 
   &:hover {
     color: ${({ theme }) => theme.colors.primaryContent};
     background-color: ${({ theme }) => theme.colors.transparent};
   }
 
-  //media query mixins
   ${props => css`
     @media (min-width: ${props.theme.breakpoints.desktop}) {
       margin-left: auto;

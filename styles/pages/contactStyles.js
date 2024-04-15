@@ -1,88 +1,105 @@
 import styled, { css } from 'styled-components';
 import Bracket from '@/components/decorations/Bracket';
-import * as m from '@/styles/_mixins';
-import { $lightBgColor } from '@/styles/_variables';
 
 const ContactUsContainer = styled.div`
-  background-color: ${$lightBgColor};
+  background-color: ${({ theme }) => theme.colors.lightBg};
   height: 42rem;
   position: relative;
   margin-bottom: -10rem;
 
-  //media query mixins
-  ${m.mobile(css`
-    height: unset;
-    padding-bottom: 2rem;
-    margin-bottom: 3rem;
-  `)}
-
-  ${m.desktopBreakpointMinus(css`
-    img {
-      display: none;
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.mobile}) {
+      height: unset;
+      padding-bottom: 2rem;
+      margin-bottom: 3rem;
     }
-  `)}
+  `}
 
-  ${m.desktop(css`
-    height: 32rem;
-  `)}
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.desktopMinus}) {
+      img {
+        display: none;
+      }
+    }
+  `}
+
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.desktop}) {
+      height: 32rem;
+    }
+  `}
 `;
 
 const FormAndDecorations = styled.div`
-  //media query mixins
-  ${m.tablet(css`
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    position: absolute;
-    bottom: 48%;
-    right: 4%;
-    z-index: 11;
-  `)}
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.tablet}) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      position: absolute;
+      bottom: 48%;
+      right: 4%;
+      z-index: 11;
+    }
+  `}
 
-  ${m.desktop(css`
-    bottom: 52%;
-    right: 8%;
-  `)}
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.desktop}) {
+      bottom: 52%;
+      right: 8%;
+    }
+  `}
 `;
 
 const YellowBracket = styled(Bracket)`
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
 
-  //media query mixins
-  ${m.mobile(css`
-    display: none;
-  `)}
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.mobile}) {
+      display: none;
+    }
+  `}
 
-  ${m.tablet(css`
-    position: absolute;
-    top: 28%;
-    right: 120%;
-    width: 8rem;
-  `)}
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.tablet}) {
+      position: absolute;
+      top: 28%;
+      right: 120%;
+      width: 8rem;
+    }
+  `}
 
-  ${m.desktop(css`
-    top: 25%;
-    right: 120%;
-  `)}
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.desktop}) {
+      top: 25%;
+      right: 120%;
+    }
+  `}
 
-  ${m.desktopBreakpointPlus(css`
-    top: 45%;
-    right: 140%;
-  `)}
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.desktopPlus}) {
+      top: 45%;
+      right: 140%;
+    }
+  `}
 `;
 
 const YellowColon = styled.img`
-  //media query mixins
-  ${m.tablet(css`
-    position: absolute;
+  
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.tablet}) {
+      position: absolute;
     top: -10%;
     right: -5%;
-  `)}
+    }
+  `}
 
-  ${m.desktop(css`
-    right: -15%;
-  `)}
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.desktop}) {
+      right: -15%;
+    }
+  `}
 `;
 
 const ResponseMessage = styled.div`
@@ -91,16 +108,19 @@ const ResponseMessage = styled.div`
   bottom: -5%;
   margin: auto;
 
-  //media query mixins
-  ${m.mobile(css`
-    position: unset;
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.mobile}) {
+      position: unset;
     margin-top: 1rem;
     padding: 0 2rem;
-  `)}
+    }
+  `}
 
-  ${m.smallMobile(css`
-    max-width: fit-content;
-  `)}
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.smMobile}) {
+      max-width: fit-content;
+    }
+  `}
 `;
 
 export default {

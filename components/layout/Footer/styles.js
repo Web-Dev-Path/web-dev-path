@@ -1,6 +1,5 @@
 import styled, { css } from 'styled-components';
 import Container from '@/components/containers/Container';
-import * as m from '@/styles/_mixins';
 
 const Footer = styled.footer`
   
