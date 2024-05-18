@@ -56,7 +56,7 @@ const YellowBracket = styled(Bracket)`
   transform: scaleX(-1);
 
   ${props => css`
-    @media (min-width: ${props.theme.breakpoints.mobile}) {
+    @media (max-width: ${props.theme.breakpoints.tablet}) {
       display: none;
     }
   `}
@@ -86,14 +86,22 @@ const YellowBracket = styled(Bracket)`
 `;
 
 const YellowColon = styled.img`
-  
-  ${props => css`
-    @media (min-width: ${props.theme.breakpoints.tablet}) {
-      position: absolute;
-    top: -10%;
-    right: -5%;
+
+${props => css`
+    @media (max-width: ${props.theme.breakpoints.tablet}) {
+      display: none;
     }
   `}
+
+  ${props => {
+    console.log('tablet media query applied');
+    return css`
+    @media (min-width: ${props.theme.breakpoints.tablet}) {
+      position: absolute;
+      top: -10%;
+      right: -5%;
+    }
+  `}}
 
   ${props => css`
     @media (min-width: ${props.theme.breakpoints.desktop}) {
@@ -111,8 +119,8 @@ const ResponseMessage = styled.div`
   ${props => css`
     @media (min-width: ${props.theme.breakpoints.mobile}) {
       position: unset;
-    margin-top: 1rem;
-    padding: 0 2rem;
+      margin-top: 1rem;
+      padding: 0 2rem;
     }
   `}
 

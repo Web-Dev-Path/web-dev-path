@@ -6,7 +6,7 @@ const SectionHidden = css`
 `;
 
 const RevealContainerWrapper = styled.div`
-  transition: transform 1s, opacity 1s;
+  ${({ theme }) => theme.transition('transform 1s, opacity 1s')};
 
   //check props for hidden style
   ${props => (props.$hiddenStyle ? SectionHidden : '')}

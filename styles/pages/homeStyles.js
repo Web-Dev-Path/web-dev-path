@@ -14,7 +14,7 @@ const HomeBracket = styled(Bracket)`
     }
   `}
   ${props => css`
-    @media (min-width: ${props.theme.breakpoints.desktopMinus}) {
+    @media (max-width: ${props.theme.breakpoints.desktopMinus}) {
       display: none;
     }
   `}
@@ -25,14 +25,14 @@ const HomeStick = styled(Stick)`
   transform: translate(-10rem, -5rem);
 
   ${props => css`
-    @media (min-width: ${props.theme.breakpoints.desktopPlus}) {
+    @media (max-width: ${props.theme.breakpoints.desktopPlus}) {
       transform: translate(-50%, -5rem);
       width: 30%;
     }
   `}
 
   ${props => css`
-    @media (min-width: ${props.theme.breakpoints.desktopMinus}) {
+    @media (max-width: ${props.theme.breakpoints.desktopMinus}) {
       display: none;
     }
   `}

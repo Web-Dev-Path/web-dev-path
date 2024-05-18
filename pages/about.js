@@ -34,7 +34,7 @@ export default function AboutUs() {
           image='/images/svg/square-brackets.svg'
           altTag='Square Brackets'
           color={theme.colors.primaryContent}
-          bgColor={theme.colors.primaryContent}
+          bgColor={theme.colors.primaryAccent}
           $contentType='our-background'
         />
       </RevealContentContainer>

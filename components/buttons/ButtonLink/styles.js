@@ -12,7 +12,7 @@ const ButtonLink = styled.a`
   min-width: 16rem;
   display: inline-block;
   border: 1px solid ${({ theme }) => theme.colors.primaryContent};
-  transition: all 0.3s ease;
+  ${({ theme }) => theme.transition('all 0.3s ease')};
   
 
   &:hover {

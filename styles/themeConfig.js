@@ -1,14 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
 
-const transition = ($args) => ({
-  WebkitTransition: $args, 
-  MozTransition: $args, 
-  msTransition: $args, 
-  OTransition: $args, 
-  transition: $args,
-});
-
-
 export const lightTheme = {
   breakpoints: {
     smMobile: '350px',
@@ -59,7 +50,15 @@ export const lightTheme = {
   fontStyle: {
     italic: 'italic',
   },
+  transition: (...args) => `
+    -webkit-transition: ${args};
+    -moz-transition: ${args};
+    -ms-transition: ${args};
+    -o-transition: ${args};
+    transition: ${args};
+  `,
 };
+  
 
 // The darkTheme is a theme that we will have on the future
 // for now it's empty
@@ -84,34 +83,17 @@ export const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.colors.primaryContent};
     padding: 0;
     margin: 0;
-   }
-   
+   }   
  
-   h1, h2, h3, h4, h5, h6 {
+  h1, h2, h3, h4, h5, h6 {
     font-family: ${({ theme }) =>
       `${theme.fonts.heading}, ${theme.fonts.sansSerif}`}; 
    }
    
-
-   p, li {
-    @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
-      font-size: 1.5rem;
-    }
-   }
-
-   h1 {
-    @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
-      font-size: 4.5rem;
-      line-height: 5rem;
-    }
-  }
-
-  h2 {
-    @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
-      font-size: 3.5rem;
-      line-height: 5rem;
-    }
-  }
+  h1 {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }   
 
   p,
   li {
@@ -119,10 +101,7 @@ export const GlobalStyles = createGlobalStyle`
     line-height: 1.938rem;
   }
 
-  h1 {
-    font-size: 3rem;
-    line-height: 3.5rem;
-  }
+  
 
   h2 {
     font-size: 3rem;
@@ -149,19 +128,40 @@ export const GlobalStyles = createGlobalStyle`
     }
   } 
 
-* {
-  box-sizing: border-box;
-}
+  * {
+    box-sizing: border-box;
+  }
 
-.not-found,
-.contact-us,
-.post {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  justify-items: center;
-  margin: 10% auto;
-  align-items: center;
-}
+  .not-found,
+  .contact-us,
+  .post {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    margin: 10% auto;
+    align-items: center;
+  }
+
+  p, li {
+    @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
+      font-size: 1.5rem;
+    }
+  }
+
+  h1 {
+    @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
+      font-size: 4.5rem;
+      line-height: 5rem;
+    }
+  }
+
+  h2 {
+    @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
+      font-size: 3.5rem;
+      line-height: 5rem;
+    }
+  }
+
 
    `;

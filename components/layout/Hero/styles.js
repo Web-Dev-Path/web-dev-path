@@ -28,7 +28,6 @@ const HeaderContentUpper = styled.div`
     font-weight: bold;
     line-height: 3.5rem;
 
-
     ${props => css`
       @media (min-width: ${props.theme.breakpoints.desktop}) {
         font-size: 4.5rem;
@@ -42,10 +41,12 @@ const HeaderContentBottom = styled.div`
   max-width: 19rem;
   padding-bottom: 5rem;
 
-  
   ${props => css`
     @media (min-width: ${props.theme.breakpoints.desktop}) {
       padding-bottom: 0;
+      p {
+        font-size: 1.5rem;
+      }
     }
   `}
 `;
@@ -55,7 +56,8 @@ const ImageBg = styled(Image)`
   object-position: center;
 `;
 const Title = styled.h1`
-  color: ${props => props.$hasAccent ? ({ theme }) => theme.colors.primaryAccent : 'inherit'};
+  color: ${props =>
+    props.$hasAccent ? ({ theme }) => theme.colors.primaryAccent : 'inherit'};
 `;
 
 export default {
