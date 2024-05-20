@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { transition } from '@/styles/themeConfig';
 
 const Header = styled.header`
   color: ${({ theme }) => theme.colors.white};
@@ -61,7 +62,7 @@ const Button = styled.a`
   text-align: center;
   display: inline-block;
   border: 1px solid ${({ theme }) => theme.colors.transparent};
-  transition: all 0.3s ease;  
+  ${transition('all 0.3s ease')};
 
   &:hover {
     text-decoration: none;
@@ -111,7 +112,7 @@ const ButtonSticky = css`
 
 const Logo = styled.img`
   width: 4.5rem;
-  transition: all 0.3s ease;
+  ${transition('all 0.3s ease')};
   cursor: pointer;
 
   &:hover {
@@ -191,7 +192,7 @@ const Link = styled.a`
   line-height: 2.5;
   font-weight: 400;
   letter-spacing: 1px;
-  transition: all 0.3s ease;
+  ${transition('all 0.3s ease')};
 
   &:hover {
     font-weight: bold;
@@ -256,7 +257,7 @@ const HamburgerBar = styled.span`
   width: 25px;
   height: 2px;
   margin: 5px auto;
-  transition: all 0.3s ease;
+  ${transition('all 0.3s ease')};
   background-color: ${({ theme }) => theme.colors.white};
 
   //check props for sticky behavior

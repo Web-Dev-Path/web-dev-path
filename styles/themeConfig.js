@@ -1,4 +1,13 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle, css } from 'styled-components';
+
+export const transition = $args => css`
+  -webkit-transition: ${$args};
+  -moz-transition: ${$args};
+  -ms-transition: ${$args};
+  -o-transition: ${$args};
+  transition: ${$args};
+`;
+
 
 export const lightTheme = {
   breakpoints: {
@@ -50,13 +59,6 @@ export const lightTheme = {
   fontStyle: {
     italic: 'italic',
   },
-  transition: (...args) => `
-    -webkit-transition: ${args};
-    -moz-transition: ${args};
-    -ms-transition: ${args};
-    -o-transition: ${args};
-    transition: ${args};
-  `,
 };
   
 

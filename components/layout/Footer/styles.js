@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 import Container from '@/components/containers/Container';
+import { transition } from '@/styles/themeConfig';
 
 const Footer = styled.footer`
   
@@ -89,7 +90,7 @@ const SocialList = styled.ul`
 
 const SocialItem = styled.li`
   cursor: pointer;
-  transition: all 0.3s ease;  
+  ${transition('all 0.3s ease')};
 
   &:hover {
     opacity: 0.6;

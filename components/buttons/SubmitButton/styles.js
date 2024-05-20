@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { transition } from '@/styles/themeConfig';
 
 const SubmitButton = styled.button`
   padding: 0.3rem 0;
@@ -12,7 +13,7 @@ const SubmitButton = styled.button`
   text-align: center;
   display: block;
   border: 1px solid ${({ theme }) => theme.colors.primaryContent};
-  transition: all 0.3s ease;
+  ${transition('all 0.3s ease')};
 
   &:hover {
     color: ${({ theme }) => theme.colors.primaryContent};

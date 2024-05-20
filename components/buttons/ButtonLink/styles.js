@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { transition } from '@/styles/themeConfig';
 
 const ButtonLink = styled.a`
   padding: 0.5rem 2rem;
@@ -12,7 +13,7 @@ const ButtonLink = styled.a`
   min-width: 16rem;
   display: inline-block;
   border: 1px solid ${({ theme }) => theme.colors.primaryContent};
-  ${({ theme }) => theme.transition('all 0.3s ease')};
+  ${transition('all 0.3s ease')};
   
 
   &:hover {

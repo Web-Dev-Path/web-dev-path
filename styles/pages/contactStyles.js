@@ -87,21 +87,13 @@ const YellowBracket = styled(Bracket)`
 
 const YellowColon = styled.img`
 
-${props => css`
-    @media (max-width: ${props.theme.breakpoints.tablet}) {
-      display: none;
-    }
-  `}
-
-  ${props => {
-    console.log('tablet media query applied');
-    return css`
+  ${props => css`
     @media (min-width: ${props.theme.breakpoints.tablet}) {
       position: absolute;
       top: -10%;
       right: -5%;
     }
-  `}}
+  `}
 
   ${props => css`
     @media (min-width: ${props.theme.breakpoints.desktop}) {
