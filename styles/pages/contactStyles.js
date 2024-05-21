@@ -8,18 +8,10 @@ const ContactUsContainer = styled.div`
   margin-bottom: -10rem;
 
   ${props => css`
-    @media (min-width: ${props.theme.breakpoints.mobile}) {
+    @media (max-width: ${props.theme.breakpoints.lgMobile}) {
       height: unset;
       padding-bottom: 2rem;
       margin-bottom: 3rem;
-    }
-  `}
-
-  ${props => css`
-    @media (min-width: ${props.theme.breakpoints.desktopMinus}) {
-      img {
-        display: none;
-      }
     }
   `}
 
@@ -86,6 +78,11 @@ const YellowBracket = styled(Bracket)`
 `;
 
 const YellowColon = styled.img`
+  ${props => css`
+    @media (max-width: ${props.theme.breakpoints.desktopMinus}) {
+      display: none;
+    }
+  `}
 
   ${props => css`
     @media (min-width: ${props.theme.breakpoints.tablet}) {
@@ -93,7 +90,7 @@ const YellowColon = styled.img`
       top: -10%;
       right: -5%;
     }
-  `}
+  `}  
 
   ${props => css`
     @media (min-width: ${props.theme.breakpoints.desktop}) {
