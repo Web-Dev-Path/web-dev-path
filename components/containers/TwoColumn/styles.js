@@ -1,12 +1,6 @@
 import styled, { css } from 'styled-components';
-import * as m from '@/styles/_mixins';
 import Container from '../Container';
 import Image from 'next/image';
-import {
-  $lgDesktopBreakpoint,
-  $primaryContentColor,
-  $lightBgColor,
-} from '@/styles/_variables';
 
 //TwoColumn Base styles
 
@@ -20,31 +14,34 @@ const InnerContainer = styled(Container)`
   padding: 5rem 0;
   margin: 0 auto;
   width: 90%;
-  max-width: ${$lgDesktopBreakpoint};
+  max-width: ${({ theme }) => theme.breakpoints.lgDesktop};
 
-  //media query mixins
-  ${m.desktop(css`
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  `)}
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.desktop}) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+  `}
 `;
 
 const InnerContent = styled.div`
   margin-bottom: 5rem;
 
-  //media query mixins
-  ${m.desktop(css`
-    flex-basis: 50%;
-    margin-bottom: 0;
-  `)}
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.desktop}) {
+      flex-basis: 50%;
+      margin-bottom: 0;
+    }
+  `}
 `;
 
 const Title = styled.h2`
   font-weight: bold;
   margin: 0;
-  color: ${props => (props.$color ? props.$color : $primaryContentColor)};
+  color: ${props =>
+    props.$color ? props.$color : ({ theme }) => theme.colors.primaryContent};
 `;
 
 const Content = styled.div`
@@ -71,10 +68,11 @@ const InnerImageWrapper = styled.div`
   height: 34rem;
   position: relative;
 
-  //media query mixins
-  ${m.desktop(css`
-    width: 25rem;
-  `)}
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.desktop}) {
+      width: 25rem;
+    }
+  `}
 `;
 
 const InnerImage = styled(Image)`
@@ -106,10 +104,11 @@ const AboutUs = {
 const OurProcessInnerImageWrapper = styled(InnerImageWrapper)`
   height: 10rem;
 
-  //media query mixins
-  ${m.desktop(css`
-    height: 12rem;
-  `)}
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.desktop}) {
+      height: 12rem;
+    }
+  `}
 `;
 
 const OurProcess = {
@@ -121,21 +120,23 @@ const OurProcess = {
 const GetStartedInnerContainer = styled(InnerContainer)`
   padding-bottom: 0px;
 
-  //media query mixins
-  ${m.desktop(css`
-    padding-bottom: 5rem;
-  `)}
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.desktop}) {
+      padding-bottom: 5rem;
+    }
+  `}
 `;
 
 const GetStartedInnerImageWrapper = styled(InnerImageWrapper)`
   height: 10rem;
   display: none;
 
-  //media query mixins
-  ${m.desktop(css`
-    height: 20rem;
-    display: unset;
-  `)}
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.desktop}) {
+      height: 20rem;
+      display: unset;
+    }
+  `}
 `;
 
 const GetStarted = {
@@ -148,10 +149,11 @@ const GetStarted = {
 const OurPurposeInnerImageWrapper = styled(InnerImageWrapper)`
   height: 10rem;
 
-  //media query mixins
-  ${m.desktop(css`
-    height: 18rem;
-  `)}
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.desktop}) {
+      height: 18rem;
+    }
+  `}
 `;
 
 const OurPurpose = {
@@ -163,10 +165,11 @@ const OurPurpose = {
 const OurBackgroundInnerImageWrapper = styled(InnerImageWrapper)`
   height: 10rem;
 
-  //media query mixins
-  ${m.desktop(css`
-    height: 15rem;
-  `)}
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.desktop}) {
+      height: 15rem;
+    }
+  `}
 `;
 
 const OurBackground = {
@@ -176,10 +179,11 @@ const OurBackground = {
 
 // Get Involved
 const GetInvolvedInnerContainer = styled(InnerContainer)`
-  //media query mixins
-  ${m.desktopBreakpointMinus(css`
-    padding-bottom: 0;
-  `)}
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.desktopMinus}) {
+      padding-bottom: 0;
+    }
+  `}
 `;
 
 const GetInvolved = {
@@ -189,10 +193,11 @@ const GetInvolved = {
 
 // Non Profit
 const NonProfitInnerContent = styled(InnerContent)`
-  //media query mixins
-  ${m.desktopBreakpointMinus(css`
-    margin-bottom: 0;
-  `)}
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.desktopMinus}) {
+      margin-bottom: 0;
+    }
+  `}
 `;
 
 const NonProfit = {
@@ -208,10 +213,11 @@ const WannaLearnMoreContent = styled(Content)`
 const WannaLearnMoreInnerImageWrapper = styled(InnerImageWrapper)`
   height: 10rem;
 
-  //media query mixins
-  ${m.desktop(css`
-    height: 15rem;
-  `)}
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.desktop}) {
+      height: 15rem;
+    }
+  `}
 `;
 
 const WannaLearnMoreInnerImage = styled(InnerImage)`
@@ -229,21 +235,23 @@ const WannaLearnMore = {
 const QuestionsInnerContainer = styled(InnerContainer)`
   padding-bottom: 0px;
 
-  //media query mixins
-  ${m.desktop(css`
-    padding-bottom: 5rem;
-  `)}
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.desktop}) {
+      padding-bottom: 5rem;
+    }
+  `}
 `;
 
 const QuestionsInnerImageWrapper = styled(InnerImageWrapper)`
   height: 10rem;
   display: none;
 
-  //media query mixins
-  ${m.desktop(css`
-    height: 13rem;
-    display: unset;
-  `)}
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.desktop}) {
+      height: 13rem;
+      display: unset;
+    }
+  `}
 `;
 
 const QuestionsMore = {
@@ -263,11 +271,11 @@ const TwoTextColumnsInnerContainer = styled(InnerContainer)`
 
   a {
     margin-top: auto;
-    color: ${$lightBgColor};
+    color: ${({ theme }) => theme.colors.lightBg};
   }
 
   a:hover {
-    color: ${$primaryContentColor};
+    color: ${({ theme }) => theme.colors.primaryContent};
   }
 `;
 
@@ -277,10 +285,11 @@ const TwoTextColumnsInnerContent = styled(InnerContent)`
   align-items: flex-start;
   flex-basis: unset !important;
 
-  //media query mixins
-  ${m.desktop(css`
-    width: 25rem;
-  `)}
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.desktop}) {
+      width: 25rem;
+    }
+  `}
 `;
 
 const TwoTextColumns = {

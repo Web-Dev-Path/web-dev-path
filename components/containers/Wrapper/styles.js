@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components';
-import { $primaryAccentColor } from '@/styles/_variables';
 
 const Wrapper = styled.div`
   padding: 1rem 0;
@@ -9,7 +8,7 @@ const Wrapper = styled.div`
 `;
 
 const PrimaryAccent = css`
-  background-color: ${$primaryAccentColor};
+  background-color: ${({ theme }) => theme.colors.primaryAccent};
 `;
 
 export default { Wrapper };

@@ -1,19 +1,11 @@
 import styled, { css } from 'styled-components';
 import Image from 'next/image';
-import * as m from '@/styles/_mixins';
-import {
-  $white,
-  $primaryContentColor,
-  $primaryAccentColor,
-  $headingFont,
-  $boxShadow,
-} from '@/styles/_variables';
 
 const Card = styled.div`
   margin: 1rem 1rem 0 0.5rem;
   padding: 1.5rem;
   border-radius: 1.5rem;
-  box-shadow: ${$boxShadow};
+  box-shadow: ${({ theme }) => theme.colors.boxShadow};
   min-width: 32%;
   height: 37rem;
 
@@ -27,36 +19,43 @@ const Card = styled.div`
     }
   }
 
-  //media query mixins
-  ${m.smallMobile(css`
-    height: 42rem;
-  `)}
-
-  ${m.tablet(css`
-    height: 42rem;
-  `)}
-
-  ${m.desktop(css`
-    height: 37rem;
-    margin: 1.5rem 1.5rem 0 1.5rem;
-    &:first-child,
-    &:last-child {
-      margin: 1.5rem 0.5rem 0 0.5rem;
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.smMobile}) {
+      height: 42rem;
     }
-  `)}
+  `}
+
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.tablet}) {
+      height: 42rem;
+    }
+  `}
+
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.desktop}) {
+      height: 37rem;
+      margin: 1.5rem 1.5rem 0 1.5rem;
+      &:first-child,
+      &:last-child {
+        margin: 1.5rem 0.5rem 0 0.5rem;
+      }
+    }
+  `}
 `;
 
 const Title = styled.h2`
-  font-family: ${$headingFont};
+  font-family: ${({ theme }) => theme.fonts.heading};
   font-weight: bold;
   font-size: 1.75rem;
-  color: ${$primaryContentColor};
+  color:  ${({ theme }) => theme.colors.primaryContent};
   margin: 1rem 0 0 0;
   line-height: unset;
 
-  ${m.tablet(css`
-    font-size: 2.25rem;
-  `)}
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.tablet}) {
+      font-size: 2.25rem;
+    }
+  `}
 `;
 
 const ContentWrapper = styled.div`
@@ -89,41 +88,50 @@ const TagContainer = styled.div`
 
 //About Us Varients Varients
 const AboutUs = styled(Card)`
-  background-color: ${$primaryAccentColor};
+  background-color: ${({ theme }) => theme.colors.primaryAccent};
   max-height: 35rem;
 
-  ${m.desktop(css`
-    max-height: 37rem;
-  `)}
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.desktop}) {
+      max-height: 37rem;
+
+    }
+  `}
 `;
 
 const AboutUsTitle = styled(Title)`
   font-size: 3.5rem;
   text-align: center;
 
-  ${m.desktop(css`
-    font-size: 5rem;
-  `)}
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.desktop}) {
+      font-size: 5rem;
+    }
+  `}
 `;
 
 const AboutUsContentWrapper = styled(ContentWrapper)`
-  ${m.desktop(css`
-    & p {
+${props => css`
+    @media (min-width: ${props.theme.breakpoints.desktop}) {
+      & p {
       font-size: 1.8rem;
       line-height: 2.2rem;
     }
-  `)}
+    }
+  `}
 `;
 
 //Contact Us Cards Varients
 
 const ContactUsCard = styled(Card)`
   height: 27rem;
-  background-color: ${$white};
+  background-color: ${({ theme }) => theme.colors.white};;
 
-  ${m.desktop(css`
-    height: 25rem;
-  `)}
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.desktop}) {
+      height: 25rem;
+    }
+  `}
 `;
 
 const ContactUsCardImageWrapper = styled(ImageWrapper)`
@@ -144,9 +152,11 @@ const ContactUsCardImage = styled(Image)`
 const Blog = styled(Card)`
   margin: 1rem 0.5rem 0 0.5rem;
 
-  ${m.tablet(css`
-    height: 40rem;
-  `)}
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.tablet}) {
+      height: 40rem;
+    }
+  `}
 `;
 
 const BlogTitle = styled(Title)`
@@ -155,9 +165,11 @@ const BlogTitle = styled(Title)`
   max-height: 7rem;
   overflow: hidden;
 
-  ${m.tablet(css`
-    font-size: 1.3rem;
-  `)}
+  ${props => css`
+    @media (min-width: ${props.theme.breakpoints.tablet}) {
+      font-size: 1.3rem;
+    }
+  `}
 `;
 
 const BlogImageWrapper = styled(ImageWrapper)`

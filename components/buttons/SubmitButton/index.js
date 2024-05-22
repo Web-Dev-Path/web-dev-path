@@ -1,6 +1,6 @@
 import S from './styles';
 
-export function SubmitButton({ label, disabled }) {
+export function SubmitButton({ label, disabled }) { 
   return (
     <S.SubmitButton type='submit' disabled={disabled}>
       {label}
