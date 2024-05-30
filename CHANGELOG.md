@@ -121,6 +121,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Implemented dynamic meta tags for each page
 - Added Kaz to 'about us'
 - Added theming to the project
+- Created single blog post page
 
 ### Fixed
 
