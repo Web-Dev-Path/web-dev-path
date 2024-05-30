@@ -8,7 +8,6 @@ export const transition = $args => css`
   transition: ${$args};
 `;
 
-
 export const lightTheme = {
   breakpoints: {
     smMobile: '350px',
@@ -31,7 +30,10 @@ export const lightTheme = {
     secondaryAccent: '#19aad1',
     error: '#be1313',
     black: '#000000',
+    blue: '#0000ee',
     white: '#ffffff',
+    grey: '#d9d9d9',
+    darkGrey: '#9ba39d',
     transparent: 'transparent',
     boxShadow: '0px 8px 24px rgba(0, 0, 0, 0.15)',
     boxShadowBottom: '0 10px 20px -5px rgba(0, 0, 0, 0.15)',
@@ -60,7 +62,6 @@ export const lightTheme = {
     italic: 'italic',
   },
 };
-  
 
 // The darkTheme is a theme that we will have on the future
 // for now it's empty
