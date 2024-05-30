@@ -57,7 +57,7 @@ export default function Footer() {
         <S.Netlify>
           This site is powered by
           <Image
-            src='images/svg/logo-netlify-small-fullcolor-darkmode.svg'
+            src='/images/svg/logo-netlify-small-fullcolor-darkmode.svg'
             width={50}
             height={50}
             alt='Netlify Logo'
