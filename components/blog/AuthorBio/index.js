@@ -2,6 +2,8 @@ import S from './styles';
 import Image from 'next/image';
 
 export default function AuthorBio({ user }) {
+  const webdevpathUrl =
+    'https://www.linkedin.com/company/web-dev-path/posts/?feedView=all';
   return (
     <S.Container>
       <S.Title>Author Bio</S.Title>
@@ -54,6 +56,14 @@ export default function AuthorBio({ user }) {
                 />
               </a>
             )}
+            <a href={webdevpathUrl} target='_blank' rel='noopener noreferrer'>
+              <Image
+                src='/images/svg/linkedin-portfolio.svg'
+                alt='Linkedin account of Web Dev Path'
+                height={48}
+                width={48}
+              />
+            </a>
           </S.LogosContainer>
         </S.SplitContainer>
       </S.FlexContainer>
