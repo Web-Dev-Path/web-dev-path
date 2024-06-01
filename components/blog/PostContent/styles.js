@@ -56,6 +56,20 @@ const ContentContainer = styled.div`
   h5 {
     font-size: 1.2 rem;
   }
+  .article-body-image-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .article-body-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    max-width: 40rem;
+  }
+  ul,
+  ol {
+    list-style: inside;
+  }
 `;
 
 const ImageWrapper = styled.div`
