@@ -1,21 +1,5 @@
 import styled, { css } from 'styled-components';
 
-const H1 = styled.h1`
-  font-family: ${({ theme }) => theme.fonts.heading};
-  font-size: 4rem;
-  color: ${({ theme }) => theme.colors.primaryContent};
-  text-align: left;
-  line-height: normal;
-  margin: 3rem 0 2rem 0;
-
-  ${props => css`
-    @media (max-width: ${props.theme.breakpoints.lgDesktop}) {
-      font-size: 2.5rem;
-    }
-  `}
-`;
-const Title = styled(H1)``;
-
 const P = styled.p`
   font-size: 2rem;
   font-style: italic;
@@ -79,7 +63,6 @@ const ImageWrapper = styled.div`
 `;
 
 export default {
-  Title,
   SubTitle,
   ContentContainer,
   ImageWrapper,
