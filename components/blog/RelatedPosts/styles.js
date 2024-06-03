@@ -1,11 +1,5 @@
 import styled, { css } from 'styled-components';
 
-const Container = styled.div`
-  margin: 0 auto;
-  width: 90%;
-  background-color: ${({ theme }) => theme.colors.transparent};
-`;
-
 const H3 = styled.h3`
   font-family: ${({ theme }) => theme.fonts.heading};
   font-size: 2rem !important;
@@ -42,7 +36,6 @@ const LinkWrapper = styled.div`
 `;
 
 export default {
-  Container,
   Title,
   List,
   Li,

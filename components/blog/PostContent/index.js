@@ -1,10 +1,11 @@
 import S from './styles';
 import Image from 'next/image';
+import Container from '@/components/containers/Container';
 
 export default function PostContent({ post }) {
   const publishedDate = post.published_at.split('T')[0];
   return (
-    <S.Container>
+    <Container>
       <S.Title>{post.title}</S.Title>
       <S.SubTitle>{`${post.user.name}\u00A0\u00A0\u00A0${publishedDate}`}</S.SubTitle>
       <S.ImageWrapper>
@@ -15,6 +16,6 @@ export default function PostContent({ post }) {
       <S.ContentContainer>
         <div dangerouslySetInnerHTML={{ __html: post.body_html }} />
       </S.ContentContainer>
-    </S.Container>
+    </Container>
   );
 }

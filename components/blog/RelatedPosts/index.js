@@ -1,4 +1,5 @@
 import S from './styles';
+import Container from '@/components/containers/Container';
 
 export default function RelatedPosts() {
   const relatedPosts = [
@@ -9,7 +10,7 @@ export default function RelatedPosts() {
     { title: 'Example Post Title', link: '/blog', id: 5 },
   ];
   return (
-    <S.Container>
+    <Container>
       <S.Title>Related Posts</S.Title>
       <S.List>
         {relatedPosts.map(relatedPost => {
@@ -22,6 +23,6 @@ export default function RelatedPosts() {
           );
         })}
       </S.List>
-    </S.Container>
+    </Container>
   );
 }

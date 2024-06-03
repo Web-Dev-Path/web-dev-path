@@ -1,11 +1,5 @@
 import styled, { css } from 'styled-components';
 
-const Container = styled.div`
-  margin: 0 auto;
-  width: 90%;
-  background-color: ${({ theme }) => theme.colors.transparent};
-`;
-
 const H1 = styled.h1`
   font-family: ${({ theme }) => theme.fonts.heading};
   font-size: 4rem;
@@ -85,7 +79,6 @@ const ImageWrapper = styled.div`
 `;
 
 export default {
-  Container,
   Title,
   SubTitle,
   ContentContainer,
