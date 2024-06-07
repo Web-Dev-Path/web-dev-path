@@ -1,11 +1,20 @@
 import S from './styles';
 import Image from 'next/image';
-
+import Container from '@/components/containers/Container';
+import { useTheme } from 'styled-components';
 export default function AuthorBio({ user }) {
   const webdevpathUrl =
     'https://www.linkedin.com/company/web-dev-path/posts/?feedView=all';
+  const theme = useTheme();
+  const customStyles = {
+    margin: 0,
+    backgroundColor: theme.colors.grey,
+    width: '100%',
+    padding: '4rem 5% 7.5rem 5%',
+    maxWidth: 'unset',
+  };
   return (
-    <S.Container>
+    <Container styles={customStyles}>
       <S.Title>Author Bio</S.Title>
       <S.FlexContainer>
         <S.ImageWrapper>
@@ -67,6 +76,6 @@ export default function AuthorBio({ user }) {
           </S.LogosContainer>
         </S.SplitContainer>
       </S.FlexContainer>
-    </S.Container>
+    </Container>
   );
 }

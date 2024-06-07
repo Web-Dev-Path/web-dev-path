@@ -1,10 +1,5 @@
 import styled, { css } from 'styled-components';
 
-const Container = styled.div`
-  padding: 4rem 5% 7.5rem 5%;
-  background-color: ${({ theme }) => theme.colors.grey};
-`;
-
 const FlexContainer = styled.div`
   display: flex;
   flex-direction: row;
@@ -75,7 +70,6 @@ const IconWrapper = styled.div`
 `;
 
 export default {
-  Container,
   FlexContainer,
   LogosContainer,
   SplitContainer,
