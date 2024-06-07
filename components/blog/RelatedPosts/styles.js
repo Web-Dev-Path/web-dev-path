@@ -1,10 +1,7 @@
 import styled, { css } from 'styled-components';
 
 const H3 = styled.h3`
-  font-family: ${({ theme }) => theme.fonts.heading};
   font-size: 2rem !important;
-  color: ${({ theme }) => theme.colors.primaryContent};
-  text-align: left;
   line-height: normal;
   margin: 1rem 0 !important;
 

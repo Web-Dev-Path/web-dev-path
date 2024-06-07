@@ -24,15 +24,11 @@ const SplitContainer = styled.div`
 
 const Paragraph = styled.p`
   font-size: 1.5rem;
-  text-align: left;
   line-height: normal;
 `;
 
 const H3 = styled.h3`
-  font-family: ${({ theme }) => theme.fonts.heading};
   font-size: 1.5rem !important;
-  color: ${({ theme }) => theme.colors.primaryContent};
-  text-align: left;
   line-height: normal;
   margin: 1.5rem 0 !important;
 
