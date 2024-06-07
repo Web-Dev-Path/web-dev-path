@@ -11,15 +11,13 @@ export default function RelatedPosts() {
   ];
   return (
     <Container>
-      <S.Title>Related Posts</S.Title>
+      <h3>Related Posts</h3>
       <S.List>
         {relatedPosts.map(relatedPost => {
           return (
-            <S.Li key={relatedPost.id}>
-              <S.LinkWrapper>
-                <a href={relatedPost.link}>{relatedPost.title}</a>
-              </S.LinkWrapper>
-            </S.Li>
+            <li key={relatedPost.id}>
+              <a href={relatedPost.link}>{relatedPost.title}</a>
+            </li>
           );
         })}
       </S.List>

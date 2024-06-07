@@ -5,34 +5,13 @@ const P = styled.p`
   font-style: italic;
   text-align: left;
   line-height: normal;
-  margin: 0.6rem 0;
-
-  ${props => css`
-    @media (max-width: ${props.theme.breakpoints.desktopMinus}) {
-      font-size: 1.5rem;
-    }
-  `}
+  margin: 2rem 0;
 `;
 const SubTitle = styled(P)``;
 
 const ContentContainer = styled.div`
   a {
     color: ${({ theme }) => theme.colors.blue};
-  }
-  h1 {
-    font-size: 2rem;
-  }
-  h2 {
-    font-size: 1.8rem;
-  }
-  h3 {
-    font-size: 1.6 rem;
-  }
-  h4 {
-    font-size: 1.4 rem;
-  }
-  h5 {
-    font-size: 1.2 rem;
   }
   .article-body-image-wrapper {
     display: flex;

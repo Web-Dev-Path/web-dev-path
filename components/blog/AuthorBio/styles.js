@@ -10,7 +10,7 @@ const FlexContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 20px;
+  gap: 1.5rem;
   justify-content: center;
   ${props => css`
     @media (max-width: ${props.theme.breakpoints.tablet}) {
@@ -20,31 +20,13 @@ const FlexContainer = styled.div`
 `;
 const LogosContainer = styled.div`
   display: flex;
-  gap: 15px;
+  gap: 0.5rem;
 `;
 const SplitContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 `;
-
-const Paragraph = styled.p`
-  font-size: 1.5rem;
-  line-height: normal;
-`;
-
-const H3 = styled.h3`
-  font-size: 1.5rem !important;
-  line-height: normal;
-  margin: 1.5rem 0 !important;
-
-  ${props => css`
-    @media (min-width: ${props.theme.breakpoints.tablet}) {
-      font-size: 2rem;
-    }
-  `}
-`;
-const Title = styled(H3)``;
 
 const ImageWrapper = styled.div`
   min-width: 16rem;
@@ -76,8 +58,6 @@ export default {
   FlexContainer,
   LogosContainer,
   SplitContainer,
-  Title,
-  Paragraph,
   ImageWrapper,
   IconWrapper,
 };

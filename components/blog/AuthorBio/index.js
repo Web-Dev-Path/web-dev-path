@@ -7,13 +7,13 @@ export default function AuthorBio({ user }) {
   return (
     <S.GreyBG>
       <Container>
-        <S.Title>Author Bio</S.Title>
+        <h3>Author Bio</h3>
         <S.FlexContainer>
           <S.ImageWrapper>
             <Image src={user.profile_image} alt="Author's profile" fill />
           </S.ImageWrapper>
           <S.SplitContainer>
-            <S.Paragraph>{user.summary}</S.Paragraph>
+            <p>{user.summary}</p>
             <S.LogosContainer>
               {user.twitter_username && (
                 <a

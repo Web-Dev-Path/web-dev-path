@@ -1,17 +1,4 @@
-import styled, { css } from 'styled-components';
-
-const H3 = styled.h3`
-  font-size: 2rem !important;
-  line-height: normal;
-  margin: 1rem 0 !important;
-
-  ${props => css`
-    @media (min-width: ${props.theme.breakpoints.tablet}) {
-      font-size: 2rem;
-    }
-  `}
-`;
-const Title = styled(H3)``;
+import styled from 'styled-components';
 
 const List = styled.ul`
   font-size: 1.5rem !important;
@@ -20,21 +7,6 @@ const List = styled.ul`
   padding: 0;
   list-style: none;
 `;
-const Li = styled.li``;
-const LinkWrapper = styled.div`
-  font-size: 1rem !important;
-  text-underline-offset: 2px;
-
-    &:hover {
-      opacity: 0.6;
-      text-decoration: none;
-    }
-  }
-`;
-
 export default {
-  Title,
   List,
-  Li,
-  LinkWrapper,
 };
