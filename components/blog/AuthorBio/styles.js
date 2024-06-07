@@ -1,5 +1,11 @@
 import styled, { css } from 'styled-components';
 
+const GreyBG = styled.div`
+  background-color: ${({ theme }) => theme.colors.grey};
+  padding: 4rem 0 7.5rem 0;
+  margin: 4rem 0;
+`;
+
 const FlexContainer = styled.div`
   display: flex;
   flex-direction: row;
@@ -66,6 +72,7 @@ const IconWrapper = styled.div`
 `;
 
 export default {
+  GreyBG,
   FlexContainer,
   LogosContainer,
   SplitContainer,
