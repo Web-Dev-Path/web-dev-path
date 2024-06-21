@@ -27,6 +27,24 @@ const ContentContainer = styled.div`
   ol {
     list-style: inside;
   }
+  iframe {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  p:has(iframe) {
+    text-align: center;
+  }
+  .highlight.js-code-highlight {
+    font-size: 1rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: ${({ theme }) => theme.colors.black};
+    color: ${({ theme }) => theme.colors.white};
+    overflow-x: scroll;
+  }
+  .highlight__panel-action.js-fullscreen-code-action {
+    display: none;
+  }
 `;
 
 const ImageWrapper = styled.div`
