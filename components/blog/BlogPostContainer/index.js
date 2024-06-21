@@ -7,7 +7,7 @@ import { useTheme } from 'styled-components';
 
 const BlogPostContainer = ({ post }) => {
   const theme = useTheme();
-  const { id, user } = post;
+  const { user } = post;
   return (
     <>
       <RevealContentContainer>
