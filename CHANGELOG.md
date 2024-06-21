@@ -122,6 +122,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Added Kaz to 'about us'
 - Added theming to the project
 - Created single blog post page
+- Combined Dev.to API with single post UI
 
 ### Fixed
 
