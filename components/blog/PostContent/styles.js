@@ -30,6 +30,9 @@ const ContentContainer = styled.div`
   iframe {
     margin-left: auto;
     margin-right: auto;
+    width: 80%;
+    min-width: 18rem;
+    max-width: 50rem;
   }
   p:has(iframe) {
     text-align: center;
