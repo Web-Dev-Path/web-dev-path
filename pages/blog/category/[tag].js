@@ -33,7 +33,7 @@ export async function getStaticProps({ params }) {
           image: post.cover_image,
           altTag: post.title,
           content: post.description,
-          link: post.url,
+          link: `/blog/post/${post.slug}`,
           linkText: 'Read more',
           tagList: post.tag_list,
         })),
