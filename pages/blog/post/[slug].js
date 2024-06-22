@@ -23,21 +23,32 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const postRes = await fetch(`https://dev.to/api/articles/wdp/${params.slug}`);
-  const post = await postRes.json();
-  const userRes = await fetch(`https://dev.to/api/users/${post.user.user_id}`);
-  const userData = await userRes.json();
-  return {
-    props: {
-      post: {
-        slug: post.slug,
-        title: post.title,
-        cover_image: post.cover_image,
-        published_at: post.published_at,
-        user: userData,
-        body_html: post.body_html,
+  try {
+    const postRes = await fetch(
+      `https://dev.to/api/articles/wdp/${params.slug}`
+    );
+    const post = await postRes.json();
+    const userRes = await fetch(
+      `https://dev.to/api/users/${post.user.user_id}`
+    );
+    const userData = await userRes.json();
+    return {
+      props: {
+        post: {
+          slug: post.slug,
+          title: post.title,
+          cover_image: post.cover_image,
+          published_at: post.published_at,
+          user: userData,
+          body_html: post.body_html,
+        },
       },
-    },
-    revalidate: blogRevalidate,
-  };
+      revalidate: blogRevalidate,
+    };
+  } catch (error) {
+    console.error('Error fetching data:', error);
+    return {
+      notFound: true,
+    };
+  }
 }
