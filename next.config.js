@@ -12,10 +12,6 @@ module.exports = withPWA({
       cssProp: true,
     },
   },
-  experimental: {
-    workerThreads: false,
-    cpus: 1,
-  },
   i18n: {
     locales: ['en'],
     defaultLocale: 'en',
