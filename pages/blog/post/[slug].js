@@ -15,7 +15,9 @@ const BlogPost = () => {
       try {
         const postRes = await fetch(`https://dev.to/api/articles/wdp/${slug}`);
         const post = await postRes.json();
-        const userRes = await fetch(`https://dev.to/api/users/${post.user_id}`);
+        const userRes = await fetch(
+          `https://dev.to/api/users/${post.user.user_id}`
+        );
         const userData = await userRes.json();
         setPost({
           slug: post.slug,
