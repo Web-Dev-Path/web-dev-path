@@ -16,7 +16,7 @@ export default function AuthorBio({ user }) {
             <p>
               {user.summary
                 ? user.summary
-                : `${user.name} is a dedicated Web Dev Member and software developer. `}
+                : `${user.name} is a dedicated Web Dev Path member and software developer. `}
             </p>
             <S.LogosContainer>
               {user.twitter_username && (
