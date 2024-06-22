@@ -1,6 +1,7 @@
 import S from './styles';
 import Image from 'next/image';
 import Container from '@/components/containers/Container';
+import { getUserBio } from '@/utils/getUserBio';
 export default function AuthorBio({ user }) {
   const webdevpathUrl =
     'https://www.linkedin.com/company/web-dev-path/posts/?feedView=all';
@@ -14,9 +15,7 @@ export default function AuthorBio({ user }) {
           </S.ImageWrapper>
           <S.SplitContainer>
             <p>
-              {user.summary
-                ? user.summary
-                : `${user.name} is a dedicated Web Dev Path member and software developer. `}
+              {user.summary ? user.summary : getUserBio(user.name, user.id)}
             </p>
             <S.LogosContainer>
               {user.twitter_username && (
