@@ -1,10 +1,7 @@
 import S from './styles';
 import Image from 'next/image';
 import Container from '@/components/containers/Container';
-import { getUserBio } from '@/utils/getUserBio';
 export default function AuthorBio({ user }) {
-  const webdevpathUrl =
-    'https://www.linkedin.com/company/web-dev-path/posts/?feedView=all';
   return (
     <S.GreyBG>
       <Container>
@@ -14,9 +11,7 @@ export default function AuthorBio({ user }) {
             <Image src={user.profile_image} alt="Author's profile" fill />
           </S.ImageWrapper>
           <S.SplitContainer>
-            <p>
-              {user.summary ? user.summary : getUserBio(user.name, user.id)}
-            </p>
+            <p>{user.summary}</p>
             <S.LogosContainer>
               {user.twitter_username && (
                 <a
@@ -60,7 +55,11 @@ export default function AuthorBio({ user }) {
                   />
                 </a>
               )}
-              <a href={webdevpathUrl} target='_blank' rel='noopener noreferrer'>
+              <a
+                href={`https://www.linkedin.com/${user.linkedIn}`}
+                target='_blank'
+                rel='noopener noreferrer'
+              >
                 <Image
                   src='/images/svg/linkedin-portfolio.svg'
                   alt='Linkedin account of Web Dev Path'

@@ -1,6 +1,7 @@
 import BlogPostContainer from '@/components/blog/BlogPostContainer';
 import { blogRevalidate } from '@/utils/config';
 import { useRouter } from 'next/router';
+import { getUserData } from '@/utils/getUserBio';
 
 const BlogPost = ({ post }) => {
   const router = useRouter();
@@ -28,12 +29,15 @@ export async function getStaticProps({ params }) {
       `https://dev.to/api/articles/wdp/${params.slug}`
     );
     const post = await postRes.json();
-    const userRes = await fetch(
-      `https://dev.to/api/users/${post.user.user_id}`
-    );
-    console.log(post.user);
-    const userData = await userRes.json();
-    console.log(userData);
+    const userData = post.user;
+    const localUserData = getUserData(userData.user_id);
+    userData['linkedIn'] = localUserData.linkedIn
+      ? 'in/' + localUserData.linkedIn
+      : 'company/web-dev-path';
+    userData['summary'] =
+      'devtoSummary' in localUserData
+        ? localUserData['devtoSummary']
+        : localUserData['about'];
     return {
       props: {
         post: {

@@ -35,6 +35,8 @@ export const whoWeAre = [
     name: 'Klesta Luli',
     title: '',
     devtoId: 897608,
+    devtoSummary:
+      'Front End software developer - love weightlifting, hiking, Sudoku puzzles, travel, volunteering.',
     position: 'Front-End Developer',
     linkedIn: 'klestaluli',
     portfolio: 'www.klesdev.com',
@@ -67,6 +69,8 @@ export const whoWeAre = [
     name: 'Satoshi Shirosaka',
     title: '',
     devtoId: 1212360,
+    devtoSummary:
+      'Satoshi is a full-stack developer, who is looking for opportunities to learn something new. He enjoys collaborating with other developers. Passionate for Open Source projects.',
     position: 'Full Stack Developer',
     linkedIn: 'satoshi-89bb58a8',
     portfolio: 'www.satoshis-developer.xyz',
@@ -118,6 +122,7 @@ export const whoWeAre = [
     name: 'Jana Behfarshad',
     title: 'Project Founder',
     devtoId: 1344669,
+    devtoSummary: 'Web/Software Developer',
     position: 'Web Developer',
     linkedIn: 'jana-behfarshad',
     portfolio: '',
@@ -129,6 +134,8 @@ export const whoWeAre = [
     name: 'Mariana Caldas',
     title: 'Project Founder, Team Lead',
     devtoId: 556959,
+    devtoSummary:
+      'Front-End dev | Scrum Master here! <> Hello :) </> JavaScript, React.js, Next.js, and CMS platforms (WordPress)',
     position: 'Front-End Developer | Scrum Master',
     linkedIn: 'mariana-caldas-souza',
     portfolio: 'www.marianacaldas.com',
