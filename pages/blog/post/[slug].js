@@ -2,14 +2,20 @@ import BlogPostContainer from '@/components/blog/BlogPostContainer';
 import { blogRevalidate } from '@/utils/config';
 import { useRouter } from 'next/router';
 import { getUserData } from '@/utils/getUserBio';
-import { getRelatedPosts } from '@/utils/getRelatedPosts';
+import { getRelatedOrLatestPosts } from '@/utils/getRelatedOrLatestPosts';
 
-const BlogPost = ({ post, relatedPosts }) => {
+const BlogPost = ({ post, relatedPosts, latestPosts }) => {
   const router = useRouter();
   if (router.isFallback) {
     return <div>Loading...</div>;
   }
-  return <BlogPostContainer post={post} relatedPosts={relatedPosts} />;
+  return (
+    <BlogPostContainer
+      post={post}
+      relatedPosts={relatedPosts}
+      latestPosts={latestPosts}
+    />
+  );
 };
 
 export default BlogPost;
@@ -40,7 +46,7 @@ export async function getStaticProps({ params }) {
         ? localUserData['devtoSummary']
         : localUserData['about'];
 
-    const relatedPosts = await getRelatedPosts(post);
+    const { relatedPosts, latestPosts } = await getRelatedOrLatestPosts(post);
     return {
       props: {
         post: {
@@ -52,6 +58,7 @@ export async function getStaticProps({ params }) {
           body_html: post.body_html,
         },
         relatedPosts,
+        latestPosts,
       },
       revalidate: blogRevalidate,
     };

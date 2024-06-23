@@ -1,11 +1,11 @@
 import RevealContentContainer from '@/components/containers/RevealContentContainer';
 import TwoColumn from '@/components/containers/TwoColumn';
 import AuthorBio from '@/components/blog/AuthorBio';
-import RelatedPosts from '@/components/blog/RelatedPosts';
+import RelatedOrLatestPosts from '@/components/blog/RelatedPosts';
 import PostContent from '@/components/blog/PostContent';
 import { useTheme } from 'styled-components';
 
-const BlogPostContainer = ({ post, relatedPosts }) => {
+const BlogPostContainer = ({ post, relatedPosts, latestPosts }) => {
   const theme = useTheme();
   const { user } = post;
   return (
@@ -17,7 +17,10 @@ const BlogPostContainer = ({ post, relatedPosts }) => {
         <AuthorBio user={user} />
       </RevealContentContainer>
       <RevealContentContainer>
-        <RelatedPosts relatedPosts={relatedPosts} />
+        <RelatedOrLatestPosts
+          relatedPosts={relatedPosts}
+          latestPosts={latestPosts}
+        />
       </RevealContentContainer>
       <RevealContentContainer>
         <TwoColumn
