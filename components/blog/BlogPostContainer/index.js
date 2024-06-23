@@ -5,7 +5,7 @@ import RelatedPosts from '@/components/blog/RelatedPosts';
 import PostContent from '@/components/blog/PostContent';
 import { useTheme } from 'styled-components';
 
-const BlogPostContainer = ({ post }) => {
+const BlogPostContainer = ({ post, relatedPosts }) => {
   const theme = useTheme();
   const { user } = post;
   return (
@@ -17,7 +17,7 @@ const BlogPostContainer = ({ post }) => {
         <AuthorBio user={user} />
       </RevealContentContainer>
       <RevealContentContainer>
-        <RelatedPosts />
+        <RelatedPosts relatedPosts={relatedPosts} />
       </RevealContentContainer>
       <RevealContentContainer>
         <TwoColumn
