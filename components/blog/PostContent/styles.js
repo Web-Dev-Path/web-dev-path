@@ -37,6 +37,9 @@ const ContentContainer = styled.div`
   p:has(iframe) {
     text-align: center;
   }
+  li > p {
+    display: inline;
+  }
   .highlight.js-code-highlight {
     font-size: 1rem;
     padding: 1rem;
