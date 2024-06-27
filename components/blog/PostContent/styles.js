@@ -27,6 +27,30 @@ const ContentContainer = styled.div`
   ol {
     list-style: inside;
   }
+  iframe {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    min-width: 18rem;
+    max-width: 50rem;
+  }
+  p:has(iframe) {
+    text-align: center;
+  }
+  li > p {
+    display: inline;
+  }
+  .highlight.js-code-highlight {
+    font-size: 1rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: ${({ theme }) => theme.colors.black};
+    color: ${({ theme }) => theme.colors.white};
+    overflow-x: scroll;
+  }
+  .highlight__panel-action.js-fullscreen-code-action {
+    display: none;
+  }
 `;
 
 const ImageWrapper = styled.div`

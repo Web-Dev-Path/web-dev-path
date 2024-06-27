@@ -34,7 +34,7 @@ export default function Blog({ posts }) {
         </BlogSearch>
       </Container>
 
-      <BlogPostsContainer posts={filteredPosts} heading={heading}/>
+      <BlogPostsContainer posts={filteredPosts} heading={heading} />
       {!searchTerm &&
         Object.keys(tagToHeading).map(tag => (
           <BlogPostsContainer
@@ -58,7 +58,7 @@ export async function getStaticProps() {
         image: post.cover_image,
         altTag: post.title,
         content: post.description,
-        link: post.url,
+        link: `/blog/post/${post.slug}`,
         linkText: 'Read more',
         tagList: post.tag_list,
       })),
