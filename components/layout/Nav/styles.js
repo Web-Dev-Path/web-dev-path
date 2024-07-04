@@ -163,15 +163,15 @@ const Links = styled.ul`
     box-shadow: ${({ theme }) => theme.colors.boxShadowBottom};
 
     ${props => css`
-      @media (min-width: ${props.theme.breakpoints.desktop}) {
-        flex-direction: row;
-        position: static;
-        width: auto;
-        background-color: ${({ theme }) => theme.colors.darkBg};
-        color: ${({ theme }) => theme.colors.white};
-        box-shadow: none;
-      }
-    `}
+    @media (min-width: ${props.theme.breakpoints.desktop}) {
+      flex-direction: row;
+      position: static;
+      width: auto;
+      background-color: ${({ theme }) => theme.colors.darkBg};
+      color: ${({ theme }) => theme.colors.white};
+      box-shadow: none;
+    }
+  `}
   }
 
   //check props for sticky behavior
@@ -234,10 +234,10 @@ const Hamburger = styled.button`
   border: none;
 
   ${props => css`
-    @media (min-width: ${props.theme.breakpoints.desktop}) {
-      display: none;
-    }
-  `}
+      @media (min-width: ${props.theme.breakpoints.desktop}) {
+        display: none;
+      }
+    `}
 
   &.active span:nth-child(2) {
     opacity: 0;
