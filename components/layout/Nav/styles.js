@@ -191,12 +191,10 @@ const Link = styled.a`
   font-size: 1.2rem;
   line-height: 2.5;
   font-weight: 400;
-  letter-spacing: 1px;
   ${transition('all 0.3s ease')};
 
   &:hover {
     font-weight: bold;
-    letter-spacing: 0;
   }
 
   &.current {
