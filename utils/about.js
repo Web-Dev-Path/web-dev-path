@@ -23,6 +23,7 @@ export const whoWeAre = [
     image: '/images/cheryl.webp',
     name: 'Cheryl M.',
     title: '',
+    devtoId: 487202,
     position: 'Full-Stack Developer',
     linkedIn: 'cheryl-h-murphy',
     portfolio: '',
@@ -33,6 +34,9 @@ export const whoWeAre = [
     image: '/images/klesta.webp',
     name: 'Klesta Luli',
     title: '',
+    devtoId: 897608,
+    devtoSummary:
+      'Front End software developer - love weightlifting, hiking, Sudoku puzzles, travel, volunteering.',
     position: 'Front-End Developer',
     linkedIn: 'klestaluli',
     portfolio: 'www.klesdev.com',
@@ -43,6 +47,7 @@ export const whoWeAre = [
     image: '/images/vincent.webp',
     name: 'Vincent Medina',
     title: '',
+    devtoId: 1046789,
     position: 'Web Developer',
     linkedIn: 'vincentm5',
     portfolio: 'vmcodes.com',
@@ -63,6 +68,9 @@ export const whoWeAre = [
     image: '/images/satoshi.webp',
     name: 'Satoshi Shirosaka',
     title: '',
+    devtoId: 1212360,
+    devtoSummary:
+      'Satoshi is a full-stack developer, who is looking for opportunities to learn something new. He enjoys collaborating with other developers. Passionate for Open Source projects.',
     position: 'Full Stack Developer',
     linkedIn: 'satoshi-89bb58a8',
     portfolio: 'www.satoshis-developer.xyz',
@@ -107,12 +115,14 @@ export const whoWeAre = [
     linkedIn: 'kaz-smino',
     portfolio: '',
     about:
-      "Kaz is a dedicated Full Stack Developer with a keen interest in Test-Driven Development (TDD) and automated testing. He thrives on learning and expanding his skill set, particularly in areas that enhance code quality and efficiency. He values teamwork and enjoys the synergy of working alongside other passionate developers."
+      'Kaz is a dedicated Full Stack Developer with a keen interest in Test-Driven Development (TDD) and automated testing. He thrives on learning and expanding his skill set, particularly in areas that enhance code quality and efficiency. He values teamwork and enjoys the synergy of working alongside other passionate developers.',
   },
   {
     image: '/images/jana.webp',
     name: 'Jana Behfarshad',
     title: 'Project Founder',
+    devtoId: 1344669,
+    devtoSummary: 'Web/Software Developer',
     position: 'Web Developer',
     linkedIn: 'jana-behfarshad',
     portfolio: '',
@@ -123,6 +133,9 @@ export const whoWeAre = [
     image: '/images/mariana.webp',
     name: 'Mariana Caldas',
     title: 'Project Founder, Team Lead',
+    devtoId: 556959,
+    devtoSummary:
+      'Front-End dev | Scrum Master here! <> Hello :) </> JavaScript, React.js, Next.js, and CMS platforms (WordPress)',
     position: 'Front-End Developer | Scrum Master',
     linkedIn: 'mariana-caldas-souza',
     portfolio: 'www.marianacaldas.com',

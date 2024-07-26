@@ -6,6 +6,9 @@ const List = styled.ul`
   line-height: normal;
   padding: 0;
   list-style: none;
+  li {
+    margin-top: 0.8rem;
+  }
 `;
 export default {
   List,
