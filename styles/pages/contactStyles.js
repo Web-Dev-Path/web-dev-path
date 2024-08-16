@@ -100,22 +100,14 @@ const YellowColon = styled.img`
 `;
 
 const ResponseMessage = styled.div`
-  position: absolute;
-  right: 8%;
+  position: unset;
   bottom: -5%;
-  margin: auto;
+  padding: 0 2rem;
 
   ${props => css`
-    @media (min-width: ${props.theme.breakpoints.mobile}) {
-      position: unset;
+    @media (min-width: ${props.theme.breakpoints.tablet}) {
+      position: absolute;
       margin-top: 1rem;
-      padding: 0 2rem;
-    }
-  `}
-
-  ${props => css`
-    @media (min-width: ${props.theme.breakpoints.smMobile}) {
-      max-width: fit-content;
     }
   `}
 `;
