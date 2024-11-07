@@ -24,7 +24,7 @@ module.exports = withPWA({
       },
       {
         protocol: 'https',
-        hostname: 'media.dev.to',
+        hostname: '*.dev.to',
       },
     ],
   },
