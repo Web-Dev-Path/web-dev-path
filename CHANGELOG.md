@@ -137,3 +137,4 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Fixed dev.to images not showing due to them changing image host
 - Fixed styling issue on nav links
 - Fixed contact form message position
+- Fixed blog images not loading due to dev.to changing image host (sub)domain
