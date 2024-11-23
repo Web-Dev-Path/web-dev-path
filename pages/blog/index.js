@@ -48,7 +48,8 @@ export default function Blog({ posts }) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch('https://dev.to/api/articles?username=wdp');
+  const PER_PAGE = 1000
+  const res = await fetch(`https://dev.to/api/articles?username=wdp&per_page=${PER_PAGE}`);
   const posts = await res.json();
 
   return {
