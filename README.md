@@ -38,7 +38,7 @@ This is how to get started locally:
 
 ## Developer Note
 
-- The Dev.to API has a limit of 1000 posts per response. If we exceed this limit by writing more than 1000 posts, we will need to update the getStaticProps on `/pages/blog`. For more details, refer to the [API documentation](https://developers.forem.com/api/v1#tag/articles/operation/getArticles).
+- The Dev.to API has a 30 posts limit by default and we updated it to 1000. If we need to fetch more posts, we will need to update the getStaticProps on `/pages/blog`. For more details, refer to the [API documentation](https://developers.forem.com/api/v1#tag/articles/operation/getArticles).
 
 <br />
 
