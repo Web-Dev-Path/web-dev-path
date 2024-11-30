@@ -138,3 +138,4 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Fixed styling issue on nav links
 - Fixed contact form message position
 - Fixed blog images not loading due to dev.to changing image host (sub)domain
+- Fixed empty blog category by using per_page parameter
