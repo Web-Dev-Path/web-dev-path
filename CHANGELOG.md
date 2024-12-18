@@ -139,3 +139,4 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Fixed contact form message position
 - Fixed blog images not loading due to dev.to changing image host (sub)domain
 - Fixed empty blog category by using per_page parameter
+- Resolved `fetchPriority` prop warning in next/image
