@@ -10,7 +10,7 @@ export default async (email, name, subject, message, subscribe) => {
     // sendgridEmail: This is the email verfied by sendgrid
     // the email will appear to be sent from this email
     // If a non verified email is used, we get a 403 error
-      const sendgridEmail = 'hello@webdevpath.co';
+      const sendgridEmail = 'support@webdevpath.co';
 
     const emailContent = `
         <b>Name:</b> ${name} <br/>
