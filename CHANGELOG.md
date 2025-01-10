@@ -141,3 +141,4 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Fixed empty blog category by using per_page parameter
 - Updated Next.js from 13.4.19 to 14.2.20
 - Resolved `fetchPriority` prop warning in next/image
+- Updated sendgridEmail to support@webdevpath.co
