@@ -132,7 +132,7 @@ export const whoWeAre = [
   {
     image: '/images/mariana.webp',
     name: 'Mariana Caldas',
-    title: 'Project Founder, Team Lead',
+    title: 'Co-founder, Product Manager',
     devtoId: 556959,
     devtoSummary:
       'Front-End dev | Scrum Master here! <> Hello :) </> JavaScript, React.js, Next.js, and CMS platforms (WordPress)',
@@ -141,5 +141,15 @@ export const whoWeAre = [
     portfolio: 'www.marianacaldas.com',
     about:
       'Mariana is a Front-End developer who strongly believes in the power of sharing knowledge.',
+  },
+  {
+    image: '/images/faith.webp',
+    name: 'Faith Nchifor',
+    title: '',
+    position: 'Full Stack Developer',
+    linkedIn: 'faith-nchifor',
+    portfolio: '',
+    about:
+      'Results-driven software developer passionate about leveraging cutting-edge technology to solve complex problems.',
   },
 ];

@@ -143,12 +143,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Resolved `fetchPriority` prop warning in next/image
 - Updated sendgridEmail to support@webdevpath.co
 
-
 ## Unreleased
 
 ### Added
 
-
-
+- Added Faith to 'about us'
+- Updated Mariana's title in 'about us'
 
 ### Fixed
