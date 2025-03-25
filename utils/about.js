@@ -58,11 +58,11 @@ export const whoWeAre = [
     image: '/images/bernardo.webp',
     name: 'Bernardo Coutinho',
     title: '',
-    position: 'Full Stack Developer',
+    position: 'Full-Stack Developer',
     linkedIn: 'bernardo-coutinho',
     portfolio: '',
     about:
-      'Bernardo is a full-stack Android and web developer who is always eager to learn and explore new technologies, constantly seeking ways to enhance his projects.',
+      'Bernardo is a Full-Stack Android and web developer who is always eager to learn and explore new technologies, constantly seeking ways to enhance his projects.',
   },
   {
     image: '/images/satoshi.webp',
@@ -71,11 +71,11 @@ export const whoWeAre = [
     devtoId: 1212360,
     devtoSummary:
       'Satoshi is a full-stack developer, who is looking for opportunities to learn something new. He enjoys collaborating with other developers. Passionate for Open Source projects.',
-    position: 'Full Stack Developer',
+    position: 'Full-Stack Developer',
     linkedIn: 'satoshi-89bb58a8',
     portfolio: 'www.satoshis-developer.xyz',
     about:
-      'Satoshi is a full-stack developer, who is looking for opportunities to learn something new. He enjoys collaborating with other developers.',
+      'Satoshi is a Full-Stack developer, who is looking for opportunities to learn something new. He enjoys collaborating with other developers.',
   },
   {
     image: '/images/lucas.webp',
@@ -91,7 +91,7 @@ export const whoWeAre = [
     image: '/images/tony.webp',
     name: 'Tony Kieling',
     title: '',
-    position: 'Full-stack Developer',
+    position: 'Full-Stack Developer',
     linkedIn: 'tony-kieling',
     portfolio: 'tkwebdev.ca',
     about:
@@ -111,17 +111,17 @@ export const whoWeAre = [
     image: '/images/kaz.webp',
     name: 'Kaz Smino',
     title: '',
-    position: 'Full Stack Developer',
+    position: 'Full-Stack Developer',
     linkedIn: 'kaz-smino',
     portfolio: '',
     about:
-      'Kaz is a dedicated Full Stack Developer with a keen interest in Test-Driven Development (TDD) and automated testing. He thrives on learning and expanding his skill set, particularly in areas that enhance code quality and efficiency. He values teamwork and enjoys the synergy of working alongside other passionate developers.',
+      'Kaz is a dedicated Full-Stack Developer with a keen interest in Test-Driven Development (TDD) and automated testing. He thrives on learning and expanding his skill set, particularly in areas that enhance code quality and efficiency. He values teamwork and enjoys the synergy of working alongside other passionate developers.',
   },
   {
     image: '/images/faith.webp',
     name: 'Faith Nchifor',
     title: '',
-    position: 'Full Stack Developer',
+    position: 'Full-Stack Developer',
     linkedIn: 'faith-nchifor',
     portfolio: '',
     about:
