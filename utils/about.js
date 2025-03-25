@@ -58,11 +58,11 @@ export const whoWeAre = [
     image: '/images/bernardo.webp',
     name: 'Bernardo Coutinho',
     title: '',
-    position: 'Full Stack Developer',
+    position: 'Full-Stack Developer',
     linkedIn: 'bernardo-coutinho',
     portfolio: '',
     about:
-      'Bernardo is a full-stack Android and web developer who is always eager to learn and explore new technologies, constantly seeking ways to enhance his projects.',
+      'Bernardo is a Full-Stack Android and web developer who is always eager to learn and explore new technologies, constantly seeking ways to enhance his projects.',
   },
   {
     image: '/images/satoshi.webp',
@@ -71,11 +71,11 @@ export const whoWeAre = [
     devtoId: 1212360,
     devtoSummary:
       'Satoshi is a full-stack developer, who is looking for opportunities to learn something new. He enjoys collaborating with other developers. Passionate for Open Source projects.',
-    position: 'Full Stack Developer',
+    position: 'Full-Stack Developer',
     linkedIn: 'satoshi-89bb58a8',
     portfolio: 'www.satoshis-developer.xyz',
     about:
-      'Satoshi is a full-stack developer, who is looking for opportunities to learn something new. He enjoys collaborating with other developers.',
+      'Satoshi is a Full-Stack developer, who is looking for opportunities to learn something new. He enjoys collaborating with other developers.',
   },
   {
     image: '/images/lucas.webp',
@@ -91,7 +91,7 @@ export const whoWeAre = [
     image: '/images/tony.webp',
     name: 'Tony Kieling',
     title: '',
-    position: 'Full-stack Developer',
+    position: 'Full-Stack Developer',
     linkedIn: 'tony-kieling',
     portfolio: 'tkwebdev.ca',
     about:
@@ -111,16 +111,26 @@ export const whoWeAre = [
     image: '/images/kaz.webp',
     name: 'Kaz Smino',
     title: '',
-    position: 'Full Stack Developer',
+    position: 'Full-Stack Developer',
     linkedIn: 'kaz-smino',
     portfolio: '',
     about:
-      'Kaz is a dedicated Full Stack Developer with a keen interest in Test-Driven Development (TDD) and automated testing. He thrives on learning and expanding his skill set, particularly in areas that enhance code quality and efficiency. He values teamwork and enjoys the synergy of working alongside other passionate developers.',
+      'Kaz is a dedicated Full-Stack Developer with a keen interest in Test-Driven Development (TDD) and automated testing. He thrives on learning and expanding his skill set, particularly in areas that enhance code quality and efficiency. He values teamwork and enjoys the synergy of working alongside other passionate developers.',
+  },
+  {
+    image: '/images/faith.webp',
+    name: 'Faith Nchifor',
+    title: '',
+    position: 'Full-Stack Developer',
+    linkedIn: 'faith-nchifor',
+    portfolio: '',
+    about:
+      'Results-driven software developer passionate about leveraging cutting-edge technology to solve complex problems.',
   },
   {
     image: '/images/jana.webp',
     name: 'Jana Behfarshad',
-    title: 'Project Founder',
+    title: 'Co-founder',
     devtoId: 1344669,
     devtoSummary: 'Web/Software Developer',
     position: 'Web Developer',
@@ -132,14 +142,14 @@ export const whoWeAre = [
   {
     image: '/images/mariana.webp',
     name: 'Mariana Caldas',
-    title: 'Project Founder, Team Lead',
+    title: 'Co-founder',
     devtoId: 556959,
     devtoSummary:
-      'Front-End dev | Scrum Master here! <> Hello :) </> JavaScript, React.js, Next.js, and CMS platforms (WordPress)',
-    position: 'Front-End Developer | Scrum Master',
+      'Digital Product Manager & Front-End Developer here! <> Hello :) </> Product Management, JavaScript, React.js, Next.js, CMS platforms (WordPress), and Agile methodologies.',
+    position: 'Product Manager | Front-End Developer',
     linkedIn: 'mariana-caldas-souza',
     portfolio: 'www.marianacaldas.com',
     about:
-      'Mariana is a Front-End developer who strongly believes in the power of sharing knowledge.',
-  },
+      'Mariana is a Digital Product Manager who strongly believes in the power of sharing knowledge.',
+  }
 ];
