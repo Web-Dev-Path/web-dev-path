@@ -21,7 +21,7 @@
   "dependencies": {
     "@sendgrid/mail": "^8.1.5",
     "html-entities": "^2.3.2",
-    "next": "^14.2.20",
+    "next": "^15.3.2",
     "next-pwa": "^5.6.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
