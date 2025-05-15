@@ -149,6 +149,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Added Faith to 'about us'
 - Updated Mariana's title in 'about us'
-- Updated uotdated dependencies
+- Updated outdated dependencies
 
 ### Fixed
