@@ -1,6 +1,3 @@
-@use '../../styles/mixins' as *;
-@use '../../styles/variables' as *;
-
 .contactCards {
-  background-color: $white;
+  background-color: var(--white);
 }
