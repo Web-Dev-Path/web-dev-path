@@ -1,0 +1,16 @@
+:root {
+  --bg-contact-card: #ffffff;
+  --bg-color: #eaeaea;
+}
+
+// placeholder colors
+[data-theme='dark'] {
+  --bg-contact-card: #232431;
+  --bg-color: #333;
+}
+
+// Theming notes:
+/*
+Set document data-theme to dark to activate dark theme, for example
+  document.documentElement.setAttribute('data-theme', 'dark');
+ */

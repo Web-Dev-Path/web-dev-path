@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import ContactUsFormSubscribe from '@/components/ContactUs';
-import ContactUsCards from '@/components/ContactUsCards';
+import ContactUsCards from '@/components/ContactUs/ContactUsCards';
 import S from '@/styles/pages/contactStyles';
 
 export default function ContactUs() {
