@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import ContactUsFormSubscribe from '@/components/ContactUs';
-import ContactUsCards from '@/components/ContactUs/ContactUsCards';
+import Index from '@/components/ContactUs/ContactUsCards';
 import S from '@/styles/pages/contactStyles';
 
 export default function ContactUs() {
@@ -23,7 +23,7 @@ export default function ContactUs() {
           </S.ResponseMessage>
         </S.FormAndDecorations>
       </S.ContactUsContainer>
-      <ContactUsCards />
+      <Index />
     </>
   );
 }

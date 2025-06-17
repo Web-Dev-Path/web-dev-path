@@ -1,5 +1,5 @@
-import { ContactCardsColumns } from '../containers/CardColumns/ContactCardsColumns';
-import RevealContentContainer from '../containers/RevealContentContainer';
+import { ContactCardsColumns } from '../../containers/CardColumns/ContactCardsColumns';
+import RevealContentContainer from '../../containers/RevealContentContainer';
 import styles from './ContactUsCards.module.scss';
 
 const cards = [
@@ -30,7 +30,7 @@ const cards = [
   },
 ];
 
-export default function ContactUsCards() {
+export default function Index() {
   return (
     <article className={styles.contactCards}>
       <RevealContentContainer>
