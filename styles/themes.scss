@@ -1,9 +1,11 @@
 :root {
-  --white: #ffffff;
+  --bg-contact-card: #ffffff;
   --bg-color: #eaeaea;
 }
 
+// placeholder colors
 [data-theme='dark'] {
+  --bg-contact-card: #232431;
   --bg-color: #333;
 }
 
