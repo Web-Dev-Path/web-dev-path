@@ -30,7 +30,7 @@ const cards = [
   },
 ];
 
-export default function Index() {
+export default function ContactUsCards() {
   return (
     <article className={styles.contactCards}>
       <RevealContentContainer>
