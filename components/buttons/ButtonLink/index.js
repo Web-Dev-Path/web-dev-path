@@ -1,21 +1,32 @@
-import S from './styles';
+import styles from './ButtonLink.module.scss';
 
-/*  The component supports the use of target with the property "openNewTab" to open the
- link in a new tab.*/
 export default function ButtonLink({
   link,
   children,
   $colorScheme,
   openNewTab,
+  className,
 }) {
+  let buttonClass = styles.buttonLink;
+
+  if ($colorScheme === 'inverted-grey') {
+    buttonClass += ` ${styles.invertedGrey}`;
+  } else if ($colorScheme === 'inverted-white') {
+    buttonClass += ` ${styles.invertedWhite}`;
+  }
+
+  if (className) {
+    buttonClass += ` ${className}`;
+  }
+
   return (
-    <S.ButtonLink
+    <a
       href={link}
-      $colorScheme={$colorScheme}
+      className={buttonClass}
       target={openNewTab ? '_blank' : undefined}
       rel='noopener noreferrer'
     >
       {children}
-    </S.ButtonLink>
+    </a>
   );
 }
