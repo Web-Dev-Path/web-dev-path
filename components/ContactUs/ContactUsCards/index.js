@@ -1,9 +1,8 @@
-import { ContactCardsColumns } from './containers/CardColumns/ContactCardsColumns';
-import RevealContentContainer from './containers/RevealContentContainer';
-import styled from 'styled-components';
+import { ContactCardsColumns } from '../../containers/CardColumns/ContactCardsColumns';
+import RevealContentContainer from '../../containers/RevealContentContainer';
+import styles from './ContactUsCards.module.scss';
 
 const cards = [
-
   {
     title: 'FAQ',
     image: '/images/svg/faq-icon.svg',
@@ -31,16 +30,12 @@ const cards = [
   },
 ];
 
-const ContactCardsContainer = styled.div`
-  background-color: ${({ theme }) => theme.colors.white};
-`;
-
-export default function ContactUsCards() {
+export default function Index() {
   return (
-    <ContactCardsContainer>
+    <article className={styles.contactCards}>
       <RevealContentContainer>
         <ContactCardsColumns cards={cards} />
       </RevealContentContainer>
-    </ContactCardsContainer>
+    </article>
   );
 }
