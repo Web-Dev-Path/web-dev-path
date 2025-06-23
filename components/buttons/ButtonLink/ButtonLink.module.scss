@@ -18,14 +18,14 @@
   }
 
   // Color scheme variations
-  &.invertedGrey {
+  &.inverted-grey {
     &:hover {
       color: var(--color-primary-content);
       background-color: var(--color-transparent);
     }
   }
 
-  &.invertedWhite {
+  &.inverted-white {
     border: 1px solid var(--color-white);
     color: var(--color-primary-content);
     background-color: var(--color-white);

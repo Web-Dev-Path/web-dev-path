@@ -3,21 +3,12 @@ import styles from './ButtonLink.module.scss';
 export default function ButtonLink({
   link,
   children,
-  $colorScheme,
+  customBtnClass,
   openNewTab,
-  className,
 }) {
-  let buttonClass = styles.buttonLink;
-
-  if ($colorScheme === 'inverted-grey') {
-    buttonClass += ` ${styles.invertedGrey}`;
-  } else if ($colorScheme === 'inverted-white') {
-    buttonClass += ` ${styles.invertedWhite}`;
-  }
-
-  if (className) {
-    buttonClass += ` ${className}`;
-  }
+  const buttonClass = customBtnClass
+    ? `${styles.buttonLink} ${styles[customBtnClass]}`
+    : styles.buttonLink;
 
   return (
     <a
