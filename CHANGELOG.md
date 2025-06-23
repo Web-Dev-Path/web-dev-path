@@ -152,3 +152,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Updated outdated dependencies
 
 ### Fixed
+
+### Changed
+- Started migrating styles from Styled Components to CSS Modules (ContactUsCard)
