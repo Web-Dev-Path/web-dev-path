@@ -1,16 +1,21 @@
 /*** Theme Settings  ***/
 
-// Theming notes:
 /*
-Set document data-theme to dark to activate dark theme, for example
-  document.documentElement.setAttribute('data-theme', 'dark');
+ * Purpose:
+ * This is for setting up themes.
+ *
+ * Application:
+ * Use the Light Theme Tokens for styling elements.
+ *
+ * Theme Activation:
+ * Use the ThemeProvider component to inject the preferred theme.
+ *
+ * Improvement Suggestion: 
+ * Naming Convention Template (--1-2-3) i.e (--theme-card-surface)
+ * 1 - Type of Token (theme)
+ * 2 - Component or Element (card or body)
+ * 3 - Target Area (surface, text, border, outline, shadow)
  */
-
-// Improvement Recommendation: Naming Convention
-// ( --1-2-3) i.e (--theme-card-surface)
-// 1 - Type of Token (theme)
-// 2 - Component or Element (card or body)
-// 3 - Target Area (surface, text, border)
 
 @use './colors' as *;
 

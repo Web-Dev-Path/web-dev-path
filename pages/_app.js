@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }) {
   // };
 
   return (
-    // <Theme theme='light'>
+    // <Theme theme='dark'> {/**Uncomment for testing purposes**/}
     <ThemeProvider theme={lightTheme}>
       <GlobalStyles />
       <Layout>
