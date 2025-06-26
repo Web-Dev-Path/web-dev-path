@@ -58,6 +58,8 @@ class MyDocument extends Document {
           <meta name='twitter:image:alt' content='Web Dev Path' />
           <meta name='twitter:site' content='@WebDevPath' />
           <meta name='robots' content='index, follow' />
+          <link rel='preconnect' href='https://fonts.googleapis.com' />
+          <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
           <link
             rel='stylesheet'
             href='https://fonts.googleapis.com/css2?family=Assistant:wght@400;700&family=Open+Sans:wght@700&display=swap'
