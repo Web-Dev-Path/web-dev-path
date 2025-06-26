@@ -1,0 +1,32 @@
+/*** Color Settings ***/
+
+/*
+ * Important:
+ * Do not use these variables directly to style elements.
+ *
+ * Purpose:
+ * This is for setting up the base colors only. All of these variables are linked to the
+ * CSS variables Theme Tokens (_themes.scss), use those for styling elements instead.
+ *
+ * Application:
+ * Use these base color variables to assign values on Theme Tokens(_themes.scss).
+ *
+ * Linking Setup:
+ * Base Colors(_colors.scss) -> Theme Tokens(_themes.scss)
+ */
+
+// Base Colors Light
+$color-white: #ffffff;
+$color-graphite: #292929;
+$color-yellow: #ffcc4c;
+$color-baby-blue: #8cd5e8;
+$color-medium-blue: #19aad1;
+$color-dark-blue: #023047;
+
+// Base Colors Dark **Temporary Colors: For testing purposes only; Change accordingly.**
+$color-black: #050505;
+$color-cement: #777777;
+$color-light-yellow: #ffecbc;
+$color-adult-blue: #2b89a0;
+$color-lumen-blue: #7bd6f0;
+$color-light-blue: #0ca0eb;

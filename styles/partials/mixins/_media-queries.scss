@@ -1,0 +1,63 @@
+/*** Media Query Mixins ***/
+
+/*
+ * Purpose:
+ * Use for changing CSS property values to align with the current device view port.
+ *
+ * Application:
+ * Use @include syntax to the element needing of responsive style changes. Define the properties
+ * needed to be change and override, inside the media query mixin call(@include).
+ */
+
+@use '../settings/breakpoints' as *;
+
+// Mobile
+@mixin media-mobile-sm {
+  @media (max-width: $breakpoint-mobile-sm) {
+    @content;
+  }
+}
+
+@mixin media-mobile-lg {
+  @media (max-width: $breakpoint-mobile-lg) {
+    @content;
+  }
+}
+
+// Tablet
+@mixin media-tablet-sm {
+  @media (min-width: $breakpoint-tablet-sm) {
+    @content;
+  }
+}
+
+// Desktop
+@mixin media-desktop-sm-minus {
+  @media (max-width: $breakpoint-desktop-sm-minus) {
+    @content;
+  }
+}
+
+@mixin media-desktop-sm {
+  @media (min-width: $breakpoint-desktop-sm) {
+    @content;
+  }
+}
+
+@mixin media-desktop-sm-plus {
+  @media (min-width: $breakpoint-desktop-sm-plus) {
+    @content;
+  }
+}
+
+@mixin media-desktop-md {
+  @media (min-width: $breakpoint-desktop-md) {
+    @content;
+  }
+}
+
+@mixin media-desktop-lg {
+  @media (min-width: $breakpoint-desktop-lg) {
+    @content;
+  }
+}

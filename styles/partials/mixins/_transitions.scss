@@ -1,0 +1,18 @@
+/*** Transition Mixins  ***/
+
+/*
+ * Purpose:
+ * Ensures that the transition property works across on multiple browsers, older or modern versions.
+ * 
+ * Application:
+ * Use directly to elements needing of transitional effects. Use @include syntax and fill-up arguments 
+ * based on your need.
+ */
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}

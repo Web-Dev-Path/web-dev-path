@@ -1,0 +1,33 @@
+/*** Theme Settings  ***/
+
+// Theming notes:
+/*
+Set document data-theme to dark to activate dark theme, for example
+  document.documentElement.setAttribute('data-theme', 'dark');
+ */
+
+// Improvement Recommendation: Naming Convention
+// ( --1-2-3) i.e (--theme-card-surface)
+// 1 - Type of Token (theme)
+// 2 - Component or Element (card or body)
+// 3 - Target Area (surface, text, border)
+
+@use './colors' as *;
+
+// Light Theme Tokens
+:root {
+  --theme-body-surface: #{$color-white};
+  --theme-body-text: #{$color-graphite};
+  --theme-placeholder-text: #{$color-graphite};
+  --bg-contact-card: #{$color-white};
+  --bg-color: #eaeaea; // Not sure with this color value, I didn't see it on the WDP Style Guide.
+}
+
+// Dark Theme Tokens
+[data-theme='dark'] {
+  --theme-body-surface: #{$color-black};
+  --theme-body-text: #{$color-cement};
+  --theme-placeholder-text: #{$color-cement};
+  --bg-contact-card: #{$color-black};
+  --bg-color: #333; // Not sure with this color value, I didn't see it on the WDP Style Guide.
+}
