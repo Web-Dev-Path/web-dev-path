@@ -154,6 +154,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Added helpers folder under utils (Directory: utils/helpers)
 - Added partials folder with mixins and settings as sub folders under styles (styles/partials)
 - Added isValidEnum a helper function
+- Added a ThemeEnum and enums folder
 - Added CSS resets partial
 
 ### Fixed
