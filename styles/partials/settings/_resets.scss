@@ -1,0 +1,65 @@
+/*** CSS Default Reset Settings ***/
+
+/*
+ * Purpose:
+ * Change or reset the default CSS stylings to avoid descrepancies and produce more
+ * consintent and accurate styling across multiple browsers.
+ */
+
+/* 
+ * Improvement Recommendation:
+ * For easier px to rem unit conversion, uncomment the (:root -> font-size) reset.
+ * It will change the default font-size of 16px to 10px. It would be easier to divide any
+ * numbers to 10 instead of 16.
+ *
+ * Sample Conversion: (Scenario: the padding needs to be 31px)
+ * Set padding to 'padding: 3.1rem' (31px / 10px = 3.1rem).
+ * On default, it would be (31px / 16px = 1.9375rem).
+ *
+ * Important:
+ * When this(:root -> font-size: 10px) is applied, make sure to double check all style values with rem units.
+ * Need to adjust it accordingly to follow the new px to rem conversion.
+ */
+
+// :root {
+//   font-size: 10px;
+// }
+
+@use '../mixins/typography' as *;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+textarea {
+  resize: vertical; // Prevents horizontal resizing
+}
+
+input::placeholder {
+  @include typography-placeholder;
+  color: var(--theme-placeholder-text);
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+body {
+  @include typography-copy;
+  background-color: var(--theme-body-surface);
+  color: var(--theme-body-text);
+  min-height: 100vh; // Support for Older Browser Versions
+  min-height: 100dvh;
+}
