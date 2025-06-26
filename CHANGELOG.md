@@ -156,6 +156,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Added isValidEnum a helper function
 - Added a ThemeEnum and enums folder
 - Added CSS resets partial
+- Added preconnect to google fonts CDN
 
 ### Fixed
 
