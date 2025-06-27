@@ -33,7 +33,7 @@ const BlogPostContainer = ({ post, relatedPosts, latestPosts }) => {
           $contentType='questions'
           link='/contact'
           linkText='Contact us'
-          $btnColorScheme='inverted-grey'
+          customBtnClass='inverted-grey'
         />
       </RevealContentContainer>
     </>
