@@ -11,7 +11,6 @@ export default function TwoColumn({
   bgColor,
   link,
   customBtnClass,
-  $btnColorScheme,
   linkText = 'Learn more',
   secondTextColumn,
   openNewTab,
@@ -35,7 +34,7 @@ export default function TwoColumn({
           {link && (
             <ButtonLink
               link={link}
-              $colorScheme={$btnColorScheme}
+              customBtnClass={customBtnClass}
               openNewTab={openNewTab}
             >
               {linkText}

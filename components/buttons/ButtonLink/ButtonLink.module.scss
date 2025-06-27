@@ -1,0 +1,38 @@
+.buttonLink {
+  padding: 0.5rem 2rem;
+  color: var(--color-white);
+  background-color: var(--color-primary-content);
+  border-radius: 2rem;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-align: center;
+  min-width: 16rem;
+  display: inline-block;
+  border: 1px solid var(--color-primary-content);
+  text-decoration: none;
+  transition: all 0.3s ease;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  // Color scheme variations
+  &.inverted-grey {
+    &:hover {
+      color: var(--color-primary-content);
+      background-color: var(--color-transparent);
+    }
+  }
+
+  &.inverted-white {
+    border: 1px solid var(--color-white);
+    color: var(--color-primary-content);
+    background-color: var(--color-white);
+
+    &:hover {
+      color: var(--color-white);
+      background-color: var(--color-transparent);
+    }
+  }
+}

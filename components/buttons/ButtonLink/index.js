@@ -1,21 +1,23 @@
-import S from './styles';
+import styles from './ButtonLink.module.scss';
 
-/*  The component supports the use of target with the property "openNewTab" to open the
- link in a new tab.*/
 export default function ButtonLink({
   link,
   children,
-  $colorScheme,
+  customBtnClass,
   openNewTab,
 }) {
+  const buttonClass = customBtnClass
+    ? `${styles.buttonLink} ${styles[customBtnClass]}`
+    : styles.buttonLink;
+
   return (
-    <S.ButtonLink
+    <a
       href={link}
-      $colorScheme={$colorScheme}
+      className={buttonClass}
       target={openNewTab ? '_blank' : undefined}
       rel='noopener noreferrer'
     >
       {children}
-    </S.ButtonLink>
+    </a>
   );
 }
