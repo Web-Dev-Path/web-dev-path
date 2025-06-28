@@ -1,0 +1,38 @@
+/*** Theme Settings  ***/
+
+/*
+ * Purpose:
+ * This is for setting up themes.
+ *
+ * Application:
+ * Use the Light Theme Tokens for styling elements.
+ *
+ * Theme Activation:
+ * Use the ThemeProvider component to inject the preferred theme.
+ *
+ * Improvement Suggestion: 
+ * Naming Convention Template (--1-2-3) i.e (--theme-card-surface)
+ * 1 - Type of Token (theme)
+ * 2 - Component or Element (card or body)
+ * 3 - Target Area (surface, text, border, outline, shadow)
+ */
+
+@use './colors' as *;
+
+// Light Theme Tokens
+:root {
+  --theme-body-surface: #{$color-white};
+  --theme-body-text: #{$color-graphite};
+  --theme-placeholder-text: #{$color-graphite};
+  --bg-contact-card: #{$color-white};
+  --bg-color: #eaeaea; // Not sure with this color value, I didn't see it on the WDP Style Guide.
+}
+
+// Dark Theme Tokens
+[data-theme='dark'] {
+  --theme-body-surface: #{$color-black};
+  --theme-body-text: #{$color-cement};
+  --theme-placeholder-text: #{$color-cement};
+  --bg-contact-card: #{$color-black};
+  --bg-color: #333; // Not sure with this color value, I didn't see it on the WDP Style Guide.
+}

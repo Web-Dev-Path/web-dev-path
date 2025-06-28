@@ -1,0 +1,34 @@
+/*** Font Settings  ***/
+
+/* 
+ * Important:
+ * Do not use these Font Tokens directly to style elements.
+ *
+ * Purpose:
+ * Setup values for all font tokens.
+ *
+ * Application:
+ * Use the Font Tokens to create a set of predefined typography mixins.
+ *
+ * Linking Setup:
+ * Font Tokens(_fonts.scss) -> Predefined Typography(_typography.scss)
+ */
+
+// Font Tokens
+// Font Family
+$font-family-primary: 'Assistant', sans-serif;
+$font-family-secondary: 'Opens Sans', sans-serif;
+
+// Font Size
+$font-size-sm: 1.5rem; // 24px
+$font-size-md: 2.25rem; // 36px
+$font-size-lg: 4.5rem; // 72px
+
+// Font Weight
+$font-weight-regular: 400;
+$font-weight-bold: 700; // Inaccurate value in WDP Style Guide (Type Kit say 600, actual value is 700).
+
+// Line Height
+$line-height-sm: 1.9375rem; // 31px
+$line-height-md: 2.875rem; // 46px
+$line-height-lg: 5rem; // 80px

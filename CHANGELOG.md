@@ -150,6 +150,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Added Faith to 'about us'
 - Updated Mariana's title in 'about us'
 - Updated outdated dependencies
+- Added ThemeProvider component
+- Added helpers folder under utils (Directory: utils/helpers)
+- Added partials folder with mixins and settings as sub folders under styles (styles/partials)
+- Added isValidEnum a helper function
+- Added a ThemeEnum and enums folder
+- Added CSS resets partial
+- Added preconnect to google fonts CDN
 
 ### Fixed
 
@@ -158,4 +165,5 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 
 - Started migrating styles from Styled Components to CSS Modules (ContactUsCard)
-
+- Refactor and modularize style partials
+- Updated naming convention for variables, tokens, and mixins
