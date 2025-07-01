@@ -5,7 +5,6 @@ import RevealContentContainer from '@/components/containers/RevealContentContain
 import { useTheme } from 'styled-components';
 
 export default function Home() {
-
   const theme = useTheme();
   return (
     <>
@@ -16,7 +15,7 @@ export default function Home() {
           altTag='Join the project'
           content='Web Dev Path is an open-source initiative that provides hands-on experience in a simulated professional environment to people who seek to begin or move forward in their web development journey.'
           link='/about'
-          $btnColorScheme='inverted-grey'
+          customBtnClass='inverted-grey'
           bgColor={theme.colors.lightBg}
         />
       </RevealContentContainer>
@@ -76,7 +75,7 @@ export default function Home() {
           bgColor={theme.colors.primaryContent}
           link='/about'
           $contentType='non-profit'
-          $btnColorScheme='inverted-white'
+          customBtnClass='inverted-white'
         />
       </RevealContentContainer>
     </>
