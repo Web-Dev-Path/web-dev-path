@@ -1,3 +1,4 @@
-@use './themes';
-@use './mixins';
-@use './variables';
+// Entry Point for CSS Resets and Theme Tokens.
+
+@use './partials/settings/themes';
+@use './partials/settings/resets';

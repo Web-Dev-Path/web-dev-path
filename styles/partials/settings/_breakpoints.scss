@@ -1,0 +1,18 @@
+/*** Breakpoint Settings ***/
+
+// Breakpoint Tokens
+// Mobile
+$breakpoint-mobile-sm: 350px; // $sm-mobile-breakpoint
+$breakpoint-mobile-md: 578px; // $mobile-breakpoint        /* UNUSED */
+$breakpoint-mobile-lg: 767px; // $lg-mobile-breakpoint
+
+// Tablet
+$breakpoint-tablet-sm: 768px; // $tablet-breakpoint
+
+// Desktop
+$breakpoint-desktop-sm-minus: 1023px; // $desktop-breakpoint-minus
+$breakpoint-desktop-sm: 1024px; // $desktop-breakpoint
+$breakpoint-desktop-sm-plus: 1025px; // $desktop-breakpoint-plus
+$breakpoint-desktop-md: 1250px; // $medium-desktop-breakpoint
+$breakpoint-desktop-lg: 1440px; // $large-desktop-breakpoint
+$breakpoint-desktop-xl: 2560px; // $extra-large-breakpoint

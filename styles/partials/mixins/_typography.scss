@@ -1,0 +1,68 @@
+/*** Typography Mixins ***/
+
+/*
+ * Purpose:
+ * Use to style typographic elements. Ensures typography elements aligns with the WDP Style Guide
+ * and avoid descrepancies on typography styles.
+ * 
+ * Application:
+ * Use directly to typographic elements. Use @include syntax to inject the properties needed.
+ */
+
+@use '../settings/fonts' as *;
+
+@mixin typography-header-page {
+  font-family: $font-family-primary;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-lg;
+}
+
+@mixin typography-header-sub {
+  font-family: $font-family-primary;
+  font-size: $font-size-md;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-md;
+}
+
+@mixin typography-copy {
+  font-family: $font-family-secondary;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-regular;
+  line-height: $line-height-sm;
+}
+
+@mixin typography-label {
+  @include typography-copy;
+}
+
+@mixin typography-input {
+  @include typography-copy;
+}
+
+@mixin typography-placeholder {
+  @include typography-copy;
+}
+
+@mixin typography-link {
+  @include typography-copy;
+}
+
+@mixin typography-button {
+  @include typography-copy;
+}
+
+// Font Related Changes Only (Family, Weight, Size, Line Height, etc.)
+@mixin typography-action-hover($type) {
+  @if ($type == 'pageheader') {
+  } @else if($type == 'subheader') {
+    // >>>> Insert Property Changes Here <<<<
+  } @else if($type == 'paragraph') {
+    // >>>> Insert Property Changes Here <<<<
+  } @else if($type == 'label' or $type == 'link' or $type == 'button') {
+    // >>>> Insert Property Changes Here <<<<
+  } @else {
+    // Catch Unknown Argument Value
+    @error "Unknown Argument Value("#{$type}"): Must be either 'pageheader', 'subheader', 'paragraph', 'label', 'link', or 'button' only.";
+  }
+}
