@@ -10,7 +10,6 @@ import { whoWeAre } from '@/utils/about';
 import { useTheme } from 'styled-components';
 
 export default function AboutUs() {
-
   const theme = useTheme();
 
   return (
@@ -166,7 +165,7 @@ export default function AboutUs() {
           linkText='Our wiki'
           openNewTab
           link='https://github.com/Web-Dev-Path/web-dev-path/wiki'
-          $btnColorScheme='inverted-grey'
+          customBtnClass='inverted-grey'
           color={theme.colors.primaryContent}
           bgColor={theme.colors.lightBg}
           $contentType='two-text-columns'
@@ -181,7 +180,7 @@ export default function AboutUs() {
               }
               linkText='Contact us'
               link='/contact'
-              $btnColorScheme='inverted-grey'
+              customBtnClass='inverted-grey'
               color={theme.colors.primaryContent}
               bgColor={theme.colors.lightBg}
               $contentType='second-text-column'
@@ -224,7 +223,7 @@ export default function AboutUs() {
           $contentType='get-started'
           link='mailto:hello@webdevpath.co'
           linkText='Ping us'
-          $btnColorScheme='inverted-grey'
+          customBtnClass='inverted-grey'
         />
       </RevealContentContainer>
       <RevealContentContainer>
@@ -261,7 +260,7 @@ export default function AboutUs() {
           $contentType='questions'
           link='/contact'
           linkText='Contact us'
-          $btnColorScheme='inverted-grey'
+          customBtnClass='inverted-grey'
         />
       </RevealContentContainer>
     </div>
