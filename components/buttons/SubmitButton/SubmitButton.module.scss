@@ -1,0 +1,56 @@
+@use '@/styles/mixins' as *;
+
+.submit-button {
+  padding: 0.3rem 0;
+  min-width: 12rem;
+  font-size: 1.2rem;
+  color: var(--color-white);
+  background-color: var(--color-primary-content);
+  border-radius: 2rem;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  display: block;
+  border: 1px solid var(--color-primary-content);
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: var(--color-primary-content);
+    background-color: var(--color-transparent);
+  }
+
+  @include desktop {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.5rem;
+    min-width: 16rem;
+    padding: 0.5rem 2rem;
+  }
+}
+
+.news-letter-submit-button {
+  @extend .submit-button;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 1.2rem;
+  background-color: var(--dark-bg);
+  padding: 0.3rem 0;
+
+  &:hover {
+    background-color: var(--color-transparent);
+    color: var(--dark-bg);
+    border: 1px solid var(--dark-bg);
+  }
+
+  @include desktop {
+    border-radius: 1.2rem;
+    font-size: 1.2rem;
+    padding: 0.3rem 0;
+  }
+
+  @include large-desktop {
+    min-width: 12rem;
+    border-radius: 3rem;
+    padding: 0.7rem 0;
+  }
+}
