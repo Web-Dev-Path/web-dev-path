@@ -1,17 +1,25 @@
-import S from './styles';
+import styles from './SubmitButton.module.scss';
 
-export function SubmitButton({ label, disabled }) { 
+export function SubmitButton({ label, disabled }) {
   return (
-    <S.SubmitButton type='submit' disabled={disabled}>
+    <button
+      className={styles['submit-button']}
+      type='submit'
+      disabled={disabled}
+    >
       {label}
-    </S.SubmitButton>
+    </button>
   );
 }
 
 export function NewsLetterSubmitButton({ label, disabled }) {
   return (
-    <S.NewsLetterSubmitButton type='submit' disabled={disabled}>
+    <button
+      className={styles['news-letter-submit-button']}
+      type='submit'
+      disabled={disabled}
+    >
       {label}
-    </S.NewsLetterSubmitButton>
+    </button>
   );
 }
