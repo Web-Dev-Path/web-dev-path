@@ -34,17 +34,15 @@
   margin-right: auto;
   border-radius: 1.2rem;
   background-color: var(--dark-bg);
-  padding: 0.3rem 0;
 
   &:hover {
-    background-color: var(--color-transparent);
     color: var(--dark-bg);
     border: 1px solid var(--dark-bg);
   }
 
   @include desktop {
-    border-radius: 1.2rem;
     font-size: 1.2rem;
+    min-width: 11rem;
     padding: 0.3rem 0;
   }
 
