@@ -140,7 +140,7 @@ function ContactUsForm({ subscribe, setResponseMessage, getReCaptchaToken }) {
                   ? 'Must be more than 1 character'
                   : undefined}
           </p>
-          <div className={styles['subscribe-wrapper']}>
+          <label className={styles['subscribe-wrapper']}>
             <input
               className={styles['subscribe-input']}
               type='checkbox'
@@ -148,7 +148,7 @@ function ContactUsForm({ subscribe, setResponseMessage, getReCaptchaToken }) {
               {...register('Subscribe', {})}
             />
             Subscribe to our DevNews!
-          </div>
+          </label>
           <SubmitButton label='Submit' disabled={isSubmitting} />
         </form>
       </Container>
