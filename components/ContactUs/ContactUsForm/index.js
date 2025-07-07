@@ -2,7 +2,7 @@ import { useForm } from 'react-hook-form';
 import Container from '@/components/containers/Container';
 import RevealContentContainer from '@/components/containers/RevealContentContainer';
 import { SubmitButton } from '@/components/buttons/SubmitButton';
-import S from './styles';
+import styles from './ContactUsForm.module.scss';
 
 function ContactUsForm({ subscribe, setResponseMessage, getReCaptchaToken }) {
   const {
@@ -69,8 +69,9 @@ function ContactUsForm({ subscribe, setResponseMessage, getReCaptchaToken }) {
   return (
     <RevealContentContainer>
       <Container>
-        <S.Form onSubmit={handleSubmit(onSubmit)}>
-          <S.Input
+        <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
+          <input
+            className={styles.input}
             type='text'
             placeholder='name'
             {...register('Name', {
@@ -81,16 +82,17 @@ function ContactUsForm({ subscribe, setResponseMessage, getReCaptchaToken }) {
               pattern: /[^\s-]/i,
             })}
           />
-          <S.ErrorMsg>
+          <p className={styles['error-msg']}>
             {errors.Name?.type === 'required'
               ? 'Name is required'
               : errors.Name?.type === 'pattern'
-              ? 'No whitespace'
-              : errors.Name?.type === 'minLength'
-              ? 'Must be more than 1 character'
-              : undefined}
-          </S.ErrorMsg>
-          <S.Input
+                ? 'No whitespace'
+                : errors.Name?.type === 'minLength'
+                  ? 'Must be more than 1 character'
+                  : undefined}
+          </p>
+          <input
+            className={styles.input}
             type='email'
             placeholder='email'
             {...register('Email', {
@@ -98,10 +100,11 @@ function ContactUsForm({ subscribe, setResponseMessage, getReCaptchaToken }) {
               pattern: /^\S+@\S+$/i,
             })}
           />
-          <S.ErrorMsg>
+          <p className={styles['error-msg']}>
             {errors.Email?.type === 'required' && 'Email is required'}
-          </S.ErrorMsg>
-          <S.Input
+          </p>
+          <input
+            className={styles.input}
             type='text'
             placeholder='subject'
             {...register('Subject', {
@@ -110,16 +113,17 @@ function ContactUsForm({ subscribe, setResponseMessage, getReCaptchaToken }) {
               pattern: /[^\s-]/i,
             })}
           />
-          <S.ErrorMsg>
+          <p className={styles['error-msg']}>
             {errors.Subject?.type === 'required'
               ? 'Subject is required'
               : errors.Subject?.type === 'pattern'
-              ? 'No whitespace'
-              : errors.Subject?.type === 'minLength'
-              ? 'Must be more than 1 character'
-              : undefined}
-          </S.ErrorMsg>
-          <S.TextArea
+                ? 'No whitespace'
+                : errors.Subject?.type === 'minLength'
+                  ? 'Must be more than 1 character'
+                  : undefined}
+          </p>
+          <textarea
+            className={styles.textarea}
             {...register('Message', {
               required: true,
               minLength: 2,
@@ -127,25 +131,26 @@ function ContactUsForm({ subscribe, setResponseMessage, getReCaptchaToken }) {
             })}
             placeholder='Write your message here'
           />
-          <S.ErrorMsg>
+          <p className={styles['error-msg']}>
             {errors.Message?.type === 'required'
               ? 'Message is required'
               : errors.Message?.type === 'pattern'
-              ? 'No whitespace'
-              : errors.Message?.type === 'minLength'
-              ? 'Must be more than 1 character'
-              : undefined}
-          </S.ErrorMsg>
-          <S.SubscribeWrapper>
-            <S.SubscribeInput
+                ? 'No whitespace'
+                : errors.Message?.type === 'minLength'
+                  ? 'Must be more than 1 character'
+                  : undefined}
+          </p>
+          <div className={styles['subscribe-wrapper']}>
+            <input
+              className={styles['subscribe-input']}
               type='checkbox'
               placeholder='Subscribe to our DevNews!'
               {...register('Subscribe', {})}
             />
             Subscribe to our DevNews!
-          </S.SubscribeWrapper>
+          </div>
           <SubmitButton label='Submit' disabled={isSubmitting} />
-        </S.Form>
+        </form>
       </Container>
     </RevealContentContainer>
   );
