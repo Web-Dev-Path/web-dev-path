@@ -3,10 +3,8 @@ import TwoColumn from '@/components/containers/TwoColumn';
 import AuthorBio from '@/components/blog/AuthorBio';
 import RelatedOrLatestPosts from '@/components/blog/RelatedPosts';
 import PostContent from '@/components/blog/PostContent';
-import { useTheme } from 'styled-components';
 
 const BlogPostContainer = ({ post, relatedPosts, latestPosts }) => {
-  const theme = useTheme();
   const { user } = post;
   return (
     <>
@@ -28,8 +26,8 @@ const BlogPostContainer = ({ post, relatedPosts, latestPosts }) => {
           content='Feel free to contact us.'
           image='/images/svg/square-brackets.svg'
           altTag='Hashtag'
-          color={theme.colors.primaryContent}
-          bgColor={theme.colors.white}
+          color='#292929' // Temporarily set static values, to prevent breaking TwoColumn components.
+          bgColor='#ffffff' // We might remove these two props when we implement our own ThemeProvider.
           $contentType='questions'
           link='/contact'
           linkText='Contact us'
