@@ -156,5 +156,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Updated husky script to avoid warning
 
 ### Changed
-- Started migrating styles from Styled Components to CSS Modules (ContactUsCard)
-- CSS Modules Migration for ButtonLink,SubmitButton, AuthorBio
+
+- Migrating styles from Styled Components to CSS Modules
+  - ContactUsCard
+  - ContactUsForm
+  - ButtonLink
+  - SubmitButton
+  - AuthorBio
+  
+- Updated ContactUsForm's checkbox wrapper from div to label to enhance its accessibility
