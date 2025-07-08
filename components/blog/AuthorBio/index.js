@@ -1,18 +1,18 @@
-import S from './styles';
+import styles from './AuthorBio.module.scss';
 import Image from 'next/image';
 import Container from '@/components/containers/Container';
 export default function AuthorBio({ user }) {
   return (
-    <S.GreyBG>
+    <div className={styles['grey-bg']}>
       <Container>
         <h3>Author Bio</h3>
-        <S.FlexContainer>
-          <S.ImageWrapper>
+        <div className={styles['flex-container']}>
+          <div className={styles['image-wrapper']}>
             <Image src={user.profile_image} alt="Author's profile" fill />
-          </S.ImageWrapper>
-          <S.SplitContainer>
+          </div>
+          <div className={styles['split-container']}>
             <p>{user.summary}</p>
-            <S.LogosContainer>
+            <div className={styles['logos-container']}>
               {user.twitter_username && (
                 <a
                   href={`https://x.com/${user.twitter_username}`}
@@ -67,10 +67,10 @@ export default function AuthorBio({ user }) {
                   width={48}
                 />
               </a>
-            </S.LogosContainer>
-          </S.SplitContainer>
-        </S.FlexContainer>
+            </div>
+          </div>
+        </div>
       </Container>
-    </S.GreyBG>
+    </div>
   );
 }
