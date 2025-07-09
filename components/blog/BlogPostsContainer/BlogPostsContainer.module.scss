@@ -1,0 +1,71 @@
+@use '@/styles/mixins' as *;
+@use '@/styles/variables' as *;
+
+.blogContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 3rem 0;
+}
+
+.postContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 3rem;
+
+  @include tablet {
+    justify-content: flex-start;
+  }
+
+  & > div {
+    @include desktop {
+      flex-basis: 48%;
+    }
+  }
+
+  @include large-desktop {
+    flex-basis: 32%;
+  }
+
+  // I'm not sure why we have this, but it seems unecessary since it doesn't affect the layout.
+  // It might be a legacy feature or I might be wrong.
+
+  // &::after {
+  //   @include tablet {
+  //     content: '';
+  //     flex: auto;
+  //   }
+
+  //   @include desktop {
+  //     content: unset;
+  //   }
+  // }
+}
+
+.bottomLink {
+  font-size: 1.5rem;
+  font-weight: bold;
+  position: relative;
+  display: block;
+  text-align: center;
+}
+
+.viewAllBottomLink {
+  @extend .bottomLink;
+  top: -3rem;
+
+  @include desktop {
+    float: right;
+    top: -5rem;
+  }
+}
+
+.backBottomLink {
+  @extend .bottomLink;
+  top: -2rem;
+
+  @include desktop {
+    float: left;
+    top: -1rem;
+  }
+}
