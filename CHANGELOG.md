@@ -163,5 +163,5 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   - ButtonLink
   - SubmitButton
   - AuthorBio
-  
+  - RevealContentContainer
 - Updated ContactUsForm's checkbox wrapper from div to label to enhance its accessibility

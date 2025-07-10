@@ -1,0 +1,10 @@
+@use '@/styles/mixins' as *;
+
+.sectionHidden {
+  opacity: 0;
+  transform: translateY(8rem);
+}
+
+.revealContainerWrapper {
+  @include transition(transform 1s, opacity 1s);
+}
