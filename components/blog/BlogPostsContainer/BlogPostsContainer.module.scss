@@ -26,20 +26,6 @@
   @include large-desktop {
     flex-basis: 32%;
   }
-
-  // I'm not sure why we have this, but it seems unecessary since it doesn't affect the layout.
-  // It might be a legacy feature or I might be wrong.
-
-  // &::after {
-  //   @include tablet {
-  //     content: '';
-  //     flex: auto;
-  //   }
-
-  //   @include desktop {
-  //     content: unset;
-  //   }
-  // }
 }
 
 .bottomLink {
