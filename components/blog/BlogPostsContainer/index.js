@@ -1,10 +1,11 @@
+import Link from 'next/link';
 import { BlogCardsColumns } from '@/components/containers/CardColumns/BlogCardsColumns';
 import { BlogCard } from '@/components/containers/Card/BlogCard';
 import Title from '@/components/snippets/Title';
 import RevealContentContainer from '@/components/containers/RevealContentContainer';
-import S from './styles';
 import { tagToHeading } from '@/utils/blogCategories';
 import Container from '@/components/containers/Container';
+import styles from './BlogPostsContainer.module.scss';
 
 const BlogPostsContainer = ({
   posts,
@@ -24,7 +25,7 @@ const BlogPostsContainer = ({
 
   return (
     <RevealContentContainer>
-      <S.BlogContainer>
+      <section className={styles.blogContainer}>
         {heading ? (
           <Container>
             <Title title={heading} />
@@ -34,40 +35,41 @@ const BlogPostsContainer = ({
             <Title title={tagToHeading[tag]} />
           </Container>
         ) : null}
-        {
-          swipe ? (
-            <>
-              {[posts.slice(0,6)].map((p, index) => (
-                <BlogCardsColumns key={index} cards={p} />
+        {swipe ? (
+          <>
+            {[posts.slice(0, 6)].map((p, index) => (
+              <BlogCardsColumns key={index} cards={p} />
+            ))}
+          </>
+        ) : (
+          <Container>
+            <div className={styles.postContainer}>
+              {posts?.map((p, index) => (
+                <BlogCard $cardType='blog' key={index} card={p} />
               ))}
-            </>
-          ) : (
-            <Container>
-              <S.PostContainer>
-                {posts?.map((p, index) => (
-                  <BlogCard $cardType='blog' key={index} card={p} />
-                ))}
-              </S.PostContainer>
-            </Container>
-          )
-        }
+            </div>
+          </Container>
+        )}
 
         {viewall && posts.length >= 3 ? (
           <Container>
-            <S.ViewAllBottomLink
+            <Link
               href={tag ? `/blog/category/${tag}` : '/blog/category/all'}
+              className={styles.viewAllBottomLink}
             >
               view all
-            </S.ViewAllBottomLink>
+            </Link>
           </Container>
         ) : null}
 
         {back ? (
           <Container>
-            <S.BackBottomLink href={`/blog`}>&#60; back</S.BackBottomLink>
+            <Link href={`/blog`} className={styles.backBottomLink}>
+              &#60; back
+            </Link>
           </Container>
         ) : null}
-      </S.BlogContainer>
+      </section>
     </RevealContentContainer>
   );
 };
