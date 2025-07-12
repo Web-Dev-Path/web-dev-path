@@ -1,0 +1,37 @@
+@use '@/styles/mixins' as *;
+
+.searchBar {
+  display: flex;
+  justify-content: space-between;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  border: 0;
+  box-shadow: 2px 4px 8px 3px var(--color-box-shadow);
+  font-size: 1.2rem;
+  width: 100%;
+  margin-top: 3rem;
+
+  @include desktop {
+    width: 24rem;
+    margin: unset;
+  }
+}
+
+.searchInput {
+  height: 100%;
+  border: 0;
+  padding-left: 1rem;
+  width: 100%;
+}
+
+.submitButton {
+  text-indent: -999px;
+  overflow: hidden;
+  width: 1.5rem;
+  border: 1px solid var(--color-transparent);
+  background: url('/images/svg/search.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0.5rem 1rem 0.5rem 1rem;
+  cursor: pointer;
+}
