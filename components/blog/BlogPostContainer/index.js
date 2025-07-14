@@ -24,8 +24,8 @@ const BlogPostContainer = ({ post, relatedPosts, latestPosts }) => {
         <TwoColumn
           title='Still got questions?'
           content='Feel free to contact us.'
-          image='/images/svg/square-brackets.svg'
-          altTag='Hashtag'
+          image='/images/svg/square-brackets.svg' // Decorative Image
+          altTag='' // Intentionally left empty to comply with W3C accessibility standards.
           $contentType='questions'
           link='/contact'
           linkText='Contact us'
