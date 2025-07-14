@@ -1,17 +1,14 @@
-import styled, { css } from 'styled-components';
-
-const P = styled.p`
+.subtitle {
   font-size: 2rem;
   font-style: italic;
   text-align: left;
   line-height: normal;
   margin: 2rem 0;
-`;
-const SubTitle = styled(P)``;
+}
 
-const ContentContainer = styled.div`
+.contentContainer {
   a {
-    color: ${({ theme }) => theme.colors.blue};
+    color: var(--color-blue);
   }
   .article-body-image-wrapper {
     display: flex;
@@ -44,29 +41,23 @@ const ContentContainer = styled.div`
     font-size: 1rem;
     padding: 1rem;
     border-radius: 0.5rem;
-    background-color: ${({ theme }) => theme.colors.black};
-    color: ${({ theme }) => theme.colors.white};
+    background-color: var(--color-black);
+    color: var(--color-white);
     overflow-x: scroll;
   }
   .highlight__panel-action.js-fullscreen-code-action {
     display: none;
   }
-`;
+}
 
-const ImageWrapper = styled.div`
+.imageWrapper {
   position: relative;
   max-width: 828px;
   height: 348px;
   margin: 0 auto;
   img {
-    border-color: ${({ theme }) => theme.colors.darkGrey};
+    border-color: var(--color-dark-grey);
     border-radius: 10px;
     object-fit: contain;
   }
-`;
-
-export default {
-  SubTitle,
-  ContentContainer,
-  ImageWrapper,
-};
+}
