@@ -26,8 +26,6 @@ const BlogPostContainer = ({ post, relatedPosts, latestPosts }) => {
           content='Feel free to contact us.'
           image='/images/svg/square-brackets.svg'
           altTag='Hashtag'
-          color='#292929' // Temporarily set static values, to prevent breaking TwoColumn components.
-          bgColor='#ffffff' // We might remove these two props when we implement our own ThemeProvider.
           $contentType='questions'
           link='/contact'
           linkText='Contact us'
