@@ -26,7 +26,7 @@
 .Name {
   font-style: italic;
   font-family: var(--font-heading);
-  font-size: 1.5rem !important;
+  font-size: 1.5rem;
   color: var(--color-primary-content);
   margin-bottom: 0px;
   line-height: unset;
@@ -34,19 +34,11 @@
 
 %headingStyle {
   font-family: var(--font-heading);
-  font-size: 1rem !important;
+  font-size: 1rem;
   color: var(--color-primary-content);
   text-align: left;
   line-height: normal;
-  margin: 0px !important;
-
-  @include tablet {
-    font-size: 2rem;
-  }
-}
-
-.H3 {
-  @extend %headingStyle;
+  margin: 0px;
 }
 
 .Title {
@@ -63,13 +55,13 @@
 }
 
 .Paragraph {
-  font-size: 1rem !important;
+  font-size: 1rem;
   text-align: left;
   line-height: normal;
 }
 
 .LinkWrapper {
-  font-size: 1rem !important;
+  font-size: 1rem;
   display: flex;
   flex-direction: row;
   justify-content: left;
