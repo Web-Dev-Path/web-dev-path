@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import S from './styles';
+import styles from './Member.module.scss';
 
 export default function Member({
   image,
@@ -11,19 +11,19 @@ export default function Member({
   portfolio,
 }) {
   return (
-    <S.Card>
+    <div className={styles.Card}>
       {image && (
-        <S.ImageWrapper>
+        <div className={styles.ImageWrapper}>
           <Image src={image} alt={name} fill />
-        </S.ImageWrapper>
+        </div>
       )}
 
-      <S.Name>{name}</S.Name>
-      <S.Title>{title}</S.Title>
-      <S.Position>{position}</S.Position>
-      <S.Content>
+      <h2 className={styles.Name}>{name}</h2>
+      <h3 className={styles.Title}>{title}</h3>
+      <h3 className={styles.Position}>{position}</h3>
+      <div className={styles.Content}>
         {linkedIn && (
-          <S.LinkWrapper>
+          <div className={styles.LinkWrapper}>
             <Image
               src='/images/svg/linkedin-portfolio.svg'
               alt='LinkedIn'
@@ -37,10 +37,10 @@ export default function Member({
             >
               {linkedIn}
             </a>
-          </S.LinkWrapper>
+          </div>
         )}
         {portfolio && (
-          <S.LinkWrapper>
+          <div className={styles.LinkWrapper}>
             <Image
               src='/images/svg/globe.svg'
               alt='Web Site'
@@ -54,11 +54,11 @@ export default function Member({
             >
               {portfolio}
             </a>
-          </S.LinkWrapper>
+          </div>
         )}
 
-        <S.Paragraph>{about}</S.Paragraph>
-      </S.Content>
-    </S.Card>
+        <p className={styles.Paragraph}>{about}</p>
+      </div>
+    </div>
   );
 }
