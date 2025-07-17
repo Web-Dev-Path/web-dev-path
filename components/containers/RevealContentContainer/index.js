@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useIntersect } from '@/hooks/useIntersect';
-import S from './styles';
+import styles from './RevealContentContainer.module.scss';
 
 const RevealContentContainer = ({ children }) => {
   const [ref, entry] = useIntersect({});
@@ -15,9 +15,16 @@ const RevealContentContainer = ({ children }) => {
   }, [entry.isIntersecting]);
 
   return (
-    <S.RevealContainerWrapper ref={ref} $hiddenStyle={hiddenStyle}>
+    <div
+      ref={ref}
+      className={
+        hiddenStyle
+          ? `${styles.revealContainerWrapper} ${styles.sectionHidden}`
+          : styles.revealContainerWrapper
+      }
+    >
       {children}
-    </S.RevealContainerWrapper>
+    </div>
   );
 };
 
