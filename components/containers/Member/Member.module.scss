@@ -1,6 +1,6 @@
 @use '@/styles/mixins' as *;
 
-.Card {
+.card {
   margin: 1rem 1rem 0 0.5rem;
   padding: 1rem;
   border-radius: 1.5rem;
@@ -23,7 +23,7 @@
   }
 }
 
-.Name {
+.name {
   font-style: italic;
   font-family: var(--font-heading);
   font-size: 1.5rem;
@@ -41,26 +41,26 @@
   margin: 0px;
 }
 
-.Title {
+.title {
   @extend %headingStyle;
 }
 
-.Position {
+.position {
   @extend %headingStyle;
 }
 
-.Content {
+.content {
   align-items: center;
   margin: auto;
 }
 
-.Paragraph {
+.paragraph {
   font-size: 1rem;
   text-align: left;
   line-height: normal;
 }
 
-.LinkWrapper {
+.linkWrapper {
   font-size: 1rem;
   display: flex;
   flex-direction: row;
@@ -78,7 +78,7 @@
   }
 }
 
-.ImageWrapper {
+.imageWrapper {
   min-width: 10rem;
   min-height: 10rem;
   position: relative;

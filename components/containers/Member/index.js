@@ -11,19 +11,19 @@ export default function Member({
   portfolio,
 }) {
   return (
-    <div className={styles.Card}>
+    <div className={styles.card}>
       {image && (
-        <div className={styles.ImageWrapper}>
+        <div className={styles.imageWrapper}>
           <Image src={image} alt={name} fill />
         </div>
       )}
 
-      <h2 className={styles.Name}>{name}</h2>
-      <h3 className={styles.Title}>{title}</h3>
-      <h3 className={styles.Position}>{position}</h3>
-      <div className={styles.Content}>
+      <h2 className={styles.name}>{name}</h2>
+      <h3 className={styles.title}>{title}</h3>
+      <h3 className={styles.position}>{position}</h3>
+      <div className={styles.content}>
         {linkedIn && (
-          <div className={styles.LinkWrapper}>
+          <div className={styles.linkWrapper}>
             <Image
               src='/images/svg/linkedin-portfolio.svg'
               alt='LinkedIn'
@@ -40,7 +40,7 @@ export default function Member({
           </div>
         )}
         {portfolio && (
-          <div className={styles.LinkWrapper}>
+          <div className={styles.linkWrapper}>
             <Image
               src='/images/svg/globe.svg'
               alt='Web Site'
@@ -57,7 +57,7 @@ export default function Member({
           </div>
         )}
 
-        <p className={styles.Paragraph}>{about}</p>
+        <p className={styles.paragraph}>{about}</p>
       </div>
     </div>
   );
