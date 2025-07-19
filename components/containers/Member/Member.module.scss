@@ -1,4 +1,5 @@
 @use '@/styles/mixins' as *;
+@use '@/styles/variables' as *;
 
 .card {
   margin: 1rem 1rem 0 0.5rem;
@@ -25,7 +26,7 @@
 
 .name {
   font-style: italic;
-  font-family: var(--font-heading);
+  font-family: $heading-font;
   font-size: 1.5rem;
   color: var(--color-primary-content);
   margin-bottom: 0px;
@@ -33,7 +34,7 @@
 }
 
 %headingStyle {
-  font-family: var(--font-heading);
+  font-family: $heading-font;
   font-size: 1rem;
   color: var(--color-primary-content);
   text-align: left;
