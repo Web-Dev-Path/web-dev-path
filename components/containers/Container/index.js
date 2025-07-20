@@ -1,8 +1,8 @@
 import styles from './Container.module.scss';
 
-export default function Container({ className, children, _styles }) {
+export default function Container({ className, children, style }) {
   return (
-    <div className={`${styles.container} ${className || ''}`} style={_styles}>
+    <div className={`${styles.container} ${className || ''}`} style={style}>
       {children}
     </div>
   );
