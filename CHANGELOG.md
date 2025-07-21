@@ -163,12 +163,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   - ButtonLink
   - SubmitButton
   - AuthorBio
+  - BlogTag
   - PostContent
   - SearchBar
   - BlogPostsContainer
   - RevealContentContainer
   - Member
   - Container
-  
 - Updated ContactUsForm's checkbox wrapper from div to label to enhance its accessibility
 - Updated SearchInput width to 100% for better styling 
