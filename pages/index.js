@@ -3,6 +3,7 @@ import { CardsColumns } from '@/components/containers/CardColumns';
 import S from '@/styles/pages/homeStyles';
 import RevealContentContainer from '@/components/containers/RevealContentContainer';
 import { useTheme } from 'styled-components';
+// import { colorBgLight } from '@/styles/_colors.scss';
 
 export default function Home() {
   const theme = useTheme();
@@ -16,7 +17,6 @@ export default function Home() {
           content='Web Dev Path is an open-source initiative that provides hands-on experience in a simulated professional environment to people who seek to begin or move forward in their web development journey.'
           link='/about'
           customBtnClass='inverted-grey'
-          bgColor={theme.colors.lightBg}
         />
       </RevealContentContainer>
 

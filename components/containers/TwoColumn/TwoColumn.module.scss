@@ -1,0 +1,231 @@
+@use 'styles' as *;
+
+.wrapper {
+  align-self: stretch;
+
+  .inner {
+    padding: 5rem 0;
+    margin: 0 auto;
+    width: 90%;
+    max-width: $large-desktop-breakpoint;
+
+    .innerContent {
+      margin-bottom: 5rem;
+      @include desktop {
+        flex-basis: 50%;
+        margin-bottom: 0;
+      }
+
+      .title {
+        font-weight: bold;
+        color: var(--color-primary-content);
+        margin: 0;
+      }
+
+      .content {
+        display: flex;
+        align-items: center;
+        margin: 3.875rem 0 2.5rem;
+        max-width: 39rem;
+        font-size: 1.5rem;
+        line-height: 1.938rem;
+
+        a {
+          text-decoration: underline;
+          text-underline-offset: 2px;
+
+          &:hover {
+            opacity: 0.6;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    .innerImage {
+      width: 100%;
+      height: 34rem;
+      position: relative;
+
+      @include desktop {
+        width: 25rem;
+      }
+
+      .img {
+        border-radius: 0.25rem;
+        object-fit: cover;
+      }
+    }
+
+    // Homepage
+
+    &.get-involved {
+      @include desktop-breakpoint-minus {
+        padding-bottom: 0;
+      }
+    }
+
+    &.non-profit {
+      @include desktop-breakpoint-minus {
+        .innerContent {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    // end Homepage
+
+    // About page
+
+    &.our-process,
+    &.get-started,
+    &.our-purpose,
+    &.our-background,
+    &.questions {
+      .innerImage {
+        height: 10rem;
+        .img {
+          object-fit: contain;
+        }
+      }
+    }
+
+    &.our-background {
+      .innerImage {
+        @include desktop {
+          height: 15rem;
+        }
+      }
+    }
+
+    &.our-process {
+      .innerImage {
+        @include desktop {
+          height: 12rem;
+        }
+      }
+    }
+
+    &.our-purpose {
+      .innerImage {
+        @include desktop {
+          height: 18rem;
+        }
+      }
+    }
+
+    &.get-started {
+      .innerImage {
+        @include desktop {
+          height: 20rem;
+        }
+      }
+    }
+
+    &.questions {
+      .innerImage {
+        @include desktop {
+          height: 13rem;
+        }
+      }
+    }
+
+    &.wanna-learn-more {
+      .content {
+        margin: 0;
+      }
+
+      .innerImage {
+        height: 10rem;
+
+        @include desktop {
+          height: 15rem;
+        }
+
+        .img {
+          object-fit: contain;
+        }
+      }
+    }
+
+    &.two-text-columns {
+      justify-content: space-evenly;
+
+      .inner {
+        padding: 0;
+        margin: 0;
+      }
+
+      .innerContent {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      h2 {
+        font-size: 2rem;
+        line-height: 2.5rem;
+      }
+
+      .inner {
+        margin: 0;
+        padding: 0;
+      }
+
+      .innerContent {
+        flex-basis: unset;
+
+        @include desktop {
+          width: 25rem;
+        }
+      }
+
+      a {
+        margin-top: auto;
+        color: var(--color-light-bg);
+      }
+
+      a:hover {
+        color: var(--color-primary-content);
+      }
+    }
+
+    &.second-text-column {
+      height: 100%;
+      width: 100%;
+
+      .inner {
+        height: 100%;
+      }
+
+      .innerContent {
+        height: 100%;
+      }
+    }
+
+    &.get-started,
+    &.questions {
+      padding-bottom: 0;
+      .innerImage {
+        display: none;
+
+        @include desktop {
+          display: unset;
+        }
+      }
+
+      @include desktop {
+        padding-bottom: 5rem;
+      }
+    }
+
+    // end About page
+
+    @include desktop {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+  }
+}
