@@ -123,6 +123,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Added theming to the project
 - Created single blog post page
 - Connected Dev.to API with single post UI
+- Added Shayla to 'about us'
 
 ### Fixed
 
@@ -171,5 +172,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   - Member
   - Container
 - Updated ContactUsForm's checkbox wrapper from div to label to enhance its accessibility
+- Updated SearchInput width to 100% for better styling
 - Updated SearchInput width to 100% for better styling 
 - Extracted :root from themes.scss to globals.scss 
+
+
+
