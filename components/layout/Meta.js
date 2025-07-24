@@ -5,7 +5,7 @@ import Script from 'next/script';
 
 export default function Meta() {
   const currentPath = usePathname();
-  const firstSegment = '/' + currentPath.split('/')[1];
+  const firstSegment = '/' + currentPath.split('/')[1] || [];
   const meta =
     firstSegment in pageMeta ? pageMeta[firstSegment] : pageMeta['/'];
   return (
