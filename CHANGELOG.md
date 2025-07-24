@@ -123,7 +123,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Added theming to the project
 - Created single blog post page
 - Connected Dev.to API with single post UI
-- Added Shayla to 'about us'
 
 ### Fixed
 
@@ -151,10 +150,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Added Faith to 'about us'
 - Updated Mariana's title in 'about us'
 - Updated outdated dependencies
+- Added Shayla to 'about us'
 
 ### Fixed
 
 - Updated husky script to avoid warning
+- Resolved incorrect meta tag rendering for nested routes
 
 ### Changed
 
