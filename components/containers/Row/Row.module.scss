@@ -1,15 +1,4 @@
-@use '@/styles/mixins' as *;
-
 .row {
-  display: flex;
-  flex-wrap: wrap;
-
-  @include desktop-breakpoint-minus {
-    justify-content: space-between;
-  }
-}
-
-.rowAlignLeft {
   display: flex;
   flex-wrap: wrap;
   justify-content: left;
