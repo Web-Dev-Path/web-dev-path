@@ -172,6 +172,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   - RevealContentContainer
   - Member
   - Container
-- Updated ContactUsForm's checkbox wrapper from div to label to enhance its accessibility
-- Updated SearchInput width to 100% for better styling
-- Reverted the prop name to styles in Container component as the change of the name introduced a styling bug 
+  - Updated ContactUsForm's checkbox wrapper from div to label to enhance its accessibility
+  - Updated SearchInput width to 100% for better styling
+  - Reverted the prop name to styles in Container component as the change of the name introduced a styling bug 
+  - Extracted :root from themes.scss to globals.scss 
+
