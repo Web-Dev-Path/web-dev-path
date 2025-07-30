@@ -150,21 +150,32 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Added Faith to 'about us'
 - Updated Mariana's title in 'about us'
 - Updated outdated dependencies
+- Added Shayla to 'about us'
 
 ### Fixed
 
 - Updated husky script to avoid warning
+- Resolved incorrect meta tag rendering for nested routes
 
 ### Changed
 
 - Migrating styles from Styled Components to CSS Modules
-  - ContactUsCard
   - ContactUsForm
   - ButtonLink
   - SubmitButton
   - AuthorBio
+  - BlogTag
+  - PostContent
+  - SearchBar
+  - BlogPostsContainer
   - BlogPostContainer
+  - RevealContentContainer
+  - Member
+  - Container
+  - Extracted :root from themes.scss to globals.scss 
 - Updated ContactUsForm's checkbox wrapper from div to label to enhance its accessibility
+- Updated SearchInput width to 100% for better styling
+- Updated the prop name to propStyles in Container component to fix the name conflict that introduced a styling bug
 - Updated altTag from TwoColumns component to comply with W3C standards
   - BlogPostContainer
   - about page
