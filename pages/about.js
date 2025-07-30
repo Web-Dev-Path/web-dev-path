@@ -4,7 +4,7 @@ import { OurGoalsCardsColumns } from '@/components/containers/CardColumns/OurGoa
 import Title from '@/components/snippets/Title';
 import Wrapper from '@/components/containers/Wrapper';
 import Container from '@/components/containers/Container';
-import { RowAlignLeft } from '@/components/containers/Row';
+import { Row } from '@/components/containers/Row';
 import Member from '@/components/containers/Member';
 import { whoWeAre } from '@/utils/about';
 import { useTheme } from 'styled-components';
@@ -230,7 +230,7 @@ export default function AboutUs() {
         <Wrapper customClass='primary__accent'>
           <Container>
             <Title title='Who we are' />
-            <RowAlignLeft>
+            <Row>
               {whoWeAre.map(_ => {
                 return (
                   <Member
@@ -245,7 +245,7 @@ export default function AboutUs() {
                   />
                 );
               })}
-            </RowAlignLeft>
+            </Row>
           </Container>
         </Wrapper>
       </RevealContentContainer>
