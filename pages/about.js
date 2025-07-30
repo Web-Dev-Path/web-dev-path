@@ -31,7 +31,7 @@ export default function AboutUs() {
           }
           rowOrder='row'
           image='/images/svg/square-brackets.svg'
-          altTag='Square Brackets'
+          altTag=''
           color={theme.colors.primaryContent}
           bgColor={theme.colors.primaryAccent}
           $contentType='our-background'
@@ -72,7 +72,7 @@ export default function AboutUs() {
           }
           rowOrder='row-reverse'
           image='/images/svg/open-angle-bracket.svg'
-          altTag='Open angle bracket'
+          altTag=''
           color={theme.colors.primaryContent}
           bgColor={theme.colors.white}
           $contentType='our-process'
@@ -94,7 +94,7 @@ export default function AboutUs() {
             </div>
           }
           image='/images/svg/close-angle-bracket.svg'
-          altTag='close-angle-bracket'
+          altTag=''
           color={theme.colors.primaryContent}
           bgColor={theme.colors.white}
           $contentType='our-process'
@@ -137,7 +137,7 @@ export default function AboutUs() {
           }
           rowOrder='row-reverse'
           image='/images/svg/semi-colon.svg'
-          altTag='Semi-colon'
+          altTag=''
           color={theme.colors.primaryContent}
           bgColor={theme.colors.white}
           $contentType='our-purpose'
@@ -148,7 +148,7 @@ export default function AboutUs() {
           title='Wanna learn more?'
           content={''}
           image='/images/svg/close-curly-bracket.svg'
-          altTag='Close curly bracket'
+          altTag=''
           color={theme.colors.primaryContent}
           bgColor={theme.colors.lightBg}
           $contentType='wanna-learn-more'
@@ -217,7 +217,7 @@ export default function AboutUs() {
           }
           rowOrder='row-reverse'
           image='/images/svg/slash.svg'
-          altTag='Slash'
+          altTag=''
           color={theme.colors.primaryContent}
           bgColor={theme.colors.white}
           $contentType='get-started'
@@ -254,7 +254,7 @@ export default function AboutUs() {
           title='Still got questions?'
           content='Feel free to contact us.'
           image='/images/svg/hashtag.svg'
-          altTag='Hashtag'
+          altTag=''
           color={theme.colors.primaryContent}
           bgColor={theme.colors.white}
           $contentType='questions'
