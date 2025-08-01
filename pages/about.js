@@ -7,11 +7,8 @@ import Container from '@/components/containers/Container';
 import { Row } from '@/components/containers/Row';
 import Member from '@/components/containers/Member';
 import { whoWeAre } from '@/utils/about';
-import { useTheme } from 'styled-components';
 
 export default function AboutUs() {
-  const theme = useTheme();
-
   return (
     <div className='about-us'>
       <RevealContentContainer>
@@ -32,9 +29,9 @@ export default function AboutUs() {
           rowOrder='row'
           image='/images/svg/square-brackets.svg'
           altTag='Square Brackets'
-          color={theme.colors.primaryContent}
-          bgColor={theme.colors.primaryAccent}
-          $contentType='our-background'
+          color='var(--color-primary-content)'
+          bgColor='var(--color-primary-accent)'
+          customInnerClass='our-background'
         />
       </RevealContentContainer>
 
@@ -73,9 +70,9 @@ export default function AboutUs() {
           rowOrder='row-reverse'
           image='/images/svg/open-angle-bracket.svg'
           altTag='Open angle bracket'
-          color={theme.colors.primaryContent}
-          bgColor={theme.colors.white}
-          $contentType='our-process'
+          color='var(--color-primary-content)'
+          bgColor='var(--color-white)'
+          customInnerClass='our-process'
         />
         <TwoColumn
           title='Version control'
@@ -95,9 +92,9 @@ export default function AboutUs() {
           }
           image='/images/svg/close-angle-bracket.svg'
           altTag='close-angle-bracket'
-          color={theme.colors.primaryContent}
-          bgColor={theme.colors.white}
-          $contentType='our-process'
+          color='var(--color-primary-content)'
+          bgColor='var(--color-white)'
+          customInnerClass='our-process'
         />
       </RevealContentContainer>
       <RevealContentContainer>
@@ -138,9 +135,9 @@ export default function AboutUs() {
           rowOrder='row-reverse'
           image='/images/svg/semi-colon.svg'
           altTag='Semi-colon'
-          color={theme.colors.primaryContent}
-          bgColor={theme.colors.white}
-          $contentType='our-purpose'
+          color='var(--color-primary-content)'
+          bgColor='var(--color-white)'
+          customInnerClass='our-purpose'
         />
       </RevealContentContainer>
       <RevealContentContainer>
@@ -149,9 +146,9 @@ export default function AboutUs() {
           content={''}
           image='/images/svg/close-curly-bracket.svg'
           altTag='Close curly bracket'
-          color={theme.colors.primaryContent}
-          bgColor={theme.colors.lightBg}
-          $contentType='wanna-learn-more'
+          color='var(--color-primary-content)'
+          bgColor='var(--color-light-bg)'
+          customInnerClass='wanna-learn-more'
         />
         <TwoColumn
           title='Junior Developers'
@@ -166,9 +163,9 @@ export default function AboutUs() {
           openNewTab
           link='https://github.com/Web-Dev-Path/web-dev-path/wiki'
           customBtnClass='inverted-grey'
-          color={theme.colors.primaryContent}
-          bgColor={theme.colors.lightBg}
-          $contentType='two-text-columns'
+          color='var(--color-primary-content)'
+          bgColor='var(--color-light-bg)'
+          customInnerClass='two-text-columns'
           secondTextColumn={
             <TwoColumn
               title='Experienced Developers'
@@ -181,9 +178,9 @@ export default function AboutUs() {
               linkText='Contact us'
               link='/contact'
               customBtnClass='inverted-grey'
-              color={theme.colors.primaryContent}
-              bgColor={theme.colors.lightBg}
-              $contentType='second-text-column'
+              color='var(--color-primary-content)'
+              bgColor='var(--color-light-bg)'
+              customInnerClass='second-text-column'
             />
           }
         />
@@ -218,9 +215,9 @@ export default function AboutUs() {
           rowOrder='row-reverse'
           image='/images/svg/slash.svg'
           altTag='Slash'
-          color={theme.colors.primaryContent}
-          bgColor={theme.colors.white}
-          $contentType='get-started'
+          color='var(--color-primary-content)'
+          bgColor='var(--color-white)'
+          customInnerClass='get-started'
           link='mailto:hello@webdevpath.co'
           linkText='Ping us'
           customBtnClass='inverted-grey'
@@ -255,12 +252,12 @@ export default function AboutUs() {
           content='Feel free to contact us.'
           image='/images/svg/hashtag.svg'
           altTag='Hashtag'
-          color={theme.colors.primaryContent}
-          bgColor={theme.colors.white}
-          $contentType='questions'
+          color='var(--color-primary-content)'
+          bgColor='var(--color-white)'
           link='/contact'
           linkText='Contact us'
           customBtnClass='inverted-grey'
+          customInnerClass='questions'
         />
       </RevealContentContainer>
     </div>
