@@ -1,6 +1,5 @@
-import ButtonLink from '@/components/buttons/ButtonLink';
-// import TwoColumnStyles from './styles';
 import styles from './TwoColumn.module.scss';
+import ButtonLink from '@/components/buttons/ButtonLink';
 import Container from '@/components/containers/Container';
 import Image from 'next/image';
 
@@ -50,12 +49,12 @@ export default function TwoColumn({
             </ButtonLink>
           )}
         </div>
-        {secondTextColumn && secondTextColumn}
-        {!secondTextColumn && image && (
-          <div className={styles.inner__image}>
-            <Image className={styles.img} src={image} alt={altTag} fill />
-          </div>
-        )}
+        {secondTextColumn ||
+          (image && (
+            <div className={styles.inner__image}>
+              <Image className={styles.img} src={image} alt={altTag} fill />
+            </div>
+          ))}
       </Container>
     </section>
   );

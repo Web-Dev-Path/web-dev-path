@@ -17,7 +17,6 @@
 
       .title {
         font-weight: bold;
-        //color: $primary-content-color;
         margin: 0;
       }
 
@@ -151,8 +150,8 @@
       justify-content: space-evenly;
 
       .inner {
-        padding: 0px;
-        margin: 0px;
+        padding: 0;
+        margin: 0;
       }
 
       .inner__content {
@@ -167,8 +166,8 @@
       }
 
       .inner {
-        margin: 0px;
-        padding: 0px;
+        margin: 0;
+        padding: 0;
       }
 
       .inner__content {
@@ -177,15 +176,6 @@
         @include desktop {
           width: 25rem;
         }
-      }
-
-      a {
-        margin-top: auto;
-        //color: $light-bg-color;
-      }
-
-      a:hover {
-        //color: $primary-content-color;
       }
     }
 
@@ -204,7 +194,7 @@
 
     &.get-started,
     &.questions {
-      padding-bottom: 0px;
+      padding-bottom: 0;
       .inner__image {
         display: none;
 
