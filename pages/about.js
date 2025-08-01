@@ -34,7 +34,7 @@ export default function AboutUs() {
           altTag='Square Brackets'
           color={theme.colors.primaryContent}
           bgColor={theme.colors.primaryAccent}
-          $contentType='our-background'
+          customInnerClass='our-background'
         />
       </RevealContentContainer>
 
@@ -75,7 +75,7 @@ export default function AboutUs() {
           altTag='Open angle bracket'
           color={theme.colors.primaryContent}
           bgColor={theme.colors.white}
-          $contentType='our-process'
+          customInnerClass='our-process'
         />
         <TwoColumn
           title='Version control'
@@ -97,7 +97,7 @@ export default function AboutUs() {
           altTag='close-angle-bracket'
           color={theme.colors.primaryContent}
           bgColor={theme.colors.white}
-          $contentType='our-process'
+          customInnerClass='our-process'
         />
       </RevealContentContainer>
       <RevealContentContainer>
@@ -140,7 +140,7 @@ export default function AboutUs() {
           altTag='Semi-colon'
           color={theme.colors.primaryContent}
           bgColor={theme.colors.white}
-          $contentType='our-purpose'
+          customInnerClass='our-purpose'
         />
       </RevealContentContainer>
       <RevealContentContainer>
@@ -151,7 +151,7 @@ export default function AboutUs() {
           altTag='Close curly bracket'
           color={theme.colors.primaryContent}
           bgColor={theme.colors.lightBg}
-          $contentType='wanna-learn-more'
+          customInnerClass='wanna-learn-more'
         />
         <TwoColumn
           title='Junior Developers'
@@ -168,7 +168,7 @@ export default function AboutUs() {
           customBtnClass='inverted-grey'
           color={theme.colors.primaryContent}
           bgColor={theme.colors.lightBg}
-          $contentType='two-text-columns'
+          customInnerClass='two-text-columns'
           secondTextColumn={
             <TwoColumn
               title='Experienced Developers'
@@ -183,7 +183,7 @@ export default function AboutUs() {
               customBtnClass='inverted-grey'
               color={theme.colors.primaryContent}
               bgColor={theme.colors.lightBg}
-              $contentType='second-text-column'
+              customInnerClass='second-text-column'
             />
           }
         />
@@ -220,7 +220,7 @@ export default function AboutUs() {
           altTag='Slash'
           color={theme.colors.primaryContent}
           bgColor={theme.colors.white}
-          $contentType='get-started'
+          customInnerClass='get-started'
           link='mailto:hello@webdevpath.co'
           linkText='Ping us'
           customBtnClass='inverted-grey'
