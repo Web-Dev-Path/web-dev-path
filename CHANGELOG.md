@@ -172,7 +172,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   - BlogPostContainer
   - RevealContentContainer
   - Member
+  - Row
   - Container
+  - Wrapper
   - Extracted :root from themes.scss to globals.scss
 - Updated ContactUsForm's checkbox wrapper from div to label to enhance its accessibility
 - Updated SearchInput width to 100% for better styling
@@ -181,3 +183,5 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   - BlogPostContainer
   - about page
   - home(index) page
+- Created a combineClasses function to clean up conditional class handling
+- Rename RowAlignLeft to Row

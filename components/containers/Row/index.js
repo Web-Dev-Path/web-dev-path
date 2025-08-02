@@ -1,9 +1,5 @@
-import S from './styles';
+import styles from './Row.module.scss';
 
-export function Row({ customClass, children }) {
-  return <S.Row>{children}</S.Row>;
-}
-
-export function RowAlignLeft({ customClass, children }) {
-  return <S.RowAlignLeft>{children}</S.RowAlignLeft>;
+export function Row({ children }) {
+  return <div className={styles.row}>{children}</div>;
 }

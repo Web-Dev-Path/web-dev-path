@@ -1,0 +1,7 @@
+.wrapper {
+  padding: 1rem 0;
+
+  &.primary__accent {
+    background-color: var(--color-primary-accent);
+  }
+}
