@@ -160,6 +160,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 
 - Migrating styles from Styled Components to CSS Modules
+  - ContactUsCards
   - ContactUsForm
   - ButtonLink
   - SubmitButton
@@ -172,7 +173,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   - RevealContentContainer
   - Member
   - Container
-  - Extracted :root from themes.scss to globals.scss 
+  - Extracted :root from themes.scss to globals.scss
 - Updated ContactUsForm's checkbox wrapper from div to label to enhance its accessibility
 - Updated SearchInput width to 100% for better styling
 - Updated the prop name to propStyles in Container component to fix the name conflict that introduced a styling bug
