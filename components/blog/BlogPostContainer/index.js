@@ -25,7 +25,7 @@ const BlogPostContainer = ({ post, relatedPosts, latestPosts }) => {
           title='Still got questions?'
           content='Feel free to contact us.'
           image='/images/svg/square-brackets.svg'
-          altTag='Hashtag'
+          altTag=''
           color='var(--color-primary-content)'
           bgColor='var(--color-white)'
           link='/contact'

@@ -10,7 +10,7 @@ export default function Home() {
         <TwoColumn
           title="Let's grow together."
           image='/images/join-us.webp'
-          altTag='Join the project'
+          altTag='Three people collaborating happily on a laptop in a modern workspace'
           content='Web Dev Path is an open-source initiative that provides hands-on experience in a simulated professional environment to people who seek to begin or move forward in their web development journey.'
           link='/about'
           customBtnClass='inverted-grey'
