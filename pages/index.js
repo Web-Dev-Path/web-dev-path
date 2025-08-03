@@ -2,6 +2,8 @@ import TwoColumn from '@/components/containers/TwoColumn';
 import { CardsColumns } from '@/components/containers/CardColumns';
 import Bracket from '@/components/decorations/Bracket';
 import bracketStyles from '@/components/decorations/Bracket/Bracket.module.scss';
+import Stick from '@/components/decorations/Stick';
+import stickStyles from '@/components/decorations/Stick/Stick.module.scss';
 import RevealContentContainer from '@/components/containers/RevealContentContainer';
 import { useTheme } from 'styled-components';
 
@@ -67,6 +69,7 @@ export default function Home() {
       </RevealContentContainer>
 
       <RevealContentContainer>
+        <Stick className={stickStyles.homeStick} />
         <TwoColumn
           title='Nonprofit?'
           content='Web Dev Path can help your nonprofit with web projects of various sizes. Connect with us to find out how.'

@@ -32,6 +32,12 @@
   }
 }
 
+@mixin desktop-breakpoint-plus-max {
+  @media (max-width: $desktop-breakpoint-plus) {
+    @content;
+  }
+}
+
 @mixin medium-desktop {
   @media (min-width: $medium-desktop-breakpoint) {
     @content;
