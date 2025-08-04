@@ -29,7 +29,7 @@ export default function Blog({ posts }) {
     <>
       <Container>
         <BlogSearch>
-          <Title blogTitle title={!searchTerm && 'Latest Posts'} />
+          <Title title={!searchTerm && 'Latest Posts'} />
           <SearchBar setSearchTerm={setSearchTerm} />
         </BlogSearch>
       </Container>
@@ -48,8 +48,10 @@ export default function Blog({ posts }) {
 }
 
 export async function getStaticProps() {
-  const PER_PAGE = 1000
-  const res = await fetch(`https://dev.to/api/articles?username=wdp&per_page=${PER_PAGE}`);
+  const PER_PAGE = 1000;
+  const res = await fetch(
+    `https://dev.to/api/articles?username=wdp&per_page=${PER_PAGE}`,
+  );
   const posts = await res.json();
 
   return {
