@@ -1,12 +1,5 @@
-import styled from 'styled-components';
-
-export const StyledTitle = styled.h2`
-  align-self: flex-start;
-  margin: '0 auto 1rem';
-`;
-
 const Title = ({ title }) => {
-  return <StyledTitle>{title}</StyledTitle>;
+  return <h2>{title}</h2>;
 };
 
 export default Title;
