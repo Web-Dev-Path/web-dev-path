@@ -2,6 +2,7 @@ import styles from './TwoColumn.module.scss';
 import ButtonLink from '@/components/buttons/ButtonLink';
 import Container from '@/components/containers/Container';
 import Image from 'next/image';
+import { combineClasses } from '@/utils/classnames';
 
 export default function TwoColumn({
   image,
@@ -29,11 +30,7 @@ export default function TwoColumn({
   return (
     <section className={styles.wrapper} style={styleProps.wrapper}>
       <Container
-        className={
-          customInnerClass
-            ? `${styles.inner} ${styles[customInnerClass]}`
-            : styles.inner
-        }
+        className={combineClasses(styles.inner, customInnerClass, styles)}
         styles={{ flexDirection: rowOrder }}
       >
         <div className={styles.inner__content}>

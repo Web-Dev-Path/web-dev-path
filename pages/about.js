@@ -29,7 +29,6 @@ export default function AboutUs() {
           rowOrder='row'
           image='/images/svg/square-brackets.svg'
           altTag=''
-          color='var(--color-primary-content)'
           bgColor='var(--color-primary-accent)'
           customInnerClass='our-background'
         />
@@ -70,9 +69,7 @@ export default function AboutUs() {
           rowOrder='row-reverse'
           image='/images/svg/open-angle-bracket.svg'
           altTag=''
-          color='var(--color-primary-content)'
-          bgColor='var(--color-white)'
-          customInnerClass='our-process'
+          customInnerClass='peer-reviews'
         />
         <TwoColumn
           title='Version control'
@@ -92,9 +89,7 @@ export default function AboutUs() {
           }
           image='/images/svg/close-angle-bracket.svg'
           altTag=''
-          color='var(--color-primary-content)'
-          bgColor='var(--color-white)'
-          customInnerClass='our-process'
+          customInnerClass='version-control'
         />
       </RevealContentContainer>
       <RevealContentContainer>
@@ -135,8 +130,6 @@ export default function AboutUs() {
           rowOrder='row-reverse'
           image='/images/svg/semi-colon.svg'
           altTag=''
-          color='var(--color-primary-content)'
-          bgColor='var(--color-white)'
           customInnerClass='our-purpose'
         />
       </RevealContentContainer>
@@ -146,7 +139,6 @@ export default function AboutUs() {
           content={''}
           image='/images/svg/close-curly-bracket.svg'
           altTag=''
-          color='var(--color-primary-content)'
           bgColor='var(--color-light-bg)'
           customInnerClass='wanna-learn-more'
         />
@@ -163,7 +155,6 @@ export default function AboutUs() {
           openNewTab
           link='https://github.com/Web-Dev-Path/web-dev-path/wiki'
           customBtnClass='inverted-grey'
-          color='var(--color-primary-content)'
           bgColor='var(--color-light-bg)'
           customInnerClass='two-text-columns'
           secondTextColumn={
@@ -178,7 +169,6 @@ export default function AboutUs() {
               linkText='Contact us'
               link='/contact'
               customBtnClass='inverted-grey'
-              color='var(--color-primary-content)'
               bgColor='var(--color-light-bg)'
               customInnerClass='second-text-column'
             />
@@ -215,8 +205,6 @@ export default function AboutUs() {
           rowOrder='row-reverse'
           image='/images/svg/slash.svg'
           altTag=''
-          color='var(--color-primary-content)'
-          bgColor='var(--color-white)'
           customInnerClass='get-started'
           link='mailto:hello@webdevpath.co'
           linkText='Ping us'
@@ -252,8 +240,6 @@ export default function AboutUs() {
           content='Feel free to contact us.'
           image='/images/svg/hashtag.svg'
           altTag=''
-          color='var(--color-primary-content)'
-          bgColor='var(--color-white)'
           link='/contact'
           linkText='Contact us'
           customBtnClass='inverted-grey'
