@@ -184,6 +184,9 @@
     &.second-text-column {
       height: 100%;
       width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
       .inner {
         height: 100%;
@@ -191,6 +194,15 @@
 
       .inner__content {
         height: 100%;
+        display: flex;
+        position: relative;
+
+        @include desktop {
+          a {
+            position: absolute;
+            bottom: 0;
+          }
+        }
       }
     }
 
