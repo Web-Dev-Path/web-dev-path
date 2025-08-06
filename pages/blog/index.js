@@ -2,7 +2,6 @@ import { useState } from 'react';
 import BlogPostsContainer from '@/components/blog/BlogPostsContainer';
 import Container from '@/components/containers/Container';
 import SearchBar from '@/components/blog/SearchBar';
-import Title from '@/components/snippets/Title';
 import { BlogSearch } from '@/components/snippets/BlogSearch';
 import { blogRevalidate } from '@/utils/config';
 import { tagToHeading } from '@/utils/blogCategories';
@@ -29,11 +28,10 @@ export default function Blog({ posts }) {
     <>
       <Container>
         <BlogSearch>
-          <Title title={!searchTerm && 'Latest Posts'} />
+          <h2>{!searchTerm && 'Latest Posts'}</h2>
           <SearchBar setSearchTerm={setSearchTerm} />
         </BlogSearch>
       </Container>
-
       <BlogPostsContainer posts={filteredPosts} heading={heading} />
       {!searchTerm &&
         Object.keys(tagToHeading).map(tag => (

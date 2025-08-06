@@ -1,7 +1,6 @@
 import RevealContentContainer from '@/components/containers/RevealContentContainer';
 import TwoColumn from '@/components/containers/TwoColumn';
 import { OurGoalsCardsColumns } from '@/components/containers/CardColumns/OurGoalsCardsColumns';
-import Title from '@/components/snippets/Title';
 import Wrapper from '@/components/containers/Wrapper';
 import Container from '@/components/containers/Container';
 import { Row } from '@/components/containers/Row';
@@ -102,7 +101,7 @@ export default function AboutUs() {
       </RevealContentContainer>
       <RevealContentContainer>
         <Container>
-          <Title title='Our goals' />
+          <h2>Our goals</h2>
         </Container>
         <OurGoalsCardsColumns
           cards={[
@@ -229,7 +228,7 @@ export default function AboutUs() {
       <RevealContentContainer>
         <Wrapper customClass='primary__accent'>
           <Container>
-            <Title title='Who we are' />
+            <h2>Who we are</h2>
             <Row>
               {whoWeAre.map(_ => {
                 return (
