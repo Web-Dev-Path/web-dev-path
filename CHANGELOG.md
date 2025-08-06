@@ -175,7 +175,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   - Row
   - Container
   - Wrapper
+  - Decorations/Bracket
+  - Decorations/Stick
   - TwoColumn
+- Extracted :root from themes.scss to globals.scss
 - Extracted :root from themes.scss to globals.scss
 - Updated ContactUsForm's checkbox wrapper from div to label to enhance its accessibility
 - Updated SearchInput width to 100% for better styling

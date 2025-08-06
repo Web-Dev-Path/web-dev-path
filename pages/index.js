@@ -1,6 +1,9 @@
 import TwoColumn from '@/components/containers/TwoColumn';
 import { CardsColumns } from '@/components/containers/CardColumns';
-import S from '@/styles/pages/homeStyles';
+import Bracket from '@/components/decorations/Bracket';
+import bracketStyles from '@/components/decorations/Bracket/Bracket.module.scss';
+import Stick from '@/components/decorations/Stick';
+import stickStyles from '@/components/decorations/Stick/Stick.module.scss';
 import RevealContentContainer from '@/components/containers/RevealContentContainer';
 
 export default function Home() {
@@ -19,7 +22,7 @@ export default function Home() {
       </RevealContentContainer>
 
       <RevealContentContainer>
-        <S.Bracket />
+        <Bracket className={bracketStyles.homeBracket} />
         <TwoColumn
           title='Get involved.'
           content='Web Dev Path runs on volunteers. Here are the ways you can get involved with us:'
@@ -64,8 +67,7 @@ export default function Home() {
       </RevealContentContainer>
 
       <RevealContentContainer>
-        <S.Stick />
-
+        <Stick className={stickStyles.homeStick} />
         <TwoColumn
           title='Nonprofit?'
           content='Web Dev Path can help your nonprofit with web projects of various sizes. Connect with us to find out how.'
