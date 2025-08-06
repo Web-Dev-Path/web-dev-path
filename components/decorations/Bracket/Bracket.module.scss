@@ -1,0 +1,42 @@
+@use '@/styles/mixins' as *;
+
+.homeBracket {
+  left: 0;
+  position: absolute;
+  transform: translate(10rem, -5rem);
+
+  @include desktop-breakpoint-plus {
+    transform: translate(50%, -5rem);
+    width: 30%;
+  }
+
+  @include desktop-breakpoint-minus {
+    display: none;
+  }
+}
+
+.yellowBracket {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+
+  @include tablet-max {
+    display: none;
+  }
+
+  @include tablet {
+    position: absolute;
+    top: 28%;
+    right: 120%;
+    width: 8rem;
+  }
+
+  @include desktop {
+    top: 25%;
+    right: 120%;
+  }
+
+  @include desktop-breakpoint-plus {
+    top: 45%;
+    right: 140%;
+  }
+}

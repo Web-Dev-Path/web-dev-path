@@ -1,5 +1,8 @@
+import styles from './TwoColumn.module.scss';
 import ButtonLink from '@/components/buttons/ButtonLink';
-import TwoColumnStyles from './styles';
+import Container from '@/components/containers/Container';
+import Image from 'next/image';
+import { combineClasses } from '@/utils/classnames';
 
 export default function TwoColumn({
   image,
@@ -11,26 +14,31 @@ export default function TwoColumn({
   bgColor,
   link,
   customBtnClass,
+  customInnerClass,
   linkText = 'Learn more',
   secondTextColumn,
   openNewTab,
-  $contentType,
 }) {
-  //Set Styles based on content type
-  const S = TwoColumnStyles[$contentType]
-    ? TwoColumnStyles[$contentType]
-    : TwoColumnStyles.base;
+  const styleProps = {
+    wrapper: {
+      color,
+      backgroundColor: bgColor,
+    },
+    container: {
+      flexDirection: rowOrder,
+    },
+  };
 
   // Add rowOrder="row-reverse" prop to the component to reverse its order on desktop
   return (
-    <S.TwoColumnWrapper $color={color} $bgColor={bgColor}>
-      <S.InnerContainer
-        $contentType={$contentType}
-        styles={{ flexDirection: rowOrder }}
+    <section className={styles.wrapper} style={styleProps.wrapper}>
+      <Container
+        className={combineClasses(styles.inner, customInnerClass, styles)}
+        styles={styleProps.container}
       >
-        <S.InnerContent $contentType={$contentType}>
-          {title && <S.Title $color={color}>{title}</S.Title>}
-          <S.Content $contentType={$contentType}>{content}</S.Content>
+        <div className={styles.inner__content}>
+          {title && <h2 className={styles.title}>{title}</h2>}
+          <div className={styles.content}>{content}</div>
           {link && (
             <ButtonLink
               link={link}
@@ -40,19 +48,14 @@ export default function TwoColumn({
               {linkText}
             </ButtonLink>
           )}
-        </S.InnerContent>
-        {secondTextColumn && secondTextColumn}
-        {!secondTextColumn && image && (
-          <S.InnerImageWrapper $contentType={$contentType}>
-            <S.InnerImage
-              $contentType={$contentType}
-              src={image}
-              alt={altTag}
-              fill
-            />
-          </S.InnerImageWrapper>
-        )}
-      </S.InnerContainer>
-    </S.TwoColumnWrapper>
+        </div>
+        {secondTextColumn ||
+          (image && (
+            <div className={styles.inner__image}>
+              <Image className={styles.img} src={image} alt={altTag} fill />
+            </div>
+          ))}
+      </Container>
+    </section>
   );
 }

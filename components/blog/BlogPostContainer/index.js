@@ -26,9 +26,11 @@ const BlogPostContainer = ({ post, relatedPosts, latestPosts }) => {
           content='Feel free to contact us.'
           image='/images/svg/square-brackets.svg'
           altTag=''
-          $contentType='questions'
+          color='var(--color-primary-content)'
+          bgColor='var(--color-white)'
           link='/contact'
           linkText='Contact us'
+          customInnerClass='questions'
           customBtnClass='inverted-grey'
         />
       </RevealContentContainer>
