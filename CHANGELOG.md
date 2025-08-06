@@ -175,7 +175,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   - Row
   - Container
   - Wrapper
-  - Extracted :root from themes.scss to globals.scss
+  - Decorations/Bracket
+  - Decorations/Stick
+
+- Extracted :root from themes.scss to globals.scss
 - Updated ContactUsForm's checkbox wrapper from div to label to enhance its accessibility
 - Updated SearchInput width to 100% for better styling
 - Updated the prop name to propStyles in Container component to fix the name conflict that introduced a styling bug
