@@ -5,10 +5,8 @@ import bracketStyles from '@/components/decorations/Bracket/Bracket.module.scss'
 import Stick from '@/components/decorations/Stick';
 import stickStyles from '@/components/decorations/Stick/Stick.module.scss';
 import RevealContentContainer from '@/components/containers/RevealContentContainer';
-import { useTheme } from 'styled-components';
 
 export default function Home() {
-  const theme = useTheme();
   return (
     <>
       <RevealContentContainer>
@@ -19,7 +17,7 @@ export default function Home() {
           content='Web Dev Path is an open-source initiative that provides hands-on experience in a simulated professional environment to people who seek to begin or move forward in their web development journey.'
           link='/about'
           customBtnClass='inverted-grey'
-          bgColor={theme.colors.lightBg}
+          bgColor='var(--color-light-bg)'
         />
       </RevealContentContainer>
 
@@ -29,8 +27,8 @@ export default function Home() {
           title='Get involved.'
           content='Web Dev Path runs on volunteers. Here are the ways you can get involved with us:'
           rowOrder='row-reverse'
-          $contentType='get-involved'
-          bgColor={theme.colors.white}
+          customInnerClass='get-involved'
+          bgColor='var(--color-white)'
         />
       </RevealContentContainer>
 
@@ -73,10 +71,10 @@ export default function Home() {
         <TwoColumn
           title='Nonprofit?'
           content='Web Dev Path can help your nonprofit with web projects of various sizes. Connect with us to find out how.'
-          color={theme.colors.white}
-          bgColor={theme.colors.primaryContent}
+          color='var(--color-white)'
+          bgColor='var(--color-primary-content)'
           link='/about'
-          $contentType='non-profit'
+          customInnerClass='non-profit'
           customBtnClass='inverted-white'
         />
       </RevealContentContainer>
