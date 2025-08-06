@@ -10,6 +10,22 @@ $medium-desktop-breakpoint: 1250px;
 $large-desktop-breakpoint: 1440px;
 $extra-large-breakpoint: 2560px;
 
-//Fonts
+// Font Tokens
+// Font Family
 $font-family-primary: 'Assistant', sans-serif;
-$font-family-secondary: 'Open Sans', sans-serif;
+$font-family-secondary: 'Opens Sans', sans-serif;
+
+// Font Size
+$font-size-xs: 1.25rem; // 20px
+$font-size-sm: 1.5rem; // 24px
+$font-size-md: 2.25rem; // 36px
+$font-size-lg: 4.5rem; // 72px
+
+// Font Weight
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+
+// Line Height
+$line-height-sm: 1.9375rem; // 31px
+$line-height-md: 2.875rem; // 46px
+$line-height-lg: 5rem; // 80px
