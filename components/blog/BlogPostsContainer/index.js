@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import { BlogCardsColumns } from '@/components/containers/CardColumns/BlogCardsColumns';
 import { BlogCard } from '@/components/containers/Card/BlogCard';
-import Title from '@/components/snippets/Title';
 import RevealContentContainer from '@/components/containers/RevealContentContainer';
 import { tagToHeading } from '@/utils/blogCategories';
 import Container from '@/components/containers/Container';
@@ -28,11 +27,11 @@ const BlogPostsContainer = ({
       <section className={styles.blogContainer}>
         {heading ? (
           <Container>
-            <Title title={heading} />
+            <h2>{heading}</h2>
           </Container>
         ) : tag ? (
           <Container>
-            <Title title={tagToHeading[tag]} />
+            <h2>{tagToHeading[tag]}</h2>
           </Container>
         ) : null}
         {swipe ? (
