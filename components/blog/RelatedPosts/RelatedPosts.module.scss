@@ -1,3 +1,5 @@
+@use '@/styles/typography' as *;
+
 .list {
   text-align: left;
   line-height: normal;
@@ -9,6 +11,6 @@
   }
 
   a {
-    font-size: 1.5rem;
+    @include typography-link;
   }
 }
