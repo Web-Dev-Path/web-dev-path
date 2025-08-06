@@ -24,6 +24,9 @@ export default function TwoColumn({
       color,
       backgroundColor: bgColor,
     },
+    container: {
+      flexDirection: rowOrder,
+    },
   };
 
   // Add rowOrder="row-reverse" prop to the component to reverse its order on desktop
@@ -31,7 +34,7 @@ export default function TwoColumn({
     <section className={styles.wrapper} style={styleProps.wrapper}>
       <Container
         className={combineClasses(styles.inner, customInnerClass, styles)}
-        styles={{ flexDirection: rowOrder }}
+        styles={styleProps.container}
       >
         <div className={styles.inner__content}>
           {title && <h2 className={styles.title}>{title}</h2>}
