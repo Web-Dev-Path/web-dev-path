@@ -1,0 +1,91 @@
+@use '@/styles/index' as *;
+
+.card {
+  margin: 1rem 1rem 0 0.5rem;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  min-height: 35rem;
+  background-color: var(--color-transparent);
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  width: 100%;
+
+  @include tablet {
+    height: 30rem;
+    width: 40%;
+  }
+
+  @include medium-desktop {
+    min-width: 20%;
+    max-width: 20%;
+    margin: 1.5rem;
+  }
+}
+
+.name {
+  font-style: italic;
+  font-family: $heading-font;
+  font-size: 1.5rem;
+  color: var(--color-primary-content);
+  margin-bottom: 0px;
+  line-height: unset;
+}
+
+%headingStyle {
+  font-family: $heading-font;
+  font-size: 1rem;
+  color: var(--color-primary-content);
+  text-align: left;
+  line-height: normal;
+  margin: 0px;
+}
+
+.title {
+  @extend %headingStyle;
+}
+
+.position {
+  @extend %headingStyle;
+}
+
+.content {
+  align-items: center;
+  margin: auto;
+}
+
+.paragraph {
+  font-size: 1rem;
+  text-align: left;
+  line-height: normal;
+}
+
+.linkWrapper {
+  font-size: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  margin-bottom: 1rem;
+
+  a {
+    padding-left: 1rem;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    &:hover {
+      opacity: 0.6;
+      text-decoration: none;
+    }
+  }
+}
+
+.imageWrapper {
+  min-width: 10rem;
+  min-height: 10rem;
+  position: relative;
+  margin: 0.5rem auto;
+
+  img {
+    border-radius: 50%;
+    object-fit: cover;
+  }
+}

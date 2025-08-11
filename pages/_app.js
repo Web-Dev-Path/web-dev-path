@@ -1,8 +1,7 @@
 import Layout from '@/components/layout/Layout';
-import { useState } from 'react';
 import { ThemeProvider } from 'styled-components';
-import { lightTheme, darkTheme, GlobalStyles } from '@/styles/themeConfig';
-import '@/styles/index.scss';
+import { lightTheme, GlobalStyles } from '@/styles/themeConfig';
+import '@/styles/globals.scss';
 
 function MyApp({ Component, pageProps }) {
   // Only uncomment when the darkTheme is set

@@ -1,0 +1,15 @@
+@use '@/styles/mixins' as *;
+
+.homeStick {
+  right: 0;
+  position: absolute;
+  transform: translate(-10rem, -5rem);
+
+  @include desktop-breakpoint-plus-max {
+    transform: translate(-50%, -5rem);
+    width: 30%;
+  }
+  @include desktop-breakpoint-minus {
+    display: none;
+  }
+}

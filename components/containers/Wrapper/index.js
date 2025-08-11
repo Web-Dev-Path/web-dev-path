@@ -1,5 +1,7 @@
-import S from './styles';
+import styles from './Wrapper.module.scss';
+import { combineClasses } from '@/utils/classnames';
 
 export default function Wrapper({ customClass, children }) {
-  return <S.Wrapper $colorVarient={customClass}>{children}</S.Wrapper>;
+  const wrapperClass = combineClasses(styles.wrapper, customClass, styles);
+  return <div className={wrapperClass}>{children}</div>;
 }

@@ -1,17 +1,13 @@
 import RevealContentContainer from '@/components/containers/RevealContentContainer';
 import TwoColumn from '@/components/containers/TwoColumn';
 import { OurGoalsCardsColumns } from '@/components/containers/CardColumns/OurGoalsCardsColumns';
-import Title from '@/components/snippets/Title';
 import Wrapper from '@/components/containers/Wrapper';
 import Container from '@/components/containers/Container';
-import { RowAlignLeft } from '@/components/containers/Row';
+import { Row } from '@/components/containers/Row';
 import Member from '@/components/containers/Member';
 import { whoWeAre } from '@/utils/about';
-import { useTheme } from 'styled-components';
 
 export default function AboutUs() {
-  const theme = useTheme();
-
   return (
     <div className='about-us'>
       <RevealContentContainer>
@@ -31,10 +27,9 @@ export default function AboutUs() {
           }
           rowOrder='row'
           image='/images/svg/square-brackets.svg'
-          altTag='Square Brackets'
-          color={theme.colors.primaryContent}
-          bgColor={theme.colors.primaryAccent}
-          $contentType='our-background'
+          altTag=''
+          bgColor='var(--color-primary-accent)'
+          customInnerClass='our-background'
         />
       </RevealContentContainer>
 
@@ -72,10 +67,8 @@ export default function AboutUs() {
           }
           rowOrder='row-reverse'
           image='/images/svg/open-angle-bracket.svg'
-          altTag='Open angle bracket'
-          color={theme.colors.primaryContent}
-          bgColor={theme.colors.white}
-          $contentType='our-process'
+          altTag=''
+          customInnerClass='peer-reviews'
         />
         <TwoColumn
           title='Version control'
@@ -94,15 +87,13 @@ export default function AboutUs() {
             </div>
           }
           image='/images/svg/close-angle-bracket.svg'
-          altTag='close-angle-bracket'
-          color={theme.colors.primaryContent}
-          bgColor={theme.colors.white}
-          $contentType='our-process'
+          altTag=''
+          customInnerClass='version-control'
         />
       </RevealContentContainer>
       <RevealContentContainer>
         <Container>
-          <Title title='Our goals' />
+          <h2>Our goals</h2>
         </Container>
         <OurGoalsCardsColumns
           cards={[
@@ -137,10 +128,8 @@ export default function AboutUs() {
           }
           rowOrder='row-reverse'
           image='/images/svg/semi-colon.svg'
-          altTag='Semi-colon'
-          color={theme.colors.primaryContent}
-          bgColor={theme.colors.white}
-          $contentType='our-purpose'
+          altTag=''
+          customInnerClass='our-purpose'
         />
       </RevealContentContainer>
       <RevealContentContainer>
@@ -148,10 +137,9 @@ export default function AboutUs() {
           title='Wanna learn more?'
           content={''}
           image='/images/svg/close-curly-bracket.svg'
-          altTag='Close curly bracket'
-          color={theme.colors.primaryContent}
-          bgColor={theme.colors.lightBg}
-          $contentType='wanna-learn-more'
+          altTag=''
+          bgColor='var(--color-light-bg)'
+          customInnerClass='wanna-learn-more'
         />
         <TwoColumn
           title='Junior Developers'
@@ -166,9 +154,8 @@ export default function AboutUs() {
           openNewTab
           link='https://github.com/Web-Dev-Path/web-dev-path/wiki'
           customBtnClass='inverted-grey'
-          color={theme.colors.primaryContent}
-          bgColor={theme.colors.lightBg}
-          $contentType='two-text-columns'
+          bgColor='var(--color-light-bg)'
+          customInnerClass='two-text-columns'
           secondTextColumn={
             <TwoColumn
               title='Experienced Developers'
@@ -181,9 +168,8 @@ export default function AboutUs() {
               linkText='Contact us'
               link='/contact'
               customBtnClass='inverted-grey'
-              color={theme.colors.primaryContent}
-              bgColor={theme.colors.lightBg}
-              $contentType='second-text-column'
+              bgColor='var(--color-light-bg)'
+              customInnerClass='second-text-column'
             />
           }
         />
@@ -217,10 +203,8 @@ export default function AboutUs() {
           }
           rowOrder='row-reverse'
           image='/images/svg/slash.svg'
-          altTag='Slash'
-          color={theme.colors.primaryContent}
-          bgColor={theme.colors.white}
-          $contentType='get-started'
+          altTag=''
+          customInnerClass='get-started'
           link='mailto:hello@webdevpath.co'
           linkText='Ping us'
           customBtnClass='inverted-grey'
@@ -229,8 +213,8 @@ export default function AboutUs() {
       <RevealContentContainer>
         <Wrapper customClass='primary__accent'>
           <Container>
-            <Title title='Who we are' />
-            <RowAlignLeft>
+            <h2>Who we are</h2>
+            <Row>
               {whoWeAre.map(_ => {
                 return (
                   <Member
@@ -245,7 +229,7 @@ export default function AboutUs() {
                   />
                 );
               })}
-            </RowAlignLeft>
+            </Row>
           </Container>
         </Wrapper>
       </RevealContentContainer>
@@ -254,13 +238,11 @@ export default function AboutUs() {
           title='Still got questions?'
           content='Feel free to contact us.'
           image='/images/svg/hashtag.svg'
-          altTag='Hashtag'
-          color={theme.colors.primaryContent}
-          bgColor={theme.colors.white}
-          $contentType='questions'
+          altTag=''
           link='/contact'
           linkText='Contact us'
           customBtnClass='inverted-grey'
+          customInnerClass='questions'
         />
       </RevealContentContainer>
     </div>

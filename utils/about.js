@@ -128,6 +128,16 @@ export const whoWeAre = [
       'Results-driven software developer passionate about leveraging cutting-edge technology to solve complex problems.',
   },
   {
+    image: '/images/shayla.webp',
+    name: 'Shayla Rodgers',
+    title: '',
+    position: 'Full-Stack Developer',
+    linkedIn: 'shaylamrodgers',
+    portfolio: 'github.com/shayla-develops-webs',
+    about:
+      'Driven software developer committed to building efficient, user-centric applications through clean, maintainable code.',
+  },
+  {
     image: '/images/jana.webp',
     name: 'Jana Behfarshad',
     title: 'Co-founder',
@@ -151,5 +161,5 @@ export const whoWeAre = [
     portfolio: 'www.marianacaldas.com',
     about:
       'Mariana is a Digital Product Manager who strongly believes in the power of sharing knowledge.',
-  }
+  },
 ];

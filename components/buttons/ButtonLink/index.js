@@ -1,4 +1,5 @@
 import styles from './ButtonLink.module.scss';
+import { combineClasses } from '@/utils/classnames';
 
 export default function ButtonLink({
   link,
@@ -6,10 +7,7 @@ export default function ButtonLink({
   customBtnClass,
   openNewTab,
 }) {
-  const buttonClass = customBtnClass
-    ? `${styles.buttonLink} ${styles[customBtnClass]}`
-    : styles.buttonLink;
-
+  const buttonClass = combineClasses(styles.buttonLink, customBtnClass, styles);
   return (
     <a
       href={link}
