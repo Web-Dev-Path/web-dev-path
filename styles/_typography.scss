@@ -15,6 +15,21 @@
   line-height: $line-height-md;
 }
 
+@mixin typography-title {
+  font-family: $font-family-secondary;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-bold;
+  font-style: italic;
+  line-height: normal;
+}
+
+@mixin typography-subtitle {
+  font-family: $font-family-secondary;
+  font-size: $font-size-2xs;
+  font-weight: $font-weight-bold;
+  line-height: normal;
+}
+
 @mixin typography-copy {
   font-family: $font-family-secondary;
   font-size: $font-size-sm;

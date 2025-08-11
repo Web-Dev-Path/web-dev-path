@@ -1,4 +1,6 @@
 @use '@/styles/index' as *;
+@use '@/styles/typography' as *;
+@use '@/styles/variables' as *;
 
 .card {
   margin: 1rem 1rem 0 0.5rem;
@@ -24,20 +26,15 @@
 }
 
 .name {
-  font-style: italic;
-  font-family: $heading-font;
-  font-size: 1.5rem;
+  @include typography-title;
   color: var(--color-primary-content);
   margin-bottom: 0px;
-  line-height: unset;
 }
 
 %headingStyle {
-  font-family: $heading-font;
-  font-size: 1rem;
+  @include typography-subtitle;
   color: var(--color-primary-content);
   text-align: left;
-  line-height: normal;
   margin: 0px;
 }
 
