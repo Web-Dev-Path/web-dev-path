@@ -2,7 +2,7 @@ import { useState } from 'react';
 import BlogPostsContainer from '@/components/blog/BlogPostsContainer';
 import Container from '@/components/containers/Container';
 import SearchBar from '@/components/blog/SearchBar';
-import styles from '@/components/snippets/BlogSearch.module.scss';
+import styles from '@/styles/pages/blogSearch.module.scss';
 import { blogRevalidate } from '@/utils/config';
 import { tagToHeading } from '@/utils/blogCategories';
 import { blogSearch } from '@/utils/search';
