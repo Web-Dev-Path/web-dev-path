@@ -1,0 +1,16 @@
+@use '@/styles/typography' as *;
+
+.list {
+  text-align: left;
+  line-height: normal;
+  padding: 0;
+  list-style: none;
+
+  li {
+    margin-top: 0.8rem;
+  }
+
+  a {
+    @include typography-link;
+  }
+}
