@@ -180,6 +180,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   - Decorations/Bracket
   - Decorations/Stick
   - TwoColumn
+  - Layout
   - RelatedPosts
 - Extracted :root from themes.scss to globals.scss
 - Updated ContactUsForm's checkbox wrapper from div to label to enhance its accessibility
@@ -191,3 +192,4 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   - home(index) page
 - Created a combineClasses function to clean up conditional class handling
 - Rename RowAlignLeft to Row
+- Remove unessesary stylings from the Layout.
