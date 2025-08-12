@@ -1,0 +1,65 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+@mixin typography-header-page {
+  font-family: $font-family-primary;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-lg;
+}
+
+@mixin typography-header-sub {
+  font-family: $font-family-primary;
+  font-size: $font-size-md;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-md;
+}
+
+@mixin typography-title {
+  font-family: $font-family-secondary;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-bold;
+  font-style: italic;
+  line-height: normal;
+}
+
+@mixin typography-subtitle {
+  font-family: $font-family-secondary;
+  font-size: $font-size-2xs;
+  font-weight: $font-weight-bold;
+  line-height: normal;
+}
+
+@mixin typography-copy {
+  font-family: $font-family-secondary;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-regular;
+  line-height: $line-height-sm;
+}
+
+@mixin typography-label {
+  @include typography-copy;
+}
+
+@mixin typography-input {
+  @include typography-copy;
+}
+
+@mixin typography-placeholder {
+  @include typography-copy;
+}
+
+@mixin typography-link {
+  font-family: $font-family-primary;
+  font-size: $font-size-xs;
+  font-weight: $font-weight-regular;
+  line-height: $line-height-sm;
+
+  @include desktop {
+    font-size: $font-size-sm;
+  }
+}
+
+@mixin typography-button {
+  @include typography-copy;
+}
