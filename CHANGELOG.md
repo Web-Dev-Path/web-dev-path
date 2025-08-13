@@ -180,6 +180,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   - Decorations/Bracket
   - Decorations/Stick
   - TwoColumn
+  - BlogSearch
   - Layout
   - RelatedPosts
 - Extracted :root from themes.scss to globals.scss
