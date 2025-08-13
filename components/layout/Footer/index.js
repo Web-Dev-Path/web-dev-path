@@ -2,39 +2,39 @@ import Image from 'next/image';
 import { linksNav, linksSocial } from '@/utils/links';
 import NewsletterSubscribe from '@/components/NewsletterSubscribe';
 import Container from '@/components/containers/Container';
-import S from './styles';
+import styles from './Footer.module.scss';
 
 export default function Footer() {
   return (
-    <S.Footer>
+    <footer className={styles.footer}>
       <NewsletterSubscribe />
-      <S.Inner>
-        <S.Logo href='/' title='Go to the Homepage'>
+      <Container className={styles.inner}>
+        <a className={styles.logo} href='/' title='Go to the Homepage'>
           <Image
             src='/images/svg/logo.svg'
             height={250}
             width={250}
             alt='Our footer logo'
           />
-        </S.Logo>
-        <S.NavSocialsContainer>
-          <S.Nav aria-label='Main'>
-            <S.NavList>
+        </a>
+        <div className={styles.navSocialsContainer}>
+          <nav className={styles.nav} aria-label='Main'>
+            <ul className={styles.navList}>
               {linksNav.map(link => (
-                <S.NavItem key={link.text}>
+                <li className={styles.navItem} key={link.text}>
                   <a href={link.href} title={link.text}>
                     {link.text}
                   </a>
-                </S.NavItem>
+                </li>
               ))}
-            </S.NavList>
-          </S.Nav>
+            </ul>
+          </nav>
           <div>
-            <S.SocialList>
+            <ul className={styles.socialList}>
               {linksSocial
                 .filter(link => link.isVisible)
                 .map(link => (
-                  <S.SocialItem key={link.text}>
+                  <li className={styles.socialItem} key={link.text}>
                     <a href={link.href} title={link.text} target='_blank'>
                       <Image
                         href={link.href}
@@ -44,17 +44,17 @@ export default function Footer() {
                         alt={link.alt}
                       />
                     </a>
-                  </S.SocialItem>
+                  </li>
                 ))}
-            </S.SocialList>
+            </ul>
           </div>
-        </S.NavSocialsContainer>
-      </S.Inner>
-      <S.BottomText>
-        <S.Copyright>
+        </div>
+      </Container>
+      <Container className={styles.bottomText}>
+        <p className={styles.copyright}>
           © Web Dev Path {new Date().getFullYear()}. All rights reserved.
-        </S.Copyright>
-        <S.Netlify>
+        </p>
+        <p className={styles.netlify}>
           This site is powered by
           <Image
             src='/images/svg/logo-netlify-small-fullcolor-darkmode.svg'
@@ -62,8 +62,8 @@ export default function Footer() {
             height={50}
             alt='Netlify Logo'
           />
-        </S.Netlify>
-      </S.BottomText>
-    </S.Footer>
+        </p>
+      </Container>
+    </footer>
   );
 }

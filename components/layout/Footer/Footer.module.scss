@@ -1,0 +1,115 @@
+@use '@/styles/index' as *;
+
+.footer {
+  background-color: var(--dark-bg);
+  color: var(--color-white);
+}
+
+.inner {
+  padding-top: 2.5rem;
+  text-align: center;
+
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+}
+
+.logo {
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  @include tablet {
+    margin: 0;
+    max-width: max-content;
+  }
+}
+
+.navSocialsContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav {
+  @include tablet {
+    min-width: 6.5rem;
+    order: 2;
+  }
+
+  @include large-desktop {
+    font-size: 1.5rem;
+  }
+}
+
+.navList {
+  padding: 0;
+
+  @include tablet {
+    display: flex;
+  }
+}
+
+.navItem {
+  margin: 0.5rem 0;
+
+  @include tablet {
+    padding-left: 3.125rem;
+  }
+}
+
+.socialList {
+  display: flex;
+  justify-content: center;
+  margin: revert;
+  padding: 0;
+
+  @include tablet {
+    justify-content: end;
+  }
+}
+
+.socialItem {
+  cursor: pointer;
+  @include transition(all 0.3s ease);
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  @include tablet {
+    padding-left: 1.75rem;
+    max-width: 100%;
+  }
+}
+
+.bottomText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include tablet {
+    align-items: flex-end;
+  }
+}
+
+.copyright {
+  text-align: center;
+  margin: 0;
+  font-size: 1rem;
+  padding-bottom: 1rem;
+
+  @include tablet {
+    text-align: end;
+  }
+}
+
+.netlify {
+  @extend .copyright;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}

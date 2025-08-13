@@ -12,7 +12,7 @@
   text-align: center;
   display: block;
   border: 1px solid var(--color-primary-content);
-  transition: all 0.3s ease;
+  @include transition(all 0.3s ease);
 
   &:hover {
     color: var(--color-primary-content);
