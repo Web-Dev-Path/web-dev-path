@@ -1,3 +1,5 @@
+@use '@/styles/mixins' as *;
+
 .buttonLink {
   padding: 0.5rem 2rem;
   color: var(--color-white);
@@ -11,7 +13,7 @@
   display: inline-block;
   border: 1px solid var(--color-primary-content);
   text-decoration: none;
-  transition: all 0.3s ease;
+  @include transition(all 0.3s ease);
 
   &:hover {
     text-decoration: none;
