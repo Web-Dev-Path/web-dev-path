@@ -2,7 +2,7 @@ import { useState } from 'react';
 import BlogPostsContainer from '@/components/blog/BlogPostsContainer';
 import Container from '@/components/containers/Container';
 import SearchBar from '@/components/blog/SearchBar';
-import { BlogSearch } from '@/components/snippets/BlogSearch';
+import styles from '@/styles/pages/blogSearch.module.scss';
 import { blogRevalidate } from '@/utils/config';
 import { tagToHeading } from '@/utils/blogCategories';
 import { blogSearch } from '@/utils/search';
@@ -27,10 +27,10 @@ export default function Blog({ posts }) {
   return (
     <>
       <Container>
-        <BlogSearch>
+        <div className={styles.blogSearch}>
           <h2>{!searchTerm && 'Latest Posts'}</h2>
           <SearchBar setSearchTerm={setSearchTerm} />
-        </BlogSearch>
+        </div>
       </Container>
       <BlogPostsContainer posts={filteredPosts} heading={heading} />
       {!searchTerm &&
