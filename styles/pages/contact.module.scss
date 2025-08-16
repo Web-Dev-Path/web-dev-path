@@ -1,0 +1,62 @@
+@use '@/styles/index' as *;
+
+.contactUsContainer {
+  background-color: var(--color-light-bg);
+  height: 42rem;
+  position: relative;
+  margin-bottom: -10rem;
+
+  @include mobile {
+    height: unset;
+    padding-bottom: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  @include desktop {
+    height: 32rem;
+  }
+}
+
+.formAndDecorations {
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: absolute;
+    bottom: 48%;
+    right: 4%;
+    z-index: 11;
+  }
+
+  @include desktop {
+    bottom: 52%;
+    right: 8%;
+  }
+}
+
+.yellowColon {
+  @include desktop-breakpoint-minus {
+    display: none;
+  }
+
+  @include tablet {
+    position: absolute;
+    top: -10%;
+    right: -5%;
+  }
+
+  @include desktop {
+    right: -15%;
+  }
+}
+
+.responseMessage {
+  position: unset;
+  bottom: -5%;
+  padding: 0 2rem;
+
+  @include tablet {
+    position: absolute;
+    margin-top: 1rem;
+  }
+}
