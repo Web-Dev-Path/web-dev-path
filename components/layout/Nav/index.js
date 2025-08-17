@@ -11,6 +11,7 @@ export default function Nav() {
   const [isSticky, setIsSticky] = useState(false);
   const headerRef = useRef();
   const containerRef = useRef();
+  const DESKTOP_BREAKPOINT = 1024;
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -48,6 +49,19 @@ export default function Nav() {
 
     return () => {
       router.events.off('routeChangeComplete', handleRouteChange);
+    };
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > DESKTOP_BREAKPOINT) {
+        setActive(false);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
 
