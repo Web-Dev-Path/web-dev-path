@@ -10,21 +10,23 @@ export default function ContactUs() {
   return (
     <>
       <div className={styles.contactUsContainer}>
-        <div className={styles.formAndDecorations}>
-          <Bracket className={bracketStyles.yellowBracket} />
-          <ContactUsFormSubscribe setMsg={setMessage} />
-          <img
-            className={styles.yellowColon}
-            src='/images/svg/yellow-colon.svg'
-            alt=''
-          />
-          <div className={styles.responseMessage}>
-            {message?.map((m, i) => (
-              <span key={i}>
-                {m}
-                <br />
-              </span>
-            ))}
+        <div className={styles.formWrapper}>
+          <div className={styles.formAndDecorations}>
+            <Bracket className={bracketStyles.yellowBracket} />
+            <ContactUsFormSubscribe setMsg={setMessage} />
+            <img
+              className={styles.yellowColon}
+              src='/images/svg/yellow-colon.svg'
+              alt=''
+            />
+            <div className={styles.responseMessage}>
+              {message?.map((m, i) => (
+                <span key={i}>
+                  {m}
+                  <br />
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </div>
