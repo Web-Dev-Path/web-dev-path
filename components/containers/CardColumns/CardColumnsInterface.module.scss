@@ -1,13 +1,7 @@
 @use '@/styles/mixins' as *;
 
 .innerContent {
-  margin: 0 auto;
   padding-bottom: 4rem;
-  justify-content: center;
-
-  @include desktop-breakpoint-plus {
-    display: flex;
-  }
 }
 
 .cardColumnSwiper {
