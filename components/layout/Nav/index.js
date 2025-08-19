@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 import Container from '@/components/containers/Container';
 import { linksNav } from '@/utils/links';
-import S from './styles';
+import styles from './Nav.module.scss';
 
 export default function Nav() {
   const router = useRouter();
@@ -11,6 +11,7 @@ export default function Nav() {
   const [isSticky, setIsSticky] = useState(false);
   const headerRef = useRef();
   const containerRef = useRef();
+  const DESKTOP_BREAKPOINT = 1024;
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -25,7 +26,7 @@ export default function Nav() {
       {
         threshold: 0,
         rootMargin: '300px',
-      }
+      },
     );
 
     if (headerRef.current) {
@@ -51,59 +52,91 @@ export default function Nav() {
     };
   }, []);
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > DESKTOP_BREAKPOINT) {
+        setActive(false);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
-    <S.Header ref={headerRef}>
+    <header className={styles.header} ref={headerRef}>
       <Container>
-        <S.NavWrapper ref={containerRef} $isSticky={isSticky}>
-          <S.Nav $isSticky={isSticky}>
+        <div
+          ref={containerRef}
+          className={isSticky ? styles.navWrapperSticky : ''}
+        >
+          <nav className={isSticky ? styles.navSticky : styles.nav}>
             <Link href='/'>
-              <S.Logo
-                $isSticky={isSticky}
+              <img
+                className={isSticky ? styles.logoSticky : styles.logo}
                 src='/images/svg/logo.svg'
                 alt='Logo'
                 title='Go to the Homepage'
               />
             </Link>
-            <S.Links
-              className={`${active ? 'active' : ''}`}
-              $isSticky={isSticky}
+            <ul
+              className={`
+                ${active ? styles.active : ''} 
+                ${isSticky ? styles.linksSticky : styles.links}
+              `}
             >
               {linksNav.map(({ text, href, id }) => {
                 return (
-                  <S.Item key={id}>
-                    <S.Link
+                  <li className={styles.item} key={id}>
+                    <a
                       href={href}
-                      className={`${router.pathname == href ? `current` : ''}`}
+                      className={`${styles.link} ${router.pathname === href ? styles.current : ''}`}
                       title={text}
                     >
                       {text}
-                    </S.Link>
-                  </S.Item>
+                    </a>
+                  </li>
                 );
               })}
-              <S.Item>
-                <S.Button
-                  $isSticky={isSticky}
+              <li className={styles.item}>
+                <a
                   href='mailto:hello@webdevpath.co?subject=Project collaborator application'
-                  className={`${active ? `active` : ''}`}
+                  className={`
+                    ${active ? styles.active : ''} 
+                    ${isSticky ? styles.buttonSticky : styles.button}
+                  `}
                   title='Join us'
                 >
                   Join us
-                </S.Button>
-              </S.Item>
-            </S.Links>
-            <S.Hamburger
-              className={`${active ? `active` : ''}`}
+                </a>
+              </li>
+            </ul>
+            <button
+              className={`${styles.hamburger} ${active ? styles.active : ''}`}
               onClick={() => setActive(active => !active)}
               aria-label='toggle navigation'
             >
-              <S.HamburgerBar $isSticky={isSticky}></S.HamburgerBar>
-              <S.HamburgerBar $isSticky={isSticky}></S.HamburgerBar>
-              <S.HamburgerBar $isSticky={isSticky}></S.HamburgerBar>
-            </S.Hamburger>
-          </S.Nav>
-        </S.NavWrapper>
+              <span
+                className={
+                  isSticky ? styles.hamburgerBarSticky : styles.hamburgerBar
+                }
+              ></span>
+              <span
+                className={
+                  isSticky ? styles.hamburgerBarSticky : styles.hamburgerBar
+                }
+              ></span>
+              <span
+                className={
+                  isSticky ? styles.hamburgerBarSticky : styles.hamburgerBar
+                }
+              ></span>
+            </button>
+          </nav>
+        </div>
       </Container>
-    </S.Header>
+    </header>
   );
 }
