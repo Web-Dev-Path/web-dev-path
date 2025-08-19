@@ -1,4 +1,4 @@
-import { CardsColumnsInterface } from '@/components/containers/CardColumns/CardColumnsInterface';
+import { CardsColumns } from '@/components/containers/CardColumns/CardsColumns';
 import { ContactUsCard } from '@/components/containers/Card/ContactUsCard';
 import RevealContentContainer from '../../containers/RevealContentContainer';
 import styles from './ContactUsCards.module.scss';
@@ -35,7 +35,7 @@ export default function ContactUsCards() {
   return (
     <article className={styles.contactCards}>
       <RevealContentContainer>
-        <CardsColumnsInterface cards={cards} cardComponent={ContactUsCard} />
+        <CardsColumns cards={cards} cardComponent={ContactUsCard} />
       </RevealContentContainer>
     </article>
   );

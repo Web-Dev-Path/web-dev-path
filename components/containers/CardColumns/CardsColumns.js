@@ -4,9 +4,9 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import Container from '@/components/containers/Container';
-import styles from './CardColumnsInterface.module.scss';
+import styles from './CardColumns.module.scss';
 
-export function CardsColumnsInterface({ cards, customClass, cardComponent }) {
+export function CardsColumns({ cards, customClass, cardComponent }) {
   const Card = cardComponent;
   return (
     <Container>
