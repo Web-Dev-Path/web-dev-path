@@ -1,5 +1,6 @@
 import TwoColumn from '@/components/containers/TwoColumn';
-import { CardsColumns } from '@/components/containers/CardColumns';
+import { CardsColumnsInterface } from '@/components/containers/CardColumns/CardColumnsInterface';
+import { Card } from '@/components/containers/Card';
 import Bracket from '@/components/decorations/Bracket';
 import bracketStyles from '@/components/decorations/Bracket/Bracket.module.scss';
 import Stick from '@/components/decorations/Stick';
@@ -33,7 +34,7 @@ export default function Home() {
       </RevealContentContainer>
 
       <RevealContentContainer>
-        <CardsColumns
+        <CardsColumnsInterface
           cards={[
             {
               title: 'Join the project',
@@ -63,6 +64,7 @@ export default function Home() {
               linkText: 'Learn more',
             },
           ]}
+          cardComponent={Card}
         />
       </RevealContentContainer>
 

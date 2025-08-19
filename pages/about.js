@@ -1,6 +1,7 @@
 import RevealContentContainer from '@/components/containers/RevealContentContainer';
 import TwoColumn from '@/components/containers/TwoColumn';
-import { OurGoalsCardsColumns } from '@/components/containers/CardColumns/OurGoalsCardsColumns';
+import { AboutUsCard } from '@/components/containers/Card/AboutUsCard';
+import { CardsColumnsInterface } from '@/components/containers/CardColumns/CardColumnsInterface';
 import Wrapper from '@/components/containers/Wrapper';
 import Container from '@/components/containers/Container';
 import { Row } from '@/components/containers/Row';
@@ -95,7 +96,7 @@ export default function AboutUs() {
         <Container>
           <h2>Our goals</h2>
         </Container>
-        <OurGoalsCardsColumns
+        <CardsColumnsInterface
           cards={[
             {
               title: '1',
@@ -108,6 +109,7 @@ export default function AboutUs() {
                 'To offer more detailed tasks (GitHub issues) and help the developer assimilate the logical mindset required in a structured project, under guidance following the industry’s best practices throughout the entire process.',
             },
           ]}
+          cardComponent={AboutUsCard}
         />
       </RevealContentContainer>
       <RevealContentContainer>
