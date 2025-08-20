@@ -184,7 +184,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   - Layout
   - RelatedPosts
   - Footer
-  - CardColumnsInterface
+  - CardsColumns
   - Nav
 - Extracted :root from themes.scss to globals.scss
 - Updated ContactUsForm's checkbox wrapper from div to label to enhance its accessibility
