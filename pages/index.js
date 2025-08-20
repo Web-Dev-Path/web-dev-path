@@ -1,5 +1,5 @@
 import TwoColumn from '@/components/containers/TwoColumn';
-import { CardsColumns } from '@/components/containers/CardColumns/CardsColumns';
+import { CardColumns } from '@/components/containers/CardColumns';
 import { Card } from '@/components/containers/Card';
 import Bracket from '@/components/decorations/Bracket';
 import bracketStyles from '@/components/decorations/Bracket/Bracket.module.scss';
@@ -34,7 +34,7 @@ export default function Home() {
       </RevealContentContainer>
 
       <RevealContentContainer>
-        <CardsColumns
+        <CardColumns
           cards={[
             {
               title: 'Join the project',

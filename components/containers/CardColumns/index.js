@@ -6,7 +6,7 @@ import 'swiper/css/navigation';
 import Container from '@/components/containers/Container';
 import styles from './CardColumns.module.scss';
 
-export function CardsColumns({ cards, customClass, cardComponent }) {
+export function CardColumns({ cards, customClass, cardComponent }) {
   const Card = cardComponent;
   return (
     <Container>

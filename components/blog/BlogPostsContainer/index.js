@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { BlogCard } from '@/components/containers/Card/BlogCard';
-import { CardsColumns } from '@/components/containers/CardColumns/CardsColumns';
+import { CardColumns } from '@/components/containers/CardColumns';
 import RevealContentContainer from '@/components/containers/RevealContentContainer';
 import { tagToHeading } from '@/utils/blogCategories';
 import Container from '@/components/containers/Container';
@@ -37,7 +37,7 @@ const BlogPostsContainer = ({
         {swipe ? (
           <>
             {[posts.slice(0, 6)].map((p, index) => (
-              <CardsColumns
+              <CardColumns
                 key={index}
                 cards={p}
                 cardComponent={BlogCard}
