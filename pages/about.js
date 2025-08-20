@@ -1,7 +1,7 @@
 import RevealContentContainer from '@/components/containers/RevealContentContainer';
 import TwoColumn from '@/components/containers/TwoColumn';
 import { AboutUsCard } from '@/components/containers/Card/AboutUsCard';
-import { CardColumns } from '@/components/containers/CardColumns';
+import { CardsColumns } from '@/components/containers/CardsColumns';
 import Wrapper from '@/components/containers/Wrapper';
 import Container from '@/components/containers/Container';
 import { Row } from '@/components/containers/Row';
@@ -96,7 +96,7 @@ export default function AboutUs() {
         <Container>
           <h2>Our goals</h2>
         </Container>
-        <CardColumns
+        <CardsColumns
           cards={[
             {
               title: '1',
