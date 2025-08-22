@@ -1,0 +1,11 @@
+.innerContent {
+  padding-bottom: 4rem;
+}
+
+.cardColumnSwiper {
+  margin-bottom: 5rem;
+
+  :global(.swiper-pagination-bullet-active) {
+    background-color: var(--dark-bg);
+  }
+}

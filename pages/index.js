@@ -1,5 +1,6 @@
 import TwoColumn from '@/components/containers/TwoColumn';
-import { CardsColumns } from '@/components/containers/CardColumns';
+import { CardsColumns } from '@/components/containers/CardsColumns';
+import { Card } from '@/components/containers/Card';
 import Bracket from '@/components/decorations/Bracket';
 import bracketStyles from '@/components/decorations/Bracket/Bracket.module.scss';
 import Stick from '@/components/decorations/Stick';
@@ -63,6 +64,7 @@ export default function Home() {
               linkText: 'Learn more',
             },
           ]}
+          cardComponent={Card}
         />
       </RevealContentContainer>
 
