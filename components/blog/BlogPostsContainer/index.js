@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { BlogCard } from '@/components/containers/Card/BlogCard';
+import { Card } from '@/components/containers/Card';
 import { CardsColumns } from '@/components/containers/CardsColumns';
 import RevealContentContainer from '@/components/containers/RevealContentContainer';
 import { tagToHeading } from '@/utils/blogCategories';
@@ -40,7 +40,7 @@ const BlogPostsContainer = ({
               <CardsColumns
                 key={index}
                 cards={p}
-                cardComponent={BlogCard}
+                cardComponent={props => <Card {...props} cardType='blog' />}
                 customClass='blog'
               />
             ))}

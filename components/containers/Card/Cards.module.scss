@@ -1,0 +1,160 @@
+@import '@/styles/_variables.scss';
+
+// Base Card
+.card {
+  margin: 1rem 1rem 0 0.5rem;
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  box-shadow: var(--shadow-default);
+  min-width: 32%;
+  height: 37rem;
+
+  a {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+
+    &:hover {
+      opacity: 0.6;
+      text-decoration: none;
+    }
+  }
+
+  @media (min-width: $sm-mobile-breakpoint) {
+    height: 42rem;
+  }
+
+  @media (min-width: $tablet-breakpoint) {
+    height: 42rem;
+  }
+
+  @media (min-width: $desktop-breakpoint) {
+    height: 37rem;
+    margin: 1.5rem 1.5rem 0 1.5rem;
+
+    &:first-child,
+    &:last-child {
+      margin: 1.5rem 0.5rem 0 0.5rem;
+    }
+  }
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-weight: bold;
+  font-size: 1.75rem;
+  color: var(--color-primary-content);
+  margin: 1rem 0 0 0;
+  line-height: unset;
+
+  @media (min-width: $tablet-breakpoint) {
+    font-size: 2.25rem;
+  }
+}
+
+.contentWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.imageWrapper {
+  width: 100%;
+  height: 18rem;
+  position: relative;
+}
+
+.cardImage {
+  border-radius: 0.25rem;
+  object-fit: cover;
+}
+
+.tagContainer {
+  display: flex;
+  flex-wrap: wrap;
+  max-height: 12rem;
+  overflow: hidden;
+  gap: 0.5rem;
+  margin-bottom: -1rem;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+// About Us Card Variant
+.card--about {
+  background-color: var(--color-primary-accent);
+  max-height: 35rem;
+
+  @media (min-width: $desktop-breakpoint) {
+    max-height: 37rem;
+  }
+
+  .title {
+    font-size: 3.5rem;
+    text-align: center;
+
+    @media (min-width: $desktop-breakpoint) {
+      font-size: 5rem;
+    }
+  }
+
+  .contentWrapper {
+    @media (min-width: $desktop-breakpoint) {
+      p {
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+      }
+    }
+  }
+}
+
+// Contact Card Variant
+.card--contact {
+  height: 27rem;
+  background-color: var(--color-white);
+
+  @media (min-width: $desktop-breakpoint) {
+    height: 25rem;
+  }
+
+  .imageWrapper {
+    width: auto;
+    position: relative;
+    height: 5rem;
+    margin-right: 75%;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .cardImage {
+    margin: 0;
+    position: absolute;
+    object-fit: contain !important;
+  }
+}
+
+// Blog Card Variant
+.card--blog {
+  margin: 1rem 0.5rem 0 0.5rem;
+
+  @media (min-width: $tablet-breakpoint) {
+    height: 40rem;
+  }
+
+  .title {
+    @extend .title;
+    font-size: 1.3rem;
+    margin-bottom: 0.7rem;
+    max-height: 7rem;
+    overflow: hidden;
+    line-height: unset;
+
+    @media (min-width: $tablet-breakpoint) {
+      font-size: 1.3rem;
+    }
+  }
+
+  .imageWrapper {
+    height: 12rem;
+  }
+}
