@@ -49,7 +49,7 @@ const BlogPostsContainer = ({
           <Container>
             <div className={styles.postContainer}>
               {posts?.map((p, index) => (
-                <BlogCard $cardType='blog' key={index} card={p} />
+                <Card cardType='blog' key={index} card={p} />
               ))}
             </div>
           </Container>
