@@ -1,4 +1,4 @@
-@import '@/styles/_variables.scss';
+@use '@/styles/index' as *;
 
 // Base Card
 .card {
@@ -19,15 +19,15 @@
     }
   }
 
-  @media (min-width: $sm-mobile-breakpoint) {
+  @include small-mobile {
     height: 42rem;
   }
 
-  @media (min-width: $tablet-breakpoint) {
+  @include tablet {
     height: 42rem;
   }
 
-  @media (min-width: $desktop-breakpoint) {
+  @include desktop {
     height: 37rem;
     margin: 1.5rem 1.5rem 0 1.5rem;
 
@@ -85,21 +85,22 @@
   background-color: var(--color-primary-accent);
   max-height: 35rem;
 
-  @media (min-width: $desktop-breakpoint) {
+  @include desktop {
     max-height: 37rem;
   }
 
   .title {
+    @extend .title;
     font-size: 3.5rem;
     text-align: center;
 
-    @media (min-width: $desktop-breakpoint) {
+    @include desktop {
       font-size: 5rem;
     }
   }
 
   .contentWrapper {
-    @media (min-width: $desktop-breakpoint) {
+    @include desktop {
       p {
         font-size: 1.8rem;
         line-height: 2.2rem;
@@ -113,7 +114,7 @@
   height: 27rem;
   background-color: var(--color-white);
 
-  @media (min-width: $desktop-breakpoint) {
+  @include desktop {
     height: 25rem;
   }
 
@@ -137,7 +138,7 @@
 .card--blog {
   margin: 1rem 0.5rem 0 0.5rem;
 
-  @media (min-width: $tablet-breakpoint) {
+  @include tablet {
     height: 40rem;
   }
 
@@ -149,7 +150,7 @@
     overflow: hidden;
     line-height: unset;
 
-    @media (min-width: $tablet-breakpoint) {
+    @include tablet {
       font-size: 1.3rem;
     }
   }
