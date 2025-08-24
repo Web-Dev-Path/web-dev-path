@@ -1,6 +1,6 @@
 import RevealContentContainer from '@/components/containers/RevealContentContainer';
 import TwoColumn from '@/components/containers/TwoColumn';
-import { AboutUsCard } from '@/components/containers/Card/AboutUsCard';
+import { Card } from '@/components/containers/Card';
 import { CardsColumns } from '@/components/containers/CardsColumns';
 import Wrapper from '@/components/containers/Wrapper';
 import Container from '@/components/containers/Container';
@@ -109,7 +109,7 @@ export default function AboutUs() {
                 'To offer more detailed tasks (GitHub issues) and help the developer assimilate the logical mindset required in a structured project, under guidance following the industry’s best practices throughout the entire process.',
             },
           ]}
-          cardComponent={AboutUsCard}
+          cardComponent={props => <Card {...props} cardType='about' />}
         />
       </RevealContentContainer>
       <RevealContentContainer>

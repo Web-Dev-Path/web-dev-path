@@ -1,5 +1,5 @@
 import { CardsColumns } from '@/components/containers/CardsColumns';
-import { ContactUsCard } from '@/components/containers/Card/ContactUsCard';
+import { Card } from '@/components/containers/Card';
 import RevealContentContainer from '../../containers/RevealContentContainer';
 import styles from './ContactUsCards.module.scss';
 
@@ -35,7 +35,10 @@ export default function ContactUsCards() {
   return (
     <article className={styles.contactCards}>
       <RevealContentContainer>
-        <CardsColumns cards={cards} cardComponent={ContactUsCard} />
+        <CardsColumns
+          cards={cards}
+          cardComponent={props => <Card {...props} cardType='contact' />}
+        />
       </RevealContentContainer>
     </article>
   );
