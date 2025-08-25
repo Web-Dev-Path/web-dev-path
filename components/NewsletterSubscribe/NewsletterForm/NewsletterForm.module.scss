@@ -1,0 +1,132 @@
+@use '@/styles/index' as *;
+
+.section {
+  padding: 2.5rem 0;
+  background-color: var(--color-primary-accent);
+
+  @include desktop {
+    padding: 1rem 0;
+  }
+}
+
+.innerContainer {
+  @include desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+
+.title {
+  font-size: 1.5rem;
+  color: var(--color-primary-content);
+  margin: 0;
+  white-space: nowrap;
+  display: flex;
+  gap: 0.5rem;
+
+  @include medium-desktop {
+    font-size: 1.75rem;
+    gap: 1rem;
+  }
+
+  @include desktop {
+    height: auto;
+  }
+}
+
+.rightChevron {
+  position: relative;
+  top: 0.1rem;
+  @include large-desktop {
+    top: unset;
+    img {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+}
+
+.form {
+  @include desktop {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-left: auto;
+  }
+}
+
+.input {
+  display: block;
+  font-size: 1.2rem;
+  border-radius: 1rem;
+  height: 2rem;
+  margin: 1rem 0;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--dark-bg);
+  width: 100%;
+
+  &::placeholder {
+    color: var(--color-primary-content);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  @include large-desktop {
+    font-size: 1.5rem;
+    height: 3rem;
+    border-radius: 3rem;
+    max-width: 25rem;
+  }
+}
+
+.inputName {
+  @extend .input;
+
+  @include desktop {
+    width: 12.25rem;
+  }
+}
+
+.inputEmail {
+  @extend .input;
+
+  @include desktop {
+    width: 16rem;
+  }
+
+  @include large-desktop {
+    width: 26rem;
+  }
+}
+
+.formInfo {
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--color-primary-content);
+}
+
+.formResponse {
+  margin-top: 1rem;
+
+  @include desktop {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+}
+
+.formSending {
+  @extend .formResponse;
+}
+
+.formSuccess {
+  @extend .formResponse;
+}
+
+.formError {
+  @extend .formResponse;
+  color: var(--error);
+}

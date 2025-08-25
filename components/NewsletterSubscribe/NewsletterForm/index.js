@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { decode } from 'html-entities';
 import { NewsLetterSubmitButton } from '@/components/buttons/SubmitButton';
-import S from './styles';
+import styles from './NewsletterForm.module.scss';
+import Container from '@/components/containers/Container';
 
 const NewsletterForm = ({ status, message, subscribe, getReCaptchaToken }) => {
   const [error, setError] = useState(null);
@@ -109,29 +110,31 @@ const NewsletterForm = ({ status, message, subscribe, getReCaptchaToken }) => {
   };
 
   return (
-    <S.Section>
-      <S.InnerContainer>
-        <S.Title>
+    <section className={styles.section}>
+      <Container className={styles.innerContainer}>
+        <h2 className={styles.title}>
           Sign up for news
-          <S.RightChevron>
+          <span className={styles.rightChevron}>
             <Image
               src='/images/svg/right-chevron.svg'
               height={18}
               width={18}
               alt='Right Chevron SVG'
             />
-          </S.RightChevron>
-        </S.Title>
+          </span>
+        </h2>
         <div>
-          <S.Form onSubmit={handleFormSubmit}>
-            <S.InputName
+          <form className={styles.form} onSubmit={handleFormSubmit}>
+            <input
+              className={styles.inputName}
               onChange={event => setName(event?.target?.value ?? '')}
               type='text'
               name='name'
               value={name}
               placeholder='name'
             />
-            <S.InputEmail
+            <input
+              className={styles.inputEmail}
               onChange={event => setEmail(event?.target?.value ?? '')}
               type='email'
               name='email'
@@ -140,32 +143,36 @@ const NewsletterForm = ({ status, message, subscribe, getReCaptchaToken }) => {
               onKeyUp={event => handleInputKeyEvent(event)}
             />
             <NewsLetterSubmitButton label='Subscribe' />
-          </S.Form>
+          </form>
 
-          <S.FormInfo>
+          <div className={styles.formInfo}>
             {reCaptchaFail && (
-              <S.FormSending>
+              <div className={styles.formSending}>
                 Please, refresh your screen and try it again.
-              </S.FormSending>
+              </div>
             )}
 
-            {status === 'sending' && <S.FormSending>Sending...</S.FormSending>}
+            {status === 'sending' && (
+              <div className={styles.formSending}>Sending...</div>
+            )}
             {status === 'error' || error ? (
-              <S.FormError
+              <div
+                className={styles.formError}
                 dangerouslySetInnerHTML={{
                   __html: error || getMessage(message),
                 }}
               />
             ) : null}
             {status === 'success' && status !== 'error' && !error && (
-              <S.FormSuccess
+              <div
+                className={styles.formSuccess}
                 dangerouslySetInnerHTML={{ __html: decode(message) }}
               />
             )}
-          </S.FormInfo>
+          </div>
         </div>
-      </S.InnerContainer>
-    </S.Section>
+      </Container>
+    </section>
   );
 };
 
