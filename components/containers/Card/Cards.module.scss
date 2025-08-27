@@ -39,7 +39,7 @@
 }
 
 .title {
-  font-family: var(--font-heading);
+  font-family: $font-family-secondary;
   font-weight: bold;
   font-size: 1.75rem;
   color: var(--color-primary-content);
@@ -148,7 +148,6 @@
     margin-bottom: 0.7rem;
     max-height: 7rem;
     overflow: hidden;
-    line-height: unset;
 
     @include tablet {
       font-size: 1.3rem;

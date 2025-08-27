@@ -22,7 +22,11 @@ export function Card({ card, cardType = 'default' }) {
         </div>
       )}
 
-      {title && <h2 className={styles.title}>{title}</h2>}
+      {title && (
+        <h2 className={styles.title} title={title}>
+          {title}
+        </h2>
+      )}
 
       {tagList?.length > 0 && (
         <div className={styles.tagContainer}>
