@@ -187,6 +187,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   - RelatedPosts
   - Footer
   - contactStyles
+  - CardsColumns
+  - Nav
+  - NewsletterSubscribe
 - Extracted :root from themes.scss to globals.scss
 - Updated ContactUsForm's checkbox wrapper from div to label to enhance its accessibility
 - Updated SearchInput width to 100% for better styling
@@ -198,3 +201,4 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Created a combineClasses function to clean up conditional class handling
 - Rename RowAlignLeft to Row
 - Remove unessesary stylings from the Layout.
+- Fixed active state bug on the navigation.
