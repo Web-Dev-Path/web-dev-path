@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import ContactUsFormSubscribe from '@/components/ContactUs';
 import ContactUsCards from '@/components/ContactUs/ContactUsCards';
-import S from '@/styles/pages/contactStyles';
+import styles from '@/styles/pages/contact.module.scss';
 import Bracket from '@/components/decorations/Bracket';
 import bracketStyles from '@/components/decorations/Bracket/Bracket.module.scss';
 export default function ContactUs() {
@@ -9,21 +9,27 @@ export default function ContactUs() {
 
   return (
     <>
-      <S.ContactUsContainer>
-        <S.FormAndDecorations>
-          <Bracket className={bracketStyles.yellowBracket} />
-          <ContactUsFormSubscribe setMsg={setMessage} />
-          <S.YellowColon src='/images/svg/yellow-colon.svg' />
-          <S.ResponseMessage>
-            {message?.map((m, i) => (
-              <span key={i}>
-                {m}
-                <br />
-              </span>
-            ))}
-          </S.ResponseMessage>
-        </S.FormAndDecorations>
-      </S.ContactUsContainer>
+      <div className={styles.contactUsContainer}>
+        <div className={styles.formWrapper}>
+          <div className={styles.formAndDecorations}>
+            <Bracket className={bracketStyles.yellowBracket} />
+            <ContactUsFormSubscribe setMsg={setMessage} />
+            <img
+              className={styles.yellowColon}
+              src='/images/svg/yellow-colon.svg'
+              alt=''
+            />
+            <div className={styles.responseMessage}>
+              {message?.map((m, i) => (
+                <span key={i}>
+                  {m}
+                  <br />
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
       <ContactUsCards />
     </>
   );

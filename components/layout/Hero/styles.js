@@ -10,7 +10,8 @@ const Header = styled.div`
 
   ${props => css`
     @media (min-width: ${props.theme.breakpoints.desktop}) {
-      min-height: 100vh;
+      height: 100vh;
+      max-height: 56.25rem;
     }
   `}
 `;
