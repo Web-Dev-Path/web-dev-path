@@ -1,0 +1,67 @@
+@use '@/styles/index' as *;
+
+.contactUsContainer {
+  background-color: var(--color-light-bg);
+  height: 42rem;
+  position: relative;
+  margin-bottom: -10rem;
+
+  @include mobile {
+    height: unset;
+    padding-bottom: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  @include desktop {
+    height: 32rem;
+  }
+}
+
+.formWrapper {
+  display: flex;
+  max-width: 98rem;
+  margin-inline: auto;
+}
+
+.formAndDecorations {
+  position: relative;
+  width: 100%;
+  margin: auto;
+
+  @include tablet {
+    width: auto;
+    margin-top: -19rem;
+    margin-right: 2rem;
+  }
+
+  @include desktop {
+    margin: -25rem 5rem 0 auto;
+  }
+}
+
+.yellowColon {
+  @include desktop-breakpoint-minus {
+    display: none;
+  }
+
+  @include tablet {
+    position: absolute;
+    top: -10%;
+    right: -5%;
+  }
+
+  @include desktop {
+    right: -1rem;
+  }
+}
+
+.responseMessage {
+  position: unset;
+  bottom: -5%;
+  padding: 0 2rem;
+
+  @include tablet {
+    position: absolute;
+    margin-top: 1rem;
+  }
+}

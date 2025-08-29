@@ -157,6 +157,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Updated husky script to avoid warning
 - Resolved incorrect meta tag rendering for nested routes
 - Prevent horizontal page scroll caused by overflowing long titles
+- Fixed hero images' max-height to align with WDP mockup
+- Fixed contact us form position to maintain structure on bigger displays
 
 ### Changed
 
@@ -184,6 +186,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   - Layout
   - RelatedPosts
   - Footer
+  - contactStyles
   - CardsColumns
   - Nav
   - CardsContainers
