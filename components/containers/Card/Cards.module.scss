@@ -19,7 +19,7 @@
     }
   }
 
-  @include small-mobile {
+  @include small-mobile-min {
     height: 42rem;
   }
 
@@ -46,7 +46,7 @@
   margin: 1rem 0 0 0;
   line-height: unset;
 
-  @media (min-width: $tablet-breakpoint) {
+  @include tablet {
     font-size: 2.25rem;
   }
 }
