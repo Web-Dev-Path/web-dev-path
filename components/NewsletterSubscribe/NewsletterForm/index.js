@@ -5,10 +5,12 @@ import { NewsLetterSubmitButton } from '@/components/buttons/SubmitButton';
 import styles from './NewsletterForm.module.scss';
 import Container from '@/components/containers/Container';
 
-const NewsletterForm = ({ status, message, subscribe, getReCaptchaToken }) => {
+const NewsletterForm = ({ getReCaptchaToken }) => {
   const [error, setError] = useState(null);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
+  const [status, setStatus] = useState('');
+  const [message, setMessage] = useState('');
   const [reCaptchaFail, setReCaptchaFail] = useState(false);
 
   useEffect(() => {
@@ -25,16 +27,26 @@ const NewsletterForm = ({ status, message, subscribe, getReCaptchaToken }) => {
     if (!gReCaptchaToken) return false;
 
     try {
+      setStatus('sending');
       const response = await fetch('/api/validateReCaptcha', {
         method: 'POST',
-        body: JSON.stringify({ email, name, gReCaptchaToken }),
+        body: JSON.stringify({ email, name, subscribe: true, gReCaptchaToken }),
         headers: {
           'Content-Type': 'application/json',
         },
       });
 
-      return response.ok ? true : false;
+      if (response.ok) {
+        setStatus('success');
+        setMessage('Thank you for subscribing!');
+        return true;
+      } else {
+        setStatus('error');
+        setMessage('Something went wrong, please try again');
+      }
     } catch (error) {
+      setStatus('error');
+      setMessage('Something went wrong, please try again');
       console.log(error?.message || 'Something went wrong');
       return false;
     }
@@ -65,11 +77,6 @@ const NewsletterForm = ({ status, message, subscribe, getReCaptchaToken }) => {
     if (!confirmValidateRecaptcha) {
       setReCaptchaFail(true);
     } else {
-      subscribe({
-        EMAIL: email,
-        MERGE1: name,
-      });
-
       event.target.reset();
       setReCaptchaFail(false);
     }
