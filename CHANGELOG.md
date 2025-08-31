@@ -190,6 +190,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   - CardsColumns
   - Nav
   - NewsletterSubscribe
+  - Hero
 - Extracted :root from themes.scss to globals.scss
 - Updated ContactUsForm's checkbox wrapper from div to label to enhance its accessibility
 - Updated SearchInput width to 100% for better styling
@@ -202,3 +203,4 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Rename RowAlignLeft to Row
 - Remove unessesary stylings from the Layout.
 - Fixed active state bug on the navigation.
+- Removed unused props from Hero layout component
