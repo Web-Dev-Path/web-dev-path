@@ -10,8 +10,6 @@ export default function Hero({
   imgAlt,
   dynamicTitles = [],
   content,
-  customClass,
-  titleClass,
   hasAccent,
 }) {
   const [titleIndex, setTitleIndex] = useState(0);
