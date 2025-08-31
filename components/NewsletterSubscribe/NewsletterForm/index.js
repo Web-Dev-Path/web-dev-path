@@ -11,7 +11,6 @@ const NewsletterForm = ({ getReCaptchaToken }) => {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState('');
   const [message, setMessage] = useState('');
-  const [reCaptchaFail, setReCaptchaFail] = useState(false);
 
   useEffect(() => {
     if (status === 'success') {
@@ -60,7 +59,6 @@ const NewsletterForm = ({ getReCaptchaToken }) => {
   const handleFormSubmit = async event => {
     event.preventDefault();
 
-    setReCaptchaFail(false);
     setError(null);
 
     if (!name) {
@@ -74,11 +72,9 @@ const NewsletterForm = ({ getReCaptchaToken }) => {
     }
 
     const confirmValidateRecaptcha = await validateReCaptcha();
-    if (!confirmValidateRecaptcha) {
-      setReCaptchaFail(true);
-    } else {
-      event.target.reset();
-      setReCaptchaFail(false);
+    if (confirmValidateRecaptcha) {
+      setName('');
+      setEmail('');
     }
   };
 
@@ -94,7 +90,7 @@ const NewsletterForm = ({ getReCaptchaToken }) => {
       // Cancel the default action, if needed
       event.preventDefault();
       // Trigger the button element with a click
-      handleFormSubmit();
+      handleFormSubmit(event);
     }
   };
 
@@ -153,12 +149,6 @@ const NewsletterForm = ({ getReCaptchaToken }) => {
           </form>
 
           <div className={styles.formInfo}>
-            {reCaptchaFail && (
-              <div className={styles.formSending}>
-                Please, refresh your screen and try it again.
-              </div>
-            )}
-
             {status === 'sending' && (
               <div className={styles.formSending}>Sending...</div>
             )}
