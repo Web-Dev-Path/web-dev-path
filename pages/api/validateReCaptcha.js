@@ -52,6 +52,9 @@ export default async function handler(req, res) {
           const result = await subscribeToMailchimp(email, name);
           if (!result.success) {
             console.error('Mailchimp subscribe failed: ', result.error);
+            return res
+              .status(400)
+              .json({ message: result.error?.detail || 'Subscription failed' });
           }
         }
 
