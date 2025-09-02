@@ -1,6 +1,8 @@
 import { useState } from 'react';
+import Image from 'next/image';
 import Nav from '@/components/layout/Nav';
-import S from './styles';
+import Container from '@/components/containers/Container';
+import styles from './Hero.module.scss';
 
 export default function Hero({
   title,
@@ -8,8 +10,6 @@ export default function Hero({
   imgAlt,
   dynamicTitles = [],
   content,
-  customClass,
-  titleClass,
   hasAccent,
 }) {
   const [titleIndex, setTitleIndex] = useState(0);
@@ -20,20 +20,26 @@ export default function Hero({
   setTimeout(handleTitleIndex, 1550);
 
   return (
-    <S.Header>
+    <div className={styles.header}>
       <Nav />
-      <S.ImageBg src={imgBg} alt={imgAlt} fill priority />
-      <S.HeaderContent>
-        <S.HeaderContentUpper>
-          <S.Title $hasAccent={hasAccent}>
+      <Image
+        className={styles.imageBg}
+        src={imgBg}
+        alt={imgAlt}
+        fill
+        priority
+      />
+      <Container className={styles.headerContent}>
+        <div className={styles.headerContentUpper}>
+          <h1 className={hasAccent ? styles.title : null}>
             {title}
             {dynamicTitles && <span> {dynamicTitles[titleIndex]}</span>}
-          </S.Title>
-        </S.HeaderContentUpper>
-        <S.HeaderContentBottom>
+          </h1>
+        </div>
+        <div className={styles.headerContentBottom}>
           <p>{content}</p>
-        </S.HeaderContentBottom>
-      </S.HeaderContent>
-    </S.Header>
+        </div>
+      </Container>
+    </div>
   );
 }
