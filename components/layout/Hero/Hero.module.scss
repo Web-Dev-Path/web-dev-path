@@ -1,0 +1,57 @@
+@use '@/styles/index' as *;
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  @include desktop {
+    height: 100vh;
+    max-height: 56.25rem;
+  }
+}
+
+.headerContent {
+  z-index: 10;
+  color: var(--color-white);
+  padding-top: 9%;
+}
+
+.headerContentUpper {
+  max-width: 41rem;
+
+  span {
+    color: var(--color-primary-accent);
+    font-style: italic;
+    font-weight: bold;
+    line-height: 3.5rem;
+
+    @include desktop {
+      font-size: 4.5rem;
+      line-height: 5rem;
+    }
+  }
+}
+
+.headerContentBottom {
+  max-width: 19rem;
+  padding-bottom: 5rem;
+
+  @include desktop {
+    padding-bottom: 0;
+
+    p {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.imageBg {
+  object-fit: cover;
+  object-position: center;
+}
+
+.title {
+  color: var(--color-primary-accent);
+}
