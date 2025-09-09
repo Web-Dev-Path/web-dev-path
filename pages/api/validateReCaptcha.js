@@ -1,4 +1,5 @@
 import sendEmail from './sendEmail.js';
+import { subscribeToMailchimp } from '../../lib/mailchimp';
 
 export default async function handler(req, res) {
   const { method } = req;
@@ -27,7 +28,7 @@ export default async function handler(req, res) {
             'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8',
           },
           method: 'POST',
-        }
+        },
       );
       const captchaValidation = await response.json();
       if (captchaValidation.success) {
@@ -39,13 +40,24 @@ export default async function handler(req, res) {
             name,
             subject,
             message,
-            subscribe
+            subscribe,
           );
 
           if (sendEmailOK.status !== 'okay') {
             return res.status(400).json({ message: sendEmailOK.message });
           }
         }
+
+        if (subscribe) {
+          const result = await subscribeToMailchimp(email, name);
+          if (!result.success) {
+            console.error('Mailchimp subscribe failed: ', result.error);
+            return res
+              .status(400)
+              .json({ message: result.error?.detail || 'Subscription failed' });
+          }
+        }
+
         // Return 200 if everything is successful
         return res.status(200).send('OK');
       }
