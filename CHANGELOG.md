@@ -206,3 +206,4 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Fixed active state bug on the navigation.
 - Integrate Mailchimp Marketing API instead of react-mailchimp-subscribe dependency.
 - Removed unused props from Hero layout component
+- Replace sendgrid with mailjet for sending contact email
