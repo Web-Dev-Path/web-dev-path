@@ -5,11 +5,12 @@ import { NewsLetterSubmitButton } from '@/components/buttons/SubmitButton';
 import styles from './NewsletterForm.module.scss';
 import Container from '@/components/containers/Container';
 
-const NewsletterForm = ({ status, message, subscribe, getReCaptchaToken }) => {
+const NewsletterForm = ({ getReCaptchaToken }) => {
   const [error, setError] = useState(null);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [reCaptchaFail, setReCaptchaFail] = useState(false);
+  const [status, setStatus] = useState('');
+  const [message, setMessage] = useState('');
 
   useEffect(() => {
     if (status === 'success') {
@@ -25,16 +26,26 @@ const NewsletterForm = ({ status, message, subscribe, getReCaptchaToken }) => {
     if (!gReCaptchaToken) return false;
 
     try {
+      setStatus('sending');
       const response = await fetch('/api/validateReCaptcha', {
         method: 'POST',
-        body: JSON.stringify({ email, name, gReCaptchaToken }),
+        body: JSON.stringify({ email, name, subscribe: true, gReCaptchaToken }),
         headers: {
           'Content-Type': 'application/json',
         },
       });
 
-      return response.ok ? true : false;
+      if (response.ok) {
+        setStatus('success');
+        setMessage('Thank you for subscribing!');
+        return true;
+      } else {
+        setStatus('error');
+        setMessage('Something went wrong, please try again');
+      }
     } catch (error) {
+      setStatus('error');
+      setMessage('Something went wrong, please try again');
       console.log(error?.message || 'Something went wrong');
       return false;
     }
@@ -48,7 +59,6 @@ const NewsletterForm = ({ status, message, subscribe, getReCaptchaToken }) => {
   const handleFormSubmit = async event => {
     event.preventDefault();
 
-    setReCaptchaFail(false);
     setError(null);
 
     if (!name) {
@@ -62,16 +72,9 @@ const NewsletterForm = ({ status, message, subscribe, getReCaptchaToken }) => {
     }
 
     const confirmValidateRecaptcha = await validateReCaptcha();
-    if (!confirmValidateRecaptcha) {
-      setReCaptchaFail(true);
-    } else {
-      subscribe({
-        EMAIL: email,
-        MERGE1: name,
-      });
-
-      event.target.reset();
-      setReCaptchaFail(false);
+    if (confirmValidateRecaptcha) {
+      setName('');
+      setEmail('');
     }
   };
 
@@ -87,7 +90,7 @@ const NewsletterForm = ({ status, message, subscribe, getReCaptchaToken }) => {
       // Cancel the default action, if needed
       event.preventDefault();
       // Trigger the button element with a click
-      handleFormSubmit();
+      handleFormSubmit(event);
     }
   };
 
@@ -146,12 +149,6 @@ const NewsletterForm = ({ status, message, subscribe, getReCaptchaToken }) => {
           </form>
 
           <div className={styles.formInfo}>
-            {reCaptchaFail && (
-              <div className={styles.formSending}>
-                Please, refresh your screen and try it again.
-              </div>
-            )}
-
             {status === 'sending' && (
               <div className={styles.formSending}>Sending...</div>
             )}

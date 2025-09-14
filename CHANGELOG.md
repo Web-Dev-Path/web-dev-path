@@ -205,4 +205,5 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Rename RowAlignLeft to Row
 - Remove unessesary stylings from the Layout.
 - Fixed active state bug on the navigation.
+- Integrate Mailchimp Marketing API instead of react-mailchimp-subscribe dependency.
 - Removed unused props from Hero layout component

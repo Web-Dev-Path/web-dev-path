@@ -1,9 +1,11 @@
 import React from 'react';
-import Mailchimp from '../Mailchimp';
+import ReCapchaWrapper from '../Recapcha';
 import ContactUsForm from '@/components/ContactUs/ContactUsForm';
 
 const ContactUs = ({ setMsg }) => {
-  return <Mailchimp child={<ContactUsForm setResponseMessage={setMsg} />} />;
+  return (
+    <ReCapchaWrapper children={<ContactUsForm setResponseMessage={setMsg} />} />
+  );
 };
 
 export default ContactUs;

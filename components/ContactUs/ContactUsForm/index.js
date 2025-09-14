@@ -4,7 +4,7 @@ import RevealContentContainer from '@/components/containers/RevealContentContain
 import { SubmitButton } from '@/components/buttons/SubmitButton';
 import styles from './ContactUsForm.module.scss';
 
-function ContactUsForm({ subscribe, setResponseMessage, getReCaptchaToken }) {
+function ContactUsForm({ setResponseMessage, getReCaptchaToken }) {
   const {
     register,
     handleSubmit,
@@ -20,15 +20,13 @@ function ContactUsForm({ subscribe, setResponseMessage, getReCaptchaToken }) {
   });
 
   async function onSubmit(data) {
-    setResponseMessage(['Submitting...']);
-
     const gReCaptchaToken = await getReCaptchaToken();
 
     if (!gReCaptchaToken) {
       setResponseMessage(['Please, refresh your screen and try it again.']);
       return;
     }
-
+    setResponseMessage(['Submitting...']);
     const res = await fetch('/api/validateReCaptcha', {
       method: 'POST',
       headers: {
@@ -55,13 +53,6 @@ function ContactUsForm({ subscribe, setResponseMessage, getReCaptchaToken }) {
         `Status Code: ${res.status} - ${jsonRes.message}`,
         'Please contact support at hello@webdevpath.co',
       ]);
-    }
-
-    if (data.Subscribe) {
-      subscribe({
-        EMAIL: data.Email,
-        MERGE1: data.Name,
-      });
     }
     reset();
   }
