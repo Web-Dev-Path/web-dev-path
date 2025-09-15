@@ -151,6 +151,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Updated Mariana's title in 'about us'
 - Updated outdated dependencies
 - Added Shayla to 'about us'
+- Added Oluwatobi to 'about us'
 
 ### Fixed
 
