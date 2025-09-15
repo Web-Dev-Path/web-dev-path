@@ -190,6 +190,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   - contactStyles
   - CardsColumns
   - Nav
+  - CardsContainers
   - NewsletterSubscribe
   - Hero
 - Extracted :root from themes.scss to globals.scss

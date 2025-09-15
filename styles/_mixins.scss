@@ -67,3 +67,9 @@
     @content;
   }
 }
+
+@mixin small-mobile-min {
+  @media (min-width: $sm-mobile-breakpoint) {
+    @content;
+  }
+}
