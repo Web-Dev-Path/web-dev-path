@@ -1,6 +1,4 @@
 import Layout from '@/components/layout/Layout';
-import { ThemeProvider } from 'styled-components';
-import { lightTheme, GlobalStyles } from '@/styles/themeConfig';
 import '@/styles/globals.scss';
 
 function MyApp({ Component, pageProps }) {
@@ -11,12 +9,9 @@ function MyApp({ Component, pageProps }) {
   // };
 
   return (
-    <ThemeProvider theme={lightTheme}>
-      <GlobalStyles />
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-    </ThemeProvider>
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
   );
 }
 
