@@ -194,6 +194,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   - CardsContainers
   - NewsletterSubscribe
   - Hero
+- Removed Styled Components dependency  
 - Extracted :root from themes.scss to globals.scss
 - Updated ContactUsForm's checkbox wrapper from div to label to enhance its accessibility
 - Updated SearchInput width to 100% for better styling
