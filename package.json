@@ -29,7 +29,6 @@
     "react-google-recaptcha": "^3.1.0",
     "react-hook-form": "^7.35.0",
     "sass": "^1.35.1",
-    "styled-components": "^6.1.18",
     "swiper": "^11.2.6"
   },
   "devDependencies": {
@@ -38,9 +37,6 @@
     "prettier": "^3.5.3",
     "prettylint": "^2.0.0",
     "webpack": "^5.88.1"
-  },
-  "resolutions": {
-    "styled-components": "^5"
   },
   "license": "GPL-3.0",
   "packageManager": "yarn@1.22.21+sha1.1959a18351b811cdeedbd484a8f86c3cc3bbaf72"

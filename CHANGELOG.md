@@ -151,6 +151,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Updated Mariana's title in 'about us'
 - Updated outdated dependencies
 - Added Shayla to 'about us'
+- Added Oluwatobi to 'about us'
 
 ### Fixed
 
@@ -190,8 +191,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   - contactStyles
   - CardsColumns
   - Nav
+  - CardsContainers
   - NewsletterSubscribe
   - Hero
+- Removed Styled Components dependency  
 - Extracted :root from themes.scss to globals.scss
 - Updated ContactUsForm's checkbox wrapper from div to label to enhance its accessibility
 - Updated SearchInput width to 100% for better styling

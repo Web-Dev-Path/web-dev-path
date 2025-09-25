@@ -65,6 +65,18 @@ export const whoWeAre = [
       'Bernardo is a Full-Stack Android and web developer who is always eager to learn and explore new technologies, constantly seeking ways to enhance his projects.',
   },
   {
+    image: '/images/oluwatobi.webp',
+    name: 'Oluwatobi Sofela',
+    title: '',
+    devtoSummary:
+      'Oluwatobi is a full-stack developer who loves techs that simplify processes and help people accomplish their desires elegantly.',
+    position: 'Full-Stack Developer',
+    linkedIn: 'oluwatobiss',
+    portfolio: 'github.com/oluwatobiss',
+    about:
+      'Oluwatobi is a full-stack developer who loves techs that simplify processes and help people accomplish their desires elegantly.',
+  },
+  {
     image: '/images/satoshi.webp',
     name: 'Satoshi Shirosaka',
     title: '',
