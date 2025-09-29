@@ -90,13 +90,13 @@ export default function Nav() {
               {linksNav.map(({ text, href, id }) => {
                 return (
                   <li className={styles.item} key={id}>
-                    <a
+                    <Link
                       href={href}
                       className={`${styles.link} ${router.pathname === href ? styles.current : ''}`}
                       title={text}
                     >
                       {text}
-                    </a>
+                    </Link>
                   </li>
                 );
               })}
