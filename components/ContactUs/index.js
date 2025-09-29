@@ -2,9 +2,11 @@ import React from 'react';
 import ReCapchaWrapper from '../Recapcha';
 import ContactUsForm from '@/components/ContactUs/ContactUsForm';
 
-const ContactUs = ({ setMsg }) => {
+const ContactUs = ({ subject, setMsg }) => {
   return (
-    <ReCapchaWrapper children={<ContactUsForm setResponseMessage={setMsg} />} />
+    <ReCapchaWrapper
+      children={<ContactUsForm subject={subject} setResponseMessage={setMsg} />}
+    />
   );
 };
 

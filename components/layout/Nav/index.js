@@ -101,8 +101,8 @@ export default function Nav() {
                 );
               })}
               <li className={styles.item}>
-                <a
-                  href='mailto:hello@webdevpath.co?subject=Project collaborator application'
+                <Link
+                  href='/contact?subject=Project collaborator application'
                   className={`
                     ${active ? styles.active : ''} 
                     ${isSticky ? styles.buttonSticky : styles.button}
@@ -110,7 +110,7 @@ export default function Nav() {
                   title='Join us'
                 >
                   Join us
-                </a>
+                </Link>
               </li>
             </ul>
             <button

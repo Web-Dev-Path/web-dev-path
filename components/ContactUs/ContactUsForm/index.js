@@ -4,7 +4,7 @@ import RevealContentContainer from '@/components/containers/RevealContentContain
 import { SubmitButton } from '@/components/buttons/SubmitButton';
 import styles from './ContactUsForm.module.scss';
 
-function ContactUsForm({ setResponseMessage, getReCaptchaToken }) {
+function ContactUsForm({ subject, setResponseMessage, getReCaptchaToken }) {
   const {
     register,
     handleSubmit,
@@ -14,7 +14,7 @@ function ContactUsForm({ setResponseMessage, getReCaptchaToken }) {
     defaultValues: {
       Name: '',
       Email: '',
-      Subject: '',
+      Subject: subject || '',
       Message: '',
     },
   });

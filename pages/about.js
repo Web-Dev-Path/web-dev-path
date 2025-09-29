@@ -207,7 +207,7 @@ export default function AboutUs() {
           image='/images/svg/slash.svg'
           altTag=''
           customInnerClass='get-started'
-          link='mailto:hello@webdevpath.co'
+          link='/contact'
           linkText='Ping us'
           customBtnClass='inverted-grey'
         />
