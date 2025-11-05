@@ -1,4 +1,5 @@
 import styles from './ButtonLink.module.scss';
+import Link from 'next/link';
 import { combineClasses } from '@/utils/classnames';
 
 export default function ButtonLink({
@@ -8,14 +9,18 @@ export default function ButtonLink({
   openNewTab,
 }) {
   const buttonClass = combineClasses(styles.buttonLink, customBtnClass, styles);
-  return (
+  return openNewTab ? (
     <a
       href={link}
       className={buttonClass}
-      target={openNewTab ? '_blank' : undefined}
+      target='_blank'
       rel='noopener noreferrer'
     >
       {children}
     </a>
+  ) : (
+    <Link href={link} className={buttonClass}>
+      {children}
+    </Link>
   );
 }
