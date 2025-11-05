@@ -102,7 +102,7 @@ export default function Nav() {
               })}
               <li className={styles.item}>
                 <Link
-                  href='/contact?subject=Project collaborator application'
+                  href='/contact?subject=Application: I want to join the project'
                   className={`
                     ${active ? styles.active : ''} 
                     ${isSticky ? styles.buttonSticky : styles.button}
