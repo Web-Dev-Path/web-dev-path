@@ -194,7 +194,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   - CardsContainers
   - NewsletterSubscribe
   - Hero
-- Removed Styled Components dependency  
+- Removed Styled Components dependency
 - Extracted :root from themes.scss to globals.scss
 - Updated ContactUsForm's checkbox wrapper from div to label to enhance its accessibility
 - Updated SearchInput width to 100% for better styling
@@ -210,3 +210,4 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Integrate Mailchimp Marketing API instead of react-mailchimp-subscribe dependency.
 - Removed unused props from Hero layout component
 - Replace sendgrid with mailjet for sending contact email
+- Replace mailto:hello@webdevpath.co button links with /contact

@@ -90,19 +90,19 @@ export default function Nav() {
               {linksNav.map(({ text, href, id }) => {
                 return (
                   <li className={styles.item} key={id}>
-                    <a
+                    <Link
                       href={href}
                       className={`${styles.link} ${router.pathname === href ? styles.current : ''}`}
                       title={text}
                     >
                       {text}
-                    </a>
+                    </Link>
                   </li>
                 );
               })}
               <li className={styles.item}>
-                <a
-                  href='mailto:hello@webdevpath.co?subject=Project collaborator application'
+                <Link
+                  href='/contact?subject=Application: I want to join the project'
                   className={`
                     ${active ? styles.active : ''} 
                     ${isSticky ? styles.buttonSticky : styles.button}
@@ -110,7 +110,7 @@ export default function Nav() {
                   title='Join us'
                 >
                   Join us
-                </a>
+                </Link>
               </li>
             </ul>
             <button
