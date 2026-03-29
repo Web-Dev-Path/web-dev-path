@@ -84,8 +84,8 @@ export const whoWeAre = [
     devtoSummary:
       'Satoshi is a full-stack developer, who is looking for opportunities to learn something new. He enjoys collaborating with other developers. Passionate for Open Source projects.',
     position: 'Full-Stack Developer',
-    linkedIn: 'satoshi-89bb58a8',
-    portfolio: 'www.satoshis-developer.xyz',
+    linkedIn: 'satoshi-sh',
+    portfolio: 'portfolio.satoshi-homelab.xyz/',
     about:
       'Satoshi is a Full-Stack developer, who is looking for opportunities to learn something new. He enjoys collaborating with other developers.',
   },
