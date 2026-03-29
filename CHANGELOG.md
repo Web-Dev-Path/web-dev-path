@@ -152,6 +152,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Updated outdated dependencies
 - Added Shayla to 'about us'
 - Added Oluwatobi to 'about us'
+- Updated Satoshi's profile links
 
 ### Fixed
 
