@@ -174,4 +174,14 @@ export const whoWeAre = [
     about:
       'Mariana is a Digital Product Manager who strongly believes in the power of sharing knowledge.',
   },
+  {
+    image: '/images/damilola.jpg',
+    name: 'Damilola Oshinowo',
+    title: '',
+    position: 'Project Manager, Scrum Master',
+    linkedIn: 'damilola-oshinowo',
+    portfolio: '',
+    about:
+      'A Scrum Master (and Sneakerhead) who looks for slicker ways to get things done. A true believer in the power of the huddle, he knows that teamwork makes the dream work.',
+  },
 ];
