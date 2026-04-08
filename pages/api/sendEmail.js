@@ -18,6 +18,11 @@ export default async (email, name, subject, message, subscribe) => {
   const mailjetEmail = 'support@webdevpath.co';
 
   try {
+    const safeName = encode(name);
+    const safeEmail = encode(email);
+    const safeSubject = encode(subject);
+    const safeMessage = encode(message);
+
     const data = {
       Messages: [
         {
@@ -30,12 +35,12 @@ export default async (email, name, subject, message, subscribe) => {
               Email: receiverEmail,
             },
           ],
-          Subject: `New message from ${name} via webdevpath.co 'Contact Us' Form`,
+          Subject: `New message from ${safeName} via webdevpath.co 'Contact Us' Form`,
           HTMLPart: `
-            <b>Name:</b> ${name} <br/>
-            <b>Email:</b> <a href='mailto:${email}'>${email}</a><br/><br/>
-            <u><b>Subject:</b> ${subject}</u><br/>
-            <b>Message:</b> ${message} <br/>
+            <b>Name:</b> ${safeName} <br/>
+            <b>Email:</b> <a href='mailto:${safeEmail}'>${safeEmail}</a><br/><br/>
+            <u><b>Subject:</b> ${safeSubject}</u><br/>
+            <b>Message:</b> ${safeMessage} <br/>
             <b>Subscribe?:</b> ${subscribe ? 'Yes' : 'No'}
           `,
         },
