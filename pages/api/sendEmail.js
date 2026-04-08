@@ -1,6 +1,7 @@
 // Sends email to hello@webdevpath.co when user submit the form in "Contact Us" page
 
 import { Client } from 'node-mailjet';
+import { encode } from 'html-entities';
 
 const mailjet = new Client({
   apiKey: process.env.MAILJET_API_KEY,
