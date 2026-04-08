@@ -19,6 +19,28 @@ export default async function handler(req, res) {
       });
     }
 
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      return res.status(422).json({
+        message: 'Invalid email format',
+      });
+    }
+
+    // Validate name length (max 100 characters)
+    if (name.length > 100) {
+      return res.status(422).json({
+        message: 'Name must be 100 characters or less',
+      });
+    }
+
+    // Validate message length if provided (max 5000 characters)
+    if (message && message.length > 5000) {
+      return res.status(422).json({
+        message: 'Message must be 5000 characters or less',
+      });
+    }
+
     try {
       // Ping the google recaptcha verify API to verify the captcha code you received
       const response = await fetch(
