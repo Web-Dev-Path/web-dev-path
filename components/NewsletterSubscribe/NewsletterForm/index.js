@@ -71,6 +71,12 @@ const NewsletterForm = ({ getReCaptchaToken }) => {
       return null;
     }
 
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      setError('Please enter a valid email address');
+      return null;
+    }
+
     const confirmValidateRecaptcha = await validateReCaptcha();
     if (confirmValidateRecaptcha) {
       setName('');
