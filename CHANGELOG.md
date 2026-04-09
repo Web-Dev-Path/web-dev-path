@@ -164,6 +164,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Fixed contact us form position to maintain structure on bigger displays
 - Fixed non-interactive form input field bug on Contact Us page
 - Bumped Next.js from v15.3.2 to v15.3.8 to fix React server component's vulnerability
+- Fixed XSS vulnerability and added client-side email format validation in NewsletterForm
+- Escaped user inputs to prevent HTML injection
+- Strengthened server-side validation to block malformed inputs before reCAPTCHA
 
 ### Changed
 
