@@ -158,12 +158,13 @@ const NewsletterForm = ({ getReCaptchaToken }) => {
             {status === 'sending' && (
               <div className={styles.formSending}>Sending...</div>
             )}
-            {status === 'error' || error ? (
+            {(status === 'error' || error) && (
               <div className={styles.formError}>
                 {error || getMessage(message)}
               </div>
-            ) : null}
-            {status === 'success' && status !== 'error' && !error && (
+            )}
+
+            {status === 'success' && !error && (
               <div className={styles.formSuccess}>{decode(message)}</div>
             )}
           </div>
