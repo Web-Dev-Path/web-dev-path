@@ -1,5 +1,7 @@
 import sendEmail from './sendEmail.js';
 import { subscribeToMailchimp } from '../../lib/mailchimp';
+import { contactSchema } from '../../utils/schemas/contact';
+import { newsletterSchema } from '../../utils/schemas/newsletter';
 
 export default async function handler(req, res) {
   const { method } = req;
@@ -12,32 +14,22 @@ export default async function handler(req, res) {
     const { name, email, subject, message, subscribe, gReCaptchaToken } =
       req.body;
 
-    // If email or captcha are missing return an error
-    if (!email || !name || !gReCaptchaToken) {
+    if (!gReCaptchaToken) {
       return res.status(422).json({
         message: 'Unprocessable request, please provide the required fields',
       });
     }
 
-    // Validate email format
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      return res.status(422).json({
-        message: 'Invalid email format',
-      });
-    }
+    const isContactForm = subject || message;
+    const schema = isContactForm ? contactSchema : newsletterSchema;
+    const parseData = isContactForm
+      ? { name, email, subject, message, subscribe }
+      : { name, email };
 
-    // Validate name length (max 100 characters)
-    if (name.length > 100) {
+    const validationResult = schema.safeParse(parseData);
+    if (!validationResult.success) {
       return res.status(422).json({
-        message: 'Name must be 100 characters or less',
-      });
-    }
-
-    // Validate message length if provided (max 5000 characters)
-    if (message && message.length > 5000) {
-      return res.status(422).json({
-        message: 'Message must be 5000 characters or less',
+        message: validationResult.error.issues[0].message,
       });
     }
 
