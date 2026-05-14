@@ -147,6 +147,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
+- Added Zod validation schemas for newsletter and contact forms
 - Added Faith to 'about us'
 - Updated Mariana's title in 'about us'
 - Updated outdated dependencies
@@ -157,6 +158,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Fixed
 
+- Fixed next-pwa import syntax for v2.x compatibility
 - Updated husky script to avoid warning
 - Resolved incorrect meta tag rendering for nested routes
 - Prevent horizontal page scroll caused by overflowing long titles
@@ -164,9 +166,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Fixed contact us form position to maintain structure on bigger displays
 - Fixed non-interactive form input field bug on Contact Us page
 - Bumped Next.js from v15.3.2 to v15.3.8 to fix React server component's vulnerability
+- Fixed XSS vulnerability and added client-side email format validation in NewsletterForm
+- Escaped user inputs to prevent HTML injection
+- Strengthened server-side validation to block malformed inputs before reCAPTCHA
 
 ### Changed
 
+- Replaced manual server-side validation in validateReCaptcha with shared Zod schemas
 - Migrating styles from Styled Components to CSS Modules
   - ContactUsCards
   - ContactUsForm

@@ -1,7 +1,9 @@
 import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
 import Container from '@/components/containers/Container';
 import RevealContentContainer from '@/components/containers/RevealContentContainer';
 import { SubmitButton } from '@/components/buttons/SubmitButton';
+import { contactSchema } from '@/utils/schemas/contact';
 import styles from './ContactUsForm.module.scss';
 
 function ContactUsForm({ subject, setResponseMessage, getReCaptchaToken }) {
@@ -11,11 +13,12 @@ function ContactUsForm({ subject, setResponseMessage, getReCaptchaToken }) {
     reset,
     formState: { errors, isSubmitting },
   } = useForm({
+    resolver: zodResolver(contactSchema),
     defaultValues: {
-      Name: '',
-      Email: '',
-      Subject: subject || '',
-      Message: '',
+      name: '',
+      email: '',
+      subject: subject || '',
+      message: '',
     },
   });
 
@@ -33,11 +36,11 @@ function ContactUsForm({ subject, setResponseMessage, getReCaptchaToken }) {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        name: data.Name,
-        email: data.Email,
-        subject: data.Subject,
-        message: data.Message,
-        subscribe: data.Subscribe,
+        name: data.name,
+        email: data.email,
+        subject: data.subject,
+        message: data.message,
+        subscribe: data.subscribe,
         gReCaptchaToken,
       }),
     });
@@ -65,78 +68,35 @@ function ContactUsForm({ subject, setResponseMessage, getReCaptchaToken }) {
             className={styles.input}
             type='text'
             placeholder='name'
-            {...register('Name', {
-              required: true,
-              minLength: 2,
-              maxLength: 80,
-              //no white space pattern
-              pattern: /[^\s-]/i,
-            })}
+            {...register('name')}
           />
-          <p className={styles['error-msg']}>
-            {errors.Name?.type === 'required'
-              ? 'Name is required'
-              : errors.Name?.type === 'pattern'
-                ? 'No whitespace'
-                : errors.Name?.type === 'minLength'
-                  ? 'Must be more than 1 character'
-                  : undefined}
-          </p>
+          <p className={styles['error-msg']}>{errors.name?.message}</p>
           <input
             className={styles.input}
             type='email'
             placeholder='email'
-            {...register('Email', {
-              required: true,
-              pattern: /^\S+@\S+$/i,
-            })}
+            {...register('email')}
           />
-          <p className={styles['error-msg']}>
-            {errors.Email?.type === 'required' && 'Email is required'}
-          </p>
+          <p className={styles['error-msg']}>{errors.email?.message}</p>
           <input
             className={styles.input}
             type='text'
             placeholder='subject'
-            {...register('Subject', {
-              required: true,
-              minLength: 2,
-              pattern: /[^\s-]/i,
-            })}
+            {...register('subject')}
           />
-          <p className={styles['error-msg']}>
-            {errors.Subject?.type === 'required'
-              ? 'Subject is required'
-              : errors.Subject?.type === 'pattern'
-                ? 'No whitespace'
-                : errors.Subject?.type === 'minLength'
-                  ? 'Must be more than 1 character'
-                  : undefined}
-          </p>
+          <p className={styles['error-msg']}>{errors.subject?.message}</p>
           <textarea
             className={styles.textarea}
-            {...register('Message', {
-              required: true,
-              minLength: 2,
-              pattern: /[^\s-]/i,
-            })}
+            {...register('message')}
             placeholder='Write your message here'
           />
-          <p className={styles['error-msg']}>
-            {errors.Message?.type === 'required'
-              ? 'Message is required'
-              : errors.Message?.type === 'pattern'
-                ? 'No whitespace'
-                : errors.Message?.type === 'minLength'
-                  ? 'Must be more than 1 character'
-                  : undefined}
-          </p>
+          <p className={styles['error-msg']}>{errors.message?.message}</p>
           <label className={styles['subscribe-wrapper']}>
             <input
               className={styles['subscribe-input']}
               type='checkbox'
               placeholder='Subscribe to our DevNews!'
-              {...register('Subscribe', {})}
+              {...register('subscribe')}
             />
             Subscribe to our DevNews!
           </label>

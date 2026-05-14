@@ -4,6 +4,7 @@ import { decode } from 'html-entities';
 import { NewsLetterSubmitButton } from '@/components/buttons/SubmitButton';
 import styles from './NewsletterForm.module.scss';
 import Container from '@/components/containers/Container';
+import { newsletterSchema } from '@/utils/schemas/newsletter';
 
 const NewsletterForm = ({ getReCaptchaToken }) => {
   const [error, setError] = useState(null);
@@ -61,13 +62,9 @@ const NewsletterForm = ({ getReCaptchaToken }) => {
 
     setError(null);
 
-    if (!name) {
-      setError('Please enter a name');
-      return null;
-    }
-
-    if (!email) {
-      setError('Please enter a valid email address');
+    const result = newsletterSchema.safeParse({ name, email });
+    if (!result.success) {
+      setError(result.error.issues[0].message);
       return null;
     }
 
@@ -152,19 +149,14 @@ const NewsletterForm = ({ getReCaptchaToken }) => {
             {status === 'sending' && (
               <div className={styles.formSending}>Sending...</div>
             )}
-            {status === 'error' || error ? (
-              <div
-                className={styles.formError}
-                dangerouslySetInnerHTML={{
-                  __html: error || getMessage(message),
-                }}
-              />
-            ) : null}
-            {status === 'success' && status !== 'error' && !error && (
-              <div
-                className={styles.formSuccess}
-                dangerouslySetInnerHTML={{ __html: decode(message) }}
-              />
+            {(status === 'error' || error) && (
+              <div className={styles.formError}>
+                {error || getMessage(message)}
+              </div>
+            )}
+
+            {status === 'success' && !error && (
+              <div className={styles.formSuccess}>{decode(message)}</div>
             )}
           </div>
         </div>
