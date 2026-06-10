@@ -22,7 +22,7 @@
     "@hookform/resolvers": "^5.4.0",
     "@sendgrid/mail": "^8.1.6",
     "html-entities": "^2.3.2",
-    "next": "^15.5.14",
+    "next": "15.5.19",
     "node-mailjet": "^6.0.9",
     "react": "19.2.7",
     "react-dom": "19.2.7",
