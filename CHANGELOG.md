@@ -224,6 +224,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Removed unused props from Hero layout component
 - Replace sendgrid with mailjet for sending contact email
 - Replace mailto:hello@webdevpath.co button links with /contact
+- Removed next-pwa implementation
+- Removed redundant styledComponents configuration
 
 ## Unreleased
 
