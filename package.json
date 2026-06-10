@@ -37,7 +37,8 @@
     "lint-staged": "^17.0.7",
     "prettier": "^3.8.4",
     "prettylint": "^2.0.0",
-    "webpack": "^5.107.2"
+    "webpack": "^5.107.2",
+    "yaml": "^2.9.0"
   },
   "license": "GPL-3.0",
   "packageManager": "yarn@1.22.21+sha1.1959a18351b811cdeedbd484a8f86c3cc3bbaf72"
