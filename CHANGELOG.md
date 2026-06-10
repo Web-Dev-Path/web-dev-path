@@ -159,6 +159,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Updated Damilola's profile image format from jpg to webp
 - Updated Oluwatobi's profile
 - Added `sizes` prop to images with `fill` to improve page performance
+- Update supported Node.js version from 20.18.0 to 20.19.0
 
 ### Fixed
 
