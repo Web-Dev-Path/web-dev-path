@@ -68,13 +68,11 @@ export const whoWeAre = [
     image: '/images/oluwatobi.webp',
     name: 'Oluwatobi Sofela',
     title: '',
-    devtoSummary:
-      'Oluwatobi is a full-stack developer who loves techs that simplify processes and help people accomplish their desires elegantly.',
     position: 'Full-Stack Developer',
     linkedIn: 'oluwatobiss',
     portfolio: 'github.com/oluwatobiss',
     about:
-      'Oluwatobi is a full-stack developer who loves techs that simplify processes and help people accomplish their desires elegantly.',
+      'Full-stack JavaScript and TypeScript engineer exploring new possibilities with privacy-first technologies and zero-knowledge systems.',
   },
   {
     image: '/images/satoshi.webp',
