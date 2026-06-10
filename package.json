@@ -23,7 +23,6 @@
     "@sendgrid/mail": "^8.1.5",
     "html-entities": "^2.3.2",
     "next": "^15.5.14",
-    "next-pwa": "^2.0.2",
     "node-mailjet": "^6.0.9",
     "react": "19.1.0",
     "react-dom": "19.1.0",
