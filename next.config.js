@@ -1,11 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  compiler: {
-    styledComponents: {
-      ssr: true,
-      cssProp: true,
-    },
-  },
   i18n: {
     locales: ['en'],
     defaultLocale: 'en',
