@@ -158,6 +158,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Updated Next.js from v15.5.14 to v15.5.19 and other outdated dependencies
 - Updated Damilola's profile image format from jpg to webp
 - Updated Oluwatobi's profile
+- Added `sizes` prop to images with `fill` to improve page performance
 
 ### Fixed
 
