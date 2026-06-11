@@ -12,7 +12,12 @@ export default function PostContent({ post }) {
       >{`${post.user.name}\u00A0\u00A0\u00A0${publishedDate}`}</p>
       {post.cover_image && (
         <div className={styles.imageWrapper}>
-          <Image src={post.cover_image} alt='Blog post cover' fill />
+          <Image
+            src={post.cover_image}
+            alt='Blog post cover'
+            fill
+            sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+          />
         </div>
       )}
       <div className={styles.contentContainer}>

@@ -18,7 +18,13 @@ export function Card({ card, cardType = 'default' }) {
     <div className={`${styles.card} ${styles[`card--${cardType}`] || ''}`}>
       {image && (
         <div className={styles.imageWrapper}>
-          <Image className={styles.cardImage} src={image} alt={altTag} fill />
+          <Image
+            className={styles.cardImage}
+            src={image}
+            alt={altTag}
+            fill
+            sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+          />
         </div>
       )}
 
