@@ -148,6 +148,16 @@ export const whoWeAre = [
       'Driven software developer committed to building efficient, user-centric applications through clean, maintainable code.',
   },
   {
+    image: '/images/damilola.webp',
+    name: 'Damilola Oshinowo',
+    title: '',
+    position: 'Project Manager, Scrum Master',
+    linkedIn: 'damilola-oshinowo',
+    portfolio: '',
+    about:
+      'A Scrum Master (and Sneakerhead) who looks for slicker ways to get things done. A true believer in the power of the huddle, he knows that teamwork makes the dream work.',
+  },
+  {
     image: '/images/jana.webp',
     name: 'Jana Behfarshad',
     title: 'Co-founder',
@@ -171,15 +181,5 @@ export const whoWeAre = [
     portfolio: 'www.marianacaldas.com',
     about:
       'Mariana is a Digital Product Manager who strongly believes in the power of sharing knowledge.',
-  },
-  {
-    image: '/images/damilola.webp',
-    name: 'Damilola Oshinowo',
-    title: '',
-    position: 'Project Manager, Scrum Master',
-    linkedIn: 'damilola-oshinowo',
-    portfolio: '',
-    about:
-      'A Scrum Master (and Sneakerhead) who looks for slicker ways to get things done. A true believer in the power of the huddle, he knows that teamwork makes the dream work.',
   },
 ];
