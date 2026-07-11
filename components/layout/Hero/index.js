@@ -28,6 +28,7 @@ export default function Hero({
         alt={imgAlt}
         fill
         priority
+        sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
       />
       <Container className={styles.headerContent}>
         <div className={styles.headerContentUpper}>

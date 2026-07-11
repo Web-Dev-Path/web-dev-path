@@ -143,7 +143,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Resolved `fetchPriority` prop warning in next/image
 - Updated sendgridEmail to support@webdevpath.co
 
-## Unreleased
+## 1.5.0
 
 ### Added
 
@@ -155,6 +155,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Added Oluwatobi to 'about us'
 - Updated Satoshi's profile links
 - Added Damilola to 'about us'
+- Updated Next.js from v15.5.14 to v15.5.19 and other outdated dependencies
+- Updated Damilola's profile image format from jpg to webp
+- Updated Oluwatobi's profile
+- Added `sizes` prop to images with `fill` to improve page performance
+- Update supported Node.js version from 20.18.0 to 22
 
 ### Fixed
 
@@ -220,3 +225,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Removed unused props from Hero layout component
 - Replace sendgrid with mailjet for sending contact email
 - Replace mailto:hello@webdevpath.co button links with /contact
+- Removed next-pwa implementation
+- Removed redundant styledComponents configuration
+
+## Unreleased
+
+### Added
+
+- Introduced SDD structure for Services Page
+
+### Fixed
+
+### Changed

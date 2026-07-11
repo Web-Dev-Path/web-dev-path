@@ -68,13 +68,11 @@ export const whoWeAre = [
     image: '/images/oluwatobi.webp',
     name: 'Oluwatobi Sofela',
     title: '',
-    devtoSummary:
-      'Oluwatobi is a full-stack developer who loves techs that simplify processes and help people accomplish their desires elegantly.',
     position: 'Full-Stack Developer',
     linkedIn: 'oluwatobiss',
     portfolio: 'github.com/oluwatobiss',
     about:
-      'Oluwatobi is a full-stack developer who loves techs that simplify processes and help people accomplish their desires elegantly.',
+      'Full-stack JavaScript and TypeScript engineer exploring new possibilities with privacy-first technologies and zero-knowledge systems.',
   },
   {
     image: '/images/satoshi.webp',
@@ -150,6 +148,16 @@ export const whoWeAre = [
       'Driven software developer committed to building efficient, user-centric applications through clean, maintainable code.',
   },
   {
+    image: '/images/damilola.webp',
+    name: 'Damilola Oshinowo',
+    title: '',
+    position: 'Project Manager, Scrum Master',
+    linkedIn: 'damilola-oshinowo',
+    portfolio: '',
+    about:
+      'A Scrum Master (and Sneakerhead) who looks for slicker ways to get things done. A true believer in the power of the huddle, he knows that teamwork makes the dream work.',
+  },
+  {
     image: '/images/jana.webp',
     name: 'Jana Behfarshad',
     title: 'Co-founder',
@@ -173,15 +181,5 @@ export const whoWeAre = [
     portfolio: 'www.marianacaldas.com',
     about:
       'Mariana is a Digital Product Manager who strongly believes in the power of sharing knowledge.',
-  },
-  {
-    image: '/images/damilola.jpg',
-    name: 'Damilola Oshinowo',
-    title: '',
-    position: 'Project Manager, Scrum Master',
-    linkedIn: 'damilola-oshinowo',
-    portfolio: '',
-    about:
-      'A Scrum Master (and Sneakerhead) who looks for slicker ways to get things done. A true believer in the power of the huddle, he knows that teamwork makes the dream work.',
   },
 ];

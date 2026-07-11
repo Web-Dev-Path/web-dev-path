@@ -8,7 +8,12 @@ export default function AuthorBio({ user }) {
         <h3>Author Bio</h3>
         <div className={styles['flex-container']}>
           <div className={styles['image-wrapper']}>
-            <Image src={user.profile_image} alt="Author's profile" fill />
+            <Image
+              src={user.profile_image}
+              alt="Author's profile"
+              fill
+              sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+            />
           </div>
           <div className={styles['split-container']}>
             <p>{user.summary}</p>
