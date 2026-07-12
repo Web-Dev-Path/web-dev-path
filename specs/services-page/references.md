@@ -7,9 +7,10 @@
 [Figma](https://www.figma.com/design/Fp0lLB5OWZLJseTs2svGbg/Web-Dev-Path_design?node-id=4813-12781&t=nFCiwC8KAHXakSmE-0)
 
 
-### Page components doc
+### Google Docs
 
-[Google doc](https://docs.google.com/document/d/15evnvS0T8jMhE_mlp1IyIOEhWWKH7eaDwoKVWrLG9PM/edit?usp=sharing)
+[Components' Study and Architecture](https://docs.google.com/document/d/15evnvS0T8jMhE_mlp1IyIOEhWWKH7eaDwoKVWrLG9PM/edit?usp=sharing)
+[Design System Doc](https://docs.google.com/document/d/16SaPlRJmAB6GCPcW4uo09owKVvkD0sgKm-BZzh0avEc/edit?usp=drive_link)
 
 
 ### Design Notes

@@ -2,32 +2,15 @@
 
 ## Foundation
 
-- [ ] Create specification-driven development structure.
-- [ ] Align team on specification-driven workflow.
-- [ ] Reference specification files and how to use it under the Wikipedia.
+- [PR 306](https://github.com/Web-Dev-Path/web-dev-path/pull/306) Create specification-driven development structure. - DONE
+- [Slack Convo](https://webdevpath.slack.com/archives/C09JD1SKVSQ/p1779164066044519) Align team on specification-driven workflow.- DONE
+- [Issue 307](https://github.com/Web-Dev-Path/web-dev-path/issues/307) Reference specification files and how to use it under the Wikipedia. - IN PROGRESS
 
 ---
 
 ## Hero Section
 
-### Content
-
-- [ ] Finalize hero headline.
-- [ ] Finalize hero supporting copy.
-- [ ] Finalize discovery call messaging.
-
-### Development
-
-- [ ] Remove custom intake form fields.
-- [ ] Add Calendly CTA button.
-- [ ] Connect CTA to Calendly booking flow.
-- [ ] Implement desktop layout.
-- [ ] Implement mobile layout.
-
-### Validation
-
-- [ ] Verify Calendly flow works correctly.
-- [ ] Verify no duplicate data entry exists.
+- [Issue #308](https://github.com/Web-Dev-Path/web-dev-path/issues/308) - IN PROGRESS
 
 ---
 
