@@ -5,11 +5,13 @@
 ### Approved Mockups
 
 [Figma](https://www.figma.com/design/Fp0lLB5OWZLJseTs2svGbg/Web-Dev-Path_design?node-id=4813-12781&t=nFCiwC8KAHXakSmE-0)
+[Figma Prototypes: animations and behaviours](https://www.figma.com/proto/Fp0lLB5OWZLJseTs2svGbg/Web-Dev-Path_design?node-id=5354-12767&viewport=11375%2C-3827%2C0.23&t=fUPGkKi107ruYZK8-0&scaling=contain&content-scaling=fixed&starting-point-node-id=5354%3A12839&show-proto-sidebar=1)
 
 
-### Page components doc
+### Google Docs
 
-[Google doc](https://docs.google.com/document/d/15evnvS0T8jMhE_mlp1IyIOEhWWKH7eaDwoKVWrLG9PM/edit?usp=sharing)
+[Components' Study, Content, and Architecture](https://docs.google.com/document/d/15evnvS0T8jMhE_mlp1IyIOEhWWKH7eaDwoKVWrLG9PM/edit?usp=sharing)
+[Design System Doc](https://docs.google.com/document/d/16SaPlRJmAB6GCPcW4uo09owKVvkD0sgKm-BZzh0avEc/edit?usp=drive_link)
 
 
 ### Design Notes
