@@ -5,6 +5,7 @@
 ### Approved Mockups
 
 [Figma](https://www.figma.com/design/Fp0lLB5OWZLJseTs2svGbg/Web-Dev-Path_design?node-id=4813-12781&t=nFCiwC8KAHXakSmE-0)
+[Figma Prototypes: animations and behaviours](https://www.figma.com/proto/Fp0lLB5OWZLJseTs2svGbg/Web-Dev-Path_design?node-id=5354-12767&viewport=11375%2C-3827%2C0.23&t=fUPGkKi107ruYZK8-0&scaling=contain&content-scaling=fixed&starting-point-node-id=5354%3A12839&show-proto-sidebar=1)
 
 
 ### Google Docs
