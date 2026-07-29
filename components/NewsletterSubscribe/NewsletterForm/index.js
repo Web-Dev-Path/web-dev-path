@@ -126,21 +126,21 @@ const NewsletterForm = ({ getReCaptchaToken }) => {
         <div>
           <form className={styles.form} onSubmit={handleFormSubmit}>
             <input
-              className={styles.inputName}
-              onChange={event => setName(event?.target?.value ?? '')}
-              type='text'
-              name='name'
-              value={name}
-              placeholder='name'
-            />
-            <input
               className={styles.inputEmail}
               onChange={event => setEmail(event?.target?.value ?? '')}
               type='email'
               name='email'
               value={email}
-              placeholder='email'
+              placeholder='Enter Your Email'
               onKeyUp={event => handleInputKeyEvent(event)}
+            />
+            <input
+              className={styles.inputName}
+              onChange={event => setName(event?.target?.value ?? '')}
+              type='text'
+              name='name'
+              value={name}
+              placeholder='Enter Your Name'
             />
             <NewsLetterSubmitButton label='Subscribe' />
           </form>
