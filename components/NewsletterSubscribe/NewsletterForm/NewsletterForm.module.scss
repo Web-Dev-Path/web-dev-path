@@ -60,15 +60,15 @@
 .input {
   display: block;
   font-size: 1.2rem;
-  border-radius: 1rem;
-  height: 2rem;
+  border-radius: 0.75rem;
+  min-height: 2.75rem;
   margin: 1rem 0;
-  padding: 1rem 1.25rem;
-  border: 1px solid var(--dark-bg);
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--bg-color);
   width: 100%;
 
   &::placeholder {
-    color: var(--color-primary-content);
+    color: var(--color-grey);
   }
 
   &:focus {
@@ -76,10 +76,17 @@
   }
 
   @include large-desktop {
-    font-size: 1.5rem;
+    font-size: 1rem;
     height: 3rem;
     border-radius: 3rem;
     max-width: 25rem;
+  }
+  @include desktop {
+    font-size: 0.9rem;
+    height: 2.5rem;
+    border-radius: 0.75rem;
+    min-width: 15rem;
+    padding: 0.75rem 1rem;
   }
 }
 

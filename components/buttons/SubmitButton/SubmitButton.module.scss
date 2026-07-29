@@ -9,7 +9,7 @@
   background-color: var(--color-primary-content);
   border-radius: 2rem;
   cursor: pointer;
-  font-weight: 475;
+  font-weight: 545;
   line-height: 1;
   letter-spacing: 0;
   text-align: center;
@@ -63,7 +63,7 @@
   @include desktop {
     font-size: 1.2rem;
     min-width: 11rem;
-    padding: 0.3rem 0;
+    padding: 0.6rem 0;
   }
 
   @include large-desktop {

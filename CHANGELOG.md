@@ -237,4 +237,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Fixed
 
+- Updated newsletter input and subscribe button styling to match the latest Figma design.
+- Improved newsletter component responsiveness across different screen sizes.
+
 ### Changed
