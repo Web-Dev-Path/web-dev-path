@@ -1,14 +1,17 @@
 @use '@/styles/mixins' as *;
 
 .submit-button {
-  padding: 0.3rem 0;
-  min-width: 12rem;
-  font-size: 1.2rem;
+  padding: 0.7rem 0;
+  width: 100%;
+  min-width: 0;
+  font-size: 1rem;
   color: var(--color-white);
   background-color: var(--color-primary-content);
   border-radius: 2rem;
   cursor: pointer;
-  font-weight: bold;
+  font-weight: 475;
+  line-height: 1;
+  letter-spacing: 0;
   text-align: center;
   display: block;
   border: 1px solid var(--color-primary-content);
@@ -33,11 +36,28 @@
   margin-left: auto;
   margin-right: auto;
   border-radius: 1.2rem;
-  background-color: var(--dark-bg);
+  background-color: var(--color-black);
+  border: 1px solid var(--dark-bg);
+  color: var(--color-white);
 
   &:hover {
+    background-color: transparent;
     color: var(--dark-bg);
     border: 1px solid var(--dark-bg);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--dark-bg);
+    outline-offset: 2px;
+  }
+
+  &:active {
+    opacity: 0.9;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
   }
 
   @include desktop {

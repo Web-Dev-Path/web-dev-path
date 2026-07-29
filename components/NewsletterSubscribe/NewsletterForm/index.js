@@ -112,17 +112,7 @@ const NewsletterForm = ({ getReCaptchaToken }) => {
   return (
     <section className={styles.section}>
       <Container className={styles.innerContainer}>
-        <h2 className={styles.title}>
-          Sign up for news
-          <span className={styles.rightChevron}>
-            <Image
-              src='/images/svg/right-chevron.svg'
-              height={18}
-              width={18}
-              alt='Right Chevron SVG'
-            />
-          </span>
-        </h2>
+        <h2 className={styles.title}>Sign up for news</h2>
         <div>
           <form className={styles.form} onSubmit={handleFormSubmit}>
             <input
