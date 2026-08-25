@@ -1,0 +1,29 @@
+@use '@/styles/index' as *;
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 2px solid var(--color-primary-accent);
+  background-color: var(--color-transparent);
+  color: var(--color-black);
+  font-family: $font-family-primary;
+  font-weight: $font-weight-regular;
+  white-space: nowrap;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  @include transition(all 0.3s ease);
+
+  @include desktop {
+    padding: 0.75rem 2rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  &.secondary {
+    border-color: var(--color-secondary-accent);
+  }
+}
