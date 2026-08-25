@@ -1,6 +1,44 @@
 import Pill from '@/components/services/Pill';
 import Container from '@/components/containers/Container';
+import { useAutoScroll } from './useAutoScroll';
 import styles from './WhatWeOffer.module.scss';
+
+const rowDirections = ['left', 'right', 'left'];
+
+function PillRow({ pills, direction }) {
+  const { viewportRef, groupRef, pause, resume } = useAutoScroll({
+    direction,
+  });
+
+  return (
+    <div
+      className={styles.pillRowViewport}
+      ref={viewportRef}
+      onMouseEnter={pause}
+      onMouseLeave={resume}
+      onFocus={pause}
+      onBlur={resume}
+    >
+      <div className={styles.pillTrack}>
+        <div className={styles.pillGroup} ref={groupRef}>
+          {pills.map(pill => (
+            <Pill key={pill.id} label={pill.label} variant={pill.variant} />
+          ))}
+        </div>
+        <div className={styles.pillGroup} aria-hidden='true'>
+          {pills.map(pill => (
+            <Pill
+              key={`${pill.id}-duplicate`}
+              label={pill.label}
+              variant={pill.variant}
+              tabIndex={-1}
+            />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
 
 const offerPills = [
   { id: 'web-development', label: 'Web Development', variant: 'primary' },
@@ -34,12 +72,8 @@ export default function WhatWeOffer() {
           goals and budget, with no compromise on quality.
         </p>
         <div className={styles.pillRows}>
-          {[0, 1, 2].map(rowIndex => (
-            <div className={styles.pillRow} key={rowIndex}>
-              {offerPills.map(pill => (
-                <Pill key={pill.id} label={pill.label} variant={pill.variant} />
-              ))}
-            </div>
+          {rowDirections.map((direction, rowIndex) => (
+            <PillRow key={rowIndex} pills={offerPills} direction={direction} />
           ))}
         </div>
       </Container>

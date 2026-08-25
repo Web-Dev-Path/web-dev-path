@@ -41,14 +41,28 @@
 .pillRows {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 1rem;
 }
 
-.pillRow {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
+.pillRowViewport {
   width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.pillTrack {
+  display: flex;
+  gap: 1rem;
+  width: max-content;
+}
+
+.pillGroup {
+  display: flex;
+  gap: 1rem;
 }
