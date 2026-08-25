@@ -5,7 +5,13 @@ import styles from './Dialog.module.scss';
 const FOCUSABLE_SELECTOR =
   'a[href], button:not([disabled]), textarea:not([disabled]), input:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])';
 
-export default function Dialog({ open, onClose, titleId, children }) {
+export default function Dialog({
+  open,
+  onClose,
+  titleId,
+  className,
+  children,
+}) {
   const [mounted, setMounted] = useState(false);
   const panelRef = useRef(null);
   const previouslyFocusedRef = useRef(null);
@@ -58,7 +64,7 @@ export default function Dialog({ open, onClose, titleId, children }) {
   return createPortal(
     <div className={styles.backdrop} onClick={onClose}>
       <div
-        className={styles.panel}
+        className={`${styles.panel}${className ? ` ${className}` : ''}`}
         role='dialog'
         aria-modal='true'
         aria-labelledby={titleId}

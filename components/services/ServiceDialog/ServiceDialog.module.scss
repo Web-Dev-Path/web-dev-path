@@ -1,0 +1,68 @@
+@use '@/styles/index' as *;
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  &.primary {
+    background-color: var(--color-primary-accent);
+  }
+
+  &.secondary {
+    background-color: var(--color-secondary-surface);
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.echoPill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  font-family: $font-family-primary;
+  font-weight: $font-weight-regular;
+  padding: 0.75rem 2rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  white-space: nowrap;
+}
+
+.closeButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border: none;
+  border-radius: 0.25rem;
+  background-color: var(--color-transparent);
+  cursor: pointer;
+  flex-shrink: 0;
+  @include transition(all 0.3s ease);
+
+  &:hover {
+    background-color: var(--color-box-shadow);
+  }
+}
+
+.closeIcon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.description {
+  font-family: $font-family-primary;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: var(--color-primary-content);
+  margin: 0;
+}
