@@ -1,11 +1,14 @@
+import { useId, useState } from 'react';
 import Pill from '@/components/services/Pill';
 import Container from '@/components/containers/Container';
+import ServiceDialog from '@/components/services/ServiceDialog';
+import { services } from '@/utils/services';
 import { useAutoScroll } from './useAutoScroll';
 import styles from './WhatWeOffer.module.scss';
 
 const rowDirections = ['left', 'right', 'left'];
 
-function PillRow({ pills, direction }) {
+function PillRow({ pills, direction, onSelect }) {
   const { viewportRef, groupRef, pause, resume } = useAutoScroll({
     direction,
   });
@@ -22,7 +25,12 @@ function PillRow({ pills, direction }) {
       <div className={styles.pillTrack}>
         <div className={styles.pillGroup} ref={groupRef}>
           {pills.map(pill => (
-            <Pill key={pill.id} label={pill.label} variant={pill.variant} />
+            <Pill
+              key={pill.id}
+              label={pill.label}
+              variant={pill.variant}
+              onClick={() => onSelect(pill)}
+            />
           ))}
         </div>
         <div className={styles.pillGroup} aria-hidden='true'>
@@ -32,6 +40,7 @@ function PillRow({ pills, direction }) {
               label={pill.label}
               variant={pill.variant}
               tabIndex={-1}
+              onClick={() => onSelect(pill)}
             />
           ))}
         </div>
@@ -40,27 +49,10 @@ function PillRow({ pills, direction }) {
   );
 }
 
-const offerPills = [
-  { id: 'web-development', label: 'Web Development', variant: 'primary' },
-  {
-    id: 'product-project-management',
-    label: 'Product & Project Management',
-    variant: 'secondary',
-  },
-  { id: 'design', label: 'Design', variant: 'primary' },
-  {
-    id: 'startup-nonprofit-tech-support',
-    label: 'Startup & Nonprofit Tech Support',
-    variant: 'secondary',
-  },
-  {
-    id: 'optimization-growth',
-    label: 'Optimization & Growth',
-    variant: 'primary',
-  },
-];
-
 export default function WhatWeOffer() {
+  const [activeService, setActiveService] = useState(null);
+  const titleId = useId();
+
   return (
     <section className={styles.whatWeOffer}>
       <Container>
@@ -73,10 +65,23 @@ export default function WhatWeOffer() {
         </p>
         <div className={styles.pillRows}>
           {rowDirections.map((direction, rowIndex) => (
-            <PillRow key={rowIndex} pills={offerPills} direction={direction} />
+            <PillRow
+              key={rowIndex}
+              pills={services}
+              direction={direction}
+              onSelect={setActiveService}
+            />
           ))}
         </div>
       </Container>
+      <ServiceDialog
+        open={activeService !== null}
+        onClose={() => setActiveService(null)}
+        titleId={titleId}
+        label={activeService?.label}
+        description={activeService?.description}
+        variant={activeService?.variant}
+      />
     </section>
   );
 }
