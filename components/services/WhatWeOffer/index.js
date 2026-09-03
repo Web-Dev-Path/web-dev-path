@@ -6,7 +6,12 @@ import { services } from '@/utils/services';
 import { useAutoScroll } from '@/hooks/useAutoScroll';
 import styles from './WhatWeOffer.module.scss';
 
-const rowDirections = ['left', 'right', 'left'];
+const ROW_COUNT = 3;
+const rowIndexes = Array.from({ length: ROW_COUNT }, (_, index) => index);
+
+function getRowDirection(rowIndex) {
+  return rowIndex % 2 === 0 ? 'left' : 'right';
+}
 
 function PillRow({ pills, direction, onSelect }) {
   const { viewportRef, groupRef, pause, resume } = useAutoScroll({
@@ -78,11 +83,11 @@ export default function WhatWeOffer() {
             />
           </div>
           <div className={styles.pillRows}>
-            {rowDirections.map((direction, rowIndex) => (
+            {rowIndexes.map(rowIndex => (
               <PillRow
                 key={rowIndex}
                 pills={services}
-                direction={direction}
+                direction={getRowDirection(rowIndex)}
                 onSelect={setActiveService}
               />
             ))}
