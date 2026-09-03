@@ -10,6 +10,7 @@ export default function Dialog({
   onClose,
   titleId,
   className,
+  contained = false,
   children,
 }) {
   const [mounted, setMounted] = useState(false);
@@ -51,15 +52,44 @@ export default function Dialog({
       }
     };
 
+    const handleOutsideClick = event => {
+      if (panel && !panel.contains(event.target)) {
+        onClose();
+      }
+    };
+
     document.addEventListener('keydown', handleKeyDown);
+    if (contained) {
+      document.addEventListener('mousedown', handleOutsideClick);
+    }
 
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
+      if (contained) {
+        document.removeEventListener('mousedown', handleOutsideClick);
+      }
       previouslyFocusedRef.current?.focus();
     };
-  }, [open, onClose]);
+  }, [open, onClose, contained]);
 
-  if (!mounted || !open) return null;
+  if (!open) return null;
+
+  if (contained) {
+    return (
+      <div
+        className={`${styles.containedPanel}${className ? ` ${className}` : ''}`}
+        role='dialog'
+        aria-modal='true'
+        aria-labelledby={titleId}
+        tabIndex={-1}
+        ref={panelRef}
+      >
+        {children}
+      </div>
+    );
+  }
+
+  if (!mounted) return null;
 
   return createPortal(
     <div className={styles.backdrop} onClick={onClose}>

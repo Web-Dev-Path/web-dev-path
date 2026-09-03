@@ -1,7 +1,10 @@
 @use '@/styles/index' as *;
 
 .whatWeOffer {
+  position: relative;
   width: 100%;
+  overflow-x: hidden;
+  overflow-y: visible;
   background-color: var(--color-white);
   padding: 4rem 0;
 
@@ -10,10 +13,50 @@
   }
 }
 
+.leftDecoration {
+  display: none;
+  pointer-events: none;
+
+  @include desktop {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: -17rem;
+    transform: translateY(-50%);
+    height: 14rem;
+    width: auto;
+  }
+}
+
+.rightDecoration {
+  display: none;
+  pointer-events: none;
+
+  @include desktop {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    position: absolute;
+    top: 50%;
+    right: -24rem;
+    transform: translateY(-50%);
+  }
+}
+
+.slash {
+  height: 19rem;
+  width: auto;
+}
+
+.angleBracket {
+  height: 14rem;
+  width: auto;
+}
+
 .heading {
   font-family: $font-family-secondary;
   font-weight: $font-weight-bold;
-  font-size: 2.25rem;
+  font-size: $font-size-md;
   line-height: 2.75rem;
   text-align: center;
   margin: 0 0 1.5rem;
@@ -26,16 +69,20 @@
 
 .body {
   font-family: $font-family-primary;
-  font-size: 1rem;
+  font-size: $font-size-2xs;
   line-height: 1.5rem;
   text-align: center;
   max-width: 60rem;
   margin: 0 auto 2.5rem;
 
   @include desktop {
-    font-size: 1.5rem;
+    font-size: $font-size-sm;
     line-height: 2rem;
   }
+}
+
+.pillRowsWrapper {
+  position: relative;
 }
 
 .pillRows {

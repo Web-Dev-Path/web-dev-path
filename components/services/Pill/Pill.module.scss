@@ -13,13 +13,13 @@
   white-space: nowrap;
   cursor: pointer;
   padding: 0.5rem 1rem;
-  font-size: 1rem;
+  font-size: $font-size-2xs;
   line-height: 1.5rem;
   @include transition(all 0.3s ease);
 
   @include desktop {
     padding: 0.75rem 2rem;
-    font-size: 1.5rem;
+    font-size: $font-size-sm;
     line-height: 2rem;
   }
 

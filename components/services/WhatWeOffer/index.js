@@ -63,25 +63,40 @@ export default function WhatWeOffer() {
           <strong>project management and strategy</strong> — tailored to your
           goals and budget, with no compromise on quality.
         </p>
-        <div className={styles.pillRows}>
-          {rowDirections.map((direction, rowIndex) => (
-            <PillRow
-              key={rowIndex}
-              pills={services}
-              direction={direction}
-              onSelect={setActiveService}
+        <div className={styles.pillRowsWrapper}>
+          <img
+            src='/images/svg/open-angle-bracket.svg'
+            alt=''
+            className={styles.leftDecoration}
+          />
+          <div className={styles.rightDecoration} aria-hidden='true'>
+            <img src='/images/svg/slash.svg' alt='' className={styles.slash} />
+            <img
+              src='/images/svg/close-angle-bracket.svg'
+              alt=''
+              className={styles.angleBracket}
             />
-          ))}
+          </div>
+          <div className={styles.pillRows}>
+            {rowDirections.map((direction, rowIndex) => (
+              <PillRow
+                key={rowIndex}
+                pills={services}
+                direction={direction}
+                onSelect={setActiveService}
+              />
+            ))}
+          </div>
+          <ServiceDialog
+            open={activeService !== null}
+            onClose={() => setActiveService(null)}
+            titleId={titleId}
+            label={activeService?.label}
+            description={activeService?.description}
+            variant={activeService?.variant}
+          />
         </div>
       </Container>
-      <ServiceDialog
-        open={activeService !== null}
-        onClose={() => setActiveService(null)}
-        titleId={titleId}
-        label={activeService?.label}
-        description={activeService?.description}
-        variant={activeService?.variant}
-      />
     </section>
   );
 }

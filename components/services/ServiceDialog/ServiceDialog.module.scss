@@ -1,9 +1,32 @@
 @use '@/styles/index' as *;
 
 .panel {
+  position: absolute;
+  min-height: 100%;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+
+  @include mobile {
+    top: -0.5rem;
+    right: -2rem;
+    bottom: -4rem;
+    left: -2rem;
+  }
+
+  @include tablet {
+    top: -1rem;
+    right: -2rem;
+    left: -2rem;
+  }
+
+  @include desktop {
+    top: -1rem;
+    right: -2rem;
+    bottom: -2rem;
+    left: -2rem;
+  }
 
   &.primary {
     background-color: var(--color-primary-accent);
@@ -19,6 +42,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
+  min-width: 0;
 }
 
 .echoPill {
@@ -30,10 +54,17 @@
   color: var(--color-white);
   font-family: $font-family-primary;
   font-weight: $font-weight-regular;
-  padding: 0.75rem 2rem;
-  font-size: 1.5rem;
-  line-height: 2rem;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
   white-space: nowrap;
+  flex-shrink: 0;
+
+  @include desktop {
+    padding: 0.5rem 1.25rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
 }
 
 .closeButton {
@@ -61,8 +92,14 @@
 
 .description {
   font-family: $font-family-primary;
-  font-size: 1.5rem;
-  line-height: 2rem;
+  font-size: $font-size-2xs;
+  line-height: 1.5rem;
   color: var(--color-primary-content);
+  word-break: break-word;
   margin: 0;
+
+  @include desktop {
+    font-size: $font-size-sm;
+    line-height: 2rem;
+  }
 }

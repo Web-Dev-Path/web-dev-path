@@ -19,6 +19,7 @@ export default function ServiceDialog({
       onClose={onClose}
       titleId={titleId}
       className={panelClass}
+      contained
     >
       <div className={styles.header}>
         <span id={titleId} className={styles.echoPill}>
