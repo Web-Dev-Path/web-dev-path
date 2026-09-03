@@ -3,7 +3,7 @@ import Pill from '@/components/services/Pill';
 import Container from '@/components/containers/Container';
 import ServiceDialog from '@/components/services/ServiceDialog';
 import { services } from '@/utils/services';
-import { useAutoScroll } from './useAutoScroll';
+import { useAutoScroll } from '@/hooks/useAutoScroll';
 import styles from './WhatWeOffer.module.scss';
 
 const rowDirections = ['left', 'right', 'left'];
