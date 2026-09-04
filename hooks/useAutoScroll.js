@@ -1,6 +1,10 @@
 import { useEffect, useRef } from 'react';
 
-export function useAutoScroll({ direction = 'left', speed = 60 } = {}) {
+export function useAutoScroll({
+  direction = 'left',
+  speed = 60,
+  enabled = true,
+} = {}) {
   const viewportRef = useRef(null);
   const groupRef = useRef(null);
   const pausedRef = useRef(false);
@@ -8,7 +12,7 @@ export function useAutoScroll({ direction = 'left', speed = 60 } = {}) {
   useEffect(() => {
     const viewport = viewportRef.current;
     const group = groupRef.current;
-    if (!viewport || !group) return undefined;
+    if (!viewport || !group || !enabled) return undefined;
 
     const prefersReducedMotion = window.matchMedia(
       '(prefers-reduced-motion: reduce)',
@@ -39,7 +43,7 @@ export function useAutoScroll({ direction = 'left', speed = 60 } = {}) {
 
     frameId = requestAnimationFrame(step);
     return () => cancelAnimationFrame(frameId);
-  }, [direction, speed]);
+  }, [direction, speed, enabled]);
 
   const pause = () => {
     pausedRef.current = true;

@@ -1,21 +1,25 @@
-import { useId, useState } from 'react';
+import { useEffect, useId, useState } from 'react';
 import Pill from '@/components/services/Pill';
 import Container from '@/components/containers/Container';
 import ServiceDialog from '@/components/services/ServiceDialog';
 import { services } from '@/utils/services';
 import { useAutoScroll } from '@/hooks/useAutoScroll';
+import { useIntersect } from '@/hooks/useIntersect';
+import { combineClasses } from '@/utils/classnames';
 import styles from './WhatWeOffer.module.scss';
 
 const ROW_COUNT = 3;
 const rowIndexes = Array.from({ length: ROW_COUNT }, (_, index) => index);
+const REVEAL_TRANSITION_MS = 1000;
 
 function getRowDirection(rowIndex) {
   return rowIndex % 2 === 0 ? 'left' : 'right';
 }
 
-function PillRow({ pills, direction, onSelect }) {
+function PillRow({ pills, direction, enabled, onSelect }) {
   const { viewportRef, groupRef, pause, resume } = useAutoScroll({
     direction,
+    enabled,
   });
 
   return (
@@ -57,24 +61,61 @@ function PillRow({ pills, direction, onSelect }) {
 export default function WhatWeOffer() {
   const [activeService, setActiveService] = useState(null);
   const titleId = useId();
+  const [setSectionNode, entry] = useIntersect({});
+  const [revealed, setRevealed] = useState(false);
+  const [marqueeEnabled, setMarqueeEnabled] = useState(false);
+
+  useEffect(() => {
+    if (entry.isIntersecting && !revealed) {
+      setRevealed(true);
+    }
+  }, [entry.isIntersecting, revealed]);
+
+  useEffect(() => {
+    if (!revealed) return undefined;
+
+    const timeoutId = setTimeout(
+      () => setMarqueeEnabled(true),
+      REVEAL_TRANSITION_MS,
+    );
+    return () => clearTimeout(timeoutId);
+  }, [revealed]);
+
+  const contentClass = combineClasses(
+    styles.content,
+    revealed ? 'revealed' : null,
+    styles,
+  );
+  const leftDecorationClass = combineClasses(
+    styles.leftDecoration,
+    revealed ? 'revealed' : null,
+    styles,
+  );
+  const rightDecorationClass = combineClasses(
+    styles.rightDecoration,
+    revealed ? 'revealed' : null,
+    styles,
+  );
 
   return (
-    <section className={styles.whatWeOffer}>
+    <section className={styles.whatWeOffer} ref={setSectionNode}>
       <Container>
-        <h2 className={styles.heading}>What We Offer</h2>
-        <p className={styles.body}>
-          We deliver <strong>high-end digital solutions</strong> — from{' '}
-          <strong>design and development</strong> to{' '}
-          <strong>project management and strategy</strong> — tailored to your
-          goals and budget, with no compromise on quality.
-        </p>
+        <div className={contentClass}>
+          <h2 className={styles.heading}>What We Offer</h2>
+          <p className={styles.body}>
+            We deliver <strong>high-end digital solutions</strong> — from{' '}
+            <strong>design and development</strong> to{' '}
+            <strong>project management and strategy</strong> — tailored to your
+            goals and budget, with no compromise on quality.
+          </p>
+        </div>
         <div className={styles.pillRowsWrapper}>
           <img
             src='/images/svg/open-angle-bracket.svg'
             alt=''
-            className={styles.leftDecoration}
+            className={leftDecorationClass}
           />
-          <div className={styles.rightDecoration} aria-hidden='true'>
+          <div className={rightDecorationClass} aria-hidden='true'>
             <img src='/images/svg/slash.svg' alt='' className={styles.slash} />
             <img
               src='/images/svg/close-angle-bracket.svg'
@@ -88,6 +129,7 @@ export default function WhatWeOffer() {
                 key={rowIndex}
                 pills={services}
                 direction={getRowDirection(rowIndex)}
+                enabled={marqueeEnabled}
                 onSelect={setActiveService}
               />
             ))}
