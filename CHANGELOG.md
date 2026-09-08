@@ -234,6 +234,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Introduced SDD structure for Services Page
 - Updated SDD docs to include new Service page issues
+- Added "What We Offer" section to the Services page
 
 ### Fixed
 
