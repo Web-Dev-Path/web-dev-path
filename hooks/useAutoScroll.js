@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 
 export function useAutoScroll({
   direction = 'left',
-  speed = 60,
+  speed = 40,
   enabled = true,
 } = {}) {
   const viewportRef = useRef(null);
