@@ -234,7 +234,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Introduced SDD structure for Services Page
 - Updated SDD docs to include new Service page issues
+- Added Services page link to the footer
+- Added Web Dev Path Design System (wdpds) primitive and semantic tokens as CSS variables
 
 ### Fixed
 
 ### Changed
+
+- Footer styles now use wdpds semantic tokens

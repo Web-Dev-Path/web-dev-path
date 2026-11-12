@@ -87,19 +87,21 @@ export default function Nav() {
                 ${isSticky ? styles.linksSticky : styles.links}
               `}
             >
-              {linksNav.map(({ text, href, id }) => {
-                return (
-                  <li className={styles.item} key={id}>
-                    <Link
-                      href={href}
-                      className={`${styles.link} ${router.pathname === href ? styles.current : ''}`}
-                      title={text}
-                    >
-                      {text}
-                    </Link>
-                  </li>
-                );
-              })}
+              {linksNav
+                .filter(link => !link.skipHeader)
+                .map(({ text, href, id }) => {
+                  return (
+                    <li className={styles.item} key={id}>
+                      <Link
+                        href={href}
+                        className={`${styles.link} ${router.pathname === href ? styles.current : ''}`}
+                        title={text}
+                      >
+                        {text}
+                      </Link>
+                    </li>
+                  );
+                })}
               <li className={styles.item}>
                 <Link
                   href='/contact?subject=Application: I want to join the project'

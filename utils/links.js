@@ -2,6 +2,8 @@ export const linksNav = [
   { id: 1, text: 'About', href: '/about' },
   { id: 2, text: 'Blog', href: '/blog' },
   { id: 3, text: 'Contact', href: '/contact' },
+  // Skip changing header for now
+  { id: 4, text: 'Services', href: '/services', skipHeader: true },
 ];
 
 export const linksSocial = [
