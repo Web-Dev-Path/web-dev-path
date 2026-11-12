@@ -1,0 +1,401 @@
+// Web Dev Path Design System (wdpds) tokens
+// Source of truth: Figma "Web-Dev-Path_design" (dev tokens, node 80-479) and the Design System Doc.
+// Two tiers:
+//   1. Primitive tokens: raw values. Do NOT use them directly in components.
+//   2. Semantic tokens: role-based aliases of primitives. Use these in components.
+
+:root {
+  // ==========================================================================
+  // 1. Primitive tokens
+  // ==========================================================================
+
+  // Alpha (opacity)
+  --wdpds-alpha-00: 0;
+  --wdpds-alpha-100: 0.1;
+  --wdpds-alpha-200: 0.2;
+  --wdpds-alpha-300: 0.3;
+  --wdpds-alpha-400: 0.4;
+  --wdpds-alpha-500: 0.5;
+  --wdpds-alpha-600: 0.6;
+  --wdpds-alpha-700: 0.7;
+  --wdpds-alpha-800: 0.8;
+  --wdpds-alpha-900: 0.9;
+  --wdpds-alpha-1000: 1;
+
+  // Color: Sunrise Yellow
+  --wdpds-color-sunrise-yellow-100: #fff5db;
+  --wdpds-color-sunrise-yellow-200: #ffebb7;
+  --wdpds-color-sunrise-yellow-300: #ffe094;
+  --wdpds-color-sunrise-yellow-400: #ffd670;
+  --wdpds-color-sunrise-yellow-500: #ffcc4c;
+  --wdpds-color-sunrise-yellow-600: #e8b330;
+  --wdpds-color-sunrise-yellow-700: #b38514;
+  --wdpds-color-sunrise-yellow-800: #6a541a;
+  --wdpds-color-sunrise-yellow-900: #322811;
+
+  // Color: Pacific Blue
+  --wdpds-color-pacific-blue-100: #d1eef6;
+  --wdpds-color-pacific-blue-200: #a3dded;
+  --wdpds-color-pacific-blue-300: #75cce3;
+  --wdpds-color-pacific-blue-400: #47bbda;
+  --wdpds-color-pacific-blue-500: #19aad1;
+  --wdpds-color-pacific-blue-600: #1492b5;
+  --wdpds-color-pacific-blue-700: #17748c;
+  --wdpds-color-pacific-blue-800: #085571;
+  --wdpds-color-pacific-blue-900: #023047;
+
+  // Color: White / Gray / Black
+  --wdpds-color-white: #ffffff;
+  --wdpds-color-gray-200: #f4f4f4;
+  --wdpds-color-gray-300: #dfdfdf;
+  --wdpds-color-gray-400: #c9c9c9;
+  --wdpds-color-gray-500: #292929;
+  --wdpds-color-gray-600: #1f1f1f;
+  --wdpds-color-gray-700: #171717;
+  --wdpds-color-gray-800: #0e0e0e;
+  --wdpds-color-black: #000000;
+
+  // Color: Green
+  --wdpds-color-green-100: #cfefd9;
+  --wdpds-color-green-200: #9ee0b4;
+  --wdpds-color-green-300: #6ed08e;
+  --wdpds-color-green-400: #3dc169;
+  --wdpds-color-green-500: #0db143;
+  --wdpds-color-green-600: #0a8e36;
+  --wdpds-color-green-700: #086a28;
+  --wdpds-color-green-800: #05471b;
+  --wdpds-color-green-900: #03230d;
+
+  // Color: Orange
+  --wdpds-color-orange-100: #fde9ce;
+  --wdpds-color-orange-200: #fbd49d;
+  --wdpds-color-orange-300: #f9be6b;
+  --wdpds-color-orange-400: #f7a93a;
+  --wdpds-color-orange-500: #f59309;
+  --wdpds-color-orange-600: #c47607;
+  --wdpds-color-orange-700: #935805;
+  --wdpds-color-orange-800: #623b04;
+  --wdpds-color-orange-900: #311d02;
+
+  // Color: Red
+  --wdpds-color-red-100: #f9d6d6;
+  --wdpds-color-red-200: #f3adad;
+  --wdpds-color-red-300: #ee8585;
+  --wdpds-color-red-400: #e85c5c;
+  --wdpds-color-red-500: #ef2e2e;
+  --wdpds-color-red-600: #b52929;
+  --wdpds-color-red-700: #881f1f;
+  --wdpds-color-red-800: #5a1414;
+  --wdpds-color-red-900: #260808;
+
+  // Color: Blue
+  --wdpds-color-blue-100: #d7e4f9;
+  --wdpds-color-blue-200: #b0c9f3;
+  --wdpds-color-blue-300: #88afec;
+  --wdpds-color-blue-400: #6194e6;
+  --wdpds-color-blue-500: #3979e0;
+  --wdpds-color-blue-600: #2e61b3;
+  --wdpds-color-blue-700: #224986;
+  --wdpds-color-blue-800: #17305a;
+  --wdpds-color-blue-900: #0b182d;
+
+  // Color: Translucent
+  // Note: the design doc lists gray-200 as "--wdpds-color--translucent-gray-200" (double hyphen typo).
+  --wdpds-color-translucent-gray-100: #2929294c;
+  --wdpds-color-translucent-gray-200: #29292933;
+  --wdpds-color-translucent-gray-300: #2929291a;
+  --wdpds-color-translucent-pacific-blue-300: #19aad140;
+
+  // Color: Brand (third-party)
+  --wdpds-color-brand-github-white: #ffffff;
+  --wdpds-color-brand-linkedin-white: #ffffff;
+  --wdpds-color-brand-netlify-teal: #32e6e2;
+  --wdpds-color-brand-netlify-white: #ffffff;
+  --wdpds-color-brand-youtube-white: #ffffff;
+
+  // Scale (rem @ 16px root)
+  --wdpds-scale-00: 0rem;
+  --wdpds-scale-25: 0.0625rem;
+  --wdpds-scale-50: 0.125rem;
+  --wdpds-scale-75: 0.1875rem;
+  --wdpds-scale-100: 0.25rem;
+  --wdpds-scale-200: 0.5rem;
+  --wdpds-scale-300: 0.75rem;
+  --wdpds-scale-350: 0.875rem;
+  --wdpds-scale-400: 1rem;
+  --wdpds-scale-500: 1.25rem;
+  --wdpds-scale-600: 1.5rem;
+  --wdpds-scale-700: 1.75rem;
+  --wdpds-scale-800: 2rem;
+  --wdpds-scale-900: 2.25rem;
+  --wdpds-scale-1000: 2.5rem;
+  --wdpds-scale-1100: 2.75rem;
+  --wdpds-scale-1200: 3rem;
+  --wdpds-scale-1300: 3.25rem;
+  --wdpds-scale-1400: 3.5rem;
+  --wdpds-scale-1500: 3.75rem;
+  --wdpds-scale-1600: 4rem;
+  --wdpds-scale-1700: 4.25rem;
+  --wdpds-scale-1800: 4.5rem;
+  --wdpds-scale-1900: 4.75rem;
+  --wdpds-scale-2000: 5rem;
+  --wdpds-scale-9999: 1000rem;
+
+  // Type: font families
+  --wdpds-type-assistant: 'Assistant', sans-serif;
+  --wdpds-type-open-sans: 'Open Sans', sans-serif;
+
+  // Type: font weights
+  // Note: semi-bold-italic also needs `font-style: italic`, which a single
+  // CSS variable cannot hold. Apply it alongside this weight.
+  --wdpds-type-regular: 400;
+  --wdpds-type-semi-bold-italic: 600;
+  --wdpds-type-bold: 700;
+
+  // ==========================================================================
+  // 2. Semantic tokens (use these in components)
+  // ==========================================================================
+
+  // Alpha
+  --wdpds-alpha-transparent: var(--wdpds-alpha-00);
+  --wdpds-alpha-translucent-100: var(--wdpds-alpha-100);
+  --wdpds-alpha-translucent-200: var(--wdpds-alpha-200);
+  --wdpds-alpha-translucent-300: var(--wdpds-alpha-300);
+  --wdpds-alpha-translucent-400: var(--wdpds-alpha-400);
+  --wdpds-alpha-translucent-500: var(--wdpds-alpha-500);
+  --wdpds-alpha-translucent-600: var(--wdpds-alpha-600);
+  --wdpds-alpha-translucent-700: var(--wdpds-alpha-700);
+  --wdpds-alpha-translucent-800: var(--wdpds-alpha-800);
+  --wdpds-alpha-translucent-900: var(--wdpds-alpha-900);
+  --wdpds-alpha-opaque: var(--wdpds-alpha-1000);
+
+  // Border radius
+  --wdpds-border-radius-none: var(--wdpds-scale-00);
+  --wdpds-border-radius-xs: var(--wdpds-scale-50);
+  --wdpds-border-radius-sm: var(--wdpds-scale-100);
+  --wdpds-border-radius-md: var(--wdpds-scale-200);
+  --wdpds-border-radius-lg: var(--wdpds-scale-400);
+  --wdpds-border-radius-full: var(--wdpds-scale-9999);
+
+  // Border width
+  --wdpds-border-width-none: var(--wdpds-scale-00);
+  --wdpds-border-width-sm: var(--wdpds-scale-25);
+  --wdpds-border-width-md: var(--wdpds-scale-50);
+  --wdpds-border-width-lg: var(--wdpds-scale-75);
+  --wdpds-border-width-xl: var(--wdpds-scale-100);
+
+  // Color: Primary
+  --wdpds-color-primary-faint: var(--wdpds-color-sunrise-yellow-100);
+  --wdpds-color-primary-subtlest: var(--wdpds-color-sunrise-yellow-200);
+  --wdpds-color-primary-subtler: var(--wdpds-color-sunrise-yellow-300);
+  --wdpds-color-primary-subtle: var(--wdpds-color-sunrise-yellow-400);
+  --wdpds-color-primary-base: var(--wdpds-color-sunrise-yellow-500);
+  --wdpds-color-primary-bold: var(--wdpds-color-sunrise-yellow-600);
+  --wdpds-color-primary-bolder: var(--wdpds-color-sunrise-yellow-700);
+  --wdpds-color-primary-boldest: var(--wdpds-color-sunrise-yellow-800);
+  --wdpds-color-primary-inverse: var(--wdpds-color-sunrise-yellow-900);
+
+  // Color: Secondary
+  --wdpds-color-secondary-faint: var(--wdpds-color-pacific-blue-100);
+  --wdpds-color-secondary-subtlest: var(--wdpds-color-pacific-blue-200);
+  --wdpds-color-secondary-subtler: var(--wdpds-color-pacific-blue-300);
+  --wdpds-color-secondary-subtle: var(--wdpds-color-pacific-blue-400);
+  --wdpds-color-secondary-base: var(--wdpds-color-pacific-blue-500);
+  --wdpds-color-secondary-bold: var(--wdpds-color-pacific-blue-600);
+  --wdpds-color-secondary-bolder: var(--wdpds-color-pacific-blue-700);
+  --wdpds-color-secondary-boldest: var(--wdpds-color-pacific-blue-800);
+  --wdpds-color-secondary-inverse: var(--wdpds-color-pacific-blue-900);
+  --wdpds-color-secondary-alpha: var(
+    --wdpds-color-translucent-pacific-blue-300
+  );
+
+  // Color: Neutral
+  --wdpds-color-neutral-faint: var(--wdpds-color-white);
+  --wdpds-color-neutral-subtlest: var(--wdpds-color-gray-200);
+  --wdpds-color-neutral-subtler: var(--wdpds-color-gray-300);
+  --wdpds-color-neutral-subtle: var(--wdpds-color-gray-400);
+  --wdpds-color-neutral-base: var(--wdpds-color-gray-500);
+  --wdpds-color-neutral-bold: var(--wdpds-color-gray-600);
+  --wdpds-color-neutral-bolder: var(--wdpds-color-gray-700);
+  --wdpds-color-neutral-boldest: var(--wdpds-color-gray-800);
+  --wdpds-color-neutral-inverse: var(--wdpds-color-black);
+
+  // Color: Success
+  --wdpds-color-success-faint: var(--wdpds-color-green-100);
+  --wdpds-color-success-subtlest: var(--wdpds-color-green-200);
+  --wdpds-color-success-subtler: var(--wdpds-color-green-300);
+  --wdpds-color-success-subtle: var(--wdpds-color-green-400);
+  --wdpds-color-success-base: var(--wdpds-color-green-500);
+  --wdpds-color-success-bold: var(--wdpds-color-green-600);
+  --wdpds-color-success-bolder: var(--wdpds-color-green-700);
+  --wdpds-color-success-boldest: var(--wdpds-color-green-800);
+  --wdpds-color-success-inverse: var(--wdpds-color-green-900);
+
+  // Color: Warning
+  --wdpds-color-warning-faint: var(--wdpds-color-orange-100);
+  --wdpds-color-warning-subtlest: var(--wdpds-color-orange-200);
+  --wdpds-color-warning-subtler: var(--wdpds-color-orange-300);
+  --wdpds-color-warning-subtle: var(--wdpds-color-orange-400);
+  --wdpds-color-warning-base: var(--wdpds-color-orange-500);
+  --wdpds-color-warning-bold: var(--wdpds-color-orange-600);
+  --wdpds-color-warning-bolder: var(--wdpds-color-orange-700);
+  --wdpds-color-warning-boldest: var(--wdpds-color-orange-800);
+  --wdpds-color-warning-inverse: var(--wdpds-color-orange-900);
+
+  // Color: Error
+  --wdpds-color-error-faint: var(--wdpds-color-red-100);
+  --wdpds-color-error-subtlest: var(--wdpds-color-red-200);
+  --wdpds-color-error-subtler: var(--wdpds-color-red-300);
+  --wdpds-color-error-subtle: var(--wdpds-color-red-400);
+  --wdpds-color-error-base: var(--wdpds-color-red-500);
+  --wdpds-color-error-bold: var(--wdpds-color-red-600);
+  --wdpds-color-error-bolder: var(--wdpds-color-red-700);
+  --wdpds-color-error-boldest: var(--wdpds-color-red-800);
+  --wdpds-color-error-inverse: var(--wdpds-color-red-900);
+
+  // Color: Info
+  --wdpds-color-info-faint: var(--wdpds-color-blue-100);
+  --wdpds-color-info-subtlest: var(--wdpds-color-blue-200);
+  --wdpds-color-info-subtler: var(--wdpds-color-blue-300);
+  --wdpds-color-info-subtle: var(--wdpds-color-blue-400);
+  --wdpds-color-info-base: var(--wdpds-color-blue-500);
+  --wdpds-color-info-bold: var(--wdpds-color-blue-600);
+  --wdpds-color-info-bolder: var(--wdpds-color-blue-700);
+  --wdpds-color-info-boldest: var(--wdpds-color-blue-800);
+  --wdpds-color-info-inverse: var(--wdpds-color-blue-900);
+
+  // Color: Brand
+  --wdpds-color-brand-github-neutral: var(--wdpds-color-brand-github-white);
+  --wdpds-color-brand-linkedin-neutral: var(--wdpds-color-brand-linkedin-white);
+  --wdpds-color-brand-netlify-primary: var(--wdpds-color-brand-netlify-teal);
+  --wdpds-color-brand-netlify-neutral: var(--wdpds-color-brand-netlify-white);
+  --wdpds-color-brand-youtube-neutral: var(--wdpds-color-brand-youtube-white);
+
+  // Fx: drop shadow
+  --wdpds-fx-drop-shadow-color-low: var(--wdpds-color-translucent-gray-100);
+  --wdpds-fx-drop-shadow-color-mid: var(--wdpds-color-translucent-gray-200);
+  --wdpds-fx-drop-shadow-color-high: var(--wdpds-color-translucent-gray-300);
+  --wdpds-fx-drop-shadow-blur-low: var(--wdpds-scale-200);
+  --wdpds-fx-drop-shadow-blur-mid: var(--wdpds-scale-400);
+  --wdpds-fx-drop-shadow-blur-high: var(--wdpds-scale-600);
+  --wdpds-fx-drop-shadow-position-y-low: var(--wdpds-scale-100);
+  --wdpds-fx-drop-shadow-position-y-mid: var(--wdpds-scale-300);
+  --wdpds-fx-drop-shadow-position-y-high: var(--wdpds-scale-400);
+
+  // Fx: background blur
+  --wdpds-fx-background-blur-low: var(--wdpds-scale-100);
+  --wdpds-fx-background-blur-mid: var(--wdpds-scale-200);
+  --wdpds-fx-background-blur-high: var(--wdpds-scale-300);
+
+  // Space
+  --wdpds-space-none: var(--wdpds-scale-00);
+  --wdpds-space-4xs: var(--wdpds-scale-50);
+  --wdpds-space-3xs: var(--wdpds-scale-100);
+  --wdpds-space-2xs: var(--wdpds-scale-200);
+  --wdpds-space-xs: var(--wdpds-scale-300);
+  --wdpds-space-sm: var(--wdpds-scale-400);
+  --wdpds-space-md: var(--wdpds-scale-500);
+  --wdpds-space-lg: var(--wdpds-scale-600);
+  --wdpds-space-xl: var(--wdpds-scale-800);
+  --wdpds-space-2xl: var(--wdpds-scale-1000);
+  --wdpds-space-3xl: var(--wdpds-scale-1200);
+  --wdpds-space-4xl: var(--wdpds-scale-1400);
+  --wdpds-space-5xl: var(--wdpds-scale-1600);
+  --wdpds-space-6xl: var(--wdpds-scale-1800);
+  --wdpds-space-7xl: var(--wdpds-scale-2000);
+
+  // Type: font family
+  --wdpds-type-font-family-primary: var(--wdpds-type-open-sans);
+  --wdpds-type-font-family-secondary: var(--wdpds-type-assistant);
+
+  // Type: font size - display
+  --wdpds-type-font-size-display-xs: var(--wdpds-scale-900);
+  --wdpds-type-font-size-display-sm: var(--wdpds-scale-1000);
+  --wdpds-type-font-size-display-md: var(--wdpds-scale-1100);
+  --wdpds-type-font-size-display-lg: var(--wdpds-scale-1200);
+  --wdpds-type-font-size-display-xl: var(--wdpds-scale-1300);
+  --wdpds-type-font-size-display-2xl: var(--wdpds-scale-1400);
+  --wdpds-type-font-size-display-3xl: var(--wdpds-scale-1500);
+  --wdpds-type-font-size-display-4xl: var(--wdpds-scale-1600);
+  --wdpds-type-font-size-display-5xl: var(--wdpds-scale-1700);
+  --wdpds-type-font-size-display-6xl: var(--wdpds-scale-1800);
+
+  // Type: font size - heading
+  --wdpds-type-font-size-heading-2xs: var(--wdpds-scale-500);
+  --wdpds-type-font-size-heading-xs: var(--wdpds-scale-600);
+  --wdpds-type-font-size-heading-sm: var(--wdpds-scale-700);
+  --wdpds-type-font-size-heading-md: var(--wdpds-scale-800);
+  --wdpds-type-font-size-heading-lg: var(--wdpds-scale-900);
+  --wdpds-type-font-size-heading-xl: var(--wdpds-scale-1000);
+  --wdpds-type-font-size-heading-2xl: var(--wdpds-scale-1100);
+  --wdpds-type-font-size-heading-3xl: var(--wdpds-scale-1200);
+
+  // Type: font size - quote / body / label / list item / caption / link
+  --wdpds-type-font-size-quote-sm: var(--wdpds-scale-400);
+  --wdpds-type-font-size-quote-md: var(--wdpds-scale-500);
+  --wdpds-type-font-size-quote-lg: var(--wdpds-scale-600);
+  --wdpds-type-font-size-body-sm: var(--wdpds-scale-400);
+  --wdpds-type-font-size-body-md: var(--wdpds-scale-500);
+  --wdpds-type-font-size-body-lg: var(--wdpds-scale-600);
+  --wdpds-type-font-size-label-sm: var(--wdpds-scale-400);
+  --wdpds-type-font-size-label-md: var(--wdpds-scale-500);
+  --wdpds-type-font-size-label-lg: var(--wdpds-scale-600);
+  --wdpds-type-font-size-list-item-sm: var(--wdpds-scale-400);
+  --wdpds-type-font-size-list-item-md: var(--wdpds-scale-500);
+  --wdpds-type-font-size-list-item-lg: var(--wdpds-scale-600);
+  --wdpds-type-font-size-caption-xs: var(--wdpds-scale-300);
+  --wdpds-type-font-size-caption-sm: var(--wdpds-scale-350);
+  --wdpds-type-font-size-caption-md: var(--wdpds-scale-400);
+  --wdpds-type-font-size-caption-lg: var(--wdpds-scale-500);
+  --wdpds-type-font-size-link-sm: var(--wdpds-scale-400);
+  --wdpds-type-font-size-link-md: var(--wdpds-scale-500);
+  --wdpds-type-font-size-link-lg: var(--wdpds-scale-600);
+
+  // Type: font weight
+  --wdpds-type-font-weight-regular: var(--wdpds-type-regular);
+  --wdpds-type-font-weight-semi-bold-italic: var(--wdpds-type-semi-bold-italic);
+  --wdpds-type-font-weight-bold: var(--wdpds-type-bold);
+
+  // Type: line height - display
+  --wdpds-type-line-height-display-xs: var(--wdpds-scale-1100);
+  --wdpds-type-line-height-display-sm: var(--wdpds-scale-1200);
+  --wdpds-type-line-height-display-md: var(--wdpds-scale-1300);
+  --wdpds-type-line-height-display-lg: var(--wdpds-scale-1400);
+  --wdpds-type-line-height-display-xl: var(--wdpds-scale-1500);
+  --wdpds-type-line-height-display-2xl: var(--wdpds-scale-1600);
+  --wdpds-type-line-height-display-3xl: var(--wdpds-scale-1700);
+  --wdpds-type-line-height-display-4xl: var(--wdpds-scale-1800);
+  --wdpds-type-line-height-display-5xl: var(--wdpds-scale-1900);
+  --wdpds-type-line-height-display-6xl: var(--wdpds-scale-2000);
+
+  // Type: line height - heading
+  --wdpds-type-line-height-heading-2xs: var(--wdpds-scale-700);
+  --wdpds-type-line-height-heading-xs: var(--wdpds-scale-800);
+  --wdpds-type-line-height-heading-sm: var(--wdpds-scale-900);
+  --wdpds-type-line-height-heading-md: var(--wdpds-scale-1000);
+  --wdpds-type-line-height-heading-lg: var(--wdpds-scale-1100);
+  --wdpds-type-line-height-heading-xl: var(--wdpds-scale-1200);
+  --wdpds-type-line-height-heading-2xl: var(--wdpds-scale-1300);
+  --wdpds-type-line-height-heading-3xl: var(--wdpds-scale-1400);
+
+  // Type: line height - quote / body / label / list item / caption / link
+  --wdpds-type-line-height-quote-sm: var(--wdpds-scale-600);
+  --wdpds-type-line-height-quote-md: var(--wdpds-scale-700);
+  --wdpds-type-line-height-quote-lg: var(--wdpds-scale-800);
+  --wdpds-type-line-height-body-sm: var(--wdpds-scale-600);
+  --wdpds-type-line-height-body-md: var(--wdpds-scale-700);
+  --wdpds-type-line-height-body-lg: var(--wdpds-scale-800);
+  --wdpds-type-line-height-label-sm: var(--wdpds-scale-600);
+  --wdpds-type-line-height-label-md: var(--wdpds-scale-700);
+  --wdpds-type-line-height-label-lg: var(--wdpds-scale-800);
+  --wdpds-type-line-height-list-item-sm: var(--wdpds-scale-600);
+  --wdpds-type-line-height-list-item-md: var(--wdpds-scale-700);
+  --wdpds-type-line-height-list-item-lg: var(--wdpds-scale-800);
+  --wdpds-type-line-height-caption-xs: var(--wdpds-scale-350);
+  --wdpds-type-line-height-caption-sm: var(--wdpds-scale-500);
+  --wdpds-type-line-height-caption-md: var(--wdpds-scale-600);
+  --wdpds-type-line-height-caption-lg: var(--wdpds-scale-700);
+  --wdpds-type-line-height-link-sm: var(--wdpds-scale-600);
+  --wdpds-type-line-height-link-md: var(--wdpds-scale-700);
+  --wdpds-type-line-height-link-lg: var(--wdpds-scale-800);
+}

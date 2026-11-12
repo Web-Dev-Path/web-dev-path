@@ -1,12 +1,12 @@
 @use '@/styles/index' as *;
 
 .footer {
-  background-color: var(--dark-bg);
-  color: var(--color-white);
+  background-color: var(--wdpds-color-secondary-inverse);
+  color: var(--wdpds-color-neutral-faint);
 }
 
 .inner {
-  padding-top: 2.5rem;
+  padding-top: var(--wdpds-space-2xl);
   text-align: center;
 
   @include tablet {
@@ -21,7 +21,7 @@
   cursor: pointer;
 
   &:hover {
-    opacity: 0.6;
+    opacity: var(--wdpds-alpha-translucent-600);
   }
 
   @include tablet {
@@ -42,7 +42,7 @@
   }
 
   @include large-desktop {
-    font-size: 1.5rem;
+    font-size: var(--wdpds-type-font-size-link-lg);
   }
 }
 
@@ -55,7 +55,7 @@
 }
 
 .navItem {
-  margin: 0.5rem 0;
+  margin: var(--wdpds-space-2xs) 0;
 
   @include tablet {
     padding-left: 3.125rem;
@@ -78,7 +78,7 @@
   @include transition(all 0.3s ease);
 
   &:hover {
-    opacity: 0.6;
+    opacity: var(--wdpds-alpha-translucent-600);
   }
 
   @include tablet {
@@ -99,8 +99,8 @@
 .copyright {
   text-align: center;
   margin: 0;
-  font-size: 1rem;
-  padding-bottom: 1rem;
+  font-size: var(--wdpds-type-font-size-caption-md);
+  padding-bottom: var(--wdpds-space-sm);
 
   @include tablet {
     text-align: end;
@@ -111,5 +111,5 @@
   @extend .copyright;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: var(--wdpds-space-2xs);
 }
